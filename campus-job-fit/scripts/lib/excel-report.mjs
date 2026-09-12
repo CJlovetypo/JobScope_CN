@@ -17,12 +17,18 @@ export const loadArtifactTool = () => loadRuntimePackage('@oai/artifact-tool');
 
 const COLORS = {header: '#24364B', ink: '#223047', light: '#F4F7FA', line: '#DCE3EB'};
 const DEFAULT_FONT = '微软雅黑';
-const MAIN_WIDTHS = [18, 25, 18, 42, 16, 24, 28, 16, 16, 230, 48];
+const MAIN_WIDTHS = [18, 25, 18, 42, 16, 24, 28, 16, 16, 20, 230, 48];
+export const HEADER_TIPS = Object.freeze({
+  '匹配层级': '汇总硬性条件、能力和意愿后的最终分层。硬性条件不符＝届别或学历明确冲突；双向高匹配＝能力高且意愿高；双向有条件匹配＝可以投递但存在可接受的短板；当前匹配不足＝能力或意愿为低；信息待确认＝关键判断信息不足。',
+  '意愿匹配度': '岗位是否符合你的求职偏好。高＝重要偏好整体满足；中＝存在可接受的探索或取舍；低＝与明确偏好冲突；待确认／待评估＝关键信息不足或尚未完成评估。',
+  '能力匹配度': '你的经历能否支撑岗位核心工作。高＝核心要求有充分直接证据；中＝有可迁移实践但仍有明显缺口；低＝核心要求证据不足；待评估＝尚未完成正式评估。',
+  '硬性条件匹配度': '只核对毕业届别和学历。匹配＝明确符合，或JD未写相应限制；不匹配＝任一项与JD明确冲突；待评估＝尚未完成正式评估。硬性条件不匹配时，不建议投递。',
+});
 const SETTINGS = {
   '岗位匹配': {widths: MAIN_WIDTHS, freeze: 3, rowHeight: 36},
   '待核实与未评估': {widths: MAIN_WIDTHS, freeze: 3, rowHeight: 36},
   '来源覆盖': {widths: [22, 28, 18, 14, 14, 14, 14, 14, 14, 14, 16, 70, 28, 28, 18, 55, 95, 28], freeze: 1},
-  'JD原文': {widths: [22, 40, 28, 26, 18, 115, 48], freeze: 2},
+  '资料复核': {widths: [18, 42, 23, 25, 36, 20, 70, 90, 28, 48], freeze: 2},
   '说明': {widths: [26, 110], freeze: 0},
 };
 const isNumericText = value => typeof value === 'string' && /^[+-]?\d+(?:\.\d+)?$/.test(value);
@@ -30,7 +36,7 @@ const isNumericText = value => typeof value === 'string' && /^[+-]?\d+(?:\.\d+)?
 function literal(value) {
   if (typeof value !== 'string') return value ?? null;
   const safe = value.replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F]/g, '');
-  if (safe.length > 32767) throw new Error('单元格文字超过 Excel 的 32767 字符上限，请精炼评估理由或拆分 JD 原文后重试。');
+  if (safe.length > 32767) throw new Error('单元格文字超过 Excel 的 32767 字符上限，请精炼报告摘要；JD 全文应存放在独立归档。');
   // Artifact Tool infers numeric/date strings; preserve identifiers verbatim.
   return safe.startsWith('=') || isNumericText(safe) ? "'" + safe : safe;
 }
@@ -43,7 +49,7 @@ function wrapLines(value, width) {
   }, 0);
 }
 
-function formatTable(sheet, data, index) {
+function formatTable(workbook, sheet, data, index, noteAuthorId) {
   const rowCount = data.rows.length + 1;
   const columnCount = data.headers.length;
   const widths = SETTINGS[data.name].widths;
@@ -87,8 +93,22 @@ function formatTable(sheet, data, index) {
     rowHeight: 34,
     borders: {insideVertical: {style: 'thin', color: '#FFFFFF'}},
   };
+  if (['岗位匹配', '待核实与未评估'].includes(data.name)) {
+    data.headers.forEach((label, column) => {
+      const tip = HEADER_TIPS[label];
+      if (!tip) return;
+      const address = String.fromCharCode(65 + column) + '1';
+      workbook.notes.add({
+        id: `${sheet.name}:${address}`,
+        target: {cell: {sheetName: sheet.name, sheetId: sheet.sheetId, address}},
+        authorId: noteAuthorId,
+        createdAt: '',
+        body: {plainText: tip},
+      });
+    });
+  }
   for (const {row, column, url, label} of data.links || []) {
-    if (!/^https?:\/\//i.test(url) && !/^#'JD原文'!A\d+$/.test(url)) throw new Error('不支持的 JD 链接：' + url);
+    if (!/^https?:\/\//i.test(url)) throw new Error('不支持的 JD 链接：' + url);
     const cell = sheet.getCell(row - 1, column - 1);
     // Use ordinary text for calculation/rendering; native hyperlinks are added
     // to the exported OOXML below because HYPERLINK is not implemented here.
@@ -96,9 +116,13 @@ function formatTable(sheet, data, index) {
     cell.format.font = {name: DEFAULT_FONT, size: 11, color: '#1762A2', underline: 'single'};
   }
   if (['岗位匹配', '待核实与未评估'].includes(data.name) && data.rows.length) {
-    const priority = sheet.getRange(`E2:E${rowCount}`);
-    for (const [text, fill, color] of [['高优先', '#E4F1E9', '#236444'], ['常规关注', '#EDF2F8', '#345A80'], ['低优先', '#F0F1F3', '#697384'], ['待评估', '#FFF4DC', '#805F1B']]) {
-      priority.conditionalFormats.add('containsText', {text, format: {fill, font: {color, bold: true}}});
+    const recommendation = sheet.getRange(`E2:E${rowCount}`);
+    for (const [text, fill, color] of [['可以投递', '#E4F1E9', '#236444'], ['投递前准备', '#EDF2F8', '#345A80'], ['暂不建议投递', '#F0F1F3', '#697384'], ['待评估', '#FFF4DC', '#805F1B']]) {
+      recommendation.conditionalFormats.add('containsText', {text, format: {fill, font: {color, bold: true}}});
+    }
+    const hardCondition = sheet.getRange(`J2:J${rowCount}`);
+    for (const [text, fill, color] of [['不匹配', '#FCE8E6', '#A33A2B'], ['待核实', '#FFF4DC', '#805F1B'], ['待评估', '#FFF4DC', '#805F1B']]) {
+      hardCondition.conditionalFormats.add('containsText', {text, format: {fill, font: {color, bold: true}}});
     }
   }
   if (data.name === '来源覆盖' && data.rows.length) {
@@ -150,7 +174,8 @@ async function finalizeExcelXml(file, sheets) {
     if (numericTextCells.size) {
       // Match only original numeric strings, never strip quotes globally or
       // touch genuine numbers, formulas, or user-authored leading apostrophes.
-      xml = xml.replace(/<((?:\w+:)?c)\b([^>]*)>[\s\S]*?<\/\1>/g, (cell, name, attributes) => {
+      // A self-closing blank cell must not consume the next populated cell.
+      xml = xml.replace(/<((?:\w+:)?c)\b([^>]*?)(?:\s*\/>|>[\s\S]*?<\/\1>)/g, (cell, name, attributes) => {
         const address = attributes.match(/\br="([^"]+)"/)?.[1];
         if (!numericTextCells.has(address)) return cell;
         const value = numericTextCells.get(address);
@@ -200,12 +225,14 @@ async function finalizeExcelXml(file, sheets) {
   await fs.writeFile(file, await zip.generateAsync({type: 'nodebuffer', compression: 'DEFLATE', compressionOptions: {level: 6}}));
 }
 
-export async function writeExcelReport(file, sheets, {previewDir} = {}) {
+export async function writeExcelReport(file, sheets, {previewDir, temporaryDir} = {}) {
   const {Workbook, SpreadsheetFile} = await loadArtifactTool();
   const workbook = Workbook.create();
   for (const data of sheets) workbook.worksheets.add(data.name);
-  sheets.forEach((data, index) => formatTable(workbook.worksheets.getItem(data.name), data, index));
-  const inspection = await workbook.inspect({kind: 'table', range: '岗位匹配!A1:K3', tableMaxRows: 3, tableMaxCols: 11, tableMaxCellChars: 100, maxChars: 2500});
+  const noteAuthorId = workbook.comments.setSelf({displayName: '校招岗位匹配'}).id;
+  sheets.forEach((data, index) => formatTable(workbook, workbook.worksheets.getItem(data.name), data, index, noteAuthorId));
+  workbook.recalculate();
+  const inspection = await workbook.inspect({kind: 'table', range: '岗位匹配!A1:L3', tableMaxRows: 3, tableMaxCols: 12, tableMaxCellChars: 100, maxChars: 2500});
   const errors = await workbook.inspect({kind: 'match', searchTerm: '#REF!|#DIV/0!|#VALUE!|#NAME\\?|#N/A|#NUM!|#NULL!|#SPILL!|#CALC!', options: {useRegex: true, maxResults: 10}, maxChars: 2500, summary: 'Excel 公式错误检查'});
   const formulaErrors = errors.ndjson.split('\n').filter(Boolean).map(line => JSON.parse(line)).filter(item => item.kind === 'match' && item.formula && /^#(?:REF!|DIV\/0!|VALUE!|NAME\?|N\/A|NUM!|NULL!|SPILL!|CALC!)$/.test(item.value));
   if (formulaErrors.length) throw new Error('Excel 公式错误：' + formulaErrors.map(item => `${item.sheet}!${item.address} ${item.value}`).join('；'));
@@ -224,7 +251,7 @@ export async function writeExcelReport(file, sheets, {previewDir} = {}) {
   await fs.mkdir(path.dirname(file), {recursive: true});
   const output = await SpreadsheetFile.exportXlsx(workbook);
   // An atomic rename keeps the previous completed report if export fails.
-  const temporaryDir = path.resolve(path.dirname(file), '../../tmp/excel-export');
+  temporaryDir ||= path.resolve(path.dirname(file), '../../tmp/excel-export');
   await fs.mkdir(temporaryDir, {recursive: true});
   const temporary = path.join(temporaryDir, path.basename(file) + '.tmp.xlsx');
   await output.save(temporary);

@@ -1,5 +1,6 @@
 import {createClient} from './http.mjs';
 import {normalizeJobLocations} from './locations.mjs';
+import {reviewRecruitment} from './recruitment-policy.mjs';
 
 function decode(value) {
   return String(value??'').replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g,'$1')
@@ -116,11 +117,11 @@ export function normalizeAmazonJob(row,source,rawFile) {
   else if(row.job_schedule_type==='full-time'&&(yes(row.university_job)||(/\bcampus\b|校招|校园招聘/i.test(row.title||'')&&/应届|20\d{2}.*(?:graduat|毕业)|graduat.{0,30}20\d{2}/i.test(description))))formal='formal';
   const official=new URL(row.job_path,source.primary_entry_url);
   if(official.hostname!=='www.amazon.jobs'||!/^\/\w+\/jobs\/[A-Za-z0-9]+\//.test(official.pathname))throw Error('Amazon official job path missing');
-  return withCities({job_id:official.pathname.match(/\/jobs\/([A-Za-z0-9]+)\//)[1],company_id:source.company_id,company_name:source.display_name,title:row.title,
+  return withCities(reviewRecruitment({job_id:official.pathname.match(/\/jobs\/([A-Za-z0-9]+)\//)[1],company_id:source.company_id,company_name:source.display_name,title:row.title,
     description,requirements,body_complete:description.length>50&&basic.length>0,locations_raw:row.locations?.length?row.locations:[row.location].filter(Boolean),
     formal_status:formal,open_status:'open',official_url:official.href,job_url_kind:'official_detail',raw_file:rawFile,
-    recruitment_evidence:{provider:'amazon_jobs',university_job:row.university_job,is_intern:row.is_intern,job_schedule_type:row.job_schedule_type,published_public_search:true,formal_basis:formal==='formal'?'Full-time API field plus university_job or campus title corroborated by explicit cohort/graduate body requirement':null},
-    raw_metadata:{posted_date:row.posted_date,updated_time:row.updated_time,business_category:row.business_category,country_code:row.country_code,source_job_uuid:row.id}});
+    recruitment_evidence:{provider:'amazon_jobs',university_job:row.university_job,is_intern:row.is_intern,primary_search_label:row.primary_search_label,job_schedule_type:row.job_schedule_type,published_public_search:true,formal_basis:formal==='formal'?'Full-time API field plus university_job or campus title corroborated by explicit cohort/graduate body requirement':null},
+    raw_metadata:{posted_date:row.posted_date,updated_time:row.updated_time,business_category:row.business_category,country_code:row.country_code,source_job_uuid:row.id}}));
 }
 
 export async function collectAmazon(source,options={}) {

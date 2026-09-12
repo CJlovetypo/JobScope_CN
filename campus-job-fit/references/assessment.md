@@ -1,29 +1,30 @@
 # 逐岗位评估与推荐
 
-模型必须逐个完整读完当次 JD 的 `description`、`requirements`、`recruitment_evidence` 及个人画像、`profile.evidence`，再逐项对照后独立评估能力、意愿、资格和优先级；工具显示被截断时，继续分段读取直至全部读完。禁止凭标题、关键词、正则或模板分类生成这些判断。脚本可以序列化已经完成的证据判断，并按下方双向汇总原则计算匹配层级；组合计算不能代替全文阅读，也不能反过来推断能力或意愿。
+模型必须逐个完整读完当次 JD 的 `description`、`requirements`、`recruitment_evidence` 及个人画像、`profile.evidence`，再逐项对照后独立评估硬性条件、能力、意愿和投递建议；工具显示被截断时，继续分段读取直至全部读完。禁止凭标题、关键词、正则或模板分类生成这些判断。脚本可以序列化已经完成的证据判断，并按下方双向汇总原则计算匹配层级；组合计算不能代替全文阅读，也不能反过来推断能力或意愿。
 
 当前为 v4，评估前必须阅读 [能力证据模型](ability-model.md)：先区分客观经历、客观成就、主观自评，再按对口程度、经历层级、个人贡献和成果判断证据强度。同等相关性和质量下实习优先于学校／个人项目，再看其他相关经历；多段独立对口实习增强判断，高质量项目也可支撑高能力。禁止仅按实习次数、公司品牌、主观描述或数字大小提档。
 
 岗位标题只能帮助定位或选取样本。全量运行时每个可评估岗位都要有记录；用户指定每家公司最多 10 个等抽样范围时，只缩小数量，每个样本仍遵守同样的全文阅读标准，完成约定数量并明确剩余范围。业务不符的公司照常评估，不能只选高优先候选。
 
-## 四个字段的边界
+## 五个字段的边界
 
 评估前阅读 [双向匹配心智模型](reciprocal-model.md)，这是 v4 的判定依据。
 
 | 字段 | 唯一职责 | 不承担 |
 | --- | --- | --- |
+| 硬性条件匹配度 | JD与用户实际届别、学历是否符合 | 不评专业、能力、意愿、到岗安排或行动紧迫性 |
 | 能力匹配度 | 企业要求与候选人客观实践的适配 | 不评意愿、资格、吸引力或行动紧迫性 |
 | 意愿匹配度 | 岗位供给与候选人明确需求的适配 | 不从经历推断喜欢，不依赖能力 |
 | 匹配层级 | 汇总上述两个独立判断 | 不额外打分、不重复检查偏好、不表达行动 |
-| 关注优先级 | 下一步具体行动的紧迫性 | 不重复评价岗位是否适合，不代表录取概率 |
+| 投递建议 | 当前是否值得投递、是否需要先准备 | 不代表录取概率，不重复显示内部排序字段 |
 
 能力 high/medium/low/unknown 的证据锚点见能力模型。意愿 aligned/explore/conflict/unknown 表示已知需求整体满足／明确可接受的探索或取舍／明确冲突／关键信息不足。业务与公司性质偏好仅在用户明确表达时纳入意愿一次，不在优先级重复扣分。公司 business_alignment 只是线索，模型核对岗位实际部门与任务，不让集团标签替代具体 JD。
 
 匹配层级由两维生成：已有任一低 → 当前匹配不足；无低但有未知 → 信息待确认；双高 → 双向高匹配；其余已知非低 → 双向有条件匹配。内部值为 low/unknown/high/conditional。已知不足优先于未知只表示已有一侧短板，另一侧仍保留未知，不能推断其高低。意愿 unknown 可为已完成评估，能力 unknown 仍待补材料。
 
-资格 eligibility（届次、学历等准入及到岗可行性）独立记录，不改写能力与双向层级。双向高匹配不保证可投递，资格不符必须在结论提示。多城市不保证最终分配。正式校招内提前实习保留，记录天数、时长、开始时间；“先实习，优秀可转正”标录用安排待核实，不宣称无条件正式录用。
+硬性条件 `eligibility` 只核对届次与学历，正式评估记录为 eligible／ineligible，`eligibility_reason` 必须逐项写明 JD 要求（或“未写限制”）与用户实际情况。用户画像必须提供毕业时间和学历；任一项存在明确冲突即 ineligible，其余为 eligible，包括 JD 未写某项限制的情况。ineligible 时报告综合展示为“硬性条件不符”，不论能力与意愿多高都只能 low + hold。历史 unknown 记录不能进入正式评估，须按当前规则复核。专业要求仍按岗位要求记录，提前实习与到岗可行性继续写入 `early_internship`、缺口和行动依据，不混入硬性条件列。多城市不保证最终分配；“先实习，优秀可转正”标录用安排待核实，不宣称无条件正式录用。
 
-关注优先级只为 next_action（apply投递／verify核实／prepare准备／hold暂缓）排时间。高优先需真实临近窗口或阻塞当前下一步的事实；常规是有下一步但无紧迫证据；低优先是暂缓或长期准备。priority_reason 解释为什么现在／稍后做，high 另需 timing_evidence 的具体来源与时间或阻塞事实。没有截止时间不自动低优先，也不编造紧迫性。资格未确认符合或意愿冲突／未知时不可直接 apply；hold 只能 low。已确定不符或拒绝且没有新事实，不反复建议核实来绕过限制。用户再次推进或跨时间续跑时核实窗口与岗位状态；行动排序是评估当时快照，不永久有效。
+新评估的 `next_action` 使用 apply／prepare／hold，Excel 映射为可以投递／投递前准备／暂不建议投递。轮岗范围、业务占比、提前实习等信息不足时写入理由并给出最合理的投递建议，不使用“核实”作为主表动作。内部 `priority`、`priority_reason`、`timing_evidence` 仅用于稳定排序和审计，不在 Excel 展示；high 仍须有真实时间窗口或阻塞事实。硬性条件 ineligible、意愿 conflict 或能力 low 都必须 low + hold；hold 只能 low。用户再次推进时核实窗口与岗位状态，不把历史排序当长期结论。
 
 ## 写入评估文件
 
@@ -52,14 +53,14 @@
         }
       ],
       "priority": "normal",
-      "next_action": "verify",
-      "priority_reason": "先核对提前实习安排，暂无已知临近窗口",
+      "next_action": "prepare",
+      "priority_reason": "投递前先整理对应案例，暂无已知临近窗口",
       "timing_evidence": "",
       "interest": "aligned",
       "interest_checks": [{"preference":"招聘职能","importance":"prefer","status":"met","user_basis":"用户明确希望从事招聘","job_basis":"JD主要交付为招聘协调"}],
       "interest_reason": "用户明确希望从事该职能；说明对应的用户原始倾向或后续说明，不用能力经历代替意愿",
       "eligibility": "eligible",
-      "eligibility_reason": "逐项核对后的资格依据",
+      "eligibility_reason": "逐项写明JD届别、学历要求或未写限制，以及用户实际毕业时间、学历，并说明为何匹配／不匹配",
       "conclusion": "一句话解释为何值得关注、以及主要限制",
       "comparisons": [
         {
@@ -87,7 +88,7 @@
 }
 ```
 
-枚举：ability 为 high/medium/low/unknown；priority 为 high/normal/low；interest 为 aligned/explore/conflict/unknown；eligibility 为 eligible/ineligible/unknown。比较项的 requirement_type 为 core/supporting/bonus/eligibility，support 为 direct/transferable/unsupported，evidence_strength 为 strong/moderate/weak/none，定义见能力证据模型。引用的个人证据 ID 必须存在；没有证据时使用空数组并写 unsupported + none。high/medium 需有核心或一般能力要求的中／强客观证据，主观自评、资格事实或无关加分项不能独撑；medium 还须有可迁移经历说明。high 至少一项核心为 direct + strong，其他决定性核心均须 direct + strong/moderate。不能将核心缺口改标 bonus 来通过检查。
+枚举：ability 为 high/medium/low/unknown；priority 为 high/normal/low；interest 为 aligned/explore/conflict/unknown；新评估的 eligibility 为 eligible/ineligible，且仅代表届别、学历硬性条件，历史 unknown 需复核。正式评估的 next_action 只允许 apply/prepare/hold；旧 verify 记录须复核后明确改为 prepare 或 hold，不能继续作为有效正式评估。资料本身不完整的岗位留在“待核实与未评估”，不通过 next_action 表达。比较项的 requirement_type 为 core/supporting/bonus/eligibility，support 为 direct/transferable/unsupported，evidence_strength 为 strong/moderate/weak/none，定义见能力证据模型。引用的个人证据 ID 必须存在；没有证据时使用空数组并写 unsupported + none。high/medium 需有核心或一般能力要求的中／强客观证据，主观自评、资格事实或无关加分项不能独撑；medium 还须有可迁移经历说明。high 至少一项核心为 direct + strong，其他决定性核心均须 direct + strong/moderate。不能将核心缺口改标 bonus 来通过检查。
 
 所引用的每段客观实习／工作经历须在 `experience_relevance` 中恰有一项；三个关系字段的枚举都是 same/adjacent/different/unknown。分别判断行业、部门业务和实际岗位职能，不能把“同业务跨岗位”或“同岗位跨业务”一律视为不对口。explanation 说明已知事实、迁移和差异，分层不自动决定能力等级。只引用项目／其他经历时可省略该数组。
 
@@ -105,7 +106,7 @@
 
 阅读时保留并区分必需条件、加分项、多个可选细分方向和提交材料要求。采集正文必须保留原字段的分段语义；发现分段丢失时回读已保存的原始 API 字段并修复归一化后再评估。不能把加分项缺证当成硬性不合格，也不能因某条放在附加字段里就忽略其中明确的“必须／requires”。简历未记载的实践写“未提供相应证据”，不要改写成确定没有该经验。
 
-每一批写完继续 next-batch，直到 remaining=0；用户指定冒烟或抽样范围时按该范围停止，并用 `render --allow-partial` 导出且注明全量未评估数量。保留 jd_fingerprint，使同一岗位更新正文、条件或地点后旧评估自动失效；重评同一 job_id 时替换该条，不追加重复记录。render 会检查全文阅读标记、重复岗位、虚构个人证据 ID、未采集公司及缺失/过期评估，并拒绝缺失行动依据或与资格／意愿明显矛盾的投递动作，不按匹配等级静默调整优先级。这个程序检查不代替模型对真实证据的判断。已作废的标题规则评估可留在运行内 `superseded-title-rule-assessments/`，不得混入主表；未重新全文评估的岗位按未评估保留。
+先取得用户明确的实验批次／指定公司／全量选择，保存 `evaluation-scope.json` 后才开始评估。每一批写完继续 next-batch，直到所选范围的 remaining=0；实验或指定公司完成后正常 `render` 并注明全量未评估数量，不自动扩大范围。只有用户要求提前交付所选范围内尚未完成的结果时才使用 `render --allow-partial`。保留 jd_fingerprint，使同一岗位更新正文、条件或地点后旧评估自动失效；重评同一 job_id 时替换该条，不追加重复记录。render 会检查全文阅读标记、重复岗位、虚构个人证据 ID、未采集公司及缺失/过期评估，并拒绝缺失行动依据或与资格／意愿明显矛盾的投递动作，不按匹配等级静默调整优先级。这个程序检查不代替模型对真实证据的判断。已作废的标题规则评估可留在运行内 `superseded-title-rule-assessments/`，不得混入主表；未重新全文评估的岗位按未评估保留。
 
 ## Excel 中的评级与理由
 
@@ -113,17 +114,18 @@
 
 | 评估字段 | 原值 | Excel 展示 |
 | --- | --- | --- |
-| priority → 关注优先级 | high / normal / low | 高优先·行动 / 常规关注·行动 / 低优先·行动 |
+| next_action → 投递建议 | apply / prepare / hold | 可以投递 / 投递前准备 / 暂不建议投递 |
 | ability + interest → 匹配层级 | 按上述汇总原则计算 | 双向高匹配 / 双向有条件匹配 / 当前匹配不足 / 信息待确认 |
 | interest → 意愿匹配度 | aligned / explore / conflict / unknown | 高 / 中 / 低 / 待确认 |
 | ability → 能力匹配度 | high / medium / low / unknown | 高 / 中 / 低 / 待评估 |
+| eligibility → 硬性条件匹配度 | eligible / ineligible | 匹配 / 不匹配 |
 
-意愿匹配度和能力匹配度相互独立，匹配层级由两者共同决定，每列有单独含义。资格不改写这两个维度；业务或性质只有在用户明确在意时纳入意愿，不能影响能力。待核实、未评估和缺失画像证据不能填成高匹配。
+意愿匹配度和能力匹配度相互独立，每列有单独含义；届别与学历硬性条件先执行否决闸门，通过后匹配层级才按能力与意愿汇总。业务或性质只有在用户明确在意时纳入意愿，不能影响能力。用户画像缺少毕业时间或学历时停止正式评估；JD 未写对应限制不等于信息待核实，而是没有发现该项硬性冲突。
 
 `详细评估理由` 使用模型完成评估后写出的 `report_summary`，只展示四段，标签与顺序固定：
 
 ```text
-评估结论：是否值得关注，综合匹配与影响投递的主要限制。
+评估结论：是否值得关注，列出届别与学历硬性条件依据、综合匹配与影响投递的主要限制。
 
 能力匹配度结论：等级，以及最重要的实习／项目依据与迁移关系。
 
@@ -136,4 +138,4 @@
 
 完整 `comparisons`、`ability_reason`、`experience_relevance`、原始证据和资格理由继续保存在评估 JSON 中，不在这一列展开。程序不使用裁剪内部长文或拼接证据列表来冒充总结。缺少四段摘要的记录会进入待评估，须由模型补写忠于已核对事实的摘要；如果画像、JD或模型也变了，则须完整重评。未评估行也使用这四段，解释缺失信息，不给出猜测等级。
 
-JD 链接优先使用公开官方单岗位详情 URL；只有招聘入口、没有独立详情页时，Excel 内部跳转到 `JD原文` 的对应岗位，原文表保留官方入口与岗位 ID。不要把公司入口伪装成单岗位详情，也不生成 Markdown 快照作为交付链接。
+JD 链接优先使用公开官方单岗位详情 URL；只有招聘入口、没有独立详情页时，链接该官方入口并标明岗位 ID。无可用链接时保留岗位 ID 和独立归档提示。全文、招聘证据和采集时间保存在运行目录的 `archive/jd-originals.jsonl`，最终 Excel 不包含 `JD原文` 页签或全文隐藏页。不要把公司入口伪装成单岗位详情，也不生成 Markdown 快照作为交付链接。

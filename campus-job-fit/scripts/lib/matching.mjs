@@ -16,7 +16,7 @@ export function deriveMatchTier(ability, interest) {
   return MATCH_MATRIX[ability][interest];
 }
 
-export const ACTION_NAMES = Object.freeze({apply: '投递', verify: '核实', prepare: '准备', hold: '暂缓'});
+export const ACTION_NAMES = Object.freeze({apply: '可以投递', prepare: '投递前准备', hold: '暂不建议投递'});
 const hasText = value => typeof value === 'string' && value.trim().length > 0;
 
 export function interestProblem(review) {
@@ -35,10 +35,13 @@ export function interestProblem(review) {
 // Priority orders the next action, not desirability. Reject contradictory actions;
 // never silently lower a priority based on ability, interest, or company labels.
 export function actionProblem(review) {
-  if (!Object.hasOwn(ACTION_NAMES, review.next_action)) return '缺少有效 next_action：apply/verify/prepare/hold';
+  if (!Object.hasOwn(ACTION_NAMES, review.next_action)) return '缺少有效 next_action：apply/prepare/hold；资料不完整的岗位应留在待核实与未评估表，不使用 verify 作为正式评估动作';
   if (!hasText(review.priority_reason)) return '缺少独立行动排序依据 priority_reason';
   if (review.priority === 'high' && !hasText(review.timing_evidence)) return '高优先须有 timing_evidence，说明真实时间窗口或阻塞下一步的事项';
   if (review.next_action === 'hold' && review.priority !== 'low') return '暂缓行动应为低优先';
-  if (review.next_action === 'apply' && (review.eligibility !== 'eligible' || ['conflict', 'unknown'].includes(review.interest))) return '资格未确认符合或意愿冲突／未知时，下一步不能直接投递；应核实、准备或暂缓';
+  if (review.eligibility === 'ineligible' && (review.next_action !== 'hold' || review.priority !== 'low')) return '届别或学历明确不匹配时，无论能力与意愿如何，下一步都必须为低优先暂缓';
+  if (review.interest === 'conflict' && (review.next_action !== 'hold' || review.priority !== 'low')) return '个人意愿明确冲突时，下一步必须为低优先暂缓';
+  if (review.ability === 'low' && (review.next_action !== 'hold' || review.priority !== 'low')) return '核心能力匹配度为低时，下一步必须为低优先暂缓';
+  if (review.next_action === 'apply' && (review.eligibility !== 'eligible' || ['conflict', 'unknown'].includes(review.interest))) return '资格未确认符合或意愿冲突／未知时，下一步不能直接投递；正式评估应改为投递前准备或暂不建议投递，资料不完整则留在待核实与未评估表';
   return null;
 }

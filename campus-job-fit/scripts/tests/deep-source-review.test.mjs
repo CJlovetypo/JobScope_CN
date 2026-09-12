@@ -93,6 +93,8 @@ test('亚马逊支持字母岗位ID与短资格字段，校招由全职和具体
  const row={id:'uuid',job_path:'/en/jobs/SF123/',title:'2027 Campus Software Engineer',country_code:'CHN',location:'CN, Shanghai',description:'毕业时间：2027年应届毕业生。职责：'+('开发产品并与跨部门团队一起解决用户问题。').repeat(5),basic_qualifications:'本科',preferred_qualifications:'有相关项目经历优先。',job_schedule_type:'full-time',university_job:null,is_intern:null};
  const j=normalizeAmazonJob(row,s,'fixture');assert.equal(j.job_id,'SF123');assert.equal(j.body_complete,true);assert.equal(j.formal_status,'formal');
  assert.equal(normalizeAmazonJob({...row,title:'Software Engineer',description:'普通社会全职职责。'.repeat(20)},s,'fixture').formal_status,'unknown');
+ const labelled=normalizeAmazonJob({...row,title:'Software Engineer',description:'开发维护系统。'.repeat(20),primary_search_label:'studentprograms.team-jobs-for-grads',job_schedule_type:null},s,'fixture');
+ assert.equal(labelled.formal_status,'formal');assert.equal(labelled.recruitment_evidence.primary_search_label,'studentprograms.team-jobs-for-grads');
  await mock(async url=>json({hits:2,error:null,jobs:new URL(url).searchParams.get('offset')==='0'?[row]:[{...row,id:'uuid2',job_path:'/en/jobs/123/'}]}),async()=>{
   const r=await collectAmazon(s,{evidenceDir:evidenceDir('amazon-pages')});assert.equal(r.jobs.length,2);assert.equal(r.coverage.status,'complete');
  });

@@ -1,15 +1,16 @@
 import path from 'node:path';
-import {readJson, writeJson, workspacePath} from './io.mjs';
+import {SKILL_ROOT, readJson, writeJson, workspacePath} from './io.mjs';
 import {jobFingerprint} from './job-version.mjs';
 import {writeExcelReport} from './excel-report.mjs';
-import {ASSESSMENT_VERSION, ABILITY_LEVELS, INTEREST_LEVELS, MATCH_TIER_NAMES, ACTION_NAMES, deriveMatchTier, actionProblem, interestProblem} from './matching.mjs';
+import {ASSESSMENT_VERSION, ABILITY_LEVELS, INTEREST_LEVELS, MATCH_TIER_NAMES, deriveMatchTier, actionProblem, interestProblem} from './matching.mjs';
 import {assertRunOwnershipComplete} from './ownership.mjs';
 import {profileFingerprint, profileEvidenceProblem, abilityEvidenceProblem} from './evidence-model.mjs';
+import {readEvaluationScope, inEvaluationScope, SCOPE_MODES} from './evaluation-scope.mjs';
+import {writeJdArchive} from './jd-archive.mjs';
 
-export const REPORT_HEADERS = ['公司', '公司业务标签', '公司性质标签', '岗位', '关注优先级', '匹配层级', '岗位城市', '意愿匹配度', '能力匹配度', '详细评估理由', 'JD链接'];
+export const REPORT_HEADERS = ['公司', '公司业务标签', '公司性质标签', '岗位', '投递建议', '匹配层级', '岗位城市', '意愿匹配度', '能力匹配度', '硬性条件匹配度', '详细评估理由', 'JD链接'];
 const tierNames = MATCH_TIER_NAMES;
-const priorityNames = {high: '高优先', normal: '常规关注', low: '低优先'};
-const eligibilityNames = {eligible: '已知条件符合', ineligible: '明确不符合', unknown: '待核实'};
+const eligibilityNames = {eligible: '匹配', ineligible: '不匹配', unknown: '待核实'};
 const interestLevels = INTEREST_LEVELS;
 const abilityLevels = ABILITY_LEVELS;
 const visibleStatuses = new Set(['to_assess', 'needs_verification', 'missing_body']);
@@ -25,6 +26,30 @@ const officialLink = job => {
 const rank = review => ({high: 0, normal: 1, low: 2}[review.priority] ?? 3);
 const jobKey = job => JSON.stringify([job.company_id, String(job.job_id)]);
 const ownershipTag = company => company.ownership_tag;
+const reportTierName = review => review.eligibility === 'ineligible' ? '硬性条件不符' : tierNames[review.match_tier];
+const recommendationName = review => review.eligibility === 'ineligible' || review.next_action === 'hold'
+  ? '暂不建议投递'
+  : review.next_action === 'apply' ? '可以投递' : '投递前准备';
+
+export function verificationReviewSheet(audit) {
+  const sheet={name:'资料复核',headers:['公司','岗位','复核结果','招聘性质（前→后）','城市（前→后）','正文（前→后）','仍待核实事项','复核依据','岗位ID','官方入口'],rows:[],links:[]};
+  const pending=new Set(['needs_verification','missing_body']);
+  const type={formal:'校招正式岗',unknown:'未确认',social:'社招',internship:'实习',activity:'校园活动／博士后',parttime:'兼职'};
+  const rank=item=>pending.has(item.after.status)?0:item.after.status.startsWith('excluded')?1:2;
+  for(const item of [...audit.items].sort((a,b)=>rank(a)-rank(b)||a.company_name.localeCompare(b.company_name,'zh'))){
+    const result=pending.has(item.after.status)?'仍待核实':item.after.status==='to_assess'?'核验通过·待评估':'已确认不纳入';
+    const evidence=[item.recruitment_review?.reason,item.body_review?.reason,item.location_review?.reason];
+    if(item.title_city_evidence?.length)evidence.push('标题城市证据：'+JSON.stringify(item.title_city_evidence));
+    if(item.location_code_evidence?.length)evidence.push('地点字段解析依据：'+JSON.stringify(item.location_code_evidence));
+    if(item.location_description_evidence?.length)evidence.push('正文工作地点依据：'+JSON.stringify(item.location_description_evidence));
+    const decoded=(item.location_structured_evidence||[]).filter(e=>e.source==='locations_raw_json');
+    if(decoded.length)evidence.push('接口地点字段：'+decoded.map(e=>`${e.pointer}=${e.value} → ${list(e.cities)||list(e.special)||'未知'}`).join('；'));
+    const url=officialLink(item);
+    sheet.rows.push([item.company_name,item.title,result,`${type[item.before.formal_status]||item.before.formal_status} → ${type[item.after.formal_status]||item.after.formal_status}`,`${list(item.before.cities)||'未知'} → ${list(item.after.cities)||'未知'}`,`${item.before.body_complete?'完整':'未完整'} → ${item.after.body_complete?'完整':'未完整'}`,(item.remaining_issues||[]).map(x=>x.reason).join('；')||'无（不等于个人匹配评估已完成）',evidence.filter(Boolean).join('\n'),String(item.job_id),url||'未提供']);
+    if(url)sheet.links.push({row:sheet.rows.length+1,column:10,url,label:url});
+  }
+  return sheet;
+}
 
 // A process declaration is not proof of reading: the model must actually read
 // the complete JD and produce the evidence comparisons before setting it.
@@ -42,10 +67,12 @@ export function reviewNeedsUpdate(review, job, profile) {
   if (review.ability === 'unknown') return '资料不足，尚未形成完整能力评估';
   const derived = deriveMatchTier(review.ability, review.interest);
   if (review.match_tier != null && review.match_tier !== derived) return '匹配层级与独立能力、意愿判断不一致，需复核评估';
-  if (!Object.hasOwn(eligibilityNames, review.eligibility) || !Object.hasOwn(priorityNames, review.priority)) return '资格或优先级字段无效';
+  if (!Object.hasOwn(eligibilityNames, review.eligibility) || !['high', 'normal', 'low'].includes(review.priority)) return '硬性条件或内部排序字段无效';
   if (review.interest !== 'unknown' && !hasText(review.interest_reason)) return '缺少独立意愿依据 interest_reason；需说明用户明确倾向，不能用能力证据代替';
   if (!hasText(review.conclusion) || !hasText(review.next_step)) return '缺少具体结论或行动建议';
-  if (review.eligibility !== 'unknown' && !hasText(review.eligibility_reason)) return '资格结论缺少具体依据';
+  if (!hasText(review.eligibility_reason)) return '硬性条件结论缺少届别与学历的具体依据';
+  if (!hasText(profile?.graduation) || !hasText(profile?.degree)) return '个人画像缺少毕业时间或学历，不能形成正式岗位评估';
+  if (review.eligibility === 'unknown') return '完整JD未写届别或学历限制时按未发现硬性冲突处理；不得在正式评估中标为待核实';
   const comparisons = review.comparisons;
   if (!Array.isArray(comparisons) || !comparisons.length) return '缺少 JD 与个人证据对照';
   const ids = profile ? new Set((profile.evidence || []).map(item => item.id)) : null;
@@ -72,39 +99,34 @@ function validateReview(review) {
   return {...review, match_tier: deriveMatchTier(review.ability, review.interest)};
 }
 
-function detailedReason(review, bundle) {
+function withoutLeadingRating(value, rating) {
+  const text = clean(value);
+  for (const separator of ['。', '，', '：', ':', ';', '；']) {
+    const prefix = rating + separator;
+    if (text.startsWith(prefix)) return text.slice(prefix.length).trimStart();
+  }
+  return text;
+}
+
+function detailedReason(review) {
   // Reader-facing synthesis is written by the model after the full comparison.
   // Evidence IDs and raw comparisons remain in assessment JSON, not this cell.
   const summary = review.report_summary;
-  const conclusion = [clean(summary.conclusion), '综合为' + tierNames[review.match_tier] + '。'];
-  if (review.eligibility !== 'eligible') conclusion.push('校招资格' + eligibilityNames[review.eligibility] + '。');
-  conclusion.push('下一步：' + ACTION_NAMES[review.next_action] + '。');
-  const gaps = [clean(summary.gaps)];
-  if (bundle.data?.coverage?.status !== 'complete') gaps.push('来源覆盖尚不完整，具体限制见“来源覆盖”。');
+  const hardReason = clean(review.eligibility_reason).replace(/[。；;]+$/, '');
+  const conclusion = [clean(summary.conclusion), '硬性条件' + eligibilityNames[review.eligibility] + '：' + hardReason + '。', '综合为' + reportTierName(review) + '。'];
+  conclusion.push('投递建议：' + recommendationName(review) + '。');
   return [
     '评估结论：' + conclusion.join(' '),
-    '能力匹配度结论：' + abilityLevels[review.ability] + '。' + clean(summary.ability),
-    '个人意愿匹配度结论：' + interestLevels[review.interest] + '。' + clean(summary.interest),
-    '主要缺口：' + gaps.join(' '),
+    '能力匹配度结论：' + abilityLevels[review.ability] + '。' + withoutLeadingRating(summary.ability, abilityLevels[review.ability]),
+    '个人意愿匹配度结论：' + interestLevels[review.interest] + '。' + withoutLeadingRating(summary.interest, interestLevels[review.interest]),
+    '主要缺口：' + clean(summary.gaps),
   ].join('\n\n');
-}
-
-function textParts(value, maxLength = 1600) {
-  const text = clean(value);
-  if (!text) return ['暂无正文'];
-  const parts = [];
-  let rest = text;
-  while (rest.length) {
-    let size = Math.min(maxLength, rest.length);
-    if (size < rest.length && /[\uD800-\uDBFF]/.test(rest[size - 1])) size--;
-    parts.push(rest.slice(0, size)); rest = rest.slice(size);
-  }
-  return parts;
 }
 
 export async function buildReportData(dir, {allowPartial = false} = {}) {
   dir = workspacePath(dir);
   const run = await readJson(path.join(dir, 'run.json'));
+  const scope = await readEvaluationScope(dir, {required: false});
   assertRunOwnershipComplete(run.companies);
   const bundles = [], assessed = [], missing = [], unattempted = [];
   for (const company of run.companies) {
@@ -123,14 +145,16 @@ export async function buildReportData(dir, {allowPartial = false} = {}) {
     for (const job of data.jobs.filter(value => value.evaluation_status === 'to_assess')) {
       const review = byId.get(String(job.job_id));
       const reason = reviewNeedsUpdate(review, job, run.profile);
-      if (reason) { missing.push({company: company.display_name, company_id: company.company_id, job_id: job.job_id, reason}); continue; }
+      if (reason) { missing.push({company: company.display_name, company_id: company.company_id, job_id: job.job_id, reason, in_scope: inEvaluationScope(scope, company.company_id, job.job_id)}); continue; }
       const item = {...validateReview(review), job, company, bundle};
       bundle.reviews.push(item); assessed.push(item);
     }
     bundles.push(bundle);
   }
-  if (missing.length && !allowPartial) throw new Error('还有 ' + missing.length + ' 个岗位尚未评估（含需全文重评），不能输出完整报告；用 next-batch 继续。首项：' + missing[0].company + '／' + missing[0].job_id + '：' + missing[0].reason);
-  if (unattempted.length && !allowPartial) throw new Error('还有 ' + unattempted.length + ' 家入选公司尚未获取，不能输出完整报告；请先 collect。');
+  const scopeMissing = missing.filter(item => item.in_scope);
+  const scopeUnattempted = bundles.filter(bundle => bundle.status === '尚未获取' && (!scope || scope.mode === 'all' || scope.company_ids.includes(bundle.company.company_id)));
+  if (scopeMissing.length && !allowPartial) throw new Error('本次评估范围还有 ' + scopeMissing.length + ' 个岗位尚未评估（含需全文重评），不能输出范围完整的报告；用 next-batch 继续。首项：' + scopeMissing[0].company + '／' + scopeMissing[0].job_id + '：' + scopeMissing[0].reason);
+  if (scopeUnattempted.length && !allowPartial) throw new Error('本次评估范围还有 ' + scopeUnattempted.length + ' 家入选公司尚未获取，不能输出完整报告；请先 collect。');
   assessed.sort((a, b) => rank(a) - rank(b) || a.company.display_name.localeCompare(b.company.display_name, 'zh') || a.job.title.localeCompare(b.job.title, 'zh'));
   const pending = bundles.flatMap(bundle => bundle.jobs.filter(job => ['needs_verification', 'missing_body'].includes(job.evaluation_status)).map(job => ({bundle, job})));
   const audit = {
@@ -142,27 +166,17 @@ export async function buildReportData(dir, {allowPartial = false} = {}) {
     needs_verification: pending.length,
     complete_assessment: missing.length === 0 && unattempted.length === 0,
     complete_collection: bundles.every(bundle => !bundle.company.selected || bundle.data?.coverage.status === 'complete'),
+    evaluation_scope: scope,
+    scope_assessed_jobs: assessed.filter(item => inEvaluationScope(scope, item.company.company_id, item.job.job_id)).length,
+    scope_missing_assessments: scopeMissing.length,
+    outside_scope_remaining: missing.length - scopeMissing.length,
+    complete_evaluation_scope: scopeMissing.length === 0 && scopeUnattempted.length === 0,
   };
   const main = {name: '岗位匹配', headers: [...REPORT_HEADERS], rows: [], links: []};
   const unchecked = {name: '待核实与未评估', headers: [...REPORT_HEADERS], rows: [], links: []};
   const coverage = {name: '来源覆盖', headers: ['公司', '公司业务标签', '本轮状态', '列表岗位数', '可评估数', '已评估数', '待评估数', '待核实数', '正文缺失数', '其他城市数', '实际页数', '覆盖说明', '采集时间', '城市标签时间', '公司性质标签', '性质核实说明', '性质来源证据', '性质核实时间'], rows: [], links: []};
-  const snapshots = {name: 'JD原文', headers: ['公司', '岗位', '岗位ID', '岗位城市', '正文分段', 'JD原文', '官方入口'], rows: [], links: []};
   const notes = {name: '说明', headers: ['项目', '内容'], rows: [], links: []};
-  const snapshotRows = new Map();
   for (const bundle of bundles) {
-    for (const job of bundle.jobs.filter(value => visibleStatuses.has(value.evaluation_status))) {
-      if (officialLink(job) && job.job_url_kind === 'official_detail') continue;
-      const content = clean(job.description) === clean(job.requirements) || !job.requirements ? clean(job.description) : '岗位职责\n' + clean(job.description) + '\n\n任职要求\n' + clean(job.requirements);
-      const recruitment = job.recruitment_evidence == null ? '' : clean(typeof job.recruitment_evidence === 'string' ? job.recruitment_evidence : JSON.stringify(job.recruitment_evidence));
-      const body = content + (recruitment ? '\n\n招聘性质与资格证据（采集原字段）\n' + recruitment : '');
-      const parts = textParts(body);
-      snapshotRows.set(jobKey(job), snapshots.rows.length + 2);
-      parts.forEach((part, index) => {
-        const url = officialLink(job);
-        snapshots.rows.push([bundle.company.display_name, clean(job.title), String(job.job_id), list(job.cities) || list(job.locations_raw) || '待核实', `${job.body_complete ? '完整JD' : '正文未完整'} ${index + 1}/${parts.length}`, part, url || '来源未提供']);
-        if (url) snapshots.links.push({row: snapshots.rows.length + 1, column: 7, url, label: url});
-      });
-    }
     const count = state => bundle.jobs.filter(job => job.evaluation_status === state).length;
     const total = bundle.jobs.length;
     coverage.rows.push([bundle.company.display_name, list(bundle.company.business_tags) || '待确认', bundle.status, total,
@@ -177,61 +191,81 @@ export async function buildReportData(dir, {allowPartial = false} = {}) {
   function appendRow(sheet, bundle, job, review, reason) {
     const official = officialLink(job);
     const direct = official && job.job_url_kind === 'official_detail';
-    const url = direct ? official : `#'JD原文'!A${snapshotRows.get(jobKey(job))}`;
-    const label = direct ? official : (job.body_complete ? '完整 JD 快照' : '已获取 JD 片段') + ' · 岗位ID：' + job.job_id;
-    const detail = review ? detailedReason(review, bundle) : [
+    const url = official;
+    const label = direct ? official : (official ? '官方入口' : '链接未提供，原文见独立归档') + ' · 岗位ID：' + job.job_id;
+    const detail = review ? detailedReason(review) : [
       '评估结论：当前尚未形成可用的岗位匹配结论。',
       '能力匹配度结论：待评估，暂不评级。',
       '个人意愿匹配度结论：待确认，尚未形成有效结论。',
-      '主要缺口：' + clean(reason) + (bundle.data?.coverage?.status !== 'complete' ? '；来源覆盖尚不完整，限制见“来源覆盖”。' : ''),
+      '主要缺口：' + clean(reason),
     ].join('\n\n');
     sheet.rows.push([bundle.company.display_name, list(bundle.company.business_tags) || '待确认', ownershipTag(bundle.company), clean(job.title),
-      review ? priorityNames[review.priority] + '·' + ACTION_NAMES[review.next_action] : '待评估', review ? tierNames[review.match_tier] : '待评估',
+      review ? recommendationName(review) : '待评估', review ? reportTierName(review) : '待评估',
       list(job.cities) || list(job.locations_raw) || '待核实', review ? interestLevels[review.interest] : '待确认',
-      review ? abilityLevels[review.ability] : '待评估', detail, label]);
-    sheet.links.push({row: sheet.rows.length + 1, column: 11, url, label});
+      review ? abilityLevels[review.ability] : '待评估', review ? eligibilityNames[review.eligibility] : '待评估', detail, label]);
+    if (url) sheet.links.push({row: sheet.rows.length + 1, column: 12, url, label});
   }
   for (const review of assessed) appendRow(main, review.bundle, review.job, review);
-  const missingMap = new Map(missing.map(item => [JSON.stringify([item.company_id, String(item.job_id)]), item.reason]));
+  const missingMap = new Map(missing.map(item => [JSON.stringify([item.company_id, String(item.job_id)]), item.in_scope ? item.reason : '未纳入用户本次选择的评估范围；' + item.reason]));
   for (const bundle of bundles) {
     const completeIds = new Set(bundle.reviews.map(review => String(review.job_id)));
     for (const job of bundle.jobs.filter(value => visibleStatuses.has(value.evaluation_status) && !completeIds.has(String(value.job_id)))) {
-      const reason = job.evaluation_status === 'missing_body' ? '完整正文未取得' : job.evaluation_status === 'needs_verification' ? '招聘性质、状态或地点待核实' : missingMap.get(jobKey(job)) || '尚未评估';
+      const reason = ['missing_body','needs_verification'].includes(job.evaluation_status) && job.verification_issues?.length
+        ? job.verification_issues.map(item=>item.reason).join('；')
+        : job.evaluation_status === 'missing_body' ? '完整正文未取得' : job.evaluation_status === 'needs_verification' ? '招聘性质、状态或地点待核实' : missingMap.get(jobKey(job)) || '尚未评估';
       appendRow(unchecked, bundle, job, null, reason);
     }
   }
   notes.rows = [
     ['报告范围', audit.complete_assessment && audit.complete_collection ? '本轮范围内评估与采集均完整' : '部分报告：未评估及资料待核实岗位单独保留，来源覆盖限制见对应工作表。'],
+    ['评估方式', scope ? SCOPE_MODES[scope.mode] : '历史运行，未记录评估范围选择'],
+    ['本次选择范围', scope ? (scope.mode === 'sample' ? `实验批次 ${scope.jobs.length} 个岗位（上限 ${scope.sample_limit} 个）` : scope.mode === 'companies' ? scope.companies.join('、') : '城市筛选后全部入选公司的可评估岗位') : '按已有评估记录展示'],
+    ['所选范围完成情况', audit.complete_evaluation_scope ? '已完成所选范围内可评估岗位；采集失败、部分覆盖与资料待核实仍以来源覆盖为准。' : '所选范围仍有未评估岗位或未采集公司。'],
+    ['所选范围未评估数', audit.scope_missing_assessments], ['范围外未评估数', audit.outside_scope_remaining],
     ['生成时间（UTC）', audit.generated_at], ['城市筛选', list(run.profile.city_filters) || '不限'],
     ['公司业务偏好', list(run.profile.business_preferences) || '未设置'], ['岗位职能偏好', list(run.profile.role_preferences) || '未设置'],
     ['入选公司数', audit.companies_selected], ['全文评估岗位数', audit.assessed_jobs],
     ['未评估岗位数', missing.length], ['资料待核实岗位数', pending.length], ['来源部分覆盖数', audit.partial_sources.length],
     ['来源失败或未采集数', audit.source_failures.length],
-    ['匹配层级', 'v4双向汇总，不另评分：已有能力低或意愿低＝当前匹配不足；无低但有未知＝信息待确认；双高＝双向高匹配；其余已知非低＝双向有条件匹配。资格独立呈现，双向高匹配不保证可投递。'],
+    ['匹配层级', '先执行硬性条件闸门：届别或学历明确不符＝硬性条件不符，不进入投递；硬性条件匹配后，再按能力与意愿双向汇总：已有能力低或意愿低＝当前匹配不足；无低但有未知＝信息待确认；双高＝双向高匹配；其余已知非低＝双向有条件匹配。'],
+    ['硬性条件匹配度', '只核对JD与用户实际届别、学历：不匹配＝任一项存在明确冲突；匹配＝用户毕业时间和学历已知，且JD对应条件符合或未写相关限制。用户画像缺少毕业时间或学历时停止正式评估。提前实习、到岗时间、专业要求及轮岗信息另行记录，不混入本列。'],
     ['意愿匹配度', '用户明确需求与岗位供给的关系：高＝已知重要需求整体满足；中＝明确可接受的探索或取舍；低＝明确冲突；待确认＝重要意愿或供给未明。业务/性质仅在用户明确在意时计入一次；经历和地点入选不等于喜欢岗位。'],
     ['能力匹配度', 'v4：完整阅读JD后，以对口程度、经历层级、个人贡献和成果质量判断。相近条件下实习优先于学校／个人项目，再看其他相关经历；正式工作按真实工作责任判断，优质对口项目也可支撑高能力。客观经历和成就高于主观自评。高＝决定性核心要求均有中／强直接证据且至少一项强证据；中＝存在客观实践基础但核心覆盖或证据强度尚有缺口；低＝主要要求证据缺口较大；未知＝资料不足。多段独立对口实习增强判断，同一经历拆条不重复增益，不生成分数或录取概率。'],
     ['证据与经历', '客观经历／成就是材料中的具体事实陈述，不代表已完成外部核验；自称熟练、擅长等单独标为主观自评。核对个人行动、责任深度、成果和归属，不凭实习数量、公司名气、学校名气或数字大小直接评级。'],
     ['实习对口分层', '分别判断行业、部门业务和实际岗位职能。同业务跨岗位、同岗位跨业务均有部分对口价值，按JD具体任务判断迁移与缺口；单一维度不同不自动判低。信息不足标待核实。'],
-    ['详细评估理由', '每岗只展示四段总结：评估结论、能力匹配度结论、个人意愿匹配度结论、主要缺口。概括最重要的实习／项目依据与影响投递的限制；逐项证据对照保留在评估记录中，不堆叠到单元格。'],
-    ['关注优先级', '下一步行动紧迫性，非岗位适合程度。高优先／常规关注／低优先，附投递／核实／准备／暂缓。高优先需真实时间窗口或当前阻塞事项；未知资格/意愿可优先核实，不可直接投递。同级按公司和岗位排序。时间依据为评估当时快照，再次推进须核实时效。'],
+    ['详细评估理由', '每岗只展示四段总结：评估结论、能力匹配度结论、个人意愿匹配度结论、主要缺口。评估结论同时列出届别、学历的硬性条件依据；逐项能力证据对照保留在评估记录中，不堆叠到单元格。'],
+    ['投递建议', '可以投递＝硬性条件符合、意愿明确且已有可用匹配点；投递前准备＝不存在硬性冲突，但投递前应优化材料、整理案例或针对性准备；暂不建议投递＝硬性条件不符、意愿明确冲突、核心能力差距过大或方向明显偏离。主表不再使用“核实”动作；轮岗范围、业务占比、提前实习等信息写入详细理由，不阻止形成投递建议。'],
     ['公司性质标签', '国企／私企／外企独立于公司业务标签。按可核对的企业性质或控制关系资料记录；资料不足显示待核实。核实说明、来源和时间保留在来源覆盖，不能根据名称、上市地或业务猜测。'],
     ['阅读与评估要求', '每项结论须在完整阅读岗位职责、任职要求及招聘证据后产生。v4同时绑定JD与完整个人画像指纹。程序检查证据分类和结构一致性，不能证明真实阅读、事实真实性或语义判断正确；旧模型结论需重评。'],
-    ['JD链接', '优先显示可点击官方单岗位URL。无独立详情页时跳转本工作簿JD原文，并保留入口和岗位ID；工作簿可独立使用。'],
+    ['JD链接', '优先链接官方单岗位页；无独立详情页时链接官方招聘入口并标注岗位ID。全文与招聘证据另存于独立JD归档，需要查看快照时按公司和岗位ID提取。'],
+    ['JD原文存储', '完整JD、招聘证据和采集时间保存在独立过程文件 jd-originals.jsonl，未嵌入本工作簿。无官方链接时可通过公司和岗位ID请求查看归档。'],
     ['多城市岗位', '一行一个岗位，岗位城市保留全部选项，不保证最终分配到其中某城。'],
+    ['资料核验规则', '接口明确标注校招、岗位关联校招项目或有可核对的单一校招类型请求筛选，即可确认校招，不另要求“正式／全职”字段。标题明确标注的工作城市直接认可；保留地点、项目和请求原始证据。真实用工类型冲突、缺城市及缺正文仍分别记录。'],
     ['城市标签快照', clean(run.city_index_updated_at) || '未记录'],
   ];
   if (run.is_test) notes.rows.unshift(['测试说明', '本工作簿使用测试画像，不代表真实用户或投递建议。']);
   if (run.report_note) notes.rows.unshift(['本轮说明', clean(run.report_note)]);
-  return {sheets: [main, unchecked, coverage, snapshots, notes], audit, run};
+  const sheets=[main,unchecked,coverage];
+  if(run.verification_review){
+    const verification=await readJson(path.join(dir,'verification-review.json'));
+    if(verification.items.length!==run.verification_review.reviewed_count)throw new Error('资料复核记录数与运行摘要不一致');
+    sheets.push(verificationReviewSheet(verification));
+    notes.rows.unshift(['资料复核结果',`原待核实 ${verification.reviewed_count} 个；核验通过待评估 ${verification.results.to_assess||0} 个；仍待核实 ${(verification.results.needs_verification||0)+(verification.results.missing_body||0)} 个；确认不纳入 ${Object.entries(verification.results).filter(([key])=>key.startsWith('excluded')).reduce((sum,[,value])=>sum+value,0)} 个。逐项前后对照见“资料复核”。`]);
+    notes.rows.unshift(['公司性质仍待核实',`${verification.ownership_unresolved?.length||0} 家；校招与城市规则不用于推定企业控制关系，具体原因和现有依据见“来源覆盖”。`]);
+    audit.verification_review=run.verification_review;
+  }
+  sheets.push(notes);
+  return {sheets, audit, run};
 }
 
 export async function renderRun(dir, {allowPartial = false, previewDir} = {}) {
   dir = workspacePath(dir);
   const report = await buildReportData(dir, {allowPartial});
-  const workbookFile = path.join(dir, 'outputs', path.basename(dir), '校招岗位匹配.xlsx');
-  await writeExcelReport(workbookFile, report.sheets, {previewDir: previewDir ? workspacePath(previewDir) : undefined});
-  const audit = {...report.audit, workbook_file: workbookFile, output_format: 'xlsx'};
+  const jdArchive = await writeJdArchive(dir);
+  const workbookFile = path.join(SKILL_ROOT, 'outputs', path.basename(dir), '校招岗位匹配.xlsx');
+  await writeExcelReport(workbookFile, report.sheets, {previewDir: previewDir ? workspacePath(previewDir) : undefined, temporaryDir: path.join(dir, 'tmp', 'excel-export')});
+  const audit = {...report.audit, workbook_file: workbookFile, output_format: 'xlsx', process_dir: dir, jd_archive: jdArchive};
   await writeJson(path.join(dir, 'report-audit.json'), audit);
-  console.log(JSON.stringify({workbook: workbookFile, companies: audit.companies_selected, assessed: audit.assessed_jobs, remaining: audit.missing_assessments.length, needs_verification: audit.needs_verification, partial_sources: audit.partial_sources.length, complete_assessment: audit.complete_assessment, complete_collection: audit.complete_collection}));
+  console.log(JSON.stringify({workbook: workbookFile, companies: audit.companies_selected, assessed: audit.assessed_jobs, remaining: audit.missing_assessments.length, needs_verification: audit.needs_verification, partial_sources: audit.partial_sources.length, complete_assessment: audit.complete_assessment, complete_collection: audit.complete_collection, complete_evaluation_scope: audit.complete_evaluation_scope, scope_remaining: audit.scope_missing_assessments, outside_scope_remaining: audit.outside_scope_remaining, jd_archive: jdArchive.file, process_dir: dir}));
   return audit;
 }

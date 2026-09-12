@@ -1,6 +1,7 @@
 import { createDecipheriv, randomUUID } from 'node:crypto';
 import { createClient, saveDecoded } from './http.mjs';
 import { normalizeJobLocations, jobCityStatus } from './locations.mjs';
+import { reviewRecruitment } from './recruitment-policy.mjs';
 
 const supported = new Set(['moka', 'moka_api_platform', 'beisen', 'feishu', 'hotjob']);
 const reqMarker = /(?:任职|岗位|职位|任用|招聘|基本)(?:资格|要求|条件)|(?:^|\n)\s*要求\s*[：:]|我们希望你|我们期待你|希望你是|我们想找的|你需要具备|Qualifications|Requirements|What you bring|Who you are/i;
@@ -60,6 +61,7 @@ function classify(d, provider, campusContext) {
   const type = String(d.commitment || d.Kind || d.hireTypeDesc || recruitType?.name || '').trim();
   const campusLabel = d.Category || recruitType?.parent?.name || '';
   const evidence = { provider, campus_context: campusContext };
+  if (d._requested_recruitment_ids?.length) evidence.query_recruitment_id_list = d._requested_recruitment_ids;
   let formal = 'unknown', open = 'unknown';
   if (/实习|intern/i.test(type) || explicitInternTitle(title)) formal = 'internship';
   else if (/社招|社会招聘/.test(campusLabel) || recruitType?.id === '1' || (provider === 'hotjob' && Number(d.recruitType) === 2)) formal = 'social';
@@ -105,7 +107,8 @@ function classify(d, provider, campusContext) {
   if(formal==='internship'&&explicitFormalConflict){formal='unknown';evidence.type_conflict={structured_or_title_type:'internship',explicit_body_statement:explicitFormalConflict[0],resolution:'待核实：招聘性质字段或标题与正文明确正式岗位声明冲突'};}
   const early = combined.match(/.{0,35}(?:提前.{0,6}实习|实习.{0,10}(?:到岗|不少于|至少|个月)).{0,70}/g);
   if (formal === 'formal' && early) evidence.early_internship_requirement = early.slice(0, 4);
-  return { formal_status: formal, open_status: open, recruitment_evidence: evidence };
+  const reviewed = reviewRecruitment({title,description:combined,formal_status:formal,open_status:open,recruitment_evidence:evidence,raw_metadata:{project:d.job_subject || d.projectFolder || d.projectName}});
+  return { formal_status: reviewed.formal_status, open_status: open, recruitment_evidence: reviewed.recruitment_evidence };
 }
 
 function requestBody(q) {
