@@ -1,0 +1,4720 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-09-07T01:09:21.877Z",
+  "companies": [
+    {
+      "company_id": "company-53874092e000",
+      "display_name": "腾讯",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "全国工商联2025年民营企业研发投入榜单列入腾讯控股有限公司（第2位）；按已披露的境内主体/集团民营身份归类。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://www.acfic.org.cn/ztzlhz/chuangxin2025/report_list_chuangxin2025/202509/W020250927579746670469.pdf",
+          "title": "全国工商联：2025民营企业研发投入500家榜单",
+          "note": "已读原文，研发投入榜第2位：腾讯控股有限公司。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-47c1e53c427a",
+      "display_name": "阿里巴巴",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "全国工商联2025年民营企业研发投入榜单列入阿里巴巴（中国）有限公司（第3位）；按已披露的境内主体/集团民营身份归类。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://www.acfic.org.cn/ztzlhz/chuangxin2025/report_list_chuangxin2025/202509/W020250927579746670469.pdf",
+          "title": "全国工商联：2025民营企业研发投入500家榜单",
+          "note": "已读原文，研发投入榜第3位：阿里巴巴（中国）有限公司。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-702c213feab1",
+      "display_name": "字节跳动",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "石景山区政府公开走访名单把字节跳动明确列入民营企业组；按该公开集团性质归类，不以海外架构或上市地推断。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://www.bjsjs.gov.cn/ztzl/yhyshj/gzdt/202502/t20250207_478647_sjs.shtml",
+          "title": "石景山区政府：服务企业大走访",
+          "note": "原文明确包括好未来、物美、字节跳动等67家民营企业。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-455ece81de56",
+      "display_name": "百度",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "全国工商联2025年民营企业研发投入榜单列入百度公司（第8位）；按已披露的境内主体/集团民营身份归类。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://www.acfic.org.cn/ztzlhz/chuangxin2025/report_list_chuangxin2025/202509/W020250927579746670469.pdf",
+          "title": "全国工商联：2025民营企业研发投入500家榜单",
+          "note": "已读原文，研发投入榜第8位：百度公司。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-a62864e8c353",
+      "display_name": "网易",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "全国工商联2025年民营企业研发投入榜单列入网易（杭州）网络有限公司（第11位）；按已披露的境内主体/集团民营身份归类。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://www.acfic.org.cn/ztzlhz/chuangxin2025/report_list_chuangxin2025/202509/W020250927579746670469.pdf",
+          "title": "全国工商联：2025民营企业研发投入500家榜单",
+          "note": "已读原文，研发投入榜第11位：网易（杭州）网络有限公司。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-81baf57e05f1",
+      "display_name": "京东",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "全国工商联2025年民营企业研发投入榜单列入京东集团（第12位）；按已披露的境内主体/集团民营身份归类。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://www.acfic.org.cn/ztzlhz/chuangxin2025/report_list_chuangxin2025/202509/W020250927579746670469.pdf",
+          "title": "全国工商联：2025民营企业研发投入500家榜单",
+          "note": "已读原文，研发投入榜第12位：京东集团。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-cd6362472aea",
+      "display_name": "美团",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "全国工商联2025年民营企业研发投入榜单列入北京三快在线科技有限公司（美团）（第9位）；按已披露的境内主体/集团民营身份归类。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://www.acfic.org.cn/ztzlhz/chuangxin2025/report_list_chuangxin2025/202509/W020250927579746670469.pdf",
+          "title": "全国工商联：2025民营企业研发投入500家榜单",
+          "note": "已读原文，研发投入榜第9位：北京三快在线科技有限公司（美团）。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-d30e5ffc0ba9",
+      "display_name": "蚂蚁集团",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "全国工商联2025年民营企业研发投入榜单列入蚂蚁科技集团股份有限公司（第7位）；按已披露的境内主体/集团民营身份归类。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://www.acfic.org.cn/ztzlhz/chuangxin2025/report_list_chuangxin2025/202509/W020250927579746670469.pdf",
+          "title": "全国工商联：2025民营企业研发投入500家榜单",
+          "note": "已读原文，研发投入榜第7位：蚂蚁科技集团股份有限公司。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-b210af9eaeaa",
+      "display_name": "快手",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "全国工商联2025年民营企业研发投入榜单列入北京快手科技有限公司（第16位）；按已披露的境内主体/集团民营身份归类。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://www.acfic.org.cn/ztzlhz/chuangxin2025/report_list_chuangxin2025/202509/W020250927579746670469.pdf",
+          "title": "全国工商联：2025民营企业研发投入500家榜单",
+          "note": "已读原文，研发投入榜第16位：北京快手科技有限公司。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-d26c6a08a591",
+      "display_name": "小红书",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "上海市政府公开报道在上海民营企业发展案例中明确列举该企业。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://www.shanghai.gov.cn/nw4411/20250403/73992314950d49baa4167da2759edf81.html",
+          "title": "上海市政府：激活民营经济一池春水",
+          "note": "已读正文，明确将小红书列入上海民营企业发展案例。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-cfc3d445066f",
+      "display_name": "哔哩哔哩",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "上海市政府公开报道在上海民营企业发展案例中明确列举该企业。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://www.shanghai.gov.cn/nw4411/20250403/73992314950d49baa4167da2759edf81.html",
+          "title": "上海市政府：激活民营经济一池春水",
+          "note": "已读正文，明确将哔哩哔哩列入上海民营企业发展案例。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-effea4c9ff35",
+      "display_name": "拼多多",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "全国工商联2025年民营企业研发投入榜单列入上海寻梦信息技术有限公司（第28位）；按已披露的境内主体/集团民营身份归类。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://www.acfic.org.cn/ztzlhz/chuangxin2025/report_list_chuangxin2025/202509/W020250927579746670469.pdf",
+          "title": "全国工商联：2025民营企业研发投入500家榜单",
+          "note": "已读原文，研发投入榜第28位：上海寻梦信息技术有限公司。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-158ee539c847",
+      "display_name": "新浪与微博",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 新浪&微博 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://career.sina.com.cn/campus-recruitment/sina/43536#/jobs",
+          "title": "招聘数据源结构化公司性质字段：新浪&微博",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-a394b166c57a",
+      "display_name": "搜狐",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 搜狐 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://app.mokahr.com/campus-recruitment/sohu/5682?sourceToken=31c0d78325352db1c7c8553dd37d3e39#/",
+          "title": "招聘数据源结构化公司性质字段：搜狐",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-2ae32b54ff72",
+      "display_name": "腾讯音乐娱乐集团",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "已核实属于腾讯控制的子公司；结合全国工商联对腾讯集团的民营企业认定，按已明确集团控制性质归类。腾讯2025年报附注48列腾讯音乐为子公司，权益53.26%；定义页279明确为非全资子公司。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0409/2026040901231.pdf",
+          "title": "腾讯控股2025年报",
+          "note": "腾讯2025年报附注48列腾讯音乐为子公司，权益53.26%；定义页279明确为非全资子公司。",
+          "checked_at": "2026-09-07"
+        },
+        {
+          "url": "https://www.acfic.org.cn/ztzlhz/chuangxin2025/report_list_chuangxin2025/202509/W020250927579746670469.pdf",
+          "title": "全国工商联：2025民营企业研发投入500家榜单",
+          "note": "已读原文，研发投入榜第2位：腾讯控股有限公司。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-1bfefe0febb2",
+      "display_name": "知乎",
+      "ownership_tag": "待核实",
+      "status": "verified_unresolved",
+      "reason": "不同高校公开招聘页对北京知乎网技术有限公司分别标民营和三资；未取得可确定最终控制性质的集团披露。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://jdjyw.jlu.edu.cn/portal/jyzp/recruit/details?id=78f9142d922840e48a25dcc16d1b2b4e",
+          "title": "知乎2024届校园招聘（吉林大学）",
+          "note": "民营标识与大连海事大学相同主体的三资标识冲突，保留待核实。",
+          "checked_at": "2026-09-07"
+        },
+        {
+          "url": "https://myjob.dlmu.edu.cn/job/view/id/1920467",
+          "title": "大连海事大学就业网：知乎全栈开发实习生27届",
+          "note": "同一北京知乎网技术有限公司在此标为三资企业，与吉林大学公开页面民营标签不一致。需核当前主体控制链，不能据任一招聘标签定性。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-67a67fc05f47",
+      "display_name": "爱奇艺",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "全国工商联2025年民营企业研发投入榜单列入北京爱奇艺科技有限公司（第121位）；按已披露的境内主体/集团民营身份归类。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://www.acfic.org.cn/ztzlhz/chuangxin2025/report_list_chuangxin2025/202509/W020250927579746670469.pdf",
+          "title": "全国工商联：2025民营企业研发投入500家榜单",
+          "note": "已读原文，研发投入榜第121位：北京爱奇艺科技有限公司。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-fcdbfc51189f",
+      "display_name": "虎牙",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "已核实属于腾讯控制的子公司；结合全国工商联对腾讯集团的民营企业认定，按已明确集团控制性质归类。腾讯2025年报定义页275明确HUYA Inc.为腾讯非全资子公司；虎牙2025年报股东章确认腾讯截至2026年3月持股65.4%、投票权95.0%。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0409/2026040901231.pdf",
+          "title": "腾讯控股2025年报",
+          "note": "腾讯2025年报定义页275明确HUYA Inc.为腾讯非全资子公司；虎牙2025年报股东章确认腾讯截至2026年3月持股65.4%、投票权95.0%。",
+          "checked_at": "2026-09-07"
+        },
+        {
+          "url": "https://www.acfic.org.cn/ztzlhz/chuangxin2025/report_list_chuangxin2025/202509/W020250927579746670469.pdf",
+          "title": "全国工商联：2025民营企业研发投入500家榜单",
+          "note": "已读原文，研发投入榜第2位：腾讯控股有限公司。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-e66870ac2078",
+      "display_name": "阅文集团",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "上海市政府公开报道在上海民营企业发展案例中明确列举该企业。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://www.shanghai.gov.cn/nw4411/20250403/73992314950d49baa4167da2759edf81.html",
+          "title": "上海市政府：激活民营经济一池春水",
+          "note": "已读正文，明确将阅文集团列入上海民营企业发展案例。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-08d30215aa1b",
+      "display_name": "挚文集团",
+      "ownership_tag": "待核实",
+      "status": "verified_unresolved",
+      "reason": "已读吉林大学2027届公开招聘页，单位北京陌陌信息技术有限公司标注外商投资；另检索到该校2024届页面标注民营但原站打开失败。招聘元数据不足以确认集团或本次用人主体实控性质，暂留待核实。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://jdjyw.jlu.edu.cn/portal/jyzp/recruit/details?id=44bf4f1452054fcca73a6799ead26158",
+          "title": "挚文集团2027届提前批（吉林大学公开招聘）",
+          "note": "发现北京陌陌被列外商投资，但2024年同校页面列民营；此来源仅记录待核实线索，不作为最终性质依据。",
+          "checked_at": "2026-09-07"
+        },
+        {
+          "url": "https://jdjywpt.jlu.edu.cn/portal/jyzp/recruit/details?id=13ad5f2ba2b541ddbd972c1555aff192",
+          "title": "吉林大学：挚文集团2024届校园招聘",
+          "note": "检索结果标为民营，原站未成功打开，仅作待复核线索，不用其支持确定性质。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-b38dad0419bf",
+      "display_name": "HelloTalk",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 HelloTalk 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://hellotalk.jobs.feishu.cn/130439",
+          "title": "招聘数据源结构化公司性质字段：HelloTalk",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-ff74373e3fd8",
+      "display_name": "最右",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 最右 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://app.mokahr.com/campus-recruitment/xiaochuankeji/92513#/jobs",
+          "title": "招聘数据源结构化公司性质字段：最右",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-7eece4194725",
+      "display_name": "SHEIN",
+      "ownership_tag": "待核实",
+      "status": "verified_unresolved",
+      "reason": "已读官网集团介绍、服务条款及总部公告：可确认总部在新加坡，Roadget Business Pte. Ltd.为官网运营及品牌主体；尚未核得本次中国用人主体与集团的最新实际控制链，不能仅凭海外总部或品牌运营主体认定外企。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://www.sheingroup.com/terms-conditions",
+          "title": "SHEIN集团官网服务条款",
+          "note": "条款1.1、5.2可确认Roadget为网站运营及品牌主体，但不是大陆用人主体股权证明。",
+          "checked_at": "2026-09-07"
+        },
+        {
+          "url": "https://www.sheingroup.com/newsroom/shein-affirms-commitment-to-korean-market-signs-south-korean-actress-as-the-first-global",
+          "title": "SHEIN官网：韩国市场公告（2024年6月20日）",
+          "note": "总部位于新加坡；不单凭总部位置判断控股性质。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-0a5441b46ae5",
+      "display_name": "得物",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "上海市民营企业总部服务中心2023年5月刊列出已认定总部上海识装信息科技有限公司，并明确对应品牌得物。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://www.gslpt.cn/FICCMS/wwwroot/hdfwpt/media/attach/1704716626494.pdf",
+          "title": "上海市民营企业总部发展动态2023年第2期",
+          "note": "已读PDF第2页表1，第2项为得物的已认定民营企业总部。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-dbcccfcd22c6",
+      "display_name": "转转",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 转转集团 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://zhuanzhuan.zhiye.com/campus/jobs?memory=%7B%7D&silence=1",
+          "title": "招聘数据源结构化公司性质字段：转转集团",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-35ed31dc630c",
+      "display_name": "微店",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 微店 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://hr.weidian.com/campus/jobs",
+          "title": "招聘数据源结构化公司性质字段：微店",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-0c906779b458",
+      "display_name": "千岛",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 千岛 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://echotech.jobs.feishu.cn/xiaozhao",
+          "title": "招聘数据源结构化公司性质字段：千岛",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-f91bda4013d6",
+      "display_name": "美迈科技",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 美迈科技 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://mirmiles.zhiye.com/campus/jobs",
+          "title": "招聘数据源结构化公司性质字段：美迈科技",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-dff40ee33a99",
+      "display_name": "碧橙数字",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 碧橙数字 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://bicheng.zhiye.com/campus/jobs",
+          "title": "招聘数据源结构化公司性质字段：碧橙数字",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-2d44b89f63c0",
+      "display_name": "震坤行",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 震坤行 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://zhaopin.zkh.com/campus/jobs",
+          "title": "招聘数据源结构化公司性质字段：震坤行",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-57b33bc4f2a1",
+      "display_name": "滴滴",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "全国工商联2025年民营企业研发投入榜单列入北京嘀嘀无限科技发展有限公司（滴滴出行）（第23位）；按已披露的境内主体/集团民营身份归类。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://www.acfic.org.cn/ztzlhz/chuangxin2025/report_list_chuangxin2025/202509/W020250927579746670469.pdf",
+          "title": "全国工商联：2025民营企业研发投入500家榜单",
+          "note": "已读原文，研发投入榜第23位：北京嘀嘀无限科技发展有限公司（滴滴出行）。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-a597d14a35c7",
+      "display_name": "携程集团",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "全国工商联2025年民营企业研发投入榜单列入上海携程商务有限公司（第15位）；按已披露的境内主体/集团民营身份归类。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://www.acfic.org.cn/ztzlhz/chuangxin2025/report_list_chuangxin2025/202509/W020250927579746670469.pdf",
+          "title": "全国工商联：2025民营企业研发投入500家榜单",
+          "note": "已读原文，研发投入榜第15位：上海携程商务有限公司。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-ea613014288c",
+      "display_name": "途牛",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 途牛旅游网 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://tuniu.zhiye.com/campus/jobs",
+          "title": "招聘数据源结构化公司性质字段：途牛旅游网",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-61240a5e55e9",
+      "display_name": "哈啰",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "全国工商联2025年民营企业研发投入榜单列入上海哈啰普惠科技有限公司（第419位）；按已披露的境内主体/集团民营身份归类。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://www.acfic.org.cn/ztzlhz/chuangxin2025/report_list_chuangxin2025/202509/W020250927579746670469.pdf",
+          "title": "全国工商联：2025民营企业研发投入500家榜单",
+          "note": "已读原文，研发投入榜第419位：上海哈啰普惠科技有限公司。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-ab6e8fb4d921",
+      "display_name": "T3 出行",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 T3出行 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://t3go.zhiye.com/campus/jobs",
+          "title": "招聘数据源结构化公司性质字段：T3出行",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-c39888bcadf8",
+      "display_name": "货拉拉",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 货拉拉 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://app.mokahr.com/campus-recruitment/huolalahr/98660#/",
+          "title": "招聘数据源结构化公司性质字段：货拉拉",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-3edf2df05aef",
+      "display_name": "满帮集团",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 满帮集团 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://campus.fulltruckalliance.com/campus-recruitment/manbang/94191#/",
+          "title": "招聘数据源结构化公司性质字段：满帮集团",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-bbf424863d60",
+      "display_name": "贝壳找房",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "全国工商联2025年民营企业研发投入榜单列入贝壳控股有限公司（第84位）；按已披露的境内主体/集团民营身份归类。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://www.acfic.org.cn/ztzlhz/chuangxin2025/report_list_chuangxin2025/202509/W020250927579746670469.pdf",
+          "title": "全国工商联：2025民营企业研发投入500家榜单",
+          "note": "已读原文，研发投入榜第84位：贝壳控股有限公司。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-4ccac1e33312",
+      "display_name": "新东方",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 新东方 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://zhaopin.xdf.cn/",
+          "title": "招聘数据源结构化公司性质字段：新东方",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-ec98f4d0a520",
+      "display_name": "猿辅导",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 猿辅导集团 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://app.mokahr.com/campus-recruitment/fenbi/47742#/jobs?page=1&anchorName=jobsList",
+          "title": "招聘数据源结构化公司性质字段：猿辅导集团",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-8a074a73c5d6",
+      "display_name": "高途",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 高途 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://jsj.top/f/pA4Fq4",
+          "title": "招聘数据源结构化公司性质字段：高途",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-f9f525fd1bbc",
+      "display_name": "作业帮",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 作业帮 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://app.mokahr.com/campus-recruitment/zuoyebang/150514?locale=zh-CN#/home",
+          "title": "招聘数据源结构化公司性质字段：作业帮",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-7fcb66ae9424",
+      "display_name": "红松集团",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 红松集团 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://app.mokahr.com/campus_apply/hongsong/72062#/",
+          "title": "招聘数据源结构化公司性质字段：红松集团",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-a139879b8607",
+      "display_name": "水滴公司",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "全国工商联2026年民营经济人士专题报道，将北京水滴科技集团有限公司作为民营企业科技创新实例并采访其董事长。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://www.acfic.org.cn/myjjzs/myjjsd/202602/t20260206_324242.html",
+          "title": "全国工商联：广大民营经济人士把握发展大势同心共向十五五",
+          "note": "全文第115至120行以民营企业创新为上下文，列举北京水滴科技集团有限公司。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-5655d2796d41",
+      "display_name": "方舟健客",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 方舟健客 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://mp.weixin.qq.com/s/9Fm7CSZQVtN_uwdZCKJovg",
+          "title": "招聘数据源结构化公司性质字段：方舟健客",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-a7dd2b9da754",
+      "display_name": "钛动科技",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 钛动科技 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://app.mokahr.com/campus-recruitment/tec-do/41717?sourceToken=72d89bceb7c3b9543c9f320019b729e0#/",
+          "title": "招聘数据源结构化公司性质字段：钛动科技",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-9b632338ff20",
+      "display_name": "东方财富",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "全国工商联报道上海国有企业与民营企业协同发展座谈会，明确将东方财富董事长列在民营企业代表组，与国有企业负责人分组列示。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://www.acfic.org.cn/gdgslgz/sh/bjgslgz/202506/t20250616_316953.html",
+          "title": "全国工商联：上海地方国有企业与民营企业协同发展座谈会",
+          "note": "2025年6月公开报道末段，东方财富董事长其实被明确归入民营企业代表。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-6a5a52d1aede",
+      "display_name": "富途",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 富途 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://join.futunn.com/#position",
+          "title": "招聘数据源结构化公司性质字段：富途",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-0ca64611dda7",
+      "display_name": "编程猫",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 编程猫 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://app.mokahr.com/campus-recruitment/codemaohr/37503#/",
+          "title": "招聘数据源结构化公司性质字段：编程猫",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-d1b1a517f4bd",
+      "display_name": "翼鸥教育",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 翼鸥教育 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://eeo.zhiye.com/campus/jobs",
+          "title": "招聘数据源结构化公司性质字段：翼鸥教育",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-ae36b30138a9",
+      "display_name": "利欧数字",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 利欧集团 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://leoglobal.jobs.feishu.cn/leoxz/position/list",
+          "title": "招聘数据源结构化公司性质字段：利欧集团",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-cfdb35e87a5e",
+      "display_name": "鹰角网络",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "2025年报道上海工商联动员民企救灾行动，列明上海鹰角网络科技有限公司捐赠。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://rikaze.xzdw.gov.cn/yzzl_753/dt/202501/t20250110_541532.html",
+          "title": "日喀则市委：情系西藏定日震区，上海民企紧急援助",
+          "note": "2025年报道上海工商联动员民企救灾行动，列明上海鹰角网络科技有限公司捐赠。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-b3a37baefe7c",
+      "display_name": "冰川网络",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 冰川网络 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://bingchuan1.zhiye.com/campus/jobs",
+          "title": "招聘数据源结构化公司性质字段：冰川网络",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-7b0537129aa4",
+      "display_name": "米哈游",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "上海市政府公开报道在上海民营企业发展案例中明确列举该企业。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://www.shanghai.gov.cn/nw4411/20250403/73992314950d49baa4167da2759edf81.html",
+          "title": "上海市政府：激活民营经济一池春水",
+          "note": "已读正文，明确将米哈游列入上海民营企业发展案例。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-87a49224c514",
+      "display_name": "完美世界",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 完美世界 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://jobs.games.wanmei.com/school.html",
+          "title": "招聘数据源结构化公司性质字段：完美世界",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-187d534a2b5d",
+      "display_name": "三七互娱",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "全国工商联2025年民营企业研发投入榜单列入三七互娱网络科技集团股份有限公司（第358位）；按已披露的境内主体/集团民营身份归类。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://www.acfic.org.cn/ztzlhz/chuangxin2025/report_list_chuangxin2025/202509/W020250927579746670469.pdf",
+          "title": "全国工商联：2025民营企业研发投入500家榜单",
+          "note": "已读原文，研发投入榜第358位：三七互娱网络科技集团股份有限公司。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-9ced3e73f242",
+      "display_name": "游族网络",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 游族网络 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://campus.yoozoo.com/jobs",
+          "title": "招聘数据源结构化公司性质字段：游族网络",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-c883b9b7426d",
+      "display_name": "巨人网络",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 巨人网络 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://hr.ztgame.com/campus/join/recruit?type=sx",
+          "title": "招聘数据源结构化公司性质字段：巨人网络",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-d0e53de26204",
+      "display_name": "FunPlus",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 FunPlus 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://app.mokahr.com/campus-recruitment/funplus01/147931#/",
+          "title": "招聘数据源结构化公司性质字段：FunPlus",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-275a0be99c51",
+      "display_name": "盛趣游戏",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 盛趣游戏 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://app.mokahr.com/campus-recruitment/shengqu/96336#/",
+          "title": "招聘数据源结构化公司性质字段：盛趣游戏",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-3177f0886065",
+      "display_name": "掌趣科技",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 掌趣科技 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://app.mokahr.com/campus-recruitment/ourpalm/43628#/",
+          "title": "招聘数据源结构化公司性质字段：掌趣科技",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-a9fb47cbc3ac",
+      "display_name": "乐元素",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 乐元素 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://app.mokahr.com/campus_apply/leyuansu/2357#/",
+          "title": "招聘数据源结构化公司性质字段：乐元素",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-a27edd22b672",
+      "display_name": "途游游戏",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 途游游戏 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://app.mokahr.com/campus-recruitment/tuyoogame/146219?locale=zh-CN#/",
+          "title": "招聘数据源结构化公司性质字段：途游游戏",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-e68d11ab2404",
+      "display_name": "诗悦网络",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 诗悦网络 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://campus.shiyue.com/#/",
+          "title": "招聘数据源结构化公司性质字段：诗悦网络",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-027d44d6a233",
+      "display_name": "游卡",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 游卡 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://campus.yokaverse.com/",
+          "title": "招聘数据源结构化公司性质字段：游卡",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-a3f0a1155cef",
+      "display_name": "飞鱼科技",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 飞鱼科技 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://app.mokahr.com/campus_apply/feiyu/142123#/jobs",
+          "title": "招聘数据源结构化公司性质字段：飞鱼科技",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-5a50ebac770f",
+      "display_name": "柠檬微趣",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 柠檬微趣 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://app.mokahr.com/apply/microfunhr/75944?sourceToken=e0f0242bf8ee47afc741c37f136a6664#/",
+          "title": "招聘数据源结构化公司性质字段：柠檬微趣",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-a25eb0a67804",
+      "display_name": "大梦龙途",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 大梦龙途 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://app.mokahr.com/campus-recruitment/damenglongtu/36328#/",
+          "title": "招聘数据源结构化公司性质字段：大梦龙途",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-ce4986f05bce",
+      "display_name": "Garena",
+      "ownership_tag": "外企",
+      "status": "verified",
+      "reason": "Sea官网年报明确Garena Online为其在新加坡设立的全资子公司；2026年官网公告继续确认Garena是其核心游戏业务，集团在新加坡创立并以当地为总部。按境外集团控制归类，并非根据创始人或上市地判断。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://cdn.sea.com/webmain/static/resource/seagroup/pressrelease/2024AR/NT8CQURDcqzIyTpTQ0SN/2025-04-17%20-%20Form%2020-F.pdf",
+          "title": "Sea Limited 2024年度Form 20-F",
+          "note": "已读组织架构章第85页及附注F-20：Garena Online Private Limited为新加坡设立、Sea直接持股100%的子公司。封面列主要行政办公室在新加坡。",
+          "checked_at": "2026-09-07"
+        },
+        {
+          "url": "https://www.sea.com/news/384",
+          "title": "Sea与Google深化合作（2026年2月19日）",
+          "note": "公告确认Sea在新加坡创立，Garena为旗下核心游戏业务。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-dd8d4ab486d0",
+      "display_name": "望尘科技",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 望尘科技 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://app.mokahr.com/campus-recruitment/galasports/98034#/",
+          "title": "招聘数据源结构化公司性质字段：望尘科技",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-cd64f48fdd06",
+      "display_name": "点触科技",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 点触科技 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://zhaopin.dianchu.com/CampusRecruitment",
+          "title": "招聘数据源结构化公司性质字段：点触科技",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-481243d2f2a2",
+      "display_name": "月之暗面",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 月之暗面 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://app.mokahr.com/campus-recruitment/moonshot/148507?sourceToken=416e2fefd31cb960649b0b0fdd2adf7a#/",
+          "title": "招聘数据源结构化公司性质字段：月之暗面",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-8bcef51236d6",
+      "display_name": "智谱",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "全国工商联2025年民营企业研发投入榜单列入北京智谱华章科技股份有限公司（第87位）；按已披露的境内主体/集团民营身份归类。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://www.acfic.org.cn/ztzlhz/chuangxin2025/report_list_chuangxin2025/202509/W020250927579746670469.pdf",
+          "title": "全国工商联：2025民营企业研发投入500家榜单",
+          "note": "已读原文，研发投入榜第87位：北京智谱华章科技股份有限公司。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-f77d48bcb475",
+      "display_name": "阶跃星辰",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 阶跃星辰 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://app.mokahr.com/campus-recruitment/step/141903#/jobs",
+          "title": "招聘数据源结构化公司性质字段：阶跃星辰",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-9a9da8b39d14",
+      "display_name": "思必驰",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 思必驰 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://aispeech.zhiye.com/campus",
+          "title": "招聘数据源结构化公司性质字段：思必驰",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-d7fd3095dc81",
+      "display_name": "超参数科技",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 超参数科技 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://app.mokahr.com/campus-recruitment/chaocanshu/45562#/jobs?location=&page=1&anchorName=jobsList",
+          "title": "招聘数据源结构化公司性质字段：超参数科技",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-a6a582140091",
+      "display_name": "合合信息",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "上海市政府公开报道在上海民营企业发展案例中明确列举该企业。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://www.shanghai.gov.cn/nw4411/20250403/73992314950d49baa4167da2759edf81.html",
+          "title": "上海市政府：激活民营经济一池春水",
+          "note": "已读正文，明确将合合信息列入上海民营企业发展案例。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-47e61a10d8a0",
+      "display_name": "虹软科技",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 虹软科技 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://www.arcsoft.com.cn/job/JobList.html",
+          "title": "招聘数据源结构化公司性质字段：虹软科技",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-97a5c201193a",
+      "display_name": "杉数科技",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 杉数科技 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://join.shanshu.ai/campus-recruitment/shanshu/57987#/jobs?zhineng%5B0%5D=87475",
+          "title": "招聘数据源结构化公司性质字段：杉数科技",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-45e0ade11fed",
+      "display_name": "金山办公",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "2025年公开报道明确列举金山办公等民营企业。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://www.zytzb.gov.cn/zytzb/2025-09/28/article_2025093011230977374.shtml",
+          "title": "中央统战部：广东成立人工智能与机器人产业联盟",
+          "note": "2025年公开报道明确列举金山办公等民营企业。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-235d999f3ae1",
+      "display_name": "用友",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "全国工商联2025年民营企业研发投入榜单列入用友网络科技股份有限公司（第93位）；按已披露的境内主体/集团民营身份归类。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://www.acfic.org.cn/ztzlhz/chuangxin2025/report_list_chuangxin2025/202509/W020250927579746670469.pdf",
+          "title": "全国工商联：2025民营企业研发投入500家榜单",
+          "note": "已读原文，研发投入榜第93位：用友网络科技股份有限公司。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-3a52e76b0908",
+      "display_name": "北森",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 北森 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://beisen.zhiye.com/campus/detail?jobAdId=4e9b4dea-3cfd-4fe5-8ba7-cf01a073a40b",
+          "title": "招聘数据源结构化公司性质字段：北森",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-17273c4100ea",
+      "display_name": "帆软",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "区委宣传部2025年报道将帆软作为本地民营经济样本，记述其代表民企在全省民营经济座谈会发言。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://www.jsxishan.gov.cn/doc/2025/03/10/4515398.shtml",
+          "title": "锡山区政府：何以帆软 何以锡山",
+          "note": "区委宣传部2025年报道将帆软作为本地民营经济样本，记述其代表民企在全省民营经济座谈会发言。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-ee3846b67d14",
+      "display_name": "e签宝",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 e签宝 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://esign.zhiye.com/campus/jobs",
+          "title": "招聘数据源结构化公司性质字段：e签宝",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-56130050ea37",
+      "display_name": "万兴科技",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "企业官网报道合作方在签约仪式上将万兴科技明确表述为民营企业，并由企业官网正式刊载。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://www.wondershare.cn/new/details/id/979.html",
+          "title": "万兴科技官网：与湘江实验室战略合作签约",
+          "note": "原文刊载陈晓红院士发言，明确万兴科技在优秀民营企业中脱颖而出。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-d65c903ba79b",
+      "display_name": "新中大科技",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 新中大科技 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://app.mokahr.com/campus-recruitment/newgrand/151701?locale=zh-CN#/jobs",
+          "title": "招聘数据源结构化公司性质字段：新中大科技",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-f03b76eec464",
+      "display_name": "博思软件",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 博思软件 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://app.mokahr.com/campus-recruitment/bosssoft/68370#/",
+          "title": "招聘数据源结构化公司性质字段：博思软件",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-514b505db61b",
+      "display_name": "群核科技",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 群核科技 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://app.mokahr.com/campus_apply/qunhemail/2832#/jobs?zhineng=165367&page=1",
+          "title": "招聘数据源结构化公司性质字段：群核科技",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-ae0a3647a266",
+      "display_name": "Style3D",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 Style3D 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://app.mokahr.com/social-recruitment/linctex/46055#/job/3c37f594-73b7-4fc7-adda-9e9614ec2bdd?from=qrcode",
+          "title": "招聘数据源结构化公司性质字段：Style3D",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-e11f54a107da",
+      "display_name": "云道智造",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 云道智造 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://app.mokahr.com/campus-recruitment/ibe/37870?locale=zh-CN#/",
+          "title": "招聘数据源结构化公司性质字段：云道智造",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-d8cdbed91919",
+      "display_name": "恒生",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "全国工商联2025年民营企业研发投入榜单列入恒生电子股份有限公司（第82位）；按已披露的境内主体/集团民营身份归类。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://www.acfic.org.cn/ztzlhz/chuangxin2025/report_list_chuangxin2025/202509/W020250927579746670469.pdf",
+          "title": "全国工商联：2025民营企业研发投入500家榜单",
+          "note": "已读原文，研发投入榜第82位：恒生电子股份有限公司。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-d7a8856c4539",
+      "display_name": "宇信科技",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 宇信科技 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://yusys-campus.zhiye.com/jobs",
+          "title": "招聘数据源结构化公司性质字段：宇信科技",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-34e3fef9b15f",
+      "display_name": "金证股份",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 金证股份 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://szkingdom.zhiye.com/campus/jobs",
+          "title": "招聘数据源结构化公司性质字段：金证股份",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-07624479ada4",
+      "display_name": "顶点软件",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 顶点软件 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://wecruit.hotjob.cn/SU62d669e0bef57c0f7dbabacf/pb/school.html",
+          "title": "招聘数据源结构化公司性质字段：顶点软件",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-bd5d7bb7e2b9",
+      "display_name": "信雅达",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 信雅达 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://app.mokahr.com/campus-recruitment/sunyard/43203#/",
+          "title": "招聘数据源结构化公司性质字段：信雅达",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-28567b19b144",
+      "display_name": "浩鲸科技",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 浩鲸科技 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://iwhalecloud1.zhiye.com/campus/jobs",
+          "title": "招聘数据源结构化公司性质字段：浩鲸科技",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-b889f301ee60",
+      "display_name": "麒麟软件",
+      "ownership_tag": "国企",
+      "status": "verified",
+      "reason": "官网明确属于中国电子信息产业集团，并列出中央企业先进集体及国资委示范企业等身份。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://www.kylinos.cn/about/company/index.html",
+          "title": "麒麟软件：公司简介",
+          "note": "已读官网公司简介，明确中国电子旗下科技企业身份；按集团国资控制口径归类。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-e6e4af5f0673",
+      "display_name": "优刻得",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "上海市政府原文明确其为民营企业；2025年杨浦区政府公开文章继续披露其获上海市民营企业总部认定、入选科创板民营企业指数。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://www.shanghai.gov.cn/nw4411/20200903/0001-4411_1357657.html",
+          "title": "上海市政府：优刻得扎根杨浦",
+          "note": "已读政府网页全文，直接将上海优刻得信息科技股份有限公司称为民营企业。",
+          "checked_at": "2026-09-07"
+        },
+        {
+          "url": "https://www.shyp.gov.cn/shypq/xwzx-bmdt/20250725/486270.html",
+          "title": "杨浦区政府：科创板两个新指数都有优刻得",
+          "note": "2025年7月25日公开文章全文已从检索返回读取，原站打开超时；内容明确民营企业总部认定及民营指数入选。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-0e0b93c317d0",
+      "display_name": "金山云",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "全国工商联2025年民营企业研发投入榜单列入北京金山云网络技术有限公司（第481位）；按已披露的境内主体/集团民营身份归类。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://www.acfic.org.cn/ztzlhz/chuangxin2025/report_list_chuangxin2025/202509/W020250927579746670469.pdf",
+          "title": "全国工商联：2025民营企业研发投入500家榜单",
+          "note": "已读原文，研发投入榜第481位：北京金山云网络技术有限公司。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-223bdf9d4c80",
+      "display_name": "并行科技",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 并行科技 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://paratera.zhiye.com/campus/jobs",
+          "title": "招聘数据源结构化公司性质字段：并行科技",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-7fe2c247fb54",
+      "display_name": "中国电子云",
+      "ownership_tag": "国企",
+      "status": "verified",
+      "reason": "官网明确为中国电子核心企业，按已披露央企集团控制性质归类。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://cecloud.com/about.html",
+          "title": "关于中国电子云",
+          "note": "已读品牌介绍，明确中国电子核心企业及执行集团战略身份。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-9ca52ae89cd5",
+      "display_name": "噢易云",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 噢易云 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://oseasy.zhiye.com/campus/jobs",
+          "title": "招聘数据源结构化公司性质字段：噢易云",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-6a76d80005c6",
+      "display_name": "涂鸦智能",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 涂鸦智能 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://app.mokahr.com/campus-recruitment/tuya/147434?locale=zh-CN#/jobs",
+          "title": "招聘数据源结构化公司性质字段：涂鸦智能",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-fcd43c26dbb7",
+      "display_name": "DolphinDB",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 DolphinDB 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://app.mokahr.com/campus-recruitment/dolphindb/101962#/",
+          "title": "招聘数据源结构化公司性质字段：DolphinDB",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-0287b84e799a",
+      "display_name": "电科金仓",
+      "ownership_tag": "国企",
+      "status": "verified",
+      "reason": "中国电科官网2025年报道明确金仓为电科太极下属企业，太极股份为控股股东。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://www.cetc.com.cn/15/338652/338628/2106816/index.html",
+          "title": "中国电科：电科太极发布数据库新产品",
+          "note": "通过Jina读取官网原文，正文明确太极股份是电科金仓的控股股东。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-4d5304b044f4",
+      "display_name": "星环科技",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 星环科技 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://app.mokahr.com/campus_apply/transwarp/3196#/jobs",
+          "title": "招聘数据源结构化公司性质字段：星环科技",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-b3535ec4bd16",
+      "display_name": "智慧芽",
+      "ownership_tag": "待核实",
+      "status": "verified_unresolved",
+      "reason": "已读官网组织架构声明：顶层PatSnap Limited注册于开曼并拥有全球子公司；官网列新加坡等办公室。现有材料尚未明确本次大陆用人主体的当前控制权性质；不以开曼注册、海外办公室或投资人名单直接判外企。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://www.patsnap.com/legal/patsnap-limited-modern-slavery-act-transparency-statement/",
+          "title": "PatSnap官网现代奴役透明度声明",
+          "note": "组织架构段说明PatSnap为集团顶层公司，注册开曼；声明对应2019财年，不能单独证明2026年大陆主体控制性质。",
+          "checked_at": "2026-09-07"
+        },
+        {
+          "url": "https://www.patsnap.com/about-us",
+          "title": "Patsnap官网公司介绍",
+          "note": "已读当前官网全球办公室和投资者介绍，未取得当前大陆主体控股链披露。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-f93e5a384c54",
+      "display_name": "360集团",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "全国工商联2025年民营企业研发投入榜单列入北京奇虎科技有限公司（第61位）；按已披露的境内主体/集团民营身份归类。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://www.acfic.org.cn/ztzlhz/chuangxin2025/report_list_chuangxin2025/202509/W020250927579746670469.pdf",
+          "title": "全国工商联：2025民营企业研发投入500家榜单",
+          "note": "已读原文，研发投入榜第61位：北京奇虎科技有限公司。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-091e08ea6136",
+      "display_name": "启明星辰集团",
+      "ownership_tag": "国企",
+      "status": "verified",
+      "reason": "公司官网明确2024年1月起由中国移动实际控制，为其专责网信安全专业子公司。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://www.venustech.com.cn/new_type/kcxfz/",
+          "title": "启明星辰：可持续发展（ESG）",
+          "note": "已读官网可持续发展愿景，明确中国移动实控与专业子公司身份。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-3827974708ce",
+      "display_name": "深信服",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "深交所发布的2025年报披露控股股东为自然人控股，实际控制人性质为境内自然人；报告期内未发生变更。依据控制权披露归类，不因仅为上市公司作判断。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://disc.static.szse.cn/disc/disk03/finalpage/2026-04-01/a5c2cce7-b68d-4f79-afb3-56ffebcb1dc4.PDF",
+          "title": "深信服2025年年度报告",
+          "note": "已读年报第93页控股股东、实际控制人披露：何朝曦、熊武、冯毅为一致行动的境内自然人实际控制人。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-5ee4e1fb4db3",
+      "display_name": "天融信科技集团",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "全国工商联2025年民营企业研发投入榜单列入北京天融信网络安全技术有限公司（第330位）；按已披露的境内主体/集团民营身份归类。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://www.acfic.org.cn/ztzlhz/chuangxin2025/report_list_chuangxin2025/202509/W020250927579746670469.pdf",
+          "title": "全国工商联：2025民营企业研发投入500家榜单",
+          "note": "已读原文，研发投入榜第330位：北京天融信网络安全技术有限公司。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-222bc6edeba6",
+      "display_name": "绿盟科技",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "全国工商联2025年民营企业研发投入榜单列入绿盟科技集团股份有限公司（第383位）；按已披露的境内主体/集团民营身份归类。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://www.acfic.org.cn/ztzlhz/chuangxin2025/report_list_chuangxin2025/202509/W020250927579746670469.pdf",
+          "title": "全国工商联：2025民营企业研发投入500家榜单",
+          "note": "已读原文，研发投入榜第383位：绿盟科技集团股份有限公司。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-d5e784710ff0",
+      "display_name": "微步在线",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 微步在线 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://app.mokahr.com/campus-recruitment/threatbook/39679#/home",
+          "title": "招聘数据源结构化公司性质字段：微步在线",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-b8b8b02b6081",
+      "display_name": "三未信安",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "已阅读公司2025年报控股股东与实际控制人章节，实际控制人为中国自然人张岳公且控制权未变；上交所原始PDF读取超时，保留同一公司披露的全文镜像。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12039578&stockid=688489",
+          "title": "三未信安2025年年度报告（公司公告公开镜像）",
+          "note": "已阅读公司2025年报控股股东与实际控制人章节，实际控制人为中国自然人张岳公且控制权未变；上交所原始PDF读取超时，保留同一公司披露的全文镜像。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-5232b72e69ec",
+      "display_name": "盛邦安全",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "已阅读公司2025年报控股股东与实际控制人章节，实际控制人为中国自然人权晓文且控制权未变；上交所原始PDF访问失败，保留同一公司披露的全文镜像。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12254489&stockid=688651",
+          "title": "盛邦安全2025年年度报告（公司公告公开镜像）",
+          "note": "已阅读公司2025年报控股股东与实际控制人章节，实际控制人为中国自然人权晓文且控制权未变；上交所原始PDF访问失败，保留同一公司披露的全文镜像。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-27667b1c6966",
+      "display_name": "天地和兴",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 天地和兴 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://tdhx.zhiye.com/campus",
+          "title": "招聘数据源结构化公司性质字段：天地和兴",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-31f3511643c6",
+      "display_name": "赛美特",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 赛美特集团 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://semi.zhiye.com/campus/jobs",
+          "title": "招聘数据源结构化公司性质字段：赛美特集团",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-da06f53b572d",
+      "display_name": "百融云创",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 百融云创 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://app.mokahr.com/campus-recruitment/100credit/102451",
+          "title": "招聘数据源结构化公司性质字段：百融云创",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-07591a5636a8",
+      "display_name": "当虹科技",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "2025年年报第101页明确实际控制人为中国境内自然人孙彦龙，报告期内控制权未变；按实际控制关系认定私企。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://static.cninfo.com.cn/finalpage/2026-04-22/1225138026.PDF",
+          "title": "当虹科技2025年年度报告",
+          "note": "2025年年报第101页明确实际控制人为中国境内自然人孙彦龙，报告期内控制权未变；按实际控制关系认定私企。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-31e64818550e",
+      "display_name": "神州信息",
+      "ownership_tag": "待核实",
+      "status": "verified_unresolved",
+      "reason": "已读2025年报：控股股东性质明确标为不明确，间接控股股东神州控股股权分散且无实际控制人，广州城投为其第一大股东但持股低于30%；不可据国资参股、境外上市或神州数码名称直接三选一。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12045214&stockid=000555",
+          "title": "神州信息2025年年度报告（公司公告公开镜像）",
+          "note": "已读控股股东及实际控制人章节，年报明确控股主体性质不明确且公司无实际控制人，不能完成三分类。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-234996692bed",
+      "display_name": "赛意信息",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "2025年年报第83–84页明确实际控制人性质为境内自然人，张成康等五人共同控制；按境内自然人实际控制认定私企。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://disc.static.szse.cn/disc/disk03/finalpage/2026-04-29/d6c489a0-939a-4394-b78b-cba269fb6ec1.PDF",
+          "title": "赛意信息2025年年度报告",
+          "note": "2025年年报第83–84页明确实际控制人性质为境内自然人，张成康等五人共同控制；按境内自然人实际控制认定私企。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-451434443e58",
+      "display_name": "云知声",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "已读取全国工商联原文，发明专利500家第182名云知声智能科技股份有限公司，官方列入民营企业名单。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://www.acfic.org.cn/ztzlhz/chuangxin2025/report_list_chuangxin2025/202509/W020250927579746670469.pdf",
+          "title": "全国工商联2025民营企业研发投入与发明专利500家榜单",
+          "note": "已读取全国工商联原文，发明专利500家第182名云知声智能科技股份有限公司，官方列入民营企业名单。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-16a0ecc26ac0",
+      "display_name": "宜人智科",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 宜人智科 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://wecruit.hotjob.cn/SU664eadff1eb8051cd205d15b/pb/school.html",
+          "title": "招聘数据源结构化公司性质字段：宜人智科",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-82c29afdb05a",
+      "display_name": "收钱吧",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "官网发展历程记载2023年2月通过2022上海民营企业总部认定。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://shouqianba.com/zh/about-us/company-profile",
+          "title": "收钱吧官网公司简介",
+          "note": "官网发展历程记载2023年2月通过2022上海民营企业总部认定。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-5d44060645e4",
+      "display_name": "吉客印",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 吉客印 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://app.mokahr.com/campus-recruitment/giikin/94708?locale=zh-CN#/",
+          "title": "招聘数据源结构化公司性质字段：吉客印",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-4c0600403452",
+      "display_name": "遨森电商",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 遨森电商 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://aosom1.zhiye.com/campus/jobs",
+          "title": "招聘数据源结构化公司性质字段：遨森电商",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-c7c431bf6639",
+      "display_name": "扬腾创新",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 扬腾创新 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://yangtenggroup.zhiye.com/campus",
+          "title": "招聘数据源结构化公司性质字段：扬腾创新",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-8d28c4f2373e",
+      "display_name": "兴趣岛",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 兴趣岛 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://xingqudao.zhiye.com/campus/jobs",
+          "title": "招聘数据源结构化公司性质字段：兴趣岛",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-8279f39f9fa3",
+      "display_name": "米可世界",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 米可世界 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://micoworld.jobs.feishu.cn/152087?spread=9DAB36C",
+          "title": "招聘数据源结构化公司性质字段：米可世界",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-2b84d488e7f9",
+      "display_name": "少年得到",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 少年得到 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://igetcool.zhiye.com/campus/jobs",
+          "title": "招聘数据源结构化公司性质字段：少年得到",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-b384a54f4115",
+      "display_name": "希望学",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 希望学 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://mp.weixin.qq.com/s/KDbkm_B7SPBTetOO8QJRpg",
+          "title": "招聘数据源结构化公司性质字段：希望学",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-9c4a89d28a8f",
+      "display_name": "爱学习集团",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 爱学习集团 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://aixuexi1.zhiye.com/campus/jobs",
+          "title": "招聘数据源结构化公司性质字段：爱学习集团",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-62c7acb0b851",
+      "display_name": "东信时代",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "官网2025年10月29日文章明确称东信为深耕营销科技领域的民营企业。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://www.donson.com.cn/dynamics/message/234",
+          "title": "东信时代官网：实力上榜2025深圳企业500强",
+          "note": "官网2025年10月29日文章明确称东信为深耕营销科技领域的民营企业。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-0d66304c2722",
+      "display_name": "引力传媒",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "公司2025年报实际控制人章节明确罗衍记、蒋丽为中国自然人实际控制人；报告期控制权未变。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?CompanyCode=80293096&gather=1&id=12224573",
+          "title": "引力传媒2025年年度报告（公司公告公开镜像）",
+          "note": "公司2025年报实际控制人章节明确罗衍记、蒋丽为中国自然人实际控制人；报告期控制权未变。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-5c8d62663c9a",
+      "display_name": "剧星传媒",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "区政府原文明确上海剧星传媒股份有限公司为总部扎根普陀的民营企业。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://www.shpt.gov.cn/qyzs-yinshang/20231013/919749.html",
+          "title": "上海市普陀区政府企业展示：剧星传媒",
+          "note": "区政府原文明确上海剧星传媒股份有限公司为总部扎根普陀的民营企业。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-96d34bf45b6b",
+      "display_name": "茉莉数科集团",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 茉莉数科集团 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://app.mokahr.com/campus-recruitment/molimediagrouphr/171878?sourceToken=544fdfcb707acbc4f3795d2b6cb03c90&locale=zh-CN#/jobs?project%5B0%5D=100120112&page=1&anchorName=jobsList",
+          "title": "招聘数据源结构化公司性质字段：茉莉数科集团",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-1098640c806c",
+      "display_name": "飞博共创",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 飞博共创 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://feibo.zhiye.com/jobs?activityGuid=181fb59a-b7ad-4062-859e-af6fb610b8c5",
+          "title": "招聘数据源结构化公司性质字段：飞博共创",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-1b52d69cf33d",
+      "display_name": "58同城",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "人大官网原文记录公司CEO发言，明确58同城作为民营企业持续支持就业。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://www.hnrd.gov.cn/content/646747/66/12473564.html",
+          "title": "湖南人大官网：58同城负责人宣讲两会精神",
+          "note": "人大官网原文记录公司CEO发言，明确58同城作为民营企业持续支持就业。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-89fb5a78a01e",
+      "display_name": "鲸灵",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 鲸灵 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://app.mokahr.com/campus-recruitment/jingling/125951#/",
+          "title": "招聘数据源结构化公司性质字段：鲸灵",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-eac8d30d04e5",
+      "display_name": "建信融通",
+      "ownership_tag": "国企",
+      "status": "verified",
+      "reason": "招聘数据源已为 建信融通 标注公司性质“央国企”，按数据源预标注映射为“国企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://jxrt.zhiye.com/intern/jobs?queryId=ec6555db-6512-4212-80ac-62d796c21aa7",
+          "title": "招聘数据源结构化公司性质字段：建信融通",
+          "note": "源记录 natures=[\"央国企\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-6ad1c8da5080",
+      "display_name": "度小满",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "政府发布的2024重庆市民营企业社会责任100强名单中，度小满位居前十。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://www.cq.gov.cn/ywdt/jrcq/202412/t20241227_14025542.html",
+          "title": "重庆市政府：2024民企社会责任百强榜",
+          "note": "政府发布的2024重庆市民营企业社会责任100强名单中，度小满位居前十。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-b637fcc0a2d4",
+      "display_name": "中移互联网",
+      "ownership_tag": "国企",
+      "status": "verified",
+      "reason": "合同相对方基本情况明确中移互联网为中国移动通信有限公司全资子公司，股权结构为中国移动持股100%。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://paper.cnstock.com/html/2024-06/07/content_1928234.htm",
+          "title": "梦网科技关于与中移互联网签署协议的官方披露",
+          "note": "合同相对方基本情况明确中移互联网为中国移动通信有限公司全资子公司，股权结构为中国移动持股100%。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-8e7a2fa63279",
+      "display_name": "好未来",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "已读取全国工商联原文，研发投入500家第136名好未来教育集团，官方列入民营企业名单。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://www.acfic.org.cn/ztzlhz/chuangxin2025/report_list_chuangxin2025/202509/W020250927579746670469.pdf",
+          "title": "全国工商联2025民营企业研发投入与发明专利500家榜单",
+          "note": "已读取全国工商联原文，研发投入500家第136名好未来教育集团，官方列入民营企业名单。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-e494a3f97f38",
+      "display_name": "海艺互娱",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 海艺互娱 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://app.mokahr.com/social-recruitment/haiyi/140911#/",
+          "title": "招聘数据源结构化公司性质字段：海艺互娱",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-f83c95954f4d",
+      "display_name": "点点互动",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 点点互动 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://career.centurygames.cn/4",
+          "title": "招聘数据源结构化公司性质字段：点点互动",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-a4465a04e18d",
+      "display_name": "吉比特／雷霆游戏",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "已读取全国工商联原文，研发投入500家第299名厦门吉比特网络技术股份有限公司；此标签按校招来源所列吉比特集团主体，官方列入民营企业名单。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://www.acfic.org.cn/ztzlhz/chuangxin2025/report_list_chuangxin2025/202509/W020250927579746670469.pdf",
+          "title": "全国工商联2025民营企业研发投入与发明专利500家榜单",
+          "note": "已读取全国工商联原文，研发投入500家第299名厦门吉比特网络技术股份有限公司；此标签按校招来源所列吉比特集团主体，官方列入民营企业名单。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-1d13c3fad2de",
+      "display_name": "莉莉丝游戏",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "上海市工商联将莉莉丝列为上海民营企业座谈会企业代表，并在民企发展环境段落明确其归属。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://www.sfic.cn/xw/xq/1/26697",
+          "title": "上海市工商联民营企业座谈会报道",
+          "note": "上海市工商联将莉莉丝列为上海民营企业座谈会企业代表，并在民企发展环境段落明确其归属。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-19e053be4832",
+      "display_name": "库洛游戏",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "2026年6月官方报道将库洛游戏列入民营企业座谈会发言企业，归入本次民营企业家代表范围。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://xzb.gz.gov.cn/yw/ywdt/content/post_10858898.html",
+          "title": "广州市政府：2026年民营企业座谈会",
+          "note": "2026年6月官方报道将库洛游戏列入民营企业座谈会发言企业，归入本次民营企业家代表范围。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-0e59ce7c12e1",
+      "display_name": "叠纸游戏",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "企业年报明确上海叠纸互娱网络科技有限公司企业性质为民营控股企业。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://dxzhgl.miit.gov.cn/dxxzsp/xkz/xkzgl/resource/qiyereport.jsp?num=HZ949d2a7ca5c9d5017cd90461270fe2&type=yreport",
+          "title": "工信部2025年企业年报公示：上海叠纸互娱",
+          "note": "企业年报明确上海叠纸互娱网络科技有限公司企业性质为民营控股企业。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-f56eb6786935",
+      "display_name": "心动／TapTap",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 心动×TapTap 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://app.mokahr.com/campus-recruitment/xd/99361#/",
+          "title": "招聘数据源结构化公司性质字段：心动×TapTap",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-c15a1c8bfe39",
+      "display_name": "波克城市",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "官网公司荣誉明确列出2023年全国就业与社会保障先进民营企业。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://www.boke.com/share/index.html",
+          "title": "波克官网公司介绍与公司荣誉",
+          "note": "官网公司荣誉明确列出2023年全国就业与社会保障先进民营企业。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-e7ff62531d14",
+      "display_name": "禅游科技",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 禅游科技 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://zen-game.jobs.feishu.cn/679976?spread=5E4W4AQ",
+          "title": "招聘数据源结构化公司性质字段：禅游科技",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-b3451ae9c567",
+      "display_name": "极致游戏",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 极致游戏 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://jzyxgames.jobs.feishu.cn/campus",
+          "title": "招聘数据源结构化公司性质字段：极致游戏",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-f851fcc64d07",
+      "display_name": "MetaApp",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 MetaApp 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://meta.jobs.feishu.cn/140297/position/list",
+          "title": "招聘数据源结构化公司性质字段：MetaApp",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-d8b297a2e381",
+      "display_name": "智明星通",
+      "ownership_tag": "国企",
+      "status": "verified",
+      "reason": "已通过Jina读取2025年报控股股东与实际控制人章节：中文传媒控股、江西省人民政府实际控制，报告期控制权未变。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://xinsanban.eastmoney.com/Article/NoticeContent?id=AN202604171821301620&pageIndex=7",
+          "title": "智明星通2025年年度报告（公司公告公开镜像）",
+          "note": "已通过Jina读取2025年报控股股东与实际控制人章节：中文传媒控股、江西省人民政府实际控制，报告期控制权未变。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-23b5f8f939c7",
+      "display_name": "微派网络",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 微派网络 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://wepie.jobs.feishu.cn/359597/position/list",
+          "title": "招聘数据源结构化公司性质字段：微派网络",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-79e3277cd3fd",
+      "display_name": "英雄电竞",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 英雄电竞-管培生 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://heroesports.jobs.feishu.cn/169026?spread=SPDTP4F",
+          "title": "招聘数据源结构化公司性质字段：英雄电竞-管培生",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-a27711f00ded",
+      "display_name": "东软集团",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "已读取全国工商联原文，发明专利500家第80名东软集团股份有限公司，官方列入民营企业名单。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://www.acfic.org.cn/ztzlhz/chuangxin2025/report_list_chuangxin2025/202509/W020250927579746670469.pdf",
+          "title": "全国工商联2025民营企业研发投入与发明专利500家榜单",
+          "note": "已读取全国工商联原文，发明专利500家第80名东软集团股份有限公司，官方列入民营企业名单。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-3d1930c4cd50",
+      "display_name": "中科创达",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "已读取全国工商联原文，研发投入500家第209名中科创达软件股份有限公司，官方列入民营企业名单。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://www.acfic.org.cn/ztzlhz/chuangxin2025/report_list_chuangxin2025/202509/W020250927579746670469.pdf",
+          "title": "全国工商联2025民营企业研发投入与发明专利500家榜单",
+          "note": "已读取全国工商联原文，研发投入500家第209名中科创达软件股份有限公司，官方列入民营企业名单。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-115c0d8c1a02",
+      "display_name": "华宇信息",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 华宇信息 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://thunisoft.zhiye.com/campus/jobs",
+          "title": "招聘数据源结构化公司性质字段：华宇信息",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-a1f16ae83303",
+      "display_name": "安脉盛",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 安脉盛 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://aimsphm.zhiye.com/campus/jobs",
+          "title": "招聘数据源结构化公司性质字段：安脉盛",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-9f4a09798fed",
+      "display_name": "汉得信息",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "2025年年报第96页：陈迪清自2025年8月起为单一实际控制人，性质明确为境内自然人。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://disc.static.szse.cn/disc/disk03/finalpage/2026-04-14/9f20d4fa-f38c-4893-b821-3d79404a6851.pdf",
+          "title": "汉得信息2025年年度报告",
+          "note": "2025年年报第96页：陈迪清自2025年8月起为单一实际控制人，性质明确为境内自然人。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-ff1817a15f25",
+      "display_name": "瑞泰信息",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "政府引才平台为苏州瑞泰信息技术有限公司明确标注民营企业。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://hrss.suzhou.gov.cn/szxyyc/companyinfo/show489/1/364.html",
+          "title": "苏州市人社局校园引才平台：瑞泰信息",
+          "note": "政府引才平台为苏州瑞泰信息技术有限公司明确标注民营企业。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-1539cf7c0f6c",
+      "display_name": "衡泰技术",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 衡泰技术 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://campus.xquant.com/campus-recruitment/xquant/45053#/jobs",
+          "title": "招聘数据源结构化公司性质字段：衡泰技术",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-a24c035d651b",
+      "display_name": "多点数智",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "公司官网披露其于2026年8月获北京市工商联首都民营经济创新案例认定，按明确民营经济企业身份认定。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://3w.dmall.com/news/30721",
+          "title": "多点数智官网：首都民营经济创新案例入选",
+          "note": "公司官网披露其于2026年8月获北京市工商联首都民营经济创新案例认定，按明确民营经济企业身份认定。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-3f3b004627d8",
+      "display_name": "中国网安",
+      "ownership_tag": "国企",
+      "status": "verified",
+      "reason": "官网明确中国网安是中国电科以三十所为核心、汇聚内部资源组建的网络安全子集团；归属中央国有集团中国电科。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://cetcsc.cetc.com.cn/wa/335057/403704/index.html",
+          "title": "中国网安官网企业简介",
+          "note": "官网明确中国网安是中国电科以三十所为核心、汇聚内部资源组建的网络安全子集团；归属中央国有集团中国电科。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-518b393dbd05",
+      "display_name": "泛联新安",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 泛联新安 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://mp.weixin.qq.com/s/pfLcVQsB7pgZ4Ve8etZ9Qw",
+          "title": "招聘数据源结构化公司性质字段：泛联新安",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-936a523021d9",
+      "display_name": "泰豪软件",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 泰豪软件 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://tellhowsofthr.zhiye.com/Campus/jobs",
+          "title": "招聘数据源结构化公司性质字段：泰豪软件",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-cda609eedaae",
+      "display_name": "联友科技",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 联友科技 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://szly.zhiye.com/campus",
+          "title": "招聘数据源结构化公司性质字段：联友科技",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-912cc4ddda66",
+      "display_name": "佳都科技集团",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "已通过Jina读取官网完整原文，文章明确佳都属于民营科技龙头企业。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://www.pcitech.com/show_2662.html",
+          "title": "佳都科技官网工信部考察调研报道",
+          "note": "已通过Jina读取官网完整原文，文章明确佳都属于民营科技龙头企业。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-56e87143c566",
+      "display_name": "极感科技",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 极感科技 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://app.mokahr.com/campus-recruitment/mhr/146855?locale=zh-CN#/jobs?commitment%5B0%5D=%E5%85%A8%E8%81%8C&page=1&anchorName=jobsList",
+          "title": "招聘数据源结构化公司性质字段：极感科技",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-b248f2e01881",
+      "display_name": "MiniMax",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 MiniMax 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://vrfi1sk8a0.jobs.feishu.cn/379481?keywords=&category=&location=&project=7495675705720965415&type=&job_hot_flag=&current=1&limit=10&functionCategory=&tag=",
+          "title": "招聘数据源结构化公司性质字段：MiniMax",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-e6afdc628b15",
+      "display_name": "VAST",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 VAST 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://tripo3d.com/vstar",
+          "title": "招聘数据源结构化公司性质字段：VAST",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-cf440f8789a9",
+      "display_name": "亚信安全",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "2025年报控股股东及实际控制人章节明确实际控制人为中国自然人田溯宁，合计直接间接控制47.87%股份，控制权报告期未变。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12080670&stockid=688225",
+          "title": "亚信安全2025年年度报告（公司公告公开镜像）",
+          "note": "2025年报控股股东及实际控制人章节明确实际控制人为中国自然人田溯宁，合计直接间接控制47.87%股份，控制权报告期未变。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-3309b3b14807",
+      "display_name": "面壁智能",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "已通过Jina读取主办方原始PDF第6项，北京面壁智能科技有限责任公司的企业性质明确标为民营企业。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://business-oss.ciftis.org/frontend/ciftis/cms/upload/storage/file/20250830/1756536127509.pdf",
+          "title": "2025服贸会北京服务第一批入库案例",
+          "note": "已通过Jina读取主办方原始PDF第6项，北京面壁智能科技有限责任公司的企业性质明确标为民营企业。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-933afa76439b",
+      "display_name": "天翼云",
+      "ownership_tag": "国企",
+      "status": "verified",
+      "reason": "已读2025年报实际控制人及子公司章节：中国电信实控人为国务院国资委，天翼云科技有限公司由其持股89%。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12013734&stockid=601728",
+          "title": "中国电信2025年年度报告（公司公告公开镜像）",
+          "note": "已读2025年报实际控制人及子公司章节：中国电信实控人为国务院国资委，天翼云科技有限公司由其持股89%。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-bd0aa9bb6166",
+      "display_name": "仪电智算",
+      "ownership_tag": "国企",
+      "status": "verified",
+      "reason": "公开文件明确仪电智算云业务核心运营主体上海埃迪希科技服务有限公司为上海仪电集团100%控股；上海国资委官网明确该集团为市属国有企业。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://www.inesa.com/uploadpath/2026/1/29/38b2428d-4d04-4287-8d46-04dfcb7ec3be.pdf",
+          "title": "上海仪电官网：智算服务公司2025年企业信息公开",
+          "note": "公开文件明确仪电智算云业务核心运营主体上海埃迪希科技服务有限公司为上海仪电集团100%控股；上海国资委官网明确该集团为市属国有企业。",
+          "checked_at": "2026-09-07"
+        },
+        {
+          "url": "https://www.gzw.sh.gov.cn/shgzw_xwzx_xwfb/20240729/76721199c9214524be5328afd62f9feb.html",
+          "title": "上海市国资委：上海仪电打造智能算力集群",
+          "note": "已读原文，明确上海仪电为以人工智能产业为主业的市属国有企业。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-b9931ef97623",
+      "display_name": "昆仑万维",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "已读取全国工商联原文，研发投入500家第138名昆仑万维科技股份有限公司，官方列入民营企业名单。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://www.acfic.org.cn/ztzlhz/chuangxin2025/report_list_chuangxin2025/202509/W020250927579746670469.pdf",
+          "title": "全国工商联2025民营企业研发投入与发明专利500家榜单",
+          "note": "已读取全国工商联原文，研发投入500家第138名昆仑万维科技股份有限公司，官方列入民营企业名单。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-fda02e0ea5bb",
+      "display_name": "麒麟信安",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "公司2025年报实际控制人章节明确杨涛为中国自然人实际控制人，报告期控制权未变；与国资控制的麒麟软件不是同一主体。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12275443&stockid=688152",
+          "title": "麒麟信安2025年年度报告（公司公告公开镜像）",
+          "note": "公司2025年报实际控制人章节明确杨涛为中国自然人实际控制人，报告期控制权未变；与国资控制的麒麟软件不是同一主体。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-78560ad5bd2c",
+      "display_name": "沐瞳科技",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 沐瞳 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://moonton.jobs.feishu.cn/campus",
+          "title": "招聘数据源结构化公司性质字段：沐瞳",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-42e14543492f",
+      "display_name": "宝宝巴士",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "福建省发改委所属民营经济发展促进中心在 2025 年与宝宝巴士股份有限公司开展结对活动，将该企业置于其政府与民营企业服务对象范围，采用政府公开民营企业口径。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://fgw.fujian.gov.cn/ztzl/cjzxjyzx/myjj/202509/t20250926_7015329.htm",
+          "title": "中心监测督导处党支部与宝宝巴士股份有限公司党支部开展结对共建活动",
+          "note": "福建省发改委官网，2025-09-26；活动对象为宝宝巴士股份有限公司，正文明确政府服务民营企业的双方关系。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-a6acaf739dde",
+      "display_name": "勇仕网络",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 勇仕网络 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://hr.ys4fun.com/campus#/home",
+          "title": "招聘数据源结构化公司性质字段：勇仕网络",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-b6ad16ff62bd",
+      "display_name": "友塔游戏",
+      "ownership_tag": "待核实",
+      "status": "verified_unresolved",
+      "reason": "上海友塔网络科技有限公司在高校就业服务系统企业主页披露为民营企业，且明确对应友塔游戏。但页面包含 2020 年招聘记录，本轮未补足较新的性质或控制关系证据；保留该历史雇主披露，当前性质待核实。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://jy.tust.edu.cn/company/index/id/4124.html",
+          "title": "上海友塔网络科技有限公司｜天津科技大学就业信息网",
+          "note": "企业主页直接标注民营企业，并在同页公司简介明确友塔游戏品牌。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-0fda9d1da8b5",
+      "display_name": "紫龙游戏",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "国家大学生就业服务平台上，紫龙游戏上海研发中心招聘主体上海紫灏信息技术有限公司明确披露公司性质为民营企业，招聘网址指向紫龙游戏校招入口。按雇主公开披露口径标记；该依据直接覆盖此上海招聘主体。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://fgy.ncss.cn/student/jobs/2rLxVSzdnFvhsCjiKkusw9/corp.html",
+          "title": "上海紫灏信息技术有限公司｜国家大学生就业服务平台",
+          "note": "教育部学生服务与素质发展中心平台；公司简介为紫龙游戏，基本信息公司性质为民营企业，招聘入口为 zlongame。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-36e311ace71a",
+      "display_name": "散爆网络",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 散爆网络 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://jobs.sunborngame.com/campus-recruitment/micateam/146166#/jobs",
+          "title": "招聘数据源结构化公司性质字段：散爆网络",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-708e46e694a1",
+      "display_name": "祖龙娱乐",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "已读取全国工商联原文，研发投入500家第438名祖龙娱乐有限公司，官方列入民营企业名单。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://www.acfic.org.cn/ztzlhz/chuangxin2025/report_list_chuangxin2025/202509/W020250927579746670469.pdf",
+          "title": "全国工商联2025民营企业研发投入与发明专利500家榜单",
+          "note": "已读取全国工商联原文，研发投入500家第438名祖龙娱乐有限公司，官方列入民营企业名单。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-ba573bd148aa",
+      "display_name": "电魂网络",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "浙江省商务厅 2024 年度浙江本土民营跨国公司领航企业公示名单直接列入杭州电魂网络科技股份有限公司，采用政府公开民营企业口径。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://zcom.zj.gov.cn/art/2024/12/19/art_1403428_58946804.html",
+          "title": "浙江省商务厅关于2024年度浙江本土民营跨国公司“领航企业”名单的公示",
+          "note": "2024-12-19 公示名单第 22 家为杭州电魂网络科技股份有限公司；名单类别明确为本土民营跨国公司。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-8bd2f8451f57",
+      "display_name": "西山居",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 西山居 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://job.seasungames.cn/campus#/",
+          "title": "招聘数据源结构化公司性质字段：西山居",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-a5a4b99e9eb0",
+      "display_name": "深蓝互动",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 深蓝互动 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://campus.bluepoch.com/campus_apply/blueinteractive/38434#/",
+          "title": "招聘数据源结构化公司性质字段：深蓝互动",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-a8257ee69e55",
+      "display_name": "百奥游戏",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 百奥游戏 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://app.mokahr.com/campus_apply/aobi/25016#/",
+          "title": "招聘数据源结构化公司性质字段：百奥游戏",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-4b037baff426",
+      "display_name": "梦加网络",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 梦加网络 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://xiaozhao.mjyx.com/",
+          "title": "招聘数据源结构化公司性质字段：梦加网络",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-3a068a2656c9",
+      "display_name": "tap4fun",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 tap4fun 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://campus.tap4fun.com/",
+          "title": "招聘数据源结构化公司性质字段：tap4fun",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-e742a7ee0b13",
+      "display_name": "炎魂网络",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 炎魂网络 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://campus.pandadastudio.com/",
+          "title": "招聘数据源结构化公司性质字段：炎魂网络",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-19f23886e5ba",
+      "display_name": "点众科技",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "北京点众科技股份有限公司官网荣誉记录列明 2025 北京民营企业百强主榜第 59 名，并连续列明往年民营文化企业榜单荣誉，采用企业官网明确民营口径。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://dianzhong.com/m-company.html",
+          "title": "北京点众科技股份有限公司－公司介绍",
+          "note": "官网荣誉记录 2025-08 获评北京民营企业百强主榜第 59 名；主体名称与点众科技对应。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-71e8bbc7b4e9",
+      "display_name": "英雄游戏",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 英雄游戏 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://careers.hero.com/campus-recruitment/yingxionghr/65922#/jobs",
+          "title": "招聘数据源结构化公司性质字段：英雄游戏",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-a40a59d4c174",
+      "display_name": "艺赛旗",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 艺赛旗 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://i-search.zhiye.com/jobs",
+          "title": "招聘数据源结构化公司性质字段：艺赛旗",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-1fb271c7c45e",
+      "display_name": "易盛信息",
+      "ownership_tag": "国企",
+      "status": "verified",
+      "reason": "招聘数据源已为 易盛信息 标注公司性质“央国企”，按数据源预标注映射为“国企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://esunny.zhiye.com/campus/detail?jobAdId=0728d3ec-2c65-480b-9cb2-ba69ff8b8f5d",
+          "title": "招聘数据源结构化公司性质字段：易盛信息",
+          "note": "源记录 natures=[\"央国企\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-5ede9fbfcb36",
+      "display_name": "旷视科技",
+      "ownership_tag": "待核实",
+      "status": "verified_unresolved",
+      "reason": "科技部与全国工商联 2021 年会商报道将旷视科技董事长列为民营企业代表，可确认该历史民营口径；本轮尚未取得较新性质或控制关系证据，不能将 2021 年定性视为当前关系已确认。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://www.most.gov.cn/tpxw/202105/t20210513_174587.html",
+          "title": "科技部全国工商联高层会商座谈会在京召开",
+          "note": "科技部原始报道，2021-05-13 发布；旷视科技董事长印奇为参加座谈的 9 家民营企业代表之一。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-22b28019e3b5",
+      "display_name": "迪普科技",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "已读取全国工商联原文，发明专利500家第67名杭州迪普科技股份有限公司，官方列入民营企业名单。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://www.acfic.org.cn/ztzlhz/chuangxin2025/report_list_chuangxin2025/202509/W020250927579746670469.pdf",
+          "title": "全国工商联2025民营企业研发投入与发明专利500家榜单",
+          "note": "已读取全国工商联原文，发明专利500家第67名杭州迪普科技股份有限公司，官方列入民营企业名单。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-d9e9289ca133",
+      "display_name": "小鹅通",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 小鹅通 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://app.mokahr.com/campus_apply/xiaoe-tech/26988#/",
+          "title": "招聘数据源结构化公司性质字段：小鹅通",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-97b93d93f212",
+      "display_name": "西云数据",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 西云数据 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://app.mokahr.com/campus_apply/nwcdcloud",
+          "title": "招聘数据源结构化公司性质字段：西云数据",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-8d2be6896515",
+      "display_name": "唯品会",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "已读取全国工商联原文，研发投入500家第109名唯品会（中国）有限公司，官方列入民营企业名单。\n全国工商联 2025 民营企业研发投入 500 家榜单列入唯品会（中国）有限公司，采用官方民营企业榜单口径；不因美股上市或境外上市架构改标外企。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://www.acfic.org.cn/ztzlhz/chuangxin2025/report_list_chuangxin2025/202509/W020250927579746670469.pdf",
+          "title": "全国工商联2025民营企业研发投入与发明专利500家榜单",
+          "note": "已读取全国工商联原文，研发投入500家第109名唯品会（中国）有限公司，官方列入民营企业名单。",
+          "checked_at": "2026-09-07"
+        },
+        {
+          "url": "https://www.acfic.org.cn/ztzlhz/chuangxin2025/report_list_chuangxin2025/202509/W020250927579746670469.pdf",
+          "title": "2025民营企业研发投入500家榜单",
+          "note": "全国工商联正式榜单第 109 家为唯品会（中国）有限公司，PDF 第 10 页（印刷页码 6）。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-af3c4086db6e",
+      "display_name": "华数传媒",
+      "ownership_tag": "国企",
+      "status": "verified",
+      "reason": "官网明确控股股东为杭州市属国有企业华数集团，其他重要股东亦披露国有控制背景。\n华数传媒控股股份有限公司官网明确披露控股股东为杭州市属国有企业华数集团，属于国有控制，不是仅凭国资参股判断。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://www.wasu.com/about-us",
+          "title": "华数传媒官网企业简介",
+          "note": "官网明确控股股东为杭州市属国有企业华数集团，其他重要股东亦披露国有控制背景。",
+          "checked_at": "2026-09-07"
+        },
+        {
+          "url": "https://www.wasu.com/about-us",
+          "title": "华数传媒控股股份有限公司官方网站－关于我们",
+          "note": "官网公司简介直接说明控股股东为杭州市属国有企业华数集团；页面同时展示截至 2025 年末的经营数据。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-0fc1a23cc305",
+      "display_name": "天翼视联",
+      "ownership_tag": "国企",
+      "status": "verified",
+      "reason": "招聘数据源已为 天翼视联 标注公司性质“央国企”，按数据源预标注映射为“国企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://tyslchinatelecom.zhiye.com/campus/jobs",
+          "title": "招聘数据源结构化公司性质字段：天翼视联",
+          "note": "源记录 natures=[\"央国企\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-2faa8bd0603d",
+      "display_name": "Shopee",
+      "ownership_tag": "外企",
+      "status": "verified",
+      "reason": "Shopee 为新加坡 Sea 集团的电商业务；Sea 官方公司网站持续列为旗下业务，官方新闻说明 Shopee 在新加坡设立总部。按境外集团业务归属标记，未据创始人国籍或上市地推断。具体中国岗位签约主体仍应在投递时核对。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://www.sea.com/products/shopee",
+          "title": "Sea｜Shopee Intro",
+          "note": "Sea 官方产品与服务目录列示 Shopee，页面所属公司 Sea Limited，联系地址为新加坡。",
+          "checked_at": "2026-09-07"
+        },
+        {
+          "url": "https://www.sea.com/news/132",
+          "title": "Shopee opens new regional headquarters; commits to innovate and invest in Singapore and the region",
+          "note": "Sea 官方新闻，2019-09-03；明确 Shopee 的新加坡总部及新加坡本土公司背景。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-e772957cd423",
+      "display_name": "法本信息",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "2025年年报第87页：实际控制人性质为境内自然人，严华，报告期未变。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://disc.static.szse.cn/disc/disk03/finalpage/2026-04-24/e2f354bb-06cc-44b8-b7b4-589b1cd5556d.PDF",
+          "title": "法本信息2025年年度报告",
+          "note": "2025年年报第87页：实际控制人性质为境内自然人，严华，报告期未变。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-87db509d7b3d",
+      "display_name": "中国东信",
+      "ownership_tag": "待核实",
+      "status": "verified_unresolved",
+      "reason": "政府网站发布的《中国对外投资合作发展报告 2022》将中国—东盟信息港股份有限公司（中国东信）定义为国有控股公司；该依据只能确认历史披露，本轮尚未核对后续股权和控制关系变化，当前性质待核实。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://segg.sh.gov.cn/zxfw/yjbg/zhbg/index/7b8e529d05f24087b2bccaf2169aa2b5.pdf",
+          "title": "中国对外投资合作发展报告2022",
+          "note": "PDF 第 62 页（印刷页码 57）专栏 8 直接说明中国东信国有控股；PDF 第 61 页明确全称中国—东盟信息港股份有限公司。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-55b4da647f0b",
+      "display_name": "拓维信息",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "2025年年报第72页：实际控制人性质为境内自然人，李新宇，报告期未变。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://static.cninfo.com.cn/finalpage/2026-04-28/1225218107.PDF",
+          "title": "拓维信息2025年年度报告",
+          "note": "2025年年报第72页：实际控制人性质为境内自然人，李新宇，报告期未变。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-02415dcb50db",
+      "display_name": "太极股份",
+      "ownership_tag": "国企",
+      "status": "verified",
+      "reason": "太极计算机股份有限公司 2025 年年度报告披露控股股东中电太极（集团）有限公司性质为中央国有控股，实际控制人为中国电子科技集团有限公司，报告期未发生变更。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://static.cninfo.com.cn/finalpage/2026-04-30/1225266598.PDF",
+          "title": "太极计算机股份有限公司2025年年度报告全文",
+          "note": "巨潮资讯披露的公司年报，第 75–76 页控股股东及实际控制人章节，明确中央国有控股及中国电子科技集团控制关系。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-a9e8e96dd2bf",
+      "display_name": "神州数码集团",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "政府公布名单第72名为神州数码集团股份有限公司；明确属于中国民营企业500强。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://fgw.sz.gov.cn/ztzl/qtztzl/szscjmyjjfzzhfwpt/mqfc/myqyfzdt/content/post_12354447.html",
+          "title": "深圳市发改委：2025中国民企500强深圳名单",
+          "note": "政府公布名单第72名为神州数码集团股份有限公司；明确属于中国民营企业500强。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-c3505fec179a",
+      "display_name": "中国电信人工智能研究院",
+      "ownership_tag": "国企",
+      "status": "verified",
+      "reason": "招聘数据源已为 中国电信人工智能研究院 标注公司性质“央国企”，按数据源预标注映射为“国企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://mp.weixin.qq.com/s/t0qiYooHHeUBUm0tC1iG6A",
+          "title": "招聘数据源结构化公司性质字段：中国电信人工智能研究院",
+          "note": "源记录 natures=[\"央国企\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-7ca2b7da6e0f",
+      "display_name": "科大讯飞",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "已读取全国工商联原文，研发投入500家第39名科大讯飞股份有限公司，官方列入民营企业名单。\n全国工商联 2025 民营企业研发投入 500 家榜单列入科大讯飞股份有限公司，采用官方民营企业榜单口径；有国资股东不等于国资控制。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://www.acfic.org.cn/ztzlhz/chuangxin2025/report_list_chuangxin2025/202509/W020250927579746670469.pdf",
+          "title": "全国工商联2025民营企业研发投入与发明专利500家榜单",
+          "note": "已读取全国工商联原文，研发投入500家第39名科大讯飞股份有限公司，官方列入民营企业名单。",
+          "checked_at": "2026-09-07"
+        },
+        {
+          "url": "https://www.acfic.org.cn/ztzlhz/chuangxin2025/report_list_chuangxin2025/202509/W020250927579746670469.pdf",
+          "title": "2025民营企业研发投入500家榜单",
+          "note": "全国工商联正式榜单第 39 家为科大讯飞股份有限公司，PDF 第 7 页（印刷页码 3）。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-ad28e918f26b",
+      "display_name": "Momenta",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 Momenta 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://momenta.jobs.feishu.cn/intern?keywords=&category=&location=&project=7473340400893724947&type=&job_hot_flag=&current=1&limit=10&functionCategory=&tag=",
+          "title": "招聘数据源结构化公司性质字段：Momenta",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-aeb9dcb5fa3f",
+      "display_name": "清程极智",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 清程极智 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://chitu-ai.jobs.feishu.cn/campus?keywords=&category=&location=&project=&type=&job_hot_flag=&current=1&limit=10&functionCategory=&tag=&spread=9DTC9FZ",
+          "title": "招聘数据源结构化公司性质字段：清程极智",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-45d4e09fc97b",
+      "display_name": "轻舟智航",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 轻舟智航 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://mp.weixin.qq.com/s/K6I5_vJ1-Glf-ZGUnVbfZg",
+          "title": "招聘数据源结构化公司性质字段：轻舟智航",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-f3e6fb49c6e1",
+      "display_name": "零一万物",
+      "ownership_tag": "待核实",
+      "status": "verified_unresolved",
+      "reason": "已核对公司官网与公开工商摘要：官网只确认由李开复创立，未披露当前控制关系；工商摘要显示境内主体为外商投资企业法人独资，但未展示穿透后的最终控制人。按集团控制口径无法可靠归入私企或外企。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://www.lingyiwanwu.com/about.html",
+          "title": "零一万物官网：关于我们",
+          "note": "官网确认公司成立、总部和创始人，但未披露股权或最终控制关系。",
+          "checked_at": "2026-09-07"
+        },
+        {
+          "url": "https://m.qcc.com/firm/ee15db324d0b7eb2ebeccb092dbd8f45.html",
+          "title": "北京零一万物科技有限公司工商信息摘要",
+          "note": "公开摘要显示境内主体为外商投资企业法人独资，但未给出可据以判断最终控制性质的完整穿透链。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-a44671a69f39",
+      "display_name": "百川智能",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "已核对百川智能对应的北京主体；公开工商信息显示企业类型为有限责任公司（自然人投资或控股），按当前境内用人主体归为私企。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://www.tianyancha.com/company/6005364573",
+          "title": "百川智能科技有限公司工商信息",
+          "note": "页面列示统一社会信用代码 91110108MACBM7E07B，企业类型为有限责任公司（自然人投资或控股）。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-df47c1580c82",
+      "display_name": "中科紫东太初",
+      "ownership_tag": "待核实",
+      "status": "verified_unresolved",
+      "reason": "官网只证实依托中科院自动化所技术转化及研究机构共同孵化背景，尚未披露北京母公司控股股东或实际控制人。研究所孵化、技术背景和武汉全资子公司关系均不能单独证明国资控制。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://cloud.zidongtaichu.com/about-us",
+          "title": "关于我们－紫东太初云",
+          "note": "官网明确北京公司技术转化背景、武汉公司为其全资子公司，但未说明北京公司的股权或控制权性质。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-a8100d425f66",
+      "display_name": "商汤科技",
+      "ownership_tag": "待核实",
+      "status": "verified_unresolved",
+      "reason": "上海市徐汇区政府历史政协提案答复曾将商汤列入民营科技企业；本轮未取得较新的同口径定性或当前控制关系依据，保留历史证据而不视为最新性质已核实，也不依据香港上市或境外架构改标外企。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://www.xuhui.gov.cn/xxgk/portal/article/detail?id=8a4c0c068777ffd00188669ee94c0b48",
+          "title": "对区政协十五届二次会议第23-1017号提案的答复",
+          "note": "徐汇区政府公开答复，在民营科技企业群体中明确列出商汤。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-70629416ece0",
+      "display_name": "Soul",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "Soul 官网确认运营主体为上海任意门科技有限公司，并明确公司获得“上海市民营企业总部”荣誉，按官方自述归为私企。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://www.soulapp.cn/about",
+          "title": "Soul App 官网：关于我们",
+          "note": "官网确认上海任意门为运营主体，并列明“上海市民营企业总部”荣誉。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-8f348be64abc",
+      "display_name": "WebEye",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 WebEye 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://webeye.jobs.feishu.cn/campus/position/list",
+          "title": "招聘数据源结构化公司性质字段：WebEye",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-80c93d58dc21",
+      "display_name": "深势科技",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 深势科技 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://dptechnology.jobs.feishu.cn/referral/position/detail?token=MjsxNzY3NzA4NzYzMTk0OzczNjc2NTg3NTU2MzY2NzQ1ODg7NzU5MjIyNjc2NjA3MDA5MDAwMzsx",
+          "title": "招聘数据源结构化公司性质字段：深势科技",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-861f2567683a",
+      "display_name": "中国航信",
+      "ownership_tag": "国企",
+      "status": "verified",
+      "reason": "官网明确中国航信隶属于国务院国资委管理的中央企业，并介绍集团以股份公司为主体完成整体上市。\n中国民航信息集团有限公司官网明确说明中国航信为国务院国资委管理的中央企业，集团简称与招聘公司名对应。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://www.travelsky.cn/travelsky/gywm/jtgk/jtjj/A069004001001Gone1.html",
+          "title": "中国航信官网集团简介",
+          "note": "官网明确中国航信隶属于国务院国资委管理的中央企业，并介绍集团以股份公司为主体完成整体上市。",
+          "checked_at": "2026-09-07"
+        },
+        {
+          "url": "https://www.travelsky.cn/travelsky/gywm/jtgk/jtjj/A069004001001Gone1.html",
+          "title": "中国民航信息集团有限公司－集团简介",
+          "note": "集团官网说明中国民航信息集团简称中国航信，隶属国务院国资委管理的中央企业。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-d72e166c9e3b",
+      "display_name": "掌阅",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 掌阅 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://q7w8vltyes.jobs.feishu.cn/2024/position/list",
+          "title": "招聘数据源结构化公司性质字段：掌阅",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-3897c48d39d0",
+      "display_name": "荔枝集团",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 荔枝集团-AI技术专场 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://lizhi2021.jobs.feishu.cn/044144?keywords=&category=&location=&project=&type=&job_hot_flag=&current=1&limit=10&functionCategory=&tag=",
+          "title": "招聘数据源结构化公司性质字段：荔枝集团-AI技术专场",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-376b8398fcd7",
+      "display_name": "渝欧跨境",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 渝欧跨境 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://mp.weixin.qq.com/s/pDnxyFLPDk_HCaAvQx6yRw",
+          "title": "招聘数据源结构化公司性质字段：渝欧跨境",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-85806a2810d7",
+      "display_name": "欢乐互娱",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 欢乐互娱 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://huanle.jobs.feishu.cn/campus/position/list",
+          "title": "招聘数据源结构化公司性质字段：欢乐互娱",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-e578030cb96e",
+      "display_name": "白日梦游戏",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 白日梦游戏 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://szbrmwlyx.jobs.feishu.cn/daydreams/position/list?spread=QAWSUYZ",
+          "title": "招聘数据源结构化公司性质字段：白日梦游戏",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-304dc4a52e82",
+      "display_name": "创梦天地",
+      "ownership_tag": "待核实",
+      "status": "verified_unresolved",
+      "reason": "已核对当前官方招聘入口并检索公司年报/控股股东资料；可确认境内招聘主体与港股上市集团关联，但本轮未取得可直接支持国企、私企或外企三分法的最终控制关系原文，上市地与腾讯参股均不能替代性质判断。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://idreamsky.jobs.feishu.cn/index",
+          "title": "创梦天地官方招聘入口",
+          "note": "已确认品牌与当前招聘主体；招聘源未返回公司性质字段。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-a2ee0656b436",
+      "display_name": "Unity中国",
+      "ownership_tag": "外企",
+      "status": "verified",
+      "reason": "招聘数据源已为 Unity中国 标注公司性质“外企”，按数据源预标注映射为“外企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://recruiting.unity.cn/982864",
+          "title": "招聘数据源结构化公司性质字段：Unity中国",
+          "note": "源记录 natures=[\"外企\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-bf9f56ff48ac",
+      "display_name": "PayerMax",
+      "ownership_tag": "外企",
+      "status": "verified",
+      "reason": "招聘数据源已为 PayerMax 标注公司性质“外企”，按数据源预标注映射为“外企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://payermax.jobs.feishu.cn/campus",
+          "title": "招聘数据源结构化公司性质字段：PayerMax",
+          "note": "源记录 natures=[\"外企\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-dd01d985a7c4",
+      "display_name": "厦门他趣",
+      "ownership_tag": "待核实",
+      "status": "verified_unresolved",
+      "reason": "已核对当前官方招聘入口并检索企业性质；招聘源未提供性质字段，公开检索未取得当前签约主体的最终控制关系原文，不能只凭品牌、创始人或融资信息归类。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://o15vj1m4ie.jobs.feishu.cn/index",
+          "title": "厦门他趣官方招聘入口",
+          "note": "已确认当前招聘品牌与职位入口；源记录无公司性质字段。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-0b9c9e07e926",
+      "display_name": "心言集团",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 心言集团 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://lightforyou.jobs.feishu.cn/campus",
+          "title": "招聘数据源结构化公司性质字段：心言集团",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-152def4a15d1",
+      "display_name": "如涵",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 如涵MCN 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://ewbmxoqgfx.jobs.feishu.cn/652250",
+          "title": "招聘数据源结构化公司性质字段：如涵MCN",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-f5cda7bbf571",
+      "display_name": "延趣游戏",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 延趣游戏 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://app.mokahr.com/campus-recruitment/xmyanquhr/74333#/",
+          "title": "招聘数据源结构化公司性质字段：延趣游戏",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-e6eabe4738f3",
+      "display_name": "大蓝游戏",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 大蓝游戏 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://aidalan.jobs.feishu.cn/329833",
+          "title": "招聘数据源结构化公司性质字段：大蓝游戏",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-0cc598df0ed6",
+      "display_name": "游戏精酿",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 游戏精酿 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://gamealestudio.jobs.feishu.cn/007955",
+          "title": "招聘数据源结构化公司性质字段：游戏精酿",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-4b21495a4103",
+      "display_name": "积加科技",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 积加科技 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://a4x-paas.jobs.feishu.cn/500117/position/list?keywords=&category=&location=&project=7620724248252762374&type=&job_hot_flag=&current=1&limit=10&functionCategory=&tag=",
+          "title": "招聘数据源结构化公司性质字段：积加科技",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-12b0c8b376b8",
+      "display_name": "微软",
+      "ownership_tag": "外企",
+      "status": "verified",
+      "reason": "招聘数据源已为 微软 标注公司性质“外企”，按数据源预标注映射为“外企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://mp.weixin.qq.com/s/0btNd2l62V1l3TE0U4mXAg",
+          "title": "招聘数据源结构化公司性质字段：微软",
+          "note": "源记录 natures=[\"外企\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-5a06b98b2152",
+      "display_name": "SAP",
+      "ownership_tag": "外企",
+      "status": "verified",
+      "reason": "招聘数据源已为 SAP 标注公司性质“外企”，按数据源预标注映射为“外企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://mp.weixin.qq.com/s/h4J7B7Og8ch27QJX67536Q",
+          "title": "招聘数据源结构化公司性质字段：SAP",
+          "note": "源记录 natures=[\"外企\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-08d122a3eb1e",
+      "display_name": "百图生科",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 百图生科 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://talent.biomap-inc.com/",
+          "title": "招聘数据源结构化公司性质字段：百图生科",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-df198b51826e",
+      "display_name": "亚马逊中国",
+      "ownership_tag": "外企",
+      "status": "verified",
+      "reason": "招聘数据源已为 亚马逊中国 标注公司性质“外企”，按数据源预标注映射为“外企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://www.amazon.jobs/zh/search?base_query=%23auta-gcr&loc_query=&cmpid=SM_WESP200044B",
+          "title": "招聘数据源结构化公司性质字段：亚马逊中国",
+          "note": "源记录 natures=[\"外企\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-f413ecca9179",
+      "display_name": "多益网络",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 多益网络 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://xz.duoyi.com/",
+          "title": "招聘数据源结构化公司性质字段：多益网络",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-ae0eb0d8be1d",
+      "display_name": "4399游戏",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 4399游戏 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://web.4399.com/campus/graduate/yunyingshichanglei/guoneilei",
+          "title": "招聘数据源结构化公司性质字段：4399游戏",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-498a33430417",
+      "display_name": "无端科技",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 无端科技 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://wooduan1.zhiye.com/campus/jobs",
+          "title": "招聘数据源结构化公司性质字段：无端科技",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-a8d40abc035b",
+      "display_name": "育碧中国",
+      "ownership_tag": "外企",
+      "status": "verified",
+      "reason": "招聘数据源已为 育碧中国 标注公司性质“外企”，按数据源预标注映射为“外企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://zh-cn.ubisoft.com/company/career_result?type=2&f=wechat",
+          "title": "招聘数据源结构化公司性质字段：育碧中国",
+          "note": "源记录 natures=[\"外企\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-3281865a762e",
+      "display_name": "9377游戏",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 9377游戏 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://9377.zhiye.com/campus",
+          "title": "招聘数据源结构化公司性质字段：9377游戏",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-2de27b931e37",
+      "display_name": "博乐科技",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 博乐科技 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://app.mokahr.com/campus-recruitment/bolegames/37643?sourceToken=00b2a38a07614f32f15401698c7a26a3#/",
+          "title": "招聘数据源结构化公司性质字段：博乐科技",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-5a84eee78821",
+      "display_name": "卓动科技",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 卓动科技 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://www.jodoinc.com/job/campus",
+          "title": "招聘数据源结构化公司性质字段：卓动科技",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-c86da70fdeb4",
+      "display_name": "恺英网络",
+      "ownership_tag": "待核实",
+      "status": "verified_unresolved",
+      "reason": "已核对当前官方招聘入口并检索年度报告与实际控制人信息；招聘源未提供性质字段，本轮未稳定取得年度报告控制关系原文，因此不以A股上市身份直接推断私企。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://app.mokahr.com/campus_apply/kingnet/2246#/",
+          "title": "恺英网络官方招聘入口",
+          "note": "已确认当前招聘主体入口；源记录无公司性质字段。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-a4c27f6f02be",
+      "display_name": "IGG",
+      "ownership_tag": "待核实",
+      "status": "verified_unresolved",
+      "reason": "已核对 IGG 官网并检索年度报告控制关系；可确认其为境外注册并上市的游戏集团，但尚未取得上海招聘主体与集团最终控制关系的直接材料，境外注册/上市不自动等同外企。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://www.igg.com/",
+          "title": "IGG 官方网站",
+          "note": "官网可确认品牌和集团身份，但当前页面不足以确定上海用人主体在三分法下的控制性质。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-1a67f0c15c49",
+      "display_name": "聆曦游戏",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 聆曦游戏 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://app.mokahr.com/campus-recruitment/lingxihz/135942?locale=zh-CN#/",
+          "title": "招聘数据源结构化公司性质字段：聆曦游戏",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-e437b3ac7191",
+      "display_name": "乐享元游",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 乐享元游 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://app.mokahr.com/social-recruitment/yyxx/118479#/",
+          "title": "招聘数据源结构化公司性质字段：乐享元游",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-e3869261a222",
+      "display_name": "灵感互娱",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 灵感互娱 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://app.mokahr.com/social-recruitment/inspiregames/144680#/jobs?page=1&anchorName=jobsList&commitment%5B0%5D=%E5%AE%9E%E4%B9%A0",
+          "title": "招聘数据源结构化公司性质字段：灵感互娱",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-d5d1393027f8",
+      "display_name": "艾达乐博",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 艾达乐博 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://app.mokahr.com/social-recruitment/zqxmkw/148707?locale=zh-CN#/jobs?page=1&anchorName=jobsList",
+          "title": "招聘数据源结构化公司性质字段：艾达乐博",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-0648d2111ec0",
+      "display_name": "DeepSeek",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 DeepSeek 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://app.mokahr.com/social-recruitment/high-flyer/140576#/jobs",
+          "title": "招聘数据源结构化公司性质字段：DeepSeek",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-599c5c93937c",
+      "display_name": "元象XVERSE",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 元象XVERSE 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://xverse.zhiye.com/campus/jobs",
+          "title": "招聘数据源结构化公司性质字段：元象XVERSE",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-c3b0c5443a38",
+      "display_name": "Meshy",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 Meshy 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://mp.weixin.qq.com/s/K5yQ89R1D0why_H-F5X--A",
+          "title": "招聘数据源结构化公司性质字段：Meshy",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-0d8299ec5049",
+      "display_name": "税友集团",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 税友集团 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://campus.servyou.com.cn/",
+          "title": "招聘数据源结构化公司性质字段：税友集团",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-447c59359509",
+      "display_name": "汇联易",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 汇联易 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://app.mokahr.com/campus_apply/huilianyi/38709#/",
+          "title": "招聘数据源结构化公司性质字段：汇联易",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-400d7f42a347",
+      "display_name": "云帐房",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 云帐房 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://yunzhangfang.zhiye.com/campus/jobs",
+          "title": "招聘数据源结构化公司性质字段：云帐房",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-3aef9da7a1ca",
+      "display_name": "广联达",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 广联达 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://campus.glodon.com/",
+          "title": "招聘数据源结构化公司性质字段：广联达",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-77033a204ea2",
+      "display_name": "云和恩墨",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 云和恩墨 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://app.mokahr.com/campus-recruitment/enmotech/47098#/",
+          "title": "招聘数据源结构化公司性质字段：云和恩墨",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-7d38fa02209a",
+      "display_name": "奇安信",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 奇安信 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://campus.qianxin.com/campus/jobSearch",
+          "title": "招聘数据源结构化公司性质字段：奇安信",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-0dfce9d8f88f",
+      "display_name": "银联数据",
+      "ownership_tag": "国企",
+      "status": "verified",
+      "reason": "招聘数据源已为 银联数据 标注公司性质“央国企”，按数据源预标注映射为“国企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://cupdata.zhiye.com/campus/jobs",
+          "title": "招聘数据源结构化公司性质字段：银联数据",
+          "note": "源记录 natures=[\"央国企\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-77ca9b83f6b2",
+      "display_name": "明略科技",
+      "ownership_tag": "待核实",
+      "status": "verified_unresolved",
+      "reason": "已核对当前官方招聘入口并检索企业性质；招聘源未提供性质字段，现有官网业务资料与融资报道均不能替代最终控制关系，故确认后保留待核实。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://mininglamp.zhiye.com/",
+          "title": "明略科技官方招聘入口",
+          "note": "已确认当前招聘入口；源记录无公司性质字段。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-28b242a18ebd",
+      "display_name": "华润数科",
+      "ownership_tag": "国企",
+      "status": "verified",
+      "reason": "招聘数据源已为 华润数科 标注公司性质“央国企”，按数据源预标注映射为“国企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://wecruit.hotjob.cn/SU61bc040c0dcad45571a5e8fc/pb/school.html",
+          "title": "招聘数据源结构化公司性质字段：华润数科",
+          "note": "源记录 natures=[\"央国企\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-e4bb491c4a92",
+      "display_name": "神州泰岳",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 神州泰岳 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://app.mokahr.com/campus-recruitment/ultrapower/43036#/",
+          "title": "招聘数据源结构化公司性质字段：神州泰岳",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-46869838e951",
+      "display_name": "保融科技",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 保融科技 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://campus.fingard.com/campus_apply/baorong/25901#/page/%E6%A0%A1%E6%8B%9B%E8%81%8C%E4%BD%8D",
+          "title": "招聘数据源结构化公司性质字段：保融科技",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-316d43c02147",
+      "display_name": "Cadence",
+      "ownership_tag": "外企",
+      "status": "verified",
+      "reason": "招聘数据源已为 Cadence 标注公司性质“外企”，按数据源预标注映射为“外企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://app.mokahr.com/social-recruitment/cadence/118728?locale=zh-CN#/",
+          "title": "招聘数据源结构化公司性质字段：Cadence",
+          "note": "源记录 natures=[\"外企\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-b0184e710e74",
+      "display_name": "探迹科技",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 探迹科技 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://s.xinrenxinshi.com/recruitGate/list#/ey=0ebdb0048b49716c8f15cda8cb375c4288c962",
+          "title": "招聘数据源结构化公司性质字段：探迹科技",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-20297f8dd31f",
+      "display_name": "中控信息",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 中控信息 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://mp.weixin.qq.com/s/lpn6K4LqTHIiNh61KagzlQ",
+          "title": "招聘数据源结构化公司性质字段：中控信息",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-183f00f483d3",
+      "display_name": "Keep",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 Keep 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://hr.keep.com/intern/detail?jobAdId=cc0e4e53-ba11-45a1-b211-f09064bb22a4",
+          "title": "招聘数据源结构化公司性质字段：Keep",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-77b4c0239d1a",
+      "display_name": "叮咚买菜",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 叮咚买菜 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://ddmcxz.zhiye.com/campus/jobs",
+          "title": "招聘数据源结构化公司性质字段：叮咚买菜",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-46a86ce3ec4e",
+      "display_name": "赛维时代",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 赛维时代 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://wecruit.hotjob.cn/SU60a36363bef57c11896121b2/mc/position/campus",
+          "title": "招聘数据源结构化公司性质字段：赛维时代",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-92111080ce53",
+      "display_name": "迅雷",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 迅雷 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://campus.xunlei.com/campus-recruitment/xunlei/26600#/",
+          "title": "招聘数据源结构化公司性质字段：迅雷",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-f732e48abcce",
+      "display_name": "太平洋网络",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 太平洋网络 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://mp.weixin.qq.com/s/3-u4kauKEmNoakh4LCb8ew",
+          "title": "招聘数据源结构化公司性质字段：太平洋网络",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-0ec12b2cca6a",
+      "display_name": "航旅纵横",
+      "ownership_tag": "国企",
+      "status": "verified",
+      "reason": "招聘数据源已为 航旅纵横 标注公司性质“央国企”，按数据源预标注映射为“国企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://www.umetrip.com.cn/recruit/detail?type=campus",
+          "title": "招聘数据源结构化公司性质字段：航旅纵横",
+          "note": "源记录 natures=[\"央国企\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-ddee9c60e432",
+      "display_name": "途虎养车",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 途虎养车 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://app.mokahr.com/campus-recruitment/tuhu/28398?sourceToken=b6169c0d7b4ca5e55ca6df8a6acc2460#/jobs?commitment%5B0%5D=%E5%85%A8%E8%81%8C&page=1&anchorName=jobsList",
+          "title": "招聘数据源结构化公司性质字段：途虎养车",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-539c23377d08",
+      "display_name": "数禾科技",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 数禾科技 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://shuhegroup1.zhiye.com/campus/jobs",
+          "title": "招聘数据源结构化公司性质字段：数禾科技",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-072732824ee2",
+      "display_name": "嘉银科技",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 嘉银科技 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://jiayinfintech.zhiye.com/intern/detail?jobAdId=9841f1e4-907e-4dd6-a1b4-5ed30fa17f32",
+          "title": "招聘数据源结构化公司性质字段：嘉银科技",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-7289690ae45c",
+      "display_name": "焦点科技",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 焦点科技 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://app.mokahr.com/apply/focus/148405?sourceToken=7282d32eadda274e60b216f072f815d0#/",
+          "title": "招聘数据源结构化公司性质字段：焦点科技",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-364af4991175",
+      "display_name": "省广集团",
+      "ownership_tag": "国企",
+      "status": "verified",
+      "reason": "招聘数据源已为 省广集团 标注公司性质“央国企”，按数据源预标注映射为“国企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://wecruit.hotjob.cn/SU5f56e5bf9b0d78f6000a8773/pb/school.html",
+          "title": "招聘数据源结构化公司性质字段：省广集团",
+          "note": "源记录 natures=[\"央国企\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-6c680a3ffd1a",
+      "display_name": "快递100",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 快递100 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://app.mokahr.com/campus-recruitment/kuaidi100/118847?locale=zh-CN#/jobs",
+          "title": "招聘数据源结构化公司性质字段：快递100",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-cfc69ca7c080",
+      "display_name": "朴道征信",
+      "ownership_tag": "待核实",
+      "status": "verified_unresolved",
+      "reason": "已核对招聘数据源，朴道征信 同时出现互相冲突的公司性质标签：央国企、民营企业；在未取得控制关系原文前不强行归类。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://app.mokahr.com/campus-recruitment/pudaocredit/42953?locale=zh-CN#/",
+          "title": "招聘数据源结构化公司性质字段：朴道征信",
+          "note": "源记录 natures=[\"央国企\",\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-01b1b9a23fa9",
+      "display_name": "无忧传媒",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 无忧传媒 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://campus.wuyou.com/campus_apply/joymedia/7674#/",
+          "title": "招聘数据源结构化公司性质字段：无忧传媒",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-d4a8f0bbe1c5",
+      "display_name": "结行科技",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 结行科技 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://wecruit.hotjob.cn/SU673d74ea6202cc054740f8ab/pb/school.html",
+          "title": "招聘数据源结构化公司性质字段：结行科技",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-6a1a6f504a17",
+      "display_name": "美图",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 美图 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://hr.meitu.com/?page=1&recruitmentType=campus",
+          "title": "招聘数据源结构化公司性质字段：美图",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "company_id": "company-fa8c9a97f2c9",
+      "display_name": "同程旅行",
+      "ownership_tag": "私企",
+      "status": "verified",
+      "reason": "招聘数据源已为 同程旅行 标注公司性质“民营企业”，按数据源预标注映射为“私企”。",
+      "checked_at": "2026-09-07",
+      "evidence": [
+        {
+          "url": "https://mhr.ly.com/recruit/schoolPortal#/postDelivery?srt=0.7586611820230704",
+          "title": "招聘数据源结构化公司性质字段：同程旅行",
+          "note": "源记录 natures=[\"民营企业\"]；该字段语义为 supplier_company_nature_classification，关联招聘入口如上。",
+          "checked_at": "2026-09-07"
+        }
+      ]
+    }
+  ]
+}

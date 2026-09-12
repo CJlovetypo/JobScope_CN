@@ -1,0 +1,39 @@
+# Local skill runs, personal inputs, generated reports and development evidence
+/*/runs/
+/*/outputs/
+/*/artifacts/
+/*/tmp/
+/*/logs/
+/*/tmp-*
+
+# Dependencies and caches
+node_modules/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.cache/
+coverage/
+
+# Local credentials and environment configuration
+.env
+.env.*
+!.env.example
+!.env.sample
+*.pem
+*.key
+credentials.json
+cookies.txt
+cookies.json
+
+# Editor, OS and temporary files
+.DS_Store
+Thumbs.db
+Desktop.ini
+.idea/
+.vscode/
+*.log
+*.tmp
+*.swp
+~$*

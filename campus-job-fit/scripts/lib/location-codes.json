@@ -1,0 +1,1455 @@
+{
+  "version": 1,
+  "checked_at": "2026-09-06T10:49:25.931Z",
+  "source_year": 2024,
+  "source_url": "https://www.mca.gov.cn/mzsj/xzqh/2025/202401xzqh.html",
+  "scope": "Observed public ATS work-location cityId values only",
+  "usage_rules": [
+    "Apply only to an explicitly returned six-digit cityId, not ATS location.id or arbitrary numeric strings.",
+    "If a non-empty current cityName conflicts with the recorded name, retain unknown; never infer from employer headquarters.",
+    "Only codes observed in this run are included; absent, obsolete, conflicting and province-only codes remain unresolved.",
+    "This is a checked 2024 official code table cross-reference, not a claim that all administrative changes through 2026 are incorporated."
+  ],
+  "by_code": {
+    "110000": {
+      "name": "北京市",
+      "city": "北京",
+      "city_code": "110000",
+      "province": "北京市",
+      "province_code": "110000",
+      "level": "municipality",
+      "evidence_id": "mca-2024-110000"
+    },
+    "110101": {
+      "name": "东城区",
+      "city": "北京",
+      "city_code": "110000",
+      "province": "北京市",
+      "province_code": "110000",
+      "level": "district",
+      "evidence_id": "mca-2024-110101"
+    },
+    "110102": {
+      "name": "西城区",
+      "city": "北京",
+      "city_code": "110000",
+      "province": "北京市",
+      "province_code": "110000",
+      "level": "district",
+      "evidence_id": "mca-2024-110102"
+    },
+    "110105": {
+      "name": "朝阳区",
+      "city": "北京",
+      "city_code": "110000",
+      "province": "北京市",
+      "province_code": "110000",
+      "level": "district",
+      "evidence_id": "mca-2024-110105"
+    },
+    "110106": {
+      "name": "丰台区",
+      "city": "北京",
+      "city_code": "110000",
+      "province": "北京市",
+      "province_code": "110000",
+      "level": "district",
+      "evidence_id": "mca-2024-110106"
+    },
+    "110108": {
+      "name": "海淀区",
+      "city": "北京",
+      "city_code": "110000",
+      "province": "北京市",
+      "province_code": "110000",
+      "level": "district",
+      "evidence_id": "mca-2024-110108"
+    },
+    "110114": {
+      "name": "昌平区",
+      "city": "北京",
+      "city_code": "110000",
+      "province": "北京市",
+      "province_code": "110000",
+      "level": "district",
+      "evidence_id": "mca-2024-110114"
+    },
+    "120000": {
+      "name": "天津市",
+      "city": "天津",
+      "city_code": "120000",
+      "province": "天津市",
+      "province_code": "120000",
+      "level": "municipality",
+      "evidence_id": "mca-2024-120000"
+    },
+    "120101": {
+      "name": "和平区",
+      "city": "天津",
+      "city_code": "120000",
+      "province": "天津市",
+      "province_code": "120000",
+      "level": "district",
+      "evidence_id": "mca-2024-120101"
+    },
+    "120103": {
+      "name": "河西区",
+      "city": "天津",
+      "city_code": "120000",
+      "province": "天津市",
+      "province_code": "120000",
+      "level": "district",
+      "evidence_id": "mca-2024-120103"
+    },
+    "120111": {
+      "name": "西青区",
+      "city": "天津",
+      "city_code": "120000",
+      "province": "天津市",
+      "province_code": "120000",
+      "level": "district",
+      "evidence_id": "mca-2024-120111"
+    },
+    "120116": {
+      "name": "滨海新区",
+      "city": "天津",
+      "city_code": "120000",
+      "province": "天津市",
+      "province_code": "120000",
+      "level": "district",
+      "evidence_id": "mca-2024-120116"
+    },
+    "130100": {
+      "name": "石家庄市",
+      "city": "石家庄",
+      "city_code": "130100",
+      "province": "河北省",
+      "province_code": "130000",
+      "level": "city",
+      "evidence_id": "mca-2024-130100"
+    },
+    "130102": {
+      "name": "长安区",
+      "city": "石家庄",
+      "city_code": "130100",
+      "province": "河北省",
+      "province_code": "130000",
+      "level": "district",
+      "evidence_id": "mca-2024-130102"
+    },
+    "130104": {
+      "name": "桥西区",
+      "city": "石家庄",
+      "city_code": "130100",
+      "province": "河北省",
+      "province_code": "130000",
+      "level": "district",
+      "evidence_id": "mca-2024-130104"
+    },
+    "130105": {
+      "name": "新华区",
+      "city": "石家庄",
+      "city_code": "130100",
+      "province": "河北省",
+      "province_code": "130000",
+      "level": "district",
+      "evidence_id": "mca-2024-130105"
+    },
+    "140100": {
+      "name": "太原市",
+      "city": "太原",
+      "city_code": "140100",
+      "province": "山西省",
+      "province_code": "140000",
+      "level": "city",
+      "evidence_id": "mca-2024-140100"
+    },
+    "140105": {
+      "name": "小店区",
+      "city": "太原",
+      "city_code": "140100",
+      "province": "山西省",
+      "province_code": "140000",
+      "level": "district",
+      "evidence_id": "mca-2024-140105"
+    },
+    "140107": {
+      "name": "杏花岭区",
+      "city": "太原",
+      "city_code": "140100",
+      "province": "山西省",
+      "province_code": "140000",
+      "level": "district",
+      "evidence_id": "mca-2024-140107"
+    },
+    "150104": {
+      "name": "玉泉区",
+      "city": "呼和浩特",
+      "city_code": "150100",
+      "province": "内蒙古自治区",
+      "province_code": "150000",
+      "level": "district",
+      "evidence_id": "mca-2024-150104"
+    },
+    "210100": {
+      "name": "沈阳市",
+      "city": "沈阳",
+      "city_code": "210100",
+      "province": "辽宁省",
+      "province_code": "210000",
+      "level": "city",
+      "evidence_id": "mca-2024-210100"
+    },
+    "210102": {
+      "name": "和平区",
+      "city": "沈阳",
+      "city_code": "210100",
+      "province": "辽宁省",
+      "province_code": "210000",
+      "level": "district",
+      "evidence_id": "mca-2024-210102"
+    },
+    "210103": {
+      "name": "沈河区",
+      "city": "沈阳",
+      "city_code": "210100",
+      "province": "辽宁省",
+      "province_code": "210000",
+      "level": "district",
+      "evidence_id": "mca-2024-210103"
+    },
+    "210112": {
+      "name": "浑南区",
+      "city": "沈阳",
+      "city_code": "210100",
+      "province": "辽宁省",
+      "province_code": "210000",
+      "level": "district",
+      "evidence_id": "mca-2024-210112"
+    },
+    "210204": {
+      "name": "沙河口区",
+      "city": "大连",
+      "city_code": "210200",
+      "province": "辽宁省",
+      "province_code": "210000",
+      "level": "district",
+      "evidence_id": "mca-2024-210204"
+    },
+    "220100": {
+      "name": "长春市",
+      "city": "长春",
+      "city_code": "220100",
+      "province": "吉林省",
+      "province_code": "220000",
+      "level": "city",
+      "evidence_id": "mca-2024-220100"
+    },
+    "220102": {
+      "name": "南关区",
+      "city": "长春",
+      "city_code": "220100",
+      "province": "吉林省",
+      "province_code": "220000",
+      "level": "district",
+      "evidence_id": "mca-2024-220102"
+    },
+    "220104": {
+      "name": "朝阳区",
+      "city": "长春",
+      "city_code": "220100",
+      "province": "吉林省",
+      "province_code": "220000",
+      "level": "district",
+      "evidence_id": "mca-2024-220104"
+    },
+    "230110": {
+      "name": "香坊区",
+      "city": "哈尔滨",
+      "city_code": "230100",
+      "province": "黑龙江省",
+      "province_code": "230000",
+      "level": "district",
+      "evidence_id": "mca-2024-230110"
+    },
+    "310000": {
+      "name": "上海市",
+      "city": "上海",
+      "city_code": "310000",
+      "province": "上海市",
+      "province_code": "310000",
+      "level": "municipality",
+      "evidence_id": "mca-2024-310000"
+    },
+    "310101": {
+      "name": "黄浦区",
+      "city": "上海",
+      "city_code": "310000",
+      "province": "上海市",
+      "province_code": "310000",
+      "level": "district",
+      "evidence_id": "mca-2024-310101"
+    },
+    "310104": {
+      "name": "徐汇区",
+      "city": "上海",
+      "city_code": "310000",
+      "province": "上海市",
+      "province_code": "310000",
+      "level": "district",
+      "evidence_id": "mca-2024-310104"
+    },
+    "310106": {
+      "name": "静安区",
+      "city": "上海",
+      "city_code": "310000",
+      "province": "上海市",
+      "province_code": "310000",
+      "level": "district",
+      "evidence_id": "mca-2024-310106"
+    },
+    "310107": {
+      "name": "普陀区",
+      "city": "上海",
+      "city_code": "310000",
+      "province": "上海市",
+      "province_code": "310000",
+      "level": "district",
+      "evidence_id": "mca-2024-310107"
+    },
+    "310110": {
+      "name": "杨浦区",
+      "city": "上海",
+      "city_code": "310000",
+      "province": "上海市",
+      "province_code": "310000",
+      "level": "district",
+      "evidence_id": "mca-2024-310110"
+    },
+    "310112": {
+      "name": "闵行区",
+      "city": "上海",
+      "city_code": "310000",
+      "province": "上海市",
+      "province_code": "310000",
+      "level": "district",
+      "evidence_id": "mca-2024-310112"
+    },
+    "310114": {
+      "name": "嘉定区",
+      "city": "上海",
+      "city_code": "310000",
+      "province": "上海市",
+      "province_code": "310000",
+      "level": "district",
+      "evidence_id": "mca-2024-310114"
+    },
+    "310115": {
+      "name": "浦东新区",
+      "city": "上海",
+      "city_code": "310000",
+      "province": "上海市",
+      "province_code": "310000",
+      "level": "district",
+      "evidence_id": "mca-2024-310115"
+    },
+    "310117": {
+      "name": "松江区",
+      "city": "上海",
+      "city_code": "310000",
+      "province": "上海市",
+      "province_code": "310000",
+      "level": "district",
+      "evidence_id": "mca-2024-310117"
+    },
+    "320100": {
+      "name": "南京市",
+      "city": "南京",
+      "city_code": "320100",
+      "province": "江苏省",
+      "province_code": "320000",
+      "level": "city",
+      "evidence_id": "mca-2024-320100"
+    },
+    "320102": {
+      "name": "玄武区",
+      "city": "南京",
+      "city_code": "320100",
+      "province": "江苏省",
+      "province_code": "320000",
+      "level": "district",
+      "evidence_id": "mca-2024-320102"
+    },
+    "320105": {
+      "name": "建邺区",
+      "city": "南京",
+      "city_code": "320100",
+      "province": "江苏省",
+      "province_code": "320000",
+      "level": "district",
+      "evidence_id": "mca-2024-320105"
+    },
+    "320106": {
+      "name": "鼓楼区",
+      "city": "南京",
+      "city_code": "320100",
+      "province": "江苏省",
+      "province_code": "320000",
+      "level": "district",
+      "evidence_id": "mca-2024-320106"
+    },
+    "320113": {
+      "name": "栖霞区",
+      "city": "南京",
+      "city_code": "320100",
+      "province": "江苏省",
+      "province_code": "320000",
+      "level": "district",
+      "evidence_id": "mca-2024-320113"
+    },
+    "320114": {
+      "name": "雨花台区",
+      "city": "南京",
+      "city_code": "320100",
+      "province": "江苏省",
+      "province_code": "320000",
+      "level": "district",
+      "evidence_id": "mca-2024-320114"
+    },
+    "320115": {
+      "name": "江宁区",
+      "city": "南京",
+      "city_code": "320100",
+      "province": "江苏省",
+      "province_code": "320000",
+      "level": "district",
+      "evidence_id": "mca-2024-320115"
+    },
+    "320200": {
+      "name": "无锡市",
+      "city": "无锡",
+      "city_code": "320200",
+      "province": "江苏省",
+      "province_code": "320000",
+      "level": "city",
+      "evidence_id": "mca-2024-320200"
+    },
+    "320213": {
+      "name": "梁溪区",
+      "city": "无锡",
+      "city_code": "320200",
+      "province": "江苏省",
+      "province_code": "320000",
+      "level": "district",
+      "evidence_id": "mca-2024-320213"
+    },
+    "320302": {
+      "name": "鼓楼区",
+      "city": "徐州",
+      "city_code": "320300",
+      "province": "江苏省",
+      "province_code": "320000",
+      "level": "district",
+      "evidence_id": "mca-2024-320302"
+    },
+    "320303": {
+      "name": "云龙区",
+      "city": "徐州",
+      "city_code": "320300",
+      "province": "江苏省",
+      "province_code": "320000",
+      "level": "district",
+      "evidence_id": "mca-2024-320303"
+    },
+    "320400": {
+      "name": "常州市",
+      "city": "常州",
+      "city_code": "320400",
+      "province": "江苏省",
+      "province_code": "320000",
+      "level": "city",
+      "evidence_id": "mca-2024-320400"
+    },
+    "320402": {
+      "name": "天宁区",
+      "city": "常州",
+      "city_code": "320400",
+      "province": "江苏省",
+      "province_code": "320000",
+      "level": "district",
+      "evidence_id": "mca-2024-320402"
+    },
+    "320404": {
+      "name": "钟楼区",
+      "city": "常州",
+      "city_code": "320400",
+      "province": "江苏省",
+      "province_code": "320000",
+      "level": "district",
+      "evidence_id": "mca-2024-320404"
+    },
+    "320500": {
+      "name": "苏州市",
+      "city": "苏州",
+      "city_code": "320500",
+      "province": "江苏省",
+      "province_code": "320000",
+      "level": "city",
+      "evidence_id": "mca-2024-320500"
+    },
+    "320505": {
+      "name": "虎丘区",
+      "city": "苏州",
+      "city_code": "320500",
+      "province": "江苏省",
+      "province_code": "320000",
+      "level": "district",
+      "evidence_id": "mca-2024-320505"
+    },
+    "320506": {
+      "name": "吴中区",
+      "city": "苏州",
+      "city_code": "320500",
+      "province": "江苏省",
+      "province_code": "320000",
+      "level": "district",
+      "evidence_id": "mca-2024-320506"
+    },
+    "320508": {
+      "name": "姑苏区",
+      "city": "苏州",
+      "city_code": "320500",
+      "province": "江苏省",
+      "province_code": "320000",
+      "level": "district",
+      "evidence_id": "mca-2024-320508"
+    },
+    "320600": {
+      "name": "南通市",
+      "city": "南通",
+      "city_code": "320600",
+      "province": "江苏省",
+      "province_code": "320000",
+      "level": "city",
+      "evidence_id": "mca-2024-320600"
+    },
+    "320613": {
+      "name": "崇川区",
+      "city": "南通",
+      "city_code": "320600",
+      "province": "江苏省",
+      "province_code": "320000",
+      "level": "district",
+      "evidence_id": "mca-2024-320613"
+    },
+    "320804": {
+      "name": "淮阴区",
+      "city": "淮安",
+      "city_code": "320800",
+      "province": "江苏省",
+      "province_code": "320000",
+      "level": "district",
+      "evidence_id": "mca-2024-320804"
+    },
+    "320812": {
+      "name": "清江浦区",
+      "city": "淮安",
+      "city_code": "320800",
+      "province": "江苏省",
+      "province_code": "320000",
+      "level": "district",
+      "evidence_id": "mca-2024-320812"
+    },
+    "321002": {
+      "name": "广陵区",
+      "city": "扬州",
+      "city_code": "321000",
+      "province": "江苏省",
+      "province_code": "320000",
+      "level": "district",
+      "evidence_id": "mca-2024-321002"
+    },
+    "321003": {
+      "name": "邗江区",
+      "city": "扬州",
+      "city_code": "321000",
+      "province": "江苏省",
+      "province_code": "320000",
+      "level": "district",
+      "evidence_id": "mca-2024-321003"
+    },
+    "321102": {
+      "name": "京口区",
+      "city": "镇江",
+      "city_code": "321100",
+      "province": "江苏省",
+      "province_code": "320000",
+      "level": "district",
+      "evidence_id": "mca-2024-321102"
+    },
+    "330100": {
+      "name": "杭州市",
+      "city": "杭州",
+      "city_code": "330100",
+      "province": "浙江省",
+      "province_code": "330000",
+      "level": "city",
+      "evidence_id": "mca-2024-330100"
+    },
+    "330105": {
+      "name": "拱墅区",
+      "city": "杭州",
+      "city_code": "330100",
+      "province": "浙江省",
+      "province_code": "330000",
+      "level": "district",
+      "evidence_id": "mca-2024-330105"
+    },
+    "330106": {
+      "name": "西湖区",
+      "city": "杭州",
+      "city_code": "330100",
+      "province": "浙江省",
+      "province_code": "330000",
+      "level": "district",
+      "evidence_id": "mca-2024-330106"
+    },
+    "330108": {
+      "name": "滨江区",
+      "city": "杭州",
+      "city_code": "330100",
+      "province": "浙江省",
+      "province_code": "330000",
+      "level": "district",
+      "evidence_id": "mca-2024-330108"
+    },
+    "330109": {
+      "name": "萧山区",
+      "city": "杭州",
+      "city_code": "330100",
+      "province": "浙江省",
+      "province_code": "330000",
+      "level": "district",
+      "evidence_id": "mca-2024-330109"
+    },
+    "330110": {
+      "name": "余杭区",
+      "city": "杭州",
+      "city_code": "330100",
+      "province": "浙江省",
+      "province_code": "330000",
+      "level": "district",
+      "evidence_id": "mca-2024-330110"
+    },
+    "330203": {
+      "name": "海曙区",
+      "city": "宁波",
+      "city_code": "330200",
+      "province": "浙江省",
+      "province_code": "330000",
+      "level": "district",
+      "evidence_id": "mca-2024-330203"
+    },
+    "330212": {
+      "name": "鄞州区",
+      "city": "宁波",
+      "city_code": "330200",
+      "province": "浙江省",
+      "province_code": "330000",
+      "level": "district",
+      "evidence_id": "mca-2024-330212"
+    },
+    "330302": {
+      "name": "鹿城区",
+      "city": "温州",
+      "city_code": "330300",
+      "province": "浙江省",
+      "province_code": "330000",
+      "level": "district",
+      "evidence_id": "mca-2024-330302"
+    },
+    "330602": {
+      "name": "越城区",
+      "city": "绍兴",
+      "city_code": "330600",
+      "province": "浙江省",
+      "province_code": "330000",
+      "level": "district",
+      "evidence_id": "mca-2024-330602"
+    },
+    "340100": {
+      "name": "合肥市",
+      "city": "合肥",
+      "city_code": "340100",
+      "province": "安徽省",
+      "province_code": "340000",
+      "level": "city",
+      "evidence_id": "mca-2024-340100"
+    },
+    "340103": {
+      "name": "庐阳区",
+      "city": "合肥",
+      "city_code": "340100",
+      "province": "安徽省",
+      "province_code": "340000",
+      "level": "district",
+      "evidence_id": "mca-2024-340103"
+    },
+    "340104": {
+      "name": "蜀山区",
+      "city": "合肥",
+      "city_code": "340100",
+      "province": "安徽省",
+      "province_code": "340000",
+      "level": "district",
+      "evidence_id": "mca-2024-340104"
+    },
+    "340111": {
+      "name": "包河区",
+      "city": "合肥",
+      "city_code": "340100",
+      "province": "安徽省",
+      "province_code": "340000",
+      "level": "district",
+      "evidence_id": "mca-2024-340111"
+    },
+    "350100": {
+      "name": "福州市",
+      "city": "福州",
+      "city_code": "350100",
+      "province": "福建省",
+      "province_code": "350000",
+      "level": "city",
+      "evidence_id": "mca-2024-350100"
+    },
+    "350102": {
+      "name": "鼓楼区",
+      "city": "福州",
+      "city_code": "350100",
+      "province": "福建省",
+      "province_code": "350000",
+      "level": "district",
+      "evidence_id": "mca-2024-350102"
+    },
+    "350103": {
+      "name": "台江区",
+      "city": "福州",
+      "city_code": "350100",
+      "province": "福建省",
+      "province_code": "350000",
+      "level": "district",
+      "evidence_id": "mca-2024-350103"
+    },
+    "350203": {
+      "name": "思明区",
+      "city": "厦门",
+      "city_code": "350200",
+      "province": "福建省",
+      "province_code": "350000",
+      "level": "district",
+      "evidence_id": "mca-2024-350203"
+    },
+    "350206": {
+      "name": "湖里区",
+      "city": "厦门",
+      "city_code": "350200",
+      "province": "福建省",
+      "province_code": "350000",
+      "level": "district",
+      "evidence_id": "mca-2024-350206"
+    },
+    "350502": {
+      "name": "鲤城区",
+      "city": "泉州",
+      "city_code": "350500",
+      "province": "福建省",
+      "province_code": "350000",
+      "level": "district",
+      "evidence_id": "mca-2024-350502"
+    },
+    "360102": {
+      "name": "东湖区",
+      "city": "南昌",
+      "city_code": "360100",
+      "province": "江西省",
+      "province_code": "360000",
+      "level": "district",
+      "evidence_id": "mca-2024-360102"
+    },
+    "360103": {
+      "name": "西湖区",
+      "city": "南昌",
+      "city_code": "360100",
+      "province": "江西省",
+      "province_code": "360000",
+      "level": "district",
+      "evidence_id": "mca-2024-360103"
+    },
+    "360111": {
+      "name": "青山湖区",
+      "city": "南昌",
+      "city_code": "360100",
+      "province": "江西省",
+      "province_code": "360000",
+      "level": "district",
+      "evidence_id": "mca-2024-360111"
+    },
+    "360113": {
+      "name": "红谷滩区",
+      "city": "南昌",
+      "city_code": "360100",
+      "province": "江西省",
+      "province_code": "360000",
+      "level": "district",
+      "evidence_id": "mca-2024-360113"
+    },
+    "370100": {
+      "name": "济南市",
+      "city": "济南",
+      "city_code": "370100",
+      "province": "山东省",
+      "province_code": "370000",
+      "level": "city",
+      "evidence_id": "mca-2024-370100"
+    },
+    "370102": {
+      "name": "历下区",
+      "city": "济南",
+      "city_code": "370100",
+      "province": "山东省",
+      "province_code": "370000",
+      "level": "district",
+      "evidence_id": "mca-2024-370102"
+    },
+    "370103": {
+      "name": "市中区",
+      "city": "济南",
+      "city_code": "370100",
+      "province": "山东省",
+      "province_code": "370000",
+      "level": "district",
+      "evidence_id": "mca-2024-370103"
+    },
+    "370105": {
+      "name": "天桥区",
+      "city": "济南",
+      "city_code": "370100",
+      "province": "山东省",
+      "province_code": "370000",
+      "level": "district",
+      "evidence_id": "mca-2024-370105"
+    },
+    "370112": {
+      "name": "历城区",
+      "city": "济南",
+      "city_code": "370100",
+      "province": "山东省",
+      "province_code": "370000",
+      "level": "district",
+      "evidence_id": "mca-2024-370112"
+    },
+    "370200": {
+      "name": "青岛市",
+      "city": "青岛",
+      "city_code": "370200",
+      "province": "山东省",
+      "province_code": "370000",
+      "level": "city",
+      "evidence_id": "mca-2024-370200"
+    },
+    "370202": {
+      "name": "市南区",
+      "city": "青岛",
+      "city_code": "370200",
+      "province": "山东省",
+      "province_code": "370000",
+      "level": "district",
+      "evidence_id": "mca-2024-370202"
+    },
+    "370203": {
+      "name": "市北区",
+      "city": "青岛",
+      "city_code": "370200",
+      "province": "山东省",
+      "province_code": "370000",
+      "level": "district",
+      "evidence_id": "mca-2024-370203"
+    },
+    "370303": {
+      "name": "张店区",
+      "city": "淄博",
+      "city_code": "370300",
+      "province": "山东省",
+      "province_code": "370000",
+      "level": "district",
+      "evidence_id": "mca-2024-370303"
+    },
+    "410100": {
+      "name": "郑州市",
+      "city": "郑州",
+      "city_code": "410100",
+      "province": "河南省",
+      "province_code": "410000",
+      "level": "city",
+      "evidence_id": "mca-2024-410100"
+    },
+    "410104": {
+      "name": "管城回族区",
+      "city": "郑州",
+      "city_code": "410100",
+      "province": "河南省",
+      "province_code": "410000",
+      "level": "district",
+      "evidence_id": "mca-2024-410104"
+    },
+    "410105": {
+      "name": "金水区",
+      "city": "郑州",
+      "city_code": "410100",
+      "province": "河南省",
+      "province_code": "410000",
+      "level": "district",
+      "evidence_id": "mca-2024-410105"
+    },
+    "420100": {
+      "name": "武汉市",
+      "city": "武汉",
+      "city_code": "420100",
+      "province": "湖北省",
+      "province_code": "420000",
+      "level": "city",
+      "evidence_id": "mca-2024-420100"
+    },
+    "420102": {
+      "name": "江岸区",
+      "city": "武汉",
+      "city_code": "420100",
+      "province": "湖北省",
+      "province_code": "420000",
+      "level": "district",
+      "evidence_id": "mca-2024-420102"
+    },
+    "420103": {
+      "name": "江汉区",
+      "city": "武汉",
+      "city_code": "420100",
+      "province": "湖北省",
+      "province_code": "420000",
+      "level": "district",
+      "evidence_id": "mca-2024-420103"
+    },
+    "420104": {
+      "name": "硚口区",
+      "city": "武汉",
+      "city_code": "420100",
+      "province": "湖北省",
+      "province_code": "420000",
+      "level": "district",
+      "evidence_id": "mca-2024-420104"
+    },
+    "420111": {
+      "name": "洪山区",
+      "city": "武汉",
+      "city_code": "420100",
+      "province": "湖北省",
+      "province_code": "420000",
+      "level": "district",
+      "evidence_id": "mca-2024-420111"
+    },
+    "420112": {
+      "name": "东西湖区",
+      "city": "武汉",
+      "city_code": "420100",
+      "province": "湖北省",
+      "province_code": "420000",
+      "level": "district",
+      "evidence_id": "mca-2024-420112"
+    },
+    "430100": {
+      "name": "长沙市",
+      "city": "长沙",
+      "city_code": "430100",
+      "province": "湖南省",
+      "province_code": "430000",
+      "level": "city",
+      "evidence_id": "mca-2024-430100"
+    },
+    "430102": {
+      "name": "芙蓉区",
+      "city": "长沙",
+      "city_code": "430100",
+      "province": "湖南省",
+      "province_code": "430000",
+      "level": "district",
+      "evidence_id": "mca-2024-430102"
+    },
+    "430103": {
+      "name": "天心区",
+      "city": "长沙",
+      "city_code": "430100",
+      "province": "湖南省",
+      "province_code": "430000",
+      "level": "district",
+      "evidence_id": "mca-2024-430103"
+    },
+    "430104": {
+      "name": "岳麓区",
+      "city": "长沙",
+      "city_code": "430100",
+      "province": "湖南省",
+      "province_code": "430000",
+      "level": "district",
+      "evidence_id": "mca-2024-430104"
+    },
+    "430105": {
+      "name": "开福区",
+      "city": "长沙",
+      "city_code": "430100",
+      "province": "湖南省",
+      "province_code": "430000",
+      "level": "district",
+      "evidence_id": "mca-2024-430105"
+    },
+    "430111": {
+      "name": "雨花区",
+      "city": "长沙",
+      "city_code": "430100",
+      "province": "湖南省",
+      "province_code": "430000",
+      "level": "district",
+      "evidence_id": "mca-2024-430111"
+    },
+    "440100": {
+      "name": "广州市",
+      "city": "广州",
+      "city_code": "440100",
+      "province": "广东省",
+      "province_code": "440000",
+      "level": "city",
+      "evidence_id": "mca-2024-440100"
+    },
+    "440105": {
+      "name": "海珠区",
+      "city": "广州",
+      "city_code": "440100",
+      "province": "广东省",
+      "province_code": "440000",
+      "level": "district",
+      "evidence_id": "mca-2024-440105"
+    },
+    "440106": {
+      "name": "天河区",
+      "city": "广州",
+      "city_code": "440100",
+      "province": "广东省",
+      "province_code": "440000",
+      "level": "district",
+      "evidence_id": "mca-2024-440106"
+    },
+    "440112": {
+      "name": "黄埔区",
+      "city": "广州",
+      "city_code": "440100",
+      "province": "广东省",
+      "province_code": "440000",
+      "level": "district",
+      "evidence_id": "mca-2024-440112"
+    },
+    "440113": {
+      "name": "番禺区",
+      "city": "广州",
+      "city_code": "440100",
+      "province": "广东省",
+      "province_code": "440000",
+      "level": "district",
+      "evidence_id": "mca-2024-440113"
+    },
+    "440300": {
+      "name": "深圳市",
+      "city": "深圳",
+      "city_code": "440300",
+      "province": "广东省",
+      "province_code": "440000",
+      "level": "city",
+      "evidence_id": "mca-2024-440300"
+    },
+    "440303": {
+      "name": "罗湖区",
+      "city": "深圳",
+      "city_code": "440300",
+      "province": "广东省",
+      "province_code": "440000",
+      "level": "district",
+      "evidence_id": "mca-2024-440303"
+    },
+    "440304": {
+      "name": "福田区",
+      "city": "深圳",
+      "city_code": "440300",
+      "province": "广东省",
+      "province_code": "440000",
+      "level": "district",
+      "evidence_id": "mca-2024-440304"
+    },
+    "440305": {
+      "name": "南山区",
+      "city": "深圳",
+      "city_code": "440300",
+      "province": "广东省",
+      "province_code": "440000",
+      "level": "district",
+      "evidence_id": "mca-2024-440305"
+    },
+    "440306": {
+      "name": "宝安区",
+      "city": "深圳",
+      "city_code": "440300",
+      "province": "广东省",
+      "province_code": "440000",
+      "level": "district",
+      "evidence_id": "mca-2024-440306"
+    },
+    "440307": {
+      "name": "龙岗区",
+      "city": "深圳",
+      "city_code": "440300",
+      "province": "广东省",
+      "province_code": "440000",
+      "level": "district",
+      "evidence_id": "mca-2024-440307"
+    },
+    "440309": {
+      "name": "龙华区",
+      "city": "深圳",
+      "city_code": "440300",
+      "province": "广东省",
+      "province_code": "440000",
+      "level": "district",
+      "evidence_id": "mca-2024-440309"
+    },
+    "440400": {
+      "name": "珠海市",
+      "city": "珠海",
+      "city_code": "440400",
+      "province": "广东省",
+      "province_code": "440000",
+      "level": "city",
+      "evidence_id": "mca-2024-440400"
+    },
+    "440402": {
+      "name": "香洲区",
+      "city": "珠海",
+      "city_code": "440400",
+      "province": "广东省",
+      "province_code": "440000",
+      "level": "district",
+      "evidence_id": "mca-2024-440402"
+    },
+    "440600": {
+      "name": "佛山市",
+      "city": "佛山",
+      "city_code": "440600",
+      "province": "广东省",
+      "province_code": "440000",
+      "level": "city",
+      "evidence_id": "mca-2024-440600"
+    },
+    "440604": {
+      "name": "禅城区",
+      "city": "佛山",
+      "city_code": "440600",
+      "province": "广东省",
+      "province_code": "440000",
+      "level": "district",
+      "evidence_id": "mca-2024-440604"
+    },
+    "440605": {
+      "name": "南海区",
+      "city": "佛山",
+      "city_code": "440600",
+      "province": "广东省",
+      "province_code": "440000",
+      "level": "district",
+      "evidence_id": "mca-2024-440605"
+    },
+    "440606": {
+      "name": "顺德区",
+      "city": "佛山",
+      "city_code": "440600",
+      "province": "广东省",
+      "province_code": "440000",
+      "level": "district",
+      "evidence_id": "mca-2024-440606"
+    },
+    "441302": {
+      "name": "惠城区",
+      "city": "惠州",
+      "city_code": "441300",
+      "province": "广东省",
+      "province_code": "440000",
+      "level": "district",
+      "evidence_id": "mca-2024-441302"
+    },
+    "441900": {
+      "name": "东莞市",
+      "city": "东莞",
+      "city_code": "441900",
+      "province": "广东省",
+      "province_code": "440000",
+      "level": "city",
+      "evidence_id": "mca-2024-441900"
+    },
+    "442000": {
+      "name": "中山市",
+      "city": "中山",
+      "city_code": "442000",
+      "province": "广东省",
+      "province_code": "440000",
+      "level": "city",
+      "evidence_id": "mca-2024-442000"
+    },
+    "450100": {
+      "name": "南宁市",
+      "city": "南宁",
+      "city_code": "450100",
+      "province": "广西壮族自治区",
+      "province_code": "450000",
+      "level": "city",
+      "evidence_id": "mca-2024-450100"
+    },
+    "450103": {
+      "name": "青秀区",
+      "city": "南宁",
+      "city_code": "450100",
+      "province": "广西壮族自治区",
+      "province_code": "450000",
+      "level": "district",
+      "evidence_id": "mca-2024-450103"
+    },
+    "460106": {
+      "name": "龙华区",
+      "city": "海口",
+      "city_code": "460100",
+      "province": "海南省",
+      "province_code": "460000",
+      "level": "district",
+      "evidence_id": "mca-2024-460106"
+    },
+    "500000": {
+      "name": "重庆市",
+      "city": "重庆",
+      "city_code": "500000",
+      "province": "重庆市",
+      "province_code": "500000",
+      "level": "municipality",
+      "evidence_id": "mca-2024-500000"
+    },
+    "500106": {
+      "name": "沙坪坝区",
+      "city": "重庆",
+      "city_code": "500000",
+      "province": "重庆市",
+      "province_code": "500000",
+      "level": "district",
+      "evidence_id": "mca-2024-500106"
+    },
+    "500112": {
+      "name": "渝北区",
+      "city": "重庆",
+      "city_code": "500000",
+      "province": "重庆市",
+      "province_code": "500000",
+      "level": "district",
+      "evidence_id": "mca-2024-500112"
+    },
+    "510100": {
+      "name": "成都市",
+      "city": "成都",
+      "city_code": "510100",
+      "province": "四川省",
+      "province_code": "510000",
+      "level": "city",
+      "evidence_id": "mca-2024-510100"
+    },
+    "510104": {
+      "name": "锦江区",
+      "city": "成都",
+      "city_code": "510100",
+      "province": "四川省",
+      "province_code": "510000",
+      "level": "district",
+      "evidence_id": "mca-2024-510104"
+    },
+    "510107": {
+      "name": "武侯区",
+      "city": "成都",
+      "city_code": "510100",
+      "province": "四川省",
+      "province_code": "510000",
+      "level": "district",
+      "evidence_id": "mca-2024-510107"
+    },
+    "510116": {
+      "name": "双流区",
+      "city": "成都",
+      "city_code": "510100",
+      "province": "四川省",
+      "province_code": "510000",
+      "level": "district",
+      "evidence_id": "mca-2024-510116"
+    },
+    "520100": {
+      "name": "贵阳市",
+      "city": "贵阳",
+      "city_code": "520100",
+      "province": "贵州省",
+      "province_code": "520000",
+      "level": "city",
+      "evidence_id": "mca-2024-520100"
+    },
+    "520103": {
+      "name": "云岩区",
+      "city": "贵阳",
+      "city_code": "520100",
+      "province": "贵州省",
+      "province_code": "520000",
+      "level": "district",
+      "evidence_id": "mca-2024-520103"
+    },
+    "520115": {
+      "name": "观山湖区",
+      "city": "贵阳",
+      "city_code": "520100",
+      "province": "贵州省",
+      "province_code": "520000",
+      "level": "district",
+      "evidence_id": "mca-2024-520115"
+    },
+    "530100": {
+      "name": "昆明市",
+      "city": "昆明",
+      "city_code": "530100",
+      "province": "云南省",
+      "province_code": "530000",
+      "level": "city",
+      "evidence_id": "mca-2024-530100"
+    },
+    "530102": {
+      "name": "五华区",
+      "city": "昆明",
+      "city_code": "530100",
+      "province": "云南省",
+      "province_code": "530000",
+      "level": "district",
+      "evidence_id": "mca-2024-530102"
+    },
+    "530103": {
+      "name": "盘龙区",
+      "city": "昆明",
+      "city_code": "530100",
+      "province": "云南省",
+      "province_code": "530000",
+      "level": "district",
+      "evidence_id": "mca-2024-530103"
+    },
+    "540100": {
+      "name": "拉萨市",
+      "city": "拉萨",
+      "city_code": "540100",
+      "province": "西藏自治区",
+      "province_code": "540000",
+      "level": "city",
+      "evidence_id": "mca-2024-540100"
+    },
+    "610100": {
+      "name": "西安市",
+      "city": "西安",
+      "city_code": "610100",
+      "province": "陕西省",
+      "province_code": "610000",
+      "level": "city",
+      "evidence_id": "mca-2024-610100"
+    },
+    "610102": {
+      "name": "新城区",
+      "city": "西安",
+      "city_code": "610100",
+      "province": "陕西省",
+      "province_code": "610000",
+      "level": "district",
+      "evidence_id": "mca-2024-610102"
+    },
+    "610103": {
+      "name": "碑林区",
+      "city": "西安",
+      "city_code": "610100",
+      "province": "陕西省",
+      "province_code": "610000",
+      "level": "district",
+      "evidence_id": "mca-2024-610103"
+    },
+    "610104": {
+      "name": "莲湖区",
+      "city": "西安",
+      "city_code": "610100",
+      "province": "陕西省",
+      "province_code": "610000",
+      "level": "district",
+      "evidence_id": "mca-2024-610104"
+    },
+    "610113": {
+      "name": "雁塔区",
+      "city": "西安",
+      "city_code": "610100",
+      "province": "陕西省",
+      "province_code": "610000",
+      "level": "district",
+      "evidence_id": "mca-2024-610113"
+    },
+    "620102": {
+      "name": "城关区",
+      "city": "兰州",
+      "city_code": "620100",
+      "province": "甘肃省",
+      "province_code": "620000",
+      "level": "district",
+      "evidence_id": "mca-2024-620102"
+    },
+    "630104": {
+      "name": "城西区",
+      "city": "西宁",
+      "city_code": "630100",
+      "province": "青海省",
+      "province_code": "630000",
+      "level": "district",
+      "evidence_id": "mca-2024-630104"
+    },
+    "640100": {
+      "name": "银川市",
+      "city": "银川",
+      "city_code": "640100",
+      "province": "宁夏回族自治区",
+      "province_code": "640000",
+      "level": "city",
+      "evidence_id": "mca-2024-640100"
+    },
+    "650105": {
+      "name": "水磨沟区",
+      "city": "乌鲁木齐",
+      "city_code": "650100",
+      "province": "新疆维吾尔自治区",
+      "province_code": "650000",
+      "level": "district",
+      "evidence_id": "mca-2024-650105"
+    },
+    "810000": {
+      "name": "香港特别行政区",
+      "city": "香港",
+      "city_code": "810000",
+      "province": "香港特别行政区",
+      "province_code": "810000",
+      "level": "special_region",
+      "evidence_id": "mca-2024-810000"
+    }
+  }
+}

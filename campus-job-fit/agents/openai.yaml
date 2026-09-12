@@ -1,0 +1,4 @@
+interface:
+  display_name: "校招岗位匹配"
+  short_description: "完整读校招JD，独立评估能力与意愿，结合公司业务和性质生成十一列Excel"
+  default_prompt: "使用 $campus-job-fit，根据我的简历与求职倾向查找正式校招机会，完整阅读每份 JD，分别评估能力与意愿并组合匹配层级，输出含公司业务、性质标签和具体 JD 链接的统一十一列 Excel 工作簿。"
