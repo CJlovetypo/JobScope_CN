@@ -41,7 +41,7 @@ test('列表地点缺失时仅提取正文明确工作地点，不借用总部�
  assert.deepEqual(normalizeLocations(['新加坡']).cities,['新加坡']);
 });
 const EXPECTED_HEADERS=['公司','公司业务标签','公司性质标签','岗位','投递建议','匹配层级','岗位城市','意愿匹配度','能力匹配度','硬性条件匹配度','详细评估理由','JD链接'];
-const EXPECTED_SHEETS=['岗位匹配','待核实与未评估','来源覆盖','说明'];
+const EXPECTED_SHEETS=['岗位匹配','待核实与未评估','公司简介','来源覆盖'];
 const runCommand=promisify(execFile);
 function readZipEntry(archive,entryName){
  // Read the central directory so this also handles ZIP data descriptors.
@@ -177,7 +177,7 @@ test('旧结构、缺独立能力和综合层级冲突均须复核，Excel与nex
  const cases=[{assessment_version:undefined,ability:undefined,match_tier:'match'},{assessment_version:1,ability:'high',match_tier:'match'},{ability:undefined},{ability:'high',interest:'conflict',match_tier:'high'}];
  for(const [index,review] of cases.entries()){
   const dir=await fixture('assessment-v2-'+index,{review});await assert.rejects(()=>buildReportData(dir),/尚未评估/);
-  const report=await buildReportData(dir,{allowPartial:true});assert.equal(report.audit.assessed_jobs,0);assert.match(sheet(report,'待核实与未评估').rows[0][10],/独立|不一致/);
+  const report=await buildReportData(dir,{allowPartial:true});assert.equal(report.audit.assessed_jobs,0);assert.match(report.audit.missing_assessments[0].reason,/独立|不一致/);
   await runCommand(process.execPath,[path.join(SKILL_ROOT,'scripts/campus.mjs'),'next-batch','--run',dir],{cwd:SKILL_ROOT});const batch=await readJson(path.join(dir,'next-batch.json'));assert.equal(batch.remaining,1);assert.equal(batch.already_assessed,0);
  }
 });
@@ -213,7 +213,7 @@ test('证据结构或独立意愿依据缺失时next-batch与render一致保留�
  for(const [index,{review,reason}] of cases.entries()){
   const dir=await fixture('shared-review-validation-'+index,{review});
   await assert.rejects(()=>buildReportData(dir),reason);
-  const report=await buildReportData(dir,{allowPartial:true});assert.equal(report.audit.assessed_jobs,0);assert.equal(report.audit.missing_assessments.length,1);assert.equal(report.audit.complete_assessment,false);assert.equal(sheet(report).rows.length,0);assert.match(sheet(report,'待核实与未评估').rows[0][10],reason);
+  const report=await buildReportData(dir,{allowPartial:true});assert.equal(report.audit.assessed_jobs,0);assert.equal(report.audit.missing_assessments.length,1);assert.equal(report.audit.complete_assessment,false);assert.equal(sheet(report).rows.length,0);assert.match(report.audit.missing_assessments[0].reason,reason);
   await runCommand(process.execPath,[path.join(SKILL_ROOT,'scripts/campus.mjs'),'next-batch','--run',dir],{cwd:SKILL_ROOT});const batch=await readJson(path.join(dir,'next-batch.json'));
   assert.equal(batch.already_assessed,0);assert.equal(batch.remaining,1);assert.equal(batch.pending.length,1);assert.equal(batch.pending[0].assessment_reason,report.audit.missing_assessments[0].reason);assert.match(batch.evaluation_contract.interest_reason,/非 unknown.*非空字符串/);
  }
@@ -224,7 +224,7 @@ test('四段报告摘要缺失或空白时next-batch与render一致保留待评�
   const dir=await fixture('missing-report-summary-'+index,{review:{report_summary}}),assessmentFile=path.join(dir,'assessments/fixture-company.json');
   const saved=await readJson(assessmentFile);assert.ok(saved.assessments[0].comparisons.length);assert.ok(saved.assessments[0].ability_reason);
   await assert.rejects(()=>renderRun(dir),/report_summary|摘要/);
-  const report=await buildReportData(dir,{allowPartial:true});assert.equal(report.audit.assessed_jobs,0);assert.equal(report.audit.missing_assessments.length,1);assert.equal(sheet(report).rows.length,0);assert.match(sheet(report,'待核实与未评估').rows[0][10],/report_summary|摘要/);
+  const report=await buildReportData(dir,{allowPartial:true});assert.equal(report.audit.assessed_jobs,0);assert.equal(report.audit.missing_assessments.length,1);assert.equal(sheet(report).rows.length,0);assert.match(report.audit.missing_assessments[0].reason,/report_summary|摘要/);
   await runCommand(process.execPath,[path.join(SKILL_ROOT,'scripts/campus.mjs'),'next-batch','--run',dir],{cwd:SKILL_ROOT});
   const batch=await readJson(path.join(dir,'next-batch.json'));assert.equal(batch.already_assessed,0);assert.equal(batch.remaining,1);assert.equal(batch.pending[0].assessment_reason,report.audit.missing_assessments[0].reason);
   assert.deepEqual(await readJson(assessmentFile),saved,'缺少摘要时不得从内部逐项明细自动拼接或补写模型摘要');
@@ -235,9 +235,9 @@ test('公司性质独立于业务标签；待核实仅允许已核查仍无法�
  for(const ownership_tag of ['国企','私企','外企']){
   const dir=await fixture('ownership-'+ownership_tag,{company:{ownership_tag,ownership_status:'verified',ownership_evidence:evidence,ownership_reason:'已核对主体与控制关系',ownership_checked_at:'2026-09-06'}});const report=await buildReportData(dir);
   assert.equal(sheet(report).rows[0][1],'游戏');assert.equal(sheet(report).rows[0][2],ownership_tag);
-  const coverage=sheet(report,'来源覆盖');assert.equal(coverage.rows[0][14],ownership_tag);assert.match(coverage.rows[0][15],/控制关系/);for(const item of evidence)for(const part of Object.values(item))assert.ok(coverage.rows[0][16].includes(part));assert.equal(coverage.rows[0][17],'2026-09-06');
+  const coverage=report.internalSheets.find(s=>s.name==='来源覆盖');assert.equal(coverage.rows[0][14],ownership_tag);assert.match(coverage.rows[0][15],/控制关系/);for(const item of evidence)for(const part of Object.values(item))assert.ok(coverage.rows[0][16].includes(part));assert.equal(coverage.rows[0][17],'2026-09-06');
  }
- const unresolved=await fixture('ownership-confirmed-unresolved',{company:{display_name:'控制关系仍不明确的公司',ownership_tag:'待核实',ownership_status:'verified_unresolved',ownership_evidence:evidence,ownership_reason:'已核对年报与官网，但当前控制关系仍不明确。',ownership_checked_at:'2026-09-06'}});const unresolvedReport=await buildReportData(unresolved);assert.equal(sheet(unresolvedReport).rows[0][2],'待核实');assert.equal(sheet(unresolvedReport,'来源覆盖').rows[0][14],'待核实');
+ const unresolved=await fixture('ownership-confirmed-unresolved',{company:{display_name:'控制关系仍不明确的公司',ownership_tag:'待核实',ownership_status:'verified_unresolved',ownership_evidence:evidence,ownership_reason:'已核对年报与官网，但当前控制关系仍不明确。',ownership_checked_at:'2026-09-06'}});const unresolvedReport=await buildReportData(unresolved);assert.equal(sheet(unresolvedReport).rows[0][2],'待核实');assert.equal(unresolvedReport.internalSheets.find(s=>s.name==='来源覆盖').rows[0][14],'待核实');
  for(const [index,company] of [{ownership_status:'verified',ownership_evidence:[]},{ownership_status:'unknown',ownership_evidence:evidence},{ownership_status:undefined,ownership_evidence:evidence},{ownership_tag:'待核实',ownership_status:'unknown',ownership_evidence:evidence}].entries()){
   const dir=await fixture('ownership-unverified-'+index,{company:{display_name:'中国海外上市科技公司',ownership_tag:'外企',...company}});await assert.rejects(()=>buildReportData(dir),/公司性质标签|未经确认|性质状态|公开来源|待核实/);
  }
@@ -281,7 +281,7 @@ test('不允许引用简历中不存在的证据',async()=>{
 });
 test('同一岗位JD改变后旧评估失效',async()=>{
  const dir=await fixture('changed-jd');const p=path.join(dir,'companies/fixture-company.json');await updateJson(p,data=>{data.jobs[0].requirements+='更新：需要硕士学历。';});await assert.rejects(()=>buildReportData(dir),/尚未评估/);
- const data=await buildReportData(dir,{allowPartial:true});assert.equal(sheet(data).rows.length,0);assert.match(sheet(data,'待核实与未评估').rows[0][10],/JD更新|旧评估|失效/);
+ const data=await buildReportData(dir,{allowPartial:true});assert.equal(sheet(data).rows.length,0);assert.match(data.audit.missing_assessments[0].reason,/JD更新|旧评估|失效/);
 });
 test('相同证据ID但画像内容改变时有效v4评估失效，next-batch与render一致拒绝复用',async()=>{
  const dir=await fixture('changed-profile-same-evidence-id');
@@ -291,7 +291,7 @@ test('相同证据ID但画像内容改变时有效v4评估失效，next-batch与
  await updateJson(path.join(dir,'run.json'),run=>{run.profile.evidence[0].text='另一位测试候选人的经历：餐饮门店实习中完成收银与盘点，未记载招聘协调。';});
  const run=await readJson(path.join(dir,'run.json'));assert.equal(run.profile.evidence[0].id,'E1');assert.notEqual(profileFingerprint(run.profile),oldFingerprint);
  await assert.rejects(()=>renderRun(dir),/画像/);
- const report=await buildReportData(dir,{allowPartial:true});assert.equal(report.audit.assessed_jobs,0);assert.equal(sheet(report).rows.length,0);assert.match(sheet(report,'待核实与未评估').rows[0][10],/画像/);
+ const report=await buildReportData(dir,{allowPartial:true});assert.equal(report.audit.assessed_jobs,0);assert.equal(sheet(report).rows.length,0);assert.match(report.audit.missing_assessments[0].reason,/画像/);
  await runCommand(process.execPath,[path.join(SKILL_ROOT,'scripts/campus.mjs'),'next-batch','--run',dir],{cwd:SKILL_ROOT});
  const batch=await readJson(path.join(dir,'next-batch.json'));assert.equal(batch.already_assessed,0);assert.equal(batch.remaining,1);assert.equal(batch.pending.length,1);assert.match(batch.pending[0].assessment_reason,/画像/);assert.equal(batch.profile_fingerprint,profileFingerprint(run.profile));
  assert.deepEqual(await readJson(assessmentFile),savedAssessment,'失效检查不得自动改写旧评估或给它补上新画像指纹');
@@ -342,8 +342,9 @@ test('公司级来源覆盖限制只保留在来源覆盖表，不写入单个�
  const report=await buildReportData(dir);
  assert.doesNotMatch(sheet(report).rows[0][10],/来源覆盖尚不完整|限制见“来源覆盖”/);
  const coverage=JSON.stringify(sheet(report,'来源覆盖').rows);
- assert.match(coverage,/部分获取/);
- assert.match(coverage,/接口总数与唯一岗位数不一致/);
+ assert.match(coverage,/部分岗位/);
+ assert.doesNotMatch(coverage,/接口总数与唯一岗位数不一致/);
+ assert.match(JSON.stringify(report.internalSheets),/接口总数与唯一岗位数不一致/);
 });
 test('四段摘要保留客观实践优先的结论，完整证据分类与同段经历关系留在内部',async()=>{
  const evidence=[...testProfile().evidence,
@@ -366,7 +367,7 @@ test('届别或学历硬条件不符时覆盖综合展示并强制暂缓，待�
  const unknownReason='JD未明确届别范围，学历要求为本科及以上；用户为2027届本科。';
  const unknown=await fixture('eligibility-unknown',{company:{business_alignment:{status:'aligned'}},review:{eligibility:'unknown',eligibility_reason:unknownReason,report_summary:testSummary({gaps:unknownReason+'独立招聘策略的实践证据仍待补充。'})}});
  await assert.rejects(()=>buildReportData(unknown),/未写届别或学历限制.*不得.*待核实/);
- const unknownReport=await buildReportData(unknown,{allowPartial:true});const pending=sheet(unknownReport,'待核实与未评估').rows[0];assert.equal(pending[4],'待评估');assert.equal(pending[9],'待评估');assert.match(pending[10],/未写届别或学历限制/);
+ const unknownReport=await buildReportData(unknown,{allowPartial:true});const pending=sheet(unknownReport,'待核实与未评估').rows[0];assert.equal(pending[4],'待评估');assert.equal(pending[9],'待评估');assert.match(unknownReport.audit.missing_assessments[0].reason,/未写届别或学历限制/);
  const noRestriction=await fixture('eligibility-no-restriction',{job:{requirements:'要求：有招聘相关实践。'},review:{eligibility:'eligible',eligibility_reason:'JD未写届别和学历限制；用户为2027届本科，未发现硬性冲突。'}});
  const accepted=sheet(await buildReportData(noRestriction)).rows[0];assert.equal(accepted[9],'匹配');assert.match(accepted[10],/未写届别和学历限制/);
  const missingProfile=await fixture('eligibility-missing-profile',{profile:{graduation:''}});
@@ -383,7 +384,7 @@ test('缺少全文阅读标记或标题规则的旧评估必须进入待全文�
   const dir=await fixture('full-jd-required-'+String(review_method),{review:{review_method}});
   await assert.rejects(()=>buildReportData(dir),/尚未评估|全文|重评/);
   const data=await buildReportData(dir,{allowPartial:true});assert.equal(data.audit.assessed_jobs,0);assert.equal(data.audit.complete_assessment,false);assert.equal(sheet(data).rows.length,0);
-  const pending=sheet(data,'待核实与未评估').rows;assert.equal(pending.length,1);assert.equal(pending[0][8],'待评估');assert.equal(pending[0][9],'待评估');assert.match(pending[0][10],/全文|重评/);
+  const pending=sheet(data,'待核实与未评估').rows;assert.equal(pending.length,1);assert.equal(pending[0][8],'待评估');assert.equal(pending[0][9],'待评估');assert.match(data.audit.missing_assessments[0].reason,/全文|重评/);
  }
 });
 test('即使已声明全文阅读，正文不完整或完整状态缺失的岗位仍不得计入已评估',async()=>{
@@ -391,7 +392,7 @@ test('即使已声明全文阅读，正文不完整或完整状态缺失的岗�
   const dir=await fixture('incomplete-full-jd-'+String(body_complete),{job:{body_complete,description:'仅取得部分职责，任职要求尚未完整获取。'}});
   await assert.rejects(()=>buildReportData(dir),/尚未评估|全文/);
   const data=await buildReportData(dir,{allowPartial:true});assert.equal(data.audit.assessed_jobs,0);assert.equal(data.audit.complete_assessment,false);assert.equal(data.audit.missing_assessments.length,1);
-  assert.equal(sheet(data).rows.length,0);const pending=sheet(data,'待核实与未评估').rows;assert.equal(pending.length,1);assert.equal(pending[0][8],'待评估');assert.equal(pending[0][9],'待评估');assert.match(pending[0][10],/完整 JD 正文未取得/);
+  assert.equal(sheet(data).rows.length,0);const pending=sheet(data,'待核实与未评估').rows;assert.equal(pending.length,1);assert.equal(pending[0][8],'待评估');assert.equal(pending[0][9],'待评估');assert.match(data.audit.missing_assessments[0].reason,/完整 JD 正文未取得/);
  }
 });
 test('next-batch 与 Excel 使用同一全文评估门槛，并交付完整 JD 供重评',async()=>{
@@ -420,7 +421,7 @@ test('官方详情页直接链接，没有详情页时链接官方入口并显�
 test('不安全或缺失的官方链接保留归档定位信息，不生成失效或危险超链接',async()=>{
  for(const official_url of ['javascript:alert(1)','file:///C:/private.txt','']){
   const dir=await fixture('unsafe-link-'+encodeURIComponent(official_url).slice(0,12),{job:{official_url,job_url_kind:'official_detail'}});const data=await buildReportData(dir);
-  assert.equal(sheet(data).links.length,0);assert.match(sheet(data).rows[0][11],/独立归档.*岗位ID：fixture-job/);
+  assert.equal(sheet(data).links.length,0);assert.match(sheet(data).rows[0][11],/暂无官方链接.*岗位ID：fixture-job/);
   for(const part of data.sheets)for(const link of part.links||[])assert.match(link.url,/^https?:\/\//);
  }
 });
@@ -523,8 +524,8 @@ test('等号原文不执行公式，数字文本保存并重新导入后逐字�
  assert.deepEqual(records.map(record=>record.job_id),sourceIds,'独立归档逐字保留字符串岗位ID');
  const linkLabels=[...workbook.worksheets.getItem('岗位匹配').getRange('L2:L2').values,...workbook.worksheets.getItem('待核实与未评估').getRange('L2:L6').values].flat();
  for(const id of sourceIds)assert.ok(linkLabels.some(label=>label==='官方入口 · 岗位ID：'+id));
- assert.equal(workbook.worksheets.getItem('说明').getRange('B2').values[0][0],'000314','没有超链接的说明表也必须保留原始数字文本');
- assert.equal(workbook.worksheets.getItem('来源覆盖').getRange('D2').values[0][0],sourceIds.length,'真实数值计数不得被改成文本');
+ assert.equal((await readJson(audit.log_file)).run_settings.report_note,'000314','内部运行说明仅进入日志并逐字保留');
+ assert.equal(workbook.worksheets.getItem('来源覆盖').getRange('C2').values[0][0]+workbook.worksheets.getItem('来源覆盖').getRange('D2').values[0][0],sourceIds.length,'真实数值计数不得被改成文本');
  const xml=readZipEntry(archive,'xl/worksheets/sheet1.xml');const savedCell=xml.match(/<(?:\w+:)?c\b[^>]*\br="D2"[^>]*>[\s\S]*?<\/(?:\w+:)?c>/)?.[0];assert.ok(savedCell);
  assert.doesNotMatch(savedCell,/<(?:\w+:)?f(?:\s|>)/,'保存后的 XML 不能含公式节点');assert.match(savedCell,/=SUM\(1,2\)/);
 });
@@ -536,7 +537,33 @@ test('资料复核空证据单元格后的长数字岗位ID完整导出并可重
  const audit=await renderRun(dir,{allowPartial:true});
  const {loadArtifactTool}=await import('../lib/excel-report.mjs');const {FileBlob,SpreadsheetFile}=await loadArtifactTool();
  const workbook=await SpreadsheetFile.importXlsx(await FileBlob.load(audit.workbook_file));
- assert.equal(workbook.worksheets.getItem('资料复核').getRange('I2').values[0][0],jobId);
+ assert.equal((await readJson(audit.log_file)).internal_tables.find(s=>s.name==='资料复核').rows[0][8],jobId);
+ assert.doesNotMatch(readZipEntry(await fs.readFile(audit.workbook_file),'xl/workbook.xml'),/name="(?:说明|资料复核)"/);
+});
+
+test('交付隔离内部说明和诊断，每次导出独立日志并复用公司简介快照',async()=>{
+ const dir=await fixture('delivery-isolation');
+ await updateJson(path.join(dir,'run.json'),run=>{run.report_note='内部配置标记：profile_fingerprint / full_jd';run.companies.push({...run.companies[0],company_id:'excluded-profile',display_name:'仅范围表出现公司',selected:false});});
+ await updateJson(path.join(dir,'companies/fixture-company.json'),data=>{data.coverage.status='partial';data.coverage.reason='内部接口标记：HTTP 405 / page_num=1';data.jobs.push({...data.jobs[0],job_id:'verification-process',evaluation_status:'needs_verification',verification_issues:[{code:'body',reason:'内部核验标记：profile_fingerprint / full_jd'}]});});
+ const fact=value=>({value,status:'verified',entity:'测试集团全球口径',as_of:'2025-12-31',checked_at:'2026-09-13',evidence:[{url:'https://example.com/annual-report',title:'测试年报',note:'仅用于测试'}]});
+ await writeJson(path.join(dir,'company-profiles.snapshot.json'),{schema_version:1,captured_at:'2026-09-13',companies:[{company_id:'fixture-company',business:fact('测试软件业务简介。'),workforce:fact('1,200名员工'),capital:fact('2024年完成A轮融资，金额未披露。')}]});
+ const report=await buildReportData(dir);
+ assert.doesNotMatch(JSON.stringify(report.sheets),/内部配置标记|内部接口标记|profile_fingerprint|full_jd|HTTP 405|page_num/);
+ assert.deepEqual(new Set(sheet(report,'公司简介').rows.map(r=>r[0])),new Set(sheet(report,'来源覆盖').rows.map(r=>r[0])));
+ assert.equal(sheet(report,'公司简介').rows.length,6);
+ const first=await renderRun(dir,{previewDir:path.join(dir,'tmp/delivery-preview')});
+ const second=await renderRun(dir);
+ assert.notEqual(first.log_file,second.log_file);
+ const log=await readJson(first.log_file);
+ assert.match(JSON.stringify(log.internal_tables),/内部配置标记/);
+ assert.match(JSON.stringify(log.internal_tables),/内部接口标记/);
+ assert.match(JSON.stringify(log.pending_job_issues),/内部核验标记/);
+ assert.equal(log.company_profiles.companies[0].workforce.value,'1,200名员工');
+ assert.deepEqual(log.company_profiles,(await readJson(second.log_file)).company_profiles);
+ assert.deepEqual(await fs.readdir(path.dirname(second.workbook_file)),['校招岗位匹配.xlsx']);
+ const xml=readZipEntry(await fs.readFile(second.workbook_file),'xl/workbook.xml');
+ assert.doesNotMatch(xml,/name="(?:说明|资料复核|JD原文)"/);
+ assert.match(xml,/name="公司简介"/);
 });
 
 test('采集完成只保存筛选摘要和独立归档，未确认范围时不能取得评估批次',async()=>{
@@ -560,7 +587,7 @@ test('实验批次完成后停止且固定清单，报告保留全量未评估�
  await runCommand(process.execPath,[path.join(SKILL_ROOT,'scripts/campus.mjs'),'next-batch','--run',dir],{cwd:SKILL_ROOT});
  const batch=await readJson(path.join(dir,'next-batch.json'));assert.equal(batch.remaining,0);assert.equal(batch.full_remaining,1);assert.equal(batch.outside_scope_remaining,1);assert.deepEqual(batch.pending,[]);
  const report=await buildReportData(dir);assert.equal(report.audit.complete_evaluation_scope,true);assert.equal(report.audit.complete_assessment,false);assert.equal(report.audit.outside_scope_remaining,1);
- assert.match(sheet(report,'待核实与未评估').rows[0][10],/未纳入用户本次选择/);
+ assert.match(sheet(report,'待核实与未评估').rows[0][10],/未纳入本次评估范围/);
  await updateJson(path.join(dir,'companies/fixture-company.json'),data=>{data.jobs.unshift({...data.jobs[0],job_id:'new-after-confirmation'});});
  await runCommand(process.execPath,[path.join(SKILL_ROOT,'scripts/campus.mjs'),'next-batch','--run',dir],{cwd:SKILL_ROOT});
  const resumed=await readJson(path.join(dir,'next-batch.json'));assert.equal(resumed.remaining,0);assert.equal(resumed.full_remaining,2);assert.deepEqual(resumed.pending,[]);

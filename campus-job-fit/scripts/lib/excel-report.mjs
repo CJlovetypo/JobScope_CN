@@ -27,7 +27,8 @@ export const HEADER_TIPS = Object.freeze({
 const SETTINGS = {
   '岗位匹配': {widths: MAIN_WIDTHS, freeze: 3, rowHeight: 36},
   '待核实与未评估': {widths: MAIN_WIDTHS, freeze: 3, rowHeight: 36},
-  '来源覆盖': {widths: [22, 28, 18, 14, 14, 14, 14, 14, 14, 14, 16, 70, 28, 28, 18, 55, 95, 28], freeze: 1},
+  '来源覆盖': {widths: [22, 20, 16, 16, 20, 70, 24], freeze: 1},
+  '公司简介': {widths: [22, 26, 90, 40, 35, 65], freeze: 1},
   '资料复核': {widths: [18, 42, 23, 25, 36, 20, 70, 90, 28, 48], freeze: 2},
   '说明': {widths: [26, 110], freeze: 0},
 };
@@ -126,11 +127,11 @@ function formatTable(workbook, sheet, data, index, noteAuthorId) {
     }
   }
   if (data.name === '来源覆盖' && data.rows.length) {
-    sheet.getRange(`D2:K${rowCount}`).setNumberFormat('#,##0');
-    sheet.getRange(`D2:K${rowCount}`).format.horizontalAlignment = 'right';
+    sheet.getRange(`C2:E${rowCount}`).setNumberFormat('#,##0');
+    sheet.getRange(`C2:E${rowCount}`).format.horizontalAlignment = 'right';
   }
   data.rows.forEach((row, i) => row.forEach((value, column) => {
-    if (typeof value === 'string' && /^\d{4}-\d{2}-\d{2}(?:T[\d:.]+Z)?$/.test(value)) sheet.getCell(i + 1, column).setNumberFormat('yyyy-mm-dd hh:mm');
+    if (typeof value === 'string' && /^\d{4}-\d{2}-\d{2}(?:T[\d:.]+Z)?$/.test(value)) sheet.getCell(i + 1, column).setNumberFormat(data.name === '公司简介' ? 'yyyy-mm-dd' : 'yyyy-mm-dd hh:mm');
   }));
   if (data.name === '说明') {
     data.rows.forEach((row, i) => {
@@ -243,7 +244,7 @@ export async function writeExcelReport(file, sheets, {previewDir, temporaryDir} 
     await fs.writeFile(path.join(previewDir, 'inspection.json'), JSON.stringify({inspection: inspection.ndjson, errors: errors.ndjson}, null, 2));
     for (const data of sheets) {
       const finalColumn = String.fromCharCode(64 + data.headers.length);
-      const finalRow = data.name === '说明' ? Math.min(12, data.rows.length + 1) : Math.min(3, data.rows.length + 1);
+      const finalRow = data.name === '公司简介' ? Math.min(7, data.rows.length + 1) : Math.min(3, data.rows.length + 1);
       const preview = await workbook.render({sheetName: data.name, range: `A1:${finalColumn}${finalRow}`, scale: 1, format: 'png'});
       await fs.writeFile(path.join(previewDir, data.name + '.png'), new Uint8Array(await preview.arrayBuffer()));
     }

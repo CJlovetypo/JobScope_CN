@@ -12,6 +12,7 @@ import {reviewRecruitment, restoreRequestRecruitmentEvidence, verificationIssues
 import {reviewJobBody} from './lib/body-review.mjs';
 import {screeningSummary, readEvaluationScope, inEvaluationScope, planAssessment} from './lib/evaluation-scope.mjs';
 import {writeJdArchive} from './lib/jd-archive.mjs';
+import {companyProfileSnapshot, saveCompanyProfileSnapshot} from './lib/company-profiles.mjs';
 const [command,...args]=process.argv.slice(2);
 const flags={};for(let i=0;i<args.length;i++){if(!args[i].startsWith('--'))throw new Error('未知参数 '+args[i]);const key=args[i].slice(2);flags[key]=args[i+1]&&!args[i+1].startsWith('--')?args[++i]:true;}
 const sources=(await readJson(path.join(SKILL_ROOT,'assets/sources.json'))).companies;
@@ -85,6 +86,7 @@ async function prepare() {
  const companies=sources.map(s=>{const t=cities.get(s.company_id),b=businesses.get(s.company_id),o=ownerships.get(s.company_id);return {company_id:s.company_id,display_name:s.display_name,selected:companyCityMatches(t,profile.city_filters),city_tags:t?.cities||[],city_index_updated_at:t?.updated_at||null,city_coverage_complete:t?.city_coverage_complete||false,business_tags:b?.business_tags||[],business_summary:b?.business_summary||'',business_alignment:businessAlignment(s,b,profile),ownership_tag:o.ownership_tag,ownership_status:o.status,ownership_reason:o.reason,ownership_evidence:o.evidence,ownership_checked_at:o.checked_at,selection_reason:companyCityMatches(t,profile.city_filters)?'城市标签入选':'当前公司城市标签未命中；本轮直接排除'};});
  const run={schema_version:1,created_at:new Date().toISOString(),profile,profile_fingerprint:profileFingerprint(profile),companies,city_index_updated_at:city?.updated_at||null,status:'prepared',is_test:profile.is_test===true};
  await writeJson(path.join(dir,'run.json'),run);await fs.mkdir(path.join(dir,'assessments'),{recursive:true});
+ await saveCompanyProfileSnapshot(dir,await companyProfileSnapshot(dir,companies));
  if(flags['reuse-run']){
   const previous=workspacePath(path.resolve(String(flags['reuse-run'])));
   for(const c of companies.filter(c=>c.selected)){
