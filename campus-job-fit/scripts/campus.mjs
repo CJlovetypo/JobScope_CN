@@ -14,6 +14,7 @@ import {screeningSummary, readEvaluationScope, inEvaluationScope, planAssessment
 import {writeJdArchive} from './lib/jd-archive.mjs';
 import {companyProfileSnapshot, saveCompanyProfileSnapshot} from './lib/company-profiles.mjs';
 const [command,...args]=process.argv.slice(2);
+const BATCH_HELP='batch-create --run 运行目录 [--limit 50] [--max-chars 160000] [--concurrency 4] [--jobs 岗位键数组.json]\nbatch-start --run 运行目录 --batch ID --agent ID\nbatch-submit --run 运行目录 --batch ID --agent ID --file 草稿.json\nbatch-merge --run 运行目录 --batch ID\nbatch-close --run 运行目录 --batch ID --agent ID --stopped [--usage-log 会话.jsonl]\nbatch-status --run 运行目录 [--refresh]\nstart/close 可传实际工具调用 --tool-started-at ISO时间 --tool-finished-at ISO时间';
 const flags={};for(let i=0;i<args.length;i++){if(!args[i].startsWith('--'))throw new Error('未知参数 '+args[i]);const key=args[i].slice(2);flags[key]=args[i+1]&&!args[i+1].startsWith('--')?args[++i]:true;}
 const sources=(await readJson(path.join(SKILL_ROOT,'assets/sources.json'))).companies;
 const cityFile=path.join(SKILL_ROOT,'data/company-city-index.json');
@@ -98,6 +99,8 @@ async function prepare() {
 }
 async function collectRun() {
  if(!flags.run)throw new Error('需要 --run');const dir=workspacePath(path.resolve(String(flags.run))),file=path.join(dir,'run.json'),run=await readJson(file);
+ const batchState=await readJson(path.join(dir,'parallel/batches/state.json'),null);if(batchState?.batches.some(b=>!b.closed_at))throw new Error('仍有未关闭的固定批次；请先回收执行者再采集');
+ if(batchState){batchState.needs_refresh=true;await writeJson(path.join(dir,'parallel/batches/state.json'),batchState);}
  await fs.rm(path.join(dir,'next-batch.json'),{force:true});
  const selected=run.companies.filter(c=>c.selected).sort((a,b)=>(a.business_alignment.status==='aligned'?0:1)-(b.business_alignment.status==='aligned'?0:1));
  await mapLimit(selected,integer('concurrency',3,8),async(c)=>{
@@ -141,9 +144,25 @@ async function nextBatch(dir) {
  });console.log(JSON.stringify({batch:file,mode:scope.mode,items:pending.length,total,done,remaining:total-done,full_remaining:fullTotal-fullDone,outside_scope_remaining:fullTotal-fullDone-(total-done)}));
 }
 async function main(){
+ if(!command||command==='help')console.log(BATCH_HELP);
+ if(['batch-create','batch-start','batch-submit','batch-merge','batch-close','batch-status'].includes(command)){
+  if(!flags.run)throw new Error('需要 --run');
+  const dir=workspacePath(path.resolve(String(flags.run))),api=await import('./lib/batches.mjs');let result;
+  if(command==='batch-create')result=await api.createBatch(dir,{limit:integer('limit',50,100),maxChars:integer('max-chars',160000,2000000),concurrency:integer('concurrency',4,8),keys:flags.jobs?await readJson(workspacePath(path.resolve(String(flags.jobs)))):undefined});
+  if(command==='batch-start')result=await api.startBatch(dir,String(flags.batch||''),flags.agent,{toolStartedAt:flags['tool-started-at'],toolFinishedAt:flags['tool-finished-at']});
+  if(command==='batch-submit'){
+   if(!flags.file)throw new Error('需要 --file');const submission=await readJson(workspacePath(path.resolve(String(flags.file))));
+   result=await api.submitBatch(dir,String(flags.batch||''),flags.agent,submission.items);
+  }
+  if(command==='batch-merge')result=await api.mergeBatch(dir,String(flags.batch||''));
+  if(command==='batch-close')result=await api.closeBatch(dir,String(flags.batch||''),{agentId:flags.agent,stopped:flags.stopped===true,usageLog:flags['usage-log']?path.resolve(String(flags['usage-log'])):undefined,toolStartedAt:flags['tool-started-at'],toolFinishedAt:flags['tool-finished-at']});
+  if(command==='batch-status')result=await api.batchStatus(dir,{refresh:flags.refresh===true});
+  console.log(JSON.stringify(result));if(result?.errors&&Object.keys(result.errors).length)process.exitCode=2;return;
+ }
  if(command==='refresh-cities')return refreshCities();if(command==='prepare')return prepare();if(command==='collect')return collectRun();if(command==='next-batch')return nextBatch();
  if(command==='plan-assessment'){
   if(!flags.run)throw new Error('需要 --run');
+  const batchState=await readJson(path.join(workspacePath(path.resolve(String(flags.run))),'parallel/batches/state.json'),null);if(batchState?.batches.some(b=>!b.closed_at))throw new Error('仍有未关闭的固定批次；请先回收执行者再修改范围');
   const scope=await planAssessment(path.resolve(String(flags.run)),{mode:flags.mode,only:flags.only,limit:flags.limit,jobs:flags.jobs?await readJson(path.resolve(String(flags.jobs))):undefined,userRequest:flags['user-request']});
   console.log(JSON.stringify(scope));return;
  }

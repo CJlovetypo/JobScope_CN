@@ -26,6 +26,10 @@
 
 新评估的 `next_action` 使用 apply／prepare／hold，Excel 映射为可以投递／投递前准备／暂不建议投递。轮岗范围、业务占比、提前实习等信息不足时写入理由并给出最合理的投递建议，不使用“核实”作为主表动作。内部 `priority`、`priority_reason`、`timing_evidence` 仅用于稳定排序和审计，不在 Excel 展示；high 仍须有真实时间窗口或阻塞事实。硬性条件 ineligible、意愿 conflict 或能力 low 都必须 low + hold；hold 只能 low。用户再次推进时核实窗口与岗位状态，不把历史排序当长期结论。
 
+## 固定批次提交（新运行默认）
+
+使用 `batch-create` 的独立 input.json 和 result-template.json，按固定岗位键填写判断，见 [批次操作](parallel-assessment.md)。模型只填写判断字段及 `review_method: "full_jd"`，不填写公司/岗位身份、指纹、版本、match_tier、priority、priority_reason 或 timing_evidence。提交器绑定固定输入身份，执行确定性的否决与排序规则；其余语义检查规则不变。正式 assessments 仍保存下面的完整 v4 格式，以兼容报告和旧记录。以下手工写入示例仅说明存储结构，不再作为并行执行方式。
+
 ## 写入评估文件
 
 逐岗位评估可以由多个 agent 并行完成，所有执行者使用相同画像与本评估标准。大量岗位优先按 [多 agent 评估操作](parallel-assessment.md) 分批委派；全文阅读、证据对照和有效性要求不因并行而放宽。

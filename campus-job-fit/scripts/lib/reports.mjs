@@ -277,14 +277,17 @@ export async function buildReportData(dir, {allowPartial = false} = {}) {
 }
 
 export async function renderRun(dir, {allowPartial = false, previewDir} = {}) {
+  const startedAt=new Date().toISOString(),timer=performance.now();
   dir = workspacePath(dir);
   const report = await buildReportData(dir, {allowPartial});
   await saveCompanyProfileSnapshot(dir, report.profiles);
   const jdArchive = await writeJdArchive(dir);
   const workbookFile = path.join(SKILL_ROOT, 'outputs', path.basename(dir), '校招岗位匹配.xlsx');
+  const exportTimer=performance.now();
   await writeExcelReport(workbookFile, report.sheets, {previewDir: previewDir ? workspacePath(previewDir) : undefined, temporaryDir: path.join(dir, 'tmp', 'excel-export')});
   const logFile = path.join(dir, 'logs', 'render-' + report.audit.generated_at.replace(/[:.]/g, '-') + '.json');
-  const audit = {...report.audit, workbook_file: workbookFile, output_format: 'xlsx', process_dir: dir, jd_archive: jdArchive, log_file: logFile};
+  const audit = {...report.audit, workbook_file: workbookFile, output_format: 'xlsx', process_dir: dir, jd_archive: jdArchive, log_file: logFile,
+    render_timing:{started_at:startedAt,finished_at:new Date().toISOString(),prepare_ms:Math.round(exportTimer-timer),export_ms:Math.round(performance.now()-exportTimer),total_ms:Math.round(performance.now()-timer)}};
   await writeJson(logFile, {schema_version: 1, ...audit, run_settings: {profile: report.run.profile, report_note: report.run.report_note, city_index_updated_at: report.run.city_index_updated_at, is_test: report.run.is_test}, internal_tables: report.internalSheets, company_profiles: report.profiles});
   await writeJson(path.join(dir, 'report-audit.json'), audit);
   console.log(JSON.stringify({workbook: workbookFile, companies: audit.companies_selected, assessed: audit.assessed_jobs, remaining: audit.missing_assessments.length, needs_verification: audit.needs_verification, partial_sources: audit.partial_sources.length, complete_assessment: audit.complete_assessment, complete_collection: audit.complete_collection, complete_evaluation_scope: audit.complete_evaluation_scope, scope_remaining: audit.scope_missing_assessments, outside_scope_remaining: audit.outside_scope_remaining, jd_archive: jdArchive.file, process_dir: dir}));
