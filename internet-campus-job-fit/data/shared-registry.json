@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "mode": "campus",
+  "checked_at": "2026-09-19T11:29:47.799Z",
+  "source_registry": "../shared/job-search-core/assets/sources.json",
+  "runtime": "../shared/job-search-core",
+  "source_sha256": "0b8c66294590fe6db43dd19c8c9f70da21e78e87b85e9ef0c0041bbd1b079cb3",
+  "companies": 2282,
+  "configurations": 2871,
+  "enabled_configurations": 2871,
+  "source_validation": {
+    "gate": "not_applied"
+  },
+  "note": "共享库存的派生摘要。运行直接读取共享来源；不需要同步或复制。历史核验仅在配置键一致时沿用。"
+}

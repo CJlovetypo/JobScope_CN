@@ -1,10 +1,11 @@
+import {datasetPath} from '../../shared/job-search-core/registry.mjs';
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(here, "..");
-const tagsPath = path.join(root, "data", "company-ownership-tags.json");
+const tagsPath = datasetPath(root,'data/company-ownership-tags.json');
 const registryPaths = [
   path.join(root, "artifacts", "api-expansion-2", "registry-companies.json"),
   path.join(root, "artifacts", "api-expansion-2", "root-recall.json"),

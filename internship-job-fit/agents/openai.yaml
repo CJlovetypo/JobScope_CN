@@ -1,0 +1,4 @@
+interface:
+  display_name: "实习岗位匹配"
+  short_description: "按行业与城市遍历公开API的实习岗位，结合简历和意愿全文评估并交付Excel"
+  default_prompt: "使用 $internship-job-fit，根据我的简历和倾向，选择行业与城市，确认实习岗位评估范围，输出附JD链接的Excel。"

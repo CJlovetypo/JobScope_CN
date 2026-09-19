@@ -1,0 +1,473 @@
+{
+  "schema_version": 1,
+  "from_skill": "internet-campus-job-fit",
+  "created_at": "2026-09-19T08:39:25.137Z",
+  "companies": 2274,
+  "source_configurations": 2863,
+  "inherited_files": [
+    {
+      "file": "scripts/lib/batches.mjs",
+      "sha256": "1b5f6871527727465ab4c04da9a0fa19a71c306439139d3e884ca413d2274319"
+    },
+    {
+      "file": "scripts/lib/body-review.mjs",
+      "sha256": "2d819afbc38accf53f413cc06ecfb6e7a0585c9e061c59174866e05b1e8fe705"
+    },
+    {
+      "file": "scripts/lib/company-profiles.mjs",
+      "sha256": "3fb7674299c84bb91285f79f63c526d99efaba5b592ee2b8cdedae9b4ceae366"
+    },
+    {
+      "file": "scripts/lib/evaluation-scope.mjs",
+      "sha256": "8d14ed391b14ab21ccd2577759cc5a4d52b575c4157bb3c12349d02ba855a239"
+    },
+    {
+      "file": "scripts/lib/evidence-model.mjs",
+      "sha256": "fb2c9f58dc34cf067203fa00ea705b8449c80cf0eea396df796262eb7aa11784"
+    },
+    {
+      "file": "scripts/lib/excel-report.mjs",
+      "sha256": "27cd7a279292e12253166c657dcb5356937f07ea305e3c4c86f10b620cfca138"
+    },
+    {
+      "file": "scripts/lib/http.mjs",
+      "sha256": "b6243085616bfa0a5db4ad31f7816746af45da803c6d472fcc112f4d0cbcf269"
+    },
+    {
+      "file": "scripts/lib/industry-routing.mjs",
+      "sha256": "3a79cd2741396f8c6a56617b5d65de3955ab977ed2a0b31cefe2a1fb5e845671"
+    },
+    {
+      "file": "scripts/lib/io.mjs",
+      "sha256": "9bd564a235a0651b30798f74a3aaa6f9c70b6485e635692ce0a9e46f3d48ef54"
+    },
+    {
+      "file": "scripts/lib/ivva_public.py",
+      "sha256": "0a1c8ebfac9db7b92016e5cc5931c017074fe6ea33348b05380e2770e2340050"
+    },
+    {
+      "file": "scripts/lib/jd-archive.mjs",
+      "sha256": "43f504487b63318f6c5b8cb222d6caea1b60ccacf9ec7dc92e41e0d778ba0534"
+    },
+    {
+      "file": "scripts/lib/job-version.mjs",
+      "sha256": "c01a2f704a194b6fbf9c224a978d0d7db1751b721a31e392c932216597f90fbf"
+    },
+    {
+      "file": "scripts/lib/location-codes.json",
+      "sha256": "10e7a49e18a47a4dffe5468d599c923ab7bcf132a9601f1ef54e68584c185eab"
+    },
+    {
+      "file": "scripts/lib/locations.mjs",
+      "sha256": "f7acacee7fcdf67d7c5d39340c3762dd6dab0c36d3083b04182252abc6f371bc"
+    },
+    {
+      "file": "scripts/lib/matching.mjs",
+      "sha256": "8476c57eae7dec14994f24cf6539ad454b7ee5be7a26c867f6b08c9a11f9b6bf"
+    },
+    {
+      "file": "scripts/lib/normalization-additions.mjs",
+      "sha256": "af0a96107cb3e0df64875f2e1a52817a73aa6f7a54d75b15b889e0627f6082e5"
+    },
+    {
+      "file": "scripts/lib/ownership.mjs",
+      "sha256": "618171c85d3d3a3a682b021b402dfb41086dbf7f3fd85e18c523a0f3179252b1"
+    },
+    {
+      "file": "scripts/lib/provider-cvte.mjs",
+      "sha256": "6209b87510245afb26ecf6d3d5c41ef5b2c3bdbdf473c5389c920a47025be20d"
+    },
+    {
+      "file": "scripts/lib/provider-hardware-direct.mjs",
+      "sha256": "0dc1b788b9ba1c6b0999c795b9e59a84ca453b82eba5f91d0b452ba9a8b3ee70"
+    },
+    {
+      "file": "scripts/lib/provider-hcmcloud.mjs",
+      "sha256": "ac3f4c175056d07aecad75f39fdba5fecec702d012da8994bc408544dc6f30a9"
+    },
+    {
+      "file": "scripts/lib/provider-huawei.mjs",
+      "sha256": "7f1660388273c761c4d33559a26ed360efc12b4b7098986fdf522b7024a713e0"
+    },
+    {
+      "file": "scripts/lib/provider-lenovo.mjs",
+      "sha256": "2f6817dfbf288e1f749ef38ca958a248f87068bc96fac7cba21020e2dc26d64f"
+    },
+    {
+      "file": "scripts/lib/provider-lightbolt.mjs",
+      "sha256": "0c348cfb0f270eea47b52bcde425d1f6a8c074346bf82c4cae3e888ca4fabca4"
+    },
+    {
+      "file": "scripts/lib/provider-shlab.mjs",
+      "sha256": "118615b4a65ef0857f4f3e357a04db56827d7bac6d3c2a334990dc058c6880c3"
+    },
+    {
+      "file": "scripts/lib/provider-ugreen.mjs",
+      "sha256": "b2478573f279a8874b60fb4ec27219ac79f3e03d06073ec4d70151838a4e5fdc"
+    },
+    {
+      "file": "scripts/lib/providers-51job-xyz.mjs",
+      "sha256": "63ed981cd6aa6bc57ded75445caac61c85cd12bc8ab1cc13766666fc27e479eb"
+    },
+    {
+      "file": "scripts/lib/providers-appliances.mjs",
+      "sha256": "163c846f8c6bd09945ef26b68a0183390a72799b322780f142794ac422758fb6"
+    },
+    {
+      "file": "scripts/lib/providers-common.mjs",
+      "sha256": "0e4076fea13825e2025cce34c9cabe3b56b82a3354a7e7a6f73655b038843bc2"
+    },
+    {
+      "file": "scripts/lib/providers-custom.mjs",
+      "sha256": "2075ce6d7ea17f1bc5ad1c1be6fbd748f7dc0c8dc9eedb72e35c61bd2136510a"
+    },
+    {
+      "file": "scripts/lib/providers-game-public.mjs",
+      "sha256": "d977de95b85b658cedcd96a2df9a84546cc2800cd14e276309523f929dc019c8"
+    },
+    {
+      "file": "scripts/lib/providers-global.mjs",
+      "sha256": "818111db492a6a02ae1f2ab7c748f0c39b83b7a82859e6e94166c71b64d338fd"
+    },
+    {
+      "file": "scripts/lib/providers-international.mjs",
+      "sha256": "c541edd5dcdda49fd4dcb43bd52626c11c5bac98c0e1109d468ef2ce0e1d7e12"
+    },
+    {
+      "file": "scripts/lib/providers-ivva.mjs",
+      "sha256": "b9dfa3bba4926a4091c047f2a22a16cbe2c41efb98c3cc166a534047311a3498"
+    },
+    {
+      "file": "scripts/lib/providers-oem.mjs",
+      "sha256": "25956f38e86dea4183f775d3d2279c0750033756102369864daa810fde7441bd"
+    },
+    {
+      "file": "scripts/lib/providers-oracle-nowcoder.mjs",
+      "sha256": "40881fb52cffcbe35498e78e173d09ce830235586c0f35ba15fc04b094ce8909"
+    },
+    {
+      "file": "scripts/lib/providers-recovered.mjs",
+      "sha256": "f84fa3d0c8691b1df1e6df5263ebc49e7cf93fe775e9b3f1e1c70bb76dffd62b"
+    },
+    {
+      "file": "scripts/lib/providers-round3.mjs",
+      "sha256": "c46a3d35c46281bd5ff86c2f53e3a5ebeadaf802902b6a5e29cda456e247a0af"
+    },
+    {
+      "file": "scripts/lib/providers-selfhosted.mjs",
+      "sha256": "edc5a58c861907e6a098c8273598015583eaa7ccda78818ea40dde687af09ba6"
+    },
+    {
+      "file": "scripts/lib/providers-sf.mjs",
+      "sha256": "e7381db38db0f6a6b16d87eb8f06fc01950d90eee597255c25f37a1395ab222e"
+    },
+    {
+      "file": "scripts/lib/providers-tongcheng.mjs",
+      "sha256": "ba29039cb456b937acaffda9e432478d5a1d45d5f3712fa9d3b67717f22e2af5"
+    },
+    {
+      "file": "scripts/lib/providers-xinrenxinshi.mjs",
+      "sha256": "f071d0be1eaf40372e46a1b7356fbe402595865386a395938df81cd2bad3121f"
+    },
+    {
+      "file": "scripts/lib/providers-yotta.mjs",
+      "sha256": "fb331efed988bb023e972c0f537a4142cceee44e87582c1385a413b91936325a"
+    },
+    {
+      "file": "scripts/lib/recruitment-policy.mjs",
+      "sha256": "7db77b4195c09b99b2a84261004bae853e974d7695b00db3a03f9d60650f5afa"
+    },
+    {
+      "file": "scripts/lib/reports.mjs",
+      "sha256": "f2f20a4eb6d8b8d647aa09a7e67293f4d89121dbbe22e1358e7928e167cce281"
+    },
+    {
+      "file": "scripts/lib/search-mode.mjs",
+      "sha256": "4e53dcc2f73e07e5ed3aa8ab80702d3e0d7d852320e6bdfed5b2aded077f5c03"
+    },
+    {
+      "file": "scripts/lib/source-collector.mjs",
+      "sha256": "8ef01368f7751ec9957a098b13d8f222a7f62e0832da7eeb78cadcea91f7654d"
+    },
+    {
+      "file": "scripts/lib/source-directions.mjs",
+      "sha256": "42efa65eb1996f8e6f0f96832ccae4281fc81a047b965e6c991edc0801d5df1d"
+    },
+    {
+      "file": "scripts/lib/workday-location-fallback.mjs",
+      "sha256": "911120cb17ace7c20ae784f7655f2053e4603cb0cb353ee7817396a07a1ee947"
+    },
+    {
+      "file": "scripts/lib/workday-mainland-facets.mjs",
+      "sha256": "8dcdfe361fe72a3344bd9e5dc5c7025c40bd447718109646679abe95e5f7fab1"
+    },
+    {
+      "file": "assets/custom-providers.json",
+      "sha256": "3f0fe6434953d3d18ecbcae29ba8dbc62878c337d873689f53d1550b6f4f7fe9"
+    },
+    {
+      "file": "assets/job-pro-LICENSE.txt",
+      "sha256": "23f99dc1ce6b8feba8bdcfbb8b0d56f1fff4bc8526fbdca881864b3c98496a79"
+    },
+    {
+      "file": "assets/sources.json",
+      "sha256": "98e7e0cf461e4c3345e7d7cf09cfdcfdca07f5867b194cfb27d0beedbc00d916"
+    },
+    {
+      "file": "data/company-business-tags.json",
+      "sha256": "d56fa815c5abea8ec0431e66ff68f4a62a20fa42fe5c99387a972634cfd571af"
+    },
+    {
+      "file": "data/company-ownership-tags.json",
+      "sha256": "f67940f02466404b2b93f7613a8f265603aca4e5640d1f5160e1b66b5555b79c"
+    },
+    {
+      "file": "data/company-profiles.json",
+      "sha256": "8239196e12d5cd7fae12da81627cf96e851c77dcbad8b930391558aa280131dc"
+    }
+  ],
+  "city_policy": "Separate target-mode initialization; no campus city tags used as hard filters",
+  "runtime_dependency_on_parent": false,
+  "runtime_updated_at": "2026-09-19T11:29:46.416Z",
+  "current_runtime_files": [
+    {
+      "file": "scripts/lib/batches.mjs",
+      "sha256": "9078a86ad65f944a05c4a5cb0a18f1b66c9fcd342eec4aea1badeef3d7923fd4"
+    },
+    {
+      "file": "scripts/lib/body-review.mjs",
+      "sha256": "5ee2325b2fbb1ec51efb35e5453c3e4e365a6ee29fa47357d3e040d070ff419c"
+    },
+    {
+      "file": "scripts/lib/company-profiles.mjs",
+      "sha256": "cb6355a79c5e8c53c16001e4fc4c1e3777f80f95defa2a13895b896fbe6e2bb2"
+    },
+    {
+      "file": "scripts/lib/direction-endpoint-proof.mjs",
+      "sha256": "cea9f9099b69d73a0cc07d765dacb5ba7e613912f6ab34f5f0ed0a2b0d8db476"
+    },
+    {
+      "file": "scripts/lib/direction-validation.mjs",
+      "sha256": "363d4d9ac86d660e8cdd51cd5ea8eb42fe264b2d105009f80b43312aeac24683"
+    },
+    {
+      "file": "scripts/lib/evaluation-scope.mjs",
+      "sha256": "95eee3f4c9aede186d0d61efa8d49ef8e3814d42c0107f88dc12d7dd02e56ffd"
+    },
+    {
+      "file": "scripts/lib/evidence-model.mjs",
+      "sha256": "4f615ae2c4d4a91914596f70e67377f84fab362347cc097fbc51b177520b18f9"
+    },
+    {
+      "file": "scripts/lib/excel-report.mjs",
+      "sha256": "19e6df5f340c024b3446ef4af3bd6e226294bc7323113b49b15f68a8c19d887b"
+    },
+    {
+      "file": "scripts/lib/http.mjs",
+      "sha256": "f9983197ee34b3819183dcf89277e7f040cebb545617b70bb7f4b97a8dac409f"
+    },
+    {
+      "file": "scripts/lib/industry-routing.mjs",
+      "sha256": "12c98ad32f04266045e1c294a9b5f88fc47b43ec26dd424362e56de4d00c6bbb"
+    },
+    {
+      "file": "scripts/lib/io.mjs",
+      "sha256": "03880b7a498586c1bf72c5e5600dde13a32a71d2935958651cf3830f7e93e8a8"
+    },
+    {
+      "file": "scripts/lib/jd-archive.mjs",
+      "sha256": "9d75afa5971c3e409df8bb96ffed2b17c8736650b6a26e1df731984ebe53f669"
+    },
+    {
+      "file": "scripts/lib/job-version.mjs",
+      "sha256": "07679a65a9ce0c5451662a063fe7432a3fc80fc66c28c0c20a11f5aaf03df853"
+    },
+    {
+      "file": "scripts/lib/locations.mjs",
+      "sha256": "1c81414b96bfccd196eef6379f1e09e7486c22f93716524122d432a1fa9fe46d"
+    },
+    {
+      "file": "scripts/lib/matching.mjs",
+      "sha256": "a631543361b6e9ee87f022ecfc2ba43345412b10aa51a6f99447df2aab6ebe57"
+    },
+    {
+      "file": "scripts/lib/normalization-additions.mjs",
+      "sha256": "5f7ca646f20c55ddfd5ebdc7d3d3d861e5dd4ca3a13a1ef858fa6af02eb89471"
+    },
+    {
+      "file": "scripts/lib/ownership.mjs",
+      "sha256": "6944dcd1bcc8c5e6b62834cfbd55c12ab3a03c90833bbdb0b94d4c5c066b94a0"
+    },
+    {
+      "file": "scripts/lib/provider-cvte.mjs",
+      "sha256": "995e206a3d5dfee859a05f80ff9e65ad84bb81925ee2808c12fb1862598f1cd6"
+    },
+    {
+      "file": "scripts/lib/provider-hardware-direct.mjs",
+      "sha256": "5cacb56b49909dcb1e10fa5d22b64cabad92a9f7aeae67e766f8b9aac6cd75a1"
+    },
+    {
+      "file": "scripts/lib/provider-hcmcloud.mjs",
+      "sha256": "ccb6aff56b755b72a089dfcccb4cd164d8b38b9f1a5c3ef809d832a42e8b2186"
+    },
+    {
+      "file": "scripts/lib/provider-huawei.mjs",
+      "sha256": "674c8a68d1d4a30102dc971c9e8331e52dc9c9e6020cc074693f5b058979400f"
+    },
+    {
+      "file": "scripts/lib/provider-lenovo.mjs",
+      "sha256": "3d376bc653b00d7877fecb0d49118b37cd6382badb767ad1f3257f619d370b86"
+    },
+    {
+      "file": "scripts/lib/provider-lightbolt.mjs",
+      "sha256": "9ef0f30864e396df5bb8bf43ea027e734412f894ed2820fb187c93c9854237a7"
+    },
+    {
+      "file": "scripts/lib/provider-shlab.mjs",
+      "sha256": "3923ec3272eaee63c3593ddaba1abeaf6d72e2a4b45a6c6b106724ae865ef4d0"
+    },
+    {
+      "file": "scripts/lib/provider-ugreen.mjs",
+      "sha256": "c5d5a145f3607263ed88e802aa4cf4cbc7d30df6ab779dcedcf93f4932c5eb7b"
+    },
+    {
+      "file": "scripts/lib/providers-51job-xyz.mjs",
+      "sha256": "92286f8a9d39cc4f184449f8244e32e30f01aa6c4d036f65e112c2c9530b91eb"
+    },
+    {
+      "file": "scripts/lib/providers-appliances.mjs",
+      "sha256": "dd5713d679fcd6508bb922db614386e079f2d14389f82113839fe3fdcbe860d7"
+    },
+    {
+      "file": "scripts/lib/providers-common.mjs",
+      "sha256": "7b318f8d915b228445a47233767bbfc2066c0202096faa80cda563345866ad54"
+    },
+    {
+      "file": "scripts/lib/providers-custom.mjs",
+      "sha256": "7a7531f05b15f03cfb307c1389efcec837cce80529eae85dc5af43125fae6999"
+    },
+    {
+      "file": "scripts/lib/providers-direction-recovered.mjs",
+      "sha256": "bcc56352fdc6af4b4888196d9cd16094fda0411cea839c5fb999ab8765bfe819"
+    },
+    {
+      "file": "scripts/lib/providers-game-public.mjs",
+      "sha256": "32e7e2fdb3c25c18b1d2853561cb8c70455675cd6ee9b1c8a2e90f57575d7abb"
+    },
+    {
+      "file": "scripts/lib/providers-global.mjs",
+      "sha256": "03865f9b969d04bf34384cee2ae0cd922bec9b719974667587e00c3875ac7282"
+    },
+    {
+      "file": "scripts/lib/providers-international.mjs",
+      "sha256": "75b46c3eb6a10e617e78ea2561cd6d5d2f5a808ef60304f1ad9e49716e1c2106"
+    },
+    {
+      "file": "scripts/lib/providers-ivva.mjs",
+      "sha256": "e5346d8eb196fe4efd7e7169d63fd55c5968289e7b0ed89bb11a547f9d9e0f32"
+    },
+    {
+      "file": "scripts/lib/providers-oem.mjs",
+      "sha256": "ea748c6a5aca9687166074f38c5d20caf716d3762c36768332afc8d75cf3564a"
+    },
+    {
+      "file": "scripts/lib/providers-oracle-nowcoder.mjs",
+      "sha256": "a04b49ea3db5a63238e2dbf29d9105a656b4028bacf43a3213b8a5c95e3987fe"
+    },
+    {
+      "file": "scripts/lib/providers-recovered.mjs",
+      "sha256": "1e5dd0c3ae8014b6fafd226b407fc546dbf72e34821677f8c04eeffe7686ac4a"
+    },
+    {
+      "file": "scripts/lib/providers-round3.mjs",
+      "sha256": "71349c223d4dd3930b9b2b957c177760574275ee3e62f44a561d4a2c82573449"
+    },
+    {
+      "file": "scripts/lib/providers-round4.mjs",
+      "sha256": "4a766dfd700efb9eb4101ce7d6910a66d753bdaa070900e3779db609d2016163"
+    },
+    {
+      "file": "scripts/lib/providers-selfhosted.mjs",
+      "sha256": "9975a206d0dd53c66760e5830e11e4f958d9beda601f60ea9223914afe9f02d6"
+    },
+    {
+      "file": "scripts/lib/providers-sf.mjs",
+      "sha256": "17d2383a4c4e6e665bc25d05994d5035116bd815bbac4676147bec9b6e6e3512"
+    },
+    {
+      "file": "scripts/lib/providers-tongcheng.mjs",
+      "sha256": "f9d0ba598c8e6b160bb8a9bfcb165bcb537ba1bb02001e91f58e8421ac93d966"
+    },
+    {
+      "file": "scripts/lib/providers-xinrenxinshi.mjs",
+      "sha256": "374ed2817893e96114c0725fcb9730e682e982c820b70fd6512e91020fa3ea0a"
+    },
+    {
+      "file": "scripts/lib/providers-yotta.mjs",
+      "sha256": "cd5a3a2c0c8dce36b97b67f713c5a9edf909d44a5e268dde563e7939506ed200"
+    },
+    {
+      "file": "scripts/lib/public-site-candidates.mjs",
+      "sha256": "7492b5c85f5df1927f7f15529e60685753ae6e89cb8c5590be2dfccaa481886c"
+    },
+    {
+      "file": "scripts/lib/recruitment-policy.mjs",
+      "sha256": "8abd00ed2c8e5134f7be40cf0d363f061897381d90356bf59ede1bb500657bbd"
+    },
+    {
+      "file": "scripts/lib/reports.mjs",
+      "sha256": "fb9a155f804ce41d6a59c5b53dd7246c87b0c6f31091f4435a464b0864b84594"
+    },
+    {
+      "file": "scripts/lib/search-mode.mjs",
+      "sha256": "c56de8a5e2c1a620b145eb431028db0cee89fda0bcbcf1cec6ae43683bd95bfe"
+    },
+    {
+      "file": "scripts/lib/source-collector.mjs",
+      "sha256": "64bb86a4b23667754283ece581bb8ab3fe5a90657a82a7b3cfaca4a92dc1d990"
+    },
+    {
+      "file": "scripts/lib/source-directions.mjs",
+      "sha256": "0386da8134962eb49cf14573ddcbb4f67a6893795e70395abd80e96d34750eaa"
+    },
+    {
+      "file": "scripts/lib/target-api-proof.mjs",
+      "sha256": "1e13ffeda307c87b2eaee87dd7129858942bce3cacf575168245be0db5416223"
+    },
+    {
+      "file": "scripts/lib/workday-location-fallback.mjs",
+      "sha256": "b31c822ed8abb9d36b9a67b18d6503aeb2da7e3a89e564a00f4efac6e4831807"
+    },
+    {
+      "file": "scripts/lib/workday-mainland-facets.mjs",
+      "sha256": "c2c649ecc06b9a48a4ad52498ad7415498f6a1ce243a6d293a6ab05504991616"
+    },
+    {
+      "file": "scripts/company-profiles.mjs",
+      "sha256": "1941ec0f5a45065948a4f249732e18eb1a253e8c58a4d89b6e09f11a590bdfe0"
+    },
+    {
+      "file": "scripts/extract_resume.py",
+      "sha256": "063f00ebeaf3c00627482cae95c43bddac40c4c3e55cc5c9f06cf62e2ab2f802"
+    },
+    {
+      "file": "scripts/jobs.mjs",
+      "sha256": "4d74c4b506e978229f9bd40cb554c9042246a5650771e5a8f360c33cc6a43cfd"
+    }
+  ],
+  "target_validation": {
+    "file": "data/source-direction-validation.json",
+    "policy_version": "2026-09-19-enabled-with-evidence-v2",
+    "inventory": 2871,
+    "tested": 2863,
+    "enabled": 2871,
+    "current_jd_verified": 1251,
+    "endpoint_only": 956,
+    "pending": 664
+  },
+  "note": "原字段仅保留迁移前继承快照的历史记录。当前来源与运行时以共享核心为准，实时数量见 shared-registry.json。",
+  "architecture": "shared-core",
+  "current_registry": "../shared/job-search-core/assets/sources.json",
+  "current_runtime": "../shared/job-search-core",
+  "runtime_dependency_on_shared_core": true
+}

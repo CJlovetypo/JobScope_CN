@@ -1,3 +1,4 @@
+import {datasetPath} from '../../../shared/job-search-core/registry.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
@@ -66,7 +67,7 @@ function sheet(data,name='岗位匹配'){
 }
 async function updateJson(file,mutate){const data=await readJson(file);mutate(data);await writeJson(file,data);}
 function testProfile(overrides={}){
- return {graduation:'2027-06',degree:'本科',city_filters:['武汉'],business_preferences:['人工智能'],evidence:[{id:'E1',kind:'resume',source:'测试简历：招聘实习经历',claim_type:'objective_experience',experience_type:'internship',experience_id:'I1',text:'测试经历：参与校园招聘，协调40场面试'}],...overrides};
+ return {graduation:'2027-06',degree:'本科',industry_filters:['internet'],city_filters:['武汉'],business_preferences:['人工智能'],evidence:[{id:'E1',kind:'resume',source:'测试简历：招聘实习经历',claim_type:'objective_experience',experience_type:'internship',experience_id:'I1',text:'测试经历：参与校园招聘，协调40场面试'}],...overrides};
 }
 function testSummary(overrides={}){
  return {conclusion:'招聘实习与岗位协调职责相符，可结合资格和业务倾向决定是否关注。',ability:'对口招聘实习中的面试协调形成直接实践依据，独立决策经验仍待补充。',interest:'测试用户明确希望从事招聘职能。',gaps:'缺少独立招聘策略设计证据，提前实习安排需进一步核对。',...overrides};
@@ -100,8 +101,8 @@ test('独立能力与意愿覆盖完整16格矩阵，非法输入不得被当作
  for(const [ability,interest] of [['match','aligned'],['high','maybe'],['toString','aligned'],['high','toString']])assert.throws(()=>deriveMatchTier(ability,interest),/无效/);
 });
 test('prepare复用旧快照时重用新校招和标题城市规则，保留旧文件与人工正文结论',async()=>{
- const company=(await readJson(path.join(SKILL_ROOT,'assets/sources.json'))).companies[0];
- const dir=await fixture('reuse-admission-policy',{missing:true,profile:{city_filters:[]},company:{company_id:company.company_id,display_name:company.display_name},job:{title:'项目管理（深圳）',formal_status:'unknown',open_status:'open',cities:[],locations_raw:[],recruitment_evidence:{provider:'beisen',Category:'校园招聘',Kind:''},evaluation_status:'needs_verification',body_complete:false,body_review:{method:'manual_full_record_review',reason:'原文只提供职责，没有要求'}}});
+ const company=(await readJson(datasetPath(SKILL_ROOT,'assets/sources.json'))).companies[0];
+ const dir=await fixture('reuse-admission-policy',{missing:true,profile:{city_filters:[],company_filters:[company.company_id]},company:{company_id:company.company_id,display_name:company.display_name},job:{title:'项目管理（深圳）',formal_status:'unknown',open_status:'open',cities:[],locations_raw:[],recruitment_evidence:{provider:'beisen',Category:'校园招聘',Kind:''},evaluation_status:'needs_verification',body_complete:false,body_review:{method:'manual_full_record_review',reason:'原文只提供职责，没有要求'}}});
  const oldFile=path.join(dir,'companies',company.company_id+'.json'),before=await fs.readFile(oldFile,'utf8');
  const input=path.join(dir,'profile.json');await writeJson(input,(await readJson(path.join(dir,'run.json'))).profile);
  const out=path.join(dir,'reused');
@@ -250,11 +251,10 @@ test('性质数据源只接受已定性或已核查仍无法定性的记录',()=
  assert.match(ownershipEntryProblem({company_id:'c',ownership_tag:'私企',status:'verified',reason:'民营。',checked_at:'2026-09-07',evidence:[]},'c'),/公开来源/);
 });
 test('prepare从公司性质索引保存本轮快照，不依赖报告生成时的最新标签',async()=>{
- const dir=await fixture('prepare-ownership-snapshot');const profileFile=path.join(dir,'profile.json');await writeJson(profileFile,testProfile({city_filters:[]}));
- const output=path.join(dir,'prepared');const index=await readJson(path.join(SKILL_ROOT,'data/company-ownership-tags.json'),{companies:[]}),sources=(await readJson(path.join(SKILL_ROOT,'assets/sources.json'))).companies;const problems=ownershipDatasetProblems(sources,index);
- if(problems.length){await assert.rejects(()=>runCommand(process.execPath,[path.join(SKILL_ROOT,'scripts/campus.mjs'),'prepare','--profile',profileFile,'--out',output],{cwd:SKILL_ROOT}),/公司性质标签数据源未完成/);return;}
+ const dir=await fixture('prepare-ownership-snapshot');const profileFile=path.join(dir,'profile.json');await writeJson(profileFile,testProfile({city_filters:[],company_filters:['腾讯']}));
+ const output=path.join(dir,'prepared');const index=await readJson(datasetPath(SKILL_ROOT,'data/company-ownership-tags.json'),{companies:[]});
  await runCommand(process.execPath,[path.join(SKILL_ROOT,'scripts/campus.mjs'),'prepare','--profile',profileFile,'--out',output],{cwd:SKILL_ROOT});const run=await readJson(path.join(output,'run.json'));const byId=new Map(index.companies.map(company=>[company.company_id,company]));
- for(const company of run.companies){const source=byId.get(company.company_id);assert.equal(company.ownership_tag,source?.ownership_tag||'待核实');assert.equal(company.ownership_status,source?.status||'unknown');assert.deepEqual(company.ownership_evidence,source?.evidence||[]);assert.equal(company.ownership_checked_at,source?.checked_at||null);}
+ assert.equal(run.companies.length,1);for(const company of run.companies){const source=byId.get(company.company_id);assert.equal(company.ownership_tag,source?.ownership_tag||'待核实');assert.equal(company.ownership_status,source?.status||'unknown');assert.deepEqual(company.ownership_evidence,source?.evidence||[]);assert.equal(company.ownership_checked_at,source?.checked_at||null);}
 });
 test('Excel严格使用十二列，公司标签不再在render重复改写模型已判断的意愿和行动',async()=>{
  const dir=await fixture('business-gate');const data=await buildReportData(dir);assert.equal(data.audit.assessed_jobs,1);
@@ -627,4 +627,18 @@ test('独立原文归档覆盖详情页和被排除岗位，超长正文不进�
  assert.deepEqual(records.map(record=>record.job_id),source.jobs.map(job=>String(job.job_id)));
  for(const record of records){assert.equal(record.description,description);assert.deepEqual(record.recruitment_evidence,source.jobs[0].recruitment_evidence);assert.equal(record.checked_at,source.checked_at);}
  const report=await buildReportData(dir);assert.ok(report.sheets.every(sheet=>!JSON.stringify(sheet).includes('超长正文')));
+});
+
+test('JD归档共享完整分页证据，未变化时复用、岗位更新后重建',async()=>{
+ const dir=await fixture('archive-incremental');
+ await updateJson(path.join(dir,'companies/fixture-company.json'),data=>{data.coverage.page_evidence=[{job_ids:['one','two'],raw_file:'raw/page.json'}];});
+ const first=await writeJdArchive(dir),before=await fs.stat(first.file);
+ const row=JSON.parse((await fs.readFile(first.file,'utf8')).trim());
+ const coverage=await readJson(first.coverage_file);
+ assert.equal(row.source_coverage.page_evidence,undefined);
+ assert.deepEqual(coverage.companies[row.source_coverage_ref.company_id].coverage.page_evidence,[{job_ids:['one','two'],raw_file:'raw/page.json'}]);
+ assert.equal((await writeJdArchive(dir)).reused,true);assert.equal((await fs.stat(first.file)).mtimeMs,before.mtimeMs);
+ await updateJson(path.join(dir,'companies/fixture-company.json'),data=>{data.jobs[0].requirements+=' 新增必须条件，原文不能丢失。';});
+ assert.equal((await writeJdArchive(dir)).reused,false);assert.match(await fs.readFile(first.file,'utf8'),/新增必须条件/);
+ await fs.rm(first.coverage_file);assert.equal((await writeJdArchive(dir)).reused,false);
 });

@@ -1,0 +1,5 @@
+sources/
+logs/
+artifacts/**/payload_*.json
+__pycache__/
+scripts/__pycache__/

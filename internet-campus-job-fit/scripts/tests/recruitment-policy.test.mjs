@@ -22,6 +22,13 @@ test('全职或仅校招入口不能代替单岗位校招证据',()=>{
   assert.equal(reviewRecruitment(job({provider:'amazon_jobs',job_schedule_type:'full-time'})).formal_status,'unknown');
   assert.equal(reviewRecruitment(job({provider:'feishu',campus_context:true})).formal_status,'unknown');
 });
+test('明确社招标题不能被校园频道或旧formal状态覆盖',()=>{
+ for(const title of ['社招-Analog Engineer','【社招】研发工程师','工程师（社会招聘）']) {
+  assert.equal(reviewRecruitment(job({provider:'moka',hireMode:2},{title,formal_status:'formal'})).formal_status,'unknown');
+  assert.equal(reviewRecruitment(job({},{title})).formal_status,'social');
+ }
+ assert.equal(reviewRecruitment(job({provider:'moka',hireMode:2},{title:'校招-软件开发',requirements:'需提前实习三个月'})).formal_status,'formal');
+});
 test('保留明确实习社招和实际类型冲突，提前实习要求不改变正式性质',()=>{
   assert.equal(reviewRecruitment(job({Category:'校园招聘'}, {formal_status:'internship'})).formal_status,'internship');
   assert.equal(reviewRecruitment(job({Category:'校园招聘'}, {formal_status:'social'})).formal_status,'social');

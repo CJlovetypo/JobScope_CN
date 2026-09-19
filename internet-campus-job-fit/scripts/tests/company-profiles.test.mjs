@@ -39,3 +39,13 @@ test('运行快照离线复用且公司去重，只有覆盖表中的公司和�
   await writeJson(path.join(dir, 'company-profiles.snapshot.json'), {...saved, companies: [...saved.companies, ...saved.companies]});
   await assert.rejects(() => companyProfileSnapshot(dir, companies), /重复/);
 });
+test('扩容的部分调研线索不冒充核实事实，也不阻断岗位评估',async()=>{
+ const dir=await fs.mkdtemp(path.join(SKILL_ROOT,'tmp/profile-clue-test-'));
+ const company={company_id:'clue',display_name:'线索公司'},clue={...fact('汇总表上的行业线索'),status:'partial'};
+ await saveCompanyProfileSnapshot(dir,{companies:[{...company,business:clue}]});
+ const snapshot=await companyProfileSnapshot(dir,[company]);
+ assert.equal(snapshot.companies[0].business.status,'missing');
+ assert.deepEqual(snapshot.companies[0].business.unverified_source_fact,clue);
+ assert.equal(companyProfileSheet(snapshot).rows[0][2],'暂无已核实资料');
+ assert.ok(factProblem(clue));
+});

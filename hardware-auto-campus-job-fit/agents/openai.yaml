@@ -1,0 +1,4 @@
+interface:
+  display_name: "硬件与汽车校招（已合并）"
+  short_description: "旧入口兼容指引，转到统一校招流程选择行业、筛选公司并交付Excel"
+  default_prompt: "使用 $hardware-auto-campus-job-fit，按已合并的统一校招流程，先确认我的行业范围，再根据简历与倾向评估岗位。"
