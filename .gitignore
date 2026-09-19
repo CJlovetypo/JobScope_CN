@@ -1,12 +1,37 @@
-# Local skill runs, personal inputs, generated reports and development evidence
-/*/runs/
-/*/outputs/
-/*/artifacts/
-/*/tmp/
-/*/logs/
-/*/tmp-*
+# Only distributable roots belong in this repository.
+/*
+!/.gitattributes
+!/.gitignore
+!/README.md
+!/campus-job-fit/
+!/internship-job-fit/
+!/social-job-fit/
+!/shared/
+/shared/*
+!/shared/job-search-core/
 
-# Dependencies and caches
+# Internal instructions, product planning and historical research remain local.
+**/AGENTS.md
+**/agents.md
+**/PRD.md
+**/ARCHITECTURE.md
+**/internal/
+/*/data/registry-inheritance.json
+/shared/job-search-core/references/implementation-validation-*.md
+/shared/job-search-core/data/feishu-expansion-*.json
+/shared/job-search-core/data/source-verification-*.json
+
+# Personal materials, captured data, reports and development evidence.
+**/runs/
+**/outputs/
+**/artifacts/
+**/tmp/
+**/logs/
+**/tmp-*/
+/shared/job-search-core/state/
+*.repair.lock
+
+# Dependencies, caches and local credentials.
 node_modules/
 .venv/
 venv/
@@ -15,8 +40,6 @@ __pycache__/
 .pytest_cache/
 .cache/
 coverage/
-
-# Local credentials and environment configuration
 .env
 .env.*
 !.env.example
@@ -27,7 +50,7 @@ credentials.json
 cookies.txt
 cookies.json
 
-# Editor, OS and temporary files
+# Editor and temporary files.
 .DS_Store
 Thumbs.db
 Desktop.ini
@@ -37,6 +60,3 @@ Desktop.ini
 *.tmp
 *.swp
 ~$*
-# Shared runtime health is resumable local state; canonical repaired contracts stay in assets/sources.json.
-shared/job-search-core/state/
-*.repair.lock

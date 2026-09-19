@@ -4,7 +4,7 @@ import {readFileSync} from 'node:fs';
 
 export const CORE_ROOT = path.dirname(fileURLToPath(import.meta.url));
 export const PACK_ROOT = path.resolve(CORE_ROOT, '../..');
-export const SKILLS = Object.freeze({campus:'internet-campus-job-fit', internship:'internship-job-fit', social:'social-job-fit'});
+export const SKILLS = Object.freeze({campus:'campus-job-fit', internship:'internship-job-fit', social:'social-job-fit'});
 let selected;
 
 // A CLI process/worker owns one business context. Never switch a loaded runtime

@@ -39,7 +39,7 @@ export async function collectIvva(source,options={}) {
     child.stdout.setEncoding('utf8');child.stderr.setEncoding('utf8');
     child.stdout.on('data',chunk=>{stdout+=chunk;});child.stderr.on('data',chunk=>{stderr+=chunk;});
     child.on('error',e=>reject(new Error('IVVA requires Python 3; set CAMPUS_JOB_FIT_PYTHON to the available runtime: '+e.message)));
-    child.on('close',code=>{try{if(code!==0)throw Error('IVVA Python reader failed: '+stderr.slice(0,500));resolve(JSON.parse(stdout));}catch(e){reject(e);}});
+    child.on('close',(code,signal)=>{try{if(code!==0)throw Error(`IVVA Python reader failed (exit=${code}, signal=${signal||'none'}): ${stderr.trim().slice(0,500)||'No diagnostic output; check Python 3 and CAMPUS_JOB_FIT_PYTHON (Windows Store aliases are not a Python runtime).'}`);resolve(JSON.parse(stdout));}catch(e){reject(e);}});
     child.stdin.on('error',()=>{});
     child.stdin.end(JSON.stringify({source,options:{evidenceDir,maxPages:options.maxPages||1000,timeoutMs:options.timeoutMs||20000}}));
   });

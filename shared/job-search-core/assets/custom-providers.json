@@ -190,7 +190,8 @@
       "page_path": "curPage",
       "size_path": "pageSize",
       "page_base": 1,
-      "fixed_page_size": null
+      "fixed_page_size": null,
+      "max_page_size": 20
     },
     "netease": {
       "company_name": "网易",
@@ -392,7 +393,8 @@
       "page_path": "pageIndex",
       "size_path": "pageSize",
       "page_base": 1,
-      "fixed_page_size": null
+      "fixed_page_size": null,
+      "max_page_size": 20
     },
     "kuaishou": {
       "company_name": "快手",

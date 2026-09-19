@@ -252,6 +252,7 @@ async function collectContext(source, context, options, client) {
       if (boot.record.http_status !== 200 && provider === 'moka') throw new Error(`Public bootstrap HTTP ${boot.record.http_status}`);
       if (provider === 'moka') {
         const config = parseMokaInit(boot.text);
+        if (/当前网页已关停|招聘站点已关闭/.test(config.message || '')) throw new Error('Public Moka recruitment portal closed: '+config.message);
         iv = config.aesIv || config.aesIV || config.data?.aesIv || config.org?.aesIv;
         context.portal_type = config.org?.type || config.mode || null;
         if (/^social$/i.test(context.portal_type || '')) context.isCampus = false;

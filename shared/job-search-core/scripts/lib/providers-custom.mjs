@@ -225,7 +225,7 @@ export async function collectCustom(source, options = {}) {
     if(key==='ctrip')delete q.body.condition.category;
     if(key==='shein')q.body.jobTypeIds=[targetMode==='social'?'SOCIAL':'PRACTICE'];
   }
-  const checked = new Date().toISOString(); let size = config.fixed_page_size || Math.max(1, Math.min(100, options.pageSize || 20));
+  const checked = new Date().toISOString(); let size = config.fixed_page_size || Math.max(1, Math.min(config.max_page_size || 100, options.pageSize || 20));
   // This exact upstream size fails on page 1. Keep a consistent size for every page rather than shifting offsets mid-stream.
   if (key === 'kuaishou' && size === 10) size = 11;
   const maxPages = Math.max(1, options.maxPages ?? 1000); let token = null, completeStreams = 0;
