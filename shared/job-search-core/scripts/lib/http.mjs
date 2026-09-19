@@ -7,6 +7,7 @@ const skillRoot = runtimeContext().skillRoot;
 const userAgent = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36';
 const sensitiveHeader = /^(cookie|authorization|proxy-authorization|set-cookie)$/i;
 const dynamicHeader = /csrf|xsrf/i;
+function schemaKeys(value){const keys=[];function visit(v,p,depth){if(depth>4||keys.length>200||!v||typeof v!=='object')return;if(Array.isArray(v)){if(v.length)visit(v[0],p+'[]',depth+1);return;}for(const k of Object.keys(v).sort()){const key=p?p+'.'+k:k;keys.push(key);visit(v[k],key,depth+1);if(keys.length>200)break;}}visit(value,'',0);return keys;}
 
 function safeHeaders(headers) {
   return Object.fromEntries(Object.entries(headers).filter(([key]) => !sensitiveHeader.test(key))
@@ -64,7 +65,7 @@ class AnonymousCookies {
 }
 
 /** Fresh anonymous HTTP only. Cookie values never enter persisted request records. */
-export function createClient({ evidenceDir, timeoutMs = 20000 } = {}) {
+export function createClient({ evidenceDir, timeoutMs = 20000, signal: externalSignal, requestBudget } = {}) {
   const session = randomUUID().slice(0, 12);
   const directory = path.resolve(evidenceDir || path.join(skillRoot, 'artifacts/runs', `http-${Date.now()}-${session}`));
   const jar = new AnonymousCookies();
@@ -83,6 +84,8 @@ export function createClient({ evidenceDir, timeoutMs = 20000 } = {}) {
       (sourceRecord.anonymous_cookie_derivations ||= []).push({ name, target_origin: u.origin, value_saved: false });
     },
     async request({ url, method = 'GET', headers = {}, body = null }, { purpose = 'public_api' } = {}) {
+      if(externalSignal?.aborted)throw externalSignal.reason;
+      if(requestBudget&&--requestBudget.remaining<0)throw Error('public_request_budget_exhausted');
       const target = new URL(url);
       if (!['https:', 'http:'].includes(target.protocol)) throw new Error('HTTP(S) URL required');
       if (target.username || target.password) throw new Error('Personal credentials are not supported');
@@ -107,7 +110,8 @@ export function createClient({ evidenceDir, timeoutMs = 20000 } = {}) {
       try {
         let current = target.href, currentMethod = method, currentBody = encoded;
         let response;
-        const signal = AbortSignal.timeout(Math.max(1, timeoutMs));
+        const deadline = AbortSignal.timeout(Math.max(1, timeoutMs));
+        const signal = externalSignal ? AbortSignal.any([externalSignal,deadline]) : deadline;
         const redirects = [];
         for (let hop = 0; hop <= 8; hop++) {
           const outgoing = { ...requestHeaders };
@@ -139,6 +143,7 @@ export function createClient({ evidenceDir, timeoutMs = 20000 } = {}) {
         await writeFile(file, raw);
         Object.assign(record, { http_status: response.status, final_url: current, content_type: contentType,
           response_file: file, response_is_json: data !== null, response_sha256: createHash('sha256').update(raw).digest('hex'),
+          response_schema_keys:schemaKeys(data),
           elapsed_ms: Date.now() - started, redirects });
         return { data, text, url: current, headers: Object.fromEntries([...response.headers].filter(([key]) => !sensitiveHeader.test(key))), record };
       } catch (error) {

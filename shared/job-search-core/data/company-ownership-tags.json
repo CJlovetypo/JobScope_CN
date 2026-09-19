@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-19T09:56:39.408Z",
+  "updated_at": "2026-09-19T12:39:08.029Z",
   "companies": [
     {
       "company_id": "company-f93e5a384c54",
@@ -37113,6 +37113,1185 @@
           "checked_at": "2026-09-19"
         }
       ]
+    },
+    {
+      "company_id": "company-b54f3dd95257",
+      "display_name": "湖北大数据集团有限公司",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-b0f4cdf1288e",
+      "display_name": "费森尤斯医疗（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-090da504a3e6",
+      "display_name": "华侨银行（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-cf2a220e436b",
+      "display_name": "宏利（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-a3d79f4dbadc",
+      "display_name": "马士基（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-83ac6a8a2843",
+      "display_name": "AIG（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-104d08c2716e",
+      "display_name": "辉瑞（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-3cd432d7e6e3",
+      "display_name": "赛诺菲（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-ce15e6bfc483",
+      "display_name": "ICON（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-1dc3fc0d1bba",
+      "display_name": "百时美施贵宝（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-b2bd1c0f8714",
+      "display_name": "Fortrea（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-2bef03ffcfe3",
+      "display_name": "强生（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-86c5d62a57e4",
+      "display_name": "赫力昂（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-70509647d402",
+      "display_name": "Labcorp（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-12fd63f6d6c3",
+      "display_name": "森萨塔（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-fc7bbdac4373",
+      "display_name": "LSEG（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-85a6a876135d",
+      "display_name": "液化空气（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-6ad600066fb7",
+      "display_name": "应用材料（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-670d1400321a",
+      "display_name": "Vantive（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-42406d2c2dad",
+      "display_name": "雅培（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-80d08353bcc1",
+      "display_name": "蔡司（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-47d385a25c04",
+      "display_name": "赛默飞（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-639ab7789783",
+      "display_name": "联邦快递（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-29effa21c738",
+      "display_name": "3M（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-abfcae51c3d1",
+      "display_name": "KLA科磊（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-7cabf51b3829",
+      "display_name": "道富（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-e58ab55ed9ec",
+      "display_name": "玛氏（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-d41ad6560994",
+      "display_name": "哈曼（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-fc709995b050",
+      "display_name": "开利（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-5bd6702c9a89",
+      "display_name": "金鹰集团（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-e597af3b66f8",
+      "display_name": "戴森（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-9e3d9afb7c4d",
+      "display_name": "电通（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-d6f4264d8245",
+      "display_name": "Logicalis（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-5597c68f4773",
+      "display_name": "GE Vernova（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-b96c5820be56",
+      "display_name": "空气产品（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-5c8febcbffe7",
+      "display_name": "爱德华生命科学（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-b1e25cb2b40b",
+      "display_name": "星展（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-c244de888732",
+      "display_name": "亿滋（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-05b9b25301c4",
+      "display_name": "IQVIA（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-82b7b8fe3a76",
+      "display_name": "默沙东（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-734ad2cf6bf1",
+      "display_name": "乔治费歇尔（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-88974c2640b9",
+      "display_name": "丹纳赫（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-0cd14d99c786",
+      "display_name": "安捷伦（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-23206b1126dd",
+      "display_name": "空中客车（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-ae89c01211a8",
+      "display_name": "凯度（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-2c39d8d569b3",
+      "display_name": "Bose（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-165907e48529",
+      "display_name": "华纳兄弟探索（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-aa7815ff0757",
+      "display_name": "庄信万丰（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-ca3610a50cab",
+      "display_name": "Medline（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-13cb169a0f9c",
+      "display_name": "思科（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-957d78a95b97",
+      "display_name": "施普林格自然（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-50fdcb24abf8",
+      "display_name": "Syneos Health（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-42d291b4f2c2",
+      "display_name": "陶氏（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-d51e545d9189",
+      "display_name": "雀巢（大中华区招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-8531bd12d727",
+      "display_name": "IFF（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-3c9f9ee221bc",
+      "display_name": "爱尔康（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-5edb775971fd",
+      "display_name": "A&F（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-0f74850ffe9e",
+      "display_name": "德昌电机（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-4db54c7e801a",
+      "display_name": "伊莱克斯（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-ee8c52dc9aef",
+      "display_name": "PPG（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-618dbb96fdc4",
+      "display_name": "阿法拉伐（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-214aeda75f53",
+      "display_name": "Autodesk（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-f0ebec6bd945",
+      "display_name": "益普生（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-cd4d99ce6939",
+      "display_name": "参天（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-f08bc868aaaf",
+      "display_name": "Apex Group（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-efa70e39e3c2",
+      "display_name": "英特尔（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-730649b5d805",
+      "display_name": "Tory Burch（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-42f99edbbebb",
+      "display_name": "PVH（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-575e5ccb3319",
+      "display_name": "迪士尼（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-ea8be24b2c27",
+      "display_name": "皮尔法伯（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-1fbc04e53747",
+      "display_name": "珀金埃尔默（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-6ee587000f66",
+      "display_name": "安霸（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-8ed4eb61a92e",
+      "display_name": "Wiley（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-310216d4ad46",
+      "display_name": "万豪（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-f9600d11827a",
+      "display_name": "史赛克（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-f6563b690205",
+      "display_name": "耐克（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-4763a8d87880",
+      "display_name": "迈图（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-ea5cc9b447a5",
+      "display_name": "PHINIA（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-a21a0eb699a3",
+      "display_name": "赢创（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-2a2625ae4290",
+      "display_name": "富达国际（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-be746b33851d",
+      "display_name": "Palo Alto Networks（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-0a4395cf6c9f",
+      "display_name": "罗宾逊物流（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-5d82a887f422",
+      "display_name": "科思创（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-bbaa056e04fe",
+      "display_name": "苏尔寿（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-36febb7f1d2f",
+      "display_name": "Global Payments（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-020b2b5486ca",
+      "display_name": "爱思唯尔（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-30d9d7fd15fd",
+      "display_name": "赛多利斯（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-e27b20b426b6",
+      "display_name": "伟创力（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-2db6de125935",
+      "display_name": "OmniOn Power（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-d8d7e52d18a1",
+      "display_name": "富勒（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-e7f9627b46ba",
+      "display_name": "布伦泰格（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-52af159b369e",
+      "display_name": "ERM（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-81b517a68682",
+      "display_name": "吉利德（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-39623ebfd44a",
+      "display_name": "AVEVA（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-6e7825313ea5",
+      "display_name": "英纳法（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-484b4cc7f8e5",
+      "display_name": "艺康（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-2c8cddfa0012",
+      "display_name": "英迈（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-fb4835eb099c",
+      "display_name": "索理思（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-fc1d673c8bf5",
+      "display_name": "美光（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-28b2f4d102e8",
+      "display_name": "拓领（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-70b04435964e",
+      "display_name": "爱德曼（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-fddfea9171fd",
+      "display_name": "Expedia（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-704e1a4965e9",
+      "display_name": "保乐力加（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-3447912f37a2",
+      "display_name": "4flow（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-c7703c0c43b4",
+      "display_name": "威富（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-2d0066f5320a",
+      "display_name": "云顶新耀",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-9957a75b5e60",
+      "display_name": "景昱医疗",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-760f8d5d5944",
+      "display_name": "菲仕兰（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-e5bea6ea1438",
+      "display_name": "网龙网络",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-148da9f227b0",
+      "display_name": "史泰博（上海）有限公司",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-2610913bb65d",
+      "display_name": "阿克苏诺贝尔（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-65c3c777796e",
+      "display_name": "伊顿（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-8a337d0efabd",
+      "display_name": "埃夫特机器人",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-9db395e38682",
+      "display_name": "希尔顿（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-7edebacc1bb1",
+      "display_name": "隆鑫通用",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-b9426138c349",
+      "display_name": "诺诚健华",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-08740b3f3311",
+      "display_name": "昆拓信诚",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-713a10cf3724",
+      "display_name": "永星互动",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-cab4e487aa60",
+      "display_name": "连连支付",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-65e90eccfd17",
+      "display_name": "中亦科技",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-5c16a44678f9",
+      "display_name": "施耐德电气（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-d45d8fdf8953",
+      "display_name": "滔搏",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-cb893834546b",
+      "display_name": "汇宇制药",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-d7833d802569",
+      "display_name": "联宇集团",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-730abb77a721",
+      "display_name": "济南城建集团有限公司",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-15a03612bc58",
+      "display_name": "新希望金融科技",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-70a272626d7a",
+      "display_name": "上海医药",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-1aef22941857",
+      "display_name": "拜尔斯道夫（中国招聘门户）",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-5a70756b0a28",
+      "display_name": "万事达工业科技股份有限公司",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-06a674a66a4a",
+      "display_name": "海通恒信",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
+    },
+    {
+      "company_id": "company-5a756e7f17a7",
+      "display_name": "百胜中国",
+      "ownership_tag": "待核实",
+      "status": "unknown",
+      "reason": "新增招聘主体的控制关系尚未核查",
+      "evidence": [],
+      "checked_at": null
     }
   ]
 }

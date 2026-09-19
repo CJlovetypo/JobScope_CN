@@ -7,6 +7,8 @@ export const CUSTOM_PROVIDERS_FILE = path.join(CORE_ROOT, 'assets/custom-provide
 export const COMPANY_BUSINESS_FILE = path.join(CORE_ROOT, 'data/company-business-tags.json');
 export const COMPANY_OWNERSHIP_FILE = path.join(CORE_ROOT, 'data/company-ownership-tags.json');
 export const COMPANY_PROFILES_FILE = path.join(CORE_ROOT, 'data/company-profiles.json');
+export const COMPANY_SIZE_FILE = path.join(CORE_ROOT, 'data/company-size-tags.json');
+export const SEARCH_CAPABILITIES_FILE = path.join(CORE_ROOT, 'data/source-search-capabilities.json');
 const common = new Map([
   ['assets/sources.json',SOURCE_REGISTRY_FILE], ['assets/custom-providers.json',CUSTOM_PROVIDERS_FILE],
   ['data/company-business-tags.json',COMPANY_BUSINESS_FILE], ['data/company-ownership-tags.json',COMPANY_OWNERSHIP_FILE], ['data/company-profiles.json',COMPANY_PROFILES_FILE],

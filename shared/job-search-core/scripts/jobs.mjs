@@ -1,4 +1,7 @@
-import {datasetPath} from '../registry.mjs';
+import {datasetPath,COMPANY_SIZE_FILE,SEARCH_CAPABILITIES_FILE} from '../registry.mjs';
+import {validateSearchPlan,searchPlanFingerprint} from './lib/targeted-search.mjs';
+import {collectTargeted} from './lib/collect-targeted.mjs';
+import {refreshedCityTag} from './lib/city-index.mjs';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import {SKILL_ROOT,readJson,writeJson,workspacePath,mapLimit,stamp,relative} from './lib/io.mjs';
@@ -27,6 +30,7 @@ const registryGate=validatedDirectionRegistry(originalSources,directionValidatio
 const cityFile=path.join(SKILL_ROOT,'data/company-city-index.json');
 const businessFile=datasetPath(SKILL_ROOT,'data/company-business-tags.json');
 const ownershipFile=datasetPath(SKILL_ROOT,'data/company-ownership-tags.json');
+let searchCapabilities;
 function enrich(job,source) {
  job=reviewRecruitment(job);if(!job.body_complete&&!['manual_full_record_review','model_full_available_body_and_local_evidence_review'].includes(job.body_review?.method))job=reviewJobBody(job);job=reconcileTargetJob(job,source,SEARCH_MODE.id);const loc=normalizeJobLocations(job);
  return {...job,company_id:source.company_id,company_name:source.display_name,cities:loc.cities,location_special:loc.special,
@@ -44,7 +48,7 @@ function businessAlignment(source,tag,profile) {
  return {status:aligned?'aligned':'mismatch',reason:aligned?'业务标签符合：'+matches.join('、'):'公司业务标签与本次倾向不符'};
 }
 async function collect(source,options) {
- try {const result=await collectCompanySources(source,options);result.jobs=(result.jobs||[]).map(j=>enrich(j,source));return result;}
+ try {const result=options.searchPlan?await collectTargeted(source,options.searchPlan,options,await (searchCapabilities??=readJson(SEARCH_CAPABILITIES_FILE,{configurations:[]}))):await collectCompanySources(source,options);result.jobs=(result.jobs||[]).map(j=>enrich(j,source));return result;}
  catch(e){return {company_id:source.company_id,display_name:source.display_name,checked_at:new Date().toISOString(),jobs:[],coverage:{status:'failed',pages:0,server_total:null,jobs_observed:0,reason:String(e.message||e)},requests:[]};}
 }
 function chooseSources(industryFilters,companyFilters) {
@@ -55,9 +59,16 @@ function chooseSources(industryFilters,companyFilters) {
 }
 async function catalog(){
  const profile=flags.profile?await readJson(path.resolve(String(flags.profile))):{},filters=normalizeIndustries(flags.industries||profile.industry_filters),cityFilters=normalizeCityFilters(flags.cities?String(flags.cities).split(','):profile.city_filters||[]);
- const candidates=chooseSources(filters,profile.company_filters);await ensureDirectionalCities(candidates,cityFilters);
+ let candidates=chooseSources(filters,profile.company_filters);const industryCount=candidates.length;
+ const rawPlan=flags['search-plan']?await readJson(path.resolve(String(flags['search-plan']))):profile.search_plan;
+ const searchPlan=rawPlan?validateSearchPlan(rawPlan,sources):null;
+ if(searchPlan){const allowed=new Set(candidates.map(c=>c.company_id));if(searchPlan.company_ids.some(id=>!allowed.has(id)))throw Error('定向候选与行业或明确公司范围冲突');candidates=candidates.filter(c=>searchPlan.company_ids.includes(c.company_id));}
+ await ensureDirectionalCities(candidates,cityFilters);
  const city=await readJson(cityFile,{companies:[]}),byId=new Map(city.companies.map(c=>[c.company_id,c])),selected=candidates.filter(c=>companyCityMatches(byId.get(c.company_id),cityFilters));
  const ownership=await readJson(ownershipFile,{companies:[]}),problems=ownershipDatasetProblems(selected,ownership),result={industries:industryLabels(filters),industry_filters:filters,city_filters:cityFilters,industry_candidates:candidates.length,selected_companies:selected.length,excluded_by_city:candidates.length-selected.length,ownership_pending:problems,source_validation:{...registryGate,companies:undefined},companies:selected.map(c=>({company_id:c.company_id,display_name:c.display_name,industry_tags:c.industry_tags,cities:byId.get(c.company_id)?.cities||[],city_index_updated_at:byId.get(c.company_id)?.updated_at||null})),next_step:problems.length?'按需补核这些已入选公司的性质资料，再 prepare；不要将未调查写成已核实。':'可 prepare 后采集岗位，再沿用评估范围确认流程。'};
+ const size=await readJson(COMPANY_SIZE_FILE,{companies:[]}),sizeById=new Map(size.companies.map(c=>[c.company_id,c]));
+ for(const company of result.companies)company.size_tag=sizeById.get(company.company_id)||{label:'待核实',reason:'暂无规模证据'};
+ result.retrieval_mode=searchPlan?'targeted':'exhaustive';if(searchPlan){result.search_plan=searchPlan;result.excluded_by_targeted_plan=industryCount-candidates.length;}
  if(flags.out)await writeJson(workspacePath(path.resolve(String(flags.out))),result);console.log(JSON.stringify(result));
 }
 function integer(name,fallback,max) {const v=Number(flags[name]??fallback);if(!Number.isInteger(v)||v<1||v>max)throw new Error('--'+name+' 超出范围');return v;}
@@ -88,12 +99,7 @@ async function refreshCities(selectedOverride) {
  const results=await mapLimit(selected,integer('concurrency',3,8),async(source)=>{
   const cache=path.join(dir,source.company_id,'result.json');let result=flags.resume?await readJson(cache,null):null;
   if(!result||(result.coverage.status!=='complete'&&!result.coverage.collection_complete)||!sourceCacheMatches(result,source)) {result=await collect(source,{mode:'list',maxPages:integer('max-pages',1000,10000),pageSize:SEARCH_MODE.id==='campus'?20:50,timeoutMs:20000,evidenceDir:path.dirname(cache)});await writeJson(cache,result);}
-  const usable=result.jobs.filter(j=>isTargetJob(j)&&j.open_status==='open');
-  const cities=[...new Set(usable.flatMap(j=>j.cities))].sort();const old=byId.get(source.company_id);
-  const unknown=usable.filter(j=>j.location_unknown||j.location_special.length);const uncertain=result.jobs.filter(j=>j.formal_status==='unknown'||j.open_status==='unknown');
-  let entry={company_id:source.company_id,display_name:source.display_name,cities,updated_at:result.checked_at,coverage:result.coverage,formal_jobs_observed:usable.length,unknown_location_jobs:unknown.length,uncertain_type_or_status_jobs:uncertain.length,city_coverage_complete:result.coverage.status==='complete'&&!unknown.length&&!uncertain.length,city_evidence:usable.filter(j=>j.cities.length).map(j=>({job_id:j.job_id,title:j.title,cities:j.cities,locations_raw:j.locations_raw,official_url:j.official_url,raw_file:j.raw_file})),result_file:relative(cache)};
-  if(result.coverage.status==='failed'&&old)entry={...old,last_refresh_at:result.checked_at,last_refresh_status:'failed',last_refresh_reason:result.coverage.reason};
-  if(SEARCH_MODE.id!=='campus')Object.assign(entry,{search_mode:SEARCH_MODE.id,target_jobs_observed:usable.length,source_config_fingerprint:sourceConfigFingerprint(source)});
+  const entry=refreshedCityTag(source,result,byId.get(source.company_id),{mode:SEARCH_MODE.id,fingerprint:sourceConfigFingerprint(source),resultFile:relative(cache)});
   byId.set(source.company_id,entry);console.log(JSON.stringify({company:source.display_name,status:result.coverage.status,cities:entry.cities,jobs:result.jobs.length}));return entry;
  });
  const index={schema_version:1,updated_at:new Date().toISOString(),companies:sources.map(s=>byId.get(s.company_id)||{company_id:s.company_id,display_name:s.display_name,cities:[],updated_at:null,coverage:{status:'not_initialized'},city_coverage_complete:false})};
@@ -104,7 +110,10 @@ async function prepare() {
  const profile=await readJson(path.resolve(String(flags.profile)));profile.city_filters=normalizeCityFilters(profile.city_filters||[]);
  if(SEARCH_MODE.id!=='campus'){const problem=modeProfileProblem(profile);if(problem)throw Error(problem);profile.search_mode=SEARCH_MODE.id;}
  profile.industry_filters=normalizeIndustries(profile.industry_filters);
- const candidates=chooseSources(profile.industry_filters,profile.company_filters);
+ let candidates=chooseSources(profile.industry_filters,profile.company_filters);
+ const rawPlan=flags['search-plan']?await readJson(path.resolve(String(flags['search-plan']))):profile.search_plan;
+ const searchPlan=rawPlan?validateSearchPlan(rawPlan,sources):null;
+ if(searchPlan){const allowed=new Set(candidates.map(c=>c.company_id));if(searchPlan.company_ids.some(id=>!allowed.has(id)))throw Error('定向候选与行业或明确公司范围冲突');candidates=candidates.filter(c=>searchPlan.company_ids.includes(c.company_id));profile.search_plan=searchPlan;}
  await ensureDirectionalCities(candidates,profile.city_filters);
  const evidence=profile.evidence||[];if(!evidence.length)throw new Error('缺少可核对的简历／经历证据；请先补充材料');
  if(new Set(evidence.map(e=>e.id)).size!==evidence.length||evidence.some(e=>!e.id||!e.text))throw new Error('个人证据需要唯一 id 和具体 text');
@@ -117,6 +126,7 @@ async function prepare() {
  const companies=candidates.map(s=>{const t=cities.get(s.company_id),b=businesses.get(s.company_id),o=ownerships.get(s.company_id);return {company_id:s.company_id,display_name:s.display_name,industry_tags:s.industry_tags,selected:companyCityMatches(t,profile.city_filters),city_tags:t?.cities||[],city_index_updated_at:t?.updated_at||null,city_coverage_complete:t?.city_coverage_complete||false,business_tags:b?.business_tags||[],business_summary:b?.business_summary||'',business_alignment:businessAlignment(s,b,profile),ownership_tag:o?.ownership_tag||null,ownership_status:o?.status||'unknown',ownership_reason:o?.reason||'',ownership_evidence:o?.evidence||[],ownership_checked_at:o?.checked_at||null,selection_reason:companyCityMatches(t,profile.city_filters)?'行业与城市范围入选':'当前公司城市标签未命中；本轮直接排除'};});
  const run={schema_version:2,created_at:new Date().toISOString(),profile,profile_fingerprint:profileFingerprint(profile),companies,selection_summary:{industry_filters:profile.industry_filters,industry_labels:industryLabels(profile.industry_filters),registered_companies:sources.length,industry_candidates:sources.filter(s=>industryMatches(s,profile.industry_filters)).length,excluded_by_industry:sources.filter(s=>!industryMatches(s,profile.industry_filters)).length,company_filters:profile.company_filters||flags.only?.split(',')||[],city_excluded:companies.filter(c=>!c.selected).length},city_index_updated_at:city?.updated_at||null,status:'prepared',is_test:profile.is_test===true};
  if(SEARCH_MODE.id!=='campus')run.search_mode=SEARCH_MODE.id;
+ if(searchPlan){run.search_plan=searchPlan;run.search_plan_fingerprint=searchPlanFingerprint(searchPlan);run.retrieval_mode='targeted';run.selection_summary.targeted_company_excluded=sources.length-candidates.length;}
  const profileSnapshot=await companyProfileSnapshot(dir,companies);
  await saveCompanyProfileSnapshot(dir,profileSnapshot);
  await writeJson(path.join(dir,'run.json'),run);await fs.mkdir(path.join(dir,'assessments'),{recursive:true});
@@ -125,7 +135,7 @@ async function prepare() {
   for(const c of companies.filter(c=>c.selected)){
    const old=await readJson(path.join(previous,'companies',c.company_id+'.json'),null);
    const current=sources.find(s=>s.company_id===c.company_id);
-   if(old&&(SEARCH_MODE.id==='campus'||sourceCacheMatches(old,current))){old.jobs=old.jobs.map(job=>enrich(restoreRequestRecruitmentEvidence(job,old.requests||[]),c));await writeJson(path.join(dir,'companies',c.company_id+'.json'),applyJobScope(old,profile.city_filters));}
+   if(old&&sourceCacheMatches(old,current,searchPlan)){old.jobs=old.jobs.map(job=>enrich(restoreRequestRecruitmentEvidence(job,old.requests||[]),c));await writeJson(path.join(dir,'companies',c.company_id+'.json'),applyJobScope(old,profile.city_filters));}
   }
  }
  console.log(JSON.stringify({run:dir,selected:companies.filter(c=>c.selected).length,excluded:companies.filter(c=>!c.selected).length}));
@@ -140,9 +150,9 @@ async function collectRun() {
  await mapLimit(selected,integer('concurrency',3,8),async(c)=>{
   const p=path.join(dir,'companies',c.company_id+'.json');const existing=await readJson(p,null);
   const source=sources.find(s=>s.company_id===c.company_id);
-  if(existing&&!flags.refresh&&(existing.coverage.status==='complete'||existing.coverage.collection_complete===true)&&sourceCacheMatches(existing,source)&&!existing.jobs.some(j=>j.city_status==='included'&&!j.body_complete&&!knownOtherType(j)&&j.open_status!=='closed'))return;
+  if(existing&&!flags.refresh&&(existing.coverage.status==='complete'||existing.coverage.collection_complete===true)&&sourceCacheMatches(existing,source,run.search_plan)&&!existing.jobs.some(j=>j.city_status==='included'&&!j.body_complete&&!knownOtherType(j)&&j.open_status!=='closed'))return;
   if(!source)throw Error('当前来源名单已无该公司，请核对历史运行范围：'+c.display_name);
-  const result=await collect(source,{mode:'full',maxPages:integer('max-pages',1000,10000),pageSize:SEARCH_MODE.id==='campus'?20:50,timeoutMs:20000,evidenceDir:path.join(dir,'raw',c.company_id),cities:run.profile.city_filters,refresh:flags.refresh===true});
+  const result=await collect(source,{mode:'full',maxPages:integer('max-pages',1000,10000),pageSize:SEARCH_MODE.id==='campus'?20:50,timeoutMs:20000,evidenceDir:path.join(dir,'raw',c.company_id),cities:run.profile.city_filters,searchPlan:run.search_plan,refresh:flags.refresh===true});
   applyJobScope(result,run.profile.city_filters);await writeJson(p,result);console.log(JSON.stringify({company:c.display_name,coverage:result.coverage.status,...result.counts}));
  });
  run.status=(await readEvaluationScope(dir,{required:false}))?'evaluation_scope_confirmed':'awaiting_evaluation_scope';run.collected_at=new Date().toISOString();await writeJson(file,run);
@@ -184,16 +194,24 @@ async function main(){
   const dir=workspacePath(path.resolve(String(flags.run)));
   const run=await readJson(path.join(dir,'run.json'));
   if((run.search_mode||'campus')!==SEARCH_MODE.id)throw Error('运行招聘方向与当前 Skill 不一致，不能复用其他方向的采集或评估');
+  if(run.search_plan){validateSearchPlan(run.search_plan,sources);if(run.search_plan_fingerprint!==searchPlanFingerprint(run.search_plan))throw Error('检索计划已改变，请重新 prepare；不能沿用旧快照');}
  }
- if(SEARCH_MODE.id!=='campus'&&flags.run&&['next-batch','plan-assessment','screening-summary','batch-create','batch-start','batch-submit','batch-merge','render'].includes(command)){
+ if(flags.run&&['next-batch','plan-assessment','screening-summary','batch-create','batch-start','batch-submit','batch-merge','render'].includes(command)){
   const dir=workspacePath(path.resolve(String(flags.run))),run=await readJson(path.join(dir,'run.json'));
   for(const c of run.companies.filter(c=>c.selected)){
    const current=sources.find(s=>s.company_id===c.company_id),snapshot=await readJson(path.join(dir,'companies',c.company_id+'.json'),null);
-   if(!current||snapshot&&!sourceCacheMatches(snapshot,current))throw Error('历史运行快照与当前来源配置不一致，请重新 prepare/collect：'+c.display_name);
+   if((SEARCH_MODE.id!=='campus'||run.search_plan||snapshot?.search_plan_fingerprint)&&(!current||snapshot&&!sourceCacheMatches(snapshot,current,run.search_plan)))throw Error('历史运行快照与当前来源配置不一致，请重新 prepare/collect：'+c.display_name);
   }
  }
  if(command==='industries'){console.log(JSON.stringify({industries:INDUSTRIES.map(x=>({...x,companies:sources.filter(c=>c.industry_tags?.includes(x.id)).length})),all_companies:sources.length,source_validation:{...registryGate,companies:undefined},multiple_selection:true}));return;}
  if(command==='catalog')return catalog();
+ if(command==='repair-source'){
+  if(!flags.only)throw Error('主动修复需要 --only 明确公司范围');
+  const selected=chooseSources(),dir=path.join(SKILL_ROOT,'artifacts/source-repair',stamp()),rows=[];
+  for(const source of selected){const result=await collectCompanySources(source,{mode:'full',maxPages:1,maxDetails:3,pageSize:20,timeoutMs:10000,forceRepair:flags.force===true,evidenceDir:path.join(dir,source.company_id)});await writeJson(path.join(dir,source.company_id,'result.json'),result);rows.push({company:source.display_name,status:result.coverage.status,repairs:result.repairs||result.repair||[],jobs:result.jobs.length});}
+  await writeJson(path.join(dir,'summary.json'),{checked_at:new Date().toISOString(),rows});console.log(JSON.stringify({directory:dir,rows}));return;
+ }
+ if(command==='search-plan-check'){if(!flags.file)throw Error('需要 --file');const plan=validateSearchPlan(await readJson(path.resolve(String(flags.file))),sources);console.log(JSON.stringify({valid:true,companies:plan.company_ids.length,keywords:plan.keywords,fingerprint:searchPlanFingerprint(plan)}));return;}
  if(!command||command==='help')console.log(BATCH_HELP);
  if(['batch-create','batch-start','batch-submit','batch-merge','batch-close','batch-status'].includes(command)){
   if(!flags.run)throw new Error('需要 --run');

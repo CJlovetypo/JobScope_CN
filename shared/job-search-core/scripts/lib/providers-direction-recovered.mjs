@@ -200,6 +200,7 @@ export async function collectRecoveredDirection(source,options={}){
  }catch(e){failures.push(e.message);}
  // Missing details are retained, never silently dropped from an otherwise successful list.
  const queue=[];for(const item of all.values()){
+  if(opts.titleFilter&&!opts.titleFilter(item.job.title))continue;
   const j=item.job;if(j.open_status==='closed'||['formal','parttime','activity',targetMode==='social'?'internship':'social'].includes(j.formal_status))continue;
   const needsType=key==='xiaohongshu'&&j.formal_status==='unknown';
   const needsBody=opts.mode==='full'&&!j.body_complete;

@@ -37,3 +37,6 @@ Desktop.ini
 *.tmp
 *.swp
 ~$*
+# Shared runtime health is resumable local state; canonical repaired contracts stay in assets/sources.json.
+shared/job-search-core/state/
+*.repair.lock

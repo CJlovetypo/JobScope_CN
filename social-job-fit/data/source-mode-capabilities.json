@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "mode": "social",
-  "checked_at": "2026-09-19T11:29:47.919Z",
+  "checked_at": "2026-09-19T12:43:43.057Z",
   "note": "方向路由与证据的派生索引；不是独立来源库，不控制启停。",
   "configurations": [
     {
@@ -136,6 +136,18 @@
       "target_validation_status": "no_target_in_observed_rows",
       "enabled": true,
       "proof_file": "D:\\Feishu Project\\job-search-skill-pack\\social-job-fit\\artifacts\\direction-api-audit-20260919\\phase3-moka-sites\\92fbcb47e82bb94d1a63fec8\\result.json"
+    },
+    {
+      "company_id": "co_237972a90fe1ad0088cc",
+      "display_name": "阿斯利康中国",
+      "source_id": "feishu-20260919-884b91fef7f6e23763d9",
+      "provider": "workday",
+      "entry": "https://astrazeneca.wd3.myworkdayjobs.com/Careers",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
     },
     {
       "company_id": "co_375b24f7db5ae27a3e63",
@@ -993,14 +1005,26 @@
     {
       "company_id": "company-a8257ee69e55",
       "display_name": "百奥游戏",
-      "source_id": "0",
+      "source_id": "original-primary",
       "provider": "moka",
       "entry": "https://app.mokahr.com/campus_apply/aobi/25016#/",
       "strategy": "public_type_routing",
       "scope": "validate_target_at_runtime",
-      "target_validation_status": "no_target_in_observed_rows",
+      "target_validation_status": "untested",
       "enabled": true,
-      "proof_file": "D:\\Feishu Project\\job-search-skill-pack\\social-job-fit\\artifacts\\direction-api-audit-20260919\\phase3-moka-sites\\4eb02cabdd350045a070f28d\\result.json"
+      "proof_file": null
+    },
+    {
+      "company_id": "company-a8257ee69e55",
+      "display_name": "百奥游戏",
+      "source_id": "feishu-20260919-e6b5e078b50bc7f1af64",
+      "provider": "moka",
+      "entry": "https://app.mokahr.com/apply/aobi/25015",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
     },
     {
       "company_id": "co_701a98ce9cdef5d7a419",
@@ -1073,6 +1097,18 @@
       "target_validation_status": "verified_current_target",
       "enabled": true,
       "proof_file": "D:\\Feishu Project\\job-search-skill-pack\\social-job-fit\\artifacts\\direction-api-audit-20260919\\phase1\\c713d8c9235a63761f663e3b\\result.json"
+    },
+    {
+      "company_id": "co_afc907ed486dec1e3107",
+      "display_name": "百济神州",
+      "source_id": "feishu-20260919-27cab9ce09707c80bb23",
+      "provider": "moka",
+      "entry": "https://app.mokahr.com/apply/beigene/98934",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
     },
     {
       "company_id": "company-a1f173c3f02a",
@@ -1663,6 +1699,18 @@
       "target_validation_status": "no_target_in_observed_rows",
       "enabled": true,
       "proof_file": "D:\\Feishu Project\\job-search-skill-pack\\social-job-fit\\artifacts\\direction-api-audit-20260919\\phase2\\f6290318c33ecb86e037b4ad\\result.json"
+    },
+    {
+      "company_id": "co_e1476feed40f39d3577a",
+      "display_name": "北京发那科",
+      "source_id": "feishu-20260919-0c240c47098a464b5be9",
+      "provider": "feishu",
+      "entry": "https://iwhih7is28.jobs.feishu.cn/index",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
     },
     {
       "company_id": "co_95aef1dd5ac765910885",
@@ -2518,6 +2566,18 @@
       "proof_file": "D:\\Feishu Project\\job-search-skill-pack\\social-job-fit\\artifacts\\direction-api-audit-20260919\\phase2\\6d5915b4d09559e55615e5dc\\result.json"
     },
     {
+      "company_id": "company-96c91570391e",
+      "display_name": "博世中国",
+      "source_id": "feishu-20260919-100b342e48dd41799119",
+      "provider": "moka",
+      "entry": "https://app.mokahr.com/campus-recruitment/bosch/150946?sharePageId=4564076",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
       "company_id": "company-f03b76eec464",
       "display_name": "博思软件",
       "source_id": "api-344b8487b3e4",
@@ -2725,14 +2785,26 @@
     {
       "company_id": "company-d7fd3095dc81",
       "display_name": "超参数科技",
-      "source_id": "0",
+      "source_id": "original-primary",
       "provider": "moka",
       "entry": "https://app.mokahr.com/campus-recruitment/chaocanshu/45562",
       "strategy": "public_type_routing",
       "scope": "validate_target_at_runtime",
-      "target_validation_status": "verified_current_target",
+      "target_validation_status": "untested",
       "enabled": true,
-      "proof_file": "D:\\Feishu Project\\job-search-skill-pack\\social-job-fit\\artifacts\\direction-api-audit-20260919\\phase1\\423dbcb805f2024483ed5a5c\\result.json"
+      "proof_file": null
+    },
+    {
+      "company_id": "company-d7fd3095dc81",
+      "display_name": "超参数科技",
+      "source_id": "feishu-20260919-20a92a1242081e7a294a",
+      "provider": "moka",
+      "entry": "https://app.mokahr.com/social-recruitment/chaocanshu/39460",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
     },
     {
       "company_id": "company-d12d2728b24e",
@@ -3131,6 +3203,30 @@
       "proof_file": "D:\\Feishu Project\\job-search-skill-pack\\social-job-fit\\artifacts\\direction-api-audit-20260919\\phase3-moka-sites\\797c8ec6cae391559452751e\\result.json"
     },
     {
+      "company_id": "co_9824d496305484017432",
+      "display_name": "达美乐中国",
+      "source_id": "feishu-20260919-5c9d3c9ecf66b340ffc3",
+      "provider": "moka",
+      "entry": "https://app.mokahr.com/social-recruitment/dominos/7583",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "co_9824d496305484017432",
+      "display_name": "达美乐中国",
+      "source_id": "feishu-20260919-b417495c44e61a388718",
+      "provider": "moka",
+      "entry": "https://app.mokahr.com/apply/dominos/7133",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
       "company_id": "co_b7b8661ce0320323a3f9",
       "display_name": "达梦数据",
       "source_id": "api-41a5c2b0ab68ca9b",
@@ -3300,6 +3396,18 @@
       "proof_file": "D:\\Feishu Project\\job-search-skill-pack\\social-job-fit\\artifacts\\direction-api-audit-20260919\\phase1\\e237514ed64b38608f84e9ee\\result.json"
     },
     {
+      "company_id": "co_2b5ae07a47478a97ebef",
+      "display_name": "大华银行",
+      "source_id": "feishu-20260919-2d4f57c67cab32905222",
+      "provider": "workday",
+      "entry": "https://uobgroup.wd3.myworkdayjobs.com/UOBExternal",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
       "company_id": "co_c5cdbc8de257fe6062a9",
       "display_name": "大家保险集团",
       "source_id": "api-41cd4acf3d739885",
@@ -3334,6 +3442,18 @@
       "target_validation_status": "verified_current_target",
       "enabled": true,
       "proof_file": "D:\\Feishu Project\\job-search-skill-pack\\social-job-fit\\artifacts\\direction-api-audit-20260919\\phase3-moka-sites\\c811e488e18e136cd869c908\\result.json"
+    },
+    {
+      "company_id": "co_85b4fa309422157f6038",
+      "display_name": "大疆",
+      "source_id": "feishu-20260919-4e849ed4cf9417b03796",
+      "provider": "moka",
+      "entry": "https://apply.careers.dji.com/social-recruitment/dji/170070",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
     },
     {
       "company_id": "co_8d4050541977afbf07a3",
@@ -3514,6 +3634,18 @@
       "target_validation_status": "no_target_in_observed_rows",
       "enabled": true,
       "proof_file": "D:\\Feishu Project\\job-search-skill-pack\\social-job-fit\\artifacts\\direction-api-audit-20260919\\phase3-moka-sites\\6be7d87e578087f404354d71\\result.json"
+    },
+    {
+      "company_id": "hardware-oem-vwchina",
+      "display_name": "大众汽车集团中国",
+      "source_id": "feishu-20260919-6b26821de9c935990d16",
+      "provider": "moka",
+      "entry": "https://app.mokahr.com/social-recruitment/vwa/118094",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
     },
     {
       "company_id": "co_e1601160341f75db882b",
@@ -4092,16 +4224,40 @@
       "proof_file": "D:\\Feishu Project\\job-search-skill-pack\\social-job-fit\\artifacts\\direction-api-audit-20260919\\phase3-moka-sites\\08b4ee5ff83a2d2675dea1b0\\result.json"
     },
     {
+      "company_id": "company-19f23886e5ba",
+      "display_name": "点众科技",
+      "source_id": "feishu-20260919-5edd088682db32da9d65",
+      "provider": "moka",
+      "entry": "https://app.mokahr.com/apply/dianzhong/29071",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
       "company_id": "company-ba573bd148aa",
       "display_name": "电魂网络",
-      "source_id": "0",
+      "source_id": "original-primary",
       "provider": "moka",
       "entry": "https://app.mokahr.com/campus-recruitment/dianhun/55953#/jobs?page=1&anchorName=jobsList",
       "strategy": "public_type_routing",
       "scope": "validate_target_at_runtime",
-      "target_validation_status": "verified_current_target",
+      "target_validation_status": "untested",
       "enabled": true,
-      "proof_file": "D:\\Feishu Project\\job-search-skill-pack\\social-job-fit\\artifacts\\direction-api-audit-20260919\\phase3-moka-sites\\546264d44030686f36621e43\\result.json"
+      "proof_file": null
+    },
+    {
+      "company_id": "company-ba573bd148aa",
+      "display_name": "电魂网络",
+      "source_id": "feishu-20260919-3e7f5bfd3a8703c10f93",
+      "provider": "moka",
+      "entry": "https://app.mokahr.com/social-recruitment/dianhun/55952",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
     },
     {
       "company_id": "company-0287b84e799a",
@@ -5151,6 +5307,18 @@
       "proof_file": "D:\\Feishu Project\\job-search-skill-pack\\social-job-fit\\artifacts\\direction-api-audit-20260919\\phase1\\0d836b17cbc7a5e268e34b19\\result.json"
     },
     {
+      "company_id": "co_5f00341633998a1682a6",
+      "display_name": "费森尤斯卡比中国",
+      "source_id": "feishu-20260919-d18f6313b30303f43c9d",
+      "provider": "moka",
+      "entry": "https://app.mokahr.com/social-recruitment/fresenius/150660",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
       "company_id": "co_a5ba59975682895fe78e",
       "display_name": "费斯托中国",
       "source_id": "api-991ffe7bf177affc",
@@ -5343,6 +5511,18 @@
       "proof_file": "D:\\Feishu Project\\job-search-skill-pack\\social-job-fit\\artifacts\\direction-api-audit-20260919\\phase3-moka-sites\\f1ed9bc27d05cd1c6c00fd06\\result.json"
     },
     {
+      "company_id": "co_64fa83f5eddbf3491c91",
+      "display_name": "福龙马集团",
+      "source_id": "feishu-20260919-80111c31a35eda7e181c",
+      "provider": "moka",
+      "entry": "https://app.mokahr.com/social-recruitment/fjlm/128156",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
       "company_id": "company-c25ed092f7fd",
       "display_name": "福瑞泰克",
       "source_id": "api-1ef239d377fc",
@@ -5497,6 +5677,18 @@
       "target_validation_status": "no_target_in_observed_rows",
       "enabled": true,
       "proof_file": "D:\\Feishu Project\\job-search-skill-pack\\social-job-fit\\artifacts\\direction-api-audit-20260919\\phase3-moka-sites\\a2f9af8841253ddd5fea9251\\result.json"
+    },
+    {
+      "company_id": "company-6a5a52d1aede",
+      "display_name": "富途",
+      "source_id": "feishu-20260919-94eecc3c37b8c2d541e5",
+      "provider": "moka",
+      "entry": "https://app.mokahr.com/social-recruitment/futu5/141927",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
     },
     {
       "company_id": "co_aac42229abba624be5e1",
@@ -7377,6 +7569,18 @@
       "proof_file": "D:\\Feishu Project\\job-search-skill-pack\\social-job-fit\\artifacts\\direction-api-audit-20260919\\phase3-moka-sites\\5dbc455a5082e86c982cffd8\\result.json"
     },
     {
+      "company_id": "company-e494a3f97f38",
+      "display_name": "海艺互娱",
+      "source_id": "feishu-20260919-fbfc22003db323cb5f91",
+      "provider": "moka",
+      "entry": "https://app.mokahr.com/social-recruitment/haiyi/150698",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
       "company_id": "co_aa0439446ba64abf42c4",
       "display_name": "海正药业",
       "source_id": "api-58e6e067c0e0ed12",
@@ -7881,6 +8085,18 @@
       "proof_file": "D:\\Feishu Project\\job-search-skill-pack\\social-job-fit\\artifacts\\direction-api-audit-20260919\\phase3-moka-sites\\ce31a3c21edabebfea6feaf4\\result.json"
     },
     {
+      "company_id": "co_a68dcb9a96764641010b",
+      "display_name": "灏仟亿",
+      "source_id": "feishu-20260919-330a63158b5f33a50b24",
+      "provider": "moka",
+      "entry": "https://app.mokahr.com/social-recruitment/bestfulfill/150634?locale=zh-CN",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
       "company_id": "co_101c92266901f49ecb67",
       "display_name": "禾丰股份",
       "source_id": "api-21fae5b7b41c51d8",
@@ -8049,6 +8265,18 @@
       "proof_file": "D:\\Feishu Project\\job-search-skill-pack\\social-job-fit\\artifacts\\direction-api-audit-20260919\\phase2\\ceb8c21eb800021ec48394f2\\result.json"
     },
     {
+      "company_id": "company-420349f310af",
+      "display_name": "和黄医药",
+      "source_id": "feishu-20260919-3a19a2fd23124ba2ec12",
+      "provider": "moka",
+      "entry": "https://app.mokahr.com/social-recruitment/hutchmed/140975",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
       "company_id": "co_d5530bcf706e696439d5",
       "display_name": "和祐国际医院集团",
       "source_id": "api-d0606735b9495532",
@@ -8133,6 +8361,18 @@
       "proof_file": "D:\\Feishu Project\\job-search-skill-pack\\social-job-fit\\artifacts\\direction-api-audit-20260919\\phase1\\af35402cd6474bd8c375410c\\result.json"
     },
     {
+      "company_id": "co_85878280081bbe62d81e",
+      "display_name": "河南投资集团",
+      "source_id": "feishu-20260919-a74290f42c7ed4501e85",
+      "provider": "hotjob",
+      "entry": "https://wecruit.hotjob.cn/SU668678961eb8056fdea8565e/pb/social.html?projectCode=115201",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
       "company_id": "company-4635bfad0460",
       "display_name": "黑格科技",
       "source_id": "api-301bd50ea138c44b",
@@ -8203,6 +8443,18 @@
       "target_validation_status": "no_target_in_observed_rows",
       "enabled": true,
       "proof_file": "D:\\Feishu Project\\job-search-skill-pack\\social-job-fit\\artifacts\\direction-api-audit-20260919\\phase3-moka-sites\\8ec71243780e4e3b9082716e\\result.json"
+    },
+    {
+      "company_id": "co_82674fdbcc698714924f",
+      "display_name": "恒瑞医药",
+      "source_id": "feishu-20260919-09ae44fd191d970bdb64",
+      "provider": "moka",
+      "entry": "https://app.mokahr.com/social-recruitment/hengrui/145996?sharePageId=4570118",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
     },
     {
       "company_id": "co_8bc03f22679f56b27405",
@@ -9936,6 +10188,18 @@
       "proof_file": "D:\\Feishu Project\\job-search-skill-pack\\social-job-fit\\artifacts\\direction-api-audit-20260919\\phase1\\297b9a465c023ce6d7e65d34\\result.json"
     },
     {
+      "company_id": "hardware-oem-geely",
+      "display_name": "吉利控股集团",
+      "source_id": "feishu-20260919-2d6d4dfb9d5ca6132940",
+      "provider": "moka",
+      "entry": "https://app.mokahr.com/social-recruitment/geely/96123",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
       "company_id": "co_b3759bef2c4b1880bd09",
       "display_name": "吉林银行",
       "source_id": "api-7e6d809760aba393",
@@ -10306,6 +10570,18 @@
       "target_validation_status": "verified_current_target",
       "enabled": true,
       "proof_file": "D:\\Feishu Project\\job-search-skill-pack\\social-job-fit\\artifacts\\direction-api-audit-20260919\\phase1\\081c663c50c6c7bc2e5bed2e\\result.json"
+    },
+    {
+      "company_id": "co_bf8d8b16392ea152aa72",
+      "display_name": "嘉士伯中国",
+      "source_id": "feishu-20260919-d3f793e5670711af42d5",
+      "provider": "moka",
+      "entry": "https://app.mokahr.com/social-recruitment/carlsberg/6730?sharePageId=4581248",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
     },
     {
       "company_id": "co_197cb18ad58f95aab380",
@@ -10762,6 +11038,18 @@
       "target_validation_status": "verified_current_target",
       "enabled": true,
       "proof_file": "D:\\Feishu Project\\job-search-skill-pack\\social-job-fit\\artifacts\\direction-api-audit-20260919\\phase2\\3600aea89c409e4bde71dfaf\\result.json"
+    },
+    {
+      "company_id": "company-25c133fca9b3",
+      "display_name": "捷普",
+      "source_id": "feishu-20260919-6969b57088ca075bc3e4",
+      "provider": "workday",
+      "entry": "https://jabil.wd5.myworkdayjobs.com/jabil_Careers",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
     },
     {
       "company_id": "co_b56919f04191ebabfd59",
@@ -11472,6 +11760,18 @@
       "proof_file": "D:\\Feishu Project\\job-search-skill-pack\\social-job-fit\\artifacts\\direction-api-audit-20260919\\phase3-moka-sites\\95c6a543c490f055f4657b88\\result.json"
     },
     {
+      "company_id": "co_93003d515f633755e762",
+      "display_name": "晶泰科技",
+      "source_id": "feishu-20260919-b1a96759027a0be2e3d8",
+      "provider": "moka",
+      "entry": "https://app.mokahr.com/apply/jingtai/2144",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
       "company_id": "co_b91e0288225351c3da9a",
       "display_name": "晶易医药",
       "source_id": "api-246b4922d11a6c8e",
@@ -12061,6 +12361,18 @@
       "proof_file": "D:\\Feishu Project\\job-search-skill-pack\\social-job-fit\\artifacts\\direction-api-audit-20260919\\phase3-moka-sites\\f54ddd4e0aab968d7f1d6b4e\\result.json"
     },
     {
+      "company_id": "company-cb5737f67ecb",
+      "display_name": "均胜集团",
+      "source_id": "feishu-20260919-f4484a218f91dfa96d0f",
+      "provider": "moka",
+      "entry": "https://app.mokahr.com/social-recruitment/joyson/94310",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
       "company_id": "company-c97690b65dcc",
       "display_name": "卡尔动力",
       "source_id": "api-4cdab8098455",
@@ -12167,6 +12479,18 @@
       "target_validation_status": "no_target_in_observed_rows",
       "enabled": true,
       "proof_file": "D:\\Feishu Project\\job-search-skill-pack\\social-job-fit\\artifacts\\direction-api-audit-20260919\\phase3-moka-sites\\bc32d53841a13e9b625c9d65\\result.json"
+    },
+    {
+      "company_id": "co_a92e0a71a4d77f407d29",
+      "display_name": "开立医疗",
+      "source_id": "feishu-20260919-753cb8456a518bda1495",
+      "provider": "moka",
+      "entry": "https://app.mokahr.com/apply/sonoscape/5987",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
     },
     {
       "company_id": "co_83bff84bf1af0907b251",
@@ -12517,6 +12841,18 @@
       "proof_file": "D:\\Feishu Project\\job-search-skill-pack\\social-job-fit\\artifacts\\direction-api-audit-20260919\\phase1\\28d4c84f7bd9fbef3d4c02eb\\result.json"
     },
     {
+      "company_id": "co_5ccd0082a60f77456d24",
+      "display_name": "科华数据",
+      "source_id": "feishu-20260919-d27cf21b99b00fdb60a5",
+      "provider": "moka",
+      "entry": "https://app.mokahr.com/social-recruitment/kehua/116137",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
       "company_id": "co_25419c146a8fcfef5f4a",
       "display_name": "科济药业",
       "source_id": "api-e46da6202464585c",
@@ -12635,6 +12971,18 @@
       "target_validation_status": "verified_current_target",
       "enabled": true,
       "proof_file": "D:\\Feishu Project\\job-search-skill-pack\\social-job-fit\\artifacts\\direction-api-audit-20260919\\phase2\\5cfc569ed2c687f19db15355\\result.json"
+    },
+    {
+      "company_id": "co_6bc95d6b3da70aa533a3",
+      "display_name": "壳牌中国",
+      "source_id": "feishu-20260919-25c208e0b62bc8c7f951",
+      "provider": "workday",
+      "entry": "https://shell.wd3.myworkdayjobs.com/ShellCareers",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
     },
     {
       "company_id": "company-19e053be4832",
@@ -13165,6 +13513,18 @@
       "proof_file": "D:\\Feishu Project\\job-search-skill-pack\\social-job-fit\\artifacts\\direction-api-audit-20260919\\phase3-moka-sites\\3e9768f6aadcf9bb02807aa3\\result.json"
     },
     {
+      "company_id": "company-a9fb47cbc3ac",
+      "display_name": "乐元素",
+      "source_id": "feishu-20260919-c286a6e41d99a716fca3",
+      "provider": "moka",
+      "entry": "https://app.mokahr.com/apply/leyuansu/2358",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
       "company_id": "co_99b6396dc634834c1695",
       "display_name": "雷赛智能",
       "source_id": "api-9b9193a325ebe8ce",
@@ -13320,6 +13680,18 @@
       "target_validation_status": "no_target_in_observed_rows",
       "enabled": true,
       "proof_file": "D:\\Feishu Project\\job-search-skill-pack\\social-job-fit\\artifacts\\direction-api-audit-20260919\\phase3-moka-sites\\991d2c04498dcb5a177c5ffd\\result.json"
+    },
+    {
+      "company_id": "co_99b18b8533b50d839b1e",
+      "display_name": "力勤资源",
+      "source_id": "feishu-20260919-3df735b5088814cd1653",
+      "provider": "moka",
+      "entry": "https://app.mokahr.com/apply/lygend/171872",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
     },
     {
       "company_id": "co_28b5d7fa69fcb5e22bee",
@@ -15522,6 +15894,30 @@
       "proof_file": "D:\\Feishu Project\\job-search-skill-pack\\social-job-fit\\artifacts\\direction-api-audit-20260919\\phase1\\690446fa8db0c4d9c5447a54\\result.json"
     },
     {
+      "company_id": "company-6f1a9695e1b7",
+      "display_name": "宁德时代",
+      "source_id": "feishu-20260919-3f6013a7f5f32cdef5f7",
+      "provider": "moka",
+      "entry": "https://app.mokahr.com/social-recruitment/catlhr/98098",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-6f1a9695e1b7",
+      "display_name": "宁德时代",
+      "source_id": "feishu-20260919-26fd4fae553af612570e",
+      "provider": "moka",
+      "entry": "https://talent.catl.com/social-recruitment/catlhr/98098",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
       "company_id": "company-5a50ebac770f",
       "display_name": "柠檬微趣",
       "source_id": "api-a3750218832a",
@@ -15941,6 +16337,18 @@
       "target_validation_status": "no_target_in_observed_rows",
       "enabled": true,
       "proof_file": "D:\\Feishu Project\\job-search-skill-pack\\social-job-fit\\artifacts\\direction-api-audit-20260919\\phase3-moka-sites\\787dbd65c8aaf29387b9bb2f\\result.json"
+    },
+    {
+      "company_id": "company-5932b6a86248",
+      "display_name": "普华永道中国",
+      "source_id": "feishu-20260919-9328fdacaf15a95d8a6b",
+      "provider": "moka",
+      "entry": "https://app.mokahr.com/social-recruitment/pwc/140014",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
     },
     {
       "company_id": "co_102975227f92d80d53b1",
@@ -17697,6 +18105,18 @@
       "proof_file": "D:\\Feishu Project\\job-search-skill-pack\\social-job-fit\\artifacts\\direction-api-audit-20260919\\phase2\\1c37e19dc5f0a05ad66b2ba3\\result.json"
     },
     {
+      "company_id": "co_7488bf42aeed7e629d40",
+      "display_name": "三宁化工",
+      "source_id": "feishu-20260919-932de2d37b9c629630da",
+      "provider": "feishu",
+      "entry": "https://ealklohoih0.jobs.feishu.cn/index",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
       "company_id": "co_bc8b70425095e944dc0f",
       "display_name": "三诺生物",
       "source_id": "api-1f245a4ef6cac7f3",
@@ -17843,14 +18263,26 @@
     {
       "company_id": "company-36e311ace71a",
       "display_name": "散爆网络",
-      "source_id": "0",
+      "source_id": "original-primary",
       "provider": "moka",
       "entry": "https://jobs.sunborngame.com/campus-recruitment/micateam/146166#/job/2420226c-d0b0-4a55-87f9-3419be66beb7",
       "strategy": "public_type_routing",
       "scope": "validate_target_at_runtime",
-      "target_validation_status": "no_target_in_observed_rows",
+      "target_validation_status": "untested",
       "enabled": true,
-      "proof_file": "D:\\Feishu Project\\job-search-skill-pack\\social-job-fit\\artifacts\\direction-api-audit-20260919\\phase3-moka-sites\\f7240a39789c253bfe013232\\result.json"
+      "proof_file": null
+    },
+    {
+      "company_id": "company-36e311ace71a",
+      "display_name": "散爆网络",
+      "source_id": "feishu-20260919-8de96c29cc347c3c81d0",
+      "provider": "moka",
+      "entry": "https://app.mokahr.com/social-recruitment/micateam/142158?locale=zh-CN",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
     },
     {
       "company_id": "co_1696963550f18c901e57",
@@ -18884,6 +19316,18 @@
       "proof_file": "D:\\Feishu Project\\job-search-skill-pack\\social-job-fit\\artifacts\\direction-api-audit-20260919\\phase1\\10826501ffe3304cb98ce928\\result.json"
     },
     {
+      "company_id": "co_1158a39b58ce6e3bc83d",
+      "display_name": "韶音",
+      "source_id": "feishu-20260919-9176c28836a95d80f5c7",
+      "provider": "moka",
+      "entry": "https://app.mokahr.com/apply/aftershokzhr/40779/",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
       "company_id": "company-2b84d488e7f9",
       "display_name": "少年得到",
       "source_id": "api-a368e4110cde",
@@ -19018,14 +19462,26 @@
     {
       "company_id": "company-a5a4b99e9eb0",
       "display_name": "深蓝互动",
-      "source_id": "0",
+      "source_id": "original-primary",
       "provider": "moka",
       "entry": "https://app.mokahr.com/campus_apply/blueinteractive/38434#/jobs?zhineng=68721",
       "strategy": "public_type_routing",
       "scope": "validate_target_at_runtime",
-      "target_validation_status": "no_target_in_observed_rows",
+      "target_validation_status": "untested",
       "enabled": true,
-      "proof_file": "D:\\Feishu Project\\job-search-skill-pack\\social-job-fit\\artifacts\\direction-api-audit-20260919\\phase3-moka-sites\\4851e72c65ab85c860ce7f05\\result.json"
+      "proof_file": null
+    },
+    {
+      "company_id": "company-a5a4b99e9eb0",
+      "display_name": "深蓝互动",
+      "source_id": "feishu-20260919-ed78e781d50ba6a391fe",
+      "provider": "moka",
+      "entry": "https://app.mokahr.com/apply/blueinteractive/38433",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
     },
     {
       "company_id": "co_569c8a7a9d06c5bd3016",
@@ -19851,6 +20307,18 @@
       "proof_file": "D:\\Feishu Project\\job-search-skill-pack\\social-job-fit\\artifacts\\direction-api-audit-20260919\\phase2\\221f9ac54fb633ad97e25c72\\result.json"
     },
     {
+      "company_id": "company-ff2de0ad5525",
+      "display_name": "识渊科技",
+      "source_id": "feishu-20260919-a17f7f48d675fda53484",
+      "provider": "feishu",
+      "entry": "https://sailyond.jobs.feishu.cn/749776",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
       "company_id": "co_64e69f4e574cada86669",
       "display_name": "史密夫斐尔克莱默（HSF Kramer）",
       "source_id": "api-7fe2df65ef2d4a0f",
@@ -20440,6 +20908,18 @@
       "proof_file": "D:\\Feishu Project\\job-search-skill-pack\\social-job-fit\\artifacts\\direction-api-audit-20260919\\phase3-moka-sites\\147d48371380140f885f0543\\result.json"
     },
     {
+      "company_id": "co_afc3e23520dc79077bf9",
+      "display_name": "思摩尔国际",
+      "source_id": "feishu-20260919-26003b8a85cd278a46f0",
+      "provider": "moka",
+      "entry": "https://app.mokahr.com/apply/smoore/126055",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
       "company_id": "co_cbac1c9ce686c199cdbb",
       "display_name": "思谋科技",
       "source_id": "api-0439ed2283c8",
@@ -20642,6 +21122,18 @@
       "target_validation_status": "no_target_in_observed_rows",
       "enabled": true,
       "proof_file": "D:\\Feishu Project\\job-search-skill-pack\\social-job-fit\\artifacts\\direction-api-audit-20260919\\phase3-moka-sites\\6fd90b45a828188298908e9c\\result.json"
+    },
+    {
+      "company_id": "co_df6c5bc4a01db41bcbf8",
+      "display_name": "松下集团",
+      "source_id": "feishu-20260919-3cf188509e55fed71465",
+      "provider": "moka",
+      "entry": "https://app.mokahr.com/social-recruitment/panasonic/5215",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
     },
     {
       "company_id": "co_c56dd9ab55e91af94089",
@@ -20954,6 +21446,18 @@
       "target_validation_status": "no_target_in_observed_rows",
       "enabled": true,
       "proof_file": "D:\\Feishu Project\\job-search-skill-pack\\social-job-fit\\artifacts\\direction-api-audit-20260919\\phase2\\e7a444501e1c70244e61de2d\\result.json"
+    },
+    {
+      "company_id": "co_f91106f326893dd0d0fc",
+      "display_name": "塔斯汀",
+      "source_id": "feishu-20260919-0abd5f3e4f66525384b9",
+      "provider": "feishu",
+      "entry": "https://517tastien.jobs.feishu.cn/index",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
     },
     {
       "company_id": "company-55b4da647f0b",
@@ -21434,6 +21938,18 @@
       "target_validation_status": "verified_current_target",
       "enabled": true,
       "proof_file": "D:\\Feishu Project\\job-search-skill-pack\\social-job-fit\\artifacts\\direction-api-audit-20260919\\phase1\\02ae8e575a73a08b2da7a474\\result.json"
+    },
+    {
+      "company_id": "hardware-oem-tesla",
+      "display_name": "特斯拉中国",
+      "source_id": "feishu-20260919-386acdf4fab53e3e0bad",
+      "provider": "moka",
+      "entry": "https://app.mokahr.com/social-recruitment/tesla/46129",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
     },
     {
       "company_id": "company-53874092e000",
@@ -22326,6 +22842,18 @@
       "proof_file": "D:\\Feishu Project\\job-search-skill-pack\\social-job-fit\\artifacts\\direction-api-audit-20260919\\phase2\\679a3f28bd92338b70de7d6e\\result.json"
     },
     {
+      "company_id": "company-56130050ea37",
+      "display_name": "万兴科技",
+      "source_id": "feishu-20260919-ef1bfc7bab5d8e0102c0",
+      "provider": "beisen",
+      "entry": "https://wondershare.zhiye.com/Social/jobs?activityGuid=64700437-4157-480b-938b-029692d549cc&ActivityJumpPage=PortalPage",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
       "company_id": "co_69805f9944ed4298311d",
       "display_name": "万有引力",
       "source_id": "api-12fe9cf7ad07",
@@ -22422,6 +22950,18 @@
       "target_validation_status": "no_target_in_observed_rows",
       "enabled": true,
       "proof_file": "D:\\Feishu Project\\job-search-skill-pack\\social-job-fit\\artifacts\\direction-api-audit-20260919\\phase3-moka-sites\\18796ec57900d33045cba858\\result.json"
+    },
+    {
+      "company_id": "company-dd8d4ab486d0",
+      "display_name": "望尘科技",
+      "source_id": "feishu-20260919-e7b613226a619006562f",
+      "provider": "moka",
+      "entry": "https://app.mokahr.com/social-recruitment/galasports/98033",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
     },
     {
       "company_id": "co_18dfdfe2eb3c1db99f92",
@@ -22712,6 +23252,18 @@
       "proof_file": "D:\\Feishu Project\\job-search-skill-pack\\social-job-fit\\artifacts\\direction-api-audit-20260919\\phase3-moka-sites\\44ad7eaf5d84343b3e7c706b\\result.json"
     },
     {
+      "company_id": "co_f945d1e8f250dfffc8ff",
+      "display_name": "维谛技术（Vertiv）",
+      "source_id": "feishu-20260919-7c14dacc9d1b1153d309",
+      "provider": "moka",
+      "entry": "https://app.mokahr.com/social-recruitment/vertiv/148166",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
       "company_id": "co_214d674ac2668089775f",
       "display_name": "维力医疗",
       "source_id": "api-20e54e0975038ef8",
@@ -22904,6 +23456,18 @@
       "proof_file": "D:\\Feishu Project\\job-search-skill-pack\\social-job-fit\\artifacts\\direction-api-audit-20260919\\phase3-moka-sites\\2433b787b33f579f55ae4c33\\result.json"
     },
     {
+      "company_id": "co_079ce03536cd607f31c3",
+      "display_name": "温氏股份",
+      "source_id": "feishu-20260919-239fc2951592ccfb520d",
+      "provider": "moka",
+      "entry": "https://app.mokahr.com/social-recruitment/wens/92365",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
       "company_id": "company-68cceeff4507",
       "display_name": "文华财经",
       "source_id": "api-107eda4843dc",
@@ -22998,6 +23562,18 @@
       "target_validation_status": "verified_direction_endpoint",
       "enabled": true,
       "proof_file": "D:\\Feishu Project\\job-search-skill-pack\\social-job-fit\\artifacts\\direction-api-audit-20260919\\phase3-moka-sites\\9a618cf7af0d4be2e8286588\\result.json"
+    },
+    {
+      "company_id": "hardware-oem-volvo",
+      "display_name": "沃尔沃汽车",
+      "source_id": "feishu-20260919-ba0d49c8001cada0303c",
+      "provider": "moka",
+      "entry": "https://app.mokahr.com/social-recruitment/volvocars/56033",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
     },
     {
       "company_id": "co_f45842903dc6acdeef90",
@@ -23226,6 +23802,18 @@
       "target_validation_status": "no_target_in_observed_rows",
       "enabled": true,
       "proof_file": "D:\\Feishu Project\\job-search-skill-pack\\social-job-fit\\artifacts\\direction-api-audit-20260919\\phase3-moka-sites\\a15334d89b2e7fd90d6d0d6e\\result.json"
+    },
+    {
+      "company_id": "company-d0d920fd5470",
+      "display_name": "武汉市多比特信息科技有限公司",
+      "source_id": "feishu-20260919-0930d6eb7859203f444a",
+      "provider": "moka",
+      "entry": "https://app.mokahr.com/social-recruitment/wedobest/46166",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
     },
     {
       "company_id": "co_f5c26b122fe2410694bb",
@@ -28486,6 +29074,18 @@
       "proof_file": "D:\\Feishu Project\\job-search-skill-pack\\social-job-fit\\artifacts\\direction-api-audit-20260919\\phase2\\6c4dee3e78aed0f4c56c4be1\\result.json"
     },
     {
+      "company_id": "company-7de25dc6da02",
+      "display_name": "知存科技",
+      "source_id": "feishu-20260919-be41397ceb99de41140e",
+      "provider": "feishu",
+      "entry": "https://iucylxooqp.jobs.feishu.cn/index",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
       "company_id": "company-1bfefe0febb2",
       "display_name": "知乎",
       "source_id": "api-41bcc92ff7bf",
@@ -28556,6 +29156,18 @@
       "target_validation_status": "no_target_in_observed_rows",
       "enabled": true,
       "proof_file": "D:\\Feishu Project\\job-search-skill-pack\\social-job-fit\\artifacts\\direction-api-audit-20260919\\phase2\\1178f9a799bba1780ffc1f0f\\result.json"
+    },
+    {
+      "company_id": "co_367cff08ccd4203a54f4",
+      "display_name": "致欧家居",
+      "source_id": "feishu-20260919-28fd9da733437adb7e17",
+      "provider": "feishu",
+      "entry": "https://songmicshome.jobs.feishu.cn/index",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
     },
     {
       "company_id": "co_44a0905af9ab52a76f26",
@@ -28712,6 +29324,18 @@
       "target_validation_status": "no_target_in_observed_rows",
       "enabled": true,
       "proof_file": "D:\\Feishu Project\\job-search-skill-pack\\social-job-fit\\artifacts\\direction-api-audit-20260919\\phase2\\82037c0f50347fecfcaa6fd7\\result.json"
+    },
+    {
+      "company_id": "co_ed71c3420dbf50a96a81",
+      "display_name": "智元机器人",
+      "source_id": "feishu-20260919-3b78ed4e41fc30a9067f",
+      "provider": "feishu",
+      "entry": "https://agirobot.jobs.feishu.cn/socialrecruitment",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
     },
     {
       "company_id": "co_ad6880885ce035e4b9c3",
@@ -29613,6 +30237,18 @@
       "target_validation_status": "verified_current_target",
       "enabled": true,
       "proof_file": "D:\\Feishu Project\\job-search-skill-pack\\social-job-fit\\artifacts\\direction-api-audit-20260919\\phase3-moka-sites\\cff5761e585625515944a9fc\\result.json"
+    },
+    {
+      "company_id": "co_90cbbe82fddc1db527ac",
+      "display_name": "中国葛洲坝集团机电建设有限公司",
+      "source_id": "feishu-20260919-ee01929cd01bf811a11a",
+      "provider": "moka",
+      "entry": "https://app.mokahr.com/social-recruitment/cggc/145101?locale=zh-CN",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
     },
     {
       "company_id": "co_00459f42b849396207a8",
@@ -31561,6 +32197,18 @@
       "proof_file": "D:\\Feishu Project\\job-search-skill-pack\\social-job-fit\\artifacts\\direction-api-audit-20260919\\phase3-moka-sites\\cc83898aa5e4fdb43007931f\\result.json"
     },
     {
+      "company_id": "company-20297f8dd31f",
+      "display_name": "中控信息",
+      "source_id": "feishu-20260919-784dd89556ed06d8b252",
+      "provider": "moka",
+      "entry": "https://app.mokahr.com/social-recruitment/zkxx/102190",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
       "company_id": "co_67a1d3386ba12bfd63df",
       "display_name": "中联重科(机器人&人工智能方向）",
       "source_id": "api-b46f618b5155",
@@ -32208,6 +32856,18 @@
       "target_validation_status": "no_target_in_observed_rows",
       "enabled": true,
       "proof_file": "D:\\Feishu Project\\job-search-skill-pack\\social-job-fit\\artifacts\\direction-api-audit-20260919\\phase3-moka-sites\\c4148e963a4ca5fe6197c1b9\\result.json"
+    },
+    {
+      "company_id": "company-952589f06560",
+      "display_name": "中微公司",
+      "source_id": "feishu-20260919-efb97e3587a95130ee97",
+      "provider": "moka",
+      "entry": "https://app.mokahr.com/apply/amec/28371",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
     },
     {
       "company_id": "co_dd7b45d76f1640c61bbc",
@@ -32863,6 +33523,18 @@
       "proof_file": "D:\\Feishu Project\\job-search-skill-pack\\social-job-fit\\artifacts\\direction-api-audit-20260919\\phase3-moka-sites\\22d66c717b11124cdf63ed95\\result.json"
     },
     {
+      "company_id": "co_7648e619e9beec1aab9a",
+      "display_name": "卓识基金",
+      "source_id": "feishu-20260919-9e9f5113677828c488b5",
+      "provider": "moka",
+      "entry": "https://app.mokahr.com/apply/zsquant/168167",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
       "company_id": "company-efc1dd0d6798",
       "display_name": "卓驭",
       "source_id": "api-22e5ae60d2d2",
@@ -33067,6 +33739,18 @@
       "proof_file": "D:\\Feishu Project\\job-search-skill-pack\\social-job-fit\\artifacts\\direction-api-audit-20260919\\phase3-moka-sites\\dcc31852a8332ff51e5afdb1\\result.json"
     },
     {
+      "company_id": "company-0fda9d1da8b5",
+      "display_name": "紫龙游戏",
+      "source_id": "feishu-20260919-c2ed51131a03cac11dd9",
+      "provider": "moka",
+      "entry": "https://app.mokahr.com/apply/zlongame/6102",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
       "company_id": "co_be165cca2d1ff5425b14",
       "display_name": "紫讯科技",
       "source_id": "api-333271ed231b39d2",
@@ -33114,6 +33798,18 @@
       "target_validation_status": "no_target_in_observed_rows",
       "enabled": true,
       "proof_file": "D:\\Feishu Project\\job-search-skill-pack\\social-job-fit\\artifacts\\direction-api-audit-20260919\\phase2\\76d8a0c17d5b0728769728f9\\result.json"
+    },
+    {
+      "company_id": "co_8dc72a4672894e0f743c",
+      "display_name": "自变量机器人",
+      "source_id": "feishu-20260919-df1a0affc8d5fbe22c1a",
+      "provider": "feishu",
+      "entry": "https://x2-robot.jobs.feishu.cn/index",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
     },
     {
       "company_id": "co_907b7d4b7f9bb9225e36",
@@ -33332,6 +34028,18 @@
       "proof_file": "D:\\Feishu Project\\job-search-skill-pack\\social-job-fit\\artifacts\\direction-api-audit-20260919\\phase2\\84de036f3190280cf985c35d\\result.json"
     },
     {
+      "company_id": "co_edc80bd3f91db2f6b4d3",
+      "display_name": "ASML阿斯麦光刻",
+      "source_id": "feishu-20260919-446b27944f2571603865",
+      "provider": "workday",
+      "entry": "https://asml.wd3.myworkdayjobs.com/ASMLEXT1",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
       "company_id": "company-546d7fb2bbf2",
       "display_name": "ATL 新能源科技",
       "source_id": "api-3784a0675ad3",
@@ -33382,14 +34090,26 @@
     {
       "company_id": "company-316d43c02147",
       "display_name": "Cadence",
-      "source_id": "0",
+      "source_id": "original-primary",
       "provider": "moka",
       "entry": "https://app.mokahr.com/social-recruitment/cadence/118728?locale=zh-CN",
       "strategy": "public_type_routing",
       "scope": "validate_target_at_runtime",
-      "target_validation_status": "verified_current_target",
+      "target_validation_status": "untested",
       "enabled": true,
-      "proof_file": "D:\\Feishu Project\\job-search-skill-pack\\social-job-fit\\artifacts\\direction-api-audit-20260919\\phase2\\9556661e5e0e5b679afb830b\\result.json"
+      "proof_file": null
+    },
+    {
+      "company_id": "company-316d43c02147",
+      "display_name": "Cadence",
+      "source_id": "feishu-20260919-7df8a613f9b68d32a399",
+      "provider": "workday",
+      "entry": "https://cadence.wd1.myworkdayjobs.com/External_Careers",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
     },
     {
       "company_id": "co_b47cf5e76b57e6fa92ad",
@@ -33561,6 +34281,18 @@
       "proof_file": "D:\\Feishu Project\\job-search-skill-pack\\social-job-fit\\artifacts\\direction-api-audit-20260919\\phase2\\21936cc02dc8e15b2dadd34e\\result.json"
     },
     {
+      "company_id": "co_5ae073a3a8e68455a57b",
+      "display_name": "Fastlane",
+      "source_id": "feishu-20260919-4f8b9c48501317a96b09",
+      "provider": "feishu",
+      "entry": "https://fastbase.jobs.feishu.cn/index",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
       "company_id": "co_52adc4d861d936178387",
       "display_name": "FMG时尚动势集团",
       "source_id": "api-d3558506d3e8beb5",
@@ -33645,6 +34377,18 @@
       "proof_file": "D:\\Feishu Project\\job-search-skill-pack\\social-job-fit\\artifacts\\direction-api-audit-20260919\\phase3-moka-sites\\ed42444f0a4f9252cacdd11d\\result.json"
     },
     {
+      "company_id": "company-ce4986f05bce",
+      "display_name": "Garena",
+      "source_id": "feishu-20260919-1dc2ad0b65e6eacdb2a6",
+      "provider": "moka",
+      "entry": "https://app.mokahr.com/social-recruitment/garena/147001?locale=zh-CN",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
       "company_id": "co_c65c4cfaf0e6ff2ce295",
       "display_name": "GE医疗",
       "source_id": "api-80745b6ad0b56930",
@@ -33655,6 +34399,30 @@
       "target_validation_status": "no_target_in_observed_rows",
       "enabled": true,
       "proof_file": "D:\\Feishu Project\\job-search-skill-pack\\social-job-fit\\artifacts\\direction-api-audit-20260919\\phase3-moka-sites\\a0d202a720b50b7b9f938079\\result.json"
+    },
+    {
+      "company_id": "co_c65c4cfaf0e6ff2ce295",
+      "display_name": "GE医疗",
+      "source_id": "feishu-20260919-a7ce6373ba5799add7cc",
+      "provider": "workday",
+      "entry": "https://gehc.wd5.myworkdayjobs.com/GEHC_ExternalSite",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "co_c65c4cfaf0e6ff2ce295",
+      "display_name": "GE医疗",
+      "source_id": "feishu-20260919-47e43e1fca383c4fdea2",
+      "provider": "moka",
+      "entry": "https://app.mokahr.com/social-recruitment/gehc/142249",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
     },
     {
       "company_id": "company-b38dad0419bf",
@@ -33946,6 +34714,18 @@
       "proof_file": "D:\\Feishu Project\\job-search-skill-pack\\social-job-fit\\artifacts\\direction-api-audit-20260919\\phase2\\df795f1dbe4ce5e8070fb4c6\\result.json"
     },
     {
+      "company_id": "co_84048535bf0a99f3075e",
+      "display_name": "MPS芯源系统",
+      "source_id": "feishu-20260919-ee222c07db27f931138d",
+      "provider": "workday",
+      "entry": "https://monolithicpower.wd12.myworkdayjobs.com/MPS_Careers",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
       "company_id": "co_1785cfc3bc6ac7738e8b",
       "display_name": "Nothing",
       "source_id": "api-fb46fe4ef608",
@@ -34078,6 +34858,18 @@
       "proof_file": "D:\\Feishu Project\\job-search-skill-pack\\social-job-fit\\artifacts\\direction-api-audit-20260919\\phase3-moka-sites\\18f76482ecae3cbf07a233f9\\result.json"
     },
     {
+      "company_id": "co_d54b2245a2156fc724e8",
+      "display_name": "SGS",
+      "source_id": "feishu-20260919-2d0f9b321bf3f0ae7c4e",
+      "provider": "moka",
+      "entry": "https://app.mokahr.com/social-recruitment/sgs/150049",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
       "company_id": "co_f580d14b421c9509dc7d",
       "display_name": "Sharpa",
       "source_id": "api-975e46510d05",
@@ -34136,6 +34928,18 @@
       "target_validation_status": "no_target_in_observed_rows",
       "enabled": true,
       "proof_file": "D:\\Feishu Project\\job-search-skill-pack\\social-job-fit\\artifacts\\direction-api-audit-20260919\\phase3-moka-sites\\bd24b9c865bd2100a5a78d3b\\result.json"
+    },
+    {
+      "company_id": "company-7eece4194725",
+      "display_name": "SHEIN",
+      "source_id": "feishu-20260919-d48726b18a9dbfc42ace",
+      "provider": "moka",
+      "entry": "https://app.mokahr.com/social-recruitment/shein/2933",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
     },
     {
       "company_id": "company-2faa8bd0603d",
@@ -34582,6 +35386,1578 @@
       "target_validation_status": "verified_current_target",
       "enabled": true,
       "proof_file": "D:\\Feishu Project\\job-search-skill-pack\\social-job-fit\\artifacts\\direction-api-audit-20260919\\phase1\\5d6d5af9532495ac711400a6\\result.json"
+    },
+    {
+      "company_id": "company-b54f3dd95257",
+      "display_name": "湖北大数据集团有限公司",
+      "source_id": "feishu-20260919-e9e559baa82f812d7752",
+      "provider": "beisen",
+      "entry": "https://hbdsjjt.zhiye.com/social/detail?jobAdId=459b7c3d-89bf-42a6-87c4-6369ed2da605",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-b0f4cdf1288e",
+      "display_name": "费森尤斯医疗（中国招聘门户）",
+      "source_id": "feishu-20260919-ba1f38a6648e09047a92",
+      "provider": "workday",
+      "entry": "https://freseniusmedicalcare.wd3.myworkdayjobs.com/fme",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-090da504a3e6",
+      "display_name": "华侨银行（中国招聘门户）",
+      "source_id": "feishu-20260919-730dcab45f08579718bb",
+      "provider": "workday",
+      "entry": "https://ocbc.wd102.myworkdayjobs.com/External",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-cf2a220e436b",
+      "display_name": "宏利（中国招聘门户）",
+      "source_id": "feishu-20260919-4995521e8bb764a750bf",
+      "provider": "workday",
+      "entry": "https://manulife.wd3.myworkdayjobs.com/MFCJH_Jobs",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-a3d79f4dbadc",
+      "display_name": "马士基（中国招聘门户）",
+      "source_id": "feishu-20260919-613f49bd98cf4e513995",
+      "provider": "workday",
+      "entry": "https://maersk.wd3.myworkdayjobs.com/Maersk_Careers",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-83ac6a8a2843",
+      "display_name": "AIG（中国招聘门户）",
+      "source_id": "feishu-20260919-1f137c865d2f74de572d",
+      "provider": "workday",
+      "entry": "https://aig.wd1.myworkdayjobs.com/aig",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-104d08c2716e",
+      "display_name": "辉瑞（中国招聘门户）",
+      "source_id": "feishu-20260919-4d302f12163a9883114c",
+      "provider": "workday",
+      "entry": "https://pfizer.wd1.myworkdayjobs.com/PfizerCareers",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-3cd432d7e6e3",
+      "display_name": "赛诺菲（中国招聘门户）",
+      "source_id": "feishu-20260919-a55eeb5384053dabf022",
+      "provider": "workday",
+      "entry": "https://sanofi.wd3.myworkdayjobs.com/SanofiCareers",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-ce15e6bfc483",
+      "display_name": "ICON（中国招聘门户）",
+      "source_id": "feishu-20260919-291972bccb784ad981fd",
+      "provider": "workday",
+      "entry": "https://icon.wd3.myworkdayjobs.com/broadbean_external",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-1dc3fc0d1bba",
+      "display_name": "百时美施贵宝（中国招聘门户）",
+      "source_id": "feishu-20260919-6027dfb18a74fe8be1af",
+      "provider": "workday",
+      "entry": "https://bristolmyerssquibb.wd5.myworkdayjobs.com/BMS",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-b2bd1c0f8714",
+      "display_name": "Fortrea（中国招聘门户）",
+      "source_id": "feishu-20260919-7ee5e57a28f46ab59c0e",
+      "provider": "workday",
+      "entry": "https://fortrea.wd1.myworkdayjobs.com/Fortrea",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-2bef03ffcfe3",
+      "display_name": "强生（中国招聘门户）",
+      "source_id": "feishu-20260919-4a86740d0ae6b280c80d",
+      "provider": "workday",
+      "entry": "https://jj.wd5.myworkdayjobs.com/JJ",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-86c5d62a57e4",
+      "display_name": "赫力昂（中国招聘门户）",
+      "source_id": "feishu-20260919-b9f0ed77d749c6717c6a",
+      "provider": "workday",
+      "entry": "https://gsknch.wd3.myworkdayjobs.com/GSKCareers",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-70509647d402",
+      "display_name": "Labcorp（中国招聘门户）",
+      "source_id": "feishu-20260919-8944306e0c3939fb22c6",
+      "provider": "workday",
+      "entry": "https://labcorp.wd1.myworkdayjobs.com/External",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-12fd63f6d6c3",
+      "display_name": "森萨塔（中国招聘门户）",
+      "source_id": "feishu-20260919-b9118f63cd2147e75c06",
+      "provider": "workday",
+      "entry": "https://sensata.wd1.myworkdayjobs.com/Sensata-Careers",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-fc7bbdac4373",
+      "display_name": "LSEG（中国招聘门户）",
+      "source_id": "feishu-20260919-af9c7994d486b8ec84c1",
+      "provider": "workday",
+      "entry": "https://lseg.wd3.myworkdayjobs.com/Careers",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-85a6a876135d",
+      "display_name": "液化空气（中国招聘门户）",
+      "source_id": "feishu-20260919-e4f6dacfe2d187d5b1a2",
+      "provider": "workday",
+      "entry": "https://airliquidehr.wd3.myworkdayjobs.com/AirLiquideExternalCareer",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-6ad600066fb7",
+      "display_name": "应用材料（中国招聘门户）",
+      "source_id": "feishu-20260919-5adbafa4ccc089794787",
+      "provider": "workday",
+      "entry": "https://amat.wd1.myworkdayjobs.com/External",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-670d1400321a",
+      "display_name": "Vantive（中国招聘门户）",
+      "source_id": "feishu-20260919-d6283ed88a3b89532222",
+      "provider": "workday",
+      "entry": "https://vantive.wd108.myworkdayjobs.com/Vantive",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-42406d2c2dad",
+      "display_name": "雅培（中国招聘门户）",
+      "source_id": "feishu-20260919-ecd23ef9e61a5273ec91",
+      "provider": "workday",
+      "entry": "https://abbott.wd5.myworkdayjobs.com/abbottcareers",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-80d08353bcc1",
+      "display_name": "蔡司（中国招聘门户）",
+      "source_id": "feishu-20260919-d079a6ff0d109cf4d500",
+      "provider": "workday",
+      "entry": "https://zeissgroup.wd3.myworkdayjobs.com/External",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-47d385a25c04",
+      "display_name": "赛默飞（中国招聘门户）",
+      "source_id": "feishu-20260919-ccca5a193d800f667151",
+      "provider": "workday",
+      "entry": "https://thermofisher.wd5.myworkdayjobs.com/ThermoFisherCareers",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-639ab7789783",
+      "display_name": "联邦快递（中国招聘门户）",
+      "source_id": "feishu-20260919-33bdd2d7409367970b05",
+      "provider": "workday",
+      "entry": "https://fedex.wd1.myworkdayjobs.com/FXE_APAC_External",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-29effa21c738",
+      "display_name": "3M（中国招聘门户）",
+      "source_id": "feishu-20260919-5b22f4f37c3a754b6d1f",
+      "provider": "workday",
+      "entry": "https://3m.wd1.myworkdayjobs.com/Search",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-abfcae51c3d1",
+      "display_name": "KLA科磊（中国招聘门户）",
+      "source_id": "feishu-20260919-dd2459706604642f280a",
+      "provider": "workday",
+      "entry": "https://kla.wd1.myworkdayjobs.com/Search",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-7cabf51b3829",
+      "display_name": "道富（中国招聘门户）",
+      "source_id": "feishu-20260919-b540449cbfe26777f966",
+      "provider": "workday",
+      "entry": "https://statestreet.wd1.myworkdayjobs.com/Global",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-e58ab55ed9ec",
+      "display_name": "玛氏（中国招聘门户）",
+      "source_id": "feishu-20260919-96a8ac802089588db264",
+      "provider": "workday",
+      "entry": "https://mars.wd3.myworkdayjobs.com/External",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-d41ad6560994",
+      "display_name": "哈曼（中国招聘门户）",
+      "source_id": "feishu-20260919-6f9c400cc348e6690577",
+      "provider": "workday",
+      "entry": "https://harman.wd3.myworkdayjobs.com/HARMAN",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-fc709995b050",
+      "display_name": "开利（中国招聘门户）",
+      "source_id": "feishu-20260919-a3ab6d19f07542c02c08",
+      "provider": "workday",
+      "entry": "https://carrier.wd5.myworkdayjobs.com/jobs",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-5bd6702c9a89",
+      "display_name": "金鹰集团（中国招聘门户）",
+      "source_id": "feishu-20260919-e5507e14d79c82ca59d6",
+      "provider": "workday",
+      "entry": "https://averis.wd3.myworkdayjobs.com/RGE",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-e597af3b66f8",
+      "display_name": "戴森（中国招聘门户）",
+      "source_id": "feishu-20260919-9ed6348e90bb5598ac52",
+      "provider": "workday",
+      "entry": "https://dyson.wd3.myworkdayjobs.com/dyson_careers",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-9e3d9afb7c4d",
+      "display_name": "电通（中国招聘门户）",
+      "source_id": "feishu-20260919-e86cb05dc56a1526c538",
+      "provider": "workday",
+      "entry": "https://dentsuaegis.wd3.myworkdayjobs.com/DAN_GLOBAL",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-d6f4264d8245",
+      "display_name": "Logicalis（中国招聘门户）",
+      "source_id": "feishu-20260919-3cb93010d62d1411e08c",
+      "provider": "workday",
+      "entry": "https://logicalis.wd3.myworkdayjobs.com/LogicalisCareers",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-5597c68f4773",
+      "display_name": "GE Vernova（中国招聘门户）",
+      "source_id": "feishu-20260919-e8afeb60cc05f909a4d0",
+      "provider": "workday",
+      "entry": "https://gevernova.wd5.myworkdayjobs.com/Vernova_ExternalSite",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-b96c5820be56",
+      "display_name": "空气产品（中国招聘门户）",
+      "source_id": "feishu-20260919-56139264b4d6a7e96c43",
+      "provider": "workday",
+      "entry": "https://airproducts.wd5.myworkdayjobs.com/AP0001",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-5c8febcbffe7",
+      "display_name": "爱德华生命科学（中国招聘门户）",
+      "source_id": "feishu-20260919-fd68a716e9191f33f0b9",
+      "provider": "workday",
+      "entry": "https://edwards.wd5.myworkdayjobs.com/edwardscareers",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-b1e25cb2b40b",
+      "display_name": "星展（中国招聘门户）",
+      "source_id": "feishu-20260919-d53ed25e042797fe7129",
+      "provider": "workday",
+      "entry": "https://dbs.wd3.myworkdayjobs.com/DBS_Careers",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-c244de888732",
+      "display_name": "亿滋（中国招聘门户）",
+      "source_id": "feishu-20260919-51e20fda05f21221f448",
+      "provider": "workday",
+      "entry": "https://mdlz.wd3.myworkdayjobs.com/External",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-05b9b25301c4",
+      "display_name": "IQVIA（中国招聘门户）",
+      "source_id": "feishu-20260919-47d081b4350ab8065550",
+      "provider": "workday",
+      "entry": "https://iqvia.wd1.myworkdayjobs.com/IQVIA",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-82b7b8fe3a76",
+      "display_name": "默沙东（中国招聘门户）",
+      "source_id": "feishu-20260919-43ffdda7484dc8ebff76",
+      "provider": "workday",
+      "entry": "https://msd.wd5.myworkdayjobs.com/SearchJobs",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-734ad2cf6bf1",
+      "display_name": "乔治费歇尔（中国招聘门户）",
+      "source_id": "feishu-20260919-d50af650960cb442db88",
+      "provider": "workday",
+      "entry": "https://georgfischer.wd103.myworkdayjobs.com/GeorgFischer_Careers",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-88974c2640b9",
+      "display_name": "丹纳赫（中国招聘门户）",
+      "source_id": "feishu-20260919-45a3e8ce6448491758d3",
+      "provider": "moka",
+      "entry": "https://app.mokahr.com/social-recruitment/danaher_com/148809",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-0cd14d99c786",
+      "display_name": "安捷伦（中国招聘门户）",
+      "source_id": "feishu-20260919-d54908940723d6252749",
+      "provider": "workday",
+      "entry": "https://agilent.wd5.myworkdayjobs.com/Agilent_Careers",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-23206b1126dd",
+      "display_name": "空中客车（中国招聘门户）",
+      "source_id": "feishu-20260919-cc9bd41d3c298f2f96bc",
+      "provider": "workday",
+      "entry": "https://ag.wd3.myworkdayjobs.com/Airbus",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-ae89c01211a8",
+      "display_name": "凯度（中国招聘门户）",
+      "source_id": "feishu-20260919-13af1bee183b49773e6b",
+      "provider": "workday",
+      "entry": "https://kantar.wd3.myworkdayjobs.com/KANTAR",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-2c39d8d569b3",
+      "display_name": "Bose（中国招聘门户）",
+      "source_id": "feishu-20260919-0fa44ce6960a196b4444",
+      "provider": "workday",
+      "entry": "https://boseallaboutme.wd503.myworkdayjobs.com/Bose_Careers",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-165907e48529",
+      "display_name": "华纳兄弟探索（中国招聘门户）",
+      "source_id": "feishu-20260919-a8a1272ae34cc6489cc8",
+      "provider": "workday",
+      "entry": "https://warnerbros.wd5.myworkdayjobs.com/global",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-aa7815ff0757",
+      "display_name": "庄信万丰（中国招聘门户）",
+      "source_id": "feishu-20260919-4e0c4b5d71e2068c51a2",
+      "provider": "workday",
+      "entry": "https://matthey.wd3.myworkdayjobs.com/Ext_Career_Site",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-ca3610a50cab",
+      "display_name": "Medline（中国招聘门户）",
+      "source_id": "feishu-20260919-ff497c66c4b7560068eb",
+      "provider": "workday",
+      "entry": "https://medline.wd5.myworkdayjobs.com/Medline",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-13cb169a0f9c",
+      "display_name": "思科（中国招聘门户）",
+      "source_id": "feishu-20260919-512e5ff3710c49c35225",
+      "provider": "workday",
+      "entry": "https://cisco.wd5.myworkdayjobs.com/Cisco_Careers",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-957d78a95b97",
+      "display_name": "施普林格自然（中国招聘门户）",
+      "source_id": "feishu-20260919-97093371dca614e0bc8d",
+      "provider": "workday",
+      "entry": "https://springernature.wd3.myworkdayjobs.com/SpringerNatureCareers",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-50fdcb24abf8",
+      "display_name": "Syneos Health（中国招聘门户）",
+      "source_id": "feishu-20260919-6447ff58b847980a311a",
+      "provider": "workday",
+      "entry": "https://syneoshealth.wd12.myworkdayjobs.com/Syneos_Health_External_Site",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-42d291b4f2c2",
+      "display_name": "陶氏（中国招聘门户）",
+      "source_id": "feishu-20260919-eb019cd244152c40656a",
+      "provider": "workday",
+      "entry": "https://dow.wd1.myworkdayjobs.com/ExternalCareers",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-d51e545d9189",
+      "display_name": "雀巢（大中华区招聘门户）",
+      "source_id": "feishu-20260919-9da60a5bd6b3e1d43d98",
+      "provider": "moka",
+      "entry": "https://app.mokahr.com/social-recruitment/nestlezgc/91898",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-8531bd12d727",
+      "display_name": "IFF（中国招聘门户）",
+      "source_id": "feishu-20260919-85ed7d91caada98b7414",
+      "provider": "workday",
+      "entry": "https://iff.wd5.myworkdayjobs.com/IFF_Careers",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-3c9f9ee221bc",
+      "display_name": "爱尔康（中国招聘门户）",
+      "source_id": "feishu-20260919-8d1f7c204f1da8c73485",
+      "provider": "workday",
+      "entry": "https://alcon.wd5.myworkdayjobs.com/careers_alcon",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-5edb775971fd",
+      "display_name": "A&F（中国招聘门户）",
+      "source_id": "feishu-20260919-8193b7cf4b8c90c2269e",
+      "provider": "workday",
+      "entry": "https://abercrombie.wd108.myworkdayjobs.com/anf",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-0f74850ffe9e",
+      "display_name": "德昌电机（中国招聘门户）",
+      "source_id": "feishu-20260919-92a56a75f3bcae79babe",
+      "provider": "workday",
+      "entry": "https://johnsonelectric.wd3.myworkdayjobs.com/Career_JE",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-4db54c7e801a",
+      "display_name": "伊莱克斯（中国招聘门户）",
+      "source_id": "feishu-20260919-c34617c17d51c7cc2b3b",
+      "provider": "workday",
+      "entry": "https://electrolux.wd3.myworkdayjobs.com/ElectroluxCareerSite",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-ee8c52dc9aef",
+      "display_name": "PPG（中国招聘门户）",
+      "source_id": "feishu-20260919-2e7dfb72095e54344c62",
+      "provider": "workday",
+      "entry": "https://ppg.wd5.myworkdayjobs.com/PPG_CAREERS",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-618dbb96fdc4",
+      "display_name": "阿法拉伐（中国招聘门户）",
+      "source_id": "feishu-20260919-204edeb1fa0cd77ddc8c",
+      "provider": "workday",
+      "entry": "https://alfalaval.wd3.myworkdayjobs.com/Alfa_Laval_jobs",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-214aeda75f53",
+      "display_name": "Autodesk（中国招聘门户）",
+      "source_id": "feishu-20260919-269e010788a5cacbe995",
+      "provider": "workday",
+      "entry": "https://autodesk.wd1.myworkdayjobs.com/Ext",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-f0ebec6bd945",
+      "display_name": "益普生（中国招聘门户）",
+      "source_id": "feishu-20260919-9d2e61d6d23212c7b671",
+      "provider": "workday",
+      "entry": "https://ipsen.wd103.myworkdayjobs.com/Ipsen_Careers",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-cd4d99ce6939",
+      "display_name": "参天（中国招聘门户）",
+      "source_id": "feishu-20260919-6d0c921b1689b9daad31",
+      "provider": "moka",
+      "entry": "https://app.mokahr.com/social-recruitment/santen/99365",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-f08bc868aaaf",
+      "display_name": "Apex Group（中国招聘门户）",
+      "source_id": "feishu-20260919-e772e7d85539d7a1cdf8",
+      "provider": "workday",
+      "entry": "https://theapexgroup.wd3.myworkdayjobs.com/apexgroupcareers",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-efa70e39e3c2",
+      "display_name": "英特尔（中国招聘门户）",
+      "source_id": "feishu-20260919-1345d18d29731641ad72",
+      "provider": "workday",
+      "entry": "https://intel.wd1.myworkdayjobs.com/External",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-730649b5d805",
+      "display_name": "Tory Burch（中国招聘门户）",
+      "source_id": "feishu-20260919-99e81fb64de43fbc574e",
+      "provider": "workday",
+      "entry": "https://toryburch.wd1.myworkdayjobs.com/toryburchcareers",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-42f99edbbebb",
+      "display_name": "PVH（中国招聘门户）",
+      "source_id": "feishu-20260919-00e4c2c30401d9ff9059",
+      "provider": "workday",
+      "entry": "https://pvh.wd1.myworkdayjobs.com/PVH_Careers",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-575e5ccb3319",
+      "display_name": "迪士尼（中国招聘门户）",
+      "source_id": "feishu-20260919-b2765ffd65ed1fc6e4e9",
+      "provider": "workday",
+      "entry": "https://disney.wd5.myworkdayjobs.com/disneycareer",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-ea8be24b2c27",
+      "display_name": "皮尔法伯（中国招聘门户）",
+      "source_id": "feishu-20260919-a69684c1ffaafae9a10f",
+      "provider": "workday",
+      "entry": "https://pierrefabre.wd3.myworkdayjobs.com/External_Career_Site",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-1fbc04e53747",
+      "display_name": "珀金埃尔默（中国招聘门户）",
+      "source_id": "feishu-20260919-9e56cdce9217f5e75420",
+      "provider": "workday",
+      "entry": "https://newperkinelmer.wd1.myworkdayjobs.com/External",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-6ee587000f66",
+      "display_name": "安霸（中国招聘门户）",
+      "source_id": "feishu-20260919-29f468e7f6f5d4ee5783",
+      "provider": "workday",
+      "entry": "https://ambarella.wd108.myworkdayjobs.com/Ambarella",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-8ed4eb61a92e",
+      "display_name": "Wiley（中国招聘门户）",
+      "source_id": "feishu-20260919-703d9db481fa86184f3a",
+      "provider": "workday",
+      "entry": "https://wiley.wd1.myworkdayjobs.com/wiley_careers",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-310216d4ad46",
+      "display_name": "万豪（中国招聘门户）",
+      "source_id": "feishu-20260919-1b53d37bd4e1e25306e6",
+      "provider": "moka",
+      "entry": "https://app.mokahr.com/social-recruitment/marriott/141002",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-f9600d11827a",
+      "display_name": "史赛克（中国招聘门户）",
+      "source_id": "feishu-20260919-c5e9b34fc3fde5fb4011",
+      "provider": "workday",
+      "entry": "https://stryker.wd1.myworkdayjobs.com/StrykerCareers",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-f6563b690205",
+      "display_name": "耐克（中国招聘门户）",
+      "source_id": "feishu-20260919-bff710cf0d5fe6a27c37",
+      "provider": "workday",
+      "entry": "https://nike.wd1.myworkdayjobs.com/nke",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-4763a8d87880",
+      "display_name": "迈图（中国招聘门户）",
+      "source_id": "feishu-20260919-632d0da8ea15ed027a09",
+      "provider": "workday",
+      "entry": "https://momentive.wd1.myworkdayjobs.com/MC",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-ea5cc9b447a5",
+      "display_name": "PHINIA（中国招聘门户）",
+      "source_id": "feishu-20260919-10e89d7acf131f4d15c4",
+      "provider": "workday",
+      "entry": "https://phinia.wd5.myworkdayjobs.com/PHINIA_Careers",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-a21a0eb699a3",
+      "display_name": "赢创（中国招聘门户）",
+      "source_id": "feishu-20260919-b195718eba7b676642cf",
+      "provider": "workday",
+      "entry": "https://evonik.wd3.myworkdayjobs.com/External_Careers",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-2a2625ae4290",
+      "display_name": "富达国际（中国招聘门户）",
+      "source_id": "feishu-20260919-414802de87e5b3b278d5",
+      "provider": "workday",
+      "entry": "https://fil.wd3.myworkdayjobs.com/001",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-be746b33851d",
+      "display_name": "Palo Alto Networks（中国招聘门户）",
+      "source_id": "feishu-20260919-c392e67f419cc4d6ef25",
+      "provider": "workday",
+      "entry": "https://paloaltonetworks.wd5.myworkdayjobs.com/panwexternalcareers",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-0a4395cf6c9f",
+      "display_name": "罗宾逊物流（中国招聘门户）",
+      "source_id": "feishu-20260919-694319b34006d48650c9",
+      "provider": "workday",
+      "entry": "https://chrobinson.wd5.myworkdayjobs.com/CHRobinson",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-5d82a887f422",
+      "display_name": "科思创（中国招聘门户）",
+      "source_id": "feishu-20260919-743a9ed1440452151298",
+      "provider": "workday",
+      "entry": "https://covestro.wd3.myworkdayjobs.com/cov_external",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-bbaa056e04fe",
+      "display_name": "苏尔寿（中国招聘门户）",
+      "source_id": "feishu-20260919-fc7385ac5862f28e9271",
+      "provider": "workday",
+      "entry": "https://sulzer.wd502.myworkdayjobs.com/SulzerJobs",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-36febb7f1d2f",
+      "display_name": "Global Payments（中国招聘门户）",
+      "source_id": "feishu-20260919-9f731f0a24a0cc253523",
+      "provider": "workday",
+      "entry": "https://tsys.wd1.myworkdayjobs.com/TSYS",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-020b2b5486ca",
+      "display_name": "爱思唯尔（中国招聘门户）",
+      "source_id": "feishu-20260919-03c7091dc269edc3293d",
+      "provider": "workday",
+      "entry": "https://relx.wd3.myworkdayjobs.com/ElsevierJobs",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-30d9d7fd15fd",
+      "display_name": "赛多利斯（中国招聘门户）",
+      "source_id": "feishu-20260919-1abdced2c2bdaba1ffdb",
+      "provider": "workday",
+      "entry": "https://sartorius.wd3.myworkdayjobs.com/sartoriuscareers",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-e27b20b426b6",
+      "display_name": "伟创力（中国招聘门户）",
+      "source_id": "feishu-20260919-a2914bfe159e8610de10",
+      "provider": "workday",
+      "entry": "https://flextronics.wd1.myworkdayjobs.com/Careers",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-2db6de125935",
+      "display_name": "OmniOn Power（中国招聘门户）",
+      "source_id": "feishu-20260919-8d0fdab625eab6ea4eeb",
+      "provider": "workday",
+      "entry": "https://omnionpower.wd5.myworkdayjobs.com/External",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-d8d7e52d18a1",
+      "display_name": "富勒（中国招聘门户）",
+      "source_id": "feishu-20260919-0d8c994701f2a6027954",
+      "provider": "workday",
+      "entry": "https://hbfuller.wd1.myworkdayjobs.com/Careers",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-e7f9627b46ba",
+      "display_name": "布伦泰格（中国招聘门户）",
+      "source_id": "feishu-20260919-04ff902ec60e06ed8aaa",
+      "provider": "workday",
+      "entry": "https://brenntag.wd3.myworkdayjobs.com/brenntag_jobs",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-52af159b369e",
+      "display_name": "ERM（中国招聘门户）",
+      "source_id": "feishu-20260919-7a382e83369837fc81b2",
+      "provider": "workday",
+      "entry": "https://erm.wd3.myworkdayjobs.com/ERM_Careers",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-81b517a68682",
+      "display_name": "吉利德（中国招聘门户）",
+      "source_id": "feishu-20260919-910d18c8f286660bb8ea",
+      "provider": "workday",
+      "entry": "https://gilead.wd1.myworkdayjobs.com/gileadcareers",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-39623ebfd44a",
+      "display_name": "AVEVA（中国招聘门户）",
+      "source_id": "feishu-20260919-1536e27993d592a0faa1",
+      "provider": "workday",
+      "entry": "https://aveva.wd3.myworkdayjobs.com/AVEVA_careers",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-6e7825313ea5",
+      "display_name": "英纳法（中国招聘门户）",
+      "source_id": "feishu-20260919-41091114d887e49a39b2",
+      "provider": "workday",
+      "entry": "https://inalfa.wd3.myworkdayjobs.com/InalfaCareers",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-484b4cc7f8e5",
+      "display_name": "艺康（中国招聘门户）",
+      "source_id": "feishu-20260919-e46f2e2fdd3c3a90890a",
+      "provider": "workday",
+      "entry": "https://ecolab.wd1.myworkdayjobs.com/Ecolab_External",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-2c8cddfa0012",
+      "display_name": "英迈（中国招聘门户）",
+      "source_id": "feishu-20260919-b007aef561e1844a3543",
+      "provider": "workday",
+      "entry": "https://ingrammicro.wd5.myworkdayjobs.com/IngramMicro",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-fb4835eb099c",
+      "display_name": "索理思（中国招聘门户）",
+      "source_id": "feishu-20260919-49c68feab17dac9be82c",
+      "provider": "workday",
+      "entry": "https://solenis.wd1.myworkdayjobs.com/Solenis",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-fc1d673c8bf5",
+      "display_name": "美光（中国招聘门户）",
+      "source_id": "feishu-20260919-0c6f4cf024159964ffd5",
+      "provider": "workday",
+      "entry": "https://micron.wd1.myworkdayjobs.com/External",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-28b2f4d102e8",
+      "display_name": "拓领（中国招聘门户）",
+      "source_id": "feishu-20260919-9868ac2a5307c6b9032b",
+      "provider": "workday",
+      "entry": "https://tollgroup.wd5.myworkdayjobs.com/TollGroup",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-70b04435964e",
+      "display_name": "爱德曼（中国招聘门户）",
+      "source_id": "feishu-20260919-2c7754537a0bb72a43e2",
+      "provider": "workday",
+      "entry": "https://djeholdings.wd5.myworkdayjobs.com/edelman-careers-E200",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-fddfea9171fd",
+      "display_name": "Expedia（中国招聘门户）",
+      "source_id": "feishu-20260919-add8474d17610eb255eb",
+      "provider": "workday",
+      "entry": "https://expedia.wd108.myworkdayjobs.com/search",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-704e1a4965e9",
+      "display_name": "保乐力加（中国招聘门户）",
+      "source_id": "feishu-20260919-0c6e1c9c2d89ca2c1e36",
+      "provider": "workday",
+      "entry": "https://pernodricard.wd3.myworkdayjobs.com/pernod-ricard",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-3447912f37a2",
+      "display_name": "4flow（中国招聘门户）",
+      "source_id": "feishu-20260919-916124bdb95fbf1b3ba7",
+      "provider": "workday",
+      "entry": "https://4flow.wd3.myworkdayjobs.com/4flow",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-c7703c0c43b4",
+      "display_name": "威富（中国招聘门户）",
+      "source_id": "feishu-20260919-39bd1591a8246059e5de",
+      "provider": "workday",
+      "entry": "https://vfc.wd5.myworkdayjobs.com/vfc_careers",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-2d0066f5320a",
+      "display_name": "云顶新耀",
+      "source_id": "feishu-20260919-adeeb899544a333c0946",
+      "provider": "moka",
+      "entry": "https://app.mokahr.com/social-recruitment/everestmedicines/150886?locale=zh-CN",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-9957a75b5e60",
+      "display_name": "景昱医疗",
+      "source_id": "feishu-20260919-f7ca7c345231389c4579",
+      "provider": "beisen",
+      "entry": "https://sceneray.zhiye.com/",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-760f8d5d5944",
+      "display_name": "菲仕兰（中国招聘门户）",
+      "source_id": "feishu-20260919-6dc1106eb03ad2f56aae",
+      "provider": "moka",
+      "entry": "https://app.mokahr.com/social-recruitment/feishilan/140175?hash=%23%2Fjobs",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-e5bea6ea1438",
+      "display_name": "网龙网络",
+      "source_id": "feishu-20260919-4d09e8bc9bc7f4c4ee25",
+      "provider": "beisen",
+      "entry": "https://nd.zhiye.com/social/jobs?3=%5B%7B%22id%22%3A%229%22%2C%22label%22",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-148da9f227b0",
+      "display_name": "史泰博（上海）有限公司",
+      "source_id": "feishu-20260919-abb80b5e0f2a5872fc0f",
+      "provider": "beisen",
+      "entry": "https://stbchinacn.zhiye.com/social/jobs",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-2610913bb65d",
+      "display_name": "阿克苏诺贝尔（中国招聘门户）",
+      "source_id": "feishu-20260919-4f644a507c4addd65012",
+      "provider": "moka",
+      "entry": "https://app.mokahr.com/social-recruitment/akzonobel/116138",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-65c3c777796e",
+      "display_name": "伊顿（中国招聘门户）",
+      "source_id": "feishu-20260919-ff8fc5901cab19ab0ecc",
+      "provider": "moka",
+      "entry": "https://app.mokahr.com/social-recruitment/eaton/147226?locale=zh-CN",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-8a337d0efabd",
+      "display_name": "埃夫特机器人",
+      "source_id": "feishu-20260919-28444d302728b0da683b",
+      "provider": "beisen",
+      "entry": "https://efort.zhiye.com/",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-9db395e38682",
+      "display_name": "希尔顿（中国招聘门户）",
+      "source_id": "feishu-20260919-de79c2d3391d886103ea",
+      "provider": "beisen",
+      "entry": "https://hilton.zhiye.com/jobs?2=%5B%7B%22id%22%3A%222%22%2C%22label%22%3A%22%E9%85%92%E5%BA%97%E6%9C%BA%E4%BC%9A%22%7D%5D&memory=%7B%22ClassificationTwo%22%3A%5B%222%22%5D%2C%22Category%22%3A%5B%221%22%2C%222%22%5D%7D&silence=1",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-7edebacc1bb1",
+      "display_name": "隆鑫通用",
+      "source_id": "feishu-20260919-4c80f843857a427c379e",
+      "provider": "beisen",
+      "entry": "https://lxty.zhiye.com/social/jobs",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-b9426138c349",
+      "display_name": "诺诚健华",
+      "source_id": "feishu-20260919-4bd7e3b4cb7eac466303",
+      "provider": "beisen",
+      "entry": "https://innocare.zhiye.com/",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-08740b3f3311",
+      "display_name": "昆拓信诚",
+      "source_id": "feishu-20260919-b46c996c619608fff51a",
+      "provider": "beisen",
+      "entry": "https://kuntuo.zhiye.com/",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-713a10cf3724",
+      "display_name": "永星互动",
+      "source_id": "feishu-20260919-2045f45354b7fc2fcf43",
+      "provider": "moka",
+      "entry": "https://app-tc.mokahr.com/social-recruitment/h3d/16051",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-cab4e487aa60",
+      "display_name": "连连支付",
+      "source_id": "feishu-20260919-a5cbbd4cbb3000361c24",
+      "provider": "moka",
+      "entry": "https://app.mokahr.com/social-recruitment/yintong/45487?locale=zh-CN",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-65e90eccfd17",
+      "display_name": "中亦科技",
+      "source_id": "feishu-20260919-4e6477346ab014af5e72",
+      "provider": "beisen",
+      "entry": "https://ceservice.zhiye.com/social/jobs",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-5c16a44678f9",
+      "display_name": "施耐德电气（中国招聘门户）",
+      "source_id": "feishu-20260919-a1535ff8908bad6a3d52",
+      "provider": "moka",
+      "entry": "https://app.mokahr.com/social-recruitment/se/98712?sharePageId=4586877",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-d45d8fdf8953",
+      "display_name": "滔搏",
+      "source_id": "feishu-20260919-3aaa840c9aae36ffc9ee",
+      "provider": "beisen",
+      "entry": "https://topsports.zhiye.com/social/jobs",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-cb893834546b",
+      "display_name": "汇宇制药",
+      "source_id": "feishu-20260919-c2a157132d886a7c3f9f",
+      "provider": "moka",
+      "entry": "https://app.mokahr.com/apply/huiyupharma/38920",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-d7833d802569",
+      "display_name": "联宇集团",
+      "source_id": "feishu-20260919-3c304717c9d5bd29e244",
+      "provider": "beisen",
+      "entry": "https://link-trans.zhiye.com/social",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-730abb77a721",
+      "display_name": "济南城建集团有限公司",
+      "source_id": "feishu-20260919-0a28b3f61e2b472a7c0a",
+      "provider": "beisen",
+      "entry": "https://jncj.zhiye.com/social/jobs",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-15a03612bc58",
+      "display_name": "新希望金融科技",
+      "source_id": "feishu-20260919-d2cb2f0bc06e87aa9c88",
+      "provider": "beisen",
+      "entry": "https://xwfintech.zhiye.com/social",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-70a272626d7a",
+      "display_name": "上海医药",
+      "source_id": "feishu-20260919-5456840800b8620f4b10",
+      "provider": "beisen",
+      "entry": "https://sph.zhiye.com/social/jobs",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-1aef22941857",
+      "display_name": "拜尔斯道夫（中国招聘门户）",
+      "source_id": "feishu-20260919-5af62c744f504fdaedab",
+      "provider": "moka",
+      "entry": "https://app.mokahr.com/social-recruitment/beiersdorf/140226",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-5a70756b0a28",
+      "display_name": "万事达工业科技股份有限公司",
+      "source_id": "feishu-20260919-5dd02f752fe9b9d931ff",
+      "provider": "beisen",
+      "entry": "https://wiskind.zhiye.com/social",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-06a674a66a4a",
+      "display_name": "海通恒信",
+      "source_id": "feishu-20260919-633c36e874ad0fe61359",
+      "provider": "beisen",
+      "entry": "https://utfinancing.zhiye.com/4/jobs",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-5a756e7f17a7",
+      "display_name": "百胜中国",
+      "source_id": "feishu-20260919-e9276b06e6725d50696d",
+      "provider": "beisen",
+      "entry": "https://yumchinarsc.zhiye.com/social/detail?jobAdId=431dc81d-4d55-4d42-9454-ea24921de2bf",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
     }
   ]
 }

@@ -327,7 +327,7 @@ export async function collectCustom(source, options = {}) {
     for(const item of all.values())if((options.targetMode||SEARCH_MODE.id)!=='campus')item.job=reviewRecruitment(item.job,options.targetMode||SEARCH_MODE.id);
     const pending = [...all.values()].filter(({ job }) => job.open_status !== 'closed' && ((options.targetMode||SEARCH_MODE.id)==='campus'?!['internship', 'social'].includes(job.formal_status):!knownOtherType(job,options.targetMode||SEARCH_MODE.id))
       && (key === 'xiaohongshu' && job.formal_status === 'unknown' || options.mode === 'full' && (!job.body_complete || key === 'tme' && job.formal_status === 'unknown'))
-      && (options.mode !== 'full' || cityMatch(job, options.cities)) && config.detail_request);
+      && (!options.titleFilter||options.titleFilter(job.title)) && (options.mode !== 'full' || cityMatch(job, options.cities)) && config.detail_request);
     let next = 0;
     await Promise.all(Array.from({ length: Math.min(3, pending.length) }, async () => {
       while (next < pending.length) {

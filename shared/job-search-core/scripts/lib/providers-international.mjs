@@ -63,7 +63,7 @@ export async function collectInternational(source,options={}){
       listURL=cfg.origin+'/wday/cxs/'+cfg.tenant+'/'+cfg.site+'/jobs';
       const boot=await requestJson(client,{url:listURL,method:'POST',body:{appliedFacets:{},limit:20,offset:0,searchText:''}},'public_country_facet_discovery');
       filter=chinaFacet(boot.data.facets);if(!filter)return collectWorkdayLocationFallback(source,{...opts,client,bootstrap:boot});
-      body={appliedFacets:{[filter.field]:[filter.value]},limit:20,offset:0,searchText:''};
+      body={appliedFacets:{[filter.field]:[filter.value]},limit:20,offset:0,searchText:opts.keyword||''};
     }else listURL='https://api.smartrecruiters.com/v1/companies/'+encodeURIComponent(cfg.company_identifier)+'/postings';
     let offset=0,initialTotal=null;
     for(let page=0;page<opts.maxPages;page++){
@@ -83,7 +83,9 @@ export async function collectInternational(source,options={}){
     }
   }catch(e){reason=e.message;errors.push(e.message);}
     // Detail processing is outside the pagination try: a failed later page keeps earlier rows.
-    const queue=[...rows.values()];let cursor=0;
+    const eligible=[...rows.values()].filter(({row})=>!opts.titleFilter||opts.titleFilter(row.title||row.name));
+    const queue=opts.maxDetails==null?eligible:eligible.slice(0,Math.max(0,opts.maxDetails));let cursor=0;
+    for(const {row,record} of eligible.slice(queue.length))jobs.push(source.provider==='workday'?workdayListPlaceholder(row,source,record,'detail_limit'): {...normalizeSmartRecruiters(row,source,record,true),body_complete:false,detail_skipped_reason:'detail_limit'});
     await Promise.all(Array.from({length:opts.detailConcurrency},async()=>{while(cursor<queue.length){const {row,record}=queue[cursor++];try{
       const url=source.provider==='workday'?cfg.origin+'/wday/cxs/'+cfg.tenant+'/'+cfg.site+row.externalPath:row.ref;
       if(source.provider==='workday'&&!String(row.externalPath).startsWith('/job/'))throw Error('Unexpected externalPath');

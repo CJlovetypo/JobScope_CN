@@ -1,0 +1,2182 @@
+{
+  "checked_at": "2026-09-19T12:39:08.029Z",
+  "new_companies": 131,
+  "new_configurations": 198,
+  "total_companies": 2413,
+  "total_configurations": 3069,
+  "added": [
+    {
+      "id": "e9e559baa82f812d7752",
+      "company_id": "company-b54f3dd95257",
+      "company": "湖北大数据集团有限公司",
+      "provider": "beisen",
+      "entry_url": "https://hbdsjjt.zhiye.com/social/detail?jobAdId=459b7c3d-89bf-42a6-87c4-6369ed2da605",
+      "identity_basis": "public_employer_name:湖北大数据集团有限公司",
+      "complete_jds": 26
+    },
+    {
+      "id": "ba1f38a6648e09047a92",
+      "company_id": "company-b0f4cdf1288e",
+      "company": "费森尤斯医疗（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://freseniusmedicalcare.wd3.myworkdayjobs.com/fme",
+      "identity_basis": "public_employer_name:Fresenius Medical Care",
+      "complete_jds": 27
+    },
+    {
+      "id": "730dcab45f08579718bb",
+      "company_id": "company-090da504a3e6",
+      "company": "华侨银行（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://ocbc.wd102.myworkdayjobs.com/External",
+      "identity_basis": "public_employer_name:OCBC China",
+      "complete_jds": 19
+    },
+    {
+      "id": "4995521e8bb764a750bf",
+      "company_id": "company-cf2a220e436b",
+      "company": "宏利（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://manulife.wd3.myworkdayjobs.com/MFCJH_Jobs",
+      "identity_basis": "public_employer_name:Manulife",
+      "complete_jds": 1
+    },
+    {
+      "id": "613f49bd98cf4e513995",
+      "company_id": "company-a3d79f4dbadc",
+      "company": "马士基（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://maersk.wd3.myworkdayjobs.com/Maersk_Careers",
+      "identity_basis": "public_employer_name:Maersk",
+      "complete_jds": 19
+    },
+    {
+      "id": "a7ce6373ba5799add7cc",
+      "company_id": "co_c65c4cfaf0e6ff2ce295",
+      "company": "GE医疗",
+      "provider": "workday",
+      "entry_url": "https://gehc.wd5.myworkdayjobs.com/GEHC_ExternalSite",
+      "identity_basis": "public_employer_name:GE Medical",
+      "complete_jds": 33
+    },
+    {
+      "id": "5c9d3c9ecf66b340ffc3",
+      "company_id": "co_9824d496305484017432",
+      "company": "达美乐中国",
+      "provider": "moka",
+      "entry_url": "https://app.mokahr.com/social-recruitment/dominos/7583",
+      "identity_basis": "previously_verified_same_ats_tenant",
+      "complete_jds": 5
+    },
+    {
+      "id": "b417495c44e61a388718",
+      "company_id": "co_9824d496305484017432",
+      "company": "达美乐中国",
+      "provider": "moka",
+      "entry_url": "https://app.mokahr.com/apply/dominos/7133",
+      "identity_basis": "previously_verified_same_ats_tenant",
+      "complete_jds": 4
+    },
+    {
+      "id": "1f137c865d2f74de572d",
+      "company_id": "company-83ac6a8a2843",
+      "company": "AIG（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://aig.wd1.myworkdayjobs.com/aig",
+      "identity_basis": "public_employer_name:AIG Insurance",
+      "complete_jds": 6
+    },
+    {
+      "id": "6969b57088ca075bc3e4",
+      "company_id": "company-25c133fca9b3",
+      "company": "捷普",
+      "provider": "workday",
+      "entry_url": "https://jabil.wd5.myworkdayjobs.com/jabil_Careers",
+      "identity_basis": "public_employer_name:Jabil",
+      "complete_jds": 31
+    },
+    {
+      "id": "4d302f12163a9883114c",
+      "company_id": "company-104d08c2716e",
+      "company": "辉瑞（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://pfizer.wd1.myworkdayjobs.com/PfizerCareers",
+      "identity_basis": "public_employer_name:Pfizer",
+      "complete_jds": 23
+    },
+    {
+      "id": "884b91fef7f6e23763d9",
+      "company_id": "co_237972a90fe1ad0088cc",
+      "company": "阿斯利康中国",
+      "provider": "workday",
+      "entry_url": "https://astrazeneca.wd3.myworkdayjobs.com/Careers",
+      "identity_basis": "public_employer_name:AstraZeneca",
+      "complete_jds": 9
+    },
+    {
+      "id": "a55eeb5384053dabf022",
+      "company_id": "company-3cd432d7e6e3",
+      "company": "赛诺菲（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://sanofi.wd3.myworkdayjobs.com/SanofiCareers",
+      "identity_basis": "public_employer_name:Sanofi",
+      "complete_jds": 28
+    },
+    {
+      "id": "291972bccb784ad981fd",
+      "company_id": "company-ce15e6bfc483",
+      "company": "ICON（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://icon.wd3.myworkdayjobs.com/broadbean_external",
+      "identity_basis": "public_employer_name:ICON Clinical",
+      "complete_jds": 33
+    },
+    {
+      "id": "6027dfb18a74fe8be1af",
+      "company_id": "company-1dc3fc0d1bba",
+      "company": "百时美施贵宝（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://bristolmyerssquibb.wd5.myworkdayjobs.com/BMS",
+      "identity_basis": "public_employer_name:BMS",
+      "complete_jds": 10
+    },
+    {
+      "id": "7ee5e57a28f46ab59c0e",
+      "company_id": "company-b2bd1c0f8714",
+      "company": "Fortrea（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://fortrea.wd1.myworkdayjobs.com/Fortrea",
+      "identity_basis": "public_employer_name:Fortrea",
+      "complete_jds": 38
+    },
+    {
+      "id": "4a86740d0ae6b280c80d",
+      "company_id": "company-2bef03ffcfe3",
+      "company": "强生（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://jj.wd5.myworkdayjobs.com/JJ",
+      "identity_basis": "public_employer_name:Johnson & Johnson",
+      "complete_jds": 18
+    },
+    {
+      "id": "b9f0ed77d749c6717c6a",
+      "company_id": "company-86c5d62a57e4",
+      "company": "赫力昂（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://gsknch.wd3.myworkdayjobs.com/GSKCareers",
+      "identity_basis": "public_employer_name:Haleon",
+      "complete_jds": 28
+    },
+    {
+      "id": "8944306e0c3939fb22c6",
+      "company_id": "company-70509647d402",
+      "company": "Labcorp（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://labcorp.wd1.myworkdayjobs.com/External",
+      "identity_basis": "public_employer_name:Labcorp",
+      "complete_jds": 23
+    },
+    {
+      "id": "b9118f63cd2147e75c06",
+      "company_id": "company-12fd63f6d6c3",
+      "company": "森萨塔（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://sensata.wd1.myworkdayjobs.com/Sensata-Careers",
+      "identity_basis": "public_employer_name:Sensata",
+      "complete_jds": 1
+    },
+    {
+      "id": "af9c7994d486b8ec84c1",
+      "company_id": "company-fc7bbdac4373",
+      "company": "LSEG（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://lseg.wd3.myworkdayjobs.com/Careers",
+      "identity_basis": "public_employer_name:Refinitiv",
+      "complete_jds": 13
+    },
+    {
+      "id": "e4f6dacfe2d187d5b1a2",
+      "company_id": "company-85a6a876135d",
+      "company": "液化空气（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://airliquidehr.wd3.myworkdayjobs.com/AirLiquideExternalCareer",
+      "identity_basis": "public_employer_name:AIR LIQUIDE",
+      "complete_jds": 19
+    },
+    {
+      "id": "5adbafa4ccc089794787",
+      "company_id": "company-6ad600066fb7",
+      "company": "应用材料（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://amat.wd1.myworkdayjobs.com/External",
+      "identity_basis": "public_employer_name:Applied Materials",
+      "complete_jds": 36
+    },
+    {
+      "id": "d6283ed88a3b89532222",
+      "company_id": "company-670d1400321a",
+      "company": "Vantive（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://vantive.wd108.myworkdayjobs.com/Vantive",
+      "identity_basis": "public_employer_name:VANTIVE",
+      "complete_jds": 8
+    },
+    {
+      "id": "ecd23ef9e61a5273ec91",
+      "company_id": "company-42406d2c2dad",
+      "company": "雅培（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://abbott.wd5.myworkdayjobs.com/abbottcareers",
+      "identity_basis": "public_employer_name:Abbott",
+      "complete_jds": 22
+    },
+    {
+      "id": "d079a6ff0d109cf4d500",
+      "company_id": "company-80d08353bcc1",
+      "company": "蔡司（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://zeissgroup.wd3.myworkdayjobs.com/External",
+      "identity_basis": "public_employer_name:Carl Zeiss",
+      "complete_jds": 19
+    },
+    {
+      "id": "ccca5a193d800f667151",
+      "company_id": "company-47d385a25c04",
+      "company": "赛默飞（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://thermofisher.wd5.myworkdayjobs.com/ThermoFisherCareers",
+      "identity_basis": "public_employer_name:Thermo Fisher",
+      "complete_jds": 14
+    },
+    {
+      "id": "33bdd2d7409367970b05",
+      "company_id": "company-639ab7789783",
+      "company": "联邦快递（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://fedex.wd1.myworkdayjobs.com/FXE_APAC_External",
+      "identity_basis": "public_employer_name:Federal Express",
+      "complete_jds": 1
+    },
+    {
+      "id": "5b22f4f37c3a754b6d1f",
+      "company_id": "company-29effa21c738",
+      "company": "3M（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://3m.wd1.myworkdayjobs.com/Search",
+      "identity_basis": "public_employer_name:3M",
+      "complete_jds": 8
+    },
+    {
+      "id": "dd2459706604642f280a",
+      "company_id": "company-abfcae51c3d1",
+      "company": "KLA科磊（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://kla.wd1.myworkdayjobs.com/Search",
+      "identity_basis": "public_employer_name:KLA",
+      "complete_jds": 35
+    },
+    {
+      "id": "b540449cbfe26777f966",
+      "company_id": "company-7cabf51b3829",
+      "company": "道富（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://statestreet.wd1.myworkdayjobs.com/Global",
+      "identity_basis": "public_employer_name:SS TECH",
+      "complete_jds": 6
+    },
+    {
+      "id": "96a8ac802089588db264",
+      "company_id": "company-e58ab55ed9ec",
+      "company": "玛氏（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://mars.wd3.myworkdayjobs.com/External",
+      "identity_basis": "public_employer_name:Mars",
+      "complete_jds": 19
+    },
+    {
+      "id": "6f9c400cc348e6690577",
+      "company_id": "company-d41ad6560994",
+      "company": "哈曼（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://harman.wd3.myworkdayjobs.com/HARMAN",
+      "identity_basis": "public_employer_name:Harman",
+      "complete_jds": 15
+    },
+    {
+      "id": "a3ab6d19f07542c02c08",
+      "company_id": "company-fc709995b050",
+      "company": "开利（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://carrier.wd5.myworkdayjobs.com/jobs",
+      "identity_basis": "public_employer_name:Carrier",
+      "complete_jds": 22
+    },
+    {
+      "id": "e5507e14d79c82ca59d6",
+      "company_id": "company-5bd6702c9a89",
+      "company": "金鹰集团（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://averis.wd3.myworkdayjobs.com/RGE",
+      "identity_basis": "public_employer_name:RGE",
+      "complete_jds": 1
+    },
+    {
+      "id": "9ed6348e90bb5598ac52",
+      "company_id": "company-e597af3b66f8",
+      "company": "戴森（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://dyson.wd3.myworkdayjobs.com/dyson_careers",
+      "identity_basis": "public_employer_name:Dyson",
+      "complete_jds": 32
+    },
+    {
+      "id": "446b27944f2571603865",
+      "company_id": "co_edc80bd3f91db2f6b4d3",
+      "company": "ASML阿斯麦光刻",
+      "provider": "workday",
+      "entry_url": "https://asml.wd3.myworkdayjobs.com/ASMLEXT1",
+      "identity_basis": "public_employer_name:ASML",
+      "complete_jds": 30
+    },
+    {
+      "id": "3a19a2fd23124ba2ec12",
+      "company_id": "company-420349f310af",
+      "company": "和黄医药",
+      "provider": "moka",
+      "entry_url": "https://app.mokahr.com/social-recruitment/hutchmed/140975",
+      "identity_basis": "public_employer_name:和黄医药",
+      "complete_jds": 15
+    },
+    {
+      "id": "e86cb05dc56a1526c538",
+      "company_id": "company-9e3d9afb7c4d",
+      "company": "电通（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://dentsuaegis.wd3.myworkdayjobs.com/DAN_GLOBAL",
+      "identity_basis": "public_employer_name:Dentsu",
+      "complete_jds": 4
+    },
+    {
+      "id": "3cb93010d62d1411e08c",
+      "company_id": "company-d6f4264d8245",
+      "company": "Logicalis（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://logicalis.wd3.myworkdayjobs.com/LogicalisCareers",
+      "identity_basis": "public_employer_name:Logicalis",
+      "complete_jds": 7
+    },
+    {
+      "id": "e8afeb60cc05f909a4d0",
+      "company_id": "company-5597c68f4773",
+      "company": "GE Vernova（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://gevernova.wd5.myworkdayjobs.com/Vernova_ExternalSite",
+      "identity_basis": "public_employer_name:GE Energy",
+      "complete_jds": 11
+    },
+    {
+      "id": "d18f6313b30303f43c9d",
+      "company_id": "co_5f00341633998a1682a6",
+      "company": "费森尤斯卡比中国",
+      "provider": "moka",
+      "entry_url": "https://app.mokahr.com/social-recruitment/fresenius/150660",
+      "identity_basis": "previously_verified_same_ats_tenant",
+      "complete_jds": 40
+    },
+    {
+      "id": "56139264b4d6a7e96c43",
+      "company_id": "company-b96c5820be56",
+      "company": "空气产品（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://airproducts.wd5.myworkdayjobs.com/AP0001",
+      "identity_basis": "public_employer_name:Air Products",
+      "complete_jds": 26
+    },
+    {
+      "id": "d53ed25e042797fe7129",
+      "company_id": "company-b1e25cb2b40b",
+      "company": "星展（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://dbs.wd3.myworkdayjobs.com/DBS_Careers",
+      "identity_basis": "public_employer_name:DBS",
+      "complete_jds": 28
+    },
+    {
+      "id": "51e20fda05f21221f448",
+      "company_id": "company-c244de888732",
+      "company": "亿滋（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://mdlz.wd3.myworkdayjobs.com/External",
+      "identity_basis": "public_employer_name:Mondelez",
+      "complete_jds": 21
+    },
+    {
+      "id": "47d081b4350ab8065550",
+      "company_id": "company-05b9b25301c4",
+      "company": "IQVIA（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://iqvia.wd1.myworkdayjobs.com/IQVIA",
+      "identity_basis": "public_employer_name:IQVIA",
+      "complete_jds": 26
+    },
+    {
+      "id": "7df8a613f9b68d32a399",
+      "company_id": "company-316d43c02147",
+      "company": "Cadence",
+      "provider": "workday",
+      "entry_url": "https://cadence.wd1.myworkdayjobs.com/External_Careers",
+      "identity_basis": "public_employer_name:CDNS",
+      "complete_jds": 23
+    },
+    {
+      "id": "43ffdda7484dc8ebff76",
+      "company_id": "company-82b7b8fe3a76",
+      "company": "默沙东（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://msd.wd5.myworkdayjobs.com/SearchJobs",
+      "identity_basis": "public_employer_name:MSD",
+      "complete_jds": 33
+    },
+    {
+      "id": "d50af650960cb442db88",
+      "company_id": "company-734ad2cf6bf1",
+      "company": "乔治费歇尔（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://georgfischer.wd103.myworkdayjobs.com/GeorgFischer_Careers",
+      "identity_basis": "public_employer_name:Georg Fischer",
+      "complete_jds": 1
+    },
+    {
+      "id": "45a3e8ce6448491758d3",
+      "company_id": "company-88974c2640b9",
+      "company": "丹纳赫（中国招聘门户）",
+      "provider": "moka",
+      "entry_url": "https://app.mokahr.com/social-recruitment/danaher_com/148809",
+      "identity_basis": "public_employer_name:丹纳赫集团中国",
+      "complete_jds": 32
+    },
+    {
+      "id": "d54908940723d6252749",
+      "company_id": "company-0cd14d99c786",
+      "company": "安捷伦（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://agilent.wd5.myworkdayjobs.com/Agilent_Careers",
+      "identity_basis": "public_employer_name:Agilent",
+      "complete_jds": 36
+    },
+    {
+      "id": "cc9bd41d3c298f2f96bc",
+      "company_id": "company-23206b1126dd",
+      "company": "空中客车（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://ag.wd3.myworkdayjobs.com/Airbus",
+      "identity_basis": "public_employer_name:Airbus",
+      "complete_jds": 16
+    },
+    {
+      "id": "13af1bee183b49773e6b",
+      "company_id": "company-ae89c01211a8",
+      "company": "凯度（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://kantar.wd3.myworkdayjobs.com/KANTAR",
+      "identity_basis": "public_employer_name:Kantar",
+      "complete_jds": 1
+    },
+    {
+      "id": "0fa44ce6960a196b4444",
+      "company_id": "company-2c39d8d569b3",
+      "company": "Bose（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://boseallaboutme.wd503.myworkdayjobs.com/Bose_Careers",
+      "identity_basis": "public_employer_name:Bose",
+      "complete_jds": 17
+    },
+    {
+      "id": "a8a1272ae34cc6489cc8",
+      "company_id": "company-165907e48529",
+      "company": "华纳兄弟探索（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://warnerbros.wd5.myworkdayjobs.com/global",
+      "identity_basis": "public_employer_name:Warner Bros",
+      "complete_jds": 6
+    },
+    {
+      "id": "4e0c4b5d71e2068c51a2",
+      "company_id": "company-aa7815ff0757",
+      "company": "庄信万丰（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://matthey.wd3.myworkdayjobs.com/Ext_Career_Site",
+      "identity_basis": "public_employer_name:Johnson Matthey",
+      "complete_jds": 3
+    },
+    {
+      "id": "ff497c66c4b7560068eb",
+      "company_id": "company-ca3610a50cab",
+      "company": "Medline（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://medline.wd5.myworkdayjobs.com/Medline",
+      "identity_basis": "public_employer_name:Medline",
+      "complete_jds": 6
+    },
+    {
+      "id": "512e5ff3710c49c35225",
+      "company_id": "company-13cb169a0f9c",
+      "company": "思科（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://cisco.wd5.myworkdayjobs.com/Cisco_Careers",
+      "identity_basis": "public_employer_name:Cisco",
+      "complete_jds": 1
+    },
+    {
+      "id": "97093371dca614e0bc8d",
+      "company_id": "company-957d78a95b97",
+      "company": "施普林格自然（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://springernature.wd3.myworkdayjobs.com/SpringerNatureCareers",
+      "identity_basis": "public_employer_name:Springer Nature",
+      "complete_jds": 4
+    },
+    {
+      "id": "6447ff58b847980a311a",
+      "company_id": "company-50fdcb24abf8",
+      "company": "Syneos Health（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://syneoshealth.wd12.myworkdayjobs.com/Syneos_Health_External_Site",
+      "identity_basis": "public_employer_name:Syneos",
+      "complete_jds": 34
+    },
+    {
+      "id": "47e43e1fca383c4fdea2",
+      "company_id": "co_c65c4cfaf0e6ff2ce295",
+      "company": "GE医疗",
+      "provider": "moka",
+      "entry_url": "https://app.mokahr.com/social-recruitment/gehc/142249",
+      "identity_basis": "previously_verified_same_ats_tenant",
+      "complete_jds": 31
+    },
+    {
+      "id": "eb019cd244152c40656a",
+      "company_id": "company-42d291b4f2c2",
+      "company": "陶氏（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://dow.wd1.myworkdayjobs.com/ExternalCareers",
+      "identity_basis": "public_employer_name:DOW",
+      "complete_jds": 14
+    },
+    {
+      "id": "9da60a5bd6b3e1d43d98",
+      "company_id": "company-d51e545d9189",
+      "company": "雀巢（大中华区招聘门户）",
+      "provider": "moka",
+      "entry_url": "https://app.mokahr.com/social-recruitment/nestlezgc/91898",
+      "identity_basis": "public_employer_name:Nestle GCR",
+      "complete_jds": 1
+    },
+    {
+      "id": "85ed7d91caada98b7414",
+      "company_id": "company-8531bd12d727",
+      "company": "IFF（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://iff.wd5.myworkdayjobs.com/IFF_Careers",
+      "identity_basis": "public_employer_name:International Flavors",
+      "complete_jds": 12
+    },
+    {
+      "id": "ee222c07db27f931138d",
+      "company_id": "co_84048535bf0a99f3075e",
+      "company": "MPS芯源系统",
+      "provider": "workday",
+      "entry_url": "https://monolithicpower.wd12.myworkdayjobs.com/MPS_Careers",
+      "identity_basis": "public_employer_name:MPS",
+      "complete_jds": 40
+    },
+    {
+      "id": "8d1f7c204f1da8c73485",
+      "company_id": "company-3c9f9ee221bc",
+      "company": "爱尔康（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://alcon.wd5.myworkdayjobs.com/careers_alcon",
+      "identity_basis": "public_employer_name:Alcon",
+      "complete_jds": 1
+    },
+    {
+      "id": "8193b7cf4b8c90c2269e",
+      "company_id": "company-5edb775971fd",
+      "company": "A&F（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://abercrombie.wd108.myworkdayjobs.com/anf",
+      "identity_basis": "public_employer_name:AFH",
+      "complete_jds": 33
+    },
+    {
+      "id": "92a56a75f3bcae79babe",
+      "company_id": "company-0f74850ffe9e",
+      "company": "德昌电机（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://johnsonelectric.wd3.myworkdayjobs.com/Career_JE",
+      "identity_basis": "public_employer_name:Johnson Electric",
+      "complete_jds": 34
+    },
+    {
+      "id": "25c208e0b62bc8c7f951",
+      "company_id": "co_6bc95d6b3da70aa533a3",
+      "company": "壳牌中国",
+      "provider": "workday",
+      "entry_url": "https://shell.wd3.myworkdayjobs.com/ShellCareers",
+      "identity_basis": "public_employer_name:SHELL",
+      "complete_jds": 5
+    },
+    {
+      "id": "c34617c17d51c7cc2b3b",
+      "company_id": "company-4db54c7e801a",
+      "company": "伊莱克斯（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://electrolux.wd3.myworkdayjobs.com/ElectroluxCareerSite",
+      "identity_basis": "public_employer_name:Electrolux",
+      "complete_jds": 17
+    },
+    {
+      "id": "2e7dfb72095e54344c62",
+      "company_id": "company-ee8c52dc9aef",
+      "company": "PPG（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://ppg.wd5.myworkdayjobs.com/PPG_CAREERS",
+      "identity_basis": "public_employer_name:PPG",
+      "complete_jds": 37
+    },
+    {
+      "id": "204edeb1fa0cd77ddc8c",
+      "company_id": "company-618dbb96fdc4",
+      "company": "阿法拉伐（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://alfalaval.wd3.myworkdayjobs.com/Alfa_Laval_jobs",
+      "identity_basis": "public_employer_name:Alfa Laval",
+      "complete_jds": 17
+    },
+    {
+      "id": "269e010788a5cacbe995",
+      "company_id": "company-214aeda75f53",
+      "company": "Autodesk（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://autodesk.wd1.myworkdayjobs.com/Ext",
+      "identity_basis": "public_employer_name:Autodesk",
+      "complete_jds": 1
+    },
+    {
+      "id": "9d2e61d6d23212c7b671",
+      "company_id": "company-f0ebec6bd945",
+      "company": "益普生（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://ipsen.wd103.myworkdayjobs.com/Ipsen_Careers",
+      "identity_basis": "public_employer_name:Ipsen",
+      "complete_jds": 3
+    },
+    {
+      "id": "6d0c921b1689b9daad31",
+      "company_id": "company-cd4d99ce6939",
+      "company": "参天（中国招聘门户）",
+      "provider": "moka",
+      "entry_url": "https://app.mokahr.com/social-recruitment/santen/99365",
+      "identity_basis": "public_employer_name:参天公司",
+      "complete_jds": 16
+    },
+    {
+      "id": "e772e7d85539d7a1cdf8",
+      "company_id": "company-f08bc868aaaf",
+      "company": "Apex Group（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://theapexgroup.wd3.myworkdayjobs.com/apexgroupcareers",
+      "identity_basis": "public_employer_name:Apex Group",
+      "complete_jds": 10
+    },
+    {
+      "id": "1345d18d29731641ad72",
+      "company_id": "company-efa70e39e3c2",
+      "company": "英特尔（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://intel.wd1.myworkdayjobs.com/External",
+      "identity_basis": "public_employer_name:Intel",
+      "complete_jds": 28
+    },
+    {
+      "id": "99e81fb64de43fbc574e",
+      "company_id": "company-730649b5d805",
+      "company": "Tory Burch（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://toryburch.wd1.myworkdayjobs.com/toryburchcareers",
+      "identity_basis": "public_employer_name:Tory Burch",
+      "complete_jds": 1
+    },
+    {
+      "id": "00e4c2c30401d9ff9059",
+      "company_id": "company-42f99edbbebb",
+      "company": "PVH（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://pvh.wd1.myworkdayjobs.com/PVH_Careers",
+      "identity_basis": "public_employer_name:PVH",
+      "complete_jds": 2
+    },
+    {
+      "id": "b2765ffd65ed1fc6e4e9",
+      "company_id": "company-575e5ccb3319",
+      "company": "迪士尼（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://disney.wd5.myworkdayjobs.com/disneycareer",
+      "identity_basis": "public_employer_name:TWDC",
+      "complete_jds": 7
+    },
+    {
+      "id": "a69684c1ffaafae9a10f",
+      "company_id": "company-ea8be24b2c27",
+      "company": "皮尔法伯（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://pierrefabre.wd3.myworkdayjobs.com/External_Career_Site",
+      "identity_basis": "public_employer_name:Pierre Fabre",
+      "complete_jds": 31
+    },
+    {
+      "id": "9e56cdce9217f5e75420",
+      "company_id": "company-1fbc04e53747",
+      "company": "珀金埃尔默（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://newperkinelmer.wd1.myworkdayjobs.com/External",
+      "identity_basis": "public_employer_name:PerkinElmer",
+      "complete_jds": 1
+    },
+    {
+      "id": "29f468e7f6f5d4ee5783",
+      "company_id": "company-6ee587000f66",
+      "company": "安霸（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://ambarella.wd108.myworkdayjobs.com/Ambarella",
+      "identity_basis": "public_employer_name:Ambarella",
+      "complete_jds": 9
+    },
+    {
+      "id": "d48726b18a9dbfc42ace",
+      "company_id": "company-7eece4194725",
+      "company": "SHEIN",
+      "provider": "moka",
+      "entry_url": "https://app.mokahr.com/social-recruitment/shein/2933",
+      "identity_basis": "previously_verified_same_ats_tenant",
+      "complete_jds": 5
+    },
+    {
+      "id": "703d9db481fa86184f3a",
+      "company_id": "company-8ed4eb61a92e",
+      "company": "Wiley（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://wiley.wd1.myworkdayjobs.com/wiley_careers",
+      "identity_basis": "public_employer_name:JWS",
+      "complete_jds": 8
+    },
+    {
+      "id": "1b53d37bd4e1e25306e6",
+      "company_id": "company-310216d4ad46",
+      "company": "万豪（中国招聘门户）",
+      "provider": "moka",
+      "entry_url": "https://app.mokahr.com/social-recruitment/marriott/141002",
+      "identity_basis": "public_employer_name:Marriott International",
+      "complete_jds": 21
+    },
+    {
+      "id": "c5e9b34fc3fde5fb4011",
+      "company_id": "company-f9600d11827a",
+      "company": "史赛克（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://stryker.wd1.myworkdayjobs.com/StrykerCareers",
+      "identity_basis": "public_employer_name:Stryker",
+      "complete_jds": 11
+    },
+    {
+      "id": "bff710cf0d5fe6a27c37",
+      "company_id": "company-f6563b690205",
+      "company": "耐克（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://nike.wd1.myworkdayjobs.com/nke",
+      "identity_basis": "public_employer_name:Nike",
+      "complete_jds": 6
+    },
+    {
+      "id": "632d0da8ea15ed027a09",
+      "company_id": "company-4763a8d87880",
+      "company": "迈图（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://momentive.wd1.myworkdayjobs.com/MC",
+      "identity_basis": "public_employer_name:MOMENTIVE",
+      "complete_jds": 6
+    },
+    {
+      "id": "10e89d7acf131f4d15c4",
+      "company_id": "company-ea5cc9b447a5",
+      "company": "PHINIA（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://phinia.wd5.myworkdayjobs.com/PHINIA_Careers",
+      "identity_basis": "public_employer_name:PHINIA",
+      "complete_jds": 6
+    },
+    {
+      "id": "b195718eba7b676642cf",
+      "company_id": "company-a21a0eb699a3",
+      "company": "赢创（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://evonik.wd3.myworkdayjobs.com/External_Careers",
+      "identity_basis": "public_employer_name:Evonik",
+      "complete_jds": 21
+    },
+    {
+      "id": "414802de87e5b3b278d5",
+      "company_id": "company-2a2625ae4290",
+      "company": "富达国际（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://fil.wd3.myworkdayjobs.com/001",
+      "identity_basis": "public_employer_name:FIL Technology",
+      "complete_jds": 1
+    },
+    {
+      "id": "c392e67f419cc4d6ef25",
+      "company_id": "company-be746b33851d",
+      "company": "Palo Alto Networks（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://paloaltonetworks.wd5.myworkdayjobs.com/panwexternalcareers",
+      "identity_basis": "public_employer_name:Palo Alto Networks",
+      "complete_jds": 3
+    },
+    {
+      "id": "694319b34006d48650c9",
+      "company_id": "company-0a4395cf6c9f",
+      "company": "罗宾逊物流（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://chrobinson.wd5.myworkdayjobs.com/CHRobinson",
+      "identity_basis": "public_employer_name:C.H. Robinson",
+      "complete_jds": 3
+    },
+    {
+      "id": "743a9ed1440452151298",
+      "company_id": "company-5d82a887f422",
+      "company": "科思创（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://covestro.wd3.myworkdayjobs.com/cov_external",
+      "identity_basis": "public_employer_name:Covestro",
+      "complete_jds": 31
+    },
+    {
+      "id": "fc7385ac5862f28e9271",
+      "company_id": "company-bbaa056e04fe",
+      "company": "苏尔寿（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://sulzer.wd502.myworkdayjobs.com/SulzerJobs",
+      "identity_basis": "public_employer_name:Sulzer",
+      "complete_jds": 11
+    },
+    {
+      "id": "9f731f0a24a0cc253523",
+      "company_id": "company-36febb7f1d2f",
+      "company": "Global Payments（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://tsys.wd1.myworkdayjobs.com/TSYS",
+      "identity_basis": "public_employer_name:Global Payments",
+      "complete_jds": 3
+    },
+    {
+      "id": "03c7091dc269edc3293d",
+      "company_id": "company-020b2b5486ca",
+      "company": "爱思唯尔（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://relx.wd3.myworkdayjobs.com/ElsevierJobs",
+      "identity_basis": "public_employer_name:Elsevier",
+      "complete_jds": 7
+    },
+    {
+      "id": "1abdced2c2bdaba1ffdb",
+      "company_id": "company-30d9d7fd15fd",
+      "company": "赛多利斯（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://sartorius.wd3.myworkdayjobs.com/sartoriuscareers",
+      "identity_basis": "public_employer_name:Sartorius",
+      "complete_jds": 7
+    },
+    {
+      "id": "a2914bfe159e8610de10",
+      "company_id": "company-e27b20b426b6",
+      "company": "伟创力（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://flextronics.wd1.myworkdayjobs.com/Careers",
+      "identity_basis": "public_employer_name:FLEX",
+      "complete_jds": 23
+    },
+    {
+      "id": "8d0fdab625eab6ea4eeb",
+      "company_id": "company-2db6de125935",
+      "company": "OmniOn Power（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://omnionpower.wd5.myworkdayjobs.com/External",
+      "identity_basis": "public_employer_name:OmniOn Power",
+      "complete_jds": 9
+    },
+    {
+      "id": "0d8c994701f2a6027954",
+      "company_id": "company-d8d7e52d18a1",
+      "company": "富勒（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://hbfuller.wd1.myworkdayjobs.com/Careers",
+      "identity_basis": "public_employer_name:Fuller",
+      "complete_jds": 4
+    },
+    {
+      "id": "04ff902ec60e06ed8aaa",
+      "company_id": "company-e7f9627b46ba",
+      "company": "布伦泰格（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://brenntag.wd3.myworkdayjobs.com/brenntag_jobs",
+      "identity_basis": "public_employer_name:Brenntag",
+      "complete_jds": 4
+    },
+    {
+      "id": "7a382e83369837fc81b2",
+      "company_id": "company-52af159b369e",
+      "company": "ERM（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://erm.wd3.myworkdayjobs.com/ERM_Careers",
+      "identity_basis": "public_employer_name:ERM",
+      "complete_jds": 7
+    },
+    {
+      "id": "910d18c8f286660bb8ea",
+      "company_id": "company-81b517a68682",
+      "company": "吉利德（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://gilead.wd1.myworkdayjobs.com/gileadcareers",
+      "identity_basis": "public_employer_name:Gilead",
+      "complete_jds": 7
+    },
+    {
+      "id": "3cf188509e55fed71465",
+      "company_id": "co_df6c5bc4a01db41bcbf8",
+      "company": "松下集团",
+      "provider": "moka",
+      "entry_url": "https://app.mokahr.com/social-recruitment/panasonic/5215",
+      "identity_basis": "previously_verified_same_ats_tenant",
+      "complete_jds": 5
+    },
+    {
+      "id": "1536e27993d592a0faa1",
+      "company_id": "company-39623ebfd44a",
+      "company": "AVEVA（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://aveva.wd3.myworkdayjobs.com/AVEVA_careers",
+      "identity_basis": "public_employer_name:AVEVA",
+      "complete_jds": 6
+    },
+    {
+      "id": "41091114d887e49a39b2",
+      "company_id": "company-6e7825313ea5",
+      "company": "英纳法（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://inalfa.wd3.myworkdayjobs.com/InalfaCareers",
+      "identity_basis": "public_employer_name:Inalfa",
+      "complete_jds": 4
+    },
+    {
+      "id": "e46f2e2fdd3c3a90890a",
+      "company_id": "company-484b4cc7f8e5",
+      "company": "艺康（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://ecolab.wd1.myworkdayjobs.com/Ecolab_External",
+      "identity_basis": "public_employer_name:Ecolab",
+      "complete_jds": 13
+    },
+    {
+      "id": "b007aef561e1844a3543",
+      "company_id": "company-2c8cddfa0012",
+      "company": "英迈（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://ingrammicro.wd5.myworkdayjobs.com/IngramMicro",
+      "identity_basis": "public_employer_name:Ingram Micro",
+      "complete_jds": 1
+    },
+    {
+      "id": "49c68feab17dac9be82c",
+      "company_id": "company-fb4835eb099c",
+      "company": "索理思（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://solenis.wd1.myworkdayjobs.com/Solenis",
+      "identity_basis": "public_employer_name:Solenis",
+      "complete_jds": 11
+    },
+    {
+      "id": "0c6f4cf024159964ffd5",
+      "company_id": "company-fc1d673c8bf5",
+      "company": "美光（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://micron.wd1.myworkdayjobs.com/External",
+      "identity_basis": "public_employer_name:Micron",
+      "complete_jds": 5
+    },
+    {
+      "id": "9868ac2a5307c6b9032b",
+      "company_id": "company-28b2f4d102e8",
+      "company": "拓领（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://tollgroup.wd5.myworkdayjobs.com/TollGroup",
+      "identity_basis": "public_employer_name:Toll Global",
+      "complete_jds": 4
+    },
+    {
+      "id": "2c7754537a0bb72a43e2",
+      "company_id": "company-70b04435964e",
+      "company": "爱德曼（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://djeholdings.wd5.myworkdayjobs.com/edelman-careers-E200",
+      "identity_basis": "public_employer_name:Edelman",
+      "complete_jds": 4
+    },
+    {
+      "id": "add8474d17610eb255eb",
+      "company_id": "company-fddfea9171fd",
+      "company": "Expedia（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://expedia.wd108.myworkdayjobs.com/search",
+      "identity_basis": "public_employer_name:Expedia",
+      "complete_jds": 1
+    },
+    {
+      "id": "0c6e1c9c2d89ca2c1e36",
+      "company_id": "company-704e1a4965e9",
+      "company": "保乐力加（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://pernodricard.wd3.myworkdayjobs.com/pernod-ricard",
+      "identity_basis": "public_employer_name:Pernod Ricard",
+      "complete_jds": 5
+    },
+    {
+      "id": "916124bdb95fbf1b3ba7",
+      "company_id": "company-3447912f37a2",
+      "company": "4flow（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://4flow.wd3.myworkdayjobs.com/4flow",
+      "identity_basis": "public_employer_name:forflow",
+      "complete_jds": 1
+    },
+    {
+      "id": "39bd1591a8246059e5de",
+      "company_id": "company-c7703c0c43b4",
+      "company": "威富（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://vfc.wd5.myworkdayjobs.com/vfc_careers",
+      "identity_basis": "public_employer_name:VF China",
+      "complete_jds": 11
+    },
+    {
+      "id": "3f6013a7f5f32cdef5f7",
+      "company_id": "company-6f1a9695e1b7",
+      "company": "宁德时代",
+      "provider": "moka",
+      "entry_url": "https://app.mokahr.com/social-recruitment/catlhr/98098",
+      "identity_basis": "previously_verified_same_ats_tenant",
+      "complete_jds": 40
+    },
+    {
+      "id": "386acdf4fab53e3e0bad",
+      "company_id": "hardware-oem-tesla",
+      "company": "特斯拉中国",
+      "provider": "moka",
+      "entry_url": "https://app.mokahr.com/social-recruitment/tesla/46129",
+      "identity_basis": "previously_verified_same_ats_tenant",
+      "complete_jds": 5
+    },
+    {
+      "id": "adeeb899544a333c0946",
+      "company_id": "company-2d0066f5320a",
+      "company": "云顶新耀",
+      "provider": "moka",
+      "entry_url": "https://app.mokahr.com/social-recruitment/everestmedicines/150886?locale=zh-CN",
+      "identity_basis": "public_employer_name:云顶新耀",
+      "complete_jds": 9
+    },
+    {
+      "id": "9176c28836a95d80f5c7",
+      "company_id": "co_1158a39b58ce6e3bc83d",
+      "company": "韶音",
+      "provider": "moka",
+      "entry_url": "https://app.mokahr.com/apply/aftershokzhr/40779/",
+      "identity_basis": "previously_verified_same_ats_tenant",
+      "complete_jds": 5
+    },
+    {
+      "id": "ed78e781d50ba6a391fe",
+      "company_id": "company-a5a4b99e9eb0",
+      "company": "深蓝互动",
+      "provider": "moka",
+      "entry_url": "https://app.mokahr.com/apply/blueinteractive/38433",
+      "identity_basis": "public_employer_name:深蓝互动",
+      "complete_jds": 5
+    },
+    {
+      "id": "330a63158b5f33a50b24",
+      "company_id": "co_a68dcb9a96764641010b",
+      "company": "灏仟亿",
+      "provider": "moka",
+      "entry_url": "https://app.mokahr.com/social-recruitment/bestfulfill/150634?locale=zh-CN",
+      "identity_basis": "previously_verified_same_ats_tenant",
+      "complete_jds": 33
+    },
+    {
+      "id": "f7ca7c345231389c4579",
+      "company_id": "company-9957a75b5e60",
+      "company": "景昱医疗",
+      "provider": "beisen",
+      "entry_url": "https://sceneray.zhiye.com/",
+      "identity_basis": "public_employer_name:景昱医疗招聘门户",
+      "complete_jds": 9
+    },
+    {
+      "id": "2d0f9b321bf3f0ae7c4e",
+      "company_id": "co_d54b2245a2156fc724e8",
+      "company": "SGS",
+      "provider": "moka",
+      "entry_url": "https://app.mokahr.com/social-recruitment/sgs/150049",
+      "identity_basis": "previously_verified_same_ats_tenant",
+      "complete_jds": 4
+    },
+    {
+      "id": "6dc1106eb03ad2f56aae",
+      "company_id": "company-760f8d5d5944",
+      "company": "菲仕兰（中国招聘门户）",
+      "provider": "moka",
+      "entry_url": "https://app.mokahr.com/social-recruitment/feishilan/140175?hash=%23%2Fjobs",
+      "identity_basis": "public_employer_name:菲仕兰食品贸易",
+      "complete_jds": 23
+    },
+    {
+      "id": "26003b8a85cd278a46f0",
+      "company_id": "co_afc3e23520dc79077bf9",
+      "company": "思摩尔国际",
+      "provider": "moka",
+      "entry_url": "https://app.mokahr.com/apply/smoore/126055",
+      "identity_basis": "previously_verified_same_ats_tenant",
+      "complete_jds": 33
+    },
+    {
+      "id": "4d09e8bc9bc7f4c4ee25",
+      "company_id": "company-e5bea6ea1438",
+      "company": "网龙网络",
+      "provider": "beisen",
+      "entry_url": "https://nd.zhiye.com/social/jobs?3=%5B%7B%22id%22%3A%229%22%2C%22label%22",
+      "identity_basis": "public_employer_name:网龙网络公司",
+      "complete_jds": 16
+    },
+    {
+      "id": "26fd4fae553af612570e",
+      "company_id": "company-6f1a9695e1b7",
+      "company": "宁德时代",
+      "provider": "moka",
+      "entry_url": "https://talent.catl.com/social-recruitment/catlhr/98098",
+      "identity_basis": "previously_verified_same_ats_tenant",
+      "complete_jds": 40
+    },
+    {
+      "id": "abb80b5e0f2a5872fc0f",
+      "company_id": "company-148da9f227b0",
+      "company": "史泰博（上海）有限公司",
+      "provider": "beisen",
+      "entry_url": "https://stbchinacn.zhiye.com/social/jobs",
+      "identity_basis": "public_employer_name:史泰博（上海）有限公司",
+      "complete_jds": 3
+    },
+    {
+      "id": "2d4f57c67cab32905222",
+      "company_id": "co_2b5ae07a47478a97ebef",
+      "company": "大华银行",
+      "provider": "workday",
+      "entry_url": "https://uobgroup.wd3.myworkdayjobs.com/UOBExternal",
+      "identity_basis": "public_employer_name:UOB China",
+      "complete_jds": 8
+    },
+    {
+      "id": "4f644a507c4addd65012",
+      "company_id": "company-2610913bb65d",
+      "company": "阿克苏诺贝尔（中国招聘门户）",
+      "provider": "moka",
+      "entry_url": "https://app.mokahr.com/social-recruitment/akzonobel/116138",
+      "identity_basis": "public_employer_name:阿克苏诺贝尔",
+      "complete_jds": 35
+    },
+    {
+      "id": "fd68a716e9191f33f0b9",
+      "company_id": "company-5c8febcbffe7",
+      "company": "爱德华生命科学（中国招聘门户）",
+      "provider": "workday",
+      "entry_url": "https://edwards.wd5.myworkdayjobs.com/edwardscareers",
+      "identity_basis": "public_employer_name:Edwards",
+      "complete_jds": 22
+    },
+    {
+      "id": "ff8fc5901cab19ab0ecc",
+      "company_id": "company-65c3c777796e",
+      "company": "伊顿（中国招聘门户）",
+      "provider": "moka",
+      "entry_url": "https://app.mokahr.com/social-recruitment/eaton/147226?locale=zh-CN",
+      "identity_basis": "public_employer_name:伊顿(中国)投资有限公司",
+      "complete_jds": 40
+    },
+    {
+      "id": "28444d302728b0da683b",
+      "company_id": "company-8a337d0efabd",
+      "company": "埃夫特机器人",
+      "provider": "beisen",
+      "entry_url": "https://efort.zhiye.com/",
+      "identity_basis": "public_employer_name:埃夫特智能机器人",
+      "complete_jds": 31
+    },
+    {
+      "id": "de79c2d3391d886103ea",
+      "company_id": "company-9db395e38682",
+      "company": "希尔顿（中国招聘门户）",
+      "provider": "beisen",
+      "entry_url": "https://hilton.zhiye.com/jobs?2=%5B%7B%22id%22%3A%222%22%2C%22label%22%3A%22%E9%85%92%E5%BA%97%E6%9C%BA%E4%BC%9A%22%7D%5D&memory=%7B%22ClassificationTwo%22%3A%5B%222%22%5D%2C%22Category%22%3A%5B%221%22%2C%222%22%5D%7D&silence=1",
+      "identity_basis": "public_employer_name:希尔顿招聘",
+      "complete_jds": 32
+    },
+    {
+      "id": "4c80f843857a427c379e",
+      "company_id": "company-7edebacc1bb1",
+      "company": "隆鑫通用",
+      "provider": "beisen",
+      "entry_url": "https://lxty.zhiye.com/social/jobs",
+      "identity_basis": "public_employer_name:隆鑫通用动力",
+      "complete_jds": 34
+    },
+    {
+      "id": "4e849ed4cf9417b03796",
+      "company_id": "co_85b4fa309422157f6038",
+      "company": "大疆",
+      "provider": "moka",
+      "entry_url": "https://apply.careers.dji.com/social-recruitment/dji/170070",
+      "identity_basis": "previously_verified_same_ats_tenant",
+      "complete_jds": 40
+    },
+    {
+      "id": "4bd7e3b4cb7eac466303",
+      "company_id": "company-b9426138c349",
+      "company": "诺诚健华",
+      "provider": "beisen",
+      "entry_url": "https://innocare.zhiye.com/",
+      "identity_basis": "public_employer_name:诺诚健华",
+      "complete_jds": 39
+    },
+    {
+      "id": "ba0d49c8001cada0303c",
+      "company_id": "hardware-oem-volvo",
+      "company": "沃尔沃汽车",
+      "provider": "moka",
+      "entry_url": "https://app.mokahr.com/social-recruitment/volvocars/56033",
+      "identity_basis": "previously_verified_same_ats_tenant",
+      "complete_jds": 2
+    },
+    {
+      "id": "efb97e3587a95130ee97",
+      "company_id": "company-952589f06560",
+      "company": "中微公司",
+      "provider": "moka",
+      "entry_url": "https://app.mokahr.com/apply/amec/28371",
+      "identity_basis": "previously_verified_same_ats_tenant",
+      "complete_jds": 5
+    },
+    {
+      "id": "c2ed51131a03cac11dd9",
+      "company_id": "company-0fda9d1da8b5",
+      "company": "紫龙游戏",
+      "provider": "moka",
+      "entry_url": "https://app.mokahr.com/apply/zlongame/6102",
+      "identity_basis": "public_employer_name:紫龙上海黑杰克",
+      "complete_jds": 5
+    },
+    {
+      "id": "b1a96759027a0be2e3d8",
+      "company_id": "co_93003d515f633755e762",
+      "company": "晶泰科技",
+      "provider": "moka",
+      "entry_url": "https://app.mokahr.com/apply/jingtai/2144",
+      "identity_basis": "previously_verified_same_ats_tenant",
+      "complete_jds": 4
+    },
+    {
+      "id": "6b26821de9c935990d16",
+      "company_id": "hardware-oem-vwchina",
+      "company": "大众汽车集团中国",
+      "provider": "moka",
+      "entry_url": "https://app.mokahr.com/social-recruitment/vwa/118094",
+      "identity_basis": "previously_verified_same_ats_tenant",
+      "complete_jds": 23
+    },
+    {
+      "id": "b46c996c619608fff51a",
+      "company_id": "company-08740b3f3311",
+      "company": "昆拓信诚",
+      "provider": "beisen",
+      "entry_url": "https://kuntuo.zhiye.com/",
+      "identity_basis": "public_employer_name:昆拓信诚招聘",
+      "complete_jds": 36
+    },
+    {
+      "id": "2045f45354b7fc2fcf43",
+      "company_id": "company-713a10cf3724",
+      "company": "永星互动",
+      "provider": "moka",
+      "entry_url": "https://app-tc.mokahr.com/social-recruitment/h3d/16051",
+      "identity_basis": "public_employer_name:永星互动",
+      "complete_jds": 31
+    },
+    {
+      "id": "fbfc22003db323cb5f91",
+      "company_id": "company-e494a3f97f38",
+      "company": "海艺互娱",
+      "provider": "moka",
+      "entry_url": "https://app.mokahr.com/social-recruitment/haiyi/150698",
+      "identity_basis": "previously_verified_same_ats_tenant",
+      "complete_jds": 10
+    },
+    {
+      "id": "94eecc3c37b8c2d541e5",
+      "company_id": "company-6a5a52d1aede",
+      "company": "富途",
+      "provider": "moka",
+      "entry_url": "https://app.mokahr.com/social-recruitment/futu5/141927",
+      "identity_basis": "previously_verified_same_ats_tenant",
+      "complete_jds": 38
+    },
+    {
+      "id": "a5cbbd4cbb3000361c24",
+      "company_id": "company-cab4e487aa60",
+      "company": "连连支付",
+      "provider": "moka",
+      "entry_url": "https://app.mokahr.com/social-recruitment/yintong/45487?locale=zh-CN",
+      "identity_basis": "public_employer_name:连连支付",
+      "complete_jds": 5
+    },
+    {
+      "id": "d27cf21b99b00fdb60a5",
+      "company_id": "co_5ccd0082a60f77456d24",
+      "company": "科华数据",
+      "provider": "moka",
+      "entry_url": "https://app.mokahr.com/social-recruitment/kehua/116137",
+      "identity_basis": "previously_verified_same_ats_tenant",
+      "complete_jds": 37
+    },
+    {
+      "id": "753cb8456a518bda1495",
+      "company_id": "co_a92e0a71a4d77f407d29",
+      "company": "开立医疗",
+      "provider": "moka",
+      "entry_url": "https://app.mokahr.com/apply/sonoscape/5987",
+      "identity_basis": "previously_verified_same_ats_tenant",
+      "complete_jds": 5
+    },
+    {
+      "id": "d3f793e5670711af42d5",
+      "company_id": "co_bf8d8b16392ea152aa72",
+      "company": "嘉士伯中国",
+      "provider": "moka",
+      "entry_url": "https://app.mokahr.com/social-recruitment/carlsberg/6730?sharePageId=4581248",
+      "identity_basis": "previously_verified_same_ats_tenant",
+      "complete_jds": 4
+    },
+    {
+      "id": "4e6477346ab014af5e72",
+      "company_id": "company-65e90eccfd17",
+      "company": "中亦科技",
+      "provider": "beisen",
+      "entry_url": "https://ceservice.zhiye.com/social/jobs",
+      "identity_basis": "public_employer_name:中亦科技",
+      "complete_jds": 13
+    },
+    {
+      "id": "a1535ff8908bad6a3d52",
+      "company_id": "company-5c16a44678f9",
+      "company": "施耐德电气（中国招聘门户）",
+      "provider": "moka",
+      "entry_url": "https://app.mokahr.com/social-recruitment/se/98712?sharePageId=4586877",
+      "identity_basis": "public_employer_name:施耐德电气(中国)有限公司",
+      "complete_jds": 14
+    },
+    {
+      "id": "2d6d4dfb9d5ca6132940",
+      "company_id": "hardware-oem-geely",
+      "company": "吉利控股集团",
+      "provider": "moka",
+      "entry_url": "https://app.mokahr.com/social-recruitment/geely/96123",
+      "identity_basis": "previously_verified_same_ats_tenant",
+      "complete_jds": 32
+    },
+    {
+      "id": "ee01929cd01bf811a11a",
+      "company_id": "co_90cbbe82fddc1db527ac",
+      "company": "中国葛洲坝集团机电建设有限公司",
+      "provider": "moka",
+      "entry_url": "https://app.mokahr.com/social-recruitment/cggc/145101?locale=zh-CN",
+      "identity_basis": "previously_verified_same_ats_tenant",
+      "complete_jds": 18
+    },
+    {
+      "id": "3aaa840c9aae36ffc9ee",
+      "company_id": "company-d45d8fdf8953",
+      "company": "滔搏",
+      "provider": "beisen",
+      "entry_url": "https://topsports.zhiye.com/social/jobs",
+      "identity_basis": "public_employer_name:滔搏 TOPSPORTS",
+      "complete_jds": 27
+    },
+    {
+      "id": "27cab9ce09707c80bb23",
+      "company_id": "co_afc907ed486dec1e3107",
+      "company": "百济神州",
+      "provider": "moka",
+      "entry_url": "https://app.mokahr.com/apply/beigene/98934",
+      "identity_basis": "previously_verified_same_ats_tenant",
+      "complete_jds": 29
+    },
+    {
+      "id": "c2a157132d886a7c3f9f",
+      "company_id": "company-cb893834546b",
+      "company": "汇宇制药",
+      "provider": "moka",
+      "entry_url": "https://app.mokahr.com/apply/huiyupharma/38920",
+      "identity_basis": "public_employer_name:四川汇宇制药",
+      "complete_jds": 5
+    },
+    {
+      "id": "3c304717c9d5bd29e244",
+      "company_id": "company-d7833d802569",
+      "company": "联宇集团",
+      "provider": "beisen",
+      "entry_url": "https://link-trans.zhiye.com/social",
+      "identity_basis": "public_employer_name:联宇集团",
+      "complete_jds": 21
+    },
+    {
+      "id": "0a28b3f61e2b472a7c0a",
+      "company_id": "company-730abb77a721",
+      "company": "济南城建集团有限公司",
+      "provider": "beisen",
+      "entry_url": "https://jncj.zhiye.com/social/jobs",
+      "identity_basis": "public_employer_name:济南城建集团",
+      "complete_jds": 17
+    },
+    {
+      "id": "d2cb2f0bc06e87aa9c88",
+      "company_id": "company-15a03612bc58",
+      "company": "新希望金融科技",
+      "provider": "beisen",
+      "entry_url": "https://xwfintech.zhiye.com/social",
+      "identity_basis": "public_employer_name:新希望金融科技",
+      "complete_jds": 16
+    },
+    {
+      "id": "5456840800b8620f4b10",
+      "company_id": "company-70a272626d7a",
+      "company": "上海医药",
+      "provider": "beisen",
+      "entry_url": "https://sph.zhiye.com/social/jobs",
+      "identity_basis": "public_employer_name:上海医药人才招聘",
+      "complete_jds": 31
+    },
+    {
+      "id": "f4484a218f91dfa96d0f",
+      "company_id": "company-cb5737f67ecb",
+      "company": "均胜集团",
+      "provider": "moka",
+      "entry_url": "https://app.mokahr.com/social-recruitment/joyson/94310",
+      "identity_basis": "previously_verified_same_ats_tenant",
+      "complete_jds": 38
+    },
+    {
+      "id": "09ae44fd191d970bdb64",
+      "company_id": "co_82674fdbcc698714924f",
+      "company": "恒瑞医药",
+      "provider": "moka",
+      "entry_url": "https://app.mokahr.com/social-recruitment/hengrui/145996?sharePageId=4570118",
+      "identity_basis": "previously_verified_same_ats_tenant",
+      "complete_jds": 37
+    },
+    {
+      "id": "5af62c744f504fdaedab",
+      "company_id": "company-1aef22941857",
+      "company": "拜尔斯道夫（中国招聘门户）",
+      "provider": "moka",
+      "entry_url": "https://app.mokahr.com/social-recruitment/beiersdorf/140226",
+      "identity_basis": "public_employer_name:拜尔斯道夫",
+      "complete_jds": 5
+    },
+    {
+      "id": "9e9f5113677828c488b5",
+      "company_id": "co_7648e619e9beec1aab9a",
+      "company": "卓识基金",
+      "provider": "moka",
+      "entry_url": "https://app.mokahr.com/apply/zsquant/168167",
+      "identity_basis": "previously_verified_same_ats_tenant",
+      "complete_jds": 5
+    },
+    {
+      "id": "784dd89556ed06d8b252",
+      "company_id": "company-20297f8dd31f",
+      "company": "中控信息",
+      "provider": "moka",
+      "entry_url": "https://app.mokahr.com/social-recruitment/zkxx/102190",
+      "identity_basis": "previously_verified_same_ats_tenant",
+      "complete_jds": 30
+    },
+    {
+      "id": "5dd02f752fe9b9d931ff",
+      "company_id": "company-5a70756b0a28",
+      "company": "万事达工业科技股份有限公司",
+      "provider": "beisen",
+      "entry_url": "https://wiskind.zhiye.com/social",
+      "identity_basis": "public_employer_name:万事达工业科技股份有限公司",
+      "complete_jds": 16
+    },
+    {
+      "id": "239fc2951592ccfb520d",
+      "company_id": "co_079ce03536cd607f31c3",
+      "company": "温氏股份",
+      "provider": "moka",
+      "entry_url": "https://app.mokahr.com/social-recruitment/wens/92365",
+      "identity_basis": "previously_verified_same_ats_tenant",
+      "complete_jds": 40
+    },
+    {
+      "id": "100b342e48dd41799119",
+      "company_id": "company-96c91570391e",
+      "company": "博世中国",
+      "provider": "moka",
+      "entry_url": "https://app.mokahr.com/campus-recruitment/bosch/150946?sharePageId=4564076",
+      "identity_basis": "previously_verified_same_ats_tenant",
+      "complete_jds": 3
+    },
+    {
+      "id": "3df735b5088814cd1653",
+      "company_id": "co_99b18b8533b50d839b1e",
+      "company": "力勤资源",
+      "provider": "moka",
+      "entry_url": "https://app.mokahr.com/apply/lygend/171872",
+      "identity_basis": "previously_verified_same_ats_tenant",
+      "complete_jds": 4
+    },
+    {
+      "id": "e7b613226a619006562f",
+      "company_id": "company-dd8d4ab486d0",
+      "company": "望尘科技",
+      "provider": "moka",
+      "entry_url": "https://app.mokahr.com/social-recruitment/galasports/98033",
+      "identity_basis": "previously_verified_same_ats_tenant",
+      "complete_jds": 16
+    },
+    {
+      "id": "5edd088682db32da9d65",
+      "company_id": "company-19f23886e5ba",
+      "company": "点众科技",
+      "provider": "moka",
+      "entry_url": "https://app.mokahr.com/apply/dianzhong/29071",
+      "identity_basis": "previously_verified_same_ats_tenant",
+      "complete_jds": 3
+    },
+    {
+      "id": "1dc2ad0b65e6eacdb2a6",
+      "company_id": "company-ce4986f05bce",
+      "company": "Garena",
+      "provider": "moka",
+      "entry_url": "https://app.mokahr.com/social-recruitment/garena/147001?locale=zh-CN",
+      "identity_basis": "previously_verified_same_ats_tenant",
+      "complete_jds": 36
+    },
+    {
+      "id": "80111c31a35eda7e181c",
+      "company_id": "co_64fa83f5eddbf3491c91",
+      "company": "福龙马集团",
+      "provider": "moka",
+      "entry_url": "https://app.mokahr.com/social-recruitment/fjlm/128156",
+      "identity_basis": "previously_verified_same_ats_tenant",
+      "complete_jds": 28
+    },
+    {
+      "id": "e6b5e078b50bc7f1af64",
+      "company_id": "company-a8257ee69e55",
+      "company": "百奥游戏",
+      "provider": "moka",
+      "entry_url": "https://app.mokahr.com/apply/aobi/25015",
+      "identity_basis": "public_employer_name:百奥家庭互动有限公司",
+      "complete_jds": 5
+    },
+    {
+      "id": "20a92a1242081e7a294a",
+      "company_id": "company-d7fd3095dc81",
+      "company": "超参数科技",
+      "provider": "moka",
+      "entry_url": "https://app.mokahr.com/social-recruitment/chaocanshu/39460",
+      "identity_basis": "previously_verified_same_ats_tenant",
+      "complete_jds": 5
+    },
+    {
+      "id": "ef1bfc7bab5d8e0102c0",
+      "company_id": "company-56130050ea37",
+      "company": "万兴科技",
+      "provider": "beisen",
+      "entry_url": "https://wondershare.zhiye.com/Social/jobs?activityGuid=64700437-4157-480b-938b-029692d549cc&ActivityJumpPage=PortalPage",
+      "identity_basis": "public_employer_name:万兴科技社会招聘",
+      "complete_jds": 35
+    },
+    {
+      "id": "3e7f5bfd3a8703c10f93",
+      "company_id": "company-ba573bd148aa",
+      "company": "电魂网络",
+      "provider": "moka",
+      "entry_url": "https://app.mokahr.com/social-recruitment/dianhun/55952",
+      "identity_basis": "public_employer_name:杭州电魂网络科技",
+      "complete_jds": 5
+    },
+    {
+      "id": "c286a6e41d99a716fca3",
+      "company_id": "company-a9fb47cbc3ac",
+      "company": "乐元素",
+      "provider": "moka",
+      "entry_url": "https://app.mokahr.com/apply/leyuansu/2358",
+      "identity_basis": "previously_verified_same_ats_tenant",
+      "complete_jds": 5
+    },
+    {
+      "id": "9328fdacaf15a95d8a6b",
+      "company_id": "company-5932b6a86248",
+      "company": "普华永道中国",
+      "provider": "moka",
+      "entry_url": "https://app.mokahr.com/social-recruitment/pwc/140014",
+      "identity_basis": "previously_verified_same_ats_tenant",
+      "complete_jds": 28
+    },
+    {
+      "id": "7c14dacc9d1b1153d309",
+      "company_id": "co_f945d1e8f250dfffc8ff",
+      "company": "维谛技术（Vertiv）",
+      "provider": "moka",
+      "entry_url": "https://app.mokahr.com/social-recruitment/vertiv/148166",
+      "identity_basis": "previously_verified_same_ats_tenant",
+      "complete_jds": 38
+    },
+    {
+      "id": "633c36e874ad0fe61359",
+      "company_id": "company-06a674a66a4a",
+      "company": "海通恒信",
+      "provider": "beisen",
+      "entry_url": "https://utfinancing.zhiye.com/4/jobs",
+      "identity_basis": "public_employer_name:海通恒信国际融资租赁",
+      "complete_jds": 38
+    },
+    {
+      "id": "e9276b06e6725d50696d",
+      "company_id": "company-5a756e7f17a7",
+      "company": "百胜中国",
+      "provider": "beisen",
+      "entry_url": "https://yumchinarsc.zhiye.com/social/detail?jobAdId=431dc81d-4d55-4d42-9454-ea24921de2bf",
+      "identity_basis": "public_employer_name:百胜中国",
+      "complete_jds": 26
+    },
+    {
+      "id": "0930d6eb7859203f444a",
+      "company_id": "company-d0d920fd5470",
+      "company": "武汉市多比特信息科技有限公司",
+      "provider": "moka",
+      "entry_url": "https://app.mokahr.com/social-recruitment/wedobest/46166",
+      "identity_basis": "previously_verified_same_ats_tenant",
+      "complete_jds": 5
+    },
+    {
+      "id": "8de96c29cc347c3c81d0",
+      "company_id": "company-36e311ace71a",
+      "company": "散爆网络",
+      "provider": "moka",
+      "entry_url": "https://app.mokahr.com/social-recruitment/micateam/142158?locale=zh-CN",
+      "identity_basis": "public_employer_name:散爆网络",
+      "complete_jds": 39
+    },
+    {
+      "id": "df1a0affc8d5fbe22c1a",
+      "company_id": "co_8dc72a4672894e0f743c",
+      "company": "自变量机器人",
+      "provider": "feishu",
+      "entry_url": "https://x2-robot.jobs.feishu.cn/index",
+      "identity_basis": "previously_verified_same_ats_tenant",
+      "complete_jds": 33
+    },
+    {
+      "id": "0c240c47098a464b5be9",
+      "company_id": "co_e1476feed40f39d3577a",
+      "company": "北京发那科",
+      "provider": "feishu",
+      "entry_url": "https://iwhih7is28.jobs.feishu.cn/index",
+      "identity_basis": "previously_verified_same_ats_tenant",
+      "complete_jds": 6
+    },
+    {
+      "id": "0abd5f3e4f66525384b9",
+      "company_id": "co_f91106f326893dd0d0fc",
+      "company": "塔斯汀",
+      "provider": "feishu",
+      "entry_url": "https://517tastien.jobs.feishu.cn/index",
+      "identity_basis": "previously_verified_same_ats_tenant",
+      "complete_jds": 29
+    },
+    {
+      "id": "3b78ed4e41fc30a9067f",
+      "company_id": "co_ed71c3420dbf50a96a81",
+      "company": "智元机器人",
+      "provider": "feishu",
+      "entry_url": "https://agirobot.jobs.feishu.cn/socialrecruitment",
+      "identity_basis": "previously_verified_same_ats_tenant",
+      "complete_jds": 37
+    },
+    {
+      "id": "be41397ceb99de41140e",
+      "company_id": "company-7de25dc6da02",
+      "company": "知存科技",
+      "provider": "feishu",
+      "entry_url": "https://iucylxooqp.jobs.feishu.cn/index",
+      "identity_basis": "previously_verified_same_ats_tenant",
+      "complete_jds": 31
+    },
+    {
+      "id": "a17f7f48d675fda53484",
+      "company_id": "company-ff2de0ad5525",
+      "company": "识渊科技",
+      "provider": "feishu",
+      "entry_url": "https://sailyond.jobs.feishu.cn/749776",
+      "identity_basis": "previously_verified_same_ats_tenant",
+      "complete_jds": 34
+    },
+    {
+      "id": "28fd9da733437adb7e17",
+      "company_id": "co_367cff08ccd4203a54f4",
+      "company": "致欧家居",
+      "provider": "feishu",
+      "entry_url": "https://songmicshome.jobs.feishu.cn/index",
+      "identity_basis": "previously_verified_same_ats_tenant",
+      "complete_jds": 34
+    },
+    {
+      "id": "a74290f42c7ed4501e85",
+      "company_id": "co_85878280081bbe62d81e",
+      "company": "河南投资集团",
+      "provider": "hotjob",
+      "entry_url": "https://wecruit.hotjob.cn/SU668678961eb8056fdea8565e/pb/social.html?projectCode=115201",
+      "identity_basis": "previously_verified_same_ats_tenant",
+      "complete_jds": 5
+    },
+    {
+      "id": "932de2d37b9c629630da",
+      "company_id": "co_7488bf42aeed7e629d40",
+      "company": "三宁化工",
+      "provider": "feishu",
+      "entry_url": "https://ealklohoih0.jobs.feishu.cn/index",
+      "identity_basis": "previously_verified_same_ats_tenant",
+      "complete_jds": 6
+    },
+    {
+      "id": "4f8b9c48501317a96b09",
+      "company_id": "co_5ae073a3a8e68455a57b",
+      "company": "Fastlane",
+      "provider": "feishu",
+      "entry_url": "https://fastbase.jobs.feishu.cn/index",
+      "identity_basis": "previously_verified_same_ats_tenant",
+      "complete_jds": 19
+    }
+  ],
+  "held": [
+    {
+      "id": "ceb1e1f51a49810d5bbf",
+      "status": "identity_needs_review",
+      "labels": [
+        "巴克莱（BARCLAYS)"
+      ]
+    },
+    {
+      "id": "47213f4730fd03ad6794",
+      "status": "identity_needs_review",
+      "labels": [
+        "凯特・丝蓓纽约"
+      ]
+    },
+    {
+      "id": "13aa8f60f8a3961881e3",
+      "status": "identity_needs_review",
+      "labels": [
+        "Galderma科医国际"
+      ]
+    },
+    {
+      "id": "3149f0dd4d357f129c53",
+      "status": "already_registered_endpoint",
+      "company_id": "company-6e7ff37ac155"
+    },
+    {
+      "id": "2ba4013fc216fe5b9833",
+      "status": "identity_needs_review",
+      "labels": [
+        "丹纳赫公司"
+      ]
+    },
+    {
+      "id": "ef5742cb5883feb817ec",
+      "status": "already_registered_endpoint",
+      "company_id": "co_c1946844707a0deb18da"
+    },
+    {
+      "id": "508d34bcf9acc9d1897b",
+      "status": "identity_needs_review",
+      "labels": [
+        "迅达科技"
+      ]
+    },
+    {
+      "id": "31583be64e2e4a1de4ff",
+      "status": "identity_needs_review",
+      "labels": [
+        "昕诺飞"
+      ]
+    },
+    {
+      "id": "a2f7e010cadbf6c054ba",
+      "status": "identity_needs_review",
+      "labels": [
+        "亨斯迈聚氨酯（中国）有限公司"
+      ]
+    },
+    {
+      "id": "50924973db79440f8b01",
+      "status": "identity_needs_review",
+      "labels": [
+        "四季酒店集团"
+      ]
+    },
+    {
+      "id": "f4f756b3cd789ed8ceb5",
+      "status": "identity_needs_review",
+      "labels": [
+        "HITACHI（江森自控日立空调科技（无锡））"
+      ]
+    },
+    {
+      "id": "811db3a24c43befecbfb",
+      "status": "identity_needs_review",
+      "labels": [
+        "BrightClaim‑布莱特克莱姆"
+      ]
+    },
+    {
+      "id": "b81d2054fbf77f3fab00",
+      "status": "already_registered_endpoint",
+      "company_id": "company-5c8febcbffe7"
+    },
+    {
+      "id": "f529a241efc381a73d6e",
+      "status": "identity_needs_review",
+      "labels": [
+        "cocacola 郑州太古可口可乐"
+      ]
+    },
+    {
+      "id": "3c922a426a6959420bfe",
+      "status": "identity_needs_review",
+      "labels": [
+        "巨人通力电梯有限公司"
+      ]
+    },
+    {
+      "id": "64bebf8a711cc8601e72",
+      "status": "identity_needs_review",
+      "labels": [
+        "TraneItalia"
+      ]
+    },
+    {
+      "id": "af8240c2ae44d7d95256",
+      "status": "identity_needs_review",
+      "labels": [
+        "CGEAF"
+      ]
+    },
+    {
+      "id": "ace0d0a1bd1bd2c01176",
+      "status": "identity_needs_review",
+      "labels": [
+        "渤健生物科技（上海）有限公司"
+      ]
+    },
+    {
+      "id": "6761ac08100ea4d988fa",
+      "status": "identity_needs_review",
+      "labels": [
+        "DXC 科技"
+      ]
+    },
+    {
+      "id": "7eac19f8dd10bdc0d24f",
+      "status": "identity_needs_review",
+      "labels": [
+        "万事网联"
+      ]
+    },
+    {
+      "id": "58f062f7631e28c304e1",
+      "status": "identity_needs_review",
+      "labels": [
+        "BP（英国石油公司）"
+      ]
+    },
+    {
+      "id": "fc6bb5841f9851c83636",
+      "status": "identity_needs_review",
+      "labels": [
+        "Chanel 香奈儿"
+      ]
+    },
+    {
+      "id": "bac6b2f81ff616ef330c",
+      "status": "identity_needs_review",
+      "labels": [
+        "AIA TSS友邦资讯科技"
+      ]
+    },
+    {
+      "id": "8db2d6f2bebfb5ed0484",
+      "status": "identity_needs_review",
+      "labels": [
+        "领威科技"
+      ]
+    },
+    {
+      "id": "089559ae29f1ef6591c5",
+      "status": "identity_needs_review",
+      "labels": [
+        "深圳市优才人力资源有限公司"
+      ]
+    },
+    {
+      "id": "36a5bdc0ee177d2b223d",
+      "status": "identity_needs_review",
+      "labels": [
+        "制药与生物技术gsk.com/careers"
+      ]
+    },
+    {
+      "id": "bdd6e3faba1e030d65a8",
+      "status": "identity_needs_review",
+      "labels": [
+        "金佰利健康"
+      ]
+    },
+    {
+      "id": "accd4752b2d7948b7387",
+      "status": "identity_needs_review",
+      "labels": [
+        "英维斯塔"
+      ]
+    },
+    {
+      "id": "fe41eabcbc120f8fc8ca",
+      "status": "identity_needs_review",
+      "labels": [
+        "拜安进"
+      ]
+    },
+    {
+      "id": "be77dcde5ee40ef57084",
+      "status": "identity_needs_review",
+      "labels": [
+        "柯威尔"
+      ]
+    },
+    {
+      "id": "75a0df94f35b0f7b2c07",
+      "status": "identity_needs_review",
+      "labels": [
+        "辉凌医药"
+      ]
+    },
+    {
+      "id": "eb14a68dcc7692da830a",
+      "status": "identity_needs_review",
+      "labels": [
+        "希伦布兰德"
+      ]
+    },
+    {
+      "id": "7e76605e184aaf67a2ba",
+      "status": "identity_needs_review",
+      "labels": [
+        "百高"
+      ]
+    },
+    {
+      "id": "e280db77f8a76f9ed710",
+      "status": "identity_needs_review",
+      "labels": [
+        "英国豪迈国际有限公司"
+      ]
+    },
+    {
+      "id": "17e3f1a4de256a1d27d8",
+      "status": "identity_needs_review",
+      "labels": [
+        "美银宝信息技术（上海）有限公司"
+      ]
+    },
+    {
+      "id": "f49a4dc1245bf73ad1ce",
+      "status": "identity_needs_review",
+      "labels": [
+        "a.o.史密斯"
+      ]
+    },
+    {
+      "id": "95cad07388a3c1612e08",
+      "status": "identity_needs_review",
+      "labels": [
+        "RENAULT（雷诺）"
+      ]
+    },
+    {
+      "id": "27dd96669e2804c4c7bf",
+      "status": "identity_needs_review",
+      "labels": [
+        "三江瓦力特"
+      ]
+    },
+    {
+      "id": "c644ba2d9fb8483309f8",
+      "status": "identity_needs_review",
+      "labels": [
+        "三诺生物",
+        "网龙网络"
+      ]
+    },
+    {
+      "id": "9d807f20efc626e465c8",
+      "status": "identity_needs_review",
+      "labels": [
+        "星辉游戏"
+      ]
+    },
+    {
+      "id": "91f50438ec3cae7098f5",
+      "status": "identity_needs_review",
+      "labels": [
+        "圣钘科技"
+      ]
+    },
+    {
+      "id": "46f3e9a9268b78c2b89c",
+      "status": "identity_needs_review",
+      "labels": [
+        "青山实业"
+      ]
+    },
+    {
+      "id": "a6dfd23aa64b1bb5d7c6",
+      "status": "identity_needs_review",
+      "labels": [
+        "好莱客"
+      ]
+    },
+    {
+      "id": "07e6fa82b8cd74564a39",
+      "status": "identity_needs_review",
+      "labels": [
+        "华友钴业"
+      ]
+    },
+    {
+      "id": "5d5fa63c2b57724dfa52",
+      "status": "identity_needs_review",
+      "labels": [
+        "双胞胎集团"
+      ]
+    },
+    {
+      "id": "baf4d2bb5cc1db89a0b2",
+      "status": "identity_needs_review",
+      "labels": [
+        "心动"
+      ]
+    },
+    {
+      "id": "3d96d721cfbf4bfd8afc",
+      "status": "identity_needs_review",
+      "labels": [
+        "宜宾天原集团股份有限公司"
+      ]
+    },
+    {
+      "id": "a908bd87f979ab61a1bb",
+      "status": "identity_needs_review",
+      "labels": [
+        "重庆渝北银座村镇银行"
+      ]
+    },
+    {
+      "id": "cb2035e7ad394a992aa6",
+      "status": "identity_needs_review",
+      "labels": [
+        "大都会人寿"
+      ]
+    },
+    {
+      "id": "bdb23c3359a3dc319055",
+      "status": "identity_needs_review",
+      "labels": [
+        "益海嘉里"
+      ]
+    },
+    {
+      "id": "cf5c123cc49b834912e6",
+      "status": "identity_needs_review",
+      "labels": [
+        "爱建证券"
+      ]
+    },
+    {
+      "id": "b0d181b4da1246268339",
+      "status": "identity_needs_review",
+      "labels": [
+        "华数传媒"
+      ]
+    },
+    {
+      "id": "75acb086057d7b9964b6",
+      "status": "identity_needs_review",
+      "labels": [
+        "天地伟业"
+      ]
+    }
+  ],
+  "identity_migrations": [
+    {
+      "from_id": "company-0e238670c77d",
+      "to_id": "company-316d43c02147",
+      "from_name": "Cadence（中国招聘门户）",
+      "to_name": "Cadence",
+      "reason": "Same employer across Chinese/English brand alias and verified ATS portal; preserve existing canonical ID"
+    },
+    {
+      "from_id": "company-b2fd8a24569a",
+      "to_id": "co_84048535bf0a99f3075e",
+      "from_name": "芯源系统（中国招聘门户）",
+      "to_name": "MPS芯源系统",
+      "reason": "Same employer across Chinese/English brand alias and verified ATS portal; preserve existing canonical ID"
+    },
+    {
+      "from_id": "company-adec20da9267",
+      "to_id": "company-a8257ee69e55",
+      "from_name": "百奥家庭互动",
+      "to_name": "百奥游戏",
+      "reason": "Same employer across Chinese/English brand alias and verified ATS portal; preserve existing canonical ID"
+    }
+  ]
+}

@@ -16,10 +16,12 @@ import {directionSources} from './source-directions.mjs';
 import {SEARCH_MODE,MODE_POLICY_VERSION,searchMode} from './search-mode.mjs';
 import {reviewRecruitment} from './recruitment-policy.mjs';
 import {normalizeJobLocations,jobCityStatus} from './locations.mjs';
+import {searchPlanFingerprint} from './targeted-search.mjs';
+import {maintainSource} from './source-repair.mjs';
 function needsTargetBody(job,options){const loc=normalizeJobLocations(job);return job.formal_status===searchMode(options.targetMode||SEARCH_MODE.id).status&&job.open_status==='open'&&!job.body_complete&&job.detail_skipped_reason!=='explicit_non_target_city'&&jobCityStatus({cities:loc.cities,location_unknown:loc.unknown,location_special:loc.special},options.cities||[])!=='excluded';}
 const hardware={workday:collectInternational,smartrecruiters:collectInternational,midea:collectMidea,huawei:collectHuawei,lenovo:collectLenovo,cvte:collectCvte,ugreen:collectUgreen,gree:collectHardwareDirect,dahua:collectHardwareDirect,hikvision:collectHardwareDirect,tplink:collectHardwareDirect,byd_public:collectOemPublic,lixiang_public:collectOemPublic,sinotruk_public:collectOemPublic,aion_public:collectOemPublic};
 async function collectOriginalEndpoint(source,options){const recovered=await collectRecoveredDirection(source,options);if(recovered)return recovered;const result=source.provider==='shlab_public'?await collectShlab(source,options):source.provider==='hcmcloud_public'?await collectHcmCloud(source,options):source.provider==='sf_campus'?await collectSf(source,options):source.provider==='beisen_lightbolt'?await collectLightbolt(source,options):hardware[source.provider]?await hardware[source.provider](source,options):await collectRound4(source,options)||await collectRound3(source,options)||await collectSelfHosted(source,options)||await collectRecovered(source,options)||await collectOracleNowcoder(source,options)||await collectXYZ(source,options)||await collectCommon(source,options)||await collectCustom(source,options);if(!result)throw Error('未配置该来源采集器：'+source.provider);return result;}
-export async function collectEndpoint(source,options={}) {
+async function collectRoutedEndpoint(source,options={}) {
  const mode=options.targetMode||SEARCH_MODE.id;
  if(mode==='campus')return collectOriginalEndpoint(source,options);
  const routed=await directionSources(source,{...options,targetMode:mode}),results=[];
@@ -37,12 +39,19 @@ export async function collectEndpoint(source,options={}) {
  if(routed.plan.limitation){result.coverage.reason+='; '+routed.plan.limitation;if(result.coverage.status==='complete')result.coverage.status='partial';}
  result.requests=[...routed.requests,...result.requests||[]];return result;
 }
+export async function collectEndpoint(source,options={}){
+ let result;
+ try{result=await collectRoutedEndpoint(source,options);}catch(e){if(options.repair===false)throw e;result={company_id:source.company_id,display_name:source.display_name,checked_at:new Date().toISOString(),jobs:[],requests:[],coverage:{status:'failed',pages:0,reason:e.message}};}
+ try{return await maintainSource(source,result,options,collectRoutedEndpoint);}catch(e){return {...result,maintenance_warning:e.message};}
+}
 const canonical=value=>Array.isArray(value)?value.map(canonical):value&&typeof value==='object'?Object.fromEntries(Object.keys(value).sort().map(k=>[k,canonical(value[k])])):value;
 export function sourceConfigFingerprint(company,targetMode=SEARCH_MODE.id){
  const configs=(company.recruitment_sources?.length?company.recruitment_sources:[company]).map(s=>Object.fromEntries(['provider','primary_entry_url','api_config','list_page_size','project_type','route_evidence_url','official_job_url_template','validated_api_request_examples','public_bootstrap_requests'].filter(k=>s[k]!==undefined).map(k=>[k,s[k]])));
  return createHash('sha256').update(JSON.stringify(canonical(targetMode==='campus'?configs:{configs,targetMode,policy:MODE_POLICY_VERSION}))).digest('hex');
 }
-export function sourceCacheMatches(result,company){
+export function sourceCacheMatches(result,company,searchPlan=null){
+ if(searchPlan){if(result.search_plan_fingerprint!==searchPlanFingerprint(searchPlan))return false;}
+ else if(result.search_plan_fingerprint||result.search_mode==='targeted')return false;
  if(result.source_config_fingerprint)return !!company&&result.source_config_fingerprint===sourceConfigFingerprint(company);
  // Legacy single-entry snapshots remain reusable; merged source lists must be collected once.
  return SEARCH_MODE.id==='campus'&&!company?.recruitment_sources?.length;
@@ -79,7 +88,8 @@ export function mergeSourceResults(company,results,options={}){
 export async function collectCompanySources(company,options={},collector=collectEndpoint){
  options={targetMode:SEARCH_MODE.id,...options};
  const fingerprint=sourceConfigFingerprint(company,options.targetMode);
- if(!company.recruitment_sources?.length)return {...await collector(company,options),source_config_fingerprint:fingerprint};
+ if(!company.recruitment_sources?.length){const result=await collector(company,options);return {...result,source_config_fingerprint:result.effective_source?sourceConfigFingerprint(result.effective_source,options.targetMode):fingerprint};}
  const results=[];for(const config of company.recruitment_sources){const source={...config,company_id:company.company_id,display_name:company.display_name};try{results.push({source,result:await collector(source,{...options,evidenceDir:options.evidenceDir?path.join(options.evidenceDir,source.source_id):undefined})});}catch(e){results.push({source,result:{jobs:[],requests:[],coverage:{status:'failed',reason:String(e.message||e),pages:0}}});}}
- return {...mergeSourceResults(company,results,options),source_config_fingerprint:fingerprint};
+ const effective={...company,recruitment_sources:results.map(({source,result})=>result.effective_source||source)};
+ return {...mergeSourceResults(company,results,options),source_config_fingerprint:sourceConfigFingerprint(effective,options.targetMode),repairs:results.filter(x=>x.result.repair).map(x=>({source_id:x.source.source_id,...x.result.repair}))};
 }

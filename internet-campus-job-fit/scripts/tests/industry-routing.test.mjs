@@ -22,7 +22,7 @@ test('expanded industries route companies without assuming ownership or replacin
 
 test('every expanded source has dated complete-JD API proof and all company metadata keys agree',async()=>{
  const companies=(await readJson(datasetPath(SKILL_ROOT,'assets/sources.json'))).companies;
- const proof=(await readJson(path.join(SKILL_ROOT,'data/source-verification-20260917.json'))).configurations;
+ const proof=[...(await readJson(path.join(SKILL_ROOT,'data/source-verification-20260917.json'))).configurations,...(await readJson(path.join(SKILL_ROOT,'../shared/job-search-core/data/source-verification-feishu-20260919.json'))).configurations];
  for(const c of companies.filter(c=>c.source_origin==='legacy-registry-public-api-expansion'))for(const s of c.recruitment_sources){
   const p=proof.find(p=>p.company_id===c.company_id&&p.source_id===s.source_id);assert(p,c.display_name+' '+s.source_id);
   assert(p.checked_at&&p.complete_jds_observed>0&&p.samples.length);assert(p.api_requests.some(q=>q.http_status===200&&q.response_sha256&&q.url));

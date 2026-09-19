@@ -1,4 +1,5 @@
 import {datasetPath} from '../../../shared/job-search-core/registry.mjs';
+import {sourceConfigFingerprint} from '../lib/source-collector.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
@@ -103,7 +104,9 @@ test('独立能力与意愿覆盖完整16格矩阵，非法输入不得被当作
 test('prepare复用旧快照时重用新校招和标题城市规则，保留旧文件与人工正文结论',async()=>{
  const company=(await readJson(datasetPath(SKILL_ROOT,'assets/sources.json'))).companies[0];
  const dir=await fixture('reuse-admission-policy',{missing:true,profile:{city_filters:[],company_filters:[company.company_id]},company:{company_id:company.company_id,display_name:company.display_name},job:{title:'项目管理（深圳）',formal_status:'unknown',open_status:'open',cities:[],locations_raw:[],recruitment_evidence:{provider:'beisen',Category:'校园招聘',Kind:''},evaluation_status:'needs_verification',body_complete:false,body_review:{method:'manual_full_record_review',reason:'原文只提供职责，没有要求'}}});
- const oldFile=path.join(dir,'companies',company.company_id+'.json'),before=await fs.readFile(oldFile,'utf8');
+ const oldFile=path.join(dir,'companies',company.company_id+'.json');
+ const snapshot=await readJson(oldFile);snapshot.source_config_fingerprint=sourceConfigFingerprint(company);await writeJson(oldFile,snapshot);
+ const before=await fs.readFile(oldFile,'utf8');
  const input=path.join(dir,'profile.json');await writeJson(input,(await readJson(path.join(dir,'run.json'))).profile);
  const out=path.join(dir,'reused');
  await runCommand(process.execPath,[path.join(SKILL_ROOT,'scripts/campus.mjs'),'prepare','--profile',input,'--out',out,'--reuse-run',dir],{cwd:SKILL_ROOT});

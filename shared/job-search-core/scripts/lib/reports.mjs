@@ -274,6 +274,7 @@ export async function buildReportData(dir, {allowPartial = false} = {}) {
     if (count('excluded_city')) limitations.push(`另有 ${count('excluded_city')} 个岗位不在求职城市范围。`);
     if (bundle.company.company_id === 'company-5a06b98b2152' && bundle.company.selected) limitations.push('官方 RSS 仅提供最新 10 条岗位。');
     if (run.is_test) limitations.push('测试数据，不用于实际投递。');
+    if (run.search_plan) limitations.push('定向检索：'+run.search_plan.target+'；标题词：'+run.search_plan.keywords.join('、')+'。仅覆盖本次候选公司和标题命中岗位，可能遗漏隐含机会。');
     publicCoverage.rows.push([bundle.company.display_name, !bundle.company.selected ? '未纳入' : ['获取失败', '尚未获取'].includes(bundle.status) ? '资料不足' : bundle.status === '部分获取' ? '部分岗位' : '已取得岗位范围', bundle.reviews.length, count('to_assess') - bundle.reviews.length, count('needs_verification') + count('missing_body'), limitations.join('\n') || '以所列岗位及资料日期为准。', bundle.data?.checked_at || '—']);
   }
   const sheets = [main, unchecked, companyProfileSheet(profiles), publicCoverage];

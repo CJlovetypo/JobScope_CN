@@ -42,6 +42,14 @@ description: 多行业校招岗位匹配，覆盖互联网、硬件汽车、金�
 
 大量待评估岗位推荐使用多 agent 并行，按互不重叠的岗位批次委派子 agent；少量或抽样任务可由单 agent 完成。逐岗位全文评估是质量要求，不是串行要求。可使用当前环境提供的子 agent 工具执行本轮范围内的评估，主 agent 负责分配、合并、质量检查和交付；并发数按实际可用槽位及限流调整，不写死。启动并行前阅读 [多 agent 评估操作](references/parallel-assessment.md)。工具不可用时继续分批执行，不以岗位多或需要全文阅读为由自行缩成样本。
 
+## 可选定向检索与共享标签
+
+默认全量遍历。只有用户明确选择更快的岗位定向模式时，按 [定向检索](../shared/job-search-core/references/targeted-search.md) 生成候选公司及标题近义词计划，再沿用完整 JD 评估与原 Excel 流程。业务推理仅用于本次明确同意缩小的搜索范围；报告披露可能遗漏的岗位，不能将标题命中当作匹配评级。
+
+私企和外企的规模标签使用 [客观规模模型](../shared/job-search-core/references/company-size-model.md)，在公司简介人数资料旁展示。人数、主体或资料日期不足时保留待核实，厂级不默认参与硬筛或能力评级。
+
+公开接口发生契约变化时执行 [有界自修复](../shared/job-search-core/references/source-repair.md)，保存历史并核对真实租户与 JD；空列表不视为失效。用户要求维护数据时再阅读 [维护命令与证据边界](../shared/job-search-core/references/maintenance.md)。
+
 ## 标签维护
 
 新增或修复公司来源时阅读 [来源维护约定](references/source-maintenance.md)：逐配置实测完整 API JD、核对真实招聘主体后入库，保留验证日期与分页限制。行业宽类只用于分流，不冒充已核实的主营业务或公司性质。

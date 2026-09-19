@@ -1,4 +1,4 @@
-import {COMPANY_PROFILES_FILE} from '../../registry.mjs';
+import {COMPANY_PROFILES_FILE,COMPANY_SIZE_FILE} from '../../registry.mjs';
 import path from 'node:path';
 import {SKILL_ROOT, readJson, writeJson} from './io.mjs';
 
@@ -51,13 +51,14 @@ export function mergeProfiles(sources, business, previous, patches = []) {
 export async function companyProfileSnapshot(dir, companies) {
   const saved = await readJson(path.join(dir, 'company-profiles.snapshot.json'), null);
   const dataset = saved || await readJson(PROFILE_FILE, {companies: []});
+  const sizeTags=saved?null:new Map((await readJson(COMPANY_SIZE_FILE,{companies:[]})).companies.map(c=>[c.company_id,c]));
   const byId = new Map();
   for (const entry of dataset.companies) {
     if (byId.has(entry.company_id)) throw new Error('公司简介存在重复 ID：' + entry.company_id);
     byId.set(entry.company_id, entry);
   }
   return {schema_version: 1, source_updated_at: dataset.source_updated_at || dataset.updated_at || null, captured_at: saved?.captured_at || new Date().toISOString(), companies: [...new Map(companies.map(c => [c.company_id, c])).values()].map(c => {
-    const entry = {company_id: c.company_id, display_name: c.display_name};
+    const entry = {company_id: c.company_id, display_name: c.display_name, size_tag:saved?byId.get(c.company_id)?.size_tag:sizeTags.get(c.company_id)};
     for (const field of Object.keys(PROFILE_FIELDS)) {
       entry[field] = byId.get(c.company_id)?.[field] || emptyFact();
       // Source expansion may retain researched clues before a fact is verified.
@@ -79,7 +80,8 @@ export function companyProfileSheet(snapshot) {
   for (const c of snapshot.companies) for (const [field, label] of Object.entries(PROFILE_FIELDS)) {
     const fact = c[field];
     const urls = [...new Set((fact.evidence || []).map(e => e.url))];
-    sheet.rows.push([c.display_name, label, fact.status === 'missing' ? '暂无已核实资料' : fact.value, fact.entity || '—', fact.as_of || (fact.checked_at ? '统计时点未注明；资料日期 ' + fact.checked_at.slice(0, 10) : '—'), urls.join('\n') || '—']);
+    const sizeNote=field==='workforce'&&c.size_tag?`\n求职组织规模：${c.size_tag.label}；${c.size_tag.reason}`:'';
+    sheet.rows.push([c.display_name, label, (fact.status === 'missing' ? '暂无已核实资料' : fact.value)+sizeNote, fact.entity || '—', fact.as_of || (fact.checked_at ? '统计时点未注明；资料日期 ' + fact.checked_at.slice(0, 10) : '—'), urls.join('\n') || '—']);
     if (urls.length === 1) sheet.links.push({row: sheet.rows.length + 1, column: 6, url: urls[0], label: urls[0]});
   }
   return sheet;

@@ -260,10 +260,10 @@ async function collectContext(source, context, options, client) {
     for (let page = 0; page < options.maxPages; page++) {
       let url = context.q.url, body = { ...context.body }, method = context.q.method || 'POST';
       const headers = {...headersFor(context.q, context.entry),...(freshCsrf?{'x-csrf-token':freshCsrf}:{})};
-      if (provider === 'moka') body = { ...body, limit: size, offset, keyword: '', needStat: true };
-      else if (provider === 'beisen') body = { ...body, PageIndex: page, PageSize: size, KeyWords: '',
+      if (provider === 'moka') body = { ...body, limit: size, offset, keyword: options.keyword || '', needStat: true };
+      else if (provider === 'beisen') body = { ...body, PageIndex: page, PageSize: size, KeyWords: options.keyword || '',
         DisplayFields: [...new Set([...(body.DisplayFields||[]),'Category', 'Kind', 'LocId', 'LocNames', 'Duty', 'Require', 'Status','Org','OrgId','ClassificationTwo'])] };
-      else if (provider === 'feishu') body = { ...body, limit: size, offset, keyword: '', recruitment_id_list: Array.isArray(context.body.recruitment_id_list) ? context.body.recruitment_id_list : ['201'] };
+      else if (provider === 'feishu') body = { ...body, limit: size, offset, keyword: options.keyword || '', recruitment_id_list: Array.isArray(context.body.recruitment_id_list) ? context.body.recruitment_id_list : ['201'] };
       else if (provider === 'moka_api_platform') {
         const u = new URL(url); u.searchParams.set('limit', String(size)); u.searchParams.set('offset', String(offset));
         url = u.href; body = null; method = 'GET';
@@ -315,12 +315,14 @@ async function collectContext(source, context, options, client) {
   } catch (error) { reason = error.message; errors.push(error.message); }
 
   const enrichable = [...stored.values()].filter(({ job }) => {
+    if(options.titleFilter&&!options.titleFilter(job.title)){job.detail_skipped_reason='targeted_title_not_matched';return false;}
     if((options.targetMode||SEARCH_MODE.id)!=='campus'&&knownOtherType(job,options.targetMode||SEARCH_MODE.id)){job.detail_skipped_reason='explicit_non_target_type';return false;}
     if (skipDetailsForCity(job, options.cities)) { job.detail_skipped_reason = 'explicit_non_target_city'; skipped++; return false; }
     return !job.locations_raw.length || job.formal_status === 'unknown' || job.open_status === 'unknown'
       || (options.mode === 'full' && !job.body_complete);
   });
-  if (provider!=='moka_api_platform' && (provider!=='feishu'||context.detail)) await mapLimit(enrichable, 3, async item => {
+  const detailTargets=options.maxDetails==null?enrichable:enrichable.slice(0,Math.max(0,options.maxDetails));
+  if (provider!=='moka_api_platform' && (provider!=='feishu'||context.detail)) await mapLimit(detailTargets, 3, async item => {
     const job = item.job;
     try {
       let q = context.detail, url, body, method, headers;

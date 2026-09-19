@@ -19,6 +19,14 @@ description: 根据简历、求职倾向与自述，按行业和城市遍历已�
 6. 阅读 [评估约定](references/assessment.md) 和 [能力证据模型](references/ability-model.md)。用固定批次完整阅读每个JD及画像后评估，禁止标题、关键词或模板打分。大量岗位可按 [固定批次](references/parallel-assessment.md) 并行；主agent合并和质检，样本只缩数量不降低全文要求。硬性条件按本方向逐项核对，能力与意愿独立，不以经历推断喜欢；保留匹配、可跨界尝试和明显不匹配的判断。
 7. 所选范围全部完成后 `render`，交付 `outputs/<运行名>/实习岗位匹配.xlsx`。四页签固定为岗位匹配、待核实与未评估、公司简介、来源覆盖；前两张十二列及定性评级沿用校招版。提供具体官方JD链接；只有招聘入口则标岗位ID。主表理由为结论、能力、意愿、缺口四段易读总结。完整JD、API证据、流程日志留在runs中，不放入Excel隐藏页，不生成Markdown交付。
 
+## 可选定向检索与共享标签
+
+默认全量遍历。只有用户明确选择更快的岗位定向模式时，按 [定向检索](../shared/job-search-core/references/targeted-search.md) 生成候选公司及标题近义词计划，再沿用完整 JD 评估与原 Excel 流程。业务推理仅用于本次明确同意缩小的搜索范围；报告披露可能遗漏的岗位，不能将标题命中当作匹配评级。
+
+私企和外企的规模标签使用 [客观规模模型](../shared/job-search-core/references/company-size-model.md)，在公司简介人数资料旁展示。人数、主体或资料日期不足时保留待核实，厂级不默认参与硬筛或能力评级。
+
+公开接口发生契约变化时执行 [有界自修复](../shared/job-search-core/references/source-repair.md)，保存历史并核对真实租户与 JD；空列表不视为失效。用户要求维护数据时再阅读 [维护命令与证据边界](../shared/job-search-core/references/maintenance.md)。
+
 ## 来源、缓存与边界
 
 - 三个 skill 直接读取同一份 `../shared/job-search-core/assets/sources.json` 及公共采集器；不维护独立来源副本。数量摘要见 `data/shared-registry.json`。全部配置启用；`data/source-mode-capabilities.json` 只记录路由策略，不能仅凭策略宣称取得目标岗位。
