@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "mode": "social",
-  "checked_at": "2026-09-20T14:31:25.201Z",
+  "checked_at": "2026-09-20T15:19:13.691Z",
   "note": "方向路由与证据的派生索引；不是独立来源库，不控制启停。",
   "configurations": [
     {
@@ -2192,6 +2192,18 @@
       "target_validation_status": "no_target_in_observed_rows",
       "enabled": true,
       "proof_file": "D:\\Feishu Project\\job-search-skill-pack\\social-job-fit\\artifacts\\direction-api-audit-20260919\\phase3-moka-sites\\bf8c02d321cbe2232cef0a19\\result.json"
+    },
+    {
+      "company_id": "co_0ef606786f395fba4c31",
+      "display_name": "毕马威",
+      "source_id": "waiqi-routing-ebf8d1328903797f",
+      "provider": "moka",
+      "entry": "https://app.mokahr.com/social-recruitment/kpmg/68240?sharePageId=2738446",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
     },
     {
       "company_id": "company-cfc3d445066f",
@@ -43649,6 +43661,30 @@
       "source_id": "waiqi-routing-5508b831cd50e686",
       "provider": "oracle_recruiting",
       "entry": "https://ebcs.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/44018",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "waiqi-routing-38df0ba6520cbdac",
+      "display_name": "艾默生电气（中国）投资有限公司",
+      "source_id": "waiqi-routing-f7b88ad1cf5880b3",
+      "provider": "oracle_recruiting",
+      "entry": "https://hdjq.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/26010816",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "waiqi-routing-05dcacf5f2bc1dcd",
+      "display_name": "科普兰",
+      "source_id": "waiqi-routing-ede399a283f7d89c",
+      "provider": "workday",
+      "entry": "https://copeland.wd5.myworkdayjobs.com/Copeland_External_Careers_Page/job/Suzhou-China/Advanced-Manufacturing-Engineering-Technician_JR117964",
       "strategy": "existing_broad_stream",
       "scope": "per_job_type_required",
       "target_validation_status": "untested",

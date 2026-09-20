@@ -18045,6 +18045,122 @@
             }
           ],
           "source_id": "api-97c05d8567b89f85"
+        },
+        {
+          "company_id": "co_0ef606786f395fba4c31",
+          "display_name": "毕马威企业咨询（中国）有限公司",
+          "aliases": [
+            "毕马威",
+            "KPMG China"
+          ],
+          "provider": "moka",
+          "category": "professional_services",
+          "industry_tags": [
+            "professional_services"
+          ],
+          "primary_entry_url": "https://app.mokahr.com/social-recruitment/kpmg/68240?sharePageId=2738446",
+          "api_config": {
+            "channel": "social-recruitment",
+            "org_id": "kpmg",
+            "site_id": "68240"
+          },
+          "source_id": "waiqi-routing-ebf8d1328903797f",
+          "source_origin": "waiqi-2026-09-20-routing-deep-review",
+          "verification_status": "verified_api_full_jd",
+          "verified_at": "2026-09-20T13:43:33.449Z",
+          "admitted": true,
+          "source_verification": {
+            "checked_at": "2026-09-20T13:43:33.449Z",
+            "method": "waiqi_current_job_to_anonymous_official_api_full_jd",
+            "complete_jd_samples": 1,
+            "observed_jobs": 324,
+            "identity_basis": "Waiqi 当前岗位直达毕马威官方 Moka 招聘租户；公开 API 的 orgId 为 kpmg，完整当前 JD 正文明确标识 KPMG China。",
+            "identity_evidence_file": "campus-job-fit/artifacts/waiqi-2026-09-20/routing-expansion-verification/contexts/10549a3ef348193c/http/745eb319-433-00003-decoded.json",
+            "proof_directory": "campus-job-fit/artifacts/waiqi-2026-09-20/routing-expansion-verification/contexts/10549a3ef348193c",
+            "scope": "Current jobs returned by the official KPMG China social-recruitment API.",
+            "coverage": {
+              "status": "sample_verified",
+              "server_total": 324,
+              "mainland_jobs_observed": 324,
+              "complete_mainland_jd": true
+            }
+          },
+          "identity_verification": {
+            "identity_verified": true,
+            "basis": "公开 Moka API 的 orgId 为 kpmg，完整当前 JD 正文明确标识 KPMG China。",
+            "evidence_file": "campus-job-fit/artifacts/waiqi-2026-09-20/routing-expansion-verification/contexts/10549a3ef348193c/http/745eb319-433-00003-decoded.json",
+            "verified_at": "2026-09-20T13:43:33.449Z"
+          },
+          "discovery_provenance": {
+            "dataset": "waiqi-company-20260920",
+            "waiqi_company_id": "968",
+            "company_url": "https://waiqi.com/company/detail?id=968",
+            "observed_link": "https://app.mokahr.com/social-recruitment/kpmg/68240?sharePageId=2738446#/job/459a9354-c595-4531-8daa-be4de124666c",
+            "reported_position_count": 129,
+            "returned_position_count": 129
+          },
+          "validated_api_request_examples": [
+            {
+              "method": "POST",
+              "url": "https://app.mokahr.com/api/outer/ats-apply/website/jobs/v2",
+              "headers": {
+                "accept": "application/json, text/plain, */*",
+                "content-type": "application/json",
+                "origin": "https://app.mokahr.com",
+                "referer": "https://app.mokahr.com/social-recruitment/kpmg/68240?sharePageId=2738446",
+                "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+              },
+              "body": {
+                "orgId": "kpmg",
+                "siteId": "68240",
+                "site": "social-recruitment",
+                "locale": "zh-CN",
+                "limit": 20,
+                "offset": 0,
+                "needStat": true,
+                "keyword": ""
+              },
+              "purpose": "job_list",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\10549a3ef348193c\\http\\745eb319-433-00002.json",
+              "response_sha256": "f5f959dbf999c1f21fcd1ae38057fc75b1f61f759ddcfcbc2fba9e49af51708b",
+              "checked_at": "2026-09-20T13:43:32.855Z"
+            },
+            {
+              "method": "POST",
+              "url": "https://app.mokahr.com/api/outer/ats-apply/website/job",
+              "headers": {
+                "accept": "application/json, text/plain, */*",
+                "content-type": "application/json",
+                "origin": "https://app.mokahr.com",
+                "referer": "https://app.mokahr.com/social-recruitment/kpmg/68240?sharePageId=2738446",
+                "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+              },
+              "body": {
+                "orgId": "kpmg",
+                "siteId": "68240",
+                "jobId": "bbb77b13-f568-42cb-9822-290537ec39f8",
+                "locale": "zh-CN"
+              },
+              "purpose": "job_detail",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\10549a3ef348193c\\http\\745eb319-433-00003.json",
+              "response_sha256": "cc2cb75e31d57993d4b722b505291945e85e91589e0037ee969b166e7f68e91f",
+              "checked_at": "2026-09-20T13:43:33.048Z"
+            }
+          ],
+          "public_bootstrap_requests": [
+            {
+              "method": "GET",
+              "url": "https://app.mokahr.com/social-recruitment/kpmg/68240?sharePageId=2738446",
+              "headers": {
+                "accept": "text/html,application/json",
+                "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+              },
+              "purpose": "public_configuration_bootstrap",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\10549a3ef348193c\\http\\745eb319-433-00001.txt",
+              "response_sha256": "b0fea1aaa111c8e3449a778e6b9ce958498ce4bcce4fa723a6cc4cf55651640c",
+              "checked_at": "2026-09-20T13:43:32.144Z"
+            }
+          ]
         }
       ],
       "source_origin": "legacy-registry-public-api-expansion",
@@ -453560,9 +453676,391 @@
           }
         }
       ]
+    },
+    {
+      "company_id": "waiqi-routing-38df0ba6520cbdac",
+      "display_name": "艾默生电气（中国）投资有限公司",
+      "aliases": [
+        "EMS艾默生电气",
+        "Emerson 艾默生"
+      ],
+      "provider": "oracle_recruiting",
+      "category": "industrial",
+      "industry_tags": [
+        "industrial"
+      ],
+      "primary_entry_url": "https://hdjq.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/26010816",
+      "source_id": "waiqi-routing-f7b88ad1cf5880b3",
+      "source_origin": "waiqi-2026-09-20-pending-live-recheck",
+      "verification_status": "verified_api_full_jd",
+      "verified_at": "2026-09-20T15:10:25.987Z",
+      "admitted": true,
+      "source_verification": {
+        "checked_at": "2026-09-20T15:10:25.987Z",
+        "method": "waiqi_current_job_to_live_anonymous_official_api_full_jd_plus_official_career_page_identity",
+        "complete_jd_samples": 52,
+        "observed_jobs": 53,
+        "identity_basis": "Oracle Candidate Experience 官方页标题为“Emerson Career Site”，与 Waiqi 的 Emerson/艾默生别名一致；当前匿名官方 API 返回 53 个中国大陆岗位，其中 52 个具备完整 JD。",
+        "identity_evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\pending-recheck-2\\oracle-recruiting-https-hdjq-fa-us2-oraclecloud-com-cx-1\\http\\98c56e6b-2fe-00008.json",
+        "proof_directory": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\pending-recheck-2\\oracle-recruiting-https-hdjq-fa-us2-oraclecloud-com-cx-1",
+        "official_identity_url": "https://hdjq.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1",
+        "official_identity_title": "Emerson Career Site",
+        "official_identity_response_sha256": "5801f0864bc8df8e1d7db6e579860eea68ee48ac7803b796cea2ac6fc118207f",
+        "scope": "Current mainland-China jobs from a partial global Oracle scan followed by explicit PrimaryLocationCountry=CN filtering.",
+        "coverage": {
+          "status": "partial",
+          "server_total": 1061,
+          "mainland_jobs_observed": 53,
+          "complete_mainland_jd": true,
+          "list_complete": false
+        }
+      },
+      "identity_verification": {
+        "identity_verified": true,
+        "basis": "Oracle Candidate Experience 官方页标题为“Emerson Career Site”，与 Waiqi 的 Emerson/艾默生别名一致；当前匿名官方 API 返回 53 个中国大陆岗位，其中 52 个具备完整 JD。",
+        "evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\pending-recheck-2\\oracle-recruiting-https-hdjq-fa-us2-oraclecloud-com-cx-1\\http\\98c56e6b-2fe-00008.json",
+        "evidence_url": "https://hdjq.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1",
+        "official_page_title": "Emerson Career Site",
+        "response_sha256": "5801f0864bc8df8e1d7db6e579860eea68ee48ac7803b796cea2ac6fc118207f",
+        "verified_at": "2026-09-20T15:10:25.987Z"
+      },
+      "discovery_provenance": {
+        "dataset": "waiqi-company-20260920",
+        "waiqi_company_id": "1092",
+        "company_url": "https://waiqi.com/company/detail?id=1092",
+        "observed_link": "https://hdjq.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/26010816",
+        "reported_position_count": 115,
+        "returned_position_count": 115,
+        "context_key": "oracle_recruiting|https://hdjq.fa.us2.oraclecloud.com|cx_1"
+      },
+      "validated_api_request_examples": [
+        {
+          "method": "GET",
+          "url": "https://hdjq.fa.us2.oraclecloud.com/hcmRestApi/resources/latest/recruitingCEJobRequisitions?onlyData=true&expand=requisitionList.secondaryLocations&finder=findReqs;siteNumber=CX_1,facetsList=NONE,limit=200,offset=0",
+          "headers": {
+            "accept": "application/json, text/plain, */*",
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+          },
+          "purpose": "global_job_list_for_cn_filter",
+          "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\pending-recheck-2\\oracle-recruiting-https-hdjq-fa-us2-oraclecloud-com-cx-1\\http\\98c56e6b-2fe-00001.json",
+          "response_sha256": "dd853e3350cafd2d48738401bf300f17ded80108cfcf8acaf077bd647ce74a03",
+          "checked_at": "2026-09-20T15:09:25.719Z"
+        },
+        {
+          "method": "GET",
+          "url": "https://hdjq.fa.us2.oraclecloud.com/hcmRestApi/resources/latest/recruitingCEJobRequisitionDetails?expand=all&onlyData=true&finder=ById;Id=%2226011011%22,siteNumber=CX_1",
+          "headers": {
+            "accept": "application/json, text/plain, */*",
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+          },
+          "purpose": "job_detail",
+          "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\pending-recheck-2\\oracle-recruiting-https-hdjq-fa-us2-oraclecloud-com-cx-1\\http\\98c56e6b-2fe-00008.json",
+          "response_sha256": "51a1a3f217ad044d3fab7112b2f9377b332bbb0e22e7023918a51569363dbd3b",
+          "checked_at": "2026-09-20T15:09:50.134Z"
+        }
+      ],
+      "api_config": {
+        "origin": "https://hdjq.fa.us2.oraclecloud.com",
+        "site": "CX_1"
+      },
+      "recruitment_sources": [
+        {
+          "company_id": "waiqi-routing-38df0ba6520cbdac",
+          "display_name": "艾默生电气（中国）投资有限公司",
+          "aliases": [
+            "EMS艾默生电气",
+            "Emerson 艾默生"
+          ],
+          "provider": "oracle_recruiting",
+          "category": "industrial",
+          "industry_tags": [
+            "industrial"
+          ],
+          "primary_entry_url": "https://hdjq.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/26010816",
+          "source_id": "waiqi-routing-f7b88ad1cf5880b3",
+          "source_origin": "waiqi-2026-09-20-pending-live-recheck",
+          "verification_status": "verified_api_full_jd",
+          "verified_at": "2026-09-20T15:10:25.987Z",
+          "admitted": true,
+          "source_verification": {
+            "checked_at": "2026-09-20T15:10:25.987Z",
+            "method": "waiqi_current_job_to_live_anonymous_official_api_full_jd_plus_official_career_page_identity",
+            "complete_jd_samples": 52,
+            "observed_jobs": 53,
+            "identity_basis": "Oracle Candidate Experience 官方页标题为“Emerson Career Site”，与 Waiqi 的 Emerson/艾默生别名一致；当前匿名官方 API 返回 53 个中国大陆岗位，其中 52 个具备完整 JD。",
+            "identity_evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\pending-recheck-2\\oracle-recruiting-https-hdjq-fa-us2-oraclecloud-com-cx-1\\http\\98c56e6b-2fe-00008.json",
+            "proof_directory": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\pending-recheck-2\\oracle-recruiting-https-hdjq-fa-us2-oraclecloud-com-cx-1",
+            "official_identity_url": "https://hdjq.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1",
+            "official_identity_title": "Emerson Career Site",
+            "official_identity_response_sha256": "5801f0864bc8df8e1d7db6e579860eea68ee48ac7803b796cea2ac6fc118207f",
+            "scope": "Current mainland-China jobs from a partial global Oracle scan followed by explicit PrimaryLocationCountry=CN filtering.",
+            "coverage": {
+              "status": "partial",
+              "server_total": 1061,
+              "mainland_jobs_observed": 53,
+              "complete_mainland_jd": true,
+              "list_complete": false
+            }
+          },
+          "identity_verification": {
+            "identity_verified": true,
+            "basis": "Oracle Candidate Experience 官方页标题为“Emerson Career Site”，与 Waiqi 的 Emerson/艾默生别名一致；当前匿名官方 API 返回 53 个中国大陆岗位，其中 52 个具备完整 JD。",
+            "evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\pending-recheck-2\\oracle-recruiting-https-hdjq-fa-us2-oraclecloud-com-cx-1\\http\\98c56e6b-2fe-00008.json",
+            "evidence_url": "https://hdjq.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1",
+            "official_page_title": "Emerson Career Site",
+            "response_sha256": "5801f0864bc8df8e1d7db6e579860eea68ee48ac7803b796cea2ac6fc118207f",
+            "verified_at": "2026-09-20T15:10:25.987Z"
+          },
+          "discovery_provenance": {
+            "dataset": "waiqi-company-20260920",
+            "waiqi_company_id": "1092",
+            "company_url": "https://waiqi.com/company/detail?id=1092",
+            "observed_link": "https://hdjq.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/26010816",
+            "reported_position_count": 115,
+            "returned_position_count": 115,
+            "context_key": "oracle_recruiting|https://hdjq.fa.us2.oraclecloud.com|cx_1"
+          },
+          "validated_api_request_examples": [
+            {
+              "method": "GET",
+              "url": "https://hdjq.fa.us2.oraclecloud.com/hcmRestApi/resources/latest/recruitingCEJobRequisitions?onlyData=true&expand=requisitionList.secondaryLocations&finder=findReqs;siteNumber=CX_1,facetsList=NONE,limit=200,offset=0",
+              "headers": {
+                "accept": "application/json, text/plain, */*",
+                "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+              },
+              "purpose": "global_job_list_for_cn_filter",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\pending-recheck-2\\oracle-recruiting-https-hdjq-fa-us2-oraclecloud-com-cx-1\\http\\98c56e6b-2fe-00001.json",
+              "response_sha256": "dd853e3350cafd2d48738401bf300f17ded80108cfcf8acaf077bd647ce74a03",
+              "checked_at": "2026-09-20T15:09:25.719Z"
+            },
+            {
+              "method": "GET",
+              "url": "https://hdjq.fa.us2.oraclecloud.com/hcmRestApi/resources/latest/recruitingCEJobRequisitionDetails?expand=all&onlyData=true&finder=ById;Id=%2226011011%22,siteNumber=CX_1",
+              "headers": {
+                "accept": "application/json, text/plain, */*",
+                "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+              },
+              "purpose": "job_detail",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\pending-recheck-2\\oracle-recruiting-https-hdjq-fa-us2-oraclecloud-com-cx-1\\http\\98c56e6b-2fe-00008.json",
+              "response_sha256": "51a1a3f217ad044d3fab7112b2f9377b332bbb0e22e7023918a51569363dbd3b",
+              "checked_at": "2026-09-20T15:09:50.134Z"
+            }
+          ],
+          "api_config": {
+            "origin": "https://hdjq.fa.us2.oraclecloud.com",
+            "site": "CX_1"
+          }
+        }
+      ]
+    },
+    {
+      "company_id": "waiqi-routing-05dcacf5f2bc1dcd",
+      "display_name": "科普兰",
+      "aliases": [
+        "Copeland 科普兰",
+        "Copeland"
+      ],
+      "provider": "workday",
+      "category": "industrial",
+      "industry_tags": [
+        "industrial"
+      ],
+      "primary_entry_url": "https://copeland.wd5.myworkdayjobs.com/Copeland_External_Careers_Page/job/Suzhou-China/Advanced-Manufacturing-Engineering-Technician_JR117964",
+      "source_id": "waiqi-routing-ede399a283f7d89c",
+      "source_origin": "waiqi-2026-09-20-pending-live-recheck",
+      "verification_status": "verified_api_full_jd",
+      "verified_at": "2026-09-20T15:09:31.165Z",
+      "admitted": true,
+      "source_verification": {
+        "checked_at": "2026-09-20T15:09:31.165Z",
+        "method": "waiqi_current_job_to_live_anonymous_official_api_full_jd_plus_workday_hiring_organization_identity",
+        "complete_jd_samples": 1,
+        "observed_jobs": 34,
+        "identity_basis": "Workday 官方详情 API 的 hiringOrganization 为“Copeland Climate Technologies (Suzhou) Co. Ltd.”，完整 JD 正文亦明确 Copeland；与 Waiqi 科普兰主体一致。",
+        "identity_evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\pending-recheck-2\\workday-https-copeland-wd5-myworkdayjobs-com-copeland-copeland-external-careers-page\\manual-detail.json",
+        "proof_directory": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\pending-recheck-2\\workday-https-copeland-wd5-myworkdayjobs-com-copeland-copeland-external-careers-page",
+        "official_identity_url": "https://copeland.wd5.myworkdayjobs.com/wday/cxs/copeland/Copeland_External_Careers_Page/job/Suzhou-China/Advanced-Manufacturing-Engineering-Technician_JR117964",
+        "official_identity_response_sha256": "ae9e6ad680b7fc4a491aa93b7e99a7ca2eac8ad115aff86263794414e690f238",
+        "scope": "Observed mainland location facets with per-detail China confirmation; country-wide coverage remains partial.",
+        "coverage": {
+          "status": "partial",
+          "server_total": 37,
+          "mainland_jobs_observed": 34,
+          "complete_mainland_jd": true,
+          "list_complete": true
+        }
+      },
+      "identity_verification": {
+        "identity_verified": true,
+        "basis": "Workday 官方详情 API 的 hiringOrganization 为“Copeland Climate Technologies (Suzhou) Co. Ltd.”，完整 JD 正文亦明确 Copeland；与 Waiqi 科普兰主体一致。",
+        "evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\pending-recheck-2\\workday-https-copeland-wd5-myworkdayjobs-com-copeland-copeland-external-careers-page\\manual-detail.json",
+        "evidence_url": "https://copeland.wd5.myworkdayjobs.com/wday/cxs/copeland/Copeland_External_Careers_Page/job/Suzhou-China/Advanced-Manufacturing-Engineering-Technician_JR117964",
+        "response_sha256": "ae9e6ad680b7fc4a491aa93b7e99a7ca2eac8ad115aff86263794414e690f238",
+        "verified_at": "2026-09-20T15:09:31.165Z"
+      },
+      "discovery_provenance": {
+        "dataset": "waiqi-company-20260920",
+        "waiqi_company_id": "38380",
+        "company_url": "https://waiqi.com/company/detail?id=38380",
+        "observed_link": "https://copeland.wd5.myworkdayjobs.com/Copeland_External_Careers_Page/job/Suzhou-China/Advanced-Manufacturing-Engineering-Technician_JR117964",
+        "reported_position_count": 41,
+        "returned_position_count": 41,
+        "context_key": "workday|https://copeland.wd5.myworkdayjobs.com|copeland|copeland_external_careers_page"
+      },
+      "validated_api_request_examples": [
+        {
+          "method": "POST",
+          "url": "https://copeland.wd5.myworkdayjobs.com/wday/cxs/copeland/Copeland_External_Careers_Page/jobs",
+          "headers": {
+            "accept": "application/json, text/plain, */*",
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+            "Content-Type": "application/json"
+          },
+          "body": {
+            "appliedFacets": {
+              "locations": [
+                "beaf49f452381001f786150131e00000",
+                "44a9b1f38911100106154ed62e7d0000",
+                "c08710a902081001fd3fcef446970000",
+                "c08710a902081001fd3f9aade4380000",
+                "c08710a902081001fd3f7c0702880000",
+                "c08710a902081001fd3fefff03050000"
+              ]
+            },
+            "limit": 20,
+            "offset": 0,
+            "searchText": ""
+          },
+          "purpose": "location_filtered_job_list",
+          "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\pending-recheck-2\\workday-https-copeland-wd5-myworkdayjobs-com-copeland-copeland-external-careers-page\\http\\70533390-5f9-00002.json",
+          "response_sha256": "e75a908f61b21af424159437c6c5e79ab0b1eadddea372812e65be832ca1804d",
+          "checked_at": "2026-09-20T15:09:27.844Z"
+        },
+        {
+          "method": "GET",
+          "url": "https://copeland.wd5.myworkdayjobs.com/wday/cxs/copeland/Copeland_External_Careers_Page/job/Suzhou-China/Advanced-Manufacturing-Engineering-Technician_JR117964",
+          "headers": {
+            "accept": "application/json",
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+          },
+          "purpose": "job_detail_identity_and_full_jd",
+          "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\pending-recheck-2\\workday-https-copeland-wd5-myworkdayjobs-com-copeland-copeland-external-careers-page\\manual-detail.json",
+          "response_sha256": "ae9e6ad680b7fc4a491aa93b7e99a7ca2eac8ad115aff86263794414e690f238",
+          "checked_at": "2026-09-20T15:13:28.226Z"
+        }
+      ],
+      "api_config": {
+        "origin": "https://copeland.wd5.myworkdayjobs.com",
+        "tenant": "copeland",
+        "site": "Copeland_External_Careers_Page"
+      },
+      "recruitment_sources": [
+        {
+          "company_id": "waiqi-routing-05dcacf5f2bc1dcd",
+          "display_name": "科普兰",
+          "aliases": [
+            "Copeland 科普兰",
+            "Copeland"
+          ],
+          "provider": "workday",
+          "category": "industrial",
+          "industry_tags": [
+            "industrial"
+          ],
+          "primary_entry_url": "https://copeland.wd5.myworkdayjobs.com/Copeland_External_Careers_Page/job/Suzhou-China/Advanced-Manufacturing-Engineering-Technician_JR117964",
+          "source_id": "waiqi-routing-ede399a283f7d89c",
+          "source_origin": "waiqi-2026-09-20-pending-live-recheck",
+          "verification_status": "verified_api_full_jd",
+          "verified_at": "2026-09-20T15:09:31.165Z",
+          "admitted": true,
+          "source_verification": {
+            "checked_at": "2026-09-20T15:09:31.165Z",
+            "method": "waiqi_current_job_to_live_anonymous_official_api_full_jd_plus_workday_hiring_organization_identity",
+            "complete_jd_samples": 1,
+            "observed_jobs": 34,
+            "identity_basis": "Workday 官方详情 API 的 hiringOrganization 为“Copeland Climate Technologies (Suzhou) Co. Ltd.”，完整 JD 正文亦明确 Copeland；与 Waiqi 科普兰主体一致。",
+            "identity_evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\pending-recheck-2\\workday-https-copeland-wd5-myworkdayjobs-com-copeland-copeland-external-careers-page\\manual-detail.json",
+            "proof_directory": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\pending-recheck-2\\workday-https-copeland-wd5-myworkdayjobs-com-copeland-copeland-external-careers-page",
+            "official_identity_url": "https://copeland.wd5.myworkdayjobs.com/wday/cxs/copeland/Copeland_External_Careers_Page/job/Suzhou-China/Advanced-Manufacturing-Engineering-Technician_JR117964",
+            "official_identity_response_sha256": "ae9e6ad680b7fc4a491aa93b7e99a7ca2eac8ad115aff86263794414e690f238",
+            "scope": "Observed mainland location facets with per-detail China confirmation; country-wide coverage remains partial.",
+            "coverage": {
+              "status": "partial",
+              "server_total": 37,
+              "mainland_jobs_observed": 34,
+              "complete_mainland_jd": true,
+              "list_complete": true
+            }
+          },
+          "identity_verification": {
+            "identity_verified": true,
+            "basis": "Workday 官方详情 API 的 hiringOrganization 为“Copeland Climate Technologies (Suzhou) Co. Ltd.”，完整 JD 正文亦明确 Copeland；与 Waiqi 科普兰主体一致。",
+            "evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\pending-recheck-2\\workday-https-copeland-wd5-myworkdayjobs-com-copeland-copeland-external-careers-page\\manual-detail.json",
+            "evidence_url": "https://copeland.wd5.myworkdayjobs.com/wday/cxs/copeland/Copeland_External_Careers_Page/job/Suzhou-China/Advanced-Manufacturing-Engineering-Technician_JR117964",
+            "response_sha256": "ae9e6ad680b7fc4a491aa93b7e99a7ca2eac8ad115aff86263794414e690f238",
+            "verified_at": "2026-09-20T15:09:31.165Z"
+          },
+          "discovery_provenance": {
+            "dataset": "waiqi-company-20260920",
+            "waiqi_company_id": "38380",
+            "company_url": "https://waiqi.com/company/detail?id=38380",
+            "observed_link": "https://copeland.wd5.myworkdayjobs.com/Copeland_External_Careers_Page/job/Suzhou-China/Advanced-Manufacturing-Engineering-Technician_JR117964",
+            "reported_position_count": 41,
+            "returned_position_count": 41,
+            "context_key": "workday|https://copeland.wd5.myworkdayjobs.com|copeland|copeland_external_careers_page"
+          },
+          "validated_api_request_examples": [
+            {
+              "method": "POST",
+              "url": "https://copeland.wd5.myworkdayjobs.com/wday/cxs/copeland/Copeland_External_Careers_Page/jobs",
+              "headers": {
+                "accept": "application/json, text/plain, */*",
+                "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+                "Content-Type": "application/json"
+              },
+              "body": {
+                "appliedFacets": {
+                  "locations": [
+                    "beaf49f452381001f786150131e00000",
+                    "44a9b1f38911100106154ed62e7d0000",
+                    "c08710a902081001fd3fcef446970000",
+                    "c08710a902081001fd3f9aade4380000",
+                    "c08710a902081001fd3f7c0702880000",
+                    "c08710a902081001fd3fefff03050000"
+                  ]
+                },
+                "limit": 20,
+                "offset": 0,
+                "searchText": ""
+              },
+              "purpose": "location_filtered_job_list",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\pending-recheck-2\\workday-https-copeland-wd5-myworkdayjobs-com-copeland-copeland-external-careers-page\\http\\70533390-5f9-00002.json",
+              "response_sha256": "e75a908f61b21af424159437c6c5e79ab0b1eadddea372812e65be832ca1804d",
+              "checked_at": "2026-09-20T15:09:27.844Z"
+            },
+            {
+              "method": "GET",
+              "url": "https://copeland.wd5.myworkdayjobs.com/wday/cxs/copeland/Copeland_External_Careers_Page/job/Suzhou-China/Advanced-Manufacturing-Engineering-Technician_JR117964",
+              "headers": {
+                "accept": "application/json",
+                "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+              },
+              "purpose": "job_detail_identity_and_full_jd",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\pending-recheck-2\\workday-https-copeland-wd5-myworkdayjobs-com-copeland-copeland-external-careers-page\\manual-detail.json",
+              "response_sha256": "ae9e6ad680b7fc4a491aa93b7e99a7ca2eac8ad115aff86263794414e690f238",
+              "checked_at": "2026-09-20T15:13:28.226Z"
+            }
+          ],
+          "api_config": {
+            "origin": "https://copeland.wd5.myworkdayjobs.com",
+            "tenant": "copeland",
+            "site": "Copeland_External_Careers_Page"
+          }
+        }
+      ]
     }
   ],
-  "updated_at": "2026-09-20T14:31:14.147Z",
+  "updated_at": "2026-09-20T15:18:55.132Z",
   "industry_counts": {
     "internet": 434,
     "smart_hardware": 258,
@@ -453570,7 +454068,7 @@
     "supply_chain": 390,
     "finance": 256,
     "energy_environment": 175,
-    "industrial": 240,
+    "industrial": 242,
     "healthcare": 238,
     "construction": 182,
     "aerospace_transport_equipment": 89,
@@ -453589,5 +454087,5 @@
   "latest_wps_expansion_verified_on": "2026-09-19T04:32:07.220Z",
   "latest_deep_api_review_at": "2026-09-19T09:56:39.408Z",
   "latest_interface_contract_review_at": "2026-09-19T07:27:18.465Z",
-  "latest_waiqi_expansion_verified_at": "2026-09-20T14:31:14.147Z"
+  "latest_waiqi_expansion_verified_at": "2026-09-20T15:18:55.132Z"
 }

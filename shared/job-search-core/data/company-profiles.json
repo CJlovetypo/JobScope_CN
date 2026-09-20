@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-20T14:31:23.587Z",
+  "updated_at": "2026-09-20T15:13:50.634Z",
   "companies": [
     {
       "company_id": "company-f93e5a384c54",
@@ -118118,6 +118118,62 @@
     {
       "company_id": "waiqi-routing-b1a49d80616b622e",
       "display_name": "凯谛思集团",
+      "business": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      },
+      "workforce": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      },
+      "capital": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      }
+    },
+    {
+      "company_id": "waiqi-routing-38df0ba6520cbdac",
+      "display_name": "艾默生电气（中国）投资有限公司",
+      "business": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      },
+      "workforce": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      },
+      "capital": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      }
+    },
+    {
+      "company_id": "waiqi-routing-05dcacf5f2bc1dcd",
+      "display_name": "科普兰",
       "business": {
         "value": "",
         "status": "missing",

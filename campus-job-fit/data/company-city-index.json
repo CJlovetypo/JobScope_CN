@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-20T14:31:17.741Z",
+  "updated_at": "2026-09-20T15:18:58.132Z",
   "companies": [
     {
       "company_id": "company-f93e5a384c54",
@@ -19429,56 +19429,39 @@
         "青岛",
         "香港"
       ],
-      "updated_at": "2026-09-19T11:54:27.414Z",
+      "updated_at": "2026-09-20T13:43:33.449Z",
       "coverage": {
-        "status": "complete",
-        "pages": 9,
+        "status": "partial",
+        "pages": 1,
         "server_total": null,
-        "jobs_observed": 393,
-        "reason": "moka/api-8249b90016a1bd52: unique_ids_reconcile_server_total; moka/api-6835c88ea32a0109: unique_ids_reconcile_server_total; moka/api-97c05d8567b89f85: unique_ids_reconcile_server_total",
-        "collection_complete": true,
+        "jobs_observed": 1,
+        "reason": "Only archived official jobs observed during Waiqi source verification; existing cities retained; no Waiqi city hints used",
+        "collection_complete": false,
         "details_failed": 0,
+        "scope": "Offline seed from archived verified official API jobs; historical observations, not a live refresh or exhaustive company inventory",
         "contexts": [
           {
-            "source_id": "api-8249b90016a1bd52",
+            "source_id": "waiqi-routing-ebf8d1328903797f",
             "provider": "moka",
-            "status": "complete",
-            "pages": 4,
-            "server_total": 194,
-            "jobs_observed": 194,
-            "reason": "unique_ids_reconcile_server_total"
-          },
-          {
-            "source_id": "api-6835c88ea32a0109",
-            "provider": "moka",
-            "status": "complete",
+            "status": "partial",
             "pages": 1,
-            "server_total": 14,
-            "jobs_observed": 14,
-            "reason": "unique_ids_reconcile_server_total"
-          },
-          {
-            "source_id": "api-97c05d8567b89f85",
-            "provider": "moka",
-            "status": "complete",
-            "pages": 4,
-            "server_total": 186,
-            "jobs_observed": 186,
-            "reason": "unique_ids_reconcile_server_total"
+            "server_total": 324,
+            "jobs_observed": 20,
+            "reason": "max_pages_reached; 1 formal open jobs still lack complete JD bodies"
           }
         ]
       },
       "search_mode": "campus",
-      "source_config_fingerprint": "6e1a58b9238886c532bbc42b1daa4baacb538acec4c40026850fb53efccc454b",
-      "formal_jobs_observed": 192,
-      "target_jobs_observed": 192,
-      "unknown_location_jobs": 1,
+      "source_config_fingerprint": "a6b4fd6c448b7fabe53c99fbc5932d218ac9ab9f051575adab057e66cfb8454d",
+      "formal_jobs_observed": 0,
+      "target_jobs_observed": 0,
+      "unknown_location_jobs": 0,
       "uncertain_type_or_status_jobs": 0,
       "city_coverage_complete": false,
-      "last_refresh_at": "2026-09-19T11:54:27.414Z",
-      "last_refresh_status": "complete",
-      "last_refresh_reason": "moka/api-8249b90016a1bd52: unique_ids_reconcile_server_total; moka/api-6835c88ea32a0109: unique_ids_reconcile_server_total; moka/api-97c05d8567b89f85: unique_ids_reconcile_server_total",
-      "result_file": "artifacts/city-refresh-20260919/co_0ef606786f395fba4c31/result.json",
+      "last_refresh_at": "2026-09-20T13:43:33.449Z",
+      "last_refresh_status": "partial",
+      "last_refresh_reason": "Only archived official jobs observed during Waiqi source verification; existing cities retained; no Waiqi city hints used",
+      "result_file": "artifacts/waiqi-2026-09-20/city-seed/campus/co_0ef606786f395fba4c31.json",
       "city_evidence": [
         {
           "job_id": "fe2d135e-5b6e-4ddb-9b3e-26345411bf44",
@@ -20022,11 +20005,43 @@
           "raw_file": "internet-campus-job-fit/artifacts/city-refresh-20260919/co_0ef606786f395fba4c31/http/api-97c05d8567b89f85/314a93ce-089-00005-decoded.json"
         }
       ],
-      "retained_previous_cities": [],
+      "retained_previous_cities": [
+        "上海",
+        "东莞",
+        "佛山",
+        "北京",
+        "南京",
+        "南通",
+        "厦门",
+        "合肥",
+        "大连",
+        "天津",
+        "宁波",
+        "广州",
+        "成都",
+        "无锡",
+        "杭州",
+        "武汉",
+        "沈阳",
+        "济南",
+        "深圳",
+        "澳门",
+        "苏州",
+        "西安",
+        "郑州",
+        "重庆",
+        "长沙",
+        "青岛",
+        "香港"
+      ],
       "previous_observation_at": "2026-09-19T11:54:27.414Z",
       "city_freshness": "partial_with_history",
       "city_evidence_total": 192,
-      "city_evidence_scope": "up_to_two_examples_per_city; complete_observations_in_result_file"
+      "city_evidence_scope": "up_to_two_examples_per_city; complete_observations_in_result_file",
+      "seed_origin": "waiqi_official_api_archive",
+      "seed_observation_files": [
+        "campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\10549a3ef348193c\\verification.json"
+      ]
     },
     {
       "company_id": "company-cfc3d445066f",
@@ -348449,6 +348464,94 @@
       "last_refresh_status": "partial",
       "last_refresh_reason": "Only archived official jobs observed during Waiqi source verification; existing cities retained; no Waiqi city hints used",
       "result_file": "artifacts/waiqi-2026-09-20/city-seed/campus/waiqi-routing-b1a49d80616b622e.json",
+      "city_evidence": [],
+      "retained_previous_cities": [],
+      "city_freshness": "unknown",
+      "city_evidence_total": 0,
+      "city_evidence_scope": "up_to_two_examples_per_city; complete_observations_in_result_file",
+      "seed_origin": "waiqi_official_api_archive",
+      "seed_observation_files": [
+        "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-admission\\admitted.json"
+      ]
+    },
+    {
+      "company_id": "waiqi-routing-38df0ba6520cbdac",
+      "display_name": "艾默生电气（中国）投资有限公司",
+      "cities": [],
+      "updated_at": "2026-09-20T15:10:25.987Z",
+      "coverage": {
+        "status": "partial",
+        "pages": 0,
+        "server_total": null,
+        "jobs_observed": 1,
+        "reason": "Only archived official jobs observed during Waiqi source verification; existing cities retained; no Waiqi city hints used",
+        "collection_complete": false,
+        "details_failed": 0,
+        "scope": "Offline seed from archived verified official API jobs; historical observations, not a live refresh or exhaustive company inventory",
+        "contexts": [
+          {
+            "source_id": "waiqi-routing-f7b88ad1cf5880b3",
+            "provider": "oracle_recruiting",
+            "status": "partial",
+            "server_total": 1061
+          }
+        ]
+      },
+      "search_mode": "campus",
+      "source_config_fingerprint": "57f383b801bbea44332bcf990849454586010b817f55fcbc681efe13d341088a",
+      "formal_jobs_observed": 0,
+      "target_jobs_observed": 0,
+      "unknown_location_jobs": 0,
+      "uncertain_type_or_status_jobs": 1,
+      "city_coverage_complete": false,
+      "last_refresh_at": "2026-09-20T15:10:25.987Z",
+      "last_refresh_status": "partial",
+      "last_refresh_reason": "Only archived official jobs observed during Waiqi source verification; existing cities retained; no Waiqi city hints used",
+      "result_file": "artifacts/waiqi-2026-09-20/city-seed/campus/waiqi-routing-38df0ba6520cbdac.json",
+      "city_evidence": [],
+      "retained_previous_cities": [],
+      "city_freshness": "unknown",
+      "city_evidence_total": 0,
+      "city_evidence_scope": "up_to_two_examples_per_city; complete_observations_in_result_file",
+      "seed_origin": "waiqi_official_api_archive",
+      "seed_observation_files": [
+        "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-admission\\admitted.json"
+      ]
+    },
+    {
+      "company_id": "waiqi-routing-05dcacf5f2bc1dcd",
+      "display_name": "科普兰",
+      "cities": [],
+      "updated_at": "2026-09-20T15:09:31.165Z",
+      "coverage": {
+        "status": "partial",
+        "pages": 0,
+        "server_total": null,
+        "jobs_observed": 1,
+        "reason": "Only archived official jobs observed during Waiqi source verification; existing cities retained; no Waiqi city hints used",
+        "collection_complete": false,
+        "details_failed": 0,
+        "scope": "Offline seed from archived verified official API jobs; historical observations, not a live refresh or exhaustive company inventory",
+        "contexts": [
+          {
+            "source_id": "waiqi-routing-ede399a283f7d89c",
+            "provider": "workday",
+            "status": "partial",
+            "server_total": 37
+          }
+        ]
+      },
+      "search_mode": "campus",
+      "source_config_fingerprint": "a44717cd82342598ab5eade968a21c4217e231f792e8d692dc8b5041707291d7",
+      "formal_jobs_observed": 0,
+      "target_jobs_observed": 0,
+      "unknown_location_jobs": 0,
+      "uncertain_type_or_status_jobs": 1,
+      "city_coverage_complete": false,
+      "last_refresh_at": "2026-09-20T15:09:31.165Z",
+      "last_refresh_status": "partial",
+      "last_refresh_reason": "Only archived official jobs observed during Waiqi source verification; existing cities retained; no Waiqi city hints used",
+      "result_file": "artifacts/waiqi-2026-09-20/city-seed/campus/waiqi-routing-05dcacf5f2bc1dcd.json",
       "city_evidence": [],
       "retained_previous_cities": [],
       "city_freshness": "unknown",

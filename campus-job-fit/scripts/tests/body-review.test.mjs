@@ -19,6 +19,9 @@ test('headerless numbered lists require both duties and multiple conditions', ()
 });
 test('English and aliases work; empty headings and placeholders do not', () => {
   assert.equal(reviewJobBody({ description: 'What you will do:\nBuild reliable services.\nMinimum qualifications:\nExperience with Java.\nPreferred qualifications:\nKnowledge of SQL.' }).body_complete, true);
+  const kpmgStyle = reviewJobBody({ description: 'Key Responsibilities\nAudit financial statements and coordinate delivery with the engagement team.\nExperience & Background\nBachelor degree in accounting or finance, with analytical and communication skills.' });
+  assert.equal(kpmgStyle.body_complete, true);
+  assert.match(kpmgStyle.requirements, /Experience & Background/);
   for (const description of ['TEST', '公司拥有优秀团队和丰富福利，欢迎加入我们。', '岗位职责：\n任职要求：']) assert.equal(reviewJobBody({ description, requirements: '·' }).body_complete, false);
 });
 test('raw extraction selects exact job, supports topic fields and bonus distinctions', () => {
