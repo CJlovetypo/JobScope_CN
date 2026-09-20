@@ -28,11 +28,16 @@ node shared/job-search-core/scripts/crawl-waiqi.mjs campus-job-fit/artifacts/wai
 node shared/job-search-core/scripts/export-waiqi.mjs campus-job-fit/artifacts/waiqi-2026-09-20
 node shared/job-search-core/scripts/source-candidates.mjs query --query=西门子
 node shared/job-search-core/scripts/source-candidates.mjs query --industry=金融 --has-recruitment
+node shared/job-search-core/scripts/audit-waiqi-routing.mjs --output=campus-job-fit/artifacts/waiqi-routing-audit.json
 ```
 
 同一抓取目录会复用成功响应并重试失败项；新一轮更新请使用新目录，避免把缓存日期写成重新核验时间。默认最多 3 个请求在途、请求起点至少间隔 750ms；429 会全局冷却并遵守 Retry-After。不要并行启动多个 Waiqi 抓取进程。WAIQI_CONCURRENCY 与 WAIQI_INTERVAL_MS 可降低采集负载。默认另取没有可用外部链接的站内岗位详情；WAIQI_JOB_DETAILS=all 可续抓所有岗位详情，none 跳过详情。含外部链接的岗位默认仅保存列表资料和链接，完整官网 JD 样本另存于官方核验档案。
 
 本次观察到目录响应的 `page.size/current/pages` 与实际返回不符。以请求 page/size、实际返回 ID、去重数量及 total 核对完整性。另已证实公司详情的 `positionCount=0` 可能过期，而公司页面仍展示岗位；因此每家公司都必须实际请求 `company/position-all`，不能再用详情计数推断空列表。旧的 `company_info_reports_zero_positions` 缓存必须强制重抓后才能作为岗位覆盖统计。
+
+公司页的“在招职位”也不是开放状态真值。实测同一页面可能同时包含重复外部岗位 ID、已经不在官方当前列表中的旧岗位、非中国岗位、通用门户链接和错配到其他雇主租户的链接。`audit-waiqi-routing.mjs` 只回答招聘链接是否能解析为 skill 已知 ATS，以及相同租户配置是否已经注册；它不会把 Waiqi 页面行数当成当前开放岗位数。是否可交付仍以官方实时列表、稳定岗位 ID、主体归属和目标地区为准。
+
+Oracle Recruiting 链接经常不带中国区 `locationId`。这类来源由运行时按官方服务实测的 200 行窗口遍历整个站点，再只保留 `PrimaryLocationCountry=CN` 的记录；如果官方 `TotalJobsCount` 与实际唯一岗位数无法收敛，覆盖状态必须保持 `partial`，但已经明确返回的中国岗位和完整 JD 仍会保留。
 
 导出产物：
 

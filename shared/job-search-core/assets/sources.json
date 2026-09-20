@@ -105761,6 +105761,118 @@
             }
           ],
           "source_id": "api-a634750e7e89da83"
+        },
+        {
+          "company_id": "co_8494ba58c99b2f16c6cc",
+          "display_name": "卡夫亨氏（中国）投资有限公司",
+          "aliases": [
+            "卡夫亨氏",
+            "Kraft Heinz 卡夫亨氏",
+            "Kraft Heinz",
+            "The Kraft Heinz Company"
+          ],
+          "provider": "workday",
+          "category": "consumer",
+          "industry_tags": [
+            "consumer"
+          ],
+          "primary_entry_url": "https://heinz.wd1.myworkdayjobs.com/en-US/KraftHeinz_Careers_UR",
+          "source_id": "waiqi-routing-5e803da617efc897",
+          "source_origin": "waiqi-2026-09-20-routing-deep-review",
+          "verification_status": "verified_api_full_jd",
+          "verified_at": "2026-09-20T13:47:52.232Z",
+          "admitted": true,
+          "source_verification": {
+            "checked_at": "2026-09-20T13:47:52.232Z",
+            "method": "waiqi_current_job_to_anonymous_official_api_full_jd",
+            "complete_jd_samples": 1,
+            "observed_jobs": 1,
+            "identity_basis": "官方 Workday 完整 JD 明确 Kraft Heinz，hiringOrganization 为 Kraft Heinz 上海实体，并与现有主体锚点一致。",
+            "identity_evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\5e803da617efc897\\http\\084f1627-f23-00003.json",
+            "proof_directory": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\5e803da617efc897",
+            "scope": "Current mainland-China jobs returned by the official recruitment API; Oracle sources without a locationId require complete global pagination followed by explicit PrimaryLocationCountry=CN filtering.",
+            "coverage": {
+              "status": "sample_verified",
+              "server_total": 75,
+              "mainland_jobs_observed": 1,
+              "complete_mainland_jd": true
+            }
+          },
+          "identity_verification": {
+            "identity_verified": true,
+            "basis": "官方 Workday 完整 JD 明确 Kraft Heinz，hiringOrganization 为 Kraft Heinz 上海实体，并与现有主体锚点一致。",
+            "evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\5e803da617efc897\\http\\084f1627-f23-00003.json",
+            "verified_at": "2026-09-20T13:47:52.232Z"
+          },
+          "discovery_provenance": {
+            "dataset": "waiqi-company-20260920",
+            "waiqi_company_id": "18234",
+            "company_url": "https://waiqi.com/company/detail?id=18234",
+            "observed_link": "https://heinz.wd1.myworkdayjobs.com/en-US/KraftHeinz_Careers_UR",
+            "reported_position_count": 1,
+            "returned_position_count": 1
+          },
+          "validated_api_request_examples": [
+            {
+              "method": "POST",
+              "url": "https://heinz.wd1.myworkdayjobs.com/wday/cxs/heinz/KraftHeinz_Careers_UR/jobs",
+              "headers": {
+                "accept": "application/json, text/plain, */*",
+                "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+                "Content-Type": "application/json"
+              },
+              "body": {
+                "appliedFacets": {},
+                "limit": 20,
+                "offset": 0,
+                "searchText": ""
+              },
+              "purpose": "global_list_and_country_facet",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\5e803da617efc897\\http\\084f1627-f23-00001.json",
+              "response_sha256": "5f04e2974fbddd6ad71ffb5421513ef8084a1988357388311239b4fcda9cd82c",
+              "checked_at": "2026-09-20T13:47:49.550Z"
+            },
+            {
+              "method": "POST",
+              "url": "https://heinz.wd1.myworkdayjobs.com/wday/cxs/heinz/KraftHeinz_Careers_UR/jobs",
+              "headers": {
+                "accept": "application/json, text/plain, */*",
+                "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+                "Content-Type": "application/json"
+              },
+              "body": {
+                "appliedFacets": {
+                  "Location_Country": [
+                    "6cb77610a8a543aea2d6bc10457e35d4"
+                  ]
+                },
+                "limit": 20,
+                "offset": 0,
+                "searchText": ""
+              },
+              "purpose": "mainland_china_job_list",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\5e803da617efc897\\http\\084f1627-f23-00002.json",
+              "response_sha256": "c4bfd983f7ef2a778ef298959e49437716f8cf292f6e8e146fb534960c47a574",
+              "checked_at": "2026-09-20T13:47:50.875Z"
+            },
+            {
+              "method": "GET",
+              "url": "https://heinz.wd1.myworkdayjobs.com/wday/cxs/heinz/KraftHeinz_Careers_UR/job/Shanghai---Central-Park-Huangpu/Kraft-Heinz-Trainee_R-106842",
+              "headers": {
+                "accept": "application/json, text/plain, */*",
+                "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+              },
+              "purpose": "mainland_job_detail_sample",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\5e803da617efc897\\http\\084f1627-f23-00003.json",
+              "response_sha256": "c3d373e5cbdec2d0001bbb3f55ca8ed98698afc18690928a3467315f5872a44b",
+              "checked_at": "2026-09-20T13:47:51.590Z"
+            }
+          ],
+          "api_config": {
+            "origin": "https://heinz.wd1.myworkdayjobs.com",
+            "tenant": "heinz",
+            "site": "KraftHeinz_Careers_UR"
+          }
         }
       ],
       "source_origin": "legacy-registry-public-api-expansion",
@@ -183885,6 +183997,116 @@
             }
           ],
           "source_id": "api-61e280e8e8ca2a9d"
+        },
+        {
+          "company_id": "co_2895d2d2f63906ca5294",
+          "display_name": "太古地产（中国）投资有限公司",
+          "aliases": [
+            "太古地产"
+          ],
+          "provider": "moka",
+          "category": "construction",
+          "industry_tags": [
+            "construction"
+          ],
+          "primary_entry_url": "https://www.swireproperties-recruitment.com/social-recruitment/swireproperties/126011#/job/6bba1823-2bfe-4f1a-8576-c11d8a2e750e",
+          "source_id": "waiqi-routing-1f855b8fab7a29d4",
+          "source_origin": "waiqi-2026-09-20-routing-deep-review",
+          "verification_status": "verified_api_full_jd",
+          "verified_at": "2026-09-20T13:44:13.137Z",
+          "admitted": true,
+          "source_verification": {
+            "checked_at": "2026-09-20T13:44:13.137Z",
+            "method": "waiqi_current_job_to_anonymous_official_api_full_jd",
+            "complete_jd_samples": 1,
+            "observed_jobs": 101,
+            "identity_basis": "官方 Moka API 返回“太古地产”招聘门户名称，且完整当前 JD 可读取。",
+            "identity_evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\1f855b8fab7a29d4\\http\\a4d5141f-002-00002-decoded.json",
+            "proof_directory": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\1f855b8fab7a29d4",
+            "scope": "Current mainland-China jobs returned by the official recruitment API; Oracle sources without a locationId require complete global pagination followed by explicit PrimaryLocationCountry=CN filtering.",
+            "coverage": {
+              "status": "sample_verified",
+              "server_total": null,
+              "mainland_jobs_observed": 101,
+              "complete_mainland_jd": true
+            }
+          },
+          "identity_verification": {
+            "identity_verified": true,
+            "basis": "官方 Moka API 返回“太古地产”招聘门户名称，且完整当前 JD 可读取。",
+            "evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\1f855b8fab7a29d4\\http\\a4d5141f-002-00002-decoded.json",
+            "verified_at": "2026-09-20T13:44:13.137Z"
+          },
+          "discovery_provenance": {
+            "dataset": "waiqi-company-20260920",
+            "waiqi_company_id": "4065",
+            "company_url": "https://waiqi.com/company/detail?id=4065",
+            "observed_link": "https://www.swireproperties-recruitment.com/social-recruitment/swireproperties/126011#/job/6bba1823-2bfe-4f1a-8576-c11d8a2e750e",
+            "reported_position_count": 35,
+            "returned_position_count": 35
+          },
+          "validated_api_request_examples": [
+            {
+              "method": "POST",
+              "url": "https://www.swireproperties-recruitment.com/api/outer/ats-apply/website/jobs/v2",
+              "headers": {
+                "accept": "application/json, text/plain, */*",
+                "content-type": "application/json",
+                "origin": "https://www.swireproperties-recruitment.com",
+                "referer": "https://www.swireproperties-recruitment.com/social-recruitment/swireproperties/126011",
+                "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+              },
+              "body": {
+                "orgId": "swireproperties",
+                "siteId": "126011",
+                "site": "social-recruitment",
+                "locale": "zh-CN",
+                "limit": 20,
+                "offset": 0,
+                "needStat": true,
+                "keyword": ""
+              },
+              "purpose": "job_list",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\1f855b8fab7a29d4\\http\\a4d5141f-002-00002.json",
+              "response_sha256": "61c5967e27f6843b7c8bc75d51f220c86ae77d2aeb09a7d18c268a674f3ba2ef",
+              "checked_at": "2026-09-20T13:44:12.388Z"
+            },
+            {
+              "method": "POST",
+              "url": "https://www.swireproperties-recruitment.com/api/outer/ats-apply/website/job",
+              "headers": {
+                "accept": "application/json, text/plain, */*",
+                "content-type": "application/json",
+                "origin": "https://www.swireproperties-recruitment.com",
+                "referer": "https://www.swireproperties-recruitment.com/social-recruitment/swireproperties/126011",
+                "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+              },
+              "body": {
+                "orgId": "swireproperties",
+                "siteId": "126011",
+                "jobId": "7abd811e-e545-4100-9a67-f1cf74ac07f3",
+                "locale": "zh-CN"
+              },
+              "purpose": "job_detail",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\1f855b8fab7a29d4\\http\\a4d5141f-002-00003.json",
+              "response_sha256": "21e53f8a0ef3482188e22857cde073a284472bc8b92c9f54198daffe623fc3d0",
+              "checked_at": "2026-09-20T13:44:12.736Z"
+            }
+          ],
+          "public_bootstrap_requests": [
+            {
+              "method": "GET",
+              "url": "https://www.swireproperties-recruitment.com/social-recruitment/swireproperties/126011",
+              "headers": {
+                "accept": "text/html,application/json",
+                "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+              },
+              "purpose": "public_configuration_bootstrap",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\1f855b8fab7a29d4\\http\\a4d5141f-002-00001.txt",
+              "response_sha256": "6c7742e4487c385370d788beee264853f294d61c213d6235e33dfe3c322e9fc5",
+              "checked_at": "2026-09-20T13:44:12.017Z"
+            }
+          ]
         }
       ],
       "source_origin": "legacy-registry-public-api-expansion",
@@ -336895,6 +337117,118 @@
               "checked_at": "2026-09-19T16:25:28.038Z"
             }
           ]
+        },
+        {
+          "company_id": "company-75e2c8c19184",
+          "display_name": "励讯企业管理咨询（上海）有限公司",
+          "aliases": [
+            "励讯",
+            "RELX 励讯",
+            "RELX",
+            "RELX PLC"
+          ],
+          "provider": "workday",
+          "category": "professional_services",
+          "industry_tags": [
+            "professional_services"
+          ],
+          "primary_entry_url": "https://relx.wd3.myworkdayjobs.com/en-US/relx",
+          "source_id": "waiqi-routing-afc3a4e087e9d97f",
+          "source_origin": "waiqi-2026-09-20-routing-deep-review",
+          "verification_status": "verified_api_full_jd",
+          "verified_at": "2026-09-20T13:43:59.082Z",
+          "admitted": true,
+          "source_verification": {
+            "checked_at": "2026-09-20T13:43:59.082Z",
+            "method": "waiqi_current_job_to_anonymous_official_api_full_jd",
+            "complete_jd_samples": 1,
+            "observed_jobs": 1,
+            "identity_basis": "官方 Workday 租户为 RELX，完整 JD 的 hiringOrganization 为 Reed Exhibitions (China)，并与现有 RELX 主体锚点一致。",
+            "identity_evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\afc3a4e087e9d97f\\http\\e0e87a1a-cf3-00003.json",
+            "proof_directory": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\afc3a4e087e9d97f",
+            "scope": "Current mainland-China jobs returned by the official recruitment API; Oracle sources without a locationId require complete global pagination followed by explicit PrimaryLocationCountry=CN filtering.",
+            "coverage": {
+              "status": "sample_verified",
+              "server_total": 773,
+              "mainland_jobs_observed": 1,
+              "complete_mainland_jd": true
+            }
+          },
+          "identity_verification": {
+            "identity_verified": true,
+            "basis": "官方 Workday 租户为 RELX，完整 JD 的 hiringOrganization 为 Reed Exhibitions (China)，并与现有 RELX 主体锚点一致。",
+            "evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\afc3a4e087e9d97f\\http\\e0e87a1a-cf3-00003.json",
+            "verified_at": "2026-09-20T13:43:59.082Z"
+          },
+          "discovery_provenance": {
+            "dataset": "waiqi-company-20260920",
+            "waiqi_company_id": "39155",
+            "company_url": "https://waiqi.com/company/detail?id=39155",
+            "observed_link": "https://relx.wd3.myworkdayjobs.com/en-US/relx",
+            "reported_position_count": 37,
+            "returned_position_count": 37
+          },
+          "validated_api_request_examples": [
+            {
+              "method": "POST",
+              "url": "https://relx.wd3.myworkdayjobs.com/wday/cxs/relx/relx/jobs",
+              "headers": {
+                "accept": "application/json, text/plain, */*",
+                "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+                "Content-Type": "application/json"
+              },
+              "body": {
+                "appliedFacets": {},
+                "limit": 20,
+                "offset": 0,
+                "searchText": ""
+              },
+              "purpose": "global_list_and_country_facet",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\afc3a4e087e9d97f\\http\\e0e87a1a-cf3-00001.json",
+              "response_sha256": "4d154af12441380f708a16b95f27ac15247813dace9bc2679357af1be86fd1f0",
+              "checked_at": "2026-09-20T13:43:56.332Z"
+            },
+            {
+              "method": "POST",
+              "url": "https://relx.wd3.myworkdayjobs.com/wday/cxs/relx/relx/jobs",
+              "headers": {
+                "accept": "application/json, text/plain, */*",
+                "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+                "Content-Type": "application/json"
+              },
+              "body": {
+                "appliedFacets": {
+                  "locations": [
+                    "84b09f5ec01010015b8cec9314b70000"
+                  ]
+                },
+                "limit": 20,
+                "offset": 0,
+                "searchText": ""
+              },
+              "purpose": "mainland_china_job_list",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\afc3a4e087e9d97f\\http\\e0e87a1a-cf3-00002.json",
+              "response_sha256": "6be2cb85b9f1a70bf101b2dd3bbb083d9d147061a3b82ddfb2ebc520f531a20a",
+              "checked_at": "2026-09-20T13:43:57.803Z"
+            },
+            {
+              "method": "GET",
+              "url": "https://relx.wd3.myworkdayjobs.com/wday/cxs/relx/relx/job/Beijing/Events-Exhibitions-Sales-Rep-IV_R117580-2",
+              "headers": {
+                "accept": "application/json, text/plain, */*",
+                "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+              },
+              "purpose": "mainland_job_detail_sample",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\afc3a4e087e9d97f\\http\\e0e87a1a-cf3-00003.json",
+              "response_sha256": "1753a6a9a71ba625811cacec8a777992be5bfda43096729b24abd4ed9ab0c11e",
+              "checked_at": "2026-09-20T13:43:58.486Z"
+            }
+          ],
+          "api_config": {
+            "origin": "https://relx.wd3.myworkdayjobs.com",
+            "tenant": "relx",
+            "site": "relx"
+          }
         }
       ]
     },
@@ -410687,6 +411021,116 @@
             },
             "scope": "Sample API verification only; current job types and availability require per-job checks"
           }
+        },
+        {
+          "company_id": "waiqi-domestic-459fc886168e",
+          "display_name": "广州华多网络科技有限公司",
+          "aliases": [
+            "欢聚集团"
+          ],
+          "provider": "moka",
+          "category": "internet",
+          "industry_tags": [
+            "internet"
+          ],
+          "primary_entry_url": "https://career.bigo.sg/apply/bigo/1019#/job/b371faf9-2b6f-453c-8d8e-d19cb0eb279a",
+          "source_id": "waiqi-routing-632d68983b4cd6ad",
+          "source_origin": "waiqi-2026-09-20-routing-deep-review",
+          "verification_status": "verified_api_full_jd",
+          "verified_at": "2026-09-20T13:45:45.447Z",
+          "admitted": true,
+          "source_verification": {
+            "checked_at": "2026-09-20T13:45:45.447Z",
+            "method": "waiqi_current_job_to_anonymous_official_api_full_jd",
+            "complete_jd_samples": 1,
+            "observed_jobs": 94,
+            "identity_basis": "官方 Moka API 返回 BIGO 门户名称和完整当前 JD，并与现有 BIGO 主体锚点一致。",
+            "identity_evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\632d68983b4cd6ad\\http\\1b66a047-aa3-00003-decoded.json",
+            "proof_directory": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\632d68983b4cd6ad",
+            "scope": "Current mainland-China jobs returned by the official recruitment API; Oracle sources without a locationId require complete global pagination followed by explicit PrimaryLocationCountry=CN filtering.",
+            "coverage": {
+              "status": "sample_verified",
+              "server_total": null,
+              "mainland_jobs_observed": 94,
+              "complete_mainland_jd": true
+            }
+          },
+          "identity_verification": {
+            "identity_verified": true,
+            "basis": "官方 Moka API 返回 BIGO 门户名称和完整当前 JD，并与现有 BIGO 主体锚点一致。",
+            "evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\632d68983b4cd6ad\\http\\1b66a047-aa3-00003-decoded.json",
+            "verified_at": "2026-09-20T13:45:45.447Z"
+          },
+          "discovery_provenance": {
+            "dataset": "waiqi-company-20260920",
+            "waiqi_company_id": "16108",
+            "company_url": "https://waiqi.com/company/detail?id=16108",
+            "observed_link": "https://career.bigo.sg/apply/bigo/1019#/job/b371faf9-2b6f-453c-8d8e-d19cb0eb279a",
+            "reported_position_count": 121,
+            "returned_position_count": 121
+          },
+          "validated_api_request_examples": [
+            {
+              "method": "POST",
+              "url": "https://career.bigo.sg/api/outer/ats-apply/website/jobs/v2",
+              "headers": {
+                "accept": "application/json, text/plain, */*",
+                "content-type": "application/json",
+                "origin": "https://career.bigo.sg",
+                "referer": "https://career.bigo.sg/apply/bigo/1019",
+                "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+              },
+              "body": {
+                "orgId": "bigo",
+                "siteId": "1019",
+                "site": "apply",
+                "locale": "zh-CN",
+                "limit": 20,
+                "offset": 0,
+                "needStat": true,
+                "keyword": ""
+              },
+              "purpose": "job_list",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\632d68983b4cd6ad\\http\\1b66a047-aa3-00002.json",
+              "response_sha256": "cf5b9598a797b4faa1ef919dc8fbc57383ef68907bbf05deabd9ef7119fc4077",
+              "checked_at": "2026-09-20T13:45:44.761Z"
+            },
+            {
+              "method": "POST",
+              "url": "https://career.bigo.sg/api/outer/ats-apply/website/job",
+              "headers": {
+                "accept": "application/json, text/plain, */*",
+                "content-type": "application/json",
+                "origin": "https://career.bigo.sg",
+                "referer": "https://career.bigo.sg/apply/bigo/1019",
+                "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+              },
+              "body": {
+                "orgId": "bigo",
+                "siteId": "1019",
+                "jobId": "88f13804-fe08-4885-aace-6a410197285f",
+                "locale": "zh-CN"
+              },
+              "purpose": "job_detail",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\632d68983b4cd6ad\\http\\1b66a047-aa3-00003.json",
+              "response_sha256": "2e05e59c98738021ba5a72ae132dffe952dae12d1bfee69021c7fb6d7f5061b0",
+              "checked_at": "2026-09-20T13:45:45.012Z"
+            }
+          ],
+          "public_bootstrap_requests": [
+            {
+              "method": "GET",
+              "url": "https://career.bigo.sg/apply/bigo/1019",
+              "headers": {
+                "accept": "text/html,application/json",
+                "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+              },
+              "purpose": "public_configuration_bootstrap",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\632d68983b4cd6ad\\http\\1b66a047-aa3-00001.txt",
+              "response_sha256": "8ea3c2e31180a2a0d2310e8d9e5df7d444f162c6d007dcd9a9ad9a60537fa02d",
+              "checked_at": "2026-09-20T13:45:44.051Z"
+            }
+          ]
         }
       ]
     },
@@ -444849,24 +445293,2288 @@
           }
         }
       ]
+    },
+    {
+      "company_id": "waiqi-routing-deloitte-1093",
+      "display_name": "德勤企业咨询（上海）有限公司",
+      "aliases": [
+        "Deloitte 德勤"
+      ],
+      "provider": "hotjob",
+      "category": "professional_services",
+      "industry_tags": [
+        "professional_services"
+      ],
+      "primary_entry_url": "https://ehjobs.deloitte.com.cn/SU649e304a6a9f0ef690533e9a/pb/posDetail.html?postId=6aa7958b9e5f824145245be9&postType=society",
+      "source_id": "waiqi-routing-84e36dc69f1b9cb8",
+      "source_origin": "waiqi-2026-09-20-routing-deep-review",
+      "verification_status": "verified_api_full_jd",
+      "verified_at": "2026-09-20T13:43:32.532Z",
+      "admitted": true,
+      "source_verification": {
+        "checked_at": "2026-09-20T13:43:32.532Z",
+        "method": "waiqi_current_job_to_anonymous_official_api_full_jd",
+        "complete_jd_samples": 1,
+        "observed_jobs": 317,
+        "identity_basis": "Waiqi 当前岗位直达德勤官方招聘域名 ehjobs.deloitte.com.cn；官方 Hotjob API 返回完整当前 JD。Waiqi 同公司混入的单条 SHEIN 链接已判为目录污染，不作为主体锚点。",
+        "identity_evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\84e36dc69f1b9cb8\\http\\913e192b-12b-00003.json",
+        "proof_directory": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\84e36dc69f1b9cb8",
+        "scope": "Current mainland-China jobs returned by the official recruitment API; Oracle sources without a locationId require complete global pagination followed by explicit PrimaryLocationCountry=CN filtering.",
+        "coverage": {
+          "status": "sample_verified",
+          "server_total": null,
+          "mainland_jobs_observed": 317,
+          "complete_mainland_jd": true
+        }
+      },
+      "identity_verification": {
+        "identity_verified": true,
+        "basis": "Waiqi 当前岗位直达德勤官方招聘域名 ehjobs.deloitte.com.cn；官方 Hotjob API 返回完整当前 JD。Waiqi 同公司混入的单条 SHEIN 链接已判为目录污染，不作为主体锚点。",
+        "evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\84e36dc69f1b9cb8\\http\\913e192b-12b-00003.json",
+        "verified_at": "2026-09-20T13:43:32.532Z"
+      },
+      "discovery_provenance": {
+        "dataset": "waiqi-company-20260920",
+        "waiqi_company_id": "1093",
+        "company_url": "https://waiqi.com/company/detail?id=1093",
+        "observed_link": "https://ehjobs.deloitte.com.cn/SU649e304a6a9f0ef690533e9a/pb/posDetail.html?postId=6aa7958b9e5f824145245be9&postType=society",
+        "reported_position_count": 407,
+        "returned_position_count": 407
+      },
+      "validated_api_request_examples": [
+        {
+          "method": "POST",
+          "url": "https://ehjobs.deloitte.com.cn/wecruit/positionInfo/listPosition/SU649e304a6a9f0ef690533e9a?iSaJAx=isAjax&request_locale=zh_CN",
+          "headers": {
+            "accept": "application/json, text/plain, */*",
+            "content-type": "application/x-www-form-urlencoded",
+            "origin": "https://ehjobs.deloitte.com.cn",
+            "referer": "https://ehjobs.deloitte.com.cn/SU649e304a6a9f0ef690533e9a/pb/posDetail.html?postId=6aa7958b9e5f824145245be9&postType=society",
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+          },
+          "body": "isFrompb=true&recruitType=2&pageSize=15&currentPage=1",
+          "purpose": "job_list",
+          "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\84e36dc69f1b9cb8\\http\\913e192b-12b-00002.json",
+          "response_sha256": "719e9bec3099eb9361c957cd098e25da9b6a47a6677ba687294609a83959cf83",
+          "checked_at": "2026-09-20T13:43:32.294Z"
+        },
+        {
+          "method": "POST",
+          "url": "https://ehjobs.deloitte.com.cn/wecruit/positionInfo/listPositionDetail/SU649e304a6a9f0ef690533e9a?iSaJAx=isAjax&request_locale=zh_CN",
+          "headers": {
+            "accept": "application/json, text/plain, */*",
+            "content-type": "application/x-www-form-urlencoded",
+            "origin": "https://ehjobs.deloitte.com.cn",
+            "referer": "https://ehjobs.deloitte.com.cn/SU649e304a6a9f0ef690533e9a/pb/posDetail.html?postId=6aa7958b9e5f824145245be9&postType=society",
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+          },
+          "body": "postId=6aaf90f77c5f882a9f270ae1&recruitType=2",
+          "purpose": "job_detail",
+          "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\84e36dc69f1b9cb8\\http\\913e192b-12b-00003.json",
+          "response_sha256": "9e11401ce71d04725ff8566af941fe4f7c3a775b7c3feeea6d3b661627613245",
+          "checked_at": "2026-09-20T13:43:32.400Z"
+        }
+      ],
+      "public_bootstrap_requests": [
+        {
+          "method": "GET",
+          "url": "https://ehjobs.deloitte.com.cn/SU649e304a6a9f0ef690533e9a/pb/posDetail.html?postId=6aa7958b9e5f824145245be9&postType=society",
+          "headers": {
+            "accept": "text/html,application/json",
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+          },
+          "purpose": "public_configuration_bootstrap",
+          "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\84e36dc69f1b9cb8\\http\\913e192b-12b-00001.txt",
+          "response_sha256": "a079d4c9c748f91f3f00dd3c7f9febaee801cd4a325efa1073b07c0737f82d07",
+          "checked_at": "2026-09-20T13:43:32.099Z"
+        }
+      ],
+      "recruitment_sources": [
+        {
+          "company_id": "waiqi-routing-deloitte-1093",
+          "display_name": "德勤企业咨询（上海）有限公司",
+          "aliases": [
+            "Deloitte 德勤"
+          ],
+          "provider": "hotjob",
+          "category": "professional_services",
+          "industry_tags": [
+            "professional_services"
+          ],
+          "primary_entry_url": "https://ehjobs.deloitte.com.cn/SU649e304a6a9f0ef690533e9a/pb/posDetail.html?postId=6aa7958b9e5f824145245be9&postType=society",
+          "source_id": "waiqi-routing-84e36dc69f1b9cb8",
+          "source_origin": "waiqi-2026-09-20-routing-deep-review",
+          "verification_status": "verified_api_full_jd",
+          "verified_at": "2026-09-20T13:43:32.532Z",
+          "admitted": true,
+          "source_verification": {
+            "checked_at": "2026-09-20T13:43:32.532Z",
+            "method": "waiqi_current_job_to_anonymous_official_api_full_jd",
+            "complete_jd_samples": 1,
+            "observed_jobs": 317,
+            "identity_basis": "Waiqi 当前岗位直达德勤官方招聘域名 ehjobs.deloitte.com.cn；官方 Hotjob API 返回完整当前 JD。Waiqi 同公司混入的单条 SHEIN 链接已判为目录污染，不作为主体锚点。",
+            "identity_evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\84e36dc69f1b9cb8\\http\\913e192b-12b-00003.json",
+            "proof_directory": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\84e36dc69f1b9cb8",
+            "scope": "Current mainland-China jobs returned by the official recruitment API; Oracle sources without a locationId require complete global pagination followed by explicit PrimaryLocationCountry=CN filtering.",
+            "coverage": {
+              "status": "sample_verified",
+              "server_total": null,
+              "mainland_jobs_observed": 317,
+              "complete_mainland_jd": true
+            }
+          },
+          "identity_verification": {
+            "identity_verified": true,
+            "basis": "Waiqi 当前岗位直达德勤官方招聘域名 ehjobs.deloitte.com.cn；官方 Hotjob API 返回完整当前 JD。Waiqi 同公司混入的单条 SHEIN 链接已判为目录污染，不作为主体锚点。",
+            "evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\84e36dc69f1b9cb8\\http\\913e192b-12b-00003.json",
+            "verified_at": "2026-09-20T13:43:32.532Z"
+          },
+          "discovery_provenance": {
+            "dataset": "waiqi-company-20260920",
+            "waiqi_company_id": "1093",
+            "company_url": "https://waiqi.com/company/detail?id=1093",
+            "observed_link": "https://ehjobs.deloitte.com.cn/SU649e304a6a9f0ef690533e9a/pb/posDetail.html?postId=6aa7958b9e5f824145245be9&postType=society",
+            "reported_position_count": 407,
+            "returned_position_count": 407
+          },
+          "validated_api_request_examples": [
+            {
+              "method": "POST",
+              "url": "https://ehjobs.deloitte.com.cn/wecruit/positionInfo/listPosition/SU649e304a6a9f0ef690533e9a?iSaJAx=isAjax&request_locale=zh_CN",
+              "headers": {
+                "accept": "application/json, text/plain, */*",
+                "content-type": "application/x-www-form-urlencoded",
+                "origin": "https://ehjobs.deloitte.com.cn",
+                "referer": "https://ehjobs.deloitte.com.cn/SU649e304a6a9f0ef690533e9a/pb/posDetail.html?postId=6aa7958b9e5f824145245be9&postType=society",
+                "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+              },
+              "body": "isFrompb=true&recruitType=2&pageSize=15&currentPage=1",
+              "purpose": "job_list",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\84e36dc69f1b9cb8\\http\\913e192b-12b-00002.json",
+              "response_sha256": "719e9bec3099eb9361c957cd098e25da9b6a47a6677ba687294609a83959cf83",
+              "checked_at": "2026-09-20T13:43:32.294Z"
+            },
+            {
+              "method": "POST",
+              "url": "https://ehjobs.deloitte.com.cn/wecruit/positionInfo/listPositionDetail/SU649e304a6a9f0ef690533e9a?iSaJAx=isAjax&request_locale=zh_CN",
+              "headers": {
+                "accept": "application/json, text/plain, */*",
+                "content-type": "application/x-www-form-urlencoded",
+                "origin": "https://ehjobs.deloitte.com.cn",
+                "referer": "https://ehjobs.deloitte.com.cn/SU649e304a6a9f0ef690533e9a/pb/posDetail.html?postId=6aa7958b9e5f824145245be9&postType=society",
+                "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+              },
+              "body": "postId=6aaf90f77c5f882a9f270ae1&recruitType=2",
+              "purpose": "job_detail",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\84e36dc69f1b9cb8\\http\\913e192b-12b-00003.json",
+              "response_sha256": "9e11401ce71d04725ff8566af941fe4f7c3a775b7c3feeea6d3b661627613245",
+              "checked_at": "2026-09-20T13:43:32.400Z"
+            }
+          ],
+          "public_bootstrap_requests": [
+            {
+              "method": "GET",
+              "url": "https://ehjobs.deloitte.com.cn/SU649e304a6a9f0ef690533e9a/pb/posDetail.html?postId=6aa7958b9e5f824145245be9&postType=society",
+              "headers": {
+                "accept": "text/html,application/json",
+                "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+              },
+              "purpose": "public_configuration_bootstrap",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\84e36dc69f1b9cb8\\http\\913e192b-12b-00001.txt",
+              "response_sha256": "a079d4c9c748f91f3f00dd3c7f9febaee801cd4a325efa1073b07c0737f82d07",
+              "checked_at": "2026-09-20T13:43:32.099Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "company_id": "waiqi-routing-eadf25197e8b",
+      "display_name": "金拱门食品有限公司",
+      "aliases": [
+        "麦当劳"
+      ],
+      "provider": "moka",
+      "category": "consumer",
+      "industry_tags": [
+        "consumer"
+      ],
+      "primary_entry_url": "http://officehire.mcdonalds.com.cn/apply/mcdchina/4327/#/job/af022f84-03a4-4332-affa-cecbca824e37",
+      "source_id": "waiqi-routing-934ecd3791992389",
+      "source_origin": "waiqi-2026-09-20-routing-deep-review",
+      "verification_status": "verified_api_full_jd",
+      "verified_at": "2026-09-20T13:44:09.800Z",
+      "admitted": true,
+      "source_verification": {
+        "checked_at": "2026-09-20T13:44:09.800Z",
+        "method": "waiqi_current_job_to_anonymous_official_api_full_jd",
+        "complete_jd_samples": 1,
+        "observed_jobs": 383,
+        "identity_basis": "官方 Moka API 返回“麦当劳中国/麦当劳”招聘门户名称，且完整当前 JD 可读取。",
+        "identity_evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\934ecd3791992389\\http\\571f831c-df9-00003-decoded.json",
+        "proof_directory": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\934ecd3791992389",
+        "scope": "Current mainland-China jobs returned by the official recruitment API; Oracle sources without a locationId require complete global pagination followed by explicit PrimaryLocationCountry=CN filtering.",
+        "coverage": {
+          "status": "sample_verified",
+          "server_total": null,
+          "mainland_jobs_observed": 383,
+          "complete_mainland_jd": true
+        }
+      },
+      "identity_verification": {
+        "identity_verified": true,
+        "basis": "官方 Moka API 返回“麦当劳中国/麦当劳”招聘门户名称，且完整当前 JD 可读取。",
+        "evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\934ecd3791992389\\http\\571f831c-df9-00003-decoded.json",
+        "verified_at": "2026-09-20T13:44:09.800Z"
+      },
+      "discovery_provenance": {
+        "dataset": "waiqi-company-20260920",
+        "waiqi_company_id": "35284",
+        "company_url": "https://waiqi.com/company/detail?id=35284",
+        "observed_link": "http://officehire.mcdonalds.com.cn/apply/mcdchina/4327/#/job/af022f84-03a4-4332-affa-cecbca824e37",
+        "reported_position_count": 36,
+        "returned_position_count": 36
+      },
+      "validated_api_request_examples": [
+        {
+          "method": "POST",
+          "url": "http://officehire.mcdonalds.com.cn/api/outer/ats-apply/website/jobs/v2",
+          "headers": {
+            "accept": "application/json, text/plain, */*",
+            "content-type": "application/json",
+            "origin": "http://officehire.mcdonalds.com.cn",
+            "referer": "http://officehire.mcdonalds.com.cn/apply/mcdchina/4327/",
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+          },
+          "body": {
+            "orgId": "mcdchina",
+            "siteId": "4327",
+            "site": "apply",
+            "locale": "zh-CN",
+            "limit": 20,
+            "offset": 0,
+            "needStat": true,
+            "keyword": ""
+          },
+          "purpose": "job_list",
+          "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\934ecd3791992389\\http\\571f831c-df9-00002.json",
+          "response_sha256": "5c06b241d41d845496b2c41a72bc47fbd3c66870e30404b2bfd29fce5d111a48",
+          "checked_at": "2026-09-20T13:44:09.347Z"
+        },
+        {
+          "method": "POST",
+          "url": "http://officehire.mcdonalds.com.cn/api/outer/ats-apply/website/job",
+          "headers": {
+            "accept": "application/json, text/plain, */*",
+            "content-type": "application/json",
+            "origin": "http://officehire.mcdonalds.com.cn",
+            "referer": "http://officehire.mcdonalds.com.cn/apply/mcdchina/4327/",
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+          },
+          "body": {
+            "orgId": "mcdchina",
+            "siteId": "4327",
+            "jobId": "268f9605-cfcd-4295-b2a8-35fe4d4395a6",
+            "locale": "zh-CN"
+          },
+          "purpose": "job_detail",
+          "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\934ecd3791992389\\http\\571f831c-df9-00003.json",
+          "response_sha256": "b6c1cd7582cadbd6d6a43cc357fa3c7bf499bb26f761f4f72a671f0c9df9aa36",
+          "checked_at": "2026-09-20T13:44:09.523Z"
+        }
+      ],
+      "public_bootstrap_requests": [
+        {
+          "method": "GET",
+          "url": "http://officehire.mcdonalds.com.cn/apply/mcdchina/4327/",
+          "headers": {
+            "accept": "text/html,application/json",
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+          },
+          "purpose": "public_configuration_bootstrap",
+          "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\934ecd3791992389\\http\\571f831c-df9-00001.txt",
+          "response_sha256": "010ecadd9702054c3afbecf2cd9778f05f238aa82a8ded7ebb179e7ecdd9db9f",
+          "checked_at": "2026-09-20T13:44:08.746Z"
+        }
+      ],
+      "recruitment_sources": [
+        {
+          "company_id": "waiqi-routing-eadf25197e8b",
+          "display_name": "金拱门食品有限公司",
+          "aliases": [
+            "麦当劳"
+          ],
+          "provider": "moka",
+          "category": "consumer",
+          "industry_tags": [
+            "consumer"
+          ],
+          "primary_entry_url": "http://officehire.mcdonalds.com.cn/apply/mcdchina/4327/#/job/af022f84-03a4-4332-affa-cecbca824e37",
+          "source_id": "waiqi-routing-934ecd3791992389",
+          "source_origin": "waiqi-2026-09-20-routing-deep-review",
+          "verification_status": "verified_api_full_jd",
+          "verified_at": "2026-09-20T13:44:09.800Z",
+          "admitted": true,
+          "source_verification": {
+            "checked_at": "2026-09-20T13:44:09.800Z",
+            "method": "waiqi_current_job_to_anonymous_official_api_full_jd",
+            "complete_jd_samples": 1,
+            "observed_jobs": 383,
+            "identity_basis": "官方 Moka API 返回“麦当劳中国/麦当劳”招聘门户名称，且完整当前 JD 可读取。",
+            "identity_evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\934ecd3791992389\\http\\571f831c-df9-00003-decoded.json",
+            "proof_directory": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\934ecd3791992389",
+            "scope": "Current mainland-China jobs returned by the official recruitment API; Oracle sources without a locationId require complete global pagination followed by explicit PrimaryLocationCountry=CN filtering.",
+            "coverage": {
+              "status": "sample_verified",
+              "server_total": null,
+              "mainland_jobs_observed": 383,
+              "complete_mainland_jd": true
+            }
+          },
+          "identity_verification": {
+            "identity_verified": true,
+            "basis": "官方 Moka API 返回“麦当劳中国/麦当劳”招聘门户名称，且完整当前 JD 可读取。",
+            "evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\934ecd3791992389\\http\\571f831c-df9-00003-decoded.json",
+            "verified_at": "2026-09-20T13:44:09.800Z"
+          },
+          "discovery_provenance": {
+            "dataset": "waiqi-company-20260920",
+            "waiqi_company_id": "35284",
+            "company_url": "https://waiqi.com/company/detail?id=35284",
+            "observed_link": "http://officehire.mcdonalds.com.cn/apply/mcdchina/4327/#/job/af022f84-03a4-4332-affa-cecbca824e37",
+            "reported_position_count": 36,
+            "returned_position_count": 36
+          },
+          "validated_api_request_examples": [
+            {
+              "method": "POST",
+              "url": "http://officehire.mcdonalds.com.cn/api/outer/ats-apply/website/jobs/v2",
+              "headers": {
+                "accept": "application/json, text/plain, */*",
+                "content-type": "application/json",
+                "origin": "http://officehire.mcdonalds.com.cn",
+                "referer": "http://officehire.mcdonalds.com.cn/apply/mcdchina/4327/",
+                "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+              },
+              "body": {
+                "orgId": "mcdchina",
+                "siteId": "4327",
+                "site": "apply",
+                "locale": "zh-CN",
+                "limit": 20,
+                "offset": 0,
+                "needStat": true,
+                "keyword": ""
+              },
+              "purpose": "job_list",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\934ecd3791992389\\http\\571f831c-df9-00002.json",
+              "response_sha256": "5c06b241d41d845496b2c41a72bc47fbd3c66870e30404b2bfd29fce5d111a48",
+              "checked_at": "2026-09-20T13:44:09.347Z"
+            },
+            {
+              "method": "POST",
+              "url": "http://officehire.mcdonalds.com.cn/api/outer/ats-apply/website/job",
+              "headers": {
+                "accept": "application/json, text/plain, */*",
+                "content-type": "application/json",
+                "origin": "http://officehire.mcdonalds.com.cn",
+                "referer": "http://officehire.mcdonalds.com.cn/apply/mcdchina/4327/",
+                "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+              },
+              "body": {
+                "orgId": "mcdchina",
+                "siteId": "4327",
+                "jobId": "268f9605-cfcd-4295-b2a8-35fe4d4395a6",
+                "locale": "zh-CN"
+              },
+              "purpose": "job_detail",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\934ecd3791992389\\http\\571f831c-df9-00003.json",
+              "response_sha256": "b6c1cd7582cadbd6d6a43cc357fa3c7bf499bb26f761f4f72a671f0c9df9aa36",
+              "checked_at": "2026-09-20T13:44:09.523Z"
+            }
+          ],
+          "public_bootstrap_requests": [
+            {
+              "method": "GET",
+              "url": "http://officehire.mcdonalds.com.cn/apply/mcdchina/4327/",
+              "headers": {
+                "accept": "text/html,application/json",
+                "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+              },
+              "purpose": "public_configuration_bootstrap",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\934ecd3791992389\\http\\571f831c-df9-00001.txt",
+              "response_sha256": "010ecadd9702054c3afbecf2cd9778f05f238aa82a8ded7ebb179e7ecdd9db9f",
+              "checked_at": "2026-09-20T13:44:08.746Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "company_id": "waiqi-routing-39235def32c2",
+      "display_name": "伊莱克斯专业设备（上海）有限公司",
+      "aliases": [
+        "伊莱克斯",
+        "Electrolux  伊莱克斯",
+        "Electrolux ",
+        "Electrolux Professional"
+      ],
+      "provider": "oracle_recruiting",
+      "category": "industrial",
+      "industry_tags": [
+        "industrial"
+      ],
+      "primary_entry_url": "https://fa-ewoz-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2001/job/1541",
+      "source_id": "waiqi-routing-e411eca0184ba12e",
+      "source_origin": "waiqi-2026-09-20-routing-deep-review",
+      "verification_status": "verified_api_full_jd",
+      "verified_at": "2026-09-20T13:46:44.979Z",
+      "admitted": true,
+      "source_verification": {
+        "checked_at": "2026-09-20T13:46:44.979Z",
+        "method": "waiqi_current_job_to_anonymous_official_api_full_jd",
+        "complete_jd_samples": 1,
+        "observed_jobs": 2,
+        "identity_basis": "官方 Oracle 中国岗位完整 JD 正文明确 Electrolux Professional，与 Waiqi 公司英文别名完全一致。",
+        "identity_evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\e411eca0184ba12e\\http\\2dc5e390-38f-00002.json",
+        "proof_directory": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\e411eca0184ba12e",
+        "scope": "Current mainland-China jobs returned by the official recruitment API; Oracle sources without a locationId require complete global pagination followed by explicit PrimaryLocationCountry=CN filtering.",
+        "coverage": {
+          "status": "sample_verified",
+          "server_total": 58,
+          "mainland_jobs_observed": 2,
+          "complete_mainland_jd": true
+        }
+      },
+      "identity_verification": {
+        "identity_verified": true,
+        "basis": "官方 Oracle 中国岗位完整 JD 正文明确 Electrolux Professional，与 Waiqi 公司英文别名完全一致。",
+        "evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\e411eca0184ba12e\\http\\2dc5e390-38f-00002.json",
+        "verified_at": "2026-09-20T13:46:44.979Z"
+      },
+      "discovery_provenance": {
+        "dataset": "waiqi-company-20260920",
+        "waiqi_company_id": "39025",
+        "company_url": "https://waiqi.com/company/detail?id=39025",
+        "observed_link": "https://fa-ewoz-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2001/job/1541",
+        "reported_position_count": 2,
+        "returned_position_count": 2
+      },
+      "validated_api_request_examples": [
+        {
+          "method": "GET",
+          "url": "https://fa-ewoz-saasfaprod1.fa.ocs.oraclecloud.com/hcmRestApi/resources/latest/recruitingCEJobRequisitions?onlyData=true&expand=requisitionList.secondaryLocations&finder=findReqs;siteNumber=CX_2001,facetsList=NONE,limit=1000,offset=0",
+          "headers": {
+            "accept": "application/json, text/plain, */*",
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+          },
+          "purpose": "global_list_for_mainland_filter",
+          "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\e411eca0184ba12e\\http\\2dc5e390-38f-00001.json",
+          "response_sha256": "4f6a5323a89825d14dd0d23045fe7a88c003ab734b9cbff95d91affffb261449",
+          "checked_at": "2026-09-20T13:46:40.644Z"
+        },
+        {
+          "method": "GET",
+          "url": "https://fa-ewoz-saasfaprod1.fa.ocs.oraclecloud.com/hcmRestApi/resources/latest/recruitingCEJobRequisitionDetails?expand=all&onlyData=true&finder=ById;Id=%221518%22,siteNumber=CX_2001",
+          "headers": {
+            "accept": "application/json, text/plain, */*",
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+          },
+          "purpose": "mainland_job_detail_sample",
+          "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\e411eca0184ba12e\\http\\2dc5e390-38f-00002.json",
+          "response_sha256": "62454ac62245d3c138652fcda9535660594ed1e12d3329481d6562455dacbe9c",
+          "checked_at": "2026-09-20T13:46:44.382Z"
+        }
+      ],
+      "api_config": {
+        "origin": "https://fa-ewoz-saasfaprod1.fa.ocs.oraclecloud.com",
+        "site": "CX_2001"
+      },
+      "recruitment_sources": [
+        {
+          "company_id": "waiqi-routing-39235def32c2",
+          "display_name": "伊莱克斯专业设备（上海）有限公司",
+          "aliases": [
+            "伊莱克斯",
+            "Electrolux  伊莱克斯",
+            "Electrolux ",
+            "Electrolux Professional"
+          ],
+          "provider": "oracle_recruiting",
+          "category": "industrial",
+          "industry_tags": [
+            "industrial"
+          ],
+          "primary_entry_url": "https://fa-ewoz-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2001/job/1541",
+          "source_id": "waiqi-routing-e411eca0184ba12e",
+          "source_origin": "waiqi-2026-09-20-routing-deep-review",
+          "verification_status": "verified_api_full_jd",
+          "verified_at": "2026-09-20T13:46:44.979Z",
+          "admitted": true,
+          "source_verification": {
+            "checked_at": "2026-09-20T13:46:44.979Z",
+            "method": "waiqi_current_job_to_anonymous_official_api_full_jd",
+            "complete_jd_samples": 1,
+            "observed_jobs": 2,
+            "identity_basis": "官方 Oracle 中国岗位完整 JD 正文明确 Electrolux Professional，与 Waiqi 公司英文别名完全一致。",
+            "identity_evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\e411eca0184ba12e\\http\\2dc5e390-38f-00002.json",
+            "proof_directory": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\e411eca0184ba12e",
+            "scope": "Current mainland-China jobs returned by the official recruitment API; Oracle sources without a locationId require complete global pagination followed by explicit PrimaryLocationCountry=CN filtering.",
+            "coverage": {
+              "status": "sample_verified",
+              "server_total": 58,
+              "mainland_jobs_observed": 2,
+              "complete_mainland_jd": true
+            }
+          },
+          "identity_verification": {
+            "identity_verified": true,
+            "basis": "官方 Oracle 中国岗位完整 JD 正文明确 Electrolux Professional，与 Waiqi 公司英文别名完全一致。",
+            "evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\e411eca0184ba12e\\http\\2dc5e390-38f-00002.json",
+            "verified_at": "2026-09-20T13:46:44.979Z"
+          },
+          "discovery_provenance": {
+            "dataset": "waiqi-company-20260920",
+            "waiqi_company_id": "39025",
+            "company_url": "https://waiqi.com/company/detail?id=39025",
+            "observed_link": "https://fa-ewoz-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2001/job/1541",
+            "reported_position_count": 2,
+            "returned_position_count": 2
+          },
+          "validated_api_request_examples": [
+            {
+              "method": "GET",
+              "url": "https://fa-ewoz-saasfaprod1.fa.ocs.oraclecloud.com/hcmRestApi/resources/latest/recruitingCEJobRequisitions?onlyData=true&expand=requisitionList.secondaryLocations&finder=findReqs;siteNumber=CX_2001,facetsList=NONE,limit=1000,offset=0",
+              "headers": {
+                "accept": "application/json, text/plain, */*",
+                "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+              },
+              "purpose": "global_list_for_mainland_filter",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\e411eca0184ba12e\\http\\2dc5e390-38f-00001.json",
+              "response_sha256": "4f6a5323a89825d14dd0d23045fe7a88c003ab734b9cbff95d91affffb261449",
+              "checked_at": "2026-09-20T13:46:40.644Z"
+            },
+            {
+              "method": "GET",
+              "url": "https://fa-ewoz-saasfaprod1.fa.ocs.oraclecloud.com/hcmRestApi/resources/latest/recruitingCEJobRequisitionDetails?expand=all&onlyData=true&finder=ById;Id=%221518%22,siteNumber=CX_2001",
+              "headers": {
+                "accept": "application/json, text/plain, */*",
+                "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+              },
+              "purpose": "mainland_job_detail_sample",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\e411eca0184ba12e\\http\\2dc5e390-38f-00002.json",
+              "response_sha256": "62454ac62245d3c138652fcda9535660594ed1e12d3329481d6562455dacbe9c",
+              "checked_at": "2026-09-20T13:46:44.382Z"
+            }
+          ],
+          "api_config": {
+            "origin": "https://fa-ewoz-saasfaprod1.fa.ocs.oraclecloud.com",
+            "site": "CX_2001"
+          }
+        }
+      ]
+    },
+    {
+      "company_id": "waiqi-routing-944ef9a07c17",
+      "display_name": "埃万特",
+      "aliases": [
+        "Avient Corporation 埃万特",
+        "Avient Corporation"
+      ],
+      "provider": "oracle_recruiting",
+      "category": "materials_chemicals",
+      "industry_tags": [
+        "materials_chemicals"
+      ],
+      "primary_entry_url": "https://fa-eqzh-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/Avient/job/40001390",
+      "source_id": "waiqi-routing-b5d2f951f9dd0cab",
+      "source_origin": "waiqi-2026-09-20-routing-deep-review",
+      "verification_status": "verified_api_full_jd",
+      "verified_at": "2026-09-20T13:44:47.032Z",
+      "admitted": true,
+      "source_verification": {
+        "checked_at": "2026-09-20T13:44:47.032Z",
+        "method": "waiqi_current_job_to_anonymous_official_api_full_jd",
+        "complete_jd_samples": 1,
+        "observed_jobs": 23,
+        "identity_basis": "官方 Oracle 招聘站点标识为 avient，和 Waiqi 公司英文别名完全一致；中国岗位完整 JD 可读取。",
+        "identity_evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\b5d2f951f9dd0cab\\http\\65ce5908-92c-00002.json",
+        "proof_directory": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\b5d2f951f9dd0cab",
+        "scope": "Current mainland-China jobs returned by the official recruitment API; Oracle sources without a locationId require complete global pagination followed by explicit PrimaryLocationCountry=CN filtering.",
+        "coverage": {
+          "status": "sample_verified",
+          "server_total": 198,
+          "mainland_jobs_observed": 23,
+          "complete_mainland_jd": true
+        }
+      },
+      "identity_verification": {
+        "identity_verified": true,
+        "basis": "官方 Oracle 招聘站点标识为 avient，和 Waiqi 公司英文别名完全一致；中国岗位完整 JD 可读取。",
+        "evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\b5d2f951f9dd0cab\\http\\65ce5908-92c-00002.json",
+        "verified_at": "2026-09-20T13:44:47.032Z"
+      },
+      "discovery_provenance": {
+        "dataset": "waiqi-company-20260920",
+        "waiqi_company_id": "37821",
+        "company_url": "https://waiqi.com/company/detail?id=37821",
+        "observed_link": "https://fa-eqzh-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/Avient/job/40001390",
+        "reported_position_count": 23,
+        "returned_position_count": 23
+      },
+      "validated_api_request_examples": [
+        {
+          "method": "GET",
+          "url": "https://fa-eqzh-saasfaprod1.fa.ocs.oraclecloud.com/hcmRestApi/resources/latest/recruitingCEJobRequisitions?onlyData=true&expand=requisitionList.secondaryLocations&finder=findReqs;siteNumber=Avient,facetsList=NONE,limit=1000,offset=0",
+          "headers": {
+            "accept": "application/json, text/plain, */*",
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+          },
+          "purpose": "global_list_for_mainland_filter",
+          "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\b5d2f951f9dd0cab\\http\\65ce5908-92c-00001.json",
+          "response_sha256": "fec8949db8c1d50cff1cebe05c5aafdd9b57b4a9056819638ca19849b1d78495",
+          "checked_at": "2026-09-20T13:44:42.000Z"
+        },
+        {
+          "method": "GET",
+          "url": "https://fa-eqzh-saasfaprod1.fa.ocs.oraclecloud.com/hcmRestApi/resources/latest/recruitingCEJobRequisitionDetails?expand=all&onlyData=true&finder=ById;Id=%2240001440%22,siteNumber=Avient",
+          "headers": {
+            "accept": "application/json, text/plain, */*",
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+          },
+          "purpose": "mainland_job_detail_sample",
+          "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\b5d2f951f9dd0cab\\http\\65ce5908-92c-00002.json",
+          "response_sha256": "3a73b786d17ce66666b9af39e37216fe24ab85c07b79a08420b9d57d93ae980d",
+          "checked_at": "2026-09-20T13:44:46.423Z"
+        }
+      ],
+      "api_config": {
+        "origin": "https://fa-eqzh-saasfaprod1.fa.ocs.oraclecloud.com",
+        "site": "Avient"
+      },
+      "recruitment_sources": [
+        {
+          "company_id": "waiqi-routing-944ef9a07c17",
+          "display_name": "埃万特",
+          "aliases": [
+            "Avient Corporation 埃万特",
+            "Avient Corporation"
+          ],
+          "provider": "oracle_recruiting",
+          "category": "materials_chemicals",
+          "industry_tags": [
+            "materials_chemicals"
+          ],
+          "primary_entry_url": "https://fa-eqzh-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/Avient/job/40001390",
+          "source_id": "waiqi-routing-b5d2f951f9dd0cab",
+          "source_origin": "waiqi-2026-09-20-routing-deep-review",
+          "verification_status": "verified_api_full_jd",
+          "verified_at": "2026-09-20T13:44:47.032Z",
+          "admitted": true,
+          "source_verification": {
+            "checked_at": "2026-09-20T13:44:47.032Z",
+            "method": "waiqi_current_job_to_anonymous_official_api_full_jd",
+            "complete_jd_samples": 1,
+            "observed_jobs": 23,
+            "identity_basis": "官方 Oracle 招聘站点标识为 avient，和 Waiqi 公司英文别名完全一致；中国岗位完整 JD 可读取。",
+            "identity_evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\b5d2f951f9dd0cab\\http\\65ce5908-92c-00002.json",
+            "proof_directory": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\b5d2f951f9dd0cab",
+            "scope": "Current mainland-China jobs returned by the official recruitment API; Oracle sources without a locationId require complete global pagination followed by explicit PrimaryLocationCountry=CN filtering.",
+            "coverage": {
+              "status": "sample_verified",
+              "server_total": 198,
+              "mainland_jobs_observed": 23,
+              "complete_mainland_jd": true
+            }
+          },
+          "identity_verification": {
+            "identity_verified": true,
+            "basis": "官方 Oracle 招聘站点标识为 avient，和 Waiqi 公司英文别名完全一致；中国岗位完整 JD 可读取。",
+            "evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\b5d2f951f9dd0cab\\http\\65ce5908-92c-00002.json",
+            "verified_at": "2026-09-20T13:44:47.032Z"
+          },
+          "discovery_provenance": {
+            "dataset": "waiqi-company-20260920",
+            "waiqi_company_id": "37821",
+            "company_url": "https://waiqi.com/company/detail?id=37821",
+            "observed_link": "https://fa-eqzh-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/Avient/job/40001390",
+            "reported_position_count": 23,
+            "returned_position_count": 23
+          },
+          "validated_api_request_examples": [
+            {
+              "method": "GET",
+              "url": "https://fa-eqzh-saasfaprod1.fa.ocs.oraclecloud.com/hcmRestApi/resources/latest/recruitingCEJobRequisitions?onlyData=true&expand=requisitionList.secondaryLocations&finder=findReqs;siteNumber=Avient,facetsList=NONE,limit=1000,offset=0",
+              "headers": {
+                "accept": "application/json, text/plain, */*",
+                "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+              },
+              "purpose": "global_list_for_mainland_filter",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\b5d2f951f9dd0cab\\http\\65ce5908-92c-00001.json",
+              "response_sha256": "fec8949db8c1d50cff1cebe05c5aafdd9b57b4a9056819638ca19849b1d78495",
+              "checked_at": "2026-09-20T13:44:42.000Z"
+            },
+            {
+              "method": "GET",
+              "url": "https://fa-eqzh-saasfaprod1.fa.ocs.oraclecloud.com/hcmRestApi/resources/latest/recruitingCEJobRequisitionDetails?expand=all&onlyData=true&finder=ById;Id=%2240001440%22,siteNumber=Avient",
+              "headers": {
+                "accept": "application/json, text/plain, */*",
+                "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+              },
+              "purpose": "mainland_job_detail_sample",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\b5d2f951f9dd0cab\\http\\65ce5908-92c-00002.json",
+              "response_sha256": "3a73b786d17ce66666b9af39e37216fe24ab85c07b79a08420b9d57d93ae980d",
+              "checked_at": "2026-09-20T13:44:46.423Z"
+            }
+          ],
+          "api_config": {
+            "origin": "https://fa-eqzh-saasfaprod1.fa.ocs.oraclecloud.com",
+            "site": "Avient"
+          }
+        }
+      ]
+    },
+    {
+      "company_id": "waiqi-routing-1931c69162ce",
+      "display_name": "库博光学（中国）有限公司",
+      "aliases": [
+        "库博",
+        "CooperVision 库博",
+        "CooperVision"
+      ],
+      "provider": "oracle_recruiting",
+      "category": "healthcare",
+      "industry_tags": [
+        "healthcare"
+      ],
+      "primary_entry_url": "https://hcjy.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/12630",
+      "source_id": "waiqi-routing-b6e5ce42dfc4dcaf",
+      "source_origin": "waiqi-2026-09-20-routing-deep-review",
+      "verification_status": "verified_api_full_jd",
+      "verified_at": "2026-09-20T13:45:29.899Z",
+      "admitted": true,
+      "source_verification": {
+        "checked_at": "2026-09-20T13:45:29.899Z",
+        "method": "waiqi_current_job_to_anonymous_official_api_full_jd",
+        "complete_jd_samples": 1,
+        "observed_jobs": 2,
+        "identity_basis": "官方 Oracle 中国岗位完整 JD 正文明确 CooperVision，与 Waiqi 公司英文别名完全一致；同租户别名站点已去重。",
+        "identity_evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\b6e5ce42dfc4dcaf\\http\\d2024e76-b5c-00002.json",
+        "proof_directory": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\b6e5ce42dfc4dcaf",
+        "scope": "Current mainland-China jobs returned by the official recruitment API; Oracle sources without a locationId require complete global pagination followed by explicit PrimaryLocationCountry=CN filtering.",
+        "coverage": {
+          "status": "sample_verified",
+          "server_total": 247,
+          "mainland_jobs_observed": 2,
+          "complete_mainland_jd": true
+        }
+      },
+      "identity_verification": {
+        "identity_verified": true,
+        "basis": "官方 Oracle 中国岗位完整 JD 正文明确 CooperVision，与 Waiqi 公司英文别名完全一致；同租户别名站点已去重。",
+        "evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\b6e5ce42dfc4dcaf\\http\\d2024e76-b5c-00002.json",
+        "verified_at": "2026-09-20T13:45:29.899Z"
+      },
+      "discovery_provenance": {
+        "dataset": "waiqi-company-20260920",
+        "waiqi_company_id": "38029",
+        "company_url": "https://waiqi.com/company/detail?id=38029",
+        "observed_link": "https://hcjy.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/12630",
+        "reported_position_count": 9,
+        "returned_position_count": 9
+      },
+      "validated_api_request_examples": [
+        {
+          "method": "GET",
+          "url": "https://hcjy.fa.us2.oraclecloud.com/hcmRestApi/resources/latest/recruitingCEJobRequisitions?onlyData=true&expand=requisitionList.secondaryLocations&finder=findReqs;siteNumber=CX_1,facetsList=NONE,limit=1000,offset=0",
+          "headers": {
+            "accept": "application/json, text/plain, */*",
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+          },
+          "purpose": "global_list_for_mainland_filter",
+          "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\b6e5ce42dfc4dcaf\\http\\d2024e76-b5c-00001.json",
+          "response_sha256": "9a0a3586a6bc6155a8778ec4a71243f768d1a760abab170beb6b25a9e1149dba",
+          "checked_at": "2026-09-20T13:45:24.871Z"
+        },
+        {
+          "method": "GET",
+          "url": "https://hcjy.fa.us2.oraclecloud.com/hcmRestApi/resources/latest/recruitingCEJobRequisitionDetails?expand=all&onlyData=true&finder=ById;Id=%2212686%22,siteNumber=CX_1",
+          "headers": {
+            "accept": "application/json, text/plain, */*",
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+          },
+          "purpose": "mainland_job_detail_sample",
+          "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\b6e5ce42dfc4dcaf\\http\\d2024e76-b5c-00002.json",
+          "response_sha256": "be96ea6bc9b5a4e4a04fe969348c71a9e7938ffce07496e183f9ea5e5bb44136",
+          "checked_at": "2026-09-20T13:45:29.475Z"
+        }
+      ],
+      "api_config": {
+        "origin": "https://hcjy.fa.us2.oraclecloud.com",
+        "site": "CX_1"
+      },
+      "recruitment_sources": [
+        {
+          "company_id": "waiqi-routing-1931c69162ce",
+          "display_name": "库博光学（中国）有限公司",
+          "aliases": [
+            "库博",
+            "CooperVision 库博",
+            "CooperVision"
+          ],
+          "provider": "oracle_recruiting",
+          "category": "healthcare",
+          "industry_tags": [
+            "healthcare"
+          ],
+          "primary_entry_url": "https://hcjy.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/12630",
+          "source_id": "waiqi-routing-b6e5ce42dfc4dcaf",
+          "source_origin": "waiqi-2026-09-20-routing-deep-review",
+          "verification_status": "verified_api_full_jd",
+          "verified_at": "2026-09-20T13:45:29.899Z",
+          "admitted": true,
+          "source_verification": {
+            "checked_at": "2026-09-20T13:45:29.899Z",
+            "method": "waiqi_current_job_to_anonymous_official_api_full_jd",
+            "complete_jd_samples": 1,
+            "observed_jobs": 2,
+            "identity_basis": "官方 Oracle 中国岗位完整 JD 正文明确 CooperVision，与 Waiqi 公司英文别名完全一致；同租户别名站点已去重。",
+            "identity_evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\b6e5ce42dfc4dcaf\\http\\d2024e76-b5c-00002.json",
+            "proof_directory": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\b6e5ce42dfc4dcaf",
+            "scope": "Current mainland-China jobs returned by the official recruitment API; Oracle sources without a locationId require complete global pagination followed by explicit PrimaryLocationCountry=CN filtering.",
+            "coverage": {
+              "status": "sample_verified",
+              "server_total": 247,
+              "mainland_jobs_observed": 2,
+              "complete_mainland_jd": true
+            }
+          },
+          "identity_verification": {
+            "identity_verified": true,
+            "basis": "官方 Oracle 中国岗位完整 JD 正文明确 CooperVision，与 Waiqi 公司英文别名完全一致；同租户别名站点已去重。",
+            "evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\b6e5ce42dfc4dcaf\\http\\d2024e76-b5c-00002.json",
+            "verified_at": "2026-09-20T13:45:29.899Z"
+          },
+          "discovery_provenance": {
+            "dataset": "waiqi-company-20260920",
+            "waiqi_company_id": "38029",
+            "company_url": "https://waiqi.com/company/detail?id=38029",
+            "observed_link": "https://hcjy.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/12630",
+            "reported_position_count": 9,
+            "returned_position_count": 9
+          },
+          "validated_api_request_examples": [
+            {
+              "method": "GET",
+              "url": "https://hcjy.fa.us2.oraclecloud.com/hcmRestApi/resources/latest/recruitingCEJobRequisitions?onlyData=true&expand=requisitionList.secondaryLocations&finder=findReqs;siteNumber=CX_1,facetsList=NONE,limit=1000,offset=0",
+              "headers": {
+                "accept": "application/json, text/plain, */*",
+                "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+              },
+              "purpose": "global_list_for_mainland_filter",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\b6e5ce42dfc4dcaf\\http\\d2024e76-b5c-00001.json",
+              "response_sha256": "9a0a3586a6bc6155a8778ec4a71243f768d1a760abab170beb6b25a9e1149dba",
+              "checked_at": "2026-09-20T13:45:24.871Z"
+            },
+            {
+              "method": "GET",
+              "url": "https://hcjy.fa.us2.oraclecloud.com/hcmRestApi/resources/latest/recruitingCEJobRequisitionDetails?expand=all&onlyData=true&finder=ById;Id=%2212686%22,siteNumber=CX_1",
+              "headers": {
+                "accept": "application/json, text/plain, */*",
+                "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+              },
+              "purpose": "mainland_job_detail_sample",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\b6e5ce42dfc4dcaf\\http\\d2024e76-b5c-00002.json",
+              "response_sha256": "be96ea6bc9b5a4e4a04fe969348c71a9e7938ffce07496e183f9ea5e5bb44136",
+              "checked_at": "2026-09-20T13:45:29.475Z"
+            }
+          ],
+          "api_config": {
+            "origin": "https://hcjy.fa.us2.oraclecloud.com",
+            "site": "CX_1"
+          }
+        }
+      ]
+    },
+    {
+      "company_id": "waiqi-routing-22404860d6dd",
+      "display_name": "德安华（北京）商业风险管理咨询有限公司",
+      "aliases": [
+        "德安华",
+        "Kroll 德安华",
+        "Kroll",
+        "Kroll (Beijing) Business Risk Management Consulting Co., Ltd."
+      ],
+      "provider": "oracle_recruiting",
+      "category": "professional_services",
+      "industry_tags": [
+        "professional_services"
+      ],
+      "primary_entry_url": "https://hcxs.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/21014800",
+      "source_id": "waiqi-routing-7278b69a161fce8b",
+      "source_origin": "waiqi-2026-09-20-routing-deep-review",
+      "verification_status": "verified_api_full_jd",
+      "verified_at": "2026-09-20T13:47:45.795Z",
+      "admitted": true,
+      "source_verification": {
+        "checked_at": "2026-09-20T13:47:45.795Z",
+        "method": "waiqi_current_job_to_anonymous_official_api_full_jd",
+        "complete_jd_samples": 1,
+        "observed_jobs": 2,
+        "identity_basis": "官方 Oracle 中国岗位完整 JD 正文明确 Kroll，与 Waiqi 公司英文别名完全一致。",
+        "identity_evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\7278b69a161fce8b\\http\\5725a96b-b82-00002.json",
+        "proof_directory": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\7278b69a161fce8b",
+        "scope": "Current mainland-China jobs returned by the official recruitment API; Oracle sources without a locationId require complete global pagination followed by explicit PrimaryLocationCountry=CN filtering.",
+        "coverage": {
+          "status": "sample_verified",
+          "server_total": 380,
+          "mainland_jobs_observed": 2,
+          "complete_mainland_jd": true
+        }
+      },
+      "identity_verification": {
+        "identity_verified": true,
+        "basis": "官方 Oracle 中国岗位完整 JD 正文明确 Kroll，与 Waiqi 公司英文别名完全一致。",
+        "evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\7278b69a161fce8b\\http\\5725a96b-b82-00002.json",
+        "verified_at": "2026-09-20T13:47:45.795Z"
+      },
+      "discovery_provenance": {
+        "dataset": "waiqi-company-20260920",
+        "waiqi_company_id": "38001",
+        "company_url": "https://waiqi.com/company/detail?id=38001",
+        "observed_link": "https://hcxs.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/21014800",
+        "reported_position_count": 1,
+        "returned_position_count": 1
+      },
+      "validated_api_request_examples": [
+        {
+          "method": "GET",
+          "url": "https://hcxs.fa.us2.oraclecloud.com/hcmRestApi/resources/latest/recruitingCEJobRequisitions?onlyData=true&expand=requisitionList.secondaryLocations&finder=findReqs;siteNumber=CX_1,facetsList=NONE,limit=1000,offset=0",
+          "headers": {
+            "accept": "application/json, text/plain, */*",
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+          },
+          "purpose": "global_list_for_mainland_filter",
+          "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\7278b69a161fce8b\\http\\5725a96b-b82-00001.json",
+          "response_sha256": "7da2249dea915b3dbe89aada1ca437f66c198ffb74335fbd502bf272bcf31a3d",
+          "checked_at": "2026-09-20T13:47:38.064Z"
+        },
+        {
+          "method": "GET",
+          "url": "https://hcxs.fa.us2.oraclecloud.com/hcmRestApi/resources/latest/recruitingCEJobRequisitionDetails?expand=all&onlyData=true&finder=ById;Id=%2221014800%22,siteNumber=CX_1",
+          "headers": {
+            "accept": "application/json, text/plain, */*",
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+          },
+          "purpose": "mainland_job_detail_sample",
+          "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\7278b69a161fce8b\\http\\5725a96b-b82-00002.json",
+          "response_sha256": "3b0eba7e9db5b52718b7c91ca1c7e72d6ef2f23ec5add2755c55d69673bce8c2",
+          "checked_at": "2026-09-20T13:47:45.404Z"
+        }
+      ],
+      "api_config": {
+        "origin": "https://hcxs.fa.us2.oraclecloud.com",
+        "site": "CX_1"
+      },
+      "recruitment_sources": [
+        {
+          "company_id": "waiqi-routing-22404860d6dd",
+          "display_name": "德安华（北京）商业风险管理咨询有限公司",
+          "aliases": [
+            "德安华",
+            "Kroll 德安华",
+            "Kroll",
+            "Kroll (Beijing) Business Risk Management Consulting Co., Ltd."
+          ],
+          "provider": "oracle_recruiting",
+          "category": "professional_services",
+          "industry_tags": [
+            "professional_services"
+          ],
+          "primary_entry_url": "https://hcxs.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/21014800",
+          "source_id": "waiqi-routing-7278b69a161fce8b",
+          "source_origin": "waiqi-2026-09-20-routing-deep-review",
+          "verification_status": "verified_api_full_jd",
+          "verified_at": "2026-09-20T13:47:45.795Z",
+          "admitted": true,
+          "source_verification": {
+            "checked_at": "2026-09-20T13:47:45.795Z",
+            "method": "waiqi_current_job_to_anonymous_official_api_full_jd",
+            "complete_jd_samples": 1,
+            "observed_jobs": 2,
+            "identity_basis": "官方 Oracle 中国岗位完整 JD 正文明确 Kroll，与 Waiqi 公司英文别名完全一致。",
+            "identity_evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\7278b69a161fce8b\\http\\5725a96b-b82-00002.json",
+            "proof_directory": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\7278b69a161fce8b",
+            "scope": "Current mainland-China jobs returned by the official recruitment API; Oracle sources without a locationId require complete global pagination followed by explicit PrimaryLocationCountry=CN filtering.",
+            "coverage": {
+              "status": "sample_verified",
+              "server_total": 380,
+              "mainland_jobs_observed": 2,
+              "complete_mainland_jd": true
+            }
+          },
+          "identity_verification": {
+            "identity_verified": true,
+            "basis": "官方 Oracle 中国岗位完整 JD 正文明确 Kroll，与 Waiqi 公司英文别名完全一致。",
+            "evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\7278b69a161fce8b\\http\\5725a96b-b82-00002.json",
+            "verified_at": "2026-09-20T13:47:45.795Z"
+          },
+          "discovery_provenance": {
+            "dataset": "waiqi-company-20260920",
+            "waiqi_company_id": "38001",
+            "company_url": "https://waiqi.com/company/detail?id=38001",
+            "observed_link": "https://hcxs.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/21014800",
+            "reported_position_count": 1,
+            "returned_position_count": 1
+          },
+          "validated_api_request_examples": [
+            {
+              "method": "GET",
+              "url": "https://hcxs.fa.us2.oraclecloud.com/hcmRestApi/resources/latest/recruitingCEJobRequisitions?onlyData=true&expand=requisitionList.secondaryLocations&finder=findReqs;siteNumber=CX_1,facetsList=NONE,limit=1000,offset=0",
+              "headers": {
+                "accept": "application/json, text/plain, */*",
+                "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+              },
+              "purpose": "global_list_for_mainland_filter",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\7278b69a161fce8b\\http\\5725a96b-b82-00001.json",
+              "response_sha256": "7da2249dea915b3dbe89aada1ca437f66c198ffb74335fbd502bf272bcf31a3d",
+              "checked_at": "2026-09-20T13:47:38.064Z"
+            },
+            {
+              "method": "GET",
+              "url": "https://hcxs.fa.us2.oraclecloud.com/hcmRestApi/resources/latest/recruitingCEJobRequisitionDetails?expand=all&onlyData=true&finder=ById;Id=%2221014800%22,siteNumber=CX_1",
+              "headers": {
+                "accept": "application/json, text/plain, */*",
+                "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+              },
+              "purpose": "mainland_job_detail_sample",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\7278b69a161fce8b\\http\\5725a96b-b82-00002.json",
+              "response_sha256": "3b0eba7e9db5b52718b7c91ca1c7e72d6ef2f23ec5add2755c55d69673bce8c2",
+              "checked_at": "2026-09-20T13:47:45.404Z"
+            }
+          ],
+          "api_config": {
+            "origin": "https://hcxs.fa.us2.oraclecloud.com",
+            "site": "CX_1"
+          }
+        }
+      ]
+    },
+    {
+      "company_id": "waiqi-routing-0fee7f1d9ea3",
+      "display_name": "斯托尔特尼尔森物流（上海）有限公司",
+      "aliases": [
+        "Stolt-Nielsen",
+        "Stolt-Nielsen Stolt-Nielsen"
+      ],
+      "provider": "oracle_recruiting",
+      "category": "logistics_trade",
+      "industry_tags": [
+        "logistics_trade"
+      ],
+      "primary_entry_url": "https://eclo.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/212093",
+      "source_id": "waiqi-routing-396cd69108538d2c",
+      "source_origin": "waiqi-2026-09-20-routing-deep-review",
+      "verification_status": "verified_api_full_jd",
+      "verified_at": "2026-09-20T13:46:28.850Z",
+      "admitted": true,
+      "source_verification": {
+        "checked_at": "2026-09-20T13:46:28.850Z",
+        "method": "waiqi_current_job_to_anonymous_official_api_full_jd",
+        "complete_jd_samples": 1,
+        "observed_jobs": 2,
+        "identity_basis": "官方 Oracle 中国岗位完整 JD 正文明确 Stolt-Nielsen，与 Waiqi 公司英文别名完全一致。",
+        "identity_evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\396cd69108538d2c\\http\\68ddf0ad-5aa-00002.json",
+        "proof_directory": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\396cd69108538d2c",
+        "scope": "Current mainland-China jobs returned by the official recruitment API; Oracle sources without a locationId require complete global pagination followed by explicit PrimaryLocationCountry=CN filtering.",
+        "coverage": {
+          "status": "sample_verified",
+          "server_total": 47,
+          "mainland_jobs_observed": 2,
+          "complete_mainland_jd": true
+        }
+      },
+      "identity_verification": {
+        "identity_verified": true,
+        "basis": "官方 Oracle 中国岗位完整 JD 正文明确 Stolt-Nielsen，与 Waiqi 公司英文别名完全一致。",
+        "evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\396cd69108538d2c\\http\\68ddf0ad-5aa-00002.json",
+        "verified_at": "2026-09-20T13:46:28.850Z"
+      },
+      "discovery_provenance": {
+        "dataset": "waiqi-company-20260920",
+        "waiqi_company_id": "38854",
+        "company_url": "https://waiqi.com/company/detail?id=38854",
+        "observed_link": "https://eclo.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/212093",
+        "reported_position_count": 2,
+        "returned_position_count": 2
+      },
+      "validated_api_request_examples": [
+        {
+          "method": "GET",
+          "url": "https://eclo.fa.em2.oraclecloud.com/hcmRestApi/resources/latest/recruitingCEJobRequisitions?onlyData=true&expand=requisitionList.secondaryLocations&finder=findReqs;siteNumber=CX_1,facetsList=NONE,limit=1000,offset=0",
+          "headers": {
+            "accept": "application/json, text/plain, */*",
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+          },
+          "purpose": "global_list_for_mainland_filter",
+          "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\396cd69108538d2c\\http\\68ddf0ad-5aa-00001.json",
+          "response_sha256": "ad4f217ef71b37a9e5cdf3c801504c6463173b6071efc304cb0f4dbe7d057368",
+          "checked_at": "2026-09-20T13:46:26.179Z"
+        },
+        {
+          "method": "GET",
+          "url": "https://eclo.fa.em2.oraclecloud.com/hcmRestApi/resources/latest/recruitingCEJobRequisitionDetails?expand=all&onlyData=true&finder=ById;Id=%22211899%22,siteNumber=CX_1",
+          "headers": {
+            "accept": "application/json, text/plain, */*",
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+          },
+          "purpose": "mainland_job_detail_sample",
+          "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\396cd69108538d2c\\http\\68ddf0ad-5aa-00002.json",
+          "response_sha256": "e9694c672f3b6a84cb2cad203812dc798be1103ab27c2e69187d1ce0650c52ac",
+          "checked_at": "2026-09-20T13:46:28.306Z"
+        }
+      ],
+      "api_config": {
+        "origin": "https://eclo.fa.em2.oraclecloud.com",
+        "site": "CX_1"
+      },
+      "recruitment_sources": [
+        {
+          "company_id": "waiqi-routing-0fee7f1d9ea3",
+          "display_name": "斯托尔特尼尔森物流（上海）有限公司",
+          "aliases": [
+            "Stolt-Nielsen",
+            "Stolt-Nielsen Stolt-Nielsen"
+          ],
+          "provider": "oracle_recruiting",
+          "category": "logistics_trade",
+          "industry_tags": [
+            "logistics_trade"
+          ],
+          "primary_entry_url": "https://eclo.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/212093",
+          "source_id": "waiqi-routing-396cd69108538d2c",
+          "source_origin": "waiqi-2026-09-20-routing-deep-review",
+          "verification_status": "verified_api_full_jd",
+          "verified_at": "2026-09-20T13:46:28.850Z",
+          "admitted": true,
+          "source_verification": {
+            "checked_at": "2026-09-20T13:46:28.850Z",
+            "method": "waiqi_current_job_to_anonymous_official_api_full_jd",
+            "complete_jd_samples": 1,
+            "observed_jobs": 2,
+            "identity_basis": "官方 Oracle 中国岗位完整 JD 正文明确 Stolt-Nielsen，与 Waiqi 公司英文别名完全一致。",
+            "identity_evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\396cd69108538d2c\\http\\68ddf0ad-5aa-00002.json",
+            "proof_directory": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\396cd69108538d2c",
+            "scope": "Current mainland-China jobs returned by the official recruitment API; Oracle sources without a locationId require complete global pagination followed by explicit PrimaryLocationCountry=CN filtering.",
+            "coverage": {
+              "status": "sample_verified",
+              "server_total": 47,
+              "mainland_jobs_observed": 2,
+              "complete_mainland_jd": true
+            }
+          },
+          "identity_verification": {
+            "identity_verified": true,
+            "basis": "官方 Oracle 中国岗位完整 JD 正文明确 Stolt-Nielsen，与 Waiqi 公司英文别名完全一致。",
+            "evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\396cd69108538d2c\\http\\68ddf0ad-5aa-00002.json",
+            "verified_at": "2026-09-20T13:46:28.850Z"
+          },
+          "discovery_provenance": {
+            "dataset": "waiqi-company-20260920",
+            "waiqi_company_id": "38854",
+            "company_url": "https://waiqi.com/company/detail?id=38854",
+            "observed_link": "https://eclo.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/212093",
+            "reported_position_count": 2,
+            "returned_position_count": 2
+          },
+          "validated_api_request_examples": [
+            {
+              "method": "GET",
+              "url": "https://eclo.fa.em2.oraclecloud.com/hcmRestApi/resources/latest/recruitingCEJobRequisitions?onlyData=true&expand=requisitionList.secondaryLocations&finder=findReqs;siteNumber=CX_1,facetsList=NONE,limit=1000,offset=0",
+              "headers": {
+                "accept": "application/json, text/plain, */*",
+                "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+              },
+              "purpose": "global_list_for_mainland_filter",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\396cd69108538d2c\\http\\68ddf0ad-5aa-00001.json",
+              "response_sha256": "ad4f217ef71b37a9e5cdf3c801504c6463173b6071efc304cb0f4dbe7d057368",
+              "checked_at": "2026-09-20T13:46:26.179Z"
+            },
+            {
+              "method": "GET",
+              "url": "https://eclo.fa.em2.oraclecloud.com/hcmRestApi/resources/latest/recruitingCEJobRequisitionDetails?expand=all&onlyData=true&finder=ById;Id=%22211899%22,siteNumber=CX_1",
+              "headers": {
+                "accept": "application/json, text/plain, */*",
+                "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+              },
+              "purpose": "mainland_job_detail_sample",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\396cd69108538d2c\\http\\68ddf0ad-5aa-00002.json",
+              "response_sha256": "e9694c672f3b6a84cb2cad203812dc798be1103ab27c2e69187d1ce0650c52ac",
+              "checked_at": "2026-09-20T13:46:28.306Z"
+            }
+          ],
+          "api_config": {
+            "origin": "https://eclo.fa.em2.oraclecloud.com",
+            "site": "CX_1"
+          }
+        }
+      ]
+    },
+    {
+      "company_id": "waiqi-routing-2c2f8bed7825",
+      "display_name": "易富（上海）贸易有限公司",
+      "aliases": [
+        "易富",
+        "Treasury Wine Estates 易富",
+        "Treasury Wine Estates",
+        "Treasury Wine Estates Limited"
+      ],
+      "provider": "oracle_recruiting",
+      "category": "consumer",
+      "industry_tags": [
+        "consumer"
+      ],
+      "primary_entry_url": "https://ebpm.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/1005188",
+      "source_id": "waiqi-routing-70430279182664dd",
+      "source_origin": "waiqi-2026-09-20-routing-deep-review",
+      "verification_status": "verified_api_full_jd",
+      "verified_at": "2026-09-20T13:44:27.372Z",
+      "admitted": true,
+      "source_verification": {
+        "checked_at": "2026-09-20T13:44:27.372Z",
+        "method": "waiqi_current_job_to_anonymous_official_api_full_jd",
+        "complete_jd_samples": 1,
+        "observed_jobs": 15,
+        "identity_basis": "官方 Oracle 中国岗位完整 JD 正文明确 Treasury Wine Estates，与 Waiqi 公司英文别名完全一致。",
+        "identity_evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\70430279182664dd\\http\\b1f52acd-9dd-00002.json",
+        "proof_directory": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\70430279182664dd",
+        "scope": "Current mainland-China jobs returned by the official recruitment API; Oracle sources without a locationId require complete global pagination followed by explicit PrimaryLocationCountry=CN filtering.",
+        "coverage": {
+          "status": "sample_verified",
+          "server_total": 60,
+          "mainland_jobs_observed": 15,
+          "complete_mainland_jd": true
+        }
+      },
+      "identity_verification": {
+        "identity_verified": true,
+        "basis": "官方 Oracle 中国岗位完整 JD 正文明确 Treasury Wine Estates，与 Waiqi 公司英文别名完全一致。",
+        "evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\70430279182664dd\\http\\b1f52acd-9dd-00002.json",
+        "verified_at": "2026-09-20T13:44:27.372Z"
+      },
+      "discovery_provenance": {
+        "dataset": "waiqi-company-20260920",
+        "waiqi_company_id": "39588",
+        "company_url": "https://waiqi.com/company/detail?id=39588",
+        "observed_link": "https://ebpm.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/1005188",
+        "reported_position_count": 21,
+        "returned_position_count": 21
+      },
+      "validated_api_request_examples": [
+        {
+          "method": "GET",
+          "url": "https://ebpm.fa.us2.oraclecloud.com/hcmRestApi/resources/latest/recruitingCEJobRequisitions?onlyData=true&expand=requisitionList.secondaryLocations&finder=findReqs;siteNumber=CX_1,facetsList=NONE,limit=1000,offset=0",
+          "headers": {
+            "accept": "application/json, text/plain, */*",
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+          },
+          "purpose": "global_list_for_mainland_filter",
+          "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\70430279182664dd\\http\\b1f52acd-9dd-00001.json",
+          "response_sha256": "c61a9dc2e7b0a1d6bc7006807ed96a7a8ea0ecc425482f67ce30ec55805b10de",
+          "checked_at": "2026-09-20T13:44:25.007Z"
+        },
+        {
+          "method": "GET",
+          "url": "https://ebpm.fa.us2.oraclecloud.com/hcmRestApi/resources/latest/recruitingCEJobRequisitionDetails?expand=all&onlyData=true&finder=ById;Id=%221005188%22,siteNumber=CX_1",
+          "headers": {
+            "accept": "application/json, text/plain, */*",
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+          },
+          "purpose": "mainland_job_detail_sample",
+          "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\70430279182664dd\\http\\b1f52acd-9dd-00002.json",
+          "response_sha256": "76d6869fd30295f6bf1f7caf219cef5034ab69567a987a3e129972b002c64cc0",
+          "checked_at": "2026-09-20T13:44:26.867Z"
+        }
+      ],
+      "api_config": {
+        "origin": "https://ebpm.fa.us2.oraclecloud.com",
+        "site": "CX_1"
+      },
+      "recruitment_sources": [
+        {
+          "company_id": "waiqi-routing-2c2f8bed7825",
+          "display_name": "易富（上海）贸易有限公司",
+          "aliases": [
+            "易富",
+            "Treasury Wine Estates 易富",
+            "Treasury Wine Estates",
+            "Treasury Wine Estates Limited"
+          ],
+          "provider": "oracle_recruiting",
+          "category": "consumer",
+          "industry_tags": [
+            "consumer"
+          ],
+          "primary_entry_url": "https://ebpm.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/1005188",
+          "source_id": "waiqi-routing-70430279182664dd",
+          "source_origin": "waiqi-2026-09-20-routing-deep-review",
+          "verification_status": "verified_api_full_jd",
+          "verified_at": "2026-09-20T13:44:27.372Z",
+          "admitted": true,
+          "source_verification": {
+            "checked_at": "2026-09-20T13:44:27.372Z",
+            "method": "waiqi_current_job_to_anonymous_official_api_full_jd",
+            "complete_jd_samples": 1,
+            "observed_jobs": 15,
+            "identity_basis": "官方 Oracle 中国岗位完整 JD 正文明确 Treasury Wine Estates，与 Waiqi 公司英文别名完全一致。",
+            "identity_evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\70430279182664dd\\http\\b1f52acd-9dd-00002.json",
+            "proof_directory": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\70430279182664dd",
+            "scope": "Current mainland-China jobs returned by the official recruitment API; Oracle sources without a locationId require complete global pagination followed by explicit PrimaryLocationCountry=CN filtering.",
+            "coverage": {
+              "status": "sample_verified",
+              "server_total": 60,
+              "mainland_jobs_observed": 15,
+              "complete_mainland_jd": true
+            }
+          },
+          "identity_verification": {
+            "identity_verified": true,
+            "basis": "官方 Oracle 中国岗位完整 JD 正文明确 Treasury Wine Estates，与 Waiqi 公司英文别名完全一致。",
+            "evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\70430279182664dd\\http\\b1f52acd-9dd-00002.json",
+            "verified_at": "2026-09-20T13:44:27.372Z"
+          },
+          "discovery_provenance": {
+            "dataset": "waiqi-company-20260920",
+            "waiqi_company_id": "39588",
+            "company_url": "https://waiqi.com/company/detail?id=39588",
+            "observed_link": "https://ebpm.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/1005188",
+            "reported_position_count": 21,
+            "returned_position_count": 21
+          },
+          "validated_api_request_examples": [
+            {
+              "method": "GET",
+              "url": "https://ebpm.fa.us2.oraclecloud.com/hcmRestApi/resources/latest/recruitingCEJobRequisitions?onlyData=true&expand=requisitionList.secondaryLocations&finder=findReqs;siteNumber=CX_1,facetsList=NONE,limit=1000,offset=0",
+              "headers": {
+                "accept": "application/json, text/plain, */*",
+                "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+              },
+              "purpose": "global_list_for_mainland_filter",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\70430279182664dd\\http\\b1f52acd-9dd-00001.json",
+              "response_sha256": "c61a9dc2e7b0a1d6bc7006807ed96a7a8ea0ecc425482f67ce30ec55805b10de",
+              "checked_at": "2026-09-20T13:44:25.007Z"
+            },
+            {
+              "method": "GET",
+              "url": "https://ebpm.fa.us2.oraclecloud.com/hcmRestApi/resources/latest/recruitingCEJobRequisitionDetails?expand=all&onlyData=true&finder=ById;Id=%221005188%22,siteNumber=CX_1",
+              "headers": {
+                "accept": "application/json, text/plain, */*",
+                "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+              },
+              "purpose": "mainland_job_detail_sample",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\70430279182664dd\\http\\b1f52acd-9dd-00002.json",
+              "response_sha256": "76d6869fd30295f6bf1f7caf219cef5034ab69567a987a3e129972b002c64cc0",
+              "checked_at": "2026-09-20T13:44:26.867Z"
+            }
+          ],
+          "api_config": {
+            "origin": "https://ebpm.fa.us2.oraclecloud.com",
+            "site": "CX_1"
+          }
+        }
+      ]
+    },
+    {
+      "company_id": "waiqi-routing-2fe6d1283818",
+      "display_name": "法国再保险股份有限公司上海分公司",
+      "aliases": [
+        "法国再保险",
+        "SCOR 法国再保险",
+        "SCOR",
+        "SCOR SE"
+      ],
+      "provider": "oracle_recruiting",
+      "category": "finance",
+      "industry_tags": [
+        "finance"
+      ],
+      "primary_entry_url": "https://fa-errt-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2001/job/5287",
+      "source_id": "waiqi-routing-539848c929fdb7a7",
+      "source_origin": "waiqi-2026-09-20-routing-deep-review",
+      "verification_status": "verified_api_full_jd",
+      "verified_at": "2026-09-20T13:46:10.367Z",
+      "admitted": true,
+      "source_verification": {
+        "checked_at": "2026-09-20T13:46:10.367Z",
+        "method": "waiqi_current_job_to_anonymous_official_api_full_jd",
+        "complete_jd_samples": 1,
+        "observed_jobs": 2,
+        "identity_basis": "官方 Oracle 中国岗位完整 JD 正文明确 SCOR，与 Waiqi 公司英文别名完全一致。",
+        "identity_evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\539848c929fdb7a7\\http\\2a7b9623-efd-00002.json",
+        "proof_directory": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\539848c929fdb7a7",
+        "scope": "Current mainland-China jobs returned by the official recruitment API; Oracle sources without a locationId require complete global pagination followed by explicit PrimaryLocationCountry=CN filtering.",
+        "coverage": {
+          "status": "sample_verified",
+          "server_total": 209,
+          "mainland_jobs_observed": 2,
+          "complete_mainland_jd": true
+        }
+      },
+      "identity_verification": {
+        "identity_verified": true,
+        "basis": "官方 Oracle 中国岗位完整 JD 正文明确 SCOR，与 Waiqi 公司英文别名完全一致。",
+        "evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\539848c929fdb7a7\\http\\2a7b9623-efd-00002.json",
+        "verified_at": "2026-09-20T13:46:10.367Z"
+      },
+      "discovery_provenance": {
+        "dataset": "waiqi-company-20260920",
+        "waiqi_company_id": "39195",
+        "company_url": "https://waiqi.com/company/detail?id=39195",
+        "observed_link": "https://fa-errt-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2001/job/5287",
+        "reported_position_count": 3,
+        "returned_position_count": 3
+      },
+      "validated_api_request_examples": [
+        {
+          "method": "GET",
+          "url": "https://fa-errt-saasfaprod1.fa.ocs.oraclecloud.com/hcmRestApi/resources/latest/recruitingCEJobRequisitions?onlyData=true&expand=requisitionList.secondaryLocations&finder=findReqs;siteNumber=CX_2001,facetsList=NONE,limit=1000,offset=0",
+          "headers": {
+            "accept": "application/json, text/plain, */*",
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+          },
+          "purpose": "global_list_for_mainland_filter",
+          "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\539848c929fdb7a7\\http\\2a7b9623-efd-00001.json",
+          "response_sha256": "cab30fb02c4d5605c2456d7fc3edcb30e652ee18624fa552c71045483efae7dd",
+          "checked_at": "2026-09-20T13:46:05.395Z"
+        },
+        {
+          "method": "GET",
+          "url": "https://fa-errt-saasfaprod1.fa.ocs.oraclecloud.com/hcmRestApi/resources/latest/recruitingCEJobRequisitionDetails?expand=all&onlyData=true&finder=ById;Id=%225138%22,siteNumber=CX_2001",
+          "headers": {
+            "accept": "application/json, text/plain, */*",
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+          },
+          "purpose": "mainland_job_detail_sample",
+          "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\539848c929fdb7a7\\http\\2a7b9623-efd-00002.json",
+          "response_sha256": "a6c449258b128fef3587f9cf173c90f5cb72da42811593406b859386a441ef96",
+          "checked_at": "2026-09-20T13:46:09.941Z"
+        }
+      ],
+      "api_config": {
+        "origin": "https://fa-errt-saasfaprod1.fa.ocs.oraclecloud.com",
+        "site": "CX_2001"
+      },
+      "recruitment_sources": [
+        {
+          "company_id": "waiqi-routing-2fe6d1283818",
+          "display_name": "法国再保险股份有限公司上海分公司",
+          "aliases": [
+            "法国再保险",
+            "SCOR 法国再保险",
+            "SCOR",
+            "SCOR SE"
+          ],
+          "provider": "oracle_recruiting",
+          "category": "finance",
+          "industry_tags": [
+            "finance"
+          ],
+          "primary_entry_url": "https://fa-errt-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2001/job/5287",
+          "source_id": "waiqi-routing-539848c929fdb7a7",
+          "source_origin": "waiqi-2026-09-20-routing-deep-review",
+          "verification_status": "verified_api_full_jd",
+          "verified_at": "2026-09-20T13:46:10.367Z",
+          "admitted": true,
+          "source_verification": {
+            "checked_at": "2026-09-20T13:46:10.367Z",
+            "method": "waiqi_current_job_to_anonymous_official_api_full_jd",
+            "complete_jd_samples": 1,
+            "observed_jobs": 2,
+            "identity_basis": "官方 Oracle 中国岗位完整 JD 正文明确 SCOR，与 Waiqi 公司英文别名完全一致。",
+            "identity_evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\539848c929fdb7a7\\http\\2a7b9623-efd-00002.json",
+            "proof_directory": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\539848c929fdb7a7",
+            "scope": "Current mainland-China jobs returned by the official recruitment API; Oracle sources without a locationId require complete global pagination followed by explicit PrimaryLocationCountry=CN filtering.",
+            "coverage": {
+              "status": "sample_verified",
+              "server_total": 209,
+              "mainland_jobs_observed": 2,
+              "complete_mainland_jd": true
+            }
+          },
+          "identity_verification": {
+            "identity_verified": true,
+            "basis": "官方 Oracle 中国岗位完整 JD 正文明确 SCOR，与 Waiqi 公司英文别名完全一致。",
+            "evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\539848c929fdb7a7\\http\\2a7b9623-efd-00002.json",
+            "verified_at": "2026-09-20T13:46:10.367Z"
+          },
+          "discovery_provenance": {
+            "dataset": "waiqi-company-20260920",
+            "waiqi_company_id": "39195",
+            "company_url": "https://waiqi.com/company/detail?id=39195",
+            "observed_link": "https://fa-errt-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2001/job/5287",
+            "reported_position_count": 3,
+            "returned_position_count": 3
+          },
+          "validated_api_request_examples": [
+            {
+              "method": "GET",
+              "url": "https://fa-errt-saasfaprod1.fa.ocs.oraclecloud.com/hcmRestApi/resources/latest/recruitingCEJobRequisitions?onlyData=true&expand=requisitionList.secondaryLocations&finder=findReqs;siteNumber=CX_2001,facetsList=NONE,limit=1000,offset=0",
+              "headers": {
+                "accept": "application/json, text/plain, */*",
+                "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+              },
+              "purpose": "global_list_for_mainland_filter",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\539848c929fdb7a7\\http\\2a7b9623-efd-00001.json",
+              "response_sha256": "cab30fb02c4d5605c2456d7fc3edcb30e652ee18624fa552c71045483efae7dd",
+              "checked_at": "2026-09-20T13:46:05.395Z"
+            },
+            {
+              "method": "GET",
+              "url": "https://fa-errt-saasfaprod1.fa.ocs.oraclecloud.com/hcmRestApi/resources/latest/recruitingCEJobRequisitionDetails?expand=all&onlyData=true&finder=ById;Id=%225138%22,siteNumber=CX_2001",
+              "headers": {
+                "accept": "application/json, text/plain, */*",
+                "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+              },
+              "purpose": "mainland_job_detail_sample",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\539848c929fdb7a7\\http\\2a7b9623-efd-00002.json",
+              "response_sha256": "a6c449258b128fef3587f9cf173c90f5cb72da42811593406b859386a441ef96",
+              "checked_at": "2026-09-20T13:46:09.941Z"
+            }
+          ],
+          "api_config": {
+            "origin": "https://fa-errt-saasfaprod1.fa.ocs.oraclecloud.com",
+            "site": "CX_2001"
+          }
+        }
+      ]
+    },
+    {
+      "company_id": "waiqi-routing-e8ff83231a00",
+      "display_name": "瑞丽安特（上海）科技有限公司",
+      "aliases": [
+        "Ralliant",
+        "Ralliant Ralliant",
+        "Ralliant Corporation"
+      ],
+      "provider": "oracle_recruiting",
+      "category": "industrial",
+      "industry_tags": [
+        "industrial"
+      ],
+      "primary_entry_url": "https://ibwujb.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/10499",
+      "source_id": "waiqi-routing-94af75269e151273",
+      "source_origin": "waiqi-2026-09-20-routing-deep-review",
+      "verification_status": "verified_api_full_jd",
+      "verified_at": "2026-09-20T13:44:54.262Z",
+      "admitted": true,
+      "source_verification": {
+        "checked_at": "2026-09-20T13:44:54.262Z",
+        "method": "waiqi_current_job_to_anonymous_official_api_full_jd",
+        "complete_jd_samples": 1,
+        "observed_jobs": 9,
+        "identity_basis": "官方 Oracle 中国岗位完整 JD 正文明确 Ralliant，与 Waiqi 公司英文别名完全一致。",
+        "identity_evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\94af75269e151273\\http\\5ab45a76-566-00002.json",
+        "proof_directory": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\94af75269e151273",
+        "scope": "Current mainland-China jobs returned by the official recruitment API; Oracle sources without a locationId require complete global pagination followed by explicit PrimaryLocationCountry=CN filtering.",
+        "coverage": {
+          "status": "sample_verified",
+          "server_total": 282,
+          "mainland_jobs_observed": 9,
+          "complete_mainland_jd": true
+        }
+      },
+      "identity_verification": {
+        "identity_verified": true,
+        "basis": "官方 Oracle 中国岗位完整 JD 正文明确 Ralliant，与 Waiqi 公司英文别名完全一致。",
+        "evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\94af75269e151273\\http\\5ab45a76-566-00002.json",
+        "verified_at": "2026-09-20T13:44:54.262Z"
+      },
+      "discovery_provenance": {
+        "dataset": "waiqi-company-20260920",
+        "waiqi_company_id": "37588",
+        "company_url": "https://waiqi.com/company/detail?id=37588",
+        "observed_link": "https://ibwujb.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/10499",
+        "reported_position_count": 27,
+        "returned_position_count": 27
+      },
+      "validated_api_request_examples": [
+        {
+          "method": "GET",
+          "url": "https://ibwujb.fa.ocs.oraclecloud.com/hcmRestApi/resources/latest/recruitingCEJobRequisitions?onlyData=true&expand=requisitionList.secondaryLocations&finder=findReqs;siteNumber=CX_1001,facetsList=NONE,limit=1000,offset=0",
+          "headers": {
+            "accept": "application/json, text/plain, */*",
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+          },
+          "purpose": "global_list_for_mainland_filter",
+          "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\94af75269e151273\\http\\5ab45a76-566-00001.json",
+          "response_sha256": "5604e840ec5be5a0284e7a9167e7864352300746fd8d5c41424a9e6796e1e785",
+          "checked_at": "2026-09-20T13:44:47.560Z"
+        },
+        {
+          "method": "GET",
+          "url": "https://ibwujb.fa.ocs.oraclecloud.com/hcmRestApi/resources/latest/recruitingCEJobRequisitionDetails?expand=all&onlyData=true&finder=ById;Id=%2210566%22,siteNumber=CX_1001",
+          "headers": {
+            "accept": "application/json, text/plain, */*",
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+          },
+          "purpose": "mainland_job_detail_sample",
+          "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\94af75269e151273\\http\\5ab45a76-566-00002.json",
+          "response_sha256": "ff5624e852c32602b1e36e4cb3790a8d9059a678e3a18dc1d483e7b88372effa",
+          "checked_at": "2026-09-20T13:44:53.802Z"
+        }
+      ],
+      "api_config": {
+        "origin": "https://ibwujb.fa.ocs.oraclecloud.com",
+        "site": "CX_1001"
+      },
+      "recruitment_sources": [
+        {
+          "company_id": "waiqi-routing-e8ff83231a00",
+          "display_name": "瑞丽安特（上海）科技有限公司",
+          "aliases": [
+            "Ralliant",
+            "Ralliant Ralliant",
+            "Ralliant Corporation"
+          ],
+          "provider": "oracle_recruiting",
+          "category": "industrial",
+          "industry_tags": [
+            "industrial"
+          ],
+          "primary_entry_url": "https://ibwujb.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/10499",
+          "source_id": "waiqi-routing-94af75269e151273",
+          "source_origin": "waiqi-2026-09-20-routing-deep-review",
+          "verification_status": "verified_api_full_jd",
+          "verified_at": "2026-09-20T13:44:54.262Z",
+          "admitted": true,
+          "source_verification": {
+            "checked_at": "2026-09-20T13:44:54.262Z",
+            "method": "waiqi_current_job_to_anonymous_official_api_full_jd",
+            "complete_jd_samples": 1,
+            "observed_jobs": 9,
+            "identity_basis": "官方 Oracle 中国岗位完整 JD 正文明确 Ralliant，与 Waiqi 公司英文别名完全一致。",
+            "identity_evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\94af75269e151273\\http\\5ab45a76-566-00002.json",
+            "proof_directory": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\94af75269e151273",
+            "scope": "Current mainland-China jobs returned by the official recruitment API; Oracle sources without a locationId require complete global pagination followed by explicit PrimaryLocationCountry=CN filtering.",
+            "coverage": {
+              "status": "sample_verified",
+              "server_total": 282,
+              "mainland_jobs_observed": 9,
+              "complete_mainland_jd": true
+            }
+          },
+          "identity_verification": {
+            "identity_verified": true,
+            "basis": "官方 Oracle 中国岗位完整 JD 正文明确 Ralliant，与 Waiqi 公司英文别名完全一致。",
+            "evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\94af75269e151273\\http\\5ab45a76-566-00002.json",
+            "verified_at": "2026-09-20T13:44:54.262Z"
+          },
+          "discovery_provenance": {
+            "dataset": "waiqi-company-20260920",
+            "waiqi_company_id": "37588",
+            "company_url": "https://waiqi.com/company/detail?id=37588",
+            "observed_link": "https://ibwujb.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/10499",
+            "reported_position_count": 27,
+            "returned_position_count": 27
+          },
+          "validated_api_request_examples": [
+            {
+              "method": "GET",
+              "url": "https://ibwujb.fa.ocs.oraclecloud.com/hcmRestApi/resources/latest/recruitingCEJobRequisitions?onlyData=true&expand=requisitionList.secondaryLocations&finder=findReqs;siteNumber=CX_1001,facetsList=NONE,limit=1000,offset=0",
+              "headers": {
+                "accept": "application/json, text/plain, */*",
+                "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+              },
+              "purpose": "global_list_for_mainland_filter",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\94af75269e151273\\http\\5ab45a76-566-00001.json",
+              "response_sha256": "5604e840ec5be5a0284e7a9167e7864352300746fd8d5c41424a9e6796e1e785",
+              "checked_at": "2026-09-20T13:44:47.560Z"
+            },
+            {
+              "method": "GET",
+              "url": "https://ibwujb.fa.ocs.oraclecloud.com/hcmRestApi/resources/latest/recruitingCEJobRequisitionDetails?expand=all&onlyData=true&finder=ById;Id=%2210566%22,siteNumber=CX_1001",
+              "headers": {
+                "accept": "application/json, text/plain, */*",
+                "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+              },
+              "purpose": "mainland_job_detail_sample",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\94af75269e151273\\http\\5ab45a76-566-00002.json",
+              "response_sha256": "ff5624e852c32602b1e36e4cb3790a8d9059a678e3a18dc1d483e7b88372effa",
+              "checked_at": "2026-09-20T13:44:53.802Z"
+            }
+          ],
+          "api_config": {
+            "origin": "https://ibwujb.fa.ocs.oraclecloud.com",
+            "site": "CX_1001"
+          }
+        }
+      ]
+    },
+    {
+      "company_id": "waiqi-routing-f61483d9aaad",
+      "display_name": "美商海盗船科技（上海）有限公司",
+      "aliases": [
+        "美商海盗船科技",
+        "Corsair 美商海盗船科技",
+        "Corsair",
+        "Corsair Gaming, Inc."
+      ],
+      "provider": "oracle_recruiting",
+      "category": "smart_hardware",
+      "industry_tags": [
+        "smart_hardware"
+      ],
+      "primary_entry_url": "https://edix.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/8904",
+      "source_id": "waiqi-routing-941995bfe9c545f2",
+      "source_origin": "waiqi-2026-09-20-routing-deep-review",
+      "verification_status": "verified_api_full_jd",
+      "verified_at": "2026-09-20T13:45:31.650Z",
+      "admitted": true,
+      "source_verification": {
+        "checked_at": "2026-09-20T13:45:31.650Z",
+        "method": "waiqi_current_job_to_anonymous_official_api_full_jd",
+        "complete_jd_samples": 1,
+        "observed_jobs": 9,
+        "identity_basis": "官方 Oracle 中国岗位完整 JD 正文明确 Corsair，与 Waiqi 公司英文别名完全一致。",
+        "identity_evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\941995bfe9c545f2\\http\\f528f39b-949-00002.json",
+        "proof_directory": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\941995bfe9c545f2",
+        "scope": "Current mainland-China jobs returned by the official recruitment API; Oracle sources without a locationId require complete global pagination followed by explicit PrimaryLocationCountry=CN filtering.",
+        "coverage": {
+          "status": "sample_verified",
+          "server_total": 93,
+          "mainland_jobs_observed": 9,
+          "complete_mainland_jd": true
+        }
+      },
+      "identity_verification": {
+        "identity_verified": true,
+        "basis": "官方 Oracle 中国岗位完整 JD 正文明确 Corsair，与 Waiqi 公司英文别名完全一致。",
+        "evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\941995bfe9c545f2\\http\\f528f39b-949-00002.json",
+        "verified_at": "2026-09-20T13:45:31.650Z"
+      },
+      "discovery_provenance": {
+        "dataset": "waiqi-company-20260920",
+        "waiqi_company_id": "39138",
+        "company_url": "https://waiqi.com/company/detail?id=39138",
+        "observed_link": "https://edix.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/8904",
+        "reported_position_count": 6,
+        "returned_position_count": 6
+      },
+      "validated_api_request_examples": [
+        {
+          "method": "GET",
+          "url": "https://edix.fa.us2.oraclecloud.com/hcmRestApi/resources/latest/recruitingCEJobRequisitions?onlyData=true&expand=requisitionList.secondaryLocations&finder=findReqs;siteNumber=CX_1,facetsList=NONE,limit=1000,offset=0",
+          "headers": {
+            "accept": "application/json, text/plain, */*",
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+          },
+          "purpose": "global_list_for_mainland_filter",
+          "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\941995bfe9c545f2\\http\\f528f39b-949-00001.json",
+          "response_sha256": "273ffb544f085b4e2ea031dc8c2bce2463126826d8ea9c8c0515042654e50d28",
+          "checked_at": "2026-09-20T13:45:28.493Z"
+        },
+        {
+          "method": "GET",
+          "url": "https://edix.fa.us2.oraclecloud.com/hcmRestApi/resources/latest/recruitingCEJobRequisitionDetails?expand=all&onlyData=true&finder=ById;Id=%228067%22,siteNumber=CX_1",
+          "headers": {
+            "accept": "application/json, text/plain, */*",
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+          },
+          "purpose": "mainland_job_detail_sample",
+          "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\941995bfe9c545f2\\http\\f528f39b-949-00002.json",
+          "response_sha256": "dde10b149498e09f622e241f538e5298dc4eb67f2056907a02421a584a3293a0",
+          "checked_at": "2026-09-20T13:45:31.243Z"
+        }
+      ],
+      "api_config": {
+        "origin": "https://edix.fa.us2.oraclecloud.com",
+        "site": "CX_1"
+      },
+      "recruitment_sources": [
+        {
+          "company_id": "waiqi-routing-f61483d9aaad",
+          "display_name": "美商海盗船科技（上海）有限公司",
+          "aliases": [
+            "美商海盗船科技",
+            "Corsair 美商海盗船科技",
+            "Corsair",
+            "Corsair Gaming, Inc."
+          ],
+          "provider": "oracle_recruiting",
+          "category": "smart_hardware",
+          "industry_tags": [
+            "smart_hardware"
+          ],
+          "primary_entry_url": "https://edix.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/8904",
+          "source_id": "waiqi-routing-941995bfe9c545f2",
+          "source_origin": "waiqi-2026-09-20-routing-deep-review",
+          "verification_status": "verified_api_full_jd",
+          "verified_at": "2026-09-20T13:45:31.650Z",
+          "admitted": true,
+          "source_verification": {
+            "checked_at": "2026-09-20T13:45:31.650Z",
+            "method": "waiqi_current_job_to_anonymous_official_api_full_jd",
+            "complete_jd_samples": 1,
+            "observed_jobs": 9,
+            "identity_basis": "官方 Oracle 中国岗位完整 JD 正文明确 Corsair，与 Waiqi 公司英文别名完全一致。",
+            "identity_evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\941995bfe9c545f2\\http\\f528f39b-949-00002.json",
+            "proof_directory": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\941995bfe9c545f2",
+            "scope": "Current mainland-China jobs returned by the official recruitment API; Oracle sources without a locationId require complete global pagination followed by explicit PrimaryLocationCountry=CN filtering.",
+            "coverage": {
+              "status": "sample_verified",
+              "server_total": 93,
+              "mainland_jobs_observed": 9,
+              "complete_mainland_jd": true
+            }
+          },
+          "identity_verification": {
+            "identity_verified": true,
+            "basis": "官方 Oracle 中国岗位完整 JD 正文明确 Corsair，与 Waiqi 公司英文别名完全一致。",
+            "evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\941995bfe9c545f2\\http\\f528f39b-949-00002.json",
+            "verified_at": "2026-09-20T13:45:31.650Z"
+          },
+          "discovery_provenance": {
+            "dataset": "waiqi-company-20260920",
+            "waiqi_company_id": "39138",
+            "company_url": "https://waiqi.com/company/detail?id=39138",
+            "observed_link": "https://edix.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/8904",
+            "reported_position_count": 6,
+            "returned_position_count": 6
+          },
+          "validated_api_request_examples": [
+            {
+              "method": "GET",
+              "url": "https://edix.fa.us2.oraclecloud.com/hcmRestApi/resources/latest/recruitingCEJobRequisitions?onlyData=true&expand=requisitionList.secondaryLocations&finder=findReqs;siteNumber=CX_1,facetsList=NONE,limit=1000,offset=0",
+              "headers": {
+                "accept": "application/json, text/plain, */*",
+                "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+              },
+              "purpose": "global_list_for_mainland_filter",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\941995bfe9c545f2\\http\\f528f39b-949-00001.json",
+              "response_sha256": "273ffb544f085b4e2ea031dc8c2bce2463126826d8ea9c8c0515042654e50d28",
+              "checked_at": "2026-09-20T13:45:28.493Z"
+            },
+            {
+              "method": "GET",
+              "url": "https://edix.fa.us2.oraclecloud.com/hcmRestApi/resources/latest/recruitingCEJobRequisitionDetails?expand=all&onlyData=true&finder=ById;Id=%228067%22,siteNumber=CX_1",
+              "headers": {
+                "accept": "application/json, text/plain, */*",
+                "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+              },
+              "purpose": "mainland_job_detail_sample",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\941995bfe9c545f2\\http\\f528f39b-949-00002.json",
+              "response_sha256": "dde10b149498e09f622e241f538e5298dc4eb67f2056907a02421a584a3293a0",
+              "checked_at": "2026-09-20T13:45:31.243Z"
+            }
+          ],
+          "api_config": {
+            "origin": "https://edix.fa.us2.oraclecloud.com",
+            "site": "CX_1"
+          }
+        }
+      ]
+    },
+    {
+      "company_id": "waiqi-routing-38579a25559b",
+      "display_name": "至日先进材料",
+      "aliases": [
+        "Solstice Advanced Materials"
+      ],
+      "provider": "oracle_recruiting",
+      "category": "materials_chemicals",
+      "industry_tags": [
+        "materials_chemicals"
+      ],
+      "primary_entry_url": "https://ibzdjb.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/SolsticeAdvancedMaterials/job/107871",
+      "source_id": "waiqi-routing-7c432652f939d228",
+      "source_origin": "waiqi-2026-09-20-routing-deep-review",
+      "verification_status": "verified_api_full_jd",
+      "verified_at": "2026-09-20T13:44:41.131Z",
+      "admitted": true,
+      "source_verification": {
+        "checked_at": "2026-09-20T13:44:41.131Z",
+        "method": "waiqi_current_job_to_anonymous_official_api_full_jd",
+        "complete_jd_samples": 1,
+        "observed_jobs": 11,
+        "identity_basis": "官方 Oracle 招聘站点标识为 solsticeadvancedmaterials，和 Waiqi 公司英文别名完全一致；中国岗位完整 JD 可读取。",
+        "identity_evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\7c432652f939d228\\http\\a48c26cc-7ae-00002.json",
+        "proof_directory": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\7c432652f939d228",
+        "scope": "Current mainland-China jobs returned by the official recruitment API; Oracle sources without a locationId require complete global pagination followed by explicit PrimaryLocationCountry=CN filtering.",
+        "coverage": {
+          "status": "sample_verified",
+          "server_total": 121,
+          "mainland_jobs_observed": 11,
+          "complete_mainland_jd": true
+        }
+      },
+      "identity_verification": {
+        "identity_verified": true,
+        "basis": "官方 Oracle 招聘站点标识为 solsticeadvancedmaterials，和 Waiqi 公司英文别名完全一致；中国岗位完整 JD 可读取。",
+        "evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\7c432652f939d228\\http\\a48c26cc-7ae-00002.json",
+        "verified_at": "2026-09-20T13:44:41.131Z"
+      },
+      "discovery_provenance": {
+        "dataset": "waiqi-company-20260920",
+        "waiqi_company_id": "37769",
+        "company_url": "https://waiqi.com/company/detail?id=37769",
+        "observed_link": "https://ibzdjb.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/SolsticeAdvancedMaterials/job/107871",
+        "reported_position_count": 18,
+        "returned_position_count": 18
+      },
+      "validated_api_request_examples": [
+        {
+          "method": "GET",
+          "url": "https://ibzdjb.fa.ocs.oraclecloud.com/hcmRestApi/resources/latest/recruitingCEJobRequisitions?onlyData=true&expand=requisitionList.secondaryLocations&finder=findReqs;siteNumber=SolsticeAdvancedMaterials,facetsList=NONE,limit=1000,offset=0",
+          "headers": {
+            "accept": "application/json, text/plain, */*",
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+          },
+          "purpose": "global_list_for_mainland_filter",
+          "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\7c432652f939d228\\http\\a48c26cc-7ae-00001.json",
+          "response_sha256": "54c01d0f53ccfdbc4d33f8192598420a11fdaae289a70f4cc92b4bae4aa3d275",
+          "checked_at": "2026-09-20T13:44:33.938Z"
+        },
+        {
+          "method": "GET",
+          "url": "https://ibzdjb.fa.ocs.oraclecloud.com/hcmRestApi/resources/latest/recruitingCEJobRequisitionDetails?expand=all&onlyData=true&finder=ById;Id=%22107838%22,siteNumber=SolsticeAdvancedMaterials",
+          "headers": {
+            "accept": "application/json, text/plain, */*",
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+          },
+          "purpose": "mainland_job_detail_sample",
+          "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\7c432652f939d228\\http\\a48c26cc-7ae-00002.json",
+          "response_sha256": "69b7468e9d83da47439b90a4e7280074be4512a9f56be0ad3ec275f969af43cb",
+          "checked_at": "2026-09-20T13:44:40.731Z"
+        }
+      ],
+      "api_config": {
+        "origin": "https://ibzdjb.fa.ocs.oraclecloud.com",
+        "site": "SolsticeAdvancedMaterials"
+      },
+      "recruitment_sources": [
+        {
+          "company_id": "waiqi-routing-38579a25559b",
+          "display_name": "至日先进材料",
+          "aliases": [
+            "Solstice Advanced Materials"
+          ],
+          "provider": "oracle_recruiting",
+          "category": "materials_chemicals",
+          "industry_tags": [
+            "materials_chemicals"
+          ],
+          "primary_entry_url": "https://ibzdjb.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/SolsticeAdvancedMaterials/job/107871",
+          "source_id": "waiqi-routing-7c432652f939d228",
+          "source_origin": "waiqi-2026-09-20-routing-deep-review",
+          "verification_status": "verified_api_full_jd",
+          "verified_at": "2026-09-20T13:44:41.131Z",
+          "admitted": true,
+          "source_verification": {
+            "checked_at": "2026-09-20T13:44:41.131Z",
+            "method": "waiqi_current_job_to_anonymous_official_api_full_jd",
+            "complete_jd_samples": 1,
+            "observed_jobs": 11,
+            "identity_basis": "官方 Oracle 招聘站点标识为 solsticeadvancedmaterials，和 Waiqi 公司英文别名完全一致；中国岗位完整 JD 可读取。",
+            "identity_evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\7c432652f939d228\\http\\a48c26cc-7ae-00002.json",
+            "proof_directory": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\7c432652f939d228",
+            "scope": "Current mainland-China jobs returned by the official recruitment API; Oracle sources without a locationId require complete global pagination followed by explicit PrimaryLocationCountry=CN filtering.",
+            "coverage": {
+              "status": "sample_verified",
+              "server_total": 121,
+              "mainland_jobs_observed": 11,
+              "complete_mainland_jd": true
+            }
+          },
+          "identity_verification": {
+            "identity_verified": true,
+            "basis": "官方 Oracle 招聘站点标识为 solsticeadvancedmaterials，和 Waiqi 公司英文别名完全一致；中国岗位完整 JD 可读取。",
+            "evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\7c432652f939d228\\http\\a48c26cc-7ae-00002.json",
+            "verified_at": "2026-09-20T13:44:41.131Z"
+          },
+          "discovery_provenance": {
+            "dataset": "waiqi-company-20260920",
+            "waiqi_company_id": "37769",
+            "company_url": "https://waiqi.com/company/detail?id=37769",
+            "observed_link": "https://ibzdjb.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/SolsticeAdvancedMaterials/job/107871",
+            "reported_position_count": 18,
+            "returned_position_count": 18
+          },
+          "validated_api_request_examples": [
+            {
+              "method": "GET",
+              "url": "https://ibzdjb.fa.ocs.oraclecloud.com/hcmRestApi/resources/latest/recruitingCEJobRequisitions?onlyData=true&expand=requisitionList.secondaryLocations&finder=findReqs;siteNumber=SolsticeAdvancedMaterials,facetsList=NONE,limit=1000,offset=0",
+              "headers": {
+                "accept": "application/json, text/plain, */*",
+                "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+              },
+              "purpose": "global_list_for_mainland_filter",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\7c432652f939d228\\http\\a48c26cc-7ae-00001.json",
+              "response_sha256": "54c01d0f53ccfdbc4d33f8192598420a11fdaae289a70f4cc92b4bae4aa3d275",
+              "checked_at": "2026-09-20T13:44:33.938Z"
+            },
+            {
+              "method": "GET",
+              "url": "https://ibzdjb.fa.ocs.oraclecloud.com/hcmRestApi/resources/latest/recruitingCEJobRequisitionDetails?expand=all&onlyData=true&finder=ById;Id=%22107838%22,siteNumber=SolsticeAdvancedMaterials",
+              "headers": {
+                "accept": "application/json, text/plain, */*",
+                "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+              },
+              "purpose": "mainland_job_detail_sample",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\7c432652f939d228\\http\\a48c26cc-7ae-00002.json",
+              "response_sha256": "69b7468e9d83da47439b90a4e7280074be4512a9f56be0ad3ec275f969af43cb",
+              "checked_at": "2026-09-20T13:44:40.731Z"
+            }
+          ],
+          "api_config": {
+            "origin": "https://ibzdjb.fa.ocs.oraclecloud.com",
+            "site": "SolsticeAdvancedMaterials"
+          }
+        }
+      ]
+    },
+    {
+      "company_id": "waiqi-routing-8a4d3a95cbdf",
+      "display_name": "北京诺华制药有限公司",
+      "aliases": [
+        "诺华制药",
+        "NOVARTIS 诺华制药",
+        "NOVARTIS",
+        "Beijing Novartis Pharma Ltd."
+      ],
+      "provider": "workday",
+      "category": "healthcare",
+      "industry_tags": [
+        "healthcare"
+      ],
+      "primary_entry_url": "https://novartis.wd3.myworkdayjobs.com/en-US/Internal_Careers_for_Acquired_Entities",
+      "source_id": "waiqi-routing-d6f9cdde72329f78",
+      "source_origin": "waiqi-2026-09-20-routing-deep-review",
+      "verification_status": "verified_api_full_jd",
+      "verified_at": "2026-09-20T13:44:26.409Z",
+      "admitted": true,
+      "source_verification": {
+        "checked_at": "2026-09-20T13:44:26.409Z",
+        "method": "waiqi_current_job_to_anonymous_official_api_full_jd",
+        "complete_jd_samples": 1,
+        "observed_jobs": 9,
+        "identity_basis": "官方 Workday 租户为 Novartis，完整 JD 与 hiringOrganization 均明确 Novartis 中国实体。",
+        "identity_evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\d6f9cdde72329f78\\http\\3f21b265-6ff-00003.json",
+        "proof_directory": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\d6f9cdde72329f78",
+        "scope": "Current mainland-China jobs returned by the official recruitment API; Oracle sources without a locationId require complete global pagination followed by explicit PrimaryLocationCountry=CN filtering.",
+        "coverage": {
+          "status": "sample_verified",
+          "server_total": 512,
+          "mainland_jobs_observed": 9,
+          "complete_mainland_jd": true
+        }
+      },
+      "identity_verification": {
+        "identity_verified": true,
+        "basis": "官方 Workday 租户为 Novartis，完整 JD 与 hiringOrganization 均明确 Novartis 中国实体。",
+        "evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\d6f9cdde72329f78\\http\\3f21b265-6ff-00003.json",
+        "verified_at": "2026-09-20T13:44:26.409Z"
+      },
+      "discovery_provenance": {
+        "dataset": "waiqi-company-20260920",
+        "waiqi_company_id": "979",
+        "company_url": "https://waiqi.com/company/detail?id=979",
+        "observed_link": "https://novartis.wd3.myworkdayjobs.com/en-US/Internal_Careers_for_Acquired_Entities",
+        "reported_position_count": 447,
+        "returned_position_count": 447
+      },
+      "validated_api_request_examples": [
+        {
+          "method": "POST",
+          "url": "https://novartis.wd3.myworkdayjobs.com/wday/cxs/novartis/Internal_Careers_for_Acquired_Entities/jobs",
+          "headers": {
+            "accept": "application/json, text/plain, */*",
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+            "Content-Type": "application/json"
+          },
+          "body": {
+            "appliedFacets": {},
+            "limit": 20,
+            "offset": 0,
+            "searchText": ""
+          },
+          "purpose": "global_list_and_country_facet",
+          "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\d6f9cdde72329f78\\http\\3f21b265-6ff-00001.json",
+          "response_sha256": "a8b132b315758b9dfe6cb4514d97aa0d73a6377e8163e4cfb2d0eb777ad1a89b",
+          "checked_at": "2026-09-20T13:44:23.553Z"
+        },
+        {
+          "method": "POST",
+          "url": "https://novartis.wd3.myworkdayjobs.com/wday/cxs/novartis/Internal_Careers_for_Acquired_Entities/jobs",
+          "headers": {
+            "accept": "application/json, text/plain, */*",
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+            "Content-Type": "application/json"
+          },
+          "body": {
+            "appliedFacets": {
+              "locationCountry": [
+                "6cb77610a8a543aea2d6bc10457e35d4"
+              ]
+            },
+            "limit": 20,
+            "offset": 0,
+            "searchText": ""
+          },
+          "purpose": "mainland_china_job_list",
+          "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\d6f9cdde72329f78\\http\\3f21b265-6ff-00002.json",
+          "response_sha256": "55e67bbbd44b4665e9e0be843b85fdae39fe9e9f07be0a06d7ca12429c67fda2",
+          "checked_at": "2026-09-20T13:44:25.155Z"
+        },
+        {
+          "method": "GET",
+          "url": "https://novartis.wd3.myworkdayjobs.com/wday/cxs/novartis/Internal_Careers_for_Acquired_Entities/job/Shanghai-Shanghai/Associate-Director--Alliance-Mgt-China_REQ-10081991-1",
+          "headers": {
+            "accept": "application/json, text/plain, */*",
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+          },
+          "purpose": "mainland_job_detail_sample",
+          "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\d6f9cdde72329f78\\http\\3f21b265-6ff-00003.json",
+          "response_sha256": "2e21d8345d3e3a6836cd585a9b9416dfa4ace104b6cc70e71fd7c18d0ca790b1",
+          "checked_at": "2026-09-20T13:44:25.815Z"
+        }
+      ],
+      "api_config": {
+        "origin": "https://novartis.wd3.myworkdayjobs.com",
+        "tenant": "novartis",
+        "site": "Internal_Careers_for_Acquired_Entities"
+      },
+      "recruitment_sources": [
+        {
+          "company_id": "waiqi-routing-8a4d3a95cbdf",
+          "display_name": "北京诺华制药有限公司",
+          "aliases": [
+            "诺华制药",
+            "NOVARTIS 诺华制药",
+            "NOVARTIS",
+            "Beijing Novartis Pharma Ltd."
+          ],
+          "provider": "workday",
+          "category": "healthcare",
+          "industry_tags": [
+            "healthcare"
+          ],
+          "primary_entry_url": "https://novartis.wd3.myworkdayjobs.com/en-US/Internal_Careers_for_Acquired_Entities",
+          "source_id": "waiqi-routing-d6f9cdde72329f78",
+          "source_origin": "waiqi-2026-09-20-routing-deep-review",
+          "verification_status": "verified_api_full_jd",
+          "verified_at": "2026-09-20T13:44:26.409Z",
+          "admitted": true,
+          "source_verification": {
+            "checked_at": "2026-09-20T13:44:26.409Z",
+            "method": "waiqi_current_job_to_anonymous_official_api_full_jd",
+            "complete_jd_samples": 1,
+            "observed_jobs": 9,
+            "identity_basis": "官方 Workday 租户为 Novartis，完整 JD 与 hiringOrganization 均明确 Novartis 中国实体。",
+            "identity_evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\d6f9cdde72329f78\\http\\3f21b265-6ff-00003.json",
+            "proof_directory": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\d6f9cdde72329f78",
+            "scope": "Current mainland-China jobs returned by the official recruitment API; Oracle sources without a locationId require complete global pagination followed by explicit PrimaryLocationCountry=CN filtering.",
+            "coverage": {
+              "status": "sample_verified",
+              "server_total": 512,
+              "mainland_jobs_observed": 9,
+              "complete_mainland_jd": true
+            }
+          },
+          "identity_verification": {
+            "identity_verified": true,
+            "basis": "官方 Workday 租户为 Novartis，完整 JD 与 hiringOrganization 均明确 Novartis 中国实体。",
+            "evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\d6f9cdde72329f78\\http\\3f21b265-6ff-00003.json",
+            "verified_at": "2026-09-20T13:44:26.409Z"
+          },
+          "discovery_provenance": {
+            "dataset": "waiqi-company-20260920",
+            "waiqi_company_id": "979",
+            "company_url": "https://waiqi.com/company/detail?id=979",
+            "observed_link": "https://novartis.wd3.myworkdayjobs.com/en-US/Internal_Careers_for_Acquired_Entities",
+            "reported_position_count": 447,
+            "returned_position_count": 447
+          },
+          "validated_api_request_examples": [
+            {
+              "method": "POST",
+              "url": "https://novartis.wd3.myworkdayjobs.com/wday/cxs/novartis/Internal_Careers_for_Acquired_Entities/jobs",
+              "headers": {
+                "accept": "application/json, text/plain, */*",
+                "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+                "Content-Type": "application/json"
+              },
+              "body": {
+                "appliedFacets": {},
+                "limit": 20,
+                "offset": 0,
+                "searchText": ""
+              },
+              "purpose": "global_list_and_country_facet",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\d6f9cdde72329f78\\http\\3f21b265-6ff-00001.json",
+              "response_sha256": "a8b132b315758b9dfe6cb4514d97aa0d73a6377e8163e4cfb2d0eb777ad1a89b",
+              "checked_at": "2026-09-20T13:44:23.553Z"
+            },
+            {
+              "method": "POST",
+              "url": "https://novartis.wd3.myworkdayjobs.com/wday/cxs/novartis/Internal_Careers_for_Acquired_Entities/jobs",
+              "headers": {
+                "accept": "application/json, text/plain, */*",
+                "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+                "Content-Type": "application/json"
+              },
+              "body": {
+                "appliedFacets": {
+                  "locationCountry": [
+                    "6cb77610a8a543aea2d6bc10457e35d4"
+                  ]
+                },
+                "limit": 20,
+                "offset": 0,
+                "searchText": ""
+              },
+              "purpose": "mainland_china_job_list",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\d6f9cdde72329f78\\http\\3f21b265-6ff-00002.json",
+              "response_sha256": "55e67bbbd44b4665e9e0be843b85fdae39fe9e9f07be0a06d7ca12429c67fda2",
+              "checked_at": "2026-09-20T13:44:25.155Z"
+            },
+            {
+              "method": "GET",
+              "url": "https://novartis.wd3.myworkdayjobs.com/wday/cxs/novartis/Internal_Careers_for_Acquired_Entities/job/Shanghai-Shanghai/Associate-Director--Alliance-Mgt-China_REQ-10081991-1",
+              "headers": {
+                "accept": "application/json, text/plain, */*",
+                "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+              },
+              "purpose": "mainland_job_detail_sample",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\d6f9cdde72329f78\\http\\3f21b265-6ff-00003.json",
+              "response_sha256": "2e21d8345d3e3a6836cd585a9b9416dfa4ace104b6cc70e71fd7c18d0ca790b1",
+              "checked_at": "2026-09-20T13:44:25.815Z"
+            }
+          ],
+          "api_config": {
+            "origin": "https://novartis.wd3.myworkdayjobs.com",
+            "tenant": "novartis",
+            "site": "Internal_Careers_for_Acquired_Entities"
+          }
+        }
+      ]
     }
   ],
-  "updated_at": "2026-09-20T01:30:41.860Z",
+  "updated_at": "2026-09-20T13:58:02.227Z",
   "industry_counts": {
     "internet": 433,
-    "smart_hardware": 256,
+    "smart_hardware": 257,
     "automotive_oem": 68,
     "supply_chain": 387,
-    "finance": 254,
+    "finance": 255,
     "energy_environment": 173,
-    "industrial": 234,
-    "healthcare": 235,
+    "industrial": 236,
+    "healthcare": 237,
     "construction": 181,
     "aerospace_transport_equipment": 87,
-    "professional_services": 175,
-    "logistics_trade": 103,
-    "consumer": 284,
-    "materials_chemicals": 151,
+    "professional_services": 177,
+    "logistics_trade": 104,
+    "consumer": 286,
+    "materials_chemicals": 153,
     "education": 27,
     "media_tourism": 79,
     "agriculture": 43,
@@ -444878,5 +447586,5 @@
   "latest_wps_expansion_verified_on": "2026-09-19T04:32:07.220Z",
   "latest_deep_api_review_at": "2026-09-19T09:56:39.408Z",
   "latest_interface_contract_review_at": "2026-09-19T07:27:18.465Z",
-  "latest_waiqi_expansion_verified_at": "2026-09-20T01:24:17.593Z"
+  "latest_waiqi_expansion_verified_at": "2026-09-20T13:58:02.227Z"
 }

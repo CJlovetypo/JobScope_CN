@@ -18,7 +18,7 @@ export async function main(args = process.argv.slice(2)) {
   if (args.some(x => x !== '--apply' && !x.startsWith('--input='))) throw Error('Usage: seed-waiqi-city-index.mjs [--input=waiqi-artifact-directory] [--apply]');
   const out = path.join(root, 'city-seed'), registryFile = path.join(PACK_ROOT, 'shared/job-search-core/assets/sources.json');
   const before = await fs.readFile(registryFile, 'utf8'), inputs = [];
-  for (const folder of ['official-verification', 'official-greenhouse-verification', 'official-domestic-verification', 'official-zero-api-verification', 'official-zero-search-verification']) {
+  for (const folder of ['official-verification', 'official-greenhouse-verification', 'official-domestic-verification', 'official-zero-api-verification', 'official-zero-search-verification', 'routing-expansion-admission']) {
     const file = path.join(root, folder, 'admitted.json');
     for (const item of await missingRead(file) || []) inputs.push({item, file});
   }

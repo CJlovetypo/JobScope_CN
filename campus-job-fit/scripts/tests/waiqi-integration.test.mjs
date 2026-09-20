@@ -70,3 +70,10 @@ test('legacy full-JD candidates keep their original verification status', () => 
   assert.equal(result.registry.companies[0].verification_status, 'verified_api_full_jd');
   assert.equal(result.registry.companies[0].recruitment_sources[0].verification_status, 'verified_api_full_jd');
 });
+
+test('source keys collapse job-detail URLs to their public recruitment tenant', () => {
+  const oracle = site => ({provider: 'oracle_recruiting', api_config: {origin: 'https://EXAMPLE.oraclecloud.com', site}, primary_entry_url: 'https://example.oraclecloud.com/job/1'});
+  assert.equal(sourceKey(oracle('CX_1')), sourceKey(oracle('cx_1')));
+  assert.equal(sourceKey({provider: 'hotjob', primary_entry_url: 'https://jobs.example/SUabc123/pb/posDetail.html?postId=one'}), sourceKey({provider: 'hotjob', primary_entry_url: 'https://jobs.example/SUabc123/pb/posDetail.html?postId=two'}));
+  assert.equal(sourceKey({provider: 'moka', primary_entry_url: 'https://jobs.example/social-recruitment/acme/42#/job/one'}), sourceKey({provider: 'moka', primary_entry_url: 'https://jobs.example/social-recruitment/acme/42#/job/two'}));
+});

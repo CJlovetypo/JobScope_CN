@@ -15,6 +15,22 @@ export function sourceKey(source) {
     case 'greenhouse':
       if (!present(a.board_token)) throw Error('missing Greenhouse board token');
       return 'greenhouse|' + a.board_token.toLowerCase();
+    case 'oracle_recruiting':
+      if (!http(a.origin) || !present(a.site)) throw Error('incomplete Oracle Recruiting site configuration');
+      return JSON.stringify(['oracle_recruiting', new URL(a.origin).origin.toLowerCase(), a.site.toLowerCase()]);
+    case 'hotjob': {
+      const tenant = a.tenant || (http(source.primary_entry_url) ? new URL(source.primary_entry_url).pathname.match(/\/(SU[a-zA-Z0-9]+)/)?.[1] : null);
+      if (!present(tenant)) throw Error('missing Hotjob tenant');
+      return 'hotjob|' + tenant.toLowerCase();
+    }
+    case 'moka': {
+      if (!http(source.primary_entry_url)) throw Error('missing Moka entry URL');
+      const entry = new URL(source.primary_entry_url), route = entry.pathname.match(/\/(campus-recruitment|social-recruitment|campus_apply|social_apply|apply)\/([^/]+)\/([^/]+)/);
+      const listBody = source.validated_api_request_examples?.find(q => /job_list/.test(q.purpose || ''))?.body || {};
+      const channel = a.channel || route?.[1] || listBody.site, org = a.org_id || a.orgId || route?.[2] || listBody.orgId, site = a.site_id || a.siteId || route?.[3] || listBody.siteId;
+      if (!present(channel) || !present(org) || !present(site)) throw Error('incomplete Moka route configuration');
+      return JSON.stringify(['moka', entry.origin.toLowerCase(), channel.toLowerCase(), org.toLowerCase(), String(site).toLowerCase()]);
+    }
     default:
       if (!present(source.provider) || !http(source.primary_entry_url)) throw Error('missing provider or HTTP entry URL');
       return JSON.stringify(canonical([source.provider, source.primary_entry_url, source.validated_api_request_examples?.filter(q => /job_list/.test(q.purpose)).map(q => [q.url, q.body])]));

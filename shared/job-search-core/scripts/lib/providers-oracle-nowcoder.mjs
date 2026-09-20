@@ -14,6 +14,7 @@ export async function collectOracleNowcoder(source,options={}) {
   const cities=opts.cityFilters??opts.cities??[];
   if(!Array.isArray(cities))throw Error('city filters must be an array');
   const client=opts.client||createClient(opts),jobs=[],rows=new Map(),pages=[],errors=[],cfg=source.api_config;
+  const oracleGlobalCountryScan=source.provider==='oracle_recruiting'&&!cfg.location_id;
   let total=null,firstTotal=null,detailFailures=0,listComplete=false,reason='max_pages_reached';
   let detailsRequested=0,detailsSkippedMode=0,detailsSkippedCity=0;
   const excludedLocationRows=[],excludedEmployerRows=[];
@@ -22,7 +23,9 @@ export async function collectOracleNowcoder(source,options={}) {
     for(let p=1;p<=opts.maxPages;p++) {
       let r,arr;
       if(source.provider==='oracle_recruiting') {
-        r=await request({url:cfg.origin+'/hcmRestApi/resources/latest/recruitingCEJobRequisitions?onlyData=true&expand=requisitionList.secondaryLocations&finder=findReqs;siteNumber='+cfg.site+',facetsList=NONE,limit='+opts.pageSize+',offset='+((p-1)*opts.pageSize)+',locationId='+cfg.location_id},'china_job_list');
+        const pageSize=oracleGlobalCountryScan?200:opts.pageSize,offset=(p-1)*pageSize;
+        const finder='findReqs;siteNumber='+encodeURIComponent(cfg.site)+',facetsList=NONE,limit='+pageSize+',offset='+offset+(oracleGlobalCountryScan?'':',locationId='+encodeURIComponent(cfg.location_id));
+        r=await request({url:cfg.origin+'/hcmRestApi/resources/latest/recruitingCEJobRequisitions?onlyData=true&expand=requisitionList.secondaryLocations&finder='+finder},oracleGlobalCountryScan?'global_job_list_for_cn_filter':'china_job_list');
         const first=r.data.items?.[0];arr=first?.requisitionList;total=Number(first?.TotalJobsCount);
       }else {
         r=await request({url:'https://nowpick.nowcoder.com/u/company/job/list/v2',method:'POST',body:new URLSearchParams({companyId:String(cfg.company_id),recruitType:'0',page:String(p),pageSize:String(opts.pageSize)}),headers:{'Content-Type':'application/x-www-form-urlencoded'}},'company_job_list_full_JD');
@@ -48,8 +51,8 @@ export async function collectOracleNowcoder(source,options={}) {
       j.list_raw_file=row.record.response_file;
       // Keep the existing China/employer ownership checks before applying city optimizations.
       if(source.provider==='oracle_recruiting'&&row.data.PrimaryLocationCountry!=='CN') {
-        errors.push('Explicit non-China row excluded '+row.data.Id);
-        excludedLocationRows.push({job_id:String(row.data.Id),country:row.data.PrimaryLocationCountry??null,response_file:row.record.response_file,reason:'Existing explicit-CN scope check not satisfied'});continue;
+        if(!oracleGlobalCountryScan)errors.push('Explicit non-China row excluded '+row.data.Id);
+        excludedLocationRows.push({job_id:String(row.data.Id),country:row.data.PrimaryLocationCountry??null,response_file:row.record.response_file,reason:oracleGlobalCountryScan?'Global Oracle scan retained only explicit CN rows':'Existing explicit-CN scope check not satisfied'});continue;
       }
       if(source.provider==='nowcoder_public'&&Number(row.data.companyId)!==Number(cfg.company_id)) {
         errors.push('Nowcoder employer mismatch');
@@ -87,5 +90,6 @@ export async function collectOracleNowcoder(source,options={}) {
       details_requested:detailsRequested,details_failed:detailFailures,details_skipped_mode:detailsSkippedMode,details_skipped_city:source.provider==='oracle_recruiting'?detailsSkippedCity:0,jobs_outside_city:detailsSkippedCity,
       incomplete_bodies:incomplete,required_incomplete_bodies:requiredIncomplete,excluded_location_rows:excludedLocationRows,excluded_employer_rows:excludedEmployerRows,
       metadata_unresolved:jobs.filter(j=>j.location_unknown||jobCityStatus(j,[])==='unknown'||j.formal_status==='unknown'||j.open_status==='unknown').length,
-      scope:source.provider==='oracle_recruiting'?'Explicit China location filter and per-row country check':'Explicit employer ID all recruitment types'}};
+      global_rows_observed:source.provider==='oracle_recruiting'&&oracleGlobalCountryScan?rows.size:null,
+      scope:source.provider==='oracle_recruiting'?(oracleGlobalCountryScan?'Complete global Oracle site pagination with explicit per-row CN country filter':'Explicit China location filter and per-row country check'):'Explicit employer ID all recruitment types'}};
 }

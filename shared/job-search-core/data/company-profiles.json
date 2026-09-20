@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-20T01:26:22.049Z",
+  "updated_at": "2026-09-20T13:59:33.315Z",
   "companies": [
     {
       "company_id": "company-f93e5a384c54",
@@ -116942,6 +116942,370 @@
     {
       "company_id": "company-zero-search-17426315f7da",
       "display_name": "Vitol",
+      "business": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      },
+      "workforce": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      },
+      "capital": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      }
+    },
+    {
+      "company_id": "waiqi-routing-deloitte-1093",
+      "display_name": "德勤企业咨询（上海）有限公司",
+      "business": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      },
+      "workforce": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      },
+      "capital": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      }
+    },
+    {
+      "company_id": "waiqi-routing-eadf25197e8b",
+      "display_name": "金拱门食品有限公司",
+      "business": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      },
+      "workforce": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      },
+      "capital": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      }
+    },
+    {
+      "company_id": "waiqi-routing-39235def32c2",
+      "display_name": "伊莱克斯专业设备（上海）有限公司",
+      "business": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      },
+      "workforce": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      },
+      "capital": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      }
+    },
+    {
+      "company_id": "waiqi-routing-944ef9a07c17",
+      "display_name": "埃万特",
+      "business": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      },
+      "workforce": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      },
+      "capital": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      }
+    },
+    {
+      "company_id": "waiqi-routing-1931c69162ce",
+      "display_name": "库博光学（中国）有限公司",
+      "business": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      },
+      "workforce": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      },
+      "capital": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      }
+    },
+    {
+      "company_id": "waiqi-routing-22404860d6dd",
+      "display_name": "德安华（北京）商业风险管理咨询有限公司",
+      "business": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      },
+      "workforce": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      },
+      "capital": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      }
+    },
+    {
+      "company_id": "waiqi-routing-0fee7f1d9ea3",
+      "display_name": "斯托尔特尼尔森物流（上海）有限公司",
+      "business": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      },
+      "workforce": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      },
+      "capital": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      }
+    },
+    {
+      "company_id": "waiqi-routing-2c2f8bed7825",
+      "display_name": "易富（上海）贸易有限公司",
+      "business": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      },
+      "workforce": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      },
+      "capital": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      }
+    },
+    {
+      "company_id": "waiqi-routing-2fe6d1283818",
+      "display_name": "法国再保险股份有限公司上海分公司",
+      "business": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      },
+      "workforce": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      },
+      "capital": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      }
+    },
+    {
+      "company_id": "waiqi-routing-e8ff83231a00",
+      "display_name": "瑞丽安特（上海）科技有限公司",
+      "business": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      },
+      "workforce": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      },
+      "capital": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      }
+    },
+    {
+      "company_id": "waiqi-routing-f61483d9aaad",
+      "display_name": "美商海盗船科技（上海）有限公司",
+      "business": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      },
+      "workforce": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      },
+      "capital": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      }
+    },
+    {
+      "company_id": "waiqi-routing-38579a25559b",
+      "display_name": "至日先进材料",
+      "business": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      },
+      "workforce": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      },
+      "capital": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      }
+    },
+    {
+      "company_id": "waiqi-routing-8a4d3a95cbdf",
+      "display_name": "北京诺华制药有限公司",
       "business": {
         "value": "",
         "status": "missing",

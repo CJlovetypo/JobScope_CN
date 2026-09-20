@@ -63,6 +63,23 @@ test('Oracle excludes explicit overseas rows before fetching their details',asyn
  let details=0;const c=fakeClient(q=>{if(q.url.includes('recruitingCEJobRequisitionDetails')){details++;return{items:[{Id:'cn',Title:'Analyst',PrimaryLocationCountry:'CN',PrimaryLocation:'Shanghai',ExternalDescriptionStr:body}]};}return{items:[{requisitionList:[{Id:'cn',Title:'Analyst',PrimaryLocationCountry:'CN',PrimaryLocation:'Shanghai'},{Id:'us',Title:'Analyst',PrimaryLocationCountry:'US',PrimaryLocation:'New York'}],TotalJobsCount:2}]};});
  const r=await collectOracleNowcoder({provider:'oracle_recruiting',api_config:{origin:'https://example.invalid',site:'X',location_id:'CN'}},{client:c});assert.equal(r.jobs.length,1);assert.equal(r.jobs[0].job_id,'cn');assert.equal(details,1);assert.match(r.coverage.reason,/non-China row excluded/);
 });
+test('Oracle without location ID paginates the global site and keeps only explicit China rows',async()=>{
+ let details=0;const c=fakeClient(q=>{
+  if(q.url.includes('recruitingCEJobRequisitionDetails')){details++;const id=q.url.match(/Id=%22([^%]+)%22/)[1];return{items:[{Id:id,Title:'Analyst',PrimaryLocationCountry:'CN',PrimaryLocation:'Shanghai',ExternalDescriptionStr:body}]};}
+  const offset=Number(q.url.match(/offset=(\d+)/)[1]);
+  const rows=offset===0?[{Id:'us',Title:'Analyst',PrimaryLocationCountry:'US',PrimaryLocation:'New York'}]:[{Id:'cn',Title:'Analyst',PrimaryLocationCountry:'CN',PrimaryLocation:'Shanghai'}];
+  return{items:[{requisitionList:rows,TotalJobsCount:2}]};
+ });
+ const r=await collectOracleNowcoder({provider:'oracle_recruiting',api_config:{origin:'https://example.invalid',site:'X'}},{client:c,pageSize:1});
+ assert.deepEqual(r.jobs.map(x=>x.job_id),['cn']);assert.equal(details,1);assert.equal(r.coverage.status,'complete');assert.equal(r.coverage.list_complete,true);
+ assert.equal(r.coverage.global_rows_observed,2);assert.equal(r.coverage.excluded_location_rows.length,1);assert.match(r.coverage.scope,/global Oracle site pagination/i);
+ assert.ok(c.records.some(x=>x.purpose==='global_job_list_for_cn_filter'));
+});
+test('Oracle global country scan stays partial when maxPages cannot reconcile the site total',async()=>{
+ const c=fakeClient(()=>({items:[{requisitionList:[{Id:'cn',Title:'Analyst',PrimaryLocationCountry:'CN',PrimaryLocation:'Shanghai'}],TotalJobsCount:2}]}));
+ const r=await collectOracleNowcoder({provider:'oracle_recruiting',api_config:{origin:'https://example.invalid',site:'X'}},{client:c,pageSize:1,maxPages:1});
+ assert.equal(r.jobs.length,1);assert.equal(r.coverage.status,'partial');assert.equal(r.coverage.list_complete,false);assert.match(r.coverage.reason,/max_pages_reached/);
+});
 test('Oracle detail failure preserves the observed China list row',async()=>{
  const c=fakeClient(q=>{if(q.url.includes('recruitingCEJobRequisitionDetails'))throw Error('synthetic_detail_failure');return{items:[{requisitionList:[{Id:'cn',Title:'Analyst',PrimaryLocationCountry:'CN',PrimaryLocation:'Shanghai'}],TotalJobsCount:1}]};});
  const r=await collectOracleNowcoder({provider:'oracle_recruiting',api_config:{origin:'https://example.invalid',site:'X',location_id:'CN'}},{client:c});assert.equal(r.jobs.length,1);assert.equal(r.jobs[0].body_complete,false);assert.equal(r.coverage.details_failed,1);assert.equal(r.coverage.status,'partial');

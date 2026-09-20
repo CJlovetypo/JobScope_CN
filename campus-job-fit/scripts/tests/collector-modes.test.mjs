@@ -88,10 +88,19 @@ test('Oracle country scope checks still run before city or list optimizations',a
 });
 test('Oracle later list failure preserves first-page rows and partial status',async()=>{
   const client=mock(q=>{
-    if(/offset=20/.test(q.url))throw Error('fixture page 2 unavailable');
+    if(/offset=1(?:,|$)/.test(q.url))throw Error('fixture page 2 unavailable');
     return {items:[{requisitionList:[oraRow('a','上海',{Title:'软件开发实习'})],TotalJobsCount:2}]};});
   const r=await collectOracleNowcoder(oracle,{client,mode:'list'});
   assert.equal(r.jobs.length,1);assert.equal(r.coverage.list_complete,false);assert.equal(r.coverage.status,'partial');
+});
+test('Oracle global scan uses the observed 200-row service window',async()=>{
+  const seen=[];const client=mock(q=>{
+    const offset=Number(q.url.match(/offset=(\d+)/)[1]);seen.push({offset,url:q.url});
+    const rows=offset===0?[oraRow('a','上海',{Title:'软件开发实习'})]:[oraRow('b','北京',{Title:'软件开发实习'})];
+    return {items:[{requisitionList:rows,TotalJobsCount:2}]};
+  });
+  const r=await collectOracleNowcoder({...oracle,api_config:{origin:'https://fixture.example',site:'CX_1'}},{client,mode:'list',pageSize:20});
+  assert.deepEqual(seen.map(x=>x.offset),[0,200]);assert.ok(seen.every(x=>/limit=200/.test(x.url)));assert.equal(r.coverage.status,'complete');assert.equal(r.coverage.list_complete,true);assert.deepEqual(r.jobs.map(x=>x.job_id),['a','b']);
 });
 test('Oracle HTTP success with insufficient JD body is partial in full mode',async()=>{
   const client=oracleClient([oraRow('a','上海')],id=>({Id:id,ExternalDescriptionStr:'Short text.'}));
