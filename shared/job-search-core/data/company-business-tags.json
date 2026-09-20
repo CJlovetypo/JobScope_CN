@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-20T14:20:03.636Z",
+  "updated_at": "2026-09-20T14:31:23.587Z",
   "companies": [
     {
       "company_id": "company-f93e5a384c54",
@@ -66115,6 +66115,42 @@
     {
       "company_id": "waiqi-routing-677313381861e7ff",
       "display_name": "马尼托瓦克起重设备（中国）有限公司",
+      "business_tags": [],
+      "business_summary": "",
+      "status": "unknown",
+      "evidence": [],
+      "reason": "招聘主体已核实，主营业务标签待公开资料补核"
+    },
+    {
+      "company_id": "waiqi-routing-ab82e0704846f923",
+      "display_name": "挪威船级社（中国）有限公司",
+      "business_tags": [],
+      "business_summary": "",
+      "status": "unknown",
+      "evidence": [],
+      "reason": "招聘主体已核实，主营业务标签待公开资料补核"
+    },
+    {
+      "company_id": "waiqi-routing-bebb56a1d1f7ccb1",
+      "display_name": "盖瑞特动力科技（上海）有限公司",
+      "business_tags": [],
+      "business_summary": "",
+      "status": "unknown",
+      "evidence": [],
+      "reason": "招聘主体已核实，主营业务标签待公开资料补核"
+    },
+    {
+      "company_id": "waiqi-routing-1e50c60e0de46ac0",
+      "display_name": "朗廷酒店集团有限公司",
+      "business_tags": [],
+      "business_summary": "",
+      "status": "unknown",
+      "evidence": [],
+      "reason": "招聘主体已核实，主营业务标签待公开资料补核"
+    },
+    {
+      "company_id": "waiqi-routing-b1a49d80616b622e",
+      "display_name": "凯谛思集团",
       "business_tags": [],
       "business_summary": "",
       "status": "unknown",

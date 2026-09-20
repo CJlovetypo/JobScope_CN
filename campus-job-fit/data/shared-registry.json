@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
   "mode": "campus",
-  "checked_at": "2026-09-20T14:20:04.944Z",
+  "checked_at": "2026-09-20T14:31:25.028Z",
   "source_registry": "../shared/job-search-core/assets/sources.json",
   "runtime": "../shared/job-search-core",
-  "source_sha256": "2b3b6aa2835aa0cc8cd1fd64b5ff42821a5ed3a680b70db973df5fda80a62bc6",
-  "companies": 2885,
-  "configurations": 3619,
-  "enabled_configurations": 3619,
+  "source_sha256": "8205e3bc16f27a914d048da3329b81a5152b44bf061dabd6d1abf3db41270293",
+  "companies": 2889,
+  "configurations": 3627,
+  "enabled_configurations": 3627,
   "source_validation": {
     "gate": "not_applied"
   },

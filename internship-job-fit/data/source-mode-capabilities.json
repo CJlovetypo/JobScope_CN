@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "mode": "internship",
-  "checked_at": "2026-09-20T14:20:05.003Z",
+  "checked_at": "2026-09-20T14:31:25.089Z",
   "note": "方向路由与证据的派生索引；不是独立来源库，不控制启停。",
   "configurations": [
     {
@@ -4051,6 +4051,18 @@
       "entry": "https://app.mokahr.com/campus-recruitment/ti/144126?appId=wx9105b76b5088b840",
       "strategy": "public_type_routing",
       "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-e1ad1fbdc47b",
+      "display_name": "德州仪器",
+      "source_id": "waiqi-routing-745530b6fe89242a",
+      "provider": "oracle_recruiting",
+      "entry": "https://edbz.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/25017874",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
       "target_validation_status": "untested",
       "enabled": true,
       "proof_file": null
@@ -10060,6 +10072,18 @@
       "source_id": "waiqi-routing-36944984f60a7f0c",
       "provider": "oracle_recruiting",
       "entry": "https://icfcjb.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/Aerospace/job/122787",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "co_da07df0480adbc9c3074",
+      "display_name": "霍尼韦尔",
+      "source_id": "waiqi-routing-0db40da17e0260c3",
+      "provider": "oracle_recruiting",
+      "entry": "https://ibqbjb.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/Honeywell/job/157575",
       "strategy": "existing_broad_stream",
       "scope": "per_job_type_required",
       "target_validation_status": "untested",
@@ -35652,6 +35676,18 @@
       "proof_file": "D:\\Feishu Project\\job-search-skill-pack\\internship-job-fit\\artifacts\\direction-api-audit-20260919\\phase2\\2bdaae093142548cc419e216\\result.json"
     },
     {
+      "company_id": "co_65dce42afd0b71ee1687",
+      "display_name": "UL Solutions",
+      "source_id": "waiqi-routing-bd7716d5bb36fd75",
+      "provider": "oracle_recruiting",
+      "entry": "https://fa-eups-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/ULSolutionsCareers/job/10836",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
       "company_id": "company-a2ee0656b436",
       "display_name": "Unity中国",
       "source_id": "0",
@@ -36823,6 +36859,18 @@
       "entry": "https://app.mokahr.com/social-recruitment/marriott/141002",
       "strategy": "public_type_routing",
       "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "company-310216d4ad46",
+      "display_name": "万豪（中国招聘门户）",
+      "source_id": "waiqi-routing-77270a8cddd6eecf",
+      "provider": "oracle_recruiting",
+      "entry": "https://ejwl.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/26119598",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
       "target_validation_status": "untested",
       "enabled": true,
       "proof_file": null
@@ -43553,6 +43601,54 @@
       "source_id": "waiqi-routing-8f14e5b73c88d0dc",
       "provider": "oracle_recruiting",
       "entry": "https://fda.fa.us1.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/3130",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "waiqi-routing-ab82e0704846f923",
+      "display_name": "挪威船级社（中国）有限公司",
+      "source_id": "waiqi-routing-cfad54afcbd0202d",
+      "provider": "oracle_recruiting",
+      "entry": "https://ecyq.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/7591",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "waiqi-routing-bebb56a1d1f7ccb1",
+      "display_name": "盖瑞特动力科技（上海）有限公司",
+      "source_id": "waiqi-routing-8bbdc7fbba5506fc",
+      "provider": "oracle_recruiting",
+      "entry": "https://ehth.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2001/job/15006",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "waiqi-routing-1e50c60e0de46ac0",
+      "display_name": "朗廷酒店集团有限公司",
+      "source_id": "waiqi-routing-4533f273be5442b4",
+      "provider": "oracle_recruiting",
+      "entry": "https://fa-eqgp-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/20211141",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "waiqi-routing-b1a49d80616b622e",
+      "display_name": "凯谛思集团",
+      "source_id": "waiqi-routing-5508b831cd50e686",
+      "provider": "oracle_recruiting",
+      "entry": "https://ebcs.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/44018",
       "strategy": "existing_broad_stream",
       "scope": "per_job_type_required",
       "target_validation_status": "untested",
