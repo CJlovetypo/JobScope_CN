@@ -6,7 +6,7 @@
 
 ## 外企性质打标
 
-`data/waiqi-foreign-company-index.json` 保存完整 4,155 家目录快照的性质索引，明确区分“外企”和“合资”。一键打标只接受精确标准名、正式招聘来源中记录的具体 Waiqi 公司 ID，以及已清洗的严格招聘上下文。先预览，再应用：
+`data/waiqi-foreign-company-index.json` 保存当前完整 4,165 家目录快照的性质索引，明确区分“外企”和“合资”。一键打标只接受精确标准名、正式招聘来源中记录的具体 Waiqi 公司 ID，以及已清洗的严格招聘上下文。先预览，再应用：
 
 ```sh
 node shared/job-search-core/scripts/tag-waiqi-ownership.mjs
@@ -21,17 +21,22 @@ node shared/job-search-core/scripts/tag-waiqi-ownership.mjs --apply
 
 ## 抓取及查询
 
+机器可读的 Waiqi 接口契约保存在 `assets/waiqi-api-contracts.json`。当前完整性链路只依赖三个已实测接口：全国公司目录、公司详情、公司全部职位列表；职位列表只保留岗位元数据和外部招聘链接，不继续请求单岗位详情。
+
 从仓库根目录运行：
 
 ```sh
 node shared/job-search-core/scripts/crawl-waiqi.mjs campus-job-fit/artifacts/waiqi-2026-09-20
 node shared/job-search-core/scripts/export-waiqi.mjs campus-job-fit/artifacts/waiqi-2026-09-20
+node shared/job-search-core/scripts/audit-waiqi-archive.mjs campus-job-fit/artifacts/waiqi-2026-09-20
 node shared/job-search-core/scripts/source-candidates.mjs query --query=西门子
 node shared/job-search-core/scripts/source-candidates.mjs query --industry=金融 --has-recruitment
 node shared/job-search-core/scripts/audit-waiqi-routing.mjs --output=campus-job-fit/artifacts/waiqi-routing-audit.json
 ```
 
-同一抓取目录会复用成功响应并重试失败项；新一轮更新请使用新目录，避免把缓存日期写成重新核验时间。默认最多 3 个请求在途、请求起点至少间隔 750ms；429 会全局冷却并遵守 Retry-After。不要并行启动多个 Waiqi 抓取进程。WAIQI_CONCURRENCY 与 WAIQI_INTERVAL_MS 可降低采集负载。默认另取没有可用外部链接的站内岗位详情；WAIQI_JOB_DETAILS=all 可续抓所有岗位详情，none 跳过详情。含外部链接的岗位默认仅保存列表资料和链接，完整官网 JD 样本另存于官方核验档案。
+同一抓取目录会复用成功响应并重试失败项；新一轮更新请使用新目录，避免把缓存日期写成重新核验时间。默认最多 3 个请求在途、请求起点至少间隔 750ms；429 会全局冷却并遵守 Retry-After。不要并行启动多个 Waiqi 抓取进程。WAIQI_CONCURRENCY 与 WAIQI_INTERVAL_MS 可降低采集负载。默认只固化公司目录、公司详情、公司职位列表与招聘链接，不请求单个岗位详情。只有明确需要站内 JD 时才设置 `WAIQI_JOB_DETAILS=missing-links` 或 `all`；完整官网 JD 样本仍由官方来源核验流程保存。
+
+需要在同一归档中校验线上增量时，设置 `WAIQI_REFRESH_CATALOG=1` 强制刷新全部目录页，设置 `WAIQI_REFRESH_POSITIONS=1` 强制刷新每家公司的职位列表；公司资料本身需要重新取证时再设置 `WAIQI_REFRESH_COMPANIES=1`。刷新目录时会自动发现新增公司并补抓其公司资料与职位列表。未设置的层继续复用成功响应，避免把旧缓存误记成当次刷新。
 
 本次观察到目录响应的 `page.size/current/pages` 与实际返回不符。以请求 page/size、实际返回 ID、去重数量及 total 核对完整性。另已证实公司详情的 `positionCount=0` 可能过期，而公司页面仍展示岗位；因此每家公司都必须实际请求 `company/position-all`，不能再用详情计数推断空列表。旧的 `company_info_reports_zero_positions` 缓存必须强制重抓后才能作为岗位覆盖统计。
 
@@ -44,9 +49,11 @@ Oracle Recruiting 链接经常不带中国区 `locationId`。这类来源由运�
 - `companies.csv`：公司资料、官网、原站链接和抓取状态。
 - `recruitment-links.csv`：岗位、公司、城市线索与完整招聘原站 URL。
 - `jobs.jsonl`：岗位列表的结构化记录。`description=null` 表示未抓该岗位详情，不能称作完整 JD。
-- `job-details/`：已抓取的站内岗位详情；带“请在微信打开”等前缀的链接会提取 URL 并保留原文，邮箱及其他非 URL 投递说明也会归档。
+- `job-details/`：历史上按需抓取的少量站内岗位详情，不属于公司资产完整性门槛；当前默认不再扩抓。
 - `summary.json`、`failures.json`、`position-count-discrepancies.json`：覆盖量、失败记录及前后接口数量差异。
 - `lists/`、`companies/`、`positions/`：带抓取时间、请求和响应摘要的原始证据，留在本地 artifacts。
+- `asset-manifest.json`：核心原始响应与导出文件的逐文件 SHA256、大小和总聚合哈希，用于证明本地快照未被静默改写。
+- `traversal-audit.json`：目录页、公司详情和职位列表之间的 ID 闭环、字段结构及异常清单。只有 `verdict=complete` 才能称公司目录与职位列表已经完整遍历；历史职位详情只作观察项，不参与完整性判定。
 
 ## 官方来源准入
 

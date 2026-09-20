@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-20T15:35:29.163Z",
+  "updated_at": "2026-09-20T16:23:54.427Z",
   "companies": [
     {
       "company_id": "company-f93e5a384c54",
@@ -120160,12 +120160,12 @@
       "display_name": "卓莓企业管理(上海)有限公司",
       "ownership_tag": "外企",
       "status": "verified",
-      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：精确名称、已核验招聘来源中的具体 Waiqi 公司 ID。",
       "evidence": [
         {
           "url": "https://waiqi.com/company/detail?id=39525",
           "title": "Waiqi 公司页：卓莓企业管理（上海）有限公司",
-          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过精确名称、已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
           "checked_at": "2026-09-20"
         }
       ],
@@ -120176,6 +120176,7 @@
         39525
       ],
       "waiqi_match_methods": [
+        "exact_normalized_name",
         "reviewed_source_provenance"
       ],
       "prior_classification": {
@@ -120202,12 +120203,12 @@
       "display_name": "南非联合银行集团有限公司",
       "ownership_tag": "外企",
       "status": "verified",
-      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：精确名称、已核验招聘来源中的具体 Waiqi 公司 ID。",
       "evidence": [
         {
           "url": "https://waiqi.com/company/detail?id=38720",
           "title": "Waiqi 公司页：南非联合银行集团有限公司",
-          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过精确名称、已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
           "checked_at": "2026-09-20"
         }
       ],
@@ -120218,6 +120219,7 @@
         38720
       ],
       "waiqi_match_methods": [
+        "exact_normalized_name",
         "reviewed_source_provenance"
       ],
       "prior_classification": {
@@ -120235,12 +120237,12 @@
       "display_name": "雷蛇电脑贸易(上海)有限公司",
       "ownership_tag": "外企",
       "status": "verified",
-      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：精确名称、已核验招聘来源中的具体 Waiqi 公司 ID。",
       "evidence": [
         {
           "url": "https://waiqi.com/company/detail?id=38748",
           "title": "Waiqi 公司页：雷蛇电脑贸易（上海）有限公司",
-          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过精确名称、已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
           "checked_at": "2026-09-20"
         }
       ],
@@ -120251,6 +120253,7 @@
         38748
       ],
       "waiqi_match_methods": [
+        "exact_normalized_name",
         "reviewed_source_provenance"
       ],
       "prior_classification": {
@@ -120277,12 +120280,12 @@
       "display_name": "艾迪康医学检验中心有限公司",
       "ownership_tag": "外企",
       "status": "verified",
-      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：精确名称、已核验招聘来源中的具体 Waiqi 公司 ID。",
       "evidence": [
         {
           "url": "https://waiqi.com/company/detail?id=35967",
           "title": "Waiqi 公司页：艾迪康医学检验中心有限公司",
-          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过精确名称、已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
           "checked_at": "2026-09-20"
         }
       ],
@@ -120293,6 +120296,7 @@
         35967
       ],
       "waiqi_match_methods": [
+        "exact_normalized_name",
         "reviewed_source_provenance"
       ],
       "prior_classification": {
@@ -120328,12 +120332,12 @@
       "display_name": "TD Synnex公司",
       "ownership_tag": "外企",
       "status": "verified",
-      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：精确名称、已核验招聘来源中的具体 Waiqi 公司 ID。",
       "evidence": [
         {
           "url": "https://waiqi.com/company/detail?id=28433",
           "title": "Waiqi 公司页：TD Synnex公司",
-          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过精确名称、已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
           "checked_at": "2026-09-20"
         }
       ],
@@ -120344,6 +120348,7 @@
         28433
       ],
       "waiqi_match_methods": [
+        "exact_normalized_name",
         "reviewed_source_provenance"
       ],
       "prior_classification": {
@@ -120361,12 +120366,12 @@
       "display_name": "Equinor公司",
       "ownership_tag": "外企",
       "status": "verified",
-      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：精确名称、已核验招聘来源中的具体 Waiqi 公司 ID。",
       "evidence": [
         {
           "url": "https://waiqi.com/company/detail?id=28342",
           "title": "Waiqi 公司页：Equinor公司",
-          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过精确名称、已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
           "checked_at": "2026-09-20"
         }
       ],
@@ -120377,6 +120382,7 @@
         28342
       ],
       "waiqi_match_methods": [
+        "exact_normalized_name",
         "reviewed_source_provenance"
       ],
       "prior_classification": {
@@ -120394,12 +120400,12 @@
       "display_name": "沃太能源股份有限公司",
       "ownership_tag": "外企",
       "status": "verified",
-      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：精确名称、已核验招聘来源中的具体 Waiqi 公司 ID。",
       "evidence": [
         {
           "url": "https://waiqi.com/company/detail?id=25249",
           "title": "Waiqi 公司页：沃太能源股份有限公司",
-          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过精确名称、已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
           "checked_at": "2026-09-20"
         }
       ],
@@ -120410,6 +120416,7 @@
         25249
       ],
       "waiqi_match_methods": [
+        "exact_normalized_name",
         "reviewed_source_provenance"
       ],
       "prior_classification": {
@@ -120463,12 +120470,12 @@
       "display_name": "南京金鹰国际集团有限公司",
       "ownership_tag": "外企",
       "status": "verified",
-      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：精确名称、已核验招聘来源中的具体 Waiqi 公司 ID。",
       "evidence": [
         {
           "url": "https://waiqi.com/company/detail?id=13818",
           "title": "Waiqi 公司页：南京金鹰国际集团有限公司",
-          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过精确名称、已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
           "checked_at": "2026-09-20"
         }
       ],
@@ -120479,6 +120486,7 @@
         13818
       ],
       "waiqi_match_methods": [
+        "exact_normalized_name",
         "reviewed_source_provenance"
       ],
       "prior_classification": {
@@ -120505,12 +120513,12 @@
       "display_name": "丰疆智能科技股份有限公司",
       "ownership_tag": "外企",
       "status": "verified",
-      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：精确名称、已核验招聘来源中的具体 Waiqi 公司 ID。",
       "evidence": [
         {
           "url": "https://waiqi.com/company/detail?id=7429",
           "title": "Waiqi 公司页：丰疆智能科技股份有限公司",
-          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过精确名称、已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
           "checked_at": "2026-09-20"
         }
       ],
@@ -120521,6 +120529,7 @@
         7429
       ],
       "waiqi_match_methods": [
+        "exact_normalized_name",
         "reviewed_source_provenance"
       ],
       "prior_classification": {
@@ -120538,12 +120547,12 @@
       "display_name": "协鑫科技(苏州)有限公司",
       "ownership_tag": "外企",
       "status": "verified",
-      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：精确名称、已核验招聘来源中的具体 Waiqi 公司 ID。",
       "evidence": [
         {
           "url": "https://waiqi.com/company/detail?id=7746",
           "title": "Waiqi 公司页：协鑫科技（苏州）有限公司",
-          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过精确名称、已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
           "checked_at": "2026-09-20"
         }
       ],
@@ -120554,6 +120563,7 @@
         7746
       ],
       "waiqi_match_methods": [
+        "exact_normalized_name",
         "reviewed_source_provenance"
       ],
       "prior_classification": {
@@ -120616,12 +120626,12 @@
       "display_name": "卡士乳业(深圳)有限公司",
       "ownership_tag": "外企",
       "status": "verified",
-      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：精确名称、已核验招聘来源中的具体 Waiqi 公司 ID。",
       "evidence": [
         {
           "url": "https://waiqi.com/company/detail?id=6708",
           "title": "Waiqi 公司页：卡士乳业（深圳）有限公司",
-          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过精确名称、已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
           "checked_at": "2026-09-20"
         }
       ],
@@ -120632,6 +120642,7 @@
         6708
       ],
       "waiqi_match_methods": [
+        "exact_normalized_name",
         "reviewed_source_provenance"
       ],
       "prior_classification": {
@@ -120667,12 +120678,12 @@
       "display_name": "上海翌耀科技股份有限公司",
       "ownership_tag": "外企",
       "status": "verified",
-      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：精确名称、已核验招聘来源中的具体 Waiqi 公司 ID。",
       "evidence": [
         {
           "url": "https://waiqi.com/company/detail?id=6320",
           "title": "Waiqi 公司页：上海翌耀科技股份有限公司",
-          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过精确名称、已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
           "checked_at": "2026-09-20"
         }
       ],
@@ -120683,6 +120694,7 @@
         6320
       ],
       "waiqi_match_methods": [
+        "exact_normalized_name",
         "reviewed_source_provenance"
       ],
       "prior_classification": {
@@ -120718,12 +120730,12 @@
       "display_name": "荣昌生物制药(烟台)股份有限公司",
       "ownership_tag": "外企",
       "status": "verified",
-      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：精确名称、已核验招聘来源中的具体 Waiqi 公司 ID。",
       "evidence": [
         {
           "url": "https://waiqi.com/company/detail?id=6312",
           "title": "Waiqi 公司页：荣昌生物制药（烟台）股份有限公司",
-          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过精确名称、已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
           "checked_at": "2026-09-20"
         }
       ],
@@ -120734,6 +120746,7 @@
         6312
       ],
       "waiqi_match_methods": [
+        "exact_normalized_name",
         "reviewed_source_provenance"
       ],
       "prior_classification": {
@@ -120805,12 +120818,12 @@
       "display_name": "重庆药友制药有限责任公司",
       "ownership_tag": "外企",
       "status": "verified",
-      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：精确名称、已核验招聘来源中的具体 Waiqi 公司 ID。",
       "evidence": [
         {
           "url": "https://waiqi.com/company/detail?id=4600",
           "title": "Waiqi 公司页：重庆药友制药有限责任公司",
-          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过精确名称、已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
           "checked_at": "2026-09-20"
         }
       ],
@@ -120821,6 +120834,7 @@
         4600
       ],
       "waiqi_match_methods": [
+        "exact_normalized_name",
         "reviewed_source_provenance"
       ],
       "prior_classification": {
@@ -120865,12 +120879,12 @@
       "display_name": "上海臻格生物技术有限公司",
       "ownership_tag": "外企",
       "status": "verified",
-      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：精确名称、已核验招聘来源中的具体 Waiqi 公司 ID。",
       "evidence": [
         {
           "url": "https://waiqi.com/company/detail?id=4902",
           "title": "Waiqi 公司页：上海臻格生物技术有限公司",
-          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过精确名称、已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
           "checked_at": "2026-09-20"
         }
       ],
@@ -120881,6 +120895,7 @@
         4902
       ],
       "waiqi_match_methods": [
+        "exact_normalized_name",
         "reviewed_source_provenance"
       ],
       "prior_classification": {
@@ -120898,12 +120913,12 @@
       "display_name": "深圳康诺思腾科技有限公司",
       "ownership_tag": "外企",
       "status": "verified",
-      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：精确名称、已核验招聘来源中的具体 Waiqi 公司 ID。",
       "evidence": [
         {
           "url": "https://waiqi.com/company/detail?id=4635",
           "title": "Waiqi 公司页：深圳康诺思腾科技有限公司",
-          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过精确名称、已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
           "checked_at": "2026-09-20"
         }
       ],
@@ -120914,6 +120929,7 @@
         4635
       ],
       "waiqi_match_methods": [
+        "exact_normalized_name",
         "reviewed_source_provenance"
       ],
       "prior_classification": {
@@ -120931,12 +120947,12 @@
       "display_name": "中荣印刷(昆山)有限公司",
       "ownership_tag": "外企",
       "status": "verified",
-      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：精确名称、已核验招聘来源中的具体 Waiqi 公司 ID。",
       "evidence": [
         {
           "url": "https://waiqi.com/company/detail?id=4452",
           "title": "Waiqi 公司页：中荣印刷（昆山）有限公司",
-          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过精确名称、已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
           "checked_at": "2026-09-20"
         }
       ],
@@ -120947,6 +120963,7 @@
         4452
       ],
       "waiqi_match_methods": [
+        "exact_normalized_name",
         "reviewed_source_provenance"
       ],
       "prior_classification": {
@@ -120964,12 +120981,12 @@
       "display_name": "和利时科技集团有限公司",
       "ownership_tag": "外企",
       "status": "verified",
-      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：精确名称、已核验招聘来源中的具体 Waiqi 公司 ID。",
       "evidence": [
         {
           "url": "https://waiqi.com/company/detail?id=4360",
           "title": "Waiqi 公司页：和利时科技集团有限公司",
-          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过精确名称、已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
           "checked_at": "2026-09-20"
         }
       ],
@@ -120980,6 +120997,7 @@
         4360
       ],
       "waiqi_match_methods": [
+        "exact_normalized_name",
         "reviewed_source_provenance"
       ],
       "prior_classification": {
@@ -120997,12 +121015,12 @@
       "display_name": "新城控股集团股份有限公司",
       "ownership_tag": "外企",
       "status": "verified",
-      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：精确名称、已核验招聘来源中的具体 Waiqi 公司 ID。",
       "evidence": [
         {
           "url": "https://waiqi.com/company/detail?id=4218",
           "title": "Waiqi 公司页：新城控股集团股份有限公司",
-          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过精确名称、已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
           "checked_at": "2026-09-20"
         }
       ],
@@ -121013,6 +121031,7 @@
         4218
       ],
       "waiqi_match_methods": [
+        "exact_normalized_name",
         "reviewed_source_provenance"
       ],
       "prior_classification": {
@@ -121039,12 +121058,12 @@
       "display_name": "艾欧史密斯(中国)热水器有限公司",
       "ownership_tag": "外企",
       "status": "verified",
-      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：精确名称、已核验招聘来源中的具体 Waiqi 公司 ID。",
       "evidence": [
         {
           "url": "https://waiqi.com/company/detail?id=2132",
           "title": "Waiqi 公司页：艾欧史密斯（中国）热水器有限公司",
-          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过精确名称、已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
           "checked_at": "2026-09-20"
         }
       ],
@@ -121055,6 +121074,7 @@
         2132
       ],
       "waiqi_match_methods": [
+        "exact_normalized_name",
         "reviewed_source_provenance"
       ],
       "prior_classification": {
@@ -121090,12 +121110,18 @@
       "display_name": "上海江崎格力高食品有限公司",
       "ownership_tag": "外企",
       "status": "verified",
-      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：精确名称、已核验招聘来源中的具体 Waiqi 公司 ID。",
       "evidence": [
         {
           "url": "https://waiqi.com/company/detail?id=957",
           "title": "Waiqi 公司页：上海江崎格力高食品有限公司",
-          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过精确名称、已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "checked_at": "2026-09-20"
+        },
+        {
+          "url": "https://waiqi.com/company/detail?id=1078",
+          "title": "Waiqi 公司页：上海江崎格力高食品有限公司\n\t\n",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过精确名称、已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
           "checked_at": "2026-09-20"
         }
       ],
@@ -121103,9 +121129,11 @@
       "classification_basis": "waiqi_explicit_foreign_company_type",
       "classification_authority": "user_designated_waiqi_directory",
       "waiqi_company_ids": [
-        957
+        957,
+        1078
       ],
       "waiqi_match_methods": [
+        "exact_normalized_name",
         "reviewed_source_provenance"
       ],
       "prior_classification": {
@@ -121123,12 +121151,18 @@
       "display_name": "星猿哲科技(上海)有限公司",
       "ownership_tag": "外企",
       "status": "verified",
-      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：精确名称、已核验招聘来源中的具体 Waiqi 公司 ID。",
       "evidence": [
         {
           "url": "https://waiqi.com/company/detail?id=1416",
           "title": "Waiqi 公司页：星猿哲科技（上海）有限公司",
-          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过精确名称、已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "checked_at": "2026-09-20"
+        },
+        {
+          "url": "https://waiqi.com/company/detail?id=23158",
+          "title": "Waiqi 公司页：星猿哲科技(上海)有限公司",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过精确名称、已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
           "checked_at": "2026-09-20"
         }
       ],
@@ -121136,9 +121170,11 @@
       "classification_basis": "waiqi_explicit_foreign_company_type",
       "classification_authority": "user_designated_waiqi_directory",
       "waiqi_company_ids": [
-        1416
+        1416,
+        23158
       ],
       "waiqi_match_methods": [
+        "exact_normalized_name",
         "reviewed_source_provenance"
       ],
       "prior_classification": {
@@ -121156,12 +121192,12 @@
       "display_name": "四川时代新能源科技有限公司",
       "ownership_tag": "外企",
       "status": "verified",
-      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：精确名称、已核验招聘来源中的具体 Waiqi 公司 ID。",
       "evidence": [
         {
           "url": "https://waiqi.com/company/detail?id=1069",
           "title": "Waiqi 公司页：四川时代新能源科技有限公司",
-          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过精确名称、已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
           "checked_at": "2026-09-20"
         }
       ],
@@ -121172,6 +121208,7 @@
         1069
       ],
       "waiqi_match_methods": [
+        "exact_normalized_name",
         "reviewed_source_provenance"
       ],
       "prior_classification": {
@@ -121187,59 +121224,14 @@
     {
       "company_id": "company-zero-search-1c208b5c1535",
       "display_name": "The Economist Group",
-      "ownership_tag": "待核实",
-      "status": "unknown",
-      "reason": "新增招聘主体的控制关系尚未核查",
-      "evidence": [],
-      "checked_at": null
-    },
-    {
-      "company_id": "company-zero-search-8571ad0b2578",
-      "display_name": "Senior plc",
-      "ownership_tag": "待核实",
-      "status": "unknown",
-      "reason": "新增招聘主体的控制关系尚未核查",
-      "evidence": [],
-      "checked_at": null
-    },
-    {
-      "company_id": "company-zero-search-ca7f5e7211d1",
-      "display_name": "Sobi",
-      "ownership_tag": "待核实",
-      "status": "unknown",
-      "reason": "新增招聘主体的控制关系尚未核查",
-      "evidence": [],
-      "checked_at": null
-    },
-    {
-      "company_id": "company-zero-search-c92dee3ee3e3",
-      "display_name": "Umdasch Group",
-      "ownership_tag": "待核实",
-      "status": "unknown",
-      "reason": "新增招聘主体的控制关系尚未核查",
-      "evidence": [],
-      "checked_at": null
-    },
-    {
-      "company_id": "company-zero-search-17426315f7da",
-      "display_name": "Vitol",
-      "ownership_tag": "待核实",
-      "status": "unknown",
-      "reason": "新增招聘主体的控制关系尚未核查",
-      "evidence": [],
-      "checked_at": null
-    },
-    {
-      "company_id": "waiqi-routing-deloitte-1093",
-      "display_name": "德勤企业咨询（上海）有限公司",
       "ownership_tag": "外企",
       "status": "verified",
-      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：精确名称。",
       "evidence": [
         {
-          "url": "https://waiqi.com/company/detail?id=1093",
-          "title": "Waiqi 公司页：德勤企业咨询（上海）有限公司",
-          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "url": "https://waiqi.com/company/detail?id=38834",
+          "title": "Waiqi 公司页：经济学人集团",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过精确名称与维护主体关联。",
           "checked_at": "2026-09-20"
         }
       ],
@@ -121247,9 +121239,182 @@
       "classification_basis": "waiqi_explicit_foreign_company_type",
       "classification_authority": "user_designated_waiqi_directory",
       "waiqi_company_ids": [
-        1093
+        38834
       ],
       "waiqi_match_methods": [
+        "exact_normalized_name"
+      ],
+      "prior_classification": {
+        "company_id": "company-zero-search-1c208b5c1535",
+        "display_name": "The Economist Group",
+        "ownership_tag": "待核实",
+        "status": "unknown",
+        "reason": "新增招聘主体的控制关系尚未核查",
+        "evidence": [],
+        "checked_at": null
+      }
+    },
+    {
+      "company_id": "company-zero-search-8571ad0b2578",
+      "display_name": "Senior plc",
+      "ownership_tag": "外企",
+      "status": "verified",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：精确名称。",
+      "evidence": [
+        {
+          "url": "https://waiqi.com/company/detail?id=39216",
+          "title": "Waiqi 公司页：赛尼尔航空科技（苏州）有限公司",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过精确名称与维护主体关联。",
+          "checked_at": "2026-09-20"
+        }
+      ],
+      "checked_at": "2026-09-20",
+      "classification_basis": "waiqi_explicit_foreign_company_type",
+      "classification_authority": "user_designated_waiqi_directory",
+      "waiqi_company_ids": [
+        39216
+      ],
+      "waiqi_match_methods": [
+        "exact_normalized_name"
+      ],
+      "prior_classification": {
+        "company_id": "company-zero-search-8571ad0b2578",
+        "display_name": "Senior plc",
+        "ownership_tag": "待核实",
+        "status": "unknown",
+        "reason": "新增招聘主体的控制关系尚未核查",
+        "evidence": [],
+        "checked_at": null
+      }
+    },
+    {
+      "company_id": "company-zero-search-ca7f5e7211d1",
+      "display_name": "Sobi",
+      "ownership_tag": "外企",
+      "status": "verified",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：精确名称。",
+      "evidence": [
+        {
+          "url": "https://waiqi.com/company/detail?id=38989",
+          "title": "Waiqi 公司页：奥科再生医疗贸易（上海）有限公司",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过精确名称与维护主体关联。",
+          "checked_at": "2026-09-20"
+        }
+      ],
+      "checked_at": "2026-09-20",
+      "classification_basis": "waiqi_explicit_foreign_company_type",
+      "classification_authority": "user_designated_waiqi_directory",
+      "waiqi_company_ids": [
+        38989
+      ],
+      "waiqi_match_methods": [
+        "exact_normalized_name"
+      ],
+      "prior_classification": {
+        "company_id": "company-zero-search-ca7f5e7211d1",
+        "display_name": "Sobi",
+        "ownership_tag": "待核实",
+        "status": "unknown",
+        "reason": "新增招聘主体的控制关系尚未核查",
+        "evidence": [],
+        "checked_at": null
+      }
+    },
+    {
+      "company_id": "company-zero-search-c92dee3ee3e3",
+      "display_name": "Umdasch Group",
+      "ownership_tag": "外企",
+      "status": "verified",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：精确名称。",
+      "evidence": [
+        {
+          "url": "https://waiqi.com/company/detail?id=38902",
+          "title": "Waiqi 公司页：优密达诗集团",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过精确名称与维护主体关联。",
+          "checked_at": "2026-09-20"
+        }
+      ],
+      "checked_at": "2026-09-20",
+      "classification_basis": "waiqi_explicit_foreign_company_type",
+      "classification_authority": "user_designated_waiqi_directory",
+      "waiqi_company_ids": [
+        38902
+      ],
+      "waiqi_match_methods": [
+        "exact_normalized_name"
+      ],
+      "prior_classification": {
+        "company_id": "company-zero-search-c92dee3ee3e3",
+        "display_name": "Umdasch Group",
+        "ownership_tag": "待核实",
+        "status": "unknown",
+        "reason": "新增招聘主体的控制关系尚未核查",
+        "evidence": [],
+        "checked_at": null
+      }
+    },
+    {
+      "company_id": "company-zero-search-17426315f7da",
+      "display_name": "Vitol",
+      "ownership_tag": "外企",
+      "status": "verified",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：精确名称。",
+      "evidence": [
+        {
+          "url": "https://waiqi.com/company/detail?id=38855",
+          "title": "Waiqi 公司页：维多集团",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过精确名称与维护主体关联。",
+          "checked_at": "2026-09-20"
+        }
+      ],
+      "checked_at": "2026-09-20",
+      "classification_basis": "waiqi_explicit_foreign_company_type",
+      "classification_authority": "user_designated_waiqi_directory",
+      "waiqi_company_ids": [
+        38855
+      ],
+      "waiqi_match_methods": [
+        "exact_normalized_name"
+      ],
+      "prior_classification": {
+        "company_id": "company-zero-search-17426315f7da",
+        "display_name": "Vitol",
+        "ownership_tag": "待核实",
+        "status": "unknown",
+        "reason": "新增招聘主体的控制关系尚未核查",
+        "evidence": [],
+        "checked_at": null
+      }
+    },
+    {
+      "company_id": "waiqi-routing-deloitte-1093",
+      "display_name": "德勤企业咨询（上海）有限公司",
+      "ownership_tag": "外企",
+      "status": "verified",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：精确名称、已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "evidence": [
+        {
+          "url": "https://waiqi.com/company/detail?id=1093",
+          "title": "Waiqi 公司页：德勤企业咨询（上海）有限公司",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过精确名称、已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "checked_at": "2026-09-20"
+        },
+        {
+          "url": "https://waiqi.com/company/detail?id=10348",
+          "title": "Waiqi 公司页：德勤企业咨询(上海)有限公司",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过精确名称、已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "checked_at": "2026-09-20"
+        }
+      ],
+      "checked_at": "2026-09-20",
+      "classification_basis": "waiqi_explicit_foreign_company_type",
+      "classification_authority": "user_designated_waiqi_directory",
+      "waiqi_company_ids": [
+        1093,
+        10348
+      ],
+      "waiqi_match_methods": [
+        "exact_normalized_name",
         "reviewed_source_provenance"
       ],
       "prior_classification": {
@@ -121267,12 +121432,18 @@
       "display_name": "金拱门食品有限公司",
       "ownership_tag": "外企",
       "status": "verified",
-      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：精确名称、已核验招聘来源中的具体 Waiqi 公司 ID。",
       "evidence": [
+        {
+          "url": "https://waiqi.com/company/detail?id=19522",
+          "title": "Waiqi 公司页：北京麦当劳食品有限公司",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过精确名称、已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "checked_at": "2026-09-20"
+        },
         {
           "url": "https://waiqi.com/company/detail?id=35284",
           "title": "Waiqi 公司页：金拱门食品有限公司",
-          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过精确名称、已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
           "checked_at": "2026-09-20"
         }
       ],
@@ -121280,9 +121451,11 @@
       "classification_basis": "waiqi_explicit_foreign_company_type",
       "classification_authority": "user_designated_waiqi_directory",
       "waiqi_company_ids": [
+        19522,
         35284
       ],
       "waiqi_match_methods": [
+        "exact_normalized_name",
         "reviewed_source_provenance"
       ],
       "prior_classification": {
@@ -121300,12 +121473,18 @@
       "display_name": "伊莱克斯专业设备（上海）有限公司",
       "ownership_tag": "外企",
       "status": "verified",
-      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：精确名称、已核验招聘来源中的具体 Waiqi 公司 ID。",
       "evidence": [
+        {
+          "url": "https://waiqi.com/company/detail?id=36655",
+          "title": "Waiqi 公司页：伊莱克斯（中国）电器有限公司",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过精确名称、已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "checked_at": "2026-09-20"
+        },
         {
           "url": "https://waiqi.com/company/detail?id=39025",
           "title": "Waiqi 公司页：伊莱克斯专业设备（上海）有限公司",
-          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过精确名称、已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
           "checked_at": "2026-09-20"
         }
       ],
@@ -121313,9 +121492,11 @@
       "classification_basis": "waiqi_explicit_foreign_company_type",
       "classification_authority": "user_designated_waiqi_directory",
       "waiqi_company_ids": [
+        36655,
         39025
       ],
       "waiqi_match_methods": [
+        "exact_normalized_name",
         "reviewed_source_provenance"
       ],
       "prior_classification": {
@@ -121333,12 +121514,18 @@
       "display_name": "埃万特",
       "ownership_tag": "外企",
       "status": "verified",
-      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：精确名称、已核验招聘来源中的具体 Waiqi 公司 ID。",
       "evidence": [
+        {
+          "url": "https://waiqi.com/company/detail?id=1435",
+          "title": "Waiqi 公司页：普立万企业管理（上海）有限公司",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过精确名称、已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "checked_at": "2026-09-20"
+        },
         {
           "url": "https://waiqi.com/company/detail?id=37821",
           "title": "Waiqi 公司页：埃万特",
-          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过精确名称、已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
           "checked_at": "2026-09-20"
         }
       ],
@@ -121346,9 +121533,11 @@
       "classification_basis": "waiqi_explicit_foreign_company_type",
       "classification_authority": "user_designated_waiqi_directory",
       "waiqi_company_ids": [
+        1435,
         37821
       ],
       "waiqi_match_methods": [
+        "exact_normalized_name",
         "reviewed_source_provenance"
       ],
       "prior_classification": {
@@ -121366,12 +121555,12 @@
       "display_name": "库博光学（中国）有限公司",
       "ownership_tag": "外企",
       "status": "verified",
-      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：精确名称、已核验招聘来源中的具体 Waiqi 公司 ID。",
       "evidence": [
         {
           "url": "https://waiqi.com/company/detail?id=38029",
           "title": "Waiqi 公司页：库博光学（中国）有限公司",
-          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过精确名称、已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
           "checked_at": "2026-09-20"
         }
       ],
@@ -121382,6 +121571,7 @@
         38029
       ],
       "waiqi_match_methods": [
+        "exact_normalized_name",
         "reviewed_source_provenance"
       ],
       "prior_classification": {
@@ -121399,12 +121589,12 @@
       "display_name": "德安华（北京）商业风险管理咨询有限公司",
       "ownership_tag": "外企",
       "status": "verified",
-      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：精确名称、已核验招聘来源中的具体 Waiqi 公司 ID。",
       "evidence": [
         {
           "url": "https://waiqi.com/company/detail?id=38001",
           "title": "Waiqi 公司页：德安华（北京）商业风险管理咨询有限公司",
-          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过精确名称、已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
           "checked_at": "2026-09-20"
         }
       ],
@@ -121415,6 +121605,7 @@
         38001
       ],
       "waiqi_match_methods": [
+        "exact_normalized_name",
         "reviewed_source_provenance"
       ],
       "prior_classification": {
@@ -121432,12 +121623,12 @@
       "display_name": "斯托尔特尼尔森物流（上海）有限公司",
       "ownership_tag": "外企",
       "status": "verified",
-      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：精确名称、已核验招聘来源中的具体 Waiqi 公司 ID。",
       "evidence": [
         {
           "url": "https://waiqi.com/company/detail?id=38854",
           "title": "Waiqi 公司页：斯托尔特尼尔森物流（上海）有限公司",
-          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过精确名称、已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
           "checked_at": "2026-09-20"
         }
       ],
@@ -121448,6 +121639,7 @@
         38854
       ],
       "waiqi_match_methods": [
+        "exact_normalized_name",
         "reviewed_source_provenance"
       ],
       "prior_classification": {
@@ -121465,12 +121657,12 @@
       "display_name": "易富（上海）贸易有限公司",
       "ownership_tag": "外企",
       "status": "verified",
-      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：精确名称、已核验招聘来源中的具体 Waiqi 公司 ID。",
       "evidence": [
         {
           "url": "https://waiqi.com/company/detail?id=39588",
           "title": "Waiqi 公司页：易富（上海）贸易有限公司",
-          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过精确名称、已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
           "checked_at": "2026-09-20"
         }
       ],
@@ -121481,6 +121673,7 @@
         39588
       ],
       "waiqi_match_methods": [
+        "exact_normalized_name",
         "reviewed_source_provenance"
       ],
       "prior_classification": {
@@ -121498,12 +121691,12 @@
       "display_name": "法国再保险股份有限公司上海分公司",
       "ownership_tag": "外企",
       "status": "verified",
-      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：精确名称、已核验招聘来源中的具体 Waiqi 公司 ID。",
       "evidence": [
         {
           "url": "https://waiqi.com/company/detail?id=39195",
           "title": "Waiqi 公司页：法国再保险股份有限公司上海分公司",
-          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过精确名称、已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
           "checked_at": "2026-09-20"
         }
       ],
@@ -121514,6 +121707,7 @@
         39195
       ],
       "waiqi_match_methods": [
+        "exact_normalized_name",
         "reviewed_source_provenance"
       ],
       "prior_classification": {
@@ -121531,12 +121725,12 @@
       "display_name": "瑞丽安特（上海）科技有限公司",
       "ownership_tag": "外企",
       "status": "verified",
-      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：精确名称、已核验招聘来源中的具体 Waiqi 公司 ID。",
       "evidence": [
         {
           "url": "https://waiqi.com/company/detail?id=37588",
           "title": "Waiqi 公司页：瑞丽安特（上海）科技有限公司",
-          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过精确名称、已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
           "checked_at": "2026-09-20"
         }
       ],
@@ -121547,6 +121741,7 @@
         37588
       ],
       "waiqi_match_methods": [
+        "exact_normalized_name",
         "reviewed_source_provenance"
       ],
       "prior_classification": {
@@ -121564,12 +121759,12 @@
       "display_name": "美商海盗船科技（上海）有限公司",
       "ownership_tag": "外企",
       "status": "verified",
-      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：精确名称、已核验招聘来源中的具体 Waiqi 公司 ID。",
       "evidence": [
         {
           "url": "https://waiqi.com/company/detail?id=39138",
           "title": "Waiqi 公司页：美商海盗船科技（上海）有限公司",
-          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过精确名称、已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
           "checked_at": "2026-09-20"
         }
       ],
@@ -121580,6 +121775,7 @@
         39138
       ],
       "waiqi_match_methods": [
+        "exact_normalized_name",
         "reviewed_source_provenance"
       ],
       "prior_classification": {
@@ -121597,12 +121793,12 @@
       "display_name": "至日先进材料",
       "ownership_tag": "外企",
       "status": "verified",
-      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：精确名称、已核验招聘来源中的具体 Waiqi 公司 ID。",
       "evidence": [
         {
           "url": "https://waiqi.com/company/detail?id=37769",
           "title": "Waiqi 公司页：至日先进材料",
-          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过精确名称、已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
           "checked_at": "2026-09-20"
         }
       ],
@@ -121613,6 +121809,7 @@
         37769
       ],
       "waiqi_match_methods": [
+        "exact_normalized_name",
         "reviewed_source_provenance"
       ],
       "prior_classification": {
@@ -121630,12 +121827,12 @@
       "display_name": "北京诺华制药有限公司",
       "ownership_tag": "外企",
       "status": "verified",
-      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：精确名称、已核验招聘来源中的具体 Waiqi 公司 ID。",
       "evidence": [
         {
           "url": "https://waiqi.com/company/detail?id=979",
           "title": "Waiqi 公司页：北京诺华制药有限公司",
-          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过精确名称、已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
           "checked_at": "2026-09-20"
         }
       ],
@@ -121646,6 +121843,7 @@
         979
       ],
       "waiqi_match_methods": [
+        "exact_normalized_name",
         "reviewed_source_provenance"
       ],
       "prior_classification": {
@@ -121663,12 +121861,12 @@
       "display_name": "Hitachi 日立集团",
       "ownership_tag": "外企",
       "status": "verified",
-      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：精确名称、已核验招聘来源中的具体 Waiqi 公司 ID。",
       "evidence": [
         {
           "url": "https://waiqi.com/company/detail?id=16704",
           "title": "Waiqi 公司页：日立（中国）有限公司",
-          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过精确名称、已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
           "checked_at": "2026-09-20"
         }
       ],
@@ -121679,6 +121877,7 @@
         16704
       ],
       "waiqi_match_methods": [
+        "exact_normalized_name",
         "reviewed_source_provenance"
       ],
       "prior_classification": {
@@ -121696,12 +121895,12 @@
       "display_name": "KBR 凯洛格布朗路特集团",
       "ownership_tag": "外企",
       "status": "verified",
-      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：精确名称、已核验招聘来源中的具体 Waiqi 公司 ID。",
       "evidence": [
         {
           "url": "https://waiqi.com/company/detail?id=37946",
           "title": "Waiqi 公司页：凯洛格布朗路特技术 (北京) 有限公司",
-          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过精确名称、已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
           "checked_at": "2026-09-20"
         }
       ],
@@ -121712,6 +121911,7 @@
         37946
       ],
       "waiqi_match_methods": [
+        "exact_normalized_name",
         "reviewed_source_provenance"
       ],
       "prior_classification": {
@@ -121729,12 +121929,18 @@
       "display_name": "康明斯（中国）投资有限公司",
       "ownership_tag": "外企",
       "status": "verified",
-      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：精确名称、已核验招聘来源中的具体 Waiqi 公司 ID。",
       "evidence": [
         {
           "url": "https://waiqi.com/company/detail?id=1342",
           "title": "Waiqi 公司页：康明斯（中国）投资有限公司",
-          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过精确名称、已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "checked_at": "2026-09-20"
+        },
+        {
+          "url": "https://waiqi.com/company/detail?id=8543",
+          "title": "Waiqi 公司页：康明斯 (中国)投资有限公司",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过精确名称、已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
           "checked_at": "2026-09-20"
         }
       ],
@@ -121742,9 +121948,11 @@
       "classification_basis": "waiqi_explicit_foreign_company_type",
       "classification_authority": "user_designated_waiqi_directory",
       "waiqi_company_ids": [
-        1342
+        1342,
+        8543
       ],
       "waiqi_match_methods": [
+        "exact_normalized_name",
         "reviewed_source_provenance"
       ],
       "prior_classification": {
@@ -121762,12 +121970,12 @@
       "display_name": "布雷博公司",
       "ownership_tag": "外企",
       "status": "verified",
-      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：精确名称、已核验招聘来源中的具体 Waiqi 公司 ID。",
       "evidence": [
         {
           "url": "https://waiqi.com/company/detail?id=38462",
           "title": "Waiqi 公司页：布雷博公司",
-          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过精确名称、已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
           "checked_at": "2026-09-20"
         }
       ],
@@ -121778,6 +121986,7 @@
         38462
       ],
       "waiqi_match_methods": [
+        "exact_normalized_name",
         "reviewed_source_provenance"
       ],
       "prior_classification": {
@@ -121795,12 +122004,12 @@
       "display_name": "上海维塔士电脑软件有限公司",
       "ownership_tag": "外企",
       "status": "verified",
-      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：精确名称、已核验招聘来源中的具体 Waiqi 公司 ID。",
       "evidence": [
         {
           "url": "https://waiqi.com/company/detail?id=4095",
           "title": "Waiqi 公司页：上海维塔士电脑软件有限公司",
-          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过精确名称、已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
           "checked_at": "2026-09-20"
         }
       ],
@@ -121811,6 +122020,7 @@
         4095
       ],
       "waiqi_match_methods": [
+        "exact_normalized_name",
         "reviewed_source_provenance"
       ],
       "prior_classification": {
@@ -121828,12 +122038,12 @@
       "display_name": "新秀丽国际有限公司",
       "ownership_tag": "外企",
       "status": "verified",
-      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：精确名称、已核验招聘来源中的具体 Waiqi 公司 ID。",
       "evidence": [
         {
           "url": "https://waiqi.com/company/detail?id=38922",
           "title": "Waiqi 公司页：新秀丽国际有限公司",
-          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过精确名称、已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
           "checked_at": "2026-09-20"
         }
       ],
@@ -121844,6 +122054,7 @@
         38922
       ],
       "waiqi_match_methods": [
+        "exact_normalized_name",
         "reviewed_source_provenance"
       ],
       "prior_classification": {
@@ -121861,12 +122072,12 @@
       "display_name": "安森美半导体（深圳）有限公司",
       "ownership_tag": "外企",
       "status": "verified",
-      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：精确名称、已核验招聘来源中的具体 Waiqi 公司 ID。",
       "evidence": [
         {
           "url": "https://waiqi.com/company/detail?id=4111",
           "title": "Waiqi 公司页：安森美半导体（深圳）有限公司",
-          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过精确名称、已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
           "checked_at": "2026-09-20"
         }
       ],
@@ -121877,6 +122088,7 @@
         4111
       ],
       "waiqi_match_methods": [
+        "exact_normalized_name",
         "reviewed_source_provenance"
       ],
       "prior_classification": {
@@ -121894,12 +122106,12 @@
       "display_name": "福迪威公司",
       "ownership_tag": "外企",
       "status": "verified",
-      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：精确名称、已核验招聘来源中的具体 Waiqi 公司 ID。",
       "evidence": [
         {
           "url": "https://waiqi.com/company/detail?id=37628",
           "title": "Waiqi 公司页：福迪威公司",
-          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过精确名称、已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
           "checked_at": "2026-09-20"
         }
       ],
@@ -121910,6 +122122,7 @@
         37628
       ],
       "waiqi_match_methods": [
+        "exact_normalized_name",
         "reviewed_source_provenance"
       ],
       "prior_classification": {
@@ -121927,12 +122140,12 @@
       "display_name": "美国船级社（中国）有限公司",
       "ownership_tag": "外企",
       "status": "verified",
-      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：精确名称、已核验招聘来源中的具体 Waiqi 公司 ID。",
       "evidence": [
         {
           "url": "https://waiqi.com/company/detail?id=38286",
           "title": "Waiqi 公司页：美国船级社（中国）有限公司",
-          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过精确名称、已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
           "checked_at": "2026-09-20"
         }
       ],
@@ -121943,6 +122156,7 @@
         38286
       ],
       "waiqi_match_methods": [
+        "exact_normalized_name",
         "reviewed_source_provenance"
       ],
       "prior_classification": {
@@ -121960,12 +122174,12 @@
       "display_name": "韦莱韬悦",
       "ownership_tag": "外企",
       "status": "verified",
-      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：精确名称、已核验招聘来源中的具体 Waiqi 公司 ID。",
       "evidence": [
         {
           "url": "https://waiqi.com/company/detail?id=38146",
           "title": "Waiqi 公司页：韦莱韬悦",
-          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过精确名称、已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
           "checked_at": "2026-09-20"
         }
       ],
@@ -121976,6 +122190,7 @@
         38146
       ],
       "waiqi_match_methods": [
+        "exact_normalized_name",
         "reviewed_source_provenance"
       ],
       "prior_classification": {
@@ -121993,12 +122208,12 @@
       "display_name": "GPStrategies",
       "ownership_tag": "外企",
       "status": "verified",
-      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：精确名称、已核验招聘来源中的具体 Waiqi 公司 ID。",
       "evidence": [
         {
           "url": "https://waiqi.com/company/detail?id=38809",
           "title": "Waiqi 公司页：GPStrategies",
-          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过精确名称、已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
           "checked_at": "2026-09-20"
         }
       ],
@@ -122009,6 +122224,7 @@
         38809
       ],
       "waiqi_match_methods": [
+        "exact_normalized_name",
         "reviewed_source_provenance"
       ],
       "prior_classification": {
@@ -122026,12 +122242,12 @@
       "display_name": "亚太物流有限公司",
       "ownership_tag": "外企",
       "status": "verified",
-      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：精确名称、已核验招聘来源中的具体 Waiqi 公司 ID。",
       "evidence": [
         {
           "url": "https://waiqi.com/company/detail?id=38522",
           "title": "Waiqi 公司页：亚太物流有限公司",
-          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过精确名称、已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
           "checked_at": "2026-09-20"
         }
       ],
@@ -122042,6 +122258,7 @@
         38522
       ],
       "waiqi_match_methods": [
+        "exact_normalized_name",
         "reviewed_source_provenance"
       ],
       "prior_classification": {
@@ -122059,12 +122276,12 @@
       "display_name": "赫伯罗特船务（中国）有限公司",
       "ownership_tag": "外企",
       "status": "verified",
-      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：精确名称、已核验招聘来源中的具体 Waiqi 公司 ID。",
       "evidence": [
         {
           "url": "https://waiqi.com/company/detail?id=39134",
           "title": "Waiqi 公司页：赫伯罗特船务（中国）有限公司",
-          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过精确名称、已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
           "checked_at": "2026-09-20"
         }
       ],
@@ -122075,6 +122292,7 @@
         39134
       ],
       "waiqi_match_methods": [
+        "exact_normalized_name",
         "reviewed_source_provenance"
       ],
       "prior_classification": {
@@ -122092,12 +122310,12 @@
       "display_name": "诺为泰全球临床研究有限公司",
       "ownership_tag": "外企",
       "status": "verified",
-      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：精确名称、已核验招聘来源中的具体 Waiqi 公司 ID。",
       "evidence": [
         {
           "url": "https://waiqi.com/company/detail?id=37989",
           "title": "Waiqi 公司页：诺为泰全球临床研究有限公司",
-          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过精确名称、已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
           "checked_at": "2026-09-20"
         }
       ],
@@ -122108,6 +122326,7 @@
         37989
       ],
       "waiqi_match_methods": [
+        "exact_normalized_name",
         "reviewed_source_provenance"
       ],
       "prior_classification": {
@@ -122125,12 +122344,12 @@
       "display_name": "威德福国际有限公司",
       "ownership_tag": "外企",
       "status": "verified",
-      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：精确名称、已核验招聘来源中的具体 Waiqi 公司 ID。",
       "evidence": [
         {
           "url": "https://waiqi.com/company/detail?id=39048",
           "title": "Waiqi 公司页：威德福国际有限公司",
-          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过精确名称、已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
           "checked_at": "2026-09-20"
         }
       ],
@@ -122141,6 +122360,7 @@
         39048
       ],
       "waiqi_match_methods": [
+        "exact_normalized_name",
         "reviewed_source_provenance"
       ],
       "prior_classification": {
@@ -122158,12 +122378,12 @@
       "display_name": "豪梅特航空机件（苏州）有限公司",
       "ownership_tag": "外企",
       "status": "verified",
-      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：精确名称、已核验招聘来源中的具体 Waiqi 公司 ID。",
       "evidence": [
         {
           "url": "https://waiqi.com/company/detail?id=38293",
           "title": "Waiqi 公司页：豪梅特航空机件（苏州）有限公司",
-          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过精确名称、已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
           "checked_at": "2026-09-20"
         }
       ],
@@ -122174,6 +122394,7 @@
         38293
       ],
       "waiqi_match_methods": [
+        "exact_normalized_name",
         "reviewed_source_provenance"
       ],
       "prior_classification": {
@@ -122191,12 +122412,12 @@
       "display_name": "罗格朗（上海）管理有限公司",
       "ownership_tag": "外企",
       "status": "verified",
-      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：精确名称、已核验招聘来源中的具体 Waiqi 公司 ID。",
       "evidence": [
         {
           "url": "https://waiqi.com/company/detail?id=39298",
           "title": "Waiqi 公司页：罗格朗（上海）管理有限公司",
-          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过精确名称、已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
           "checked_at": "2026-09-20"
         }
       ],
@@ -122207,6 +122428,7 @@
         39298
       ],
       "waiqi_match_methods": [
+        "exact_normalized_name",
         "reviewed_source_provenance"
       ],
       "prior_classification": {
@@ -122224,12 +122446,12 @@
       "display_name": "国民油井华高石油设备（上海）有限公司",
       "ownership_tag": "外企",
       "status": "verified",
-      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：精确名称、已核验招聘来源中的具体 Waiqi 公司 ID。",
       "evidence": [
         {
           "url": "https://waiqi.com/company/detail?id=35112",
           "title": "Waiqi 公司页：国民油井华高石油设备（上海）有限公司",
-          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过精确名称、已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
           "checked_at": "2026-09-20"
         }
       ],
@@ -122240,6 +122462,7 @@
         35112
       ],
       "waiqi_match_methods": [
+        "exact_normalized_name",
         "reviewed_source_provenance"
       ],
       "prior_classification": {
@@ -122257,12 +122480,12 @@
       "display_name": "凯德瑞斯工业技术有限公司",
       "ownership_tag": "外企",
       "status": "verified",
-      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：精确名称、已核验招聘来源中的具体 Waiqi 公司 ID。",
       "evidence": [
         {
           "url": "https://waiqi.com/company/detail?id=38395",
           "title": "Waiqi 公司页：凯德瑞斯工业技术有限公司",
-          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过精确名称、已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
           "checked_at": "2026-09-20"
         }
       ],
@@ -122273,6 +122496,7 @@
         38395
       ],
       "waiqi_match_methods": [
+        "exact_normalized_name",
         "reviewed_source_provenance"
       ],
       "prior_classification": {
@@ -122290,12 +122514,12 @@
       "display_name": "安可（北京）咨询有限公司",
       "ownership_tag": "外企",
       "status": "verified",
-      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：精确名称、已核验招聘来源中的具体 Waiqi 公司 ID。",
       "evidence": [
         {
           "url": "https://waiqi.com/company/detail?id=38294",
           "title": "Waiqi 公司页：安可（北京）咨询有限公司",
-          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过精确名称、已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
           "checked_at": "2026-09-20"
         }
       ],
@@ -122306,6 +122530,7 @@
         38294
       ],
       "waiqi_match_methods": [
+        "exact_normalized_name",
         "reviewed_source_provenance"
       ],
       "prior_classification": {
@@ -122323,12 +122548,12 @@
       "display_name": "恩赛弗(上海)认证有限公司",
       "ownership_tag": "外企",
       "status": "verified",
-      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：精确名称、已核验招聘来源中的具体 Waiqi 公司 ID。",
       "evidence": [
         {
           "url": "https://waiqi.com/company/detail?id=38291",
           "title": "Waiqi 公司页：恩赛弗(上海)认证有限公司",
-          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过精确名称、已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
           "checked_at": "2026-09-20"
         }
       ],
@@ -122339,6 +122564,7 @@
         38291
       ],
       "waiqi_match_methods": [
+        "exact_normalized_name",
         "reviewed_source_provenance"
       ],
       "prior_classification": {
@@ -122356,12 +122582,12 @@
       "display_name": "贝诺建筑设计（上海）有限公司",
       "ownership_tag": "外企",
       "status": "verified",
-      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：精确名称、已核验招聘来源中的具体 Waiqi 公司 ID。",
       "evidence": [
         {
           "url": "https://waiqi.com/company/detail?id=39596",
           "title": "Waiqi 公司页：贝诺建筑设计（上海）有限公司",
-          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过精确名称、已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
           "checked_at": "2026-09-20"
         }
       ],
@@ -122372,6 +122598,7 @@
         39596
       ],
       "waiqi_match_methods": [
+        "exact_normalized_name",
         "reviewed_source_provenance"
       ],
       "prior_classification": {
@@ -122389,12 +122616,12 @@
       "display_name": "英国品诚梅森律师事务所上海代表处",
       "ownership_tag": "外企",
       "status": "verified",
-      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：精确名称、已核验招聘来源中的具体 Waiqi 公司 ID。",
       "evidence": [
         {
           "url": "https://waiqi.com/company/detail?id=23324",
           "title": "Waiqi 公司页：英国品诚梅森律师事务所上海代表处",
-          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过精确名称、已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
           "checked_at": "2026-09-20"
         }
       ],
@@ -122405,6 +122632,7 @@
         23324
       ],
       "waiqi_match_methods": [
+        "exact_normalized_name",
         "reviewed_source_provenance"
       ],
       "prior_classification": {
@@ -122422,12 +122650,12 @@
       "display_name": "施罗德基金管理（中国）有限公司",
       "ownership_tag": "外企",
       "status": "verified",
-      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：精确名称、已核验招聘来源中的具体 Waiqi 公司 ID。",
       "evidence": [
         {
           "url": "https://waiqi.com/company/detail?id=27662",
           "title": "Waiqi 公司页：施罗德基金管理（中国）有限公司",
-          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过精确名称、已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
           "checked_at": "2026-09-20"
         }
       ],
@@ -122438,6 +122666,7 @@
         27662
       ],
       "waiqi_match_methods": [
+        "exact_normalized_name",
         "reviewed_source_provenance"
       ],
       "prior_classification": {
@@ -122455,12 +122684,12 @@
       "display_name": "马尼托瓦克起重设备（中国）有限公司",
       "ownership_tag": "外企",
       "status": "verified",
-      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：精确名称、已核验招聘来源中的具体 Waiqi 公司 ID。",
       "evidence": [
         {
           "url": "https://waiqi.com/company/detail?id=39358",
           "title": "Waiqi 公司页：马尼托瓦克起重设备（中国）有限公司",
-          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过精确名称、已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
           "checked_at": "2026-09-20"
         }
       ],
@@ -122471,6 +122700,7 @@
         39358
       ],
       "waiqi_match_methods": [
+        "exact_normalized_name",
         "reviewed_source_provenance"
       ],
       "prior_classification": {
@@ -122488,12 +122718,12 @@
       "display_name": "挪威船级社（中国）有限公司",
       "ownership_tag": "外企",
       "status": "verified",
-      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：精确名称、已核验招聘来源中的具体 Waiqi 公司 ID。",
       "evidence": [
         {
           "url": "https://waiqi.com/company/detail?id=24258",
           "title": "Waiqi 公司页：挪威船级社（中国）有限公司",
-          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过精确名称、已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
           "checked_at": "2026-09-20"
         }
       ],
@@ -122504,6 +122734,7 @@
         24258
       ],
       "waiqi_match_methods": [
+        "exact_normalized_name",
         "reviewed_source_provenance"
       ],
       "prior_classification": {
@@ -122521,12 +122752,12 @@
       "display_name": "盖瑞特动力科技（上海）有限公司",
       "ownership_tag": "外企",
       "status": "verified",
-      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：精确名称、已核验招聘来源中的具体 Waiqi 公司 ID。",
       "evidence": [
         {
           "url": "https://waiqi.com/company/detail?id=1050",
           "title": "Waiqi 公司页：盖瑞特动力科技（上海）有限公司",
-          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过精确名称、已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
           "checked_at": "2026-09-20"
         }
       ],
@@ -122537,6 +122768,7 @@
         1050
       ],
       "waiqi_match_methods": [
+        "exact_normalized_name",
         "reviewed_source_provenance"
       ],
       "prior_classification": {
@@ -122554,12 +122786,18 @@
       "display_name": "朗廷酒店集团有限公司",
       "ownership_tag": "外企",
       "status": "verified",
-      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：精确名称、已核验招聘来源中的具体 Waiqi 公司 ID。",
       "evidence": [
         {
           "url": "https://waiqi.com/company/detail?id=37822",
           "title": "Waiqi 公司页：朗廷酒店集团有限公司",
-          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过精确名称、已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "checked_at": "2026-09-20"
+        },
+        {
+          "url": "https://waiqi.com/company/detail?id=38828",
+          "title": "Waiqi 公司页：朗廷酒店集团",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过精确名称、已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
           "checked_at": "2026-09-20"
         }
       ],
@@ -122567,9 +122805,11 @@
       "classification_basis": "waiqi_explicit_foreign_company_type",
       "classification_authority": "user_designated_waiqi_directory",
       "waiqi_company_ids": [
-        37822
+        37822,
+        38828
       ],
       "waiqi_match_methods": [
+        "exact_normalized_name",
         "reviewed_source_provenance"
       ],
       "prior_classification": {
@@ -122587,12 +122827,12 @@
       "display_name": "凯谛思集团",
       "ownership_tag": "外企",
       "status": "verified",
-      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：精确名称、已核验招聘来源中的具体 Waiqi 公司 ID。",
       "evidence": [
         {
           "url": "https://waiqi.com/company/detail?id=37827",
           "title": "Waiqi 公司页：凯谛思集团",
-          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过精确名称、已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
           "checked_at": "2026-09-20"
         }
       ],
@@ -122603,6 +122843,7 @@
         37827
       ],
       "waiqi_match_methods": [
+        "exact_normalized_name",
         "reviewed_source_provenance"
       ],
       "prior_classification": {
@@ -122620,12 +122861,12 @@
       "display_name": "艾默生电气（中国）投资有限公司",
       "ownership_tag": "外企",
       "status": "verified",
-      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：精确名称、已核验招聘来源中的具体 Waiqi 公司 ID。",
       "evidence": [
         {
           "url": "https://waiqi.com/company/detail?id=1092",
           "title": "Waiqi 公司页：艾默生电气（中国）投资有限公司",
-          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过精确名称、已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
           "checked_at": "2026-09-20"
         }
       ],
@@ -122636,6 +122877,7 @@
         1092
       ],
       "waiqi_match_methods": [
+        "exact_normalized_name",
         "reviewed_source_provenance"
       ],
       "prior_classification": {
@@ -122653,12 +122895,12 @@
       "display_name": "科普兰",
       "ownership_tag": "外企",
       "status": "verified",
-      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：精确名称、已核验招聘来源中的具体 Waiqi 公司 ID。",
       "evidence": [
         {
           "url": "https://waiqi.com/company/detail?id=38380",
           "title": "Waiqi 公司页：科普兰",
-          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过精确名称、已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
           "checked_at": "2026-09-20"
         }
       ],
@@ -122669,6 +122911,7 @@
         38380
       ],
       "waiqi_match_methods": [
+        "exact_normalized_name",
         "reviewed_source_provenance"
       ],
       "prior_classification": {
@@ -122686,12 +122929,18 @@
       "display_name": "北京领格卓越科技有限公司",
       "ownership_tag": "外企",
       "status": "verified",
-      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：精确名称、已核验招聘来源中的具体 Waiqi 公司 ID。",
       "evidence": [
+        {
+          "url": "https://waiqi.com/company/detail?id=30223",
+          "title": "Waiqi 公司页：武汉领格卓越教育科技有限公司成都分公司",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过精确名称、已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "checked_at": "2026-09-20"
+        },
         {
           "url": "https://waiqi.com/company/detail?id=37577",
           "title": "Waiqi 公司页：北京领格卓越科技有限公司",
-          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过精确名称、已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
           "checked_at": "2026-09-20"
         }
       ],
@@ -122699,9 +122948,11 @@
       "classification_basis": "waiqi_explicit_foreign_company_type",
       "classification_authority": "user_designated_waiqi_directory",
       "waiqi_company_ids": [
+        30223,
         37577
       ],
       "waiqi_match_methods": [
+        "exact_normalized_name",
         "reviewed_source_provenance"
       ],
       "prior_classification": {
@@ -122719,12 +122970,12 @@
       "display_name": "雷诺斯国际货运代理（上海）有限公司",
       "ownership_tag": "外企",
       "status": "verified",
-      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：精确名称、已核验招聘来源中的具体 Waiqi 公司 ID。",
       "evidence": [
         {
           "url": "https://waiqi.com/company/detail?id=38402",
           "title": "Waiqi 公司页：雷诺斯国际货运代理（上海）有限公司",
-          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过精确名称、已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
           "checked_at": "2026-09-20"
         }
       ],
@@ -122735,6 +122986,7 @@
         38402
       ],
       "waiqi_match_methods": [
+        "exact_normalized_name",
         "reviewed_source_provenance"
       ],
       "prior_classification": {
@@ -122752,11 +123004,52 @@
       "display_name": "达能（中国）食品饮料有限公司",
       "ownership_tag": "外企",
       "status": "verified",
-      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：精确名称、已核验招聘来源中的具体 Waiqi 公司 ID。",
       "evidence": [
         {
           "url": "https://waiqi.com/company/detail?id=21",
           "title": "Waiqi 公司页：达能（中国）食品饮料有限公司",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过精确名称、已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "checked_at": "2026-09-20"
+        },
+        {
+          "url": "https://waiqi.com/company/detail?id=10301",
+          "title": "Waiqi 公司页：达能（上海）投资有限公司",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过精确名称、已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "checked_at": "2026-09-20"
+        }
+      ],
+      "checked_at": "2026-09-20",
+      "classification_basis": "waiqi_explicit_foreign_company_type",
+      "classification_authority": "user_designated_waiqi_directory",
+      "waiqi_company_ids": [
+        21,
+        10301
+      ],
+      "waiqi_match_methods": [
+        "exact_normalized_name",
+        "reviewed_source_provenance"
+      ],
+      "prior_classification": {
+        "company_id": "waiqi-routing-a21c6b534ecf",
+        "display_name": "达能（中国）食品饮料有限公司",
+        "ownership_tag": "待核实",
+        "status": "unknown",
+        "reason": "新增招聘主体的控制关系尚未核查",
+        "evidence": [],
+        "checked_at": null
+      }
+    },
+    {
+      "company_id": "waiqi-company-41283",
+      "display_name": "BISSELL 必胜益康",
+      "ownership_tag": "外企",
+      "status": "verified",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "evidence": [
+        {
+          "url": "https://waiqi.com/company/detail?id=41283",
+          "title": "Waiqi 公司页：必胜益康家居用品（深圳）有限公司",
           "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
           "checked_at": "2026-09-20"
         }
@@ -122765,14 +123058,14 @@
       "classification_basis": "waiqi_explicit_foreign_company_type",
       "classification_authority": "user_designated_waiqi_directory",
       "waiqi_company_ids": [
-        21
+        41283
       ],
       "waiqi_match_methods": [
         "reviewed_source_provenance"
       ],
       "prior_classification": {
-        "company_id": "waiqi-routing-a21c6b534ecf",
-        "display_name": "达能（中国）食品饮料有限公司",
+        "company_id": "waiqi-company-41283",
+        "display_name": "BISSELL 必胜益康",
         "ownership_tag": "待核实",
         "status": "unknown",
         "reason": "新增招聘主体的控制关系尚未核查",

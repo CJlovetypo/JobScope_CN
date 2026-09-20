@@ -177,8 +177,9 @@ export function targetApiProof(job={},source={},mode) {
   if(fullTime&&requiredExperience){add('returned_full_time',fullTime,'work_schedule');add('jd_required_experience',requiredExperience.trim(),'experience');return {accepted:true,reason:'returned_full_time_with_mandatory_nonintern_experience',evidence};}
   const verifiedSocialEndpoint=provider==='alibaba'&&e.api_endpoint==='https://talent.alibaba.com/position/search'
     ||provider==='jd'&&e.api_endpoint==='https://zhaopin.jd.com/web/job/job_list'
-    ||provider==='baidu'&&e.api_endpoint==='https://talent.baidu.com/httservice/getPostListNew'&&e.query_recruit_type==='SOCIAL';
-  const professionalClause=requiredExperience||clauses.find(x=>/(?:具备|具有|拥有|有)[^。\n]{0,50}(?:全局操盘经验|业务拓展能力建设经验|互联网行业经验)/.test(x));
+    ||provider==='baidu'&&e.api_endpoint==='https://talent.baidu.com/httservice/getPostListNew'&&e.query_recruit_type==='SOCIAL'
+    ||provider==='icims_jibe'&&e.published_list_returned===true&&/^full[ -]?time$/i.test(e.commitment||'');
+  const professionalClause=requiredExperience||e.required_experience||clauses.find(x=>/(?:具备|具有|拥有|有)[^。\n]{0,50}(?:全局操盘经验|业务拓展能力建设经验|互联网行业经验)/.test(x));
   if(verifiedSocialEndpoint&&professionalClause){add('verified_social_api',{endpoint:e.api_endpoint,query_recruit_type:e.query_recruit_type},'channel_corroboration');add('jd_mandatory_professional_experience',professionalClause.trim(),'experience');return {accepted:true,reason:'verified_social_api_corroborated_by_mandatory_professional_experience',evidence};}
   return reject('no_explicit_social_type_or_corroborated_required_experience');
 }

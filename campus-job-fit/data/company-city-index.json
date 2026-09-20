@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-20T15:35:22.806Z",
+  "updated_at": "2026-09-20T16:23:32.891Z",
   "companies": [
     {
       "company_id": "company-f93e5a384c54",
@@ -348710,6 +348710,56 @@
       "seed_origin": "waiqi_official_api_archive",
       "seed_observation_files": [
         "campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\b208beef3b9f406f\\verification.json"
+      ]
+    },
+    {
+      "company_id": "waiqi-company-41283",
+      "display_name": "BISSELL 必胜益康",
+      "cities": [],
+      "updated_at": "2026-09-20T16:18:06.218Z",
+      "coverage": {
+        "status": "partial",
+        "pages": 1,
+        "server_total": null,
+        "jobs_observed": 1,
+        "reason": "Only archived official jobs observed during Waiqi source verification; existing cities retained; no Waiqi city hints used",
+        "collection_complete": false,
+        "details_failed": 0,
+        "scope": "Offline seed from archived verified official API jobs; historical observations, not a live refresh or exhaustive company inventory",
+        "contexts": [
+          {
+            "source_id": "waiqi-20260921-e694e8e8442b5e60",
+            "provider": "icims_jibe",
+            "status": "complete",
+            "pages": 1,
+            "server_total": 23,
+            "jobs_observed": 7,
+            "reason": "returned_rows_reconcile_server_total",
+            "collection_complete": true,
+            "incomplete_bodies": 0,
+            "scope": "Mainland China positions in this public iCIMS Jibe portal"
+          }
+        ]
+      },
+      "search_mode": "campus",
+      "source_config_fingerprint": "44b75af2ace2431423d5d335cf33a19bf8d65bcc27b2a88421b8f13cc373c4b6",
+      "formal_jobs_observed": 0,
+      "target_jobs_observed": 0,
+      "unknown_location_jobs": 0,
+      "uncertain_type_or_status_jobs": 1,
+      "city_coverage_complete": false,
+      "last_refresh_at": "2026-09-20T16:18:06.218Z",
+      "last_refresh_status": "partial",
+      "last_refresh_reason": "Only archived official jobs observed during Waiqi source verification; existing cities retained; no Waiqi city hints used",
+      "result_file": "artifacts/waiqi-2026-09-20/city-seed/campus/waiqi-company-41283.json",
+      "city_evidence": [],
+      "retained_previous_cities": [],
+      "city_freshness": "unknown",
+      "city_evidence_total": 0,
+      "city_evidence_scope": "up_to_two_examples_per_city; complete_observations_in_result_file",
+      "seed_origin": "waiqi_official_api_archive",
+      "seed_observation_files": [
+        "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-admission\\admitted.json"
       ]
     }
   ],

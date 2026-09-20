@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-20T15:35:28.143Z",
+  "updated_at": "2026-09-20T16:23:47.415Z",
   "companies": [
     {
       "company_id": "company-f93e5a384c54",
@@ -66196,6 +66196,15 @@
     {
       "company_id": "waiqi-routing-a21c6b534ecf",
       "display_name": "达能（中国）食品饮料有限公司",
+      "business_tags": [],
+      "business_summary": "",
+      "status": "unknown",
+      "evidence": [],
+      "reason": "招聘主体已核实，主营业务标签待公开资料补核"
+    },
+    {
+      "company_id": "waiqi-company-41283",
+      "display_name": "BISSELL 必胜益康",
       "business_tags": [],
       "business_summary": "",
       "status": "unknown",

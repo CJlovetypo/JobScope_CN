@@ -454766,9 +454766,325 @@
           ]
         }
       ]
+    },
+    {
+      "company_id": "waiqi-company-41283",
+      "display_name": "BISSELL 必胜益康",
+      "aliases": [
+        "必胜益康家居用品（深圳）有限公司",
+        "必胜益康",
+        "BISSELL 必胜益康",
+        "BISSELL",
+        "BISSELL Asia Development Center (Shenzhen) Limited"
+      ],
+      "provider": "icims_jibe",
+      "category": "consumer",
+      "industry_tags": [
+        "consumer"
+      ],
+      "primary_entry_url": "https://careers.bissell.com/jobs",
+      "api_config": {
+        "origin": "https://careers.bissell.com",
+        "language": "en-US"
+      },
+      "source_id": "waiqi-20260921-e694e8e8442b5e60",
+      "source_origin": "waiqi-2026-09-21-live-refresh",
+      "verification_status": "verified_api_full_jd",
+      "verified_at": "2026-09-20T16:18:06.218Z",
+      "admitted": true,
+      "source_verification": {
+        "checked_at": "2026-09-20T16:18:06.218Z",
+        "method": "waiqi_current_job_to_anonymous_icims_jibe_api",
+        "complete_jd_samples": 7,
+        "observed_jobs": 7,
+        "identity_basis": "Waiqi 当前岗位直达 careers.bissell.com；官方公开 iCIMS/Jibe API 的 hiring_organization 与 client_code 均为 BISSELL，并返回 7 个中国岗位及完整正文。",
+        "identity_evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\bissell-api-review\\runtime\\1d4bdcee-e2f-00001.json",
+        "proof_directory": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\bissell-api-review\\runtime",
+        "scope": "Mainland China positions in this public iCIMS Jibe portal",
+        "coverage": {
+          "status": "complete",
+          "collection_complete": true,
+          "pages": 1,
+          "server_total": 23,
+          "jobs_observed": 7,
+          "list_complete": true,
+          "reason": "returned_rows_reconcile_server_total",
+          "country_filter": {
+            "country_code": "CN"
+          },
+          "scope": "Mainland China positions in this public iCIMS Jibe portal",
+          "excluded_country_rows": [
+            {
+              "job_id": "8884",
+              "country": "Netherlands",
+              "country_code": "NL"
+            },
+            {
+              "job_id": "8895",
+              "country": "United States",
+              "country_code": "US"
+            },
+            {
+              "job_id": "8789",
+              "country": "United States",
+              "country_code": "US"
+            },
+            {
+              "job_id": "8830",
+              "country": "United States",
+              "country_code": "US"
+            },
+            {
+              "job_id": "8933",
+              "country": "United States",
+              "country_code": "US"
+            },
+            {
+              "job_id": "8390",
+              "country": "United States",
+              "country_code": "US"
+            },
+            {
+              "job_id": "8917",
+              "country": "United States",
+              "country_code": "US"
+            },
+            {
+              "job_id": "8929",
+              "country": "United States",
+              "country_code": "US"
+            },
+            {
+              "job_id": "8930",
+              "country": "United States",
+              "country_code": "US"
+            },
+            {
+              "job_id": "8909",
+              "country": "United States",
+              "country_code": "US"
+            },
+            {
+              "job_id": "8944",
+              "country": "United States",
+              "country_code": "US"
+            },
+            {
+              "job_id": "8904",
+              "country": "Netherlands",
+              "country_code": "NL"
+            },
+            {
+              "job_id": "8927",
+              "country": "United States",
+              "country_code": "US"
+            },
+            {
+              "job_id": "8924",
+              "country": "United States",
+              "country_code": "US"
+            },
+            {
+              "job_id": "8906",
+              "country": "United States",
+              "country_code": "US"
+            },
+            {
+              "job_id": "8912",
+              "country": "United States",
+              "country_code": "US"
+            }
+          ],
+          "incomplete_bodies": 0
+        }
+      },
+      "identity_verification": {
+        "identity_verified": true,
+        "basis": "Waiqi 当前岗位直达 BISSELL 官方招聘域名；公开 API 明确返回 BISSELL Homecare / client_code=bissell。",
+        "evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\bissell-api-review\\runtime\\1d4bdcee-e2f-00001.json",
+        "verified_at": "2026-09-20T16:18:06.218Z"
+      },
+      "discovery_provenance": {
+        "dataset": "waiqi-company-20260921",
+        "waiqi_company_id": "41283",
+        "company_url": "https://waiqi.com/company/detail?id=41283",
+        "observed_link": "https://careers.bissell.com/jobs/8715",
+        "reported_position_count": 1,
+        "returned_position_count": 1
+      },
+      "validated_api_request_examples": [
+        {
+          "method": "GET",
+          "url": "https://careers.bissell.com/api/jobs?limit=100&offset=0&lang=en-US",
+          "body": null,
+          "purpose": "job_list",
+          "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\bissell-api-review\\runtime\\1d4bdcee-e2f-00001.json",
+          "response_sha256": "0bcc384bb53e17648b18a3ccd6857b10e304a594a65834882fa2f75c59e76e4a",
+          "checked_at": "2026-09-20T16:18:04.107Z"
+        }
+      ],
+      "recruitment_sources": [
+        {
+          "company_id": "waiqi-company-41283",
+          "display_name": "BISSELL 必胜益康",
+          "aliases": [
+            "必胜益康家居用品（深圳）有限公司",
+            "必胜益康",
+            "BISSELL 必胜益康",
+            "BISSELL",
+            "BISSELL Asia Development Center (Shenzhen) Limited"
+          ],
+          "provider": "icims_jibe",
+          "category": "consumer",
+          "industry_tags": [
+            "consumer"
+          ],
+          "primary_entry_url": "https://careers.bissell.com/jobs",
+          "api_config": {
+            "origin": "https://careers.bissell.com",
+            "language": "en-US"
+          },
+          "source_id": "waiqi-20260921-e694e8e8442b5e60",
+          "source_origin": "waiqi-2026-09-21-live-refresh",
+          "verification_status": "verified_api_full_jd",
+          "verified_at": "2026-09-20T16:18:06.218Z",
+          "admitted": true,
+          "source_verification": {
+            "checked_at": "2026-09-20T16:18:06.218Z",
+            "method": "waiqi_current_job_to_anonymous_icims_jibe_api",
+            "complete_jd_samples": 7,
+            "observed_jobs": 7,
+            "identity_basis": "Waiqi 当前岗位直达 careers.bissell.com；官方公开 iCIMS/Jibe API 的 hiring_organization 与 client_code 均为 BISSELL，并返回 7 个中国岗位及完整正文。",
+            "identity_evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\bissell-api-review\\runtime\\1d4bdcee-e2f-00001.json",
+            "proof_directory": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\bissell-api-review\\runtime",
+            "scope": "Mainland China positions in this public iCIMS Jibe portal",
+            "coverage": {
+              "status": "complete",
+              "collection_complete": true,
+              "pages": 1,
+              "server_total": 23,
+              "jobs_observed": 7,
+              "list_complete": true,
+              "reason": "returned_rows_reconcile_server_total",
+              "country_filter": {
+                "country_code": "CN"
+              },
+              "scope": "Mainland China positions in this public iCIMS Jibe portal",
+              "excluded_country_rows": [
+                {
+                  "job_id": "8884",
+                  "country": "Netherlands",
+                  "country_code": "NL"
+                },
+                {
+                  "job_id": "8895",
+                  "country": "United States",
+                  "country_code": "US"
+                },
+                {
+                  "job_id": "8789",
+                  "country": "United States",
+                  "country_code": "US"
+                },
+                {
+                  "job_id": "8830",
+                  "country": "United States",
+                  "country_code": "US"
+                },
+                {
+                  "job_id": "8933",
+                  "country": "United States",
+                  "country_code": "US"
+                },
+                {
+                  "job_id": "8390",
+                  "country": "United States",
+                  "country_code": "US"
+                },
+                {
+                  "job_id": "8917",
+                  "country": "United States",
+                  "country_code": "US"
+                },
+                {
+                  "job_id": "8929",
+                  "country": "United States",
+                  "country_code": "US"
+                },
+                {
+                  "job_id": "8930",
+                  "country": "United States",
+                  "country_code": "US"
+                },
+                {
+                  "job_id": "8909",
+                  "country": "United States",
+                  "country_code": "US"
+                },
+                {
+                  "job_id": "8944",
+                  "country": "United States",
+                  "country_code": "US"
+                },
+                {
+                  "job_id": "8904",
+                  "country": "Netherlands",
+                  "country_code": "NL"
+                },
+                {
+                  "job_id": "8927",
+                  "country": "United States",
+                  "country_code": "US"
+                },
+                {
+                  "job_id": "8924",
+                  "country": "United States",
+                  "country_code": "US"
+                },
+                {
+                  "job_id": "8906",
+                  "country": "United States",
+                  "country_code": "US"
+                },
+                {
+                  "job_id": "8912",
+                  "country": "United States",
+                  "country_code": "US"
+                }
+              ],
+              "incomplete_bodies": 0
+            }
+          },
+          "identity_verification": {
+            "identity_verified": true,
+            "basis": "Waiqi 当前岗位直达 BISSELL 官方招聘域名；公开 API 明确返回 BISSELL Homecare / client_code=bissell。",
+            "evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\bissell-api-review\\runtime\\1d4bdcee-e2f-00001.json",
+            "verified_at": "2026-09-20T16:18:06.218Z"
+          },
+          "discovery_provenance": {
+            "dataset": "waiqi-company-20260921",
+            "waiqi_company_id": "41283",
+            "company_url": "https://waiqi.com/company/detail?id=41283",
+            "observed_link": "https://careers.bissell.com/jobs/8715",
+            "reported_position_count": 1,
+            "returned_position_count": 1
+          },
+          "validated_api_request_examples": [
+            {
+              "method": "GET",
+              "url": "https://careers.bissell.com/api/jobs?limit=100&offset=0&lang=en-US",
+              "body": null,
+              "purpose": "job_list",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\bissell-api-review\\runtime\\1d4bdcee-e2f-00001.json",
+              "response_sha256": "0bcc384bb53e17648b18a3ccd6857b10e304a594a65834882fa2f75c59e76e4a",
+              "checked_at": "2026-09-20T16:18:04.107Z"
+            }
+          ]
+        }
+      ]
     }
   ],
-  "updated_at": "2026-09-20T15:35:04.523Z",
+  "updated_at": "2026-09-20T16:23:21.345Z",
   "industry_counts": {
     "internet": 434,
     "smart_hardware": 258,
@@ -454782,7 +455098,7 @@
     "aerospace_transport_equipment": 89,
     "professional_services": 186,
     "logistics_trade": 107,
-    "consumer": 288,
+    "consumer": 289,
     "materials_chemicals": 154,
     "education": 28,
     "media_tourism": 81,
@@ -454795,5 +455111,5 @@
   "latest_wps_expansion_verified_on": "2026-09-19T04:32:07.220Z",
   "latest_deep_api_review_at": "2026-09-19T09:56:39.408Z",
   "latest_interface_contract_review_at": "2026-09-19T07:27:18.465Z",
-  "latest_waiqi_expansion_verified_at": "2026-09-20T15:35:04.523Z"
+  "latest_waiqi_expansion_verified_at": "2026-09-20T16:23:21.345Z"
 }

@@ -9,7 +9,7 @@ import {collectCommon} from './lib/providers-common.mjs';
 const DEFAULT_INPUT=path.resolve('shared/job-search-core/assets/waiqi-source-candidates.json');
 const DEFAULT_OUTPUT=path.resolve('campus-job-fit/artifacts/waiqi-2026-09-20/zero-position-official-discovery');
 const locale=/^(?:en|en-us|en-gb|zh|zh-cn|zh-hans|de|fr|ja|ko)$/i;
-const atsHost=/(?:myworkdayjobs\.com|smartrecruiters\.com|greenhouse\.io|mokahr\.com|zhiye\.com|hotjob\.cn|jobs\.(?:feishu\.cn|f\.mioffice\.cn)|oraclecloud\.com)$/i;
+const atsHost=/(?:myworkdayjobs\.com|smartrecruiters\.com|greenhouse\.io|mokahr\.com|zhiye\.com|hotjob\.cn|jobs\.(?:feishu\.cn|f\.mioffice\.cn)|oraclecloud\.com|careers\.bissell\.com)$/i;
 const careerWords=/(?:career|careers|job|jobs|join[\s_-]*us|work[\s_-]*with[\s_-]*us|vacanc|opportunit|recruit|talent|招聘|招贤|人才|加入我们|工作机会|职位)/i;
 const rejectAsset=/\.(?:js|css|png|jpe?g|gif|svg|ico|woff2?|ttf|map|pdf|zip)(?:$|[?#])/i;
 const commonWords=new Set(['company','group','limited','ltd','china','chinese','international','global','holdings','technology','technologies','management','corporation','inc','shanghai','beijing','suzhou','guangzhou']);
@@ -65,6 +65,9 @@ export function atsConfiguration(entry){
     const board_token=segments.find(x=>!locale.test(x)&&!['embed','jobs'].includes(x.toLowerCase()));if(!board_token)return null;
     return {provider:'greenhouse',entry_url:u.href,api:{url:'https://boards-api.greenhouse.io/v1/boards/'+encodeURIComponent(board_token)+'/jobs?content=false',method:'GET'},api_config:{board_token}};
   }
+  if(host==='careers.bissell.com'&&segments[0]==='jobs'){
+    return {provider:'icims_jibe',entry_url:u.href,api:{url:u.origin+'/api/jobs?limit=100&offset=0&lang=en-US',method:'GET'},api_config:{origin:u.origin,language:'en-US'}};
+  }
   const oracle=segments.findIndex(x=>x.toLowerCase()==='sites');
   if(/\.oraclecloud\.com$/.test(host)&&oracle>=0&&segments[oracle+1]){
     const site=segments[oracle+1];return {provider:'oracle_recruiting',entry_url:u.href,api:{url:u.origin+'/hcmRestApi/resources/latest/recruitingCEJobRequisitions?onlyData=true&expand=requisitionList.secondaryLocations&finder=findReqs;siteNumber='+encodeURIComponent(site)+',facetsList=NONE,limit=1,offset=0',method:'GET'},api_config:{origin:u.origin,site}};
@@ -77,6 +80,7 @@ function responseValid(config,response){
   if(config.provider==='workday')return {ok:Array.isArray(d.jobPostings)&&Number.isFinite(Number(d.total)),reported_jobs:Number(d.total),reason:'jobPostings array and numeric total'};
   if(config.provider==='smartrecruiters')return {ok:Array.isArray(d.content)&&Number.isFinite(Number(d.totalFound)),reported_jobs:Number(d.totalFound),reason:'content array and numeric totalFound'};
   if(config.provider==='greenhouse')return {ok:Array.isArray(d.jobs),reported_jobs:Array.isArray(d.jobs)?d.jobs.length:null,reason:'jobs array'};
+  if(config.provider==='icims_jibe')return {ok:Array.isArray(d.jobs)&&Number.isFinite(Number(d.totalCount)),reported_jobs:Number(d.totalCount),reason:'jobs array and numeric totalCount'};
   if(config.provider==='oracle_recruiting'){const item=d.items?.[0];return {ok:Array.isArray(item?.requisitionList)&&Number.isFinite(Number(item?.TotalJobsCount)),reported_jobs:Number(item?.TotalJobsCount),reason:'requisitionList and numeric TotalJobsCount'};}
   return {ok:true,reported_jobs:null,reason:'public provider JSON response; provider-specific collection follows'};
 }

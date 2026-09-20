@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "mode": "social",
-  "checked_at": "2026-09-20T15:35:29.780Z",
+  "checked_at": "2026-09-20T16:33:20.823Z",
   "note": "方向路由与证据的派生索引；不是独立来源库，不控制启停。",
   "configurations": [
     {
@@ -43723,6 +43723,18 @@
       "entry": "https://app.mokahr.com/campus-recruitment/danone/170511",
       "strategy": "public_type_routing",
       "scope": "validate_target_at_runtime",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "waiqi-company-41283",
+      "display_name": "BISSELL 必胜益康",
+      "source_id": "waiqi-20260921-e694e8e8442b5e60",
+      "provider": "icims_jibe",
+      "entry": "https://careers.bissell.com/jobs",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
       "target_validation_status": "untested",
       "enabled": true,
       "proof_file": null

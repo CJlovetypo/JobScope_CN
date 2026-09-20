@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-20T15:35:27.118Z",
+  "updated_at": "2026-09-20T16:29:48.313Z",
   "companies": [
     {
       "company_id": "company-f93e5a384c54",
@@ -431160,6 +431160,116 @@
       "seed_origin": "waiqi_official_api_archive",
       "seed_observation_files": [
         "campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\b208beef3b9f406f\\verification.json"
+      ]
+    },
+    {
+      "company_id": "waiqi-company-41283",
+      "display_name": "BISSELL 必胜益康",
+      "cities": [
+        "深圳",
+        "苏州"
+      ],
+      "updated_at": "2026-09-20T16:29:32.993Z",
+      "coverage": {
+        "status": "partial",
+        "pages": 1,
+        "server_total": null,
+        "jobs_observed": 7,
+        "reason": "Only archived official jobs observed during Waiqi source verification; existing cities retained; no Waiqi city hints used",
+        "collection_complete": false,
+        "details_failed": 0,
+        "scope": "Offline seed from archived verified official API jobs; historical observations, not a live refresh or exhaustive company inventory",
+        "contexts": [
+          {
+            "source_id": "waiqi-20260921-e694e8e8442b5e60",
+            "provider": "icims_jibe",
+            "status": "complete",
+            "pages": 1,
+            "server_total": 23,
+            "jobs_observed": 7,
+            "reason": "returned_rows_reconcile_server_total",
+            "collection_complete": true,
+            "incomplete_bodies": 0,
+            "scope": "Mainland China positions in this public iCIMS Jibe portal"
+          }
+        ]
+      },
+      "search_mode": "social",
+      "source_config_fingerprint": "46eada2b405565dae301ad444b272bf8799c0a3e9e247ea5f72c9aac9f55be4e",
+      "formal_jobs_observed": 7,
+      "target_jobs_observed": 7,
+      "unknown_location_jobs": 0,
+      "uncertain_type_or_status_jobs": 0,
+      "city_coverage_complete": false,
+      "last_refresh_at": "2026-09-20T16:29:32.993Z",
+      "last_refresh_status": "partial",
+      "last_refresh_reason": "Only archived official jobs observed during Waiqi source verification; existing cities retained; no Waiqi city hints used",
+      "result_file": "../campus-job-fit/artifacts/waiqi-2026-09-20/city-seed/social/waiqi-company-41283.json",
+      "city_evidence": [
+        {
+          "job_id": "8715",
+          "title": "Program Manager",
+          "cities": [
+            "苏州"
+          ],
+          "locations_raw": [
+            "Suzhou, China",
+            "Suzhou PRC",
+            "Suzhou, Jiangsu, China"
+          ],
+          "official_url": "https://careers.bissell.com/jobs/8715?lang=zh-cn",
+          "raw_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\bissell-api-review\\runtime-final3\\cb14d43b-9f7-00001.json"
+        },
+        {
+          "job_id": "8898",
+          "title": "Category Manager - Finished Goods",
+          "cities": [
+            "深圳"
+          ],
+          "locations_raw": [
+            "Shenzhen, China",
+            "Shenzhen PRC",
+            "Shenzhen, Guangdong, China"
+          ],
+          "official_url": "https://careers.bissell.com/jobs/8898?lang=en-us",
+          "raw_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\bissell-api-review\\runtime-final3\\cb14d43b-9f7-00001.json"
+        },
+        {
+          "job_id": "8858",
+          "title": "Associate Specialist - Engineering",
+          "cities": [
+            "深圳"
+          ],
+          "locations_raw": [
+            "Shenzhen, China",
+            "Shenzhen PRC",
+            "Shenzhen, Guangdong, China"
+          ],
+          "official_url": "https://careers.bissell.com/jobs/8858?lang=en-us",
+          "raw_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\bissell-api-review\\runtime-final3\\cb14d43b-9f7-00001.json"
+        },
+        {
+          "job_id": "8764",
+          "title": "Sr. Engineer - Tooling and Injection Molding",
+          "cities": [
+            "苏州"
+          ],
+          "locations_raw": [
+            "Suzhou, China",
+            "Suzhou PRC",
+            "Suzhou, Jiangsu, China"
+          ],
+          "official_url": "https://careers.bissell.com/jobs/8764?lang=en-us",
+          "raw_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\bissell-api-review\\runtime-final3\\cb14d43b-9f7-00001.json"
+        }
+      ],
+      "retained_previous_cities": [],
+      "city_freshness": "partial",
+      "city_evidence_total": 7,
+      "city_evidence_scope": "up_to_two_examples_per_city; complete_observations_in_result_file",
+      "seed_origin": "waiqi_official_api_archive",
+      "seed_observation_files": [
+        "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\bissell-api-review\\runtime\\verification.json"
       ]
     }
   ],
