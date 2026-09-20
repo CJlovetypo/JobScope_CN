@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-20T15:18:58.132Z",
+  "updated_at": "2026-09-20T15:35:22.806Z",
   "companies": [
     {
       "company_id": "company-f93e5a384c54",
@@ -348560,6 +348560,156 @@
       "seed_origin": "waiqi_official_api_archive",
       "seed_observation_files": [
         "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-admission\\admitted.json"
+      ]
+    },
+    {
+      "company_id": "waiqi-routing-0770d2ec31de",
+      "display_name": "北京领格卓越科技有限公司",
+      "cities": [],
+      "updated_at": "2026-09-20T15:23:21.481Z",
+      "coverage": {
+        "status": "partial",
+        "pages": 0,
+        "server_total": null,
+        "jobs_observed": 2,
+        "reason": "Only archived official jobs observed during Waiqi source verification; existing cities retained; no Waiqi city hints used",
+        "collection_complete": false,
+        "details_failed": 0,
+        "scope": "Offline seed from archived verified official API jobs; historical observations, not a live refresh or exhaustive company inventory",
+        "contexts": [
+          {
+            "source_id": "waiqi-routing-a848210d527881d9",
+            "provider": "workday",
+            "status": "partial",
+            "server_total": 91
+          }
+        ]
+      },
+      "search_mode": "campus",
+      "source_config_fingerprint": "b0b75871d9b023333e5dfc6c525e02cb7e4987d31cfa4065bb640d30214b361c",
+      "formal_jobs_observed": 0,
+      "target_jobs_observed": 0,
+      "unknown_location_jobs": 0,
+      "uncertain_type_or_status_jobs": 2,
+      "city_coverage_complete": false,
+      "last_refresh_at": "2026-09-20T15:23:21.481Z",
+      "last_refresh_status": "partial",
+      "last_refresh_reason": "Only archived official jobs observed during Waiqi source verification; existing cities retained; no Waiqi city hints used",
+      "result_file": "artifacts/waiqi-2026-09-20/city-seed/campus/waiqi-routing-0770d2ec31de.json",
+      "city_evidence": [],
+      "retained_previous_cities": [],
+      "city_freshness": "unknown",
+      "city_evidence_total": 0,
+      "city_evidence_scope": "up_to_two_examples_per_city; complete_observations_in_result_file",
+      "seed_origin": "waiqi_official_api_archive",
+      "seed_observation_files": [
+        "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-admission\\admitted.json"
+      ]
+    },
+    {
+      "company_id": "waiqi-routing-dbe601d28a34",
+      "display_name": "雷诺斯国际货运代理（上海）有限公司",
+      "cities": [],
+      "updated_at": "2026-09-20T15:26:16.065Z",
+      "coverage": {
+        "status": "partial",
+        "pages": 0,
+        "server_total": null,
+        "jobs_observed": 2,
+        "reason": "Only archived official jobs observed during Waiqi source verification; existing cities retained; no Waiqi city hints used",
+        "collection_complete": false,
+        "details_failed": 0,
+        "scope": "Offline seed from archived verified official API jobs; historical observations, not a live refresh or exhaustive company inventory",
+        "contexts": [
+          {
+            "source_id": "waiqi-routing-edc1b812e16da41b",
+            "provider": "workday",
+            "status": "partial",
+            "server_total": 27
+          }
+        ]
+      },
+      "search_mode": "campus",
+      "source_config_fingerprint": "660c8ab62cb936eaa48ad6d357e5d550186a01931d25031e12853d4afa649eed",
+      "formal_jobs_observed": 0,
+      "target_jobs_observed": 0,
+      "unknown_location_jobs": 0,
+      "uncertain_type_or_status_jobs": 2,
+      "city_coverage_complete": false,
+      "last_refresh_at": "2026-09-20T15:26:16.065Z",
+      "last_refresh_status": "partial",
+      "last_refresh_reason": "Only archived official jobs observed during Waiqi source verification; existing cities retained; no Waiqi city hints used",
+      "result_file": "artifacts/waiqi-2026-09-20/city-seed/campus/waiqi-routing-dbe601d28a34.json",
+      "city_evidence": [],
+      "retained_previous_cities": [],
+      "city_freshness": "unknown",
+      "city_evidence_total": 0,
+      "city_evidence_scope": "up_to_two_examples_per_city; complete_observations_in_result_file",
+      "seed_origin": "waiqi_official_api_archive",
+      "seed_observation_files": [
+        "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-admission\\admitted.json"
+      ]
+    },
+    {
+      "company_id": "waiqi-routing-a21c6b534ecf",
+      "display_name": "达能（中国）食品饮料有限公司",
+      "cities": [
+        "广州"
+      ],
+      "updated_at": "2026-09-20T13:45:09.812Z",
+      "coverage": {
+        "status": "partial",
+        "pages": 1,
+        "server_total": null,
+        "jobs_observed": 1,
+        "reason": "Only archived official jobs observed during Waiqi source verification; existing cities retained; no Waiqi city hints used",
+        "collection_complete": false,
+        "details_failed": 0,
+        "scope": "Offline seed from archived verified official API jobs; historical observations, not a live refresh or exhaustive company inventory",
+        "contexts": [
+          {
+            "source_id": "waiqi-routing-b208beef3b9f406f",
+            "provider": "moka",
+            "status": "partial",
+            "pages": 1,
+            "server_total": 12,
+            "jobs_observed": 12,
+            "reason": "unique_ids_reconcile_server_total; 4 formal open jobs still lack complete JD bodies"
+          }
+        ]
+      },
+      "search_mode": "campus",
+      "source_config_fingerprint": "aa11e65238d8f12f6e8e6c35df712b2c2ef37028153edad957b31d15f6c43b3b",
+      "formal_jobs_observed": 1,
+      "target_jobs_observed": 1,
+      "unknown_location_jobs": 0,
+      "uncertain_type_or_status_jobs": 0,
+      "city_coverage_complete": false,
+      "last_refresh_at": "2026-09-20T13:45:09.812Z",
+      "last_refresh_status": "partial",
+      "last_refresh_reason": "Only archived official jobs observed during Waiqi source verification; existing cities retained; no Waiqi city hints used",
+      "result_file": "artifacts/waiqi-2026-09-20/city-seed/campus/waiqi-routing-a21c6b534ecf.json",
+      "city_evidence": [
+        {
+          "job_id": "df1b15c1-8586-4ea2-922a-5fdc318b1ca9",
+          "title": "医药管培生-达能成人医学营养-广州",
+          "cities": [
+            "广州"
+          ],
+          "locations_raw": [
+            "广东·广州市"
+          ],
+          "official_url": "https://app.mokahr.com/campus-recruitment/danone/170511#/job/df1b15c1-8586-4ea2-922a-5fdc318b1ca9",
+          "raw_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\b208beef3b9f406f\\http\\1e5636af-89d-00002-decoded.json"
+        }
+      ],
+      "retained_previous_cities": [],
+      "city_freshness": "partial",
+      "city_evidence_total": 1,
+      "city_evidence_scope": "up_to_two_examples_per_city; complete_observations_in_result_file",
+      "seed_origin": "waiqi_official_api_archive",
+      "seed_observation_files": [
+        "campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\b208beef3b9f406f\\verification.json"
       ]
     }
   ],

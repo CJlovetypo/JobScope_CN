@@ -9,6 +9,6 @@ test('Oracle training goals and open-position placeholders do not become full JD
  for(const fields of [{ExternalResponsibilitiesStr:'Support technical analysis and development with engineering teams.',ExternalQualificationsStr:'Learning Objectives\nLearn about production systems and our inclusive culture.'},{ExternalResponsibilitiesStr:'Open location, open position.',ExternalQualificationsStr:'Open location, open position.'}])assert.equal(normalizeOracleNowcoder({Id:'1',Title:'Talent Pool',...fields},source,{}).body_complete,false);
 });
 test('explicit applicant-condition headings separate requirements without matching casual inline if-you prose',()=>{
- for(const heading of ['如果你是：','如果你：','我们需要你：']){const p=splitCommonBody('岗位职责：负责产品需求调研和方案设计，与工程团队协作完成项目交付。\n'+heading+'\n2027届应届毕业生，本科及以上学历，具备良好沟通能力。');assert(p.body_complete);assert.match(p.requirements,/2027届应届毕业生/);}
+ for(const heading of ['如果你是：','如果你：','我们需要你：','我们期待这样的你：']){const p=splitCommonBody('岗位职责：负责产品需求调研和方案设计，与工程团队协作完成项目交付。\n'+heading+'\n2027届应届毕业生，本科及以上学历，具备良好沟通能力。');assert(p.body_complete);assert.match(p.requirements,/2027届应届毕业生/);}
  assert.equal(splitCommonBody('岗位职责：负责软件开发，如果你有兴趣可以联系我们了解团队文化和工作方式。').body_complete,false);
 });

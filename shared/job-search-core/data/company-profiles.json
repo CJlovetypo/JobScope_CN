@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-20T15:13:50.634Z",
+  "updated_at": "2026-09-20T15:35:28.143Z",
   "companies": [
     {
       "company_id": "company-f93e5a384c54",
@@ -118174,6 +118174,90 @@
     {
       "company_id": "waiqi-routing-05dcacf5f2bc1dcd",
       "display_name": "科普兰",
+      "business": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      },
+      "workforce": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      },
+      "capital": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      }
+    },
+    {
+      "company_id": "waiqi-routing-0770d2ec31de",
+      "display_name": "北京领格卓越科技有限公司",
+      "business": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      },
+      "workforce": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      },
+      "capital": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      }
+    },
+    {
+      "company_id": "waiqi-routing-dbe601d28a34",
+      "display_name": "雷诺斯国际货运代理（上海）有限公司",
+      "business": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      },
+      "workforce": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      },
+      "capital": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      }
+    },
+    {
+      "company_id": "waiqi-routing-a21c6b534ecf",
+      "display_name": "达能（中国）食品饮料有限公司",
       "business": {
         "value": "",
         "status": "missing",

@@ -454058,9 +454058,717 @@
           }
         }
       ]
+    },
+    {
+      "company_id": "waiqi-routing-0770d2ec31de",
+      "display_name": "北京领格卓越科技有限公司",
+      "aliases": [
+        "领格",
+        "PPLingo 领格",
+        "PPLingo",
+        "LingoAce"
+      ],
+      "provider": "workday",
+      "category": "education",
+      "industry_tags": [
+        "education"
+      ],
+      "primary_entry_url": "https://pplingo.wd3.myworkdayjobs.com/External/job/Shanghai/Agent_R20261909",
+      "api_config": {
+        "origin": "https://pplingo.wd3.myworkdayjobs.com",
+        "tenant": "pplingo",
+        "site": "External"
+      },
+      "source_id": "waiqi-routing-a848210d527881d9",
+      "source_origin": "waiqi-2026-09-20-remaining-live-review",
+      "verification_status": "verified_api_full_jd",
+      "verified_at": "2026-09-20T15:23:21.481Z",
+      "admitted": true,
+      "source_verification": {
+        "checked_at": "2026-09-20T15:23:21.481Z",
+        "method": "waiqi_current_job_to_live_anonymous_official_api_full_jd_plus_official_career_page_identity",
+        "complete_jd_samples": 2,
+        "observed_jobs": 91,
+        "identity_basis": "Waiqi 当前岗位直达 pplingo Workday 租户；官方招聘页介绍明确标识 LingoAce，当前中国岗位详情返回上海领格卓越人工智能科技有限公司、武汉卓越教育科技有限公司等领格关联招聘主体。",
+        "identity_evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\remaining-workday-live\\d29ya2RheXxodHRwczovL3BwbGluZ28ud2QzLm15d29ya2RheWpvYnMuY29tfHBwbGluZ298ZXh0ZXJu\\http\\eb62d0bb-8d3-00007.json",
+        "proof_directory": "campus-job-fit\\artifacts\\waiqi-2026-09-20\\remaining-workday-live\\d29ya2RheXxodHRwczovL3BwbGluZ28ud2QzLm15d29ya2RheWpvYnMuY29tfHBwbGluZ298ZXh0ZXJu",
+        "official_identity_url": "https://pplingo.wd3.myworkdayjobs.com/External",
+        "official_identity_response_sha256": "b02907fc851e3b4fba2de11593c4412c2906bbcd4e3330f288e03f4a7bbe71e9",
+        "scope": "Observed mainland location facets; per-detail country confirmed China; country-wide coverage remains partial",
+        "coverage": {
+          "status": "partial",
+          "server_total": 91,
+          "mainland_jobs_observed": 91,
+          "complete_mainland_jd": true,
+          "list_complete": true
+        }
+      },
+      "identity_verification": {
+        "identity_verified": true,
+        "basis": "Waiqi 当前岗位直达 pplingo Workday 租户；官方招聘页介绍明确标识 LingoAce，当前中国岗位详情返回上海领格卓越人工智能科技有限公司、武汉卓越教育科技有限公司等领格关联招聘主体。",
+        "evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\remaining-workday-live\\d29ya2RheXxodHRwczovL3BwbGluZ28ud2QzLm15d29ya2RheWpvYnMuY29tfHBwbGluZ298ZXh0ZXJu\\http\\eb62d0bb-8d3-00007.json",
+        "evidence_url": "https://pplingo.wd3.myworkdayjobs.com/External",
+        "official_brand": "LingoAce",
+        "response_sha256": "b02907fc851e3b4fba2de11593c4412c2906bbcd4e3330f288e03f4a7bbe71e9",
+        "verified_at": "2026-09-20T15:23:21.481Z"
+      },
+      "discovery_provenance": {
+        "dataset": "waiqi-company-20260920",
+        "waiqi_company_id": "37577",
+        "company_url": "https://waiqi.com/company/detail?id=37577",
+        "observed_link": "https://pplingo.wd3.myworkdayjobs.com/External/job/Shanghai/Agent_R20261909",
+        "reported_position_count": 14,
+        "returned_position_count": 14,
+        "context_key": "workday|https://pplingo.wd3.myworkdayjobs.com|pplingo|external"
+      },
+      "validated_api_request_examples": [
+        {
+          "method": "POST",
+          "url": "https://pplingo.wd3.myworkdayjobs.com/wday/cxs/pplingo/External/jobs",
+          "headers": {
+            "accept": "application/json, text/plain, */*",
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+            "Content-Type": "application/json"
+          },
+          "body": {
+            "appliedFacets": {
+              "locations": [
+                "c2ced947ab5210006150a331665b0000",
+                "c2ced947ab521000613bcbb119810000",
+                "2d8f36390bb81001917feab8246e0000",
+                "c2ced947ab5210006126f97e7ae80000"
+              ]
+            },
+            "limit": 20,
+            "offset": 0,
+            "searchText": ""
+          },
+          "purpose": "location_filtered_job_list",
+          "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\remaining-workday-live\\d29ya2RheXxodHRwczovL3BwbGluZ28ud2QzLm15d29ya2RheWpvYnMuY29tfHBwbGluZ298ZXh0ZXJu\\http\\eb62d0bb-8d3-00002.json",
+          "response_sha256": "1dc0e3e74f77d426feebfe8e7588963efa8a52ae07302d8d49d10df93ba7fe99",
+          "checked_at": "2026-09-20T15:23:14.129Z"
+        },
+        {
+          "method": "GET",
+          "url": "https://pplingo.wd3.myworkdayjobs.com/wday/cxs/pplingo/External/job/Shanghai/Agent_R20261909",
+          "headers": {
+            "accept": "application/json, text/plain, */*",
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+          },
+          "body": null,
+          "purpose": "job_detail",
+          "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\remaining-workday-live\\d29ya2RheXxodHRwczovL3BwbGluZ28ud2QzLm15d29ya2RheWpvYnMuY29tfHBwbGluZ298ZXh0ZXJu\\http\\eb62d0bb-8d3-00007.json",
+          "response_sha256": "bebefa58bede88a82147465db3c6cb18454a806eb25bba7523426b3b42b8c8d1",
+          "checked_at": "2026-09-20T15:23:18.801Z"
+        }
+      ],
+      "public_bootstrap_requests": [
+        {
+          "method": "GET",
+          "url": "https://pplingo.wd3.myworkdayjobs.com/External",
+          "purpose": "public_configuration_bootstrap",
+          "response_file": "campus-job-fit/artifacts/waiqi-2026-09-20/remaining-workday-live/pplingo-page.html",
+          "response_sha256": "b02907fc851e3b4fba2de11593c4412c2906bbcd4e3330f288e03f4a7bbe71e9",
+          "checked_at": "2026-09-20T15:23:21.481Z"
+        }
+      ],
+      "recruitment_sources": [
+        {
+          "company_id": "waiqi-routing-0770d2ec31de",
+          "display_name": "北京领格卓越科技有限公司",
+          "aliases": [
+            "领格",
+            "PPLingo 领格",
+            "PPLingo",
+            "LingoAce"
+          ],
+          "provider": "workday",
+          "category": "education",
+          "industry_tags": [
+            "education"
+          ],
+          "primary_entry_url": "https://pplingo.wd3.myworkdayjobs.com/External/job/Shanghai/Agent_R20261909",
+          "api_config": {
+            "origin": "https://pplingo.wd3.myworkdayjobs.com",
+            "tenant": "pplingo",
+            "site": "External"
+          },
+          "source_id": "waiqi-routing-a848210d527881d9",
+          "source_origin": "waiqi-2026-09-20-remaining-live-review",
+          "verification_status": "verified_api_full_jd",
+          "verified_at": "2026-09-20T15:23:21.481Z",
+          "admitted": true,
+          "source_verification": {
+            "checked_at": "2026-09-20T15:23:21.481Z",
+            "method": "waiqi_current_job_to_live_anonymous_official_api_full_jd_plus_official_career_page_identity",
+            "complete_jd_samples": 2,
+            "observed_jobs": 91,
+            "identity_basis": "Waiqi 当前岗位直达 pplingo Workday 租户；官方招聘页介绍明确标识 LingoAce，当前中国岗位详情返回上海领格卓越人工智能科技有限公司、武汉卓越教育科技有限公司等领格关联招聘主体。",
+            "identity_evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\remaining-workday-live\\d29ya2RheXxodHRwczovL3BwbGluZ28ud2QzLm15d29ya2RheWpvYnMuY29tfHBwbGluZ298ZXh0ZXJu\\http\\eb62d0bb-8d3-00007.json",
+            "proof_directory": "campus-job-fit\\artifacts\\waiqi-2026-09-20\\remaining-workday-live\\d29ya2RheXxodHRwczovL3BwbGluZ28ud2QzLm15d29ya2RheWpvYnMuY29tfHBwbGluZ298ZXh0ZXJu",
+            "official_identity_url": "https://pplingo.wd3.myworkdayjobs.com/External",
+            "official_identity_response_sha256": "b02907fc851e3b4fba2de11593c4412c2906bbcd4e3330f288e03f4a7bbe71e9",
+            "scope": "Observed mainland location facets; per-detail country confirmed China; country-wide coverage remains partial",
+            "coverage": {
+              "status": "partial",
+              "server_total": 91,
+              "mainland_jobs_observed": 91,
+              "complete_mainland_jd": true,
+              "list_complete": true
+            }
+          },
+          "identity_verification": {
+            "identity_verified": true,
+            "basis": "Waiqi 当前岗位直达 pplingo Workday 租户；官方招聘页介绍明确标识 LingoAce，当前中国岗位详情返回上海领格卓越人工智能科技有限公司、武汉卓越教育科技有限公司等领格关联招聘主体。",
+            "evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\remaining-workday-live\\d29ya2RheXxodHRwczovL3BwbGluZ28ud2QzLm15d29ya2RheWpvYnMuY29tfHBwbGluZ298ZXh0ZXJu\\http\\eb62d0bb-8d3-00007.json",
+            "evidence_url": "https://pplingo.wd3.myworkdayjobs.com/External",
+            "official_brand": "LingoAce",
+            "response_sha256": "b02907fc851e3b4fba2de11593c4412c2906bbcd4e3330f288e03f4a7bbe71e9",
+            "verified_at": "2026-09-20T15:23:21.481Z"
+          },
+          "discovery_provenance": {
+            "dataset": "waiqi-company-20260920",
+            "waiqi_company_id": "37577",
+            "company_url": "https://waiqi.com/company/detail?id=37577",
+            "observed_link": "https://pplingo.wd3.myworkdayjobs.com/External/job/Shanghai/Agent_R20261909",
+            "reported_position_count": 14,
+            "returned_position_count": 14,
+            "context_key": "workday|https://pplingo.wd3.myworkdayjobs.com|pplingo|external"
+          },
+          "validated_api_request_examples": [
+            {
+              "method": "POST",
+              "url": "https://pplingo.wd3.myworkdayjobs.com/wday/cxs/pplingo/External/jobs",
+              "headers": {
+                "accept": "application/json, text/plain, */*",
+                "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+                "Content-Type": "application/json"
+              },
+              "body": {
+                "appliedFacets": {
+                  "locations": [
+                    "c2ced947ab5210006150a331665b0000",
+                    "c2ced947ab521000613bcbb119810000",
+                    "2d8f36390bb81001917feab8246e0000",
+                    "c2ced947ab5210006126f97e7ae80000"
+                  ]
+                },
+                "limit": 20,
+                "offset": 0,
+                "searchText": ""
+              },
+              "purpose": "location_filtered_job_list",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\remaining-workday-live\\d29ya2RheXxodHRwczovL3BwbGluZ28ud2QzLm15d29ya2RheWpvYnMuY29tfHBwbGluZ298ZXh0ZXJu\\http\\eb62d0bb-8d3-00002.json",
+              "response_sha256": "1dc0e3e74f77d426feebfe8e7588963efa8a52ae07302d8d49d10df93ba7fe99",
+              "checked_at": "2026-09-20T15:23:14.129Z"
+            },
+            {
+              "method": "GET",
+              "url": "https://pplingo.wd3.myworkdayjobs.com/wday/cxs/pplingo/External/job/Shanghai/Agent_R20261909",
+              "headers": {
+                "accept": "application/json, text/plain, */*",
+                "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+              },
+              "body": null,
+              "purpose": "job_detail",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\remaining-workday-live\\d29ya2RheXxodHRwczovL3BwbGluZ28ud2QzLm15d29ya2RheWpvYnMuY29tfHBwbGluZ298ZXh0ZXJu\\http\\eb62d0bb-8d3-00007.json",
+              "response_sha256": "bebefa58bede88a82147465db3c6cb18454a806eb25bba7523426b3b42b8c8d1",
+              "checked_at": "2026-09-20T15:23:18.801Z"
+            }
+          ],
+          "public_bootstrap_requests": [
+            {
+              "method": "GET",
+              "url": "https://pplingo.wd3.myworkdayjobs.com/External",
+              "purpose": "public_configuration_bootstrap",
+              "response_file": "campus-job-fit/artifacts/waiqi-2026-09-20/remaining-workday-live/pplingo-page.html",
+              "response_sha256": "b02907fc851e3b4fba2de11593c4412c2906bbcd4e3330f288e03f4a7bbe71e9",
+              "checked_at": "2026-09-20T15:23:21.481Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "company_id": "waiqi-routing-dbe601d28a34",
+      "display_name": "雷诺斯国际货运代理（上海）有限公司",
+      "aliases": [
+        "雷诺斯",
+        "Rhenus Logistics 雷诺斯",
+        "Rhenus Logistics",
+        "Rhenus Logistics China Ltd."
+      ],
+      "provider": "workday",
+      "category": "logistics_trade",
+      "industry_tags": [
+        "logistics_trade"
+      ],
+      "primary_entry_url": "https://rhe.wd3.myworkdayjobs.com/R1111/job/Shanghai-China/International-Trainee_JR125033-1",
+      "api_config": {
+        "origin": "https://rhe.wd3.myworkdayjobs.com",
+        "tenant": "rhe",
+        "site": "R1111"
+      },
+      "source_id": "waiqi-routing-edc1b812e16da41b",
+      "source_origin": "waiqi-2026-09-20-remaining-live-review",
+      "verification_status": "verified_api_full_jd",
+      "verified_at": "2026-09-20T15:26:16.065Z",
+      "admitted": true,
+      "source_verification": {
+        "checked_at": "2026-09-20T15:26:16.065Z",
+        "method": "waiqi_current_job_to_live_anonymous_official_api_full_jd_plus_official_career_page_identity",
+        "complete_jd_samples": 2,
+        "observed_jobs": 27,
+        "identity_basis": "Waiqi 当前岗位直达 Rhenus Workday 租户；官方招聘页明确介绍 Rhenus，当前中国岗位详情的招聘主体为 Rhenus Logistics China Ltd.，完整 JD 可匿名读取。",
+        "identity_evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\rhenus-live-final\\http\\0b2d6fc1-524-00004.json",
+        "proof_directory": "campus-job-fit/artifacts/waiqi-2026-09-20/rhenus-live-final",
+        "official_identity_url": "https://rhe.wd3.myworkdayjobs.com/R1111",
+        "official_identity_response_sha256": "32ee2601823983b85abf018d8ff47af14681adc6572eb79ac1d65a9727d28d26",
+        "scope": "Observed mainland location facets; per-detail country confirmed China; country-wide coverage remains partial",
+        "coverage": {
+          "status": "partial",
+          "server_total": 27,
+          "mainland_jobs_observed": 27,
+          "complete_mainland_jd": true,
+          "list_complete": true
+        }
+      },
+      "identity_verification": {
+        "identity_verified": true,
+        "basis": "Waiqi 当前岗位直达 Rhenus Workday 租户；官方招聘页明确介绍 Rhenus，当前中国岗位详情的招聘主体为 Rhenus Logistics China Ltd.，完整 JD 可匿名读取。",
+        "evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\rhenus-live-final\\http\\0b2d6fc1-524-00004.json",
+        "evidence_url": "https://rhe.wd3.myworkdayjobs.com/R1111",
+        "official_brand": "Rhenus",
+        "response_sha256": "32ee2601823983b85abf018d8ff47af14681adc6572eb79ac1d65a9727d28d26",
+        "verified_at": "2026-09-20T15:26:16.065Z"
+      },
+      "discovery_provenance": {
+        "dataset": "waiqi-company-20260920",
+        "waiqi_company_id": "38402",
+        "company_url": "https://waiqi.com/company/detail?id=38402",
+        "observed_link": "https://rhe.wd3.myworkdayjobs.com/R1111/job/Shanghai-China/International-Trainee_JR125033-1",
+        "reported_position_count": 10,
+        "returned_position_count": 10,
+        "context_key": "workday|https://rhe.wd3.myworkdayjobs.com|rhe|r1111"
+      },
+      "validated_api_request_examples": [
+        {
+          "method": "POST",
+          "url": "https://rhe.wd3.myworkdayjobs.com/wday/cxs/rhe/R1111/jobs",
+          "headers": {
+            "accept": "application/json, text/plain, */*",
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+            "Content-Type": "application/json"
+          },
+          "body": {
+            "appliedFacets": {
+              "locations": [
+                "ca3be55396f81000ff3205811ce20000",
+                "ca3be55396f81000ff248c56ff310000",
+                "ca3be55396f81000ff2b420f11c20000",
+                "ca3be55396f81000ff3060e24f530000",
+                "ca3be55396f81000ff393fa4c9720000",
+                "ca3be55396f81000ff21177158dd0000",
+                "ca3be55396f81000ff26e36f47a70000",
+                "ca3be55396f81000ff369f5eebd80000",
+                "ca3be55396f81000ff1df40d97180000"
+              ]
+            },
+            "limit": 20,
+            "offset": 0,
+            "searchText": ""
+          },
+          "purpose": "location_filtered_job_list",
+          "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\rhenus-live-final\\http\\0b2d6fc1-524-00002.json",
+          "response_sha256": "83687b68d7847feb09a08bc19fd08a9a3745d5c754ae68764a5e0d2d0f0e8a4a",
+          "checked_at": "2026-09-20T15:26:12.802Z"
+        },
+        {
+          "method": "GET",
+          "url": "https://rhe.wd3.myworkdayjobs.com/wday/cxs/rhe/R1111/job/Guangzhou-Shi-China/Business-Development-Manager--Guangzhou_JR125393",
+          "headers": {
+            "accept": "application/json, text/plain, */*",
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+          },
+          "body": null,
+          "purpose": "job_detail",
+          "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\rhenus-live-final\\http\\0b2d6fc1-524-00004.json",
+          "response_sha256": "1689af0e3164b2aa29d014f3c87e817024e651c1fe7de842df92608a74023051",
+          "checked_at": "2026-09-20T15:26:14.920Z"
+        }
+      ],
+      "public_bootstrap_requests": [
+        {
+          "method": "GET",
+          "url": "https://rhe.wd3.myworkdayjobs.com/R1111",
+          "purpose": "public_configuration_bootstrap",
+          "response_file": "campus-job-fit/artifacts/waiqi-2026-09-20/rhenus-live-final/page.html",
+          "response_sha256": "32ee2601823983b85abf018d8ff47af14681adc6572eb79ac1d65a9727d28d26",
+          "checked_at": "2026-09-20T15:26:16.065Z"
+        }
+      ],
+      "recruitment_sources": [
+        {
+          "company_id": "waiqi-routing-dbe601d28a34",
+          "display_name": "雷诺斯国际货运代理（上海）有限公司",
+          "aliases": [
+            "雷诺斯",
+            "Rhenus Logistics 雷诺斯",
+            "Rhenus Logistics",
+            "Rhenus Logistics China Ltd."
+          ],
+          "provider": "workday",
+          "category": "logistics_trade",
+          "industry_tags": [
+            "logistics_trade"
+          ],
+          "primary_entry_url": "https://rhe.wd3.myworkdayjobs.com/R1111/job/Shanghai-China/International-Trainee_JR125033-1",
+          "api_config": {
+            "origin": "https://rhe.wd3.myworkdayjobs.com",
+            "tenant": "rhe",
+            "site": "R1111"
+          },
+          "source_id": "waiqi-routing-edc1b812e16da41b",
+          "source_origin": "waiqi-2026-09-20-remaining-live-review",
+          "verification_status": "verified_api_full_jd",
+          "verified_at": "2026-09-20T15:26:16.065Z",
+          "admitted": true,
+          "source_verification": {
+            "checked_at": "2026-09-20T15:26:16.065Z",
+            "method": "waiqi_current_job_to_live_anonymous_official_api_full_jd_plus_official_career_page_identity",
+            "complete_jd_samples": 2,
+            "observed_jobs": 27,
+            "identity_basis": "Waiqi 当前岗位直达 Rhenus Workday 租户；官方招聘页明确介绍 Rhenus，当前中国岗位详情的招聘主体为 Rhenus Logistics China Ltd.，完整 JD 可匿名读取。",
+            "identity_evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\rhenus-live-final\\http\\0b2d6fc1-524-00004.json",
+            "proof_directory": "campus-job-fit/artifacts/waiqi-2026-09-20/rhenus-live-final",
+            "official_identity_url": "https://rhe.wd3.myworkdayjobs.com/R1111",
+            "official_identity_response_sha256": "32ee2601823983b85abf018d8ff47af14681adc6572eb79ac1d65a9727d28d26",
+            "scope": "Observed mainland location facets; per-detail country confirmed China; country-wide coverage remains partial",
+            "coverage": {
+              "status": "partial",
+              "server_total": 27,
+              "mainland_jobs_observed": 27,
+              "complete_mainland_jd": true,
+              "list_complete": true
+            }
+          },
+          "identity_verification": {
+            "identity_verified": true,
+            "basis": "Waiqi 当前岗位直达 Rhenus Workday 租户；官方招聘页明确介绍 Rhenus，当前中国岗位详情的招聘主体为 Rhenus Logistics China Ltd.，完整 JD 可匿名读取。",
+            "evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\rhenus-live-final\\http\\0b2d6fc1-524-00004.json",
+            "evidence_url": "https://rhe.wd3.myworkdayjobs.com/R1111",
+            "official_brand": "Rhenus",
+            "response_sha256": "32ee2601823983b85abf018d8ff47af14681adc6572eb79ac1d65a9727d28d26",
+            "verified_at": "2026-09-20T15:26:16.065Z"
+          },
+          "discovery_provenance": {
+            "dataset": "waiqi-company-20260920",
+            "waiqi_company_id": "38402",
+            "company_url": "https://waiqi.com/company/detail?id=38402",
+            "observed_link": "https://rhe.wd3.myworkdayjobs.com/R1111/job/Shanghai-China/International-Trainee_JR125033-1",
+            "reported_position_count": 10,
+            "returned_position_count": 10,
+            "context_key": "workday|https://rhe.wd3.myworkdayjobs.com|rhe|r1111"
+          },
+          "validated_api_request_examples": [
+            {
+              "method": "POST",
+              "url": "https://rhe.wd3.myworkdayjobs.com/wday/cxs/rhe/R1111/jobs",
+              "headers": {
+                "accept": "application/json, text/plain, */*",
+                "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+                "Content-Type": "application/json"
+              },
+              "body": {
+                "appliedFacets": {
+                  "locations": [
+                    "ca3be55396f81000ff3205811ce20000",
+                    "ca3be55396f81000ff248c56ff310000",
+                    "ca3be55396f81000ff2b420f11c20000",
+                    "ca3be55396f81000ff3060e24f530000",
+                    "ca3be55396f81000ff393fa4c9720000",
+                    "ca3be55396f81000ff21177158dd0000",
+                    "ca3be55396f81000ff26e36f47a70000",
+                    "ca3be55396f81000ff369f5eebd80000",
+                    "ca3be55396f81000ff1df40d97180000"
+                  ]
+                },
+                "limit": 20,
+                "offset": 0,
+                "searchText": ""
+              },
+              "purpose": "location_filtered_job_list",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\rhenus-live-final\\http\\0b2d6fc1-524-00002.json",
+              "response_sha256": "83687b68d7847feb09a08bc19fd08a9a3745d5c754ae68764a5e0d2d0f0e8a4a",
+              "checked_at": "2026-09-20T15:26:12.802Z"
+            },
+            {
+              "method": "GET",
+              "url": "https://rhe.wd3.myworkdayjobs.com/wday/cxs/rhe/R1111/job/Guangzhou-Shi-China/Business-Development-Manager--Guangzhou_JR125393",
+              "headers": {
+                "accept": "application/json, text/plain, */*",
+                "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+              },
+              "body": null,
+              "purpose": "job_detail",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\rhenus-live-final\\http\\0b2d6fc1-524-00004.json",
+              "response_sha256": "1689af0e3164b2aa29d014f3c87e817024e651c1fe7de842df92608a74023051",
+              "checked_at": "2026-09-20T15:26:14.920Z"
+            }
+          ],
+          "public_bootstrap_requests": [
+            {
+              "method": "GET",
+              "url": "https://rhe.wd3.myworkdayjobs.com/R1111",
+              "purpose": "public_configuration_bootstrap",
+              "response_file": "campus-job-fit/artifacts/waiqi-2026-09-20/rhenus-live-final/page.html",
+              "response_sha256": "32ee2601823983b85abf018d8ff47af14681adc6572eb79ac1d65a9727d28d26",
+              "checked_at": "2026-09-20T15:26:16.065Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "company_id": "waiqi-routing-a21c6b534ecf",
+      "display_name": "达能（中国）食品饮料有限公司",
+      "aliases": [
+        "DANONE达能",
+        "达能",
+        "Danone"
+      ],
+      "provider": "moka",
+      "category": "consumer",
+      "industry_tags": [
+        "consumer"
+      ],
+      "primary_entry_url": "https://app.mokahr.com/campus-recruitment/danone/170511",
+      "api_config": {
+        "channel": "campus-recruitment",
+        "org_id": "danone",
+        "site_id": "170511"
+      },
+      "source_id": "waiqi-routing-b208beef3b9f406f",
+      "source_origin": "waiqi-2026-09-20-routing-body-review",
+      "verification_status": "verified_api_full_jd",
+      "verified_at": "2026-09-20T13:45:09.812Z",
+      "admitted": true,
+      "source_verification": {
+        "checked_at": "2026-09-20T13:45:09.812Z",
+        "method": "waiqi_current_job_to_anonymous_official_api_full_jd_plus_exact_body_section_review",
+        "complete_jd_samples": 1,
+        "observed_jobs": 12,
+        "identity_basis": "Waiqi 当前岗位直达 orgId=danone 的官方 Moka 招聘租户；公开 API 返回的完整岗位正文明确标识达能中国业务及当前招聘项目。",
+        "identity_evidence_file": "campus-job-fit/artifacts/waiqi-2026-09-20/routing-expansion-verification/contexts/b208beef3b9f406f/http/1e5636af-89d-00003-decoded.json",
+        "proof_directory": "campus-job-fit/artifacts/waiqi-2026-09-20/routing-expansion-verification/contexts/b208beef3b9f406f",
+        "scope": "Current jobs returned by the Danone China campus recruitment API.",
+        "coverage": {
+          "status": "sample_verified",
+          "server_total": 12,
+          "mainland_jobs_observed": 12,
+          "complete_mainland_jd": true
+        }
+      },
+      "identity_verification": {
+        "identity_verified": true,
+        "basis": "公开 Moka API 的 orgId 为 danone，完整当前岗位正文明确标识达能中国。",
+        "evidence_file": "campus-job-fit/artifacts/waiqi-2026-09-20/routing-expansion-verification/contexts/b208beef3b9f406f/http/1e5636af-89d-00003-decoded.json",
+        "verified_at": "2026-09-20T13:45:09.812Z"
+      },
+      "discovery_provenance": {
+        "dataset": "waiqi-company-20260920",
+        "waiqi_company_id": "21",
+        "company_url": "https://waiqi.com/company/detail?id=21",
+        "observed_link": "https://app.mokahr.com/campus-recruitment/danone/170511#/job/5bf36198-6f7d-426a-ada4-7ec5d581513a",
+        "reported_position_count": 136,
+        "returned_position_count": 136,
+        "context_key": "moka|https://app.mokahr.com|danone|170511"
+      },
+      "validated_api_request_examples": [
+        {
+          "method": "POST",
+          "url": "https://app.mokahr.com/api/outer/ats-apply/website/jobs/v2",
+          "headers": {
+            "accept": "application/json, text/plain, */*",
+            "content-type": "application/json",
+            "origin": "https://app.mokahr.com",
+            "referer": "https://app.mokahr.com/campus-recruitment/danone/170511",
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+          },
+          "body": {
+            "orgId": "danone",
+            "siteId": "170511",
+            "site": "campus-recruitment",
+            "locale": "zh-CN",
+            "limit": 20,
+            "offset": 0,
+            "needStat": true,
+            "keyword": ""
+          },
+          "purpose": "job_list",
+          "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\b208beef3b9f406f\\http\\1e5636af-89d-00002.json",
+          "response_sha256": "0f7ef8186a588f32167ba62b11a2b5ab713bebd4464d247f402ea8368d63b371",
+          "checked_at": "2026-09-20T13:45:09.202Z"
+        },
+        {
+          "method": "POST",
+          "url": "https://app.mokahr.com/api/outer/ats-apply/website/job",
+          "headers": {
+            "accept": "application/json, text/plain, */*",
+            "content-type": "application/json",
+            "origin": "https://app.mokahr.com",
+            "referer": "https://app.mokahr.com/campus-recruitment/danone/170511",
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+          },
+          "body": {
+            "orgId": "danone",
+            "siteId": "170511",
+            "jobId": "5bf36198-6f7d-426a-ada4-7ec5d581513a",
+            "locale": "zh-CN"
+          },
+          "purpose": "job_detail",
+          "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\b208beef3b9f406f\\http\\1e5636af-89d-00003.json",
+          "response_sha256": "5649d714162c402562656ed80b8a98ceced9562d1386e8aa350f58ed7469e7c9",
+          "checked_at": "2026-09-20T13:45:09.448Z"
+        }
+      ],
+      "public_bootstrap_requests": [
+        {
+          "method": "GET",
+          "url": "https://app.mokahr.com/campus-recruitment/danone/170511",
+          "headers": {
+            "accept": "text/html,application/json",
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+          },
+          "purpose": "public_configuration_bootstrap",
+          "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\b208beef3b9f406f\\http\\1e5636af-89d-00001.txt",
+          "response_sha256": "36966b725a243cc1a73ceec8794c36f694cf1cf9b96c2817f2ce09eaa07cdf0c",
+          "checked_at": "2026-09-20T13:45:08.826Z"
+        }
+      ],
+      "recruitment_sources": [
+        {
+          "company_id": "waiqi-routing-a21c6b534ecf",
+          "display_name": "达能（中国）食品饮料有限公司",
+          "aliases": [
+            "DANONE达能",
+            "达能",
+            "Danone"
+          ],
+          "provider": "moka",
+          "category": "consumer",
+          "industry_tags": [
+            "consumer"
+          ],
+          "primary_entry_url": "https://app.mokahr.com/campus-recruitment/danone/170511",
+          "api_config": {
+            "channel": "campus-recruitment",
+            "org_id": "danone",
+            "site_id": "170511"
+          },
+          "source_id": "waiqi-routing-b208beef3b9f406f",
+          "source_origin": "waiqi-2026-09-20-routing-body-review",
+          "verification_status": "verified_api_full_jd",
+          "verified_at": "2026-09-20T13:45:09.812Z",
+          "admitted": true,
+          "source_verification": {
+            "checked_at": "2026-09-20T13:45:09.812Z",
+            "method": "waiqi_current_job_to_anonymous_official_api_full_jd_plus_exact_body_section_review",
+            "complete_jd_samples": 1,
+            "observed_jobs": 12,
+            "identity_basis": "Waiqi 当前岗位直达 orgId=danone 的官方 Moka 招聘租户；公开 API 返回的完整岗位正文明确标识达能中国业务及当前招聘项目。",
+            "identity_evidence_file": "campus-job-fit/artifacts/waiqi-2026-09-20/routing-expansion-verification/contexts/b208beef3b9f406f/http/1e5636af-89d-00003-decoded.json",
+            "proof_directory": "campus-job-fit/artifacts/waiqi-2026-09-20/routing-expansion-verification/contexts/b208beef3b9f406f",
+            "scope": "Current jobs returned by the Danone China campus recruitment API.",
+            "coverage": {
+              "status": "sample_verified",
+              "server_total": 12,
+              "mainland_jobs_observed": 12,
+              "complete_mainland_jd": true
+            }
+          },
+          "identity_verification": {
+            "identity_verified": true,
+            "basis": "公开 Moka API 的 orgId 为 danone，完整当前岗位正文明确标识达能中国。",
+            "evidence_file": "campus-job-fit/artifacts/waiqi-2026-09-20/routing-expansion-verification/contexts/b208beef3b9f406f/http/1e5636af-89d-00003-decoded.json",
+            "verified_at": "2026-09-20T13:45:09.812Z"
+          },
+          "discovery_provenance": {
+            "dataset": "waiqi-company-20260920",
+            "waiqi_company_id": "21",
+            "company_url": "https://waiqi.com/company/detail?id=21",
+            "observed_link": "https://app.mokahr.com/campus-recruitment/danone/170511#/job/5bf36198-6f7d-426a-ada4-7ec5d581513a",
+            "reported_position_count": 136,
+            "returned_position_count": 136,
+            "context_key": "moka|https://app.mokahr.com|danone|170511"
+          },
+          "validated_api_request_examples": [
+            {
+              "method": "POST",
+              "url": "https://app.mokahr.com/api/outer/ats-apply/website/jobs/v2",
+              "headers": {
+                "accept": "application/json, text/plain, */*",
+                "content-type": "application/json",
+                "origin": "https://app.mokahr.com",
+                "referer": "https://app.mokahr.com/campus-recruitment/danone/170511",
+                "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+              },
+              "body": {
+                "orgId": "danone",
+                "siteId": "170511",
+                "site": "campus-recruitment",
+                "locale": "zh-CN",
+                "limit": 20,
+                "offset": 0,
+                "needStat": true,
+                "keyword": ""
+              },
+              "purpose": "job_list",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\b208beef3b9f406f\\http\\1e5636af-89d-00002.json",
+              "response_sha256": "0f7ef8186a588f32167ba62b11a2b5ab713bebd4464d247f402ea8368d63b371",
+              "checked_at": "2026-09-20T13:45:09.202Z"
+            },
+            {
+              "method": "POST",
+              "url": "https://app.mokahr.com/api/outer/ats-apply/website/job",
+              "headers": {
+                "accept": "application/json, text/plain, */*",
+                "content-type": "application/json",
+                "origin": "https://app.mokahr.com",
+                "referer": "https://app.mokahr.com/campus-recruitment/danone/170511",
+                "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+              },
+              "body": {
+                "orgId": "danone",
+                "siteId": "170511",
+                "jobId": "5bf36198-6f7d-426a-ada4-7ec5d581513a",
+                "locale": "zh-CN"
+              },
+              "purpose": "job_detail",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\b208beef3b9f406f\\http\\1e5636af-89d-00003.json",
+              "response_sha256": "5649d714162c402562656ed80b8a98ceced9562d1386e8aa350f58ed7469e7c9",
+              "checked_at": "2026-09-20T13:45:09.448Z"
+            }
+          ],
+          "public_bootstrap_requests": [
+            {
+              "method": "GET",
+              "url": "https://app.mokahr.com/campus-recruitment/danone/170511",
+              "headers": {
+                "accept": "text/html,application/json",
+                "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+              },
+              "purpose": "public_configuration_bootstrap",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-verification\\contexts\\b208beef3b9f406f\\http\\1e5636af-89d-00001.txt",
+              "response_sha256": "36966b725a243cc1a73ceec8794c36f694cf1cf9b96c2817f2ce09eaa07cdf0c",
+              "checked_at": "2026-09-20T13:45:08.826Z"
+            }
+          ]
+        }
+      ]
     }
   ],
-  "updated_at": "2026-09-20T15:18:55.132Z",
+  "updated_at": "2026-09-20T15:35:04.523Z",
   "industry_counts": {
     "internet": 434,
     "smart_hardware": 258,
@@ -454073,10 +454781,10 @@
     "construction": 182,
     "aerospace_transport_equipment": 89,
     "professional_services": 186,
-    "logistics_trade": 106,
-    "consumer": 287,
+    "logistics_trade": 107,
+    "consumer": 288,
     "materials_chemicals": 154,
-    "education": 27,
+    "education": 28,
     "media_tourism": 81,
     "agriculture": 43,
     "telecom": 41,
@@ -454087,5 +454795,5 @@
   "latest_wps_expansion_verified_on": "2026-09-19T04:32:07.220Z",
   "latest_deep_api_review_at": "2026-09-19T09:56:39.408Z",
   "latest_interface_contract_review_at": "2026-09-19T07:27:18.465Z",
-  "latest_waiqi_expansion_verified_at": "2026-09-20T15:18:55.132Z"
+  "latest_waiqi_expansion_verified_at": "2026-09-20T15:35:04.523Z"
 }

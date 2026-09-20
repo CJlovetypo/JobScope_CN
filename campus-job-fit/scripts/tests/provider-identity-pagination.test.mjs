@@ -20,6 +20,12 @@ test('Workday recognizes Who you are as the requirements section',()=>{
  assert.match(job.requirements,/Who you are/);
  assert.match(job.requirements,/bachelor degree/);
 });
+test('Workday recognizes What You Bring as the requirements section',()=>{
+ const raw={hiringOrganization:{name:'Rhenus Logistics China Ltd.'},jobPostingInfo:{jobReqId:'JR1',title:'Business Development Manager',jobDescription:'What You Can Expect:\nDevelop customer solutions and manage opportunity pipelines with the regional delivery team.\nWhat You Bring:\nBachelor degree and more than three years of logistics experience.',location:'Guangzhou, China',country:{descriptor:'China'},externalUrl:'https://fixture.invalid/job/JR1',canApply:true,timeType:'Full time'}};
+ const job=normalizeWorkday(raw,{company_id:'rhenus',display_name:'Rhenus'}, {response_file:'raw.json'});
+ assert.equal(job.body_complete,true);
+ assert.match(job.requirements,/What You Bring/);
+});
 
 test('Workday identity accepts observed numeric, underscore/hyphen requisitions and posting versions',()=>{
  for(const id of ['2604216','R_363782','249346W','R-102607','JR-70222'])for(const suffix of ['', '-1','-5']) {

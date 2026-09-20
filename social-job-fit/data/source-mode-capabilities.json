@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "mode": "social",
-  "checked_at": "2026-09-20T15:19:13.691Z",
+  "checked_at": "2026-09-20T15:35:29.780Z",
   "note": "方向路由与证据的派生索引；不是独立来源库，不控制启停。",
   "configurations": [
     {
@@ -43687,6 +43687,42 @@
       "entry": "https://copeland.wd5.myworkdayjobs.com/Copeland_External_Careers_Page/job/Suzhou-China/Advanced-Manufacturing-Engineering-Technician_JR117964",
       "strategy": "existing_broad_stream",
       "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "waiqi-routing-0770d2ec31de",
+      "display_name": "北京领格卓越科技有限公司",
+      "source_id": "waiqi-routing-a848210d527881d9",
+      "provider": "workday",
+      "entry": "https://pplingo.wd3.myworkdayjobs.com/External/job/Shanghai/Agent_R20261909",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "waiqi-routing-dbe601d28a34",
+      "display_name": "雷诺斯国际货运代理（上海）有限公司",
+      "source_id": "waiqi-routing-edc1b812e16da41b",
+      "provider": "workday",
+      "entry": "https://rhe.wd3.myworkdayjobs.com/R1111/job/Shanghai-China/International-Trainee_JR125033-1",
+      "strategy": "existing_broad_stream",
+      "scope": "per_job_type_required",
+      "target_validation_status": "untested",
+      "enabled": true,
+      "proof_file": null
+    },
+    {
+      "company_id": "waiqi-routing-a21c6b534ecf",
+      "display_name": "达能（中国）食品饮料有限公司",
+      "source_id": "waiqi-routing-b208beef3b9f406f",
+      "provider": "moka",
+      "entry": "https://app.mokahr.com/campus-recruitment/danone/170511",
+      "strategy": "public_type_routing",
+      "scope": "validate_target_at_runtime",
       "target_validation_status": "untested",
       "enabled": true,
       "proof_file": null

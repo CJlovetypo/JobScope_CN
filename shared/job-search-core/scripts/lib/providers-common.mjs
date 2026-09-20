@@ -5,7 +5,7 @@ import { reviewRecruitment } from './recruitment-policy.mjs';
 import {SEARCH_MODE,searchMode,knownOtherType} from './search-mode.mjs';
 
 const supported = new Set(['moka', 'moka_api_platform', 'beisen', 'feishu', 'hotjob']);
-const reqMarker = /(?:任职|岗位|职位|任用|招聘|基本)(?:资格|要求|条件)|专业要求|学历要求|(?:^|\n)\s*(?:专业|学历|要求|如果你(?:是)?|我们需要你)\s*[：:]|我们希望你|我们期待你|希望你是|我们想找的|你需要具备|Qualifications|Requirements|What you bring|Who you are/i;
+const reqMarker = /(?:任职|岗位|职位|任用|招聘|基本)(?:资格|要求|条件)|专业要求|学历要求|(?:^|\n)\s*(?:专业|学历|要求|如果你(?:是)?|我们需要你)\s*[：:]|我们希望你|我们期待(?:这样的)?你|希望你是|我们想找的|你需要具备|Qualifications|Requirements|What you bring|Who you are/i;
 const dutyMarker = /职责|工作内容|职位描述|岗位描述|岗位介绍|你将|Responsibilities|What you(?:'|’)ll|Your (?:role|mission)/i;
 
 function htmlDecode(value) {

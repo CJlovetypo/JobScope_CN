@@ -47,4 +47,7 @@ test('short meaningful responsibilities, optional text, aliases and traditional 
   assert.equal(reviewJobBody({ description: '软件开发与实施部署', requirements: '熟悉SQL，具有编程能力。' }).body_complete, true);
   assert.equal(reviewJobBody({ description: '【職責內容】\n負責校園活動策劃與執行。\n【職位要求】\n香港高校在讀學生，英語流利。' }).body_complete, true);
   assert.equal(reviewJobBody({ description: '职责\n负责设计交互流程。\n硬性要求\n本科学历，熟悉Figma。\n加分项\n具有竞赛经历。' }).body_complete, true);
+  const danoneStyle = reviewJobBody({ description: '你将如何发挥你的潜能：\n参与产品价值链质量管理，推动生产质量保证并参与跨部门轮岗。\n我们期待这样的你：\n能够快速学习，拥有全球思维和良好沟通能力。\n专业要求：食品科学与工程类' });
+  assert.equal(danoneStyle.body_complete, true);
+  assert.match(danoneStyle.requirements, /我们期待这样的你/);
 });
