@@ -1,8 +1,8 @@
-# Job Search Skill Pack · 中文求职技能包
+# JobScope_CN · 中文求职技能包
 
 **接入 2,894 个公司／招聘主体，用自然语言找岗位、判断匹配度、持续关注新机会。**
 
-面向中文求职场景的 AI Agent 技能包。告诉它你的经历和想找的工作，它会从公司公开招聘接口采集岗位，阅读完整职位描述（JD），给出匹配理由、主要缺口、投递建议和岗位链接。校招、实习、社招各有独立 Skill；想长期关注的方向，可以交给岗位雷达定时跟踪。
+JobScope_CN 是面向中文求职场景的 AI Agent 技能包。告诉它你的经历和想找的工作，它会从公司公开招聘接口采集岗位，阅读完整职位描述（JD），给出匹配理由、主要缺口、投递建议和岗位链接。校招、实习、社招各有独立 Skill；想长期关注的方向，可以交给岗位雷达定时跟踪。
 
 > “这是我的简历。我想找上海游戏公司的社招项目经理岗位，请帮我看看哪些值得投、还差什么。再帮我每天早上 9 点关注新机会。”
 
@@ -143,14 +143,14 @@
 将整个仓库放入支持本地 Skill 和命令执行的 Agent 工作环境，并让宿主加载四个 `SKILL.md`。当前 Excel 导出使用 Codex 的运行依赖；其他宿主需提供兼容依赖后使用。
 
 ```sh
-git clone https://github.com/CJlovetypo/job-search-skill-pack.git
-cd job-search-skill-pack
+git clone https://github.com/CJlovetypo/job-search-skill-pack.git JobScope_CN
+cd JobScope_CN
 ```
 
 请保留完整相对目录。四个入口都依赖共享核心，单独复制某个 Skill 无法运行。
 
 ```text
-job-search-skill-pack/
+JobScope_CN/
   campus-job-fit/          # 正式校招
   internship-job-fit/      # 实习
   social-job-fit/          # 社招
