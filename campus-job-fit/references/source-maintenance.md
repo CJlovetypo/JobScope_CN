@@ -5,12 +5,30 @@
 ## 准入依据
 
 - 从用户指定资料、公司官网或公开招聘入口取得候选。原始来源只读；公司名称、行业宽类和城市提示是线索，不直接作为已核实事实。
-- 新来源必须在本轮匿名公开 API 请求中返回至少一份可读完整 JD：稳定岗位 ID、职责、任职要求及官方岗位链接。HTTP 200、门户可打开、仅有岗位标题、空列表均不能独立证明此能力。
+- 默认准入仍要求本轮匿名公开 API 返回至少一份可读完整 JD：稳定岗位 ID、职责、任职要求及官方岗位链接。HTTP 200、门户可打开或仅有岗位标题不能证明此能力。
+- Waiqi 零岗位扩容使用独立的 `verified_api_zero_jobs` 状态：必须是实际官方岗位列表请求返回 JSON 空数组并完成分页收敛，同时保留匿名会话、列表路径、响应 SHA256、原始文件和官方主体人工复核证据。聚合站 `positionCount=0`、HTML 空页面和需要登录的接口一律不属于该状态；它也不提供招聘方向或城市证据。
 - 记录请求方法、URL、非敏感参数、验证时间、响应 SHA256、正文样本与覆盖范围。只收录经过实测的配置；不能把相同 ATS 平台其他公司的成功推及未测公司。
 - 可读取完整社招或实习 JD、当前没有正式校招的来源仍可保留。招聘类型独立判断，不能为扩大来源数将实习改为校招。
 - 样本查询、分页上限、变动总数、详情失败均如实保留。部分覆盖不代表全量；API 核验时间也不是持续可用承诺。
 
 ## 从候选中发现公开接口
+
+### Waiqi 候选查询
+
+`../../shared/job-search-core/assets/waiqi-source-candidates.json` 独立保存第三方公司介绍与招聘入口。`industry_hint`、`ownership_hint` 是原网站线索，`matched_company_ids` 仅表示与现有库的可能关联；均不等于已核实行业、性质或用人主体。招聘链接的可访问性、API 能力和当前岗位开放状态仍需实测。缺招聘链接的公司仍保留，便于后续补缺。
+
+从仓库根目录运行：
+
+```sh
+node shared/job-search-core/scripts/source-candidates.mjs query --query=微软
+node shared/job-search-core/scripts/source-candidates.mjs query --industry=制造 --has-recruitment
+node shared/job-search-core/scripts/source-candidates.mjs query --company-id=microsoft
+node shared/job-search-core/scripts/source-candidates.mjs export-discovery --query=微软 --output=campus-job-fit/artifacts/waiqi/candidates.json
+```
+
+查询支持名称、别名、原始行业／性质、Waiqi ID 与关联公司 ID；另有 `--ownership=`、`--status=` 精确状态过滤以及 `--input=` 指定快照。默认不截断结果，可用 `--output=` 保存完整查询。`export-discovery` 仅导出具有 HTTP(S) 招聘链接的公司，原样保留路由 fragment；无入口公司不作为空核验任务导出。导出数组可交给下方 `source-discovery.mjs`，其支持范围之外的平台继续定向发现。
+
+导出使用独立 `waiqi-{原站ID}` 作为核验目录 ID，避免仅凭名称匹配就合并到已收录主体。原始关联、来源 URL、状态与分类线索留在 `provenance`，不会作为已核实标签。核验成功后还需检查真实主体；确认已有主体时沿用正式库 ID，新主体才分配稳定 ID。此工具不修改候选库和正式 `sources.json`。
 
 `scripts/source-discovery.mjs` 支持根据已观察到的 Moka、北森、飞书及 Hotjob 入口生成请求配置，也可读取官网公开配置和真实招聘链接。不使用个人登录 cookies，不把 HTML 职位正文当 API 返回。
 

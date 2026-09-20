@@ -1,0 +1,4 @@
+interface:
+  display_name: "岗位雷达"
+  short_description: "持续关注岗位、行业和公司，维护本地岗位数据库并生成简洁的每日变化报告"
+  default_prompt: "使用 $job-radar，按我的岗位方向、意向行业或公司建立关注订阅，每天检索并给我简洁的岗位日报。"

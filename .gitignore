@@ -6,6 +6,7 @@
 !/campus-job-fit/
 !/internship-job-fit/
 !/social-job-fit/
+!/job-radar/
 !/shared/
 /shared/*
 !/shared/job-search-core/
@@ -24,6 +25,7 @@
 # Personal materials, captured data, reports and development evidence.
 **/runs/
 **/outputs/
+/job-radar/state/
 **/artifacts/
 **/tmp/
 **/logs/

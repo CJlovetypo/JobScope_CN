@@ -2,17 +2,22 @@
 
 根据简历、经历和求职倾向，从已收录公司的公开招聘接口查找岗位，逐岗阅读完整 JD，给出匹配理由、主要缺口、投递建议和具体岗位链接。
 
-## 三个入口，一套来源
+## 四个入口，一套来源
 
 | 招聘方向 | Skill | 需要补充的信息 |
 | --- | --- | --- |
 | 应届正式校招 | [campus-job-fit](campus-job-fit/SKILL.md) | 学历、毕业时间 |
 | 实习 | [internship-job-fit](internship-job-fit/SKILL.md) | 在校状态、可开始日期、每周天数、持续月数 |
 | 社招 | [social-job-fit](social-job-fit/SKILL.md) | 工作年限、责任与成果，以及明确的到岗和薪资偏好 |
+| 每日岗位关注 | [job-radar](job-radar/SKILL.md) | 岗位方向、意向行业或公司至少一项；招聘类型及每日时间 |
 
 三个 skill 共用 [API 来源库](shared/job-search-core/assets/sources.json)、采集器和公司事实资料；各自保存方向规则、城市缓存、画像与报告。请保留整个仓库的相对目录，单独复制一个 skill 不能运行。
 
-截至 2026-09-19，共收录 **2,413 个招聘主体、3,069 个 API 配置**，覆盖科技、制造、金融、医疗、消费、服务业等 19 个行业宽类。跨行业公司只处理一次。查看 [行业公司索引](campus-job-fit/data/行业公司索引.md)。
+岗位雷达也复用这套来源，不需要简历，独立保存本地 SQLite 订阅和岗位历史，输出简洁 Markdown 日报。它用于持续发现机会；前三个入口用于按简历深入评估。
+
+截至 2026-09-20，共收录 **2,847 个招聘主体、3,573 个 API 配置**，覆盖科技、制造、金融、医疗、消费、服务业等 19 个行业宽类。跨行业公司只处理一次。查看 [行业公司索引](campus-job-fit/data/行业公司索引.md)。
+
+另保存 Waiqi 全国目录的 4,155 家公司与招聘链接候选；本轮完成官方接口核验后累计新增 434 个主体、504 个配置，其中对 Waiqi 实际空岗位列表公司的官网与全网补查又新增 58 个主体、65 个配置。公司性质优先采用旧库供应商的结构化性质字段，明确的“民营企业”“央国企”“外企”分别映射为私企、国企、外企；没有供应商明确结论时，Waiqi 公司详情的明确“外企”标注可作为外企依据。冲突多选、仅目录收录或仅共享招聘租户不强行定性。续抓、查询、打标及证据说明见 [Waiqi 来源维护](shared/job-search-core/references/waiqi-sources.md)。
 
 ## 使用方式
 
@@ -23,6 +28,10 @@
 > 使用 internship-job-fit，找上海的产品运营实习。我每周能到岗四天，可以持续六个月。
 
 > 使用 social-job-fit。我有三年销售经验，想找房地产销售相关工作，请使用快速定向模式，先说明候选公司和岗位标题关键词。
+
+> 使用 job-radar，关注上海游戏公司的社招项目经理岗位，每天北京时间上午 9 点检索，有新岗位或变化时告诉我。
+
+岗位雷达流程：整理关注条件 → 建立本地订阅 → 首次检索 → 配置宿主每日任务 → 报告首次发现、更新、重新出现与采集缺口。日报默认展示十条变化及岗位链接，历史可回看；未再搜到只标“本次未见”，失败不视为岗位消失。调度依赖宿主支持，创建 skill 或运行 CLI 本身不会启用后台定时。命令与数据格式见 [岗位雷达运行约定](job-radar/references/operations.md)。
 
 流程为：整理个人材料 → 选择行业和城市 → 采集并展示范围 → 确认评估范围 → 逐岗全文评估 → 交付 Excel。用户已经明确的条件和范围直接沿用，不重复确认。
 
@@ -58,11 +67,13 @@ job-search-skill-pack/
   campus-job-fit/
   internship-job-fit/
   social-job-fit/
+  job-radar/
   shared/job-search-core/
   README.md
 ```
 
 - Node.js 22+：采集和校验使用原生模块。
+- 岗位雷达需要 Node.js 22.13+ 的内置 SQLite，无额外 npm 依赖。
 - Python 3：简历提取和少量公开 API；PDF 提取需要 pypdf。必要时用 CAMPUS_JOB_FIT_PYTHON 指定实际 Python 可执行文件。
 - Excel 导出：需要 Codex 提供的 @oai/artifact-tool；通过 load_workspace_dependencies 定位依赖，或设置 CODEX_NODE_MODULES。
 
@@ -73,10 +84,11 @@ node --test campus-job-fit/scripts/tests/*.test.mjs
 node campus-job-fit/scripts/campus.mjs industries
 node internship-job-fit/scripts/jobs.mjs industries
 node social-job-fit/scripts/jobs.mjs industries
+node --test job-radar/scripts/tests/radar.test.mjs
 ```
 
 详细 [运行与数据约定](campus-job-fit/references/workflow.md)、[维护说明](shared/job-search-core/references/maintenance.md)、[定向检索](shared/job-search-core/references/targeted-search.md) 和 [规模模型](shared/job-search-core/references/company-size-model.md)。第三方来源许可见 [job-pro-LICENSE.txt](shared/job-search-core/assets/job-pro-LICENSE.txt)。
 
 ## 数据与隐私
 
-仓库只分发三个 skill、共享运行代码、必要的公司与接口数据、使用文档及回归测试。简历、个人画像、报告、原始抓取记录、历史调研和内部过程文档留在本地。运行产物存放在对应 skill 的 runs、outputs、artifacts 等目录；这些目录由 .gitignore 排除。
+仓库只分发四个 skill、共享运行代码、必要的公司与接口数据、使用文档及回归测试。简历、个人画像、报告、原始抓取记录、历史调研和内部过程文档留在本地。运行产物存放在对应 skill 的 runs、outputs、artifacts 等目录；岗位雷达的订阅、SQLite 数据库及调度信息在 job-radar/state 中。这些目录由 .gitignore 排除。

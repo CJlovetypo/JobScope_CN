@@ -52,7 +52,14 @@ export function workdayListPlaceholder(row,source,record,error) {
     formal_status:'unknown',open_status:'unknown',raw_file:record.response_file,list_raw_file:record.response_file,
     raw_metadata:{observed_external_path:row.externalPath,observed_bullet_fields:row.bulletFields,detail_fetch_error:error}};
 }
-function chinaFacet(facets){let answer=null;const walk=f=>{if(!f||typeof f!=='object')return;if(f.facetParameter&&Array.isArray(f.values)){const x=f.values.find(x=>/^(China|China Mainland|Mainland China|中国|中国大陆)$/i.test(x.descriptor||''));if(x)answer={field:f.facetParameter,value:x.id,label:x.descriptor};}for(const x of Object.values(f))if(x&&typeof x==='object')Array.isArray(x)?x.forEach(walk):walk(x);};walk(facets);return answer;}
+// Explicit mainland country descriptors observed in public Workday responses.
+// Do not use a China substring match: HK/TW-labelled records remain excluded.
+export function isMainlandChinaCountry(value){
+  if(typeof value!=='string')return false;
+  const country=value.normalize('NFKC').trim().replace(/\s+/g,' ');
+  return /^(?:cn|China|China Mainland|Mainland China|China\s*\(\s*Mainland\s*\)|China\s*\/\s*Mainland|中国|中国大陆)$/i.test(country);
+}
+function chinaFacet(facets){let answer=null;const walk=f=>{if(!f||typeof f!=='object')return;if(f.facetParameter&&Array.isArray(f.values)){const x=f.values.find(x=>isMainlandChinaCountry(x.descriptor));if(x)answer={field:f.facetParameter,value:x.id,label:x.descriptor};}for(const x of Object.values(f))if(x&&typeof x==='object')Array.isArray(x)?x.forEach(walk):walk(x);};walk(facets);return answer;}
 export async function collectInternational(source,options={}){
   if(!['workday','smartrecruiters'].includes(source.provider))return null;
   const opts={maxPages:1000,pageSize:source.provider==='workday'?20:100,detailConcurrency:3,timeoutMs:20000,...options};
@@ -93,7 +100,7 @@ export async function collectInternational(source,options={}){
       const r=await requestJson(client,{url},'job_detail');
       if(source.provider==='workday')assertWorkdayDetailIdentity(row,r.data);
       const country=source.provider==='workday'?r.data.jobPostingInfo?.country?.descriptor:r.data.location?.country;
-      if(!/^(cn|China|China Mainland|Mainland China|中国|中国大陆)$/i.test(country||'')){errors.push('Country filter not confirmed in detail '+(row.id||row.externalPath));excluded.push({job_id:row.id||row.externalPath,country,raw_file:r.record.response_file});continue;}
+      if(!isMainlandChinaCountry(country)){errors.push('Country filter not confirmed in detail '+(row.id||row.externalPath));excluded.push({job_id:row.id||row.externalPath,country,raw_file:r.record.response_file});continue;}
       const j=source.provider==='workday'?normalizeWorkday(r.data,source,r.record):normalizeSmartRecruiters(r.data,source,r.record,true);
       if(!j.job_id)throw Error('Missing detail job ID');
       if(source.provider==='smartrecruiters'&&j.job_id!==String(row.id))throw Error('Detail ID mismatch');

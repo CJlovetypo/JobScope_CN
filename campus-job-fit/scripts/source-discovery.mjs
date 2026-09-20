@@ -7,6 +7,7 @@ import {collectCommon} from './lib/providers-common.mjs';
 import {reviewJobBody} from './lib/body-review.mjs';
 import {reviewRecruitment} from './lib/recruitment-policy.mjs';
 import {workspacePath} from './lib/io.mjs';
+import {zeroJobCapability} from '../../shared/job-search-core/scripts/lib/waiqi-zero-source-policy.mjs';
 
 const json=async(f,v)=>{await fs.mkdir(path.dirname(f),{recursive:true});await fs.writeFile(f,JSON.stringify(v,null,2)+'\n');};
 const decode=s=>String(s).replace(/&quot;/g,'"').replace(/&#39;|&apos;/g,"'").replace(/&amp;/g,'&').replace(/&lt;/g,'<').replace(/&gt;/g,'>');
@@ -75,7 +76,8 @@ export async function verifyCandidate(item,outputDir,options={}) {
   const folder=path.join(outputDir,item.company_id||idFor(item.display_name));await fs.mkdir(folder,{recursive:true});
   const entries=[...new Set(item.entry_urls||item.endpoints?.map(e=>e.url_canonical||e.url_sample)||[])];
   const attempts=[],seenContexts=new Set();let best=null;
-  const prefer=a=>{if(!best||a.formal_jobs>best.formal_jobs||(a.formal_jobs===best.formal_jobs&&a.complete_jds>best.complete_jds))best=a;};
+  const prefer=a=>{if(!best||a.formal_jobs>best.formal_jobs||(a.formal_jobs===best.formal_jobs&&a.complete_jds>best.complete_jds)
+    ||(a.formal_jobs===best.formal_jobs&&a.complete_jds===best.complete_jds&&!!a.zero_job_capability>!!best.zero_job_capability))best=a;};
   for(let index=0;index<entries.length;index++){
     const attemptDir=path.join(folder,'attempt-'+(index+1));
     try {
@@ -87,8 +89,9 @@ export async function verifyCandidate(item,outputDir,options={}) {
       const settings={mode:'full',pageSize:50,maxPages:100,timeoutMs:15000,...options,evidenceDir:path.join(attemptDir,'http')};
       const result=await collectCommon(source,settings);result.jobs=result.jobs.map(j=>reviewRecruitment(reviewJobBody(j)));await json(path.join(attemptDir,'source.json'),source);await json(path.join(attemptDir,'result.json'),result);
       const complete=result.jobs.filter(j=>j.body_complete&&j.job_id&&j.official_url);
+      const zero=result.jobs.length===0?zeroJobCapability(source,result).capability:null;
       const attempt={entry_url:source.primary_entry_url,provider:source.provider,source_file:path.join(attemptDir,'source.json'),result_file:path.join(attemptDir,'result.json'),jobs:result.jobs.length,complete_jds:complete.length,
-        formal_jobs:result.jobs.filter(j=>j.body_complete&&j.formal_status==='formal'&&j.open_status==='open').length,coverage:result.coverage,discovery_requests:discovery};
+        formal_jobs:result.jobs.filter(j=>j.body_complete&&j.formal_status==='formal'&&j.open_status==='open').length,coverage:result.coverage,discovery_requests:discovery,...(zero?{zero_job_capability:zero}:{})};
       attempts.push(attempt);prefer(attempt);
       if(complete.length)continue;
       if(result.coverage.pages&&['beisen','feishu','hotjob'].includes(source.provider)){
@@ -100,8 +103,8 @@ export async function verifyCandidate(item,outputDir,options={}) {
       }
     }catch(error){attempts.push({entry_url:entries[index],error:error.message});}
   }
-  const row={...item,company_id:item.company_id||idFor(item.display_name),checked_at:new Date().toISOString(),...best,attempts,verified_sources:attempts.filter(a=>a.complete_jds>0),
-    admitted:!!best?.complete_jds,state:best?.complete_jds?'verified_api_full_jd':best?.coverage?.pages?'empty_or_incomplete_api':'unverified',reason:best?.coverage?.reason||attempts.at(-1)?.error||'No entry URLs available'};
+  const row={...item,company_id:item.company_id||idFor(item.display_name),checked_at:new Date().toISOString(),...best,attempts,verified_sources:attempts.filter(a=>a.complete_jds>0),zero_job_api_sources:attempts.filter(a=>a.zero_job_capability),
+    admitted:!!best?.complete_jds,state:best?.complete_jds?'verified_api_full_jd':best?.zero_job_capability?'verified_api_zero_jobs_pending_identity':best?.coverage?.pages?'empty_or_incomplete_api':'unverified',reason:best?.coverage?.reason||attempts.at(-1)?.error||'No entry URLs available'};
   await json(path.join(folder,'verification.json'),row);return row;
 }
 
