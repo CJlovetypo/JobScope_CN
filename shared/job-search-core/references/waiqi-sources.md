@@ -70,6 +70,8 @@ node shared/job-search-core/scripts/audit-waiqi-official-discovery.mjs campus-jo
 
 复核产物确认后，按 `sourceKey`、人工指定的已有 `company_id`、主体分组和已存在的同一 API 配置做增量合并。不得使用模糊名称自动合并，也不得把未经复核的候选直接复制到正式来源库。合并时保留现有公司 ID 与配置，并在本地 artifacts 备份合并前来源库；重复执行不能加入重复配置。
 
-合并后运行 `seed-missing-company-tags.mjs --apply`，只给新增主体补齐规模、性质、业务和简介的待核实占位，已有事实逐项保留；再运行 `seed-waiqi-city-index.mjs --apply`，从官方岗位样本补充三方向城市证据。随后刷新 `refresh-registry-metadata.mjs` 和 `campus-job-fit/scripts/render-industry-index.mjs`。这些命令均从仓库根目录执行，共享脚本位于 `shared/job-search-core/scripts/`。
+合并后先运行 `seed-waiqi-city-index.mjs --apply`，让三个方向的城市索引包含全部新增主体，并从官方岗位样本补充城市证据；再运行 `seed-missing-company-tags.mjs --apply`，只给新增主体补齐规模、性质、业务和简介的待核实占位，已有事实逐项保留。随后运行 `tag-waiqi-ownership.mjs --apply`，再刷新 `refresh-registry-metadata.mjs` 和 `campus-job-fit/scripts/render-industry-index.mjs`。这些命令均从仓库根目录执行，共享脚本位于 `shared/job-search-core/scripts/`。
+
+Oracle Recruiting 同一租户常同时暴露 `CX`、`CX_1`、`CX_1001` 等多个站点路径。若匿名列表的总量、岗位 ID 和样本正文证明这些路径返回同一库存，只保留一个已核验的代表配置，避免重复抓取和重复展示；审计中的其他路径记为同库存入口别名。只有列表集合或招聘方向确实不同的站点才分别注册。Waiqi 把旧主体、错误主体或同一租户下的无关公司指向同一链接时，必须保留为主体冲突，不能为了提高覆盖数字强行合并。
 
 抓取完成后再次导出，在本地生成抓取报告、正式接入来源 CSV 与招聘域名汇总。检查 `failures.json` 和岗位数量差异，并运行 `node --test campus-job-fit/scripts/tests/*.test.mjs` 验证正式库和各索引的一致性。
