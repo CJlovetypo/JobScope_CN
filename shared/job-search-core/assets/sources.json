@@ -17860,7 +17860,7 @@
       "display_name": "毕马威",
       "provider": "moka",
       "category": "咨询／科研／专业服务",
-      "primary_entry_url": "https://app.mokahr.com/campus-recruitment/kpmg/74356",
+      "primary_entry_url": "https://app.mokahr.com/campus-recruitment/kpmg/76195",
       "validated_api_request_examples": [
         {
           "url": "https://app.mokahr.com/api/outer/ats-apply/website/jobs/v2",
@@ -17868,11 +17868,11 @@
           "headers": {
             "Content-Type": "application/json",
             "Origin": "https://app.mokahr.com",
-            "Referer": "https://app.mokahr.com/campus-recruitment/kpmg/74356"
+            "Referer": "https://app.mokahr.com/campus-recruitment/kpmg/76195"
           },
           "body": {
             "orgId": "kpmg",
-            "siteId": "74356",
+            "siteId": "76195",
             "site": "campus-recruitment",
             "locale": "zh-CN",
             "limit": 50,
@@ -17887,7 +17887,7 @@
           "headers": {
             "Content-Type": "application/json",
             "Origin": "https://app.mokahr.com",
-            "Referer": "https://app.mokahr.com/campus-recruitment/kpmg/74356"
+            "Referer": "https://app.mokahr.com/campus-recruitment/kpmg/76195"
           },
           "body": null,
           "purpose": "job_detail"
@@ -17895,7 +17895,7 @@
       ],
       "public_bootstrap_requests": [
         {
-          "url": "https://app.mokahr.com/campus-recruitment/kpmg/74356",
+          "url": "https://app.mokahr.com/campus-recruitment/kpmg/76195",
           "method": "GET",
           "purpose": "public_configuration_bootstrap"
         }
@@ -17910,7 +17910,7 @@
           "display_name": "毕马威",
           "provider": "moka",
           "category": "咨询／科研／专业服务",
-          "primary_entry_url": "https://app.mokahr.com/campus-recruitment/kpmg/74356",
+          "primary_entry_url": "https://app.mokahr.com/campus-recruitment/kpmg/76195",
           "validated_api_request_examples": [
             {
               "url": "https://app.mokahr.com/api/outer/ats-apply/website/jobs/v2",
@@ -17918,11 +17918,11 @@
               "headers": {
                 "Content-Type": "application/json",
                 "Origin": "https://app.mokahr.com",
-                "Referer": "https://app.mokahr.com/campus-recruitment/kpmg/74356"
+                "Referer": "https://app.mokahr.com/campus-recruitment/kpmg/76195"
               },
               "body": {
                 "orgId": "kpmg",
-                "siteId": "74356",
+                "siteId": "76195",
                 "site": "campus-recruitment",
                 "locale": "zh-CN",
                 "limit": 50,
@@ -17937,7 +17937,7 @@
               "headers": {
                 "Content-Type": "application/json",
                 "Origin": "https://app.mokahr.com",
-                "Referer": "https://app.mokahr.com/campus-recruitment/kpmg/74356"
+                "Referer": "https://app.mokahr.com/campus-recruitment/kpmg/76195"
               },
               "body": null,
               "purpose": "job_detail"
@@ -17945,19 +17945,75 @@
           ],
           "public_bootstrap_requests": [
             {
-              "url": "https://app.mokahr.com/campus-recruitment/kpmg/74356",
+              "url": "https://app.mokahr.com/campus-recruitment/kpmg/76195",
               "method": "GET",
               "purpose": "public_configuration_bootstrap"
             }
           ],
-          "source_id": "api-8249b90016a1bd52"
+          "source_id": "api-8249b90016a1bd52",
+          "repair_history": [
+            {
+              "checked_at": "2026-09-21T00:27:09.517Z",
+              "previous_config": {
+                "provider": "moka",
+                "primary_entry_url": "https://app.mokahr.com/campus-recruitment/kpmg/74356",
+                "validated_api_request_examples": [
+                  {
+                    "url": "https://app.mokahr.com/api/outer/ats-apply/website/jobs/v2",
+                    "method": "POST",
+                    "headers": {
+                      "Content-Type": "application/json",
+                      "Origin": "https://app.mokahr.com",
+                      "Referer": "https://app.mokahr.com/campus-recruitment/kpmg/74356"
+                    },
+                    "body": {
+                      "orgId": "kpmg",
+                      "siteId": "74356",
+                      "site": "campus-recruitment",
+                      "locale": "zh-CN",
+                      "limit": 50,
+                      "offset": 0,
+                      "needStat": true
+                    },
+                    "purpose": "job_list"
+                  },
+                  {
+                    "url": "https://app.mokahr.com/api/outer/ats-apply/website/job",
+                    "method": "POST",
+                    "headers": {
+                      "Content-Type": "application/json",
+                      "Origin": "https://app.mokahr.com",
+                      "Referer": "https://app.mokahr.com/campus-recruitment/kpmg/74356"
+                    },
+                    "body": null,
+                    "purpose": "job_detail"
+                  }
+                ],
+                "public_bootstrap_requests": [
+                  {
+                    "url": "https://app.mokahr.com/campus-recruitment/kpmg/74356",
+                    "method": "GET",
+                    "purpose": "public_configuration_bootstrap"
+                  }
+                ]
+              },
+              "evidence": {
+                "discovery_file": "D:\\Feishu Project\\job-search-skill-pack\\social-job-fit\\runs\\20260921-foreign-finance-all-targeted\\raw\\co_0ef606786f395fba4c31\\api-8249b90016a1bd52\\query-0\\repair\\00c9cdc8-98c-00001.txt",
+                "confirmation_file": "D:\\Feishu Project\\job-search-skill-pack\\social-job-fit\\runs\\20260921-foreign-finance-all-targeted\\raw\\co_0ef606786f395fba4c31\\api-8249b90016a1bd52\\query-0\\repair\\00c9cdc8-98c-00002.txt",
+                "kind": "public_project_rotation",
+                "accepted": true,
+                "reason": "same_public_tenant_and_channel_with_complete_api_jd",
+                "jobs": 22
+              }
+            }
+          ]
         },
         {
           "company_id": "co_0ef606786f395fba4c31",
           "display_name": "毕马威",
           "provider": "moka",
           "category": "咨询／科研／专业服务",
-          "primary_entry_url": "https://app.mokahr.com/campus-recruitment/kpmg/78342",
+          "primary_entry_url": "https://app.mokahr.com/campus-recruitment/kpmg/74217",
           "validated_api_request_examples": [
             {
               "url": "https://app.mokahr.com/api/outer/ats-apply/website/jobs/v2",
@@ -17965,11 +18021,11 @@
               "headers": {
                 "Content-Type": "application/json",
                 "Origin": "https://app.mokahr.com",
-                "Referer": "https://app.mokahr.com/campus-recruitment/kpmg/78342"
+                "Referer": "https://app.mokahr.com/campus-recruitment/kpmg/74217"
               },
               "body": {
                 "orgId": "kpmg",
-                "siteId": "78342",
+                "siteId": "74217",
                 "site": "campus-recruitment",
                 "locale": "zh-CN",
                 "limit": 50,
@@ -17984,7 +18040,7 @@
               "headers": {
                 "Content-Type": "application/json",
                 "Origin": "https://app.mokahr.com",
-                "Referer": "https://app.mokahr.com/campus-recruitment/kpmg/78342"
+                "Referer": "https://app.mokahr.com/campus-recruitment/kpmg/74217"
               },
               "body": null,
               "purpose": "job_detail"
@@ -17992,12 +18048,68 @@
           ],
           "public_bootstrap_requests": [
             {
-              "url": "https://app.mokahr.com/campus-recruitment/kpmg/78342",
+              "url": "https://app.mokahr.com/campus-recruitment/kpmg/74217",
               "method": "GET",
               "purpose": "public_configuration_bootstrap"
             }
           ],
-          "source_id": "api-6835c88ea32a0109"
+          "source_id": "api-6835c88ea32a0109",
+          "repair_history": [
+            {
+              "checked_at": "2026-09-21T00:27:15.581Z",
+              "previous_config": {
+                "provider": "moka",
+                "primary_entry_url": "https://app.mokahr.com/campus-recruitment/kpmg/78342",
+                "validated_api_request_examples": [
+                  {
+                    "url": "https://app.mokahr.com/api/outer/ats-apply/website/jobs/v2",
+                    "method": "POST",
+                    "headers": {
+                      "Content-Type": "application/json",
+                      "Origin": "https://app.mokahr.com",
+                      "Referer": "https://app.mokahr.com/campus-recruitment/kpmg/78342"
+                    },
+                    "body": {
+                      "orgId": "kpmg",
+                      "siteId": "78342",
+                      "site": "campus-recruitment",
+                      "locale": "zh-CN",
+                      "limit": 50,
+                      "offset": 0,
+                      "needStat": true
+                    },
+                    "purpose": "job_list"
+                  },
+                  {
+                    "url": "https://app.mokahr.com/api/outer/ats-apply/website/job",
+                    "method": "POST",
+                    "headers": {
+                      "Content-Type": "application/json",
+                      "Origin": "https://app.mokahr.com",
+                      "Referer": "https://app.mokahr.com/campus-recruitment/kpmg/78342"
+                    },
+                    "body": null,
+                    "purpose": "job_detail"
+                  }
+                ],
+                "public_bootstrap_requests": [
+                  {
+                    "url": "https://app.mokahr.com/campus-recruitment/kpmg/78342",
+                    "method": "GET",
+                    "purpose": "public_configuration_bootstrap"
+                  }
+                ]
+              },
+              "evidence": {
+                "discovery_file": "D:\\Feishu Project\\job-search-skill-pack\\social-job-fit\\runs\\20260921-foreign-finance-all-targeted\\raw\\co_0ef606786f395fba4c31\\api-6835c88ea32a0109\\query-0\\repair\\a23277ff-b1f-00001.txt",
+                "confirmation_file": "D:\\Feishu Project\\job-search-skill-pack\\social-job-fit\\runs\\20260921-foreign-finance-all-targeted\\raw\\co_0ef606786f395fba4c31\\api-6835c88ea32a0109\\query-0\\repair\\a23277ff-b1f-00002.txt",
+                "kind": "public_project_rotation",
+                "accepted": true,
+                "reason": "same_public_tenant_and_channel_with_complete_api_jd",
+                "jobs": 22
+              }
+            }
+          ]
         },
         {
           "company_id": "co_0ef606786f395fba4c31",
@@ -33536,7 +33648,7 @@
           "display_name": "德州仪器",
           "provider": "moka",
           "category": "supply_chain",
-          "primary_entry_url": "https://app.mokahr.com/campus-recruitment/ti/144126?appId=wx9105b76b5088b840",
+          "primary_entry_url": "https://app.mokahr.com/campus-recruitment/ti/143986",
           "validated_api_request_examples": [
             {
               "url": "https://app.mokahr.com/api/outer/ats-apply/website/jobs/v2",
@@ -33544,11 +33656,11 @@
               "headers": {
                 "Content-Type": "application/json",
                 "Origin": "https://app.mokahr.com",
-                "Referer": "https://app.mokahr.com/campus-recruitment/ti/144126?appId=wx9105b76b5088b840"
+                "Referer": "https://app.mokahr.com/campus-recruitment/ti/143986"
               },
               "body": {
                 "orgId": "ti",
-                "siteId": "144126",
+                "siteId": "143986",
                 "site": "campus-recruitment",
                 "locale": "zh-CN",
                 "limit": 50,
@@ -33563,7 +33675,7 @@
               "headers": {
                 "Content-Type": "application/json",
                 "Origin": "https://app.mokahr.com",
-                "Referer": "https://app.mokahr.com/campus-recruitment/ti/144126?appId=wx9105b76b5088b840"
+                "Referer": "https://app.mokahr.com/campus-recruitment/ti/143986"
               },
               "body": null,
               "purpose": "job_detail"
@@ -33571,7 +33683,7 @@
           ],
           "public_bootstrap_requests": [
             {
-              "url": "https://app.mokahr.com/campus-recruitment/ti/144126?appId=wx9105b76b5088b840",
+              "url": "https://app.mokahr.com/campus-recruitment/ti/143986",
               "method": "GET",
               "purpose": "public_configuration_bootstrap"
             }
@@ -33711,7 +33823,63 @@
               ]
             },
             "scope": "Sample API verification only; current job types and availability require per-job checks"
-          }
+          },
+          "repair_history": [
+            {
+              "checked_at": "2026-09-21T00:25:45.100Z",
+              "previous_config": {
+                "provider": "moka",
+                "primary_entry_url": "https://app.mokahr.com/campus-recruitment/ti/144126?appId=wx9105b76b5088b840",
+                "validated_api_request_examples": [
+                  {
+                    "url": "https://app.mokahr.com/api/outer/ats-apply/website/jobs/v2",
+                    "method": "POST",
+                    "headers": {
+                      "Content-Type": "application/json",
+                      "Origin": "https://app.mokahr.com",
+                      "Referer": "https://app.mokahr.com/campus-recruitment/ti/144126?appId=wx9105b76b5088b840"
+                    },
+                    "body": {
+                      "orgId": "ti",
+                      "siteId": "144126",
+                      "site": "campus-recruitment",
+                      "locale": "zh-CN",
+                      "limit": 50,
+                      "offset": 0,
+                      "needStat": true
+                    },
+                    "purpose": "job_list"
+                  },
+                  {
+                    "url": "https://app.mokahr.com/api/outer/ats-apply/website/job",
+                    "method": "POST",
+                    "headers": {
+                      "Content-Type": "application/json",
+                      "Origin": "https://app.mokahr.com",
+                      "Referer": "https://app.mokahr.com/campus-recruitment/ti/144126?appId=wx9105b76b5088b840"
+                    },
+                    "body": null,
+                    "purpose": "job_detail"
+                  }
+                ],
+                "public_bootstrap_requests": [
+                  {
+                    "url": "https://app.mokahr.com/campus-recruitment/ti/144126?appId=wx9105b76b5088b840",
+                    "method": "GET",
+                    "purpose": "public_configuration_bootstrap"
+                  }
+                ]
+              },
+              "evidence": {
+                "discovery_file": "D:\\Feishu Project\\job-search-skill-pack\\social-job-fit\\runs\\20260921-foreign-finance-targeted\\raw\\company-e1ad1fbdc47b\\waiqi-domestic-478c5aae3a93\\query-0\\repair\\3c7cfc7d-377-00001.txt",
+                "confirmation_file": "D:\\Feishu Project\\job-search-skill-pack\\social-job-fit\\runs\\20260921-foreign-finance-targeted\\raw\\company-e1ad1fbdc47b\\waiqi-domestic-478c5aae3a93\\query-0\\repair\\3c7cfc7d-377-00003.txt",
+                "kind": "public_project_rotation",
+                "accepted": true,
+                "reason": "same_public_tenant_and_channel_with_complete_api_jd",
+                "jobs": 28
+              }
+            }
+          ]
         },
         {
           "company_id": "company-e1ad1fbdc47b",
@@ -94809,7 +94977,7 @@
           "display_name": "金光集团APP(中国)",
           "provider": "moka",
           "category": "石化／材料／矿冶",
-          "primary_entry_url": "https://app.mokahr.com/campus-recruitment/jinguangapp/146948?locale=zh-CN",
+          "primary_entry_url": "https://app.mokahr.com/campus-recruitment/jinguangapp/144102",
           "validated_api_request_examples": [
             {
               "url": "https://app.mokahr.com/api/outer/ats-apply/website/jobs/v2",
@@ -94817,11 +94985,11 @@
               "headers": {
                 "Content-Type": "application/json",
                 "Origin": "https://app.mokahr.com",
-                "Referer": "https://app.mokahr.com/campus-recruitment/jinguangapp/146948?locale=zh-CN"
+                "Referer": "https://app.mokahr.com/campus-recruitment/jinguangapp/144102"
               },
               "body": {
                 "orgId": "jinguangapp",
-                "siteId": "146948",
+                "siteId": "144102",
                 "site": "campus-recruitment",
                 "locale": "zh-CN",
                 "limit": 50,
@@ -94836,7 +95004,7 @@
               "headers": {
                 "Content-Type": "application/json",
                 "Origin": "https://app.mokahr.com",
-                "Referer": "https://app.mokahr.com/campus-recruitment/jinguangapp/146948?locale=zh-CN"
+                "Referer": "https://app.mokahr.com/campus-recruitment/jinguangapp/144102"
               },
               "body": null,
               "purpose": "job_detail"
@@ -94844,12 +95012,68 @@
           ],
           "public_bootstrap_requests": [
             {
-              "url": "https://app.mokahr.com/campus-recruitment/jinguangapp/146948?locale=zh-CN",
+              "url": "https://app.mokahr.com/campus-recruitment/jinguangapp/144102",
               "method": "GET",
               "purpose": "public_configuration_bootstrap"
             }
           ],
-          "source_id": "api-d4a1bcf33ed4d166"
+          "source_id": "api-d4a1bcf33ed4d166",
+          "repair_history": [
+            {
+              "checked_at": "2026-09-21T00:27:51.758Z",
+              "previous_config": {
+                "provider": "moka",
+                "primary_entry_url": "https://app.mokahr.com/campus-recruitment/jinguangapp/146948?locale=zh-CN",
+                "validated_api_request_examples": [
+                  {
+                    "url": "https://app.mokahr.com/api/outer/ats-apply/website/jobs/v2",
+                    "method": "POST",
+                    "headers": {
+                      "Content-Type": "application/json",
+                      "Origin": "https://app.mokahr.com",
+                      "Referer": "https://app.mokahr.com/campus-recruitment/jinguangapp/146948?locale=zh-CN"
+                    },
+                    "body": {
+                      "orgId": "jinguangapp",
+                      "siteId": "146948",
+                      "site": "campus-recruitment",
+                      "locale": "zh-CN",
+                      "limit": 50,
+                      "offset": 0,
+                      "needStat": true
+                    },
+                    "purpose": "job_list"
+                  },
+                  {
+                    "url": "https://app.mokahr.com/api/outer/ats-apply/website/job",
+                    "method": "POST",
+                    "headers": {
+                      "Content-Type": "application/json",
+                      "Origin": "https://app.mokahr.com",
+                      "Referer": "https://app.mokahr.com/campus-recruitment/jinguangapp/146948?locale=zh-CN"
+                    },
+                    "body": null,
+                    "purpose": "job_detail"
+                  }
+                ],
+                "public_bootstrap_requests": [
+                  {
+                    "url": "https://app.mokahr.com/campus-recruitment/jinguangapp/146948?locale=zh-CN",
+                    "method": "GET",
+                    "purpose": "public_configuration_bootstrap"
+                  }
+                ]
+              },
+              "evidence": {
+                "discovery_file": "D:\\Feishu Project\\job-search-skill-pack\\social-job-fit\\runs\\20260921-foreign-finance-all-targeted\\raw\\co_9c933dcb449bcf0149f7\\api-d4a1bcf33ed4d166\\query-0\\repair\\f8de2bf5-192-00001.txt",
+                "confirmation_file": "D:\\Feishu Project\\job-search-skill-pack\\social-job-fit\\runs\\20260921-foreign-finance-all-targeted\\raw\\co_9c933dcb449bcf0149f7\\api-d4a1bcf33ed4d166\\query-0\\repair\\f8de2bf5-192-00003.txt",
+                "kind": "public_project_rotation",
+                "accepted": true,
+                "reason": "same_public_tenant_and_channel_with_complete_api_jd",
+                "jobs": 22
+              }
+            }
+          ]
         }
       ],
       "source_origin": "legacy-registry-public-api-expansion",
@@ -235692,114 +235916,41 @@
     {
       "company_id": "company-027d44d6a233",
       "display_name": "游卡",
-      "provider": "moka",
+      "provider": "yokaverse",
       "category": "游戏研发／发行及服务",
-      "primary_entry_url": "https://app.mokahr.com/campus-recruitment/yokagames/41940",
-      "bootstrap_note": "从零创建普通 HTTP 匿名会话；如需公开门户配置，仅用于初始化，不读取网页作为 JD。",
+      "primary_entry_url": "https://campus.yokaverse.com/",
       "validated_api_request_examples": [
         {
-          "url": "https://app.mokahr.com/api/outer/ats-apply/website/jobs/v2",
-          "method": "POST",
+          "url": "https://campus-recruitment-api.yokaverse.com/api/v1/campus/portal/positions?page=1&page_size=100",
+          "method": "GET",
           "headers": {
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/124.0.0.0 Safari/537.36",
             "Accept": "application/json",
-            "Content-Type": "application/json",
-            "Origin": "https://app.mokahr.com",
-            "Referer": "https://app.mokahr.com/campus-recruitment/yokagames/41940"
+            "Origin": "https://campus.yokaverse.com",
+            "Referer": "https://campus.yokaverse.com/"
           },
-          "body": {
-            "orgId": "yokagames",
-            "siteId": "41940",
-            "limit": 20,
-            "offset": 0,
-            "needStat": true,
-            "site": "campus-recruitment",
-            "locale": "zh-CN"
-          },
-          "purpose": "list_JSON"
-        },
-        {
-          "url": "https://app.mokahr.com/api/outer/ats-apply/website/jobs/v2",
-          "method": "POST",
-          "headers": {
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/124.0.0.0 Safari/537.36",
-            "Accept": "application/json",
-            "Content-Type": "application/json",
-            "Origin": "https://app.mokahr.com",
-            "Referer": "https://app.mokahr.com/campus-recruitment/yokagames/41940"
-          },
-          "body": {
-            "orgId": "yokagames",
-            "siteId": "41940",
-            "limit": 20,
-            "offset": 20,
-            "needStat": true,
-            "site": "campus-recruitment",
-            "locale": "zh-CN"
-          },
-          "purpose": "list_JSON"
-        },
-        {
-          "url": "https://app.mokahr.com/api/outer/ats-apply/website/job",
-          "method": "POST",
-          "headers": {
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/124.0.0.0 Safari/537.36",
-            "Accept": "application/json",
-            "Content-Type": "application/json",
-            "Origin": "https://app.mokahr.com",
-            "Referer": "https://app.mokahr.com/campus-recruitment/yokagames/41940"
-          },
-          "body": {
-            "orgId": "yokagames",
-            "jobId": "a7751447-5b9a-4bd4-bc0a-0a328523d90a",
-            "siteId": "41940",
-            "locale": "zh-CN"
-          },
-          "purpose": "detail_JSON"
-        },
-        {
-          "url": "https://app.mokahr.com/api/outer/ats-apply/website/job",
-          "method": "POST",
-          "headers": {
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/124.0.0.0 Safari/537.36",
-            "Accept": "application/json",
-            "Content-Type": "application/json",
-            "Origin": "https://app.mokahr.com",
-            "Referer": "https://app.mokahr.com/campus-recruitment/yokagames/41940"
-          },
-          "body": {
-            "orgId": "yokagames",
-            "jobId": "dcf9cd4c-c5d0-4df4-aab6-211b1a6bbdfe",
-            "siteId": "41940",
-            "locale": "zh-CN"
-          },
-          "purpose": "detail_JSON"
+          "body": null,
+          "purpose": "job_list_with_inline_jd"
         }
       ],
       "public_bootstrap_requests": [
         {
-          "url": "https://app.mokahr.com/campus-recruitment/yokagames/41940",
+          "url": "https://campus.yokaverse.com/",
           "method": "GET",
-          "headers": {
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/124.0.0.0 Safari/537.36",
-            "Accept": "application/json, text/html;q=0.5"
-          },
+          "headers": {},
           "body": null,
           "purpose": "bootstrap_public_static_portal_configuration"
         }
       ],
       "verified_samples": [
         {
-          "job_id": "a7751447-5b9a-4bd4-bc0a-0a328523d90a",
-          "title": "精英应届生-服务端开发方向",
-          "url": "https://app.mokahr.com/campus-recruitment/yokagames/41940#/job/a7751447-5b9a-4bd4-bc0a-0a328523d90a"
-        },
-        {
-          "job_id": "dcf9cd4c-c5d0-4df4-aab6-211b1a6bbdfe",
-          "title": "品类/平台运营",
-          "url": "https://app.mokahr.com/campus-recruitment/yokagames/41940#/job/dcf9cd4c-c5d0-4df4-aab6-211b1a6bbdfe"
+          "job_id": "youka-220",
+          "title": "UE",
+          "url": "https://campus.yokaverse.com/jobs/220"
         }
       ],
+      "verification_status": "verified_api_full_jd",
+      "api_verified_at": "2026-09-21T00:00:00.000Z",
+      "verification_scope": "新官方校园招聘站匿名 API；列表内联完整 JD，按 server total 完成枚举",
       "industry_tags": [
         "internet"
       ]
@@ -309822,7 +309973,123 @@
         "dataset": "user_feishu_base_20260919",
         "entry_url": "https://vfc.wd5.myworkdayjobs.com/vfc_careers"
       },
-      "source_origin": "feishu-expansion-20260919"
+      "source_origin": "feishu-expansion-20260919",
+      "recruitment_sources": [
+        {
+          "company_id": "company-c7703c0c43b4",
+          "display_name": "威富（中国招聘门户）",
+          "aliases": [],
+          "category": "consumer",
+          "industry_tags": [
+            "consumer"
+          ],
+          "industry_assignment": {
+            "status": "reviewed_routing",
+            "basis": "公司公开招聘门户和招聘主体信息；行业分流不替代主营业务核实",
+            "checked_at": "2026-09-19T12:21:23.014Z"
+          },
+          "provider": "workday",
+          "primary_entry_url": "https://vfc.wd5.myworkdayjobs.com/vfc_careers",
+          "api_config": {
+            "origin": "https://vfc.wd5.myworkdayjobs.com",
+            "tenant": "vfc",
+            "site": "vfc_careers"
+          },
+          "source_id": "feishu-20260919-39bd1591a8246059e5de",
+          "source_verification": {
+            "checked_at": "2026-09-19T12:21:23.014Z",
+            "method": "public_api_full_jd_and_employer_identity",
+            "complete_jd_samples": 11,
+            "observed_jobs": 21,
+            "identity_basis": "public_employer_name:VF China",
+            "scope": "威富（中国招聘门户）",
+            "proof_directory": "internet-campus-job-fit/artifacts/feishu-source-expansion-20260919/api-verification/39bd1591a8246059e5de",
+            "pagination": "sample_up_to_two_pages; not_full_inventory"
+          },
+          "discovery_provenance": {
+            "dataset": "user_feishu_base_20260919",
+            "entry_url": "https://vfc.wd5.myworkdayjobs.com/vfc_careers"
+          },
+          "source_origin": "feishu-expansion-20260919"
+        },
+        {
+          "company_id": "company-c7703c0c43b4",
+          "display_name": "VF 威富",
+          "aliases": [
+            "VF",
+            "威富服饰"
+          ],
+          "industry_tags": [
+            "consumer"
+          ],
+          "category": "consumer",
+          "provider": "ajinga_public",
+          "source_id": "ajinga-7908",
+          "primary_entry_url": "https://www.ajinga.com/recruiting/company/7908/",
+          "api_config": {
+            "company_id": "7908",
+            "root_company_id": "7908"
+          },
+          "admitted": true,
+          "verification_status": "verified_public_list_only",
+          "verified_at": "2026-09-21T01:57:21.257Z",
+          "source_origin": "waiqi-interface-expansion-20260921",
+          "identity_verification": {
+            "identity_verified": true,
+            "official_name": "VF",
+            "evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\ajinga\\7908\\f3a12b61-4bf-00001.json",
+            "basis": "AJINGA public company profile confirms channel 7908 belongs to VF / 威富服饰 (root 7908). List row root IDs reconcile with that profile. Registration is at reviewed recruitment group scope."
+          },
+          "source_verification": {
+            "checked_at": "2026-09-21T01:57:21.257Z",
+            "identity_basis": "AJINGA public company profile confirms channel 7908 belongs to VF / 威富服饰 (root 7908). List row root IDs reconcile with that profile. Registration is at reviewed recruitment group scope.",
+            "proof_directory": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\ajinga\\7908",
+            "observed_jobs": 8,
+            "complete_jd_samples": 0,
+            "public_list_capability": {
+              "anonymous": true,
+              "list_complete": true,
+              "jobs_observed": 8,
+              "company_profile": {
+                "company_id": "7908",
+                "root_company_id": "7908",
+                "root_company_name": "VF",
+                "http_status": 200,
+                "anonymous_session_from_scratch": true,
+                "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\ajinga\\7908\\f3a12b61-4bf-00001.json",
+                "response_sha256": "ab1473c8cc6386610342a000b88eb3465faafbaea95f67074e1801249543bfcc"
+              },
+              "request_evidence": [
+                {
+                  "url": "https://www.ajinga.com/django_rest/job-list/?company_id=7908&page=1&page_size=100",
+                  "method": "GET",
+                  "http_status": 200,
+                  "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\ajinga\\7908\\f3a12b61-4bf-00002.json",
+                  "response_sha256": "069bc42e5dd082b3c24cc8c165797c318b0cb587d48b7f5edd1ead9564f47350",
+                  "anonymous_session_from_scratch": true
+                }
+              ]
+            }
+          },
+          "discovery_provenance": {
+            "dataset": "waiqi-company-20260921",
+            "waiqi_company_id": 23867,
+            "related_waiqi_company_ids": [
+              23867
+            ],
+            "company_url": "https://waiqi.com/company/detail?id=23867",
+            "identity_scope": "reviewed_branded_recruitment_group"
+          },
+          "validated_api_request_examples": [
+            {
+              "method": "GET",
+              "url": "https://www.ajinga.com/django_rest/job-list/?company_id=7908&page=1&page_size=100",
+              "purpose": "job_list",
+              "response_format": "json"
+            }
+          ]
+        }
+      ]
     },
     {
       "company_id": "company-2d0066f5320a",
@@ -310201,61 +310468,26 @@
         "basis": "公司公开招聘门户和招聘主体信息；行业分流不替代主营业务核实",
         "checked_at": "2026-09-19T12:21:23.014Z"
       },
-      "provider": "moka",
-      "primary_entry_url": "https://app.mokahr.com/social-recruitment/akzonobel/116138",
-      "validated_api_request_examples": [
-        {
-          "url": "https://app.mokahr.com/api/outer/ats-apply/website/jobs/v2",
-          "method": "POST",
-          "headers": {
-            "Content-Type": "application/json",
-            "Origin": "https://app.mokahr.com",
-            "Referer": "https://app.mokahr.com/social-recruitment/akzonobel/116138"
-          },
-          "body": {
-            "orgId": "akzonobel",
-            "siteId": "116138",
-            "site": "social-recruitment",
-            "locale": "zh-CN",
-            "limit": 50,
-            "offset": 0,
-            "needStat": true
-          },
-          "purpose": "job_list"
-        },
-        {
-          "url": "https://app.mokahr.com/api/outer/ats-apply/website/job",
-          "method": "POST",
-          "headers": {
-            "Content-Type": "application/json",
-            "Origin": "https://app.mokahr.com",
-            "Referer": "https://app.mokahr.com/social-recruitment/akzonobel/116138"
-          },
-          "body": null,
-          "purpose": "job_detail"
-        }
-      ],
-      "public_bootstrap_requests": [
-        {
-          "url": "https://app.mokahr.com/social-recruitment/akzonobel/116138",
-          "method": "GET",
-          "purpose": "public_configuration_bootstrap"
-        }
-      ],
+      "provider": "51job_coapi",
+      "primary_entry_url": "https://ideal.51job.com/akzonobel/sc/job_list.html",
+      "entry_url": "https://ideal.51job.com/akzonobel/sc/job_list.html",
+      "api_config": {
+        "ctmid": "644158"
+      },
       "source_id": "feishu-20260919-4f644a507c4addd65012",
       "source_verification": {
-        "checked_at": "2026-09-19T12:21:23.014Z",
-        "method": "public_api_full_jd_and_employer_identity",
-        "complete_jd_samples": 35,
-        "observed_jobs": 40,
+        "checked_at": "2026-09-21T00:02:00.000Z",
+        "method": "official_51job_coapi_full_inventory_and_job_detail",
+        "complete_jd_samples": 30,
+        "observed_jobs": 46,
         "identity_basis": "public_employer_name:阿克苏诺贝尔",
         "scope": "阿克苏诺贝尔（中国招聘门户）",
-        "proof_directory": "internet-campus-job-fit/artifacts/feishu-source-expansion-20260919/api-verification/4f644a507c4addd65012",
-        "pagination": "sample_up_to_two_pages; not_full_inventory"
+        "proof_directory": "%TEMP%/jobscope-akzo-repair",
+        "pagination": "all 46 unique IDs reconciled to server total"
       },
       "discovery_provenance": {
         "dataset": "user_feishu_base_20260919",
-        "entry_url": "https://app.mokahr.com/social-recruitment/akzonobel/116138"
+        "entry_url": "https://ideal.51job.com/akzonobel/sc/job_list.html"
       },
       "source_origin": "feishu-expansion-20260919"
     },
@@ -455082,9 +455314,2273 @@
           ]
         }
       ]
+    },
+    {
+      "company_id": "waiqi-public-6321096788b7",
+      "display_name": "ASSA ABLOY 亚萨合莱",
+      "aliases": [
+        "ASSA ABLOY"
+      ],
+      "industry_tags": [
+        "industrial"
+      ],
+      "category": "industrial",
+      "provider": "jobs2web_public",
+      "source_id": "jobs2web-assaabloy.jobs2web.com",
+      "primary_entry_url": "https://assaabloy.jobs2web.com/search/",
+      "api_config": {
+        "origin": "https://assaabloy.jobs2web.com"
+      },
+      "verification_status": "verified_public_list_only",
+      "verified_at": "2026-09-21T01:39:10.347Z",
+      "admitted": true,
+      "source_origin": "waiqi-interface-expansion-20260921",
+      "identity_verification": {
+        "identity_verified": true,
+        "official_name": "ASSA ABLOY",
+        "evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-candidate-review\\assaabloy.jobs2web.com.html",
+        "basis": "Reviewed branded recruitment portal on assaabloy.jobs2web.com with corporate identity ASSA ABLOY. Registration scope is the recruitment group, not a claim that every vacancy belongs to one China legal subsidiary."
+      },
+      "source_verification": {
+        "checked_at": "2026-09-21T01:39:10.347Z",
+        "identity_basis": "Reviewed branded recruitment portal on assaabloy.jobs2web.com with corporate identity ASSA ABLOY. Registration scope is the recruitment group, not a claim that every vacancy belongs to one China legal subsidiary.",
+        "proof_directory": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\assaabloy.jobs2web.com",
+        "observed_jobs": 15,
+        "complete_jd_samples": 0,
+        "scope": "Mainland China public list only; recruitment direction and JD unverified",
+        "public_list_capability": {
+          "anonymous": true,
+          "list_complete": true,
+          "jobs_observed": 15,
+          "request_evidence": [
+            {
+              "url": "https://assaabloy.jobs2web.com/search/?optionsFacetsDD_country=CN",
+              "method": "GET",
+              "http_status": 200,
+              "response_sha256": "83b33c5c4ef49d01bb681eb9a8637b476d656fa4e9a88a2e946147714c25e153",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\assaabloy.jobs2web.com\\311e4d86-755-00001.txt",
+              "anonymous_session_from_scratch": true
+            }
+          ]
+        }
+      },
+      "discovery_provenance": {
+        "dataset": "waiqi-company-20260921",
+        "waiqi_company_id": 23774,
+        "related_waiqi_company_ids": [
+          23774,
+          18650
+        ],
+        "company_url": "https://waiqi.com/company/detail?id=23774",
+        "identity_scope": "reviewed_branded_recruitment_group"
+      },
+      "validated_api_request_examples": [
+        {
+          "method": "GET",
+          "url": "https://assaabloy.jobs2web.com/search/?optionsFacetsDD_country=CN",
+          "purpose": "job_list",
+          "response_format": "html",
+          "response_sha256": "83b33c5c4ef49d01bb681eb9a8637b476d656fa4e9a88a2e946147714c25e153"
+        }
+      ],
+      "recruitment_sources": [
+        {
+          "company_id": "waiqi-public-6321096788b7",
+          "display_name": "ASSA ABLOY 亚萨合莱",
+          "aliases": [
+            "ASSA ABLOY"
+          ],
+          "industry_tags": [
+            "industrial"
+          ],
+          "category": "industrial",
+          "provider": "jobs2web_public",
+          "source_id": "jobs2web-assaabloy.jobs2web.com",
+          "primary_entry_url": "https://assaabloy.jobs2web.com/search/",
+          "api_config": {
+            "origin": "https://assaabloy.jobs2web.com"
+          },
+          "verification_status": "verified_public_list_only",
+          "verified_at": "2026-09-21T01:39:10.347Z",
+          "admitted": true,
+          "source_origin": "waiqi-interface-expansion-20260921",
+          "identity_verification": {
+            "identity_verified": true,
+            "official_name": "ASSA ABLOY",
+            "evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-candidate-review\\assaabloy.jobs2web.com.html",
+            "basis": "Reviewed branded recruitment portal on assaabloy.jobs2web.com with corporate identity ASSA ABLOY. Registration scope is the recruitment group, not a claim that every vacancy belongs to one China legal subsidiary."
+          },
+          "source_verification": {
+            "checked_at": "2026-09-21T01:39:10.347Z",
+            "identity_basis": "Reviewed branded recruitment portal on assaabloy.jobs2web.com with corporate identity ASSA ABLOY. Registration scope is the recruitment group, not a claim that every vacancy belongs to one China legal subsidiary.",
+            "proof_directory": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\assaabloy.jobs2web.com",
+            "observed_jobs": 15,
+            "complete_jd_samples": 0,
+            "scope": "Mainland China public list only; recruitment direction and JD unverified",
+            "public_list_capability": {
+              "anonymous": true,
+              "list_complete": true,
+              "jobs_observed": 15,
+              "request_evidence": [
+                {
+                  "url": "https://assaabloy.jobs2web.com/search/?optionsFacetsDD_country=CN",
+                  "method": "GET",
+                  "http_status": 200,
+                  "response_sha256": "83b33c5c4ef49d01bb681eb9a8637b476d656fa4e9a88a2e946147714c25e153",
+                  "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\assaabloy.jobs2web.com\\311e4d86-755-00001.txt",
+                  "anonymous_session_from_scratch": true
+                }
+              ]
+            }
+          },
+          "discovery_provenance": {
+            "dataset": "waiqi-company-20260921",
+            "waiqi_company_id": 23774,
+            "related_waiqi_company_ids": [
+              23774,
+              18650
+            ],
+            "company_url": "https://waiqi.com/company/detail?id=23774",
+            "identity_scope": "reviewed_branded_recruitment_group"
+          },
+          "validated_api_request_examples": [
+            {
+              "method": "GET",
+              "url": "https://assaabloy.jobs2web.com/search/?optionsFacetsDD_country=CN",
+              "purpose": "job_list",
+              "response_format": "html",
+              "response_sha256": "83b33c5c4ef49d01bb681eb9a8637b476d656fa4e9a88a2e946147714c25e153"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "company_id": "waiqi-public-28444d6526c4",
+      "display_name": "ZF 采埃孚",
+      "aliases": [
+        "ZF"
+      ],
+      "industry_tags": [
+        "supply_chain"
+      ],
+      "category": "supply_chain",
+      "provider": "jobs2web_public",
+      "source_id": "jobs2web-jobs.zf.com",
+      "primary_entry_url": "https://jobs.zf.com/search/",
+      "api_config": {
+        "origin": "https://jobs.zf.com"
+      },
+      "verification_status": "verified_public_list_only",
+      "verified_at": "2026-09-21T01:39:21.945Z",
+      "admitted": true,
+      "source_origin": "waiqi-interface-expansion-20260921",
+      "identity_verification": {
+        "identity_verified": true,
+        "official_name": "ZF",
+        "evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-candidate-review\\jobs.zf.com.html",
+        "basis": "Reviewed branded recruitment portal on jobs.zf.com with corporate identity ZF. Registration scope is the recruitment group, not a claim that every vacancy belongs to one China legal subsidiary."
+      },
+      "source_verification": {
+        "checked_at": "2026-09-21T01:39:21.945Z",
+        "identity_basis": "Reviewed branded recruitment portal on jobs.zf.com with corporate identity ZF. Registration scope is the recruitment group, not a claim that every vacancy belongs to one China legal subsidiary.",
+        "proof_directory": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\jobs.zf.com",
+        "observed_jobs": 94,
+        "complete_jd_samples": 0,
+        "scope": "Mainland China public list only; recruitment direction and JD unverified",
+        "public_list_capability": {
+          "anonymous": true,
+          "list_complete": true,
+          "jobs_observed": 94,
+          "request_evidence": [
+            {
+              "url": "https://jobs.zf.com/search/?optionsFacetsDD_country=CN",
+              "method": "GET",
+              "http_status": 200,
+              "response_sha256": "7e434ae99349f7d932f21ce7f955aeefaeb1bb91b13ff3a76bfbc5295b2c2f83",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\jobs.zf.com\\fb25c763-cc0-00001.txt",
+              "anonymous_session_from_scratch": true
+            },
+            {
+              "url": "https://jobs.zf.com/search/?q=&sortColumn=referencedate&sortDirection=desc&optionsFacetsDD_country=CN&startrow=25",
+              "method": "GET",
+              "http_status": 200,
+              "response_sha256": "3cf5f349a1d4a9aadf9d0ea7d4e1d94a4a32570d981867efb504ad1316e8bb1b",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\jobs.zf.com\\fb25c763-cc0-00002.txt",
+              "anonymous_session_from_scratch": true
+            },
+            {
+              "url": "https://jobs.zf.com/search/?q=&sortColumn=referencedate&sortDirection=desc&optionsFacetsDD_country=CN&startrow=50",
+              "method": "GET",
+              "http_status": 200,
+              "response_sha256": "a29c28226edcd0830e351ce192570531ee39bf1ae58ed5aa2ff174c9dc4ee177",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\jobs.zf.com\\fb25c763-cc0-00003.txt",
+              "anonymous_session_from_scratch": true
+            },
+            {
+              "url": "https://jobs.zf.com/search/?q=&sortColumn=referencedate&sortDirection=desc&optionsFacetsDD_country=CN&startrow=75",
+              "method": "GET",
+              "http_status": 200,
+              "response_sha256": "a4a35aa9d7f52fdc10d91d60881fd31bc07e98ca559c8a2e9678daa0bf905915",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\jobs.zf.com\\fb25c763-cc0-00004.txt",
+              "anonymous_session_from_scratch": true
+            }
+          ]
+        }
+      },
+      "discovery_provenance": {
+        "dataset": "waiqi-company-20260921",
+        "waiqi_company_id": 1465,
+        "related_waiqi_company_ids": [
+          1465
+        ],
+        "company_url": "https://waiqi.com/company/detail?id=1465",
+        "identity_scope": "reviewed_branded_recruitment_group"
+      },
+      "validated_api_request_examples": [
+        {
+          "method": "GET",
+          "url": "https://jobs.zf.com/search/?optionsFacetsDD_country=CN",
+          "purpose": "job_list",
+          "response_format": "html",
+          "response_sha256": "7e434ae99349f7d932f21ce7f955aeefaeb1bb91b13ff3a76bfbc5295b2c2f83"
+        }
+      ],
+      "recruitment_sources": [
+        {
+          "company_id": "waiqi-public-28444d6526c4",
+          "display_name": "ZF 采埃孚",
+          "aliases": [
+            "ZF"
+          ],
+          "industry_tags": [
+            "supply_chain"
+          ],
+          "category": "supply_chain",
+          "provider": "jobs2web_public",
+          "source_id": "jobs2web-jobs.zf.com",
+          "primary_entry_url": "https://jobs.zf.com/search/",
+          "api_config": {
+            "origin": "https://jobs.zf.com"
+          },
+          "verification_status": "verified_public_list_only",
+          "verified_at": "2026-09-21T01:39:21.945Z",
+          "admitted": true,
+          "source_origin": "waiqi-interface-expansion-20260921",
+          "identity_verification": {
+            "identity_verified": true,
+            "official_name": "ZF",
+            "evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-candidate-review\\jobs.zf.com.html",
+            "basis": "Reviewed branded recruitment portal on jobs.zf.com with corporate identity ZF. Registration scope is the recruitment group, not a claim that every vacancy belongs to one China legal subsidiary."
+          },
+          "source_verification": {
+            "checked_at": "2026-09-21T01:39:21.945Z",
+            "identity_basis": "Reviewed branded recruitment portal on jobs.zf.com with corporate identity ZF. Registration scope is the recruitment group, not a claim that every vacancy belongs to one China legal subsidiary.",
+            "proof_directory": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\jobs.zf.com",
+            "observed_jobs": 94,
+            "complete_jd_samples": 0,
+            "scope": "Mainland China public list only; recruitment direction and JD unverified",
+            "public_list_capability": {
+              "anonymous": true,
+              "list_complete": true,
+              "jobs_observed": 94,
+              "request_evidence": [
+                {
+                  "url": "https://jobs.zf.com/search/?optionsFacetsDD_country=CN",
+                  "method": "GET",
+                  "http_status": 200,
+                  "response_sha256": "7e434ae99349f7d932f21ce7f955aeefaeb1bb91b13ff3a76bfbc5295b2c2f83",
+                  "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\jobs.zf.com\\fb25c763-cc0-00001.txt",
+                  "anonymous_session_from_scratch": true
+                },
+                {
+                  "url": "https://jobs.zf.com/search/?q=&sortColumn=referencedate&sortDirection=desc&optionsFacetsDD_country=CN&startrow=25",
+                  "method": "GET",
+                  "http_status": 200,
+                  "response_sha256": "3cf5f349a1d4a9aadf9d0ea7d4e1d94a4a32570d981867efb504ad1316e8bb1b",
+                  "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\jobs.zf.com\\fb25c763-cc0-00002.txt",
+                  "anonymous_session_from_scratch": true
+                },
+                {
+                  "url": "https://jobs.zf.com/search/?q=&sortColumn=referencedate&sortDirection=desc&optionsFacetsDD_country=CN&startrow=50",
+                  "method": "GET",
+                  "http_status": 200,
+                  "response_sha256": "a29c28226edcd0830e351ce192570531ee39bf1ae58ed5aa2ff174c9dc4ee177",
+                  "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\jobs.zf.com\\fb25c763-cc0-00003.txt",
+                  "anonymous_session_from_scratch": true
+                },
+                {
+                  "url": "https://jobs.zf.com/search/?q=&sortColumn=referencedate&sortDirection=desc&optionsFacetsDD_country=CN&startrow=75",
+                  "method": "GET",
+                  "http_status": 200,
+                  "response_sha256": "a4a35aa9d7f52fdc10d91d60881fd31bc07e98ca559c8a2e9678daa0bf905915",
+                  "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\jobs.zf.com\\fb25c763-cc0-00004.txt",
+                  "anonymous_session_from_scratch": true
+                }
+              ]
+            }
+          },
+          "discovery_provenance": {
+            "dataset": "waiqi-company-20260921",
+            "waiqi_company_id": 1465,
+            "related_waiqi_company_ids": [
+              1465
+            ],
+            "company_url": "https://waiqi.com/company/detail?id=1465",
+            "identity_scope": "reviewed_branded_recruitment_group"
+          },
+          "validated_api_request_examples": [
+            {
+              "method": "GET",
+              "url": "https://jobs.zf.com/search/?optionsFacetsDD_country=CN",
+              "purpose": "job_list",
+              "response_format": "html",
+              "response_sha256": "7e434ae99349f7d932f21ce7f955aeefaeb1bb91b13ff3a76bfbc5295b2c2f83"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "company_id": "waiqi-public-f56219c5e0e6",
+      "display_name": "PCCW 电讯盈科",
+      "aliases": [
+        "PCCW"
+      ],
+      "industry_tags": [
+        "telecom",
+        "internet"
+      ],
+      "category": "telecom",
+      "provider": "jobs2web_public",
+      "source_id": "jobs2web-job.pccw.com",
+      "primary_entry_url": "https://job.pccw.com/search/",
+      "api_config": {
+        "origin": "https://job.pccw.com"
+      },
+      "verification_status": "verified_public_list_only",
+      "verified_at": "2026-09-21T01:39:23.298Z",
+      "admitted": true,
+      "source_origin": "waiqi-interface-expansion-20260921",
+      "identity_verification": {
+        "identity_verified": true,
+        "official_name": "PCCW",
+        "evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-candidate-review\\job.pccw.com.html",
+        "basis": "Reviewed branded recruitment portal on job.pccw.com with corporate identity PCCW. Registration scope is the recruitment group, not a claim that every vacancy belongs to one China legal subsidiary."
+      },
+      "source_verification": {
+        "checked_at": "2026-09-21T01:39:23.298Z",
+        "identity_basis": "Reviewed branded recruitment portal on job.pccw.com with corporate identity PCCW. Registration scope is the recruitment group, not a claim that every vacancy belongs to one China legal subsidiary.",
+        "proof_directory": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\job.pccw.com",
+        "observed_jobs": 30,
+        "complete_jd_samples": 0,
+        "scope": "Mainland China public list only; recruitment direction and JD unverified",
+        "public_list_capability": {
+          "anonymous": true,
+          "list_complete": true,
+          "jobs_observed": 30,
+          "request_evidence": [
+            {
+              "url": "https://job.pccw.com/search/?optionsFacetsDD_country=CN",
+              "method": "GET",
+              "http_status": 200,
+              "response_sha256": "114d41b88ef0300edc704426b022df377eeafd21a6ce82f5fcd93e51a47ed71d",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\job.pccw.com\\5ecf2f46-676-00001.txt",
+              "anonymous_session_from_scratch": true
+            },
+            {
+              "url": "https://job.pccw.com/search/?q=&sortColumn=referencedate&sortDirection=desc&optionsFacetsDD_country=CN&startrow=20",
+              "method": "GET",
+              "http_status": 200,
+              "response_sha256": "af0f11e651755be8c145926e2304886f243a4726ec3ff96c339cd3b64728763e",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\job.pccw.com\\5ecf2f46-676-00002.txt",
+              "anonymous_session_from_scratch": true
+            }
+          ]
+        }
+      },
+      "discovery_provenance": {
+        "dataset": "waiqi-company-20260921",
+        "waiqi_company_id": 40390,
+        "related_waiqi_company_ids": [
+          40390,
+          39320
+        ],
+        "company_url": "https://waiqi.com/company/detail?id=40390",
+        "identity_scope": "reviewed_branded_recruitment_group"
+      },
+      "validated_api_request_examples": [
+        {
+          "method": "GET",
+          "url": "https://job.pccw.com/search/?optionsFacetsDD_country=CN",
+          "purpose": "job_list",
+          "response_format": "html",
+          "response_sha256": "114d41b88ef0300edc704426b022df377eeafd21a6ce82f5fcd93e51a47ed71d"
+        }
+      ],
+      "recruitment_sources": [
+        {
+          "company_id": "waiqi-public-f56219c5e0e6",
+          "display_name": "PCCW 电讯盈科",
+          "aliases": [
+            "PCCW"
+          ],
+          "industry_tags": [
+            "telecom",
+            "internet"
+          ],
+          "category": "telecom",
+          "provider": "jobs2web_public",
+          "source_id": "jobs2web-job.pccw.com",
+          "primary_entry_url": "https://job.pccw.com/search/",
+          "api_config": {
+            "origin": "https://job.pccw.com"
+          },
+          "verification_status": "verified_public_list_only",
+          "verified_at": "2026-09-21T01:39:23.298Z",
+          "admitted": true,
+          "source_origin": "waiqi-interface-expansion-20260921",
+          "identity_verification": {
+            "identity_verified": true,
+            "official_name": "PCCW",
+            "evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-candidate-review\\job.pccw.com.html",
+            "basis": "Reviewed branded recruitment portal on job.pccw.com with corporate identity PCCW. Registration scope is the recruitment group, not a claim that every vacancy belongs to one China legal subsidiary."
+          },
+          "source_verification": {
+            "checked_at": "2026-09-21T01:39:23.298Z",
+            "identity_basis": "Reviewed branded recruitment portal on job.pccw.com with corporate identity PCCW. Registration scope is the recruitment group, not a claim that every vacancy belongs to one China legal subsidiary.",
+            "proof_directory": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\job.pccw.com",
+            "observed_jobs": 30,
+            "complete_jd_samples": 0,
+            "scope": "Mainland China public list only; recruitment direction and JD unverified",
+            "public_list_capability": {
+              "anonymous": true,
+              "list_complete": true,
+              "jobs_observed": 30,
+              "request_evidence": [
+                {
+                  "url": "https://job.pccw.com/search/?optionsFacetsDD_country=CN",
+                  "method": "GET",
+                  "http_status": 200,
+                  "response_sha256": "114d41b88ef0300edc704426b022df377eeafd21a6ce82f5fcd93e51a47ed71d",
+                  "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\job.pccw.com\\5ecf2f46-676-00001.txt",
+                  "anonymous_session_from_scratch": true
+                },
+                {
+                  "url": "https://job.pccw.com/search/?q=&sortColumn=referencedate&sortDirection=desc&optionsFacetsDD_country=CN&startrow=20",
+                  "method": "GET",
+                  "http_status": 200,
+                  "response_sha256": "af0f11e651755be8c145926e2304886f243a4726ec3ff96c339cd3b64728763e",
+                  "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\job.pccw.com\\5ecf2f46-676-00002.txt",
+                  "anonymous_session_from_scratch": true
+                }
+              ]
+            }
+          },
+          "discovery_provenance": {
+            "dataset": "waiqi-company-20260921",
+            "waiqi_company_id": 40390,
+            "related_waiqi_company_ids": [
+              40390,
+              39320
+            ],
+            "company_url": "https://waiqi.com/company/detail?id=40390",
+            "identity_scope": "reviewed_branded_recruitment_group"
+          },
+          "validated_api_request_examples": [
+            {
+              "method": "GET",
+              "url": "https://job.pccw.com/search/?optionsFacetsDD_country=CN",
+              "purpose": "job_list",
+              "response_format": "html",
+              "response_sha256": "114d41b88ef0300edc704426b022df377eeafd21a6ce82f5fcd93e51a47ed71d"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "company_id": "waiqi-public-a2f94f00dfc6",
+      "display_name": "香港赛马会",
+      "aliases": [
+        "Hong Kong Jockey Club"
+      ],
+      "industry_tags": [
+        "media_tourism"
+      ],
+      "category": "media_tourism",
+      "provider": "jobs2web_public",
+      "source_id": "jobs2web-careers.hkjc.com",
+      "primary_entry_url": "https://careers.hkjc.com/search/",
+      "api_config": {
+        "origin": "https://careers.hkjc.com"
+      },
+      "verification_status": "verified_public_list_only",
+      "verified_at": "2026-09-21T01:39:24.996Z",
+      "admitted": true,
+      "source_origin": "waiqi-interface-expansion-20260921",
+      "identity_verification": {
+        "identity_verified": true,
+        "official_name": "Hong Kong Jockey Club",
+        "evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-candidate-review\\careers.hkjc.com.html",
+        "basis": "Reviewed branded recruitment portal on careers.hkjc.com with corporate identity Hong Kong Jockey Club. Registration scope is the recruitment group, not a claim that every vacancy belongs to one China legal subsidiary."
+      },
+      "source_verification": {
+        "checked_at": "2026-09-21T01:39:24.996Z",
+        "identity_basis": "Reviewed branded recruitment portal on careers.hkjc.com with corporate identity Hong Kong Jockey Club. Registration scope is the recruitment group, not a claim that every vacancy belongs to one China legal subsidiary.",
+        "proof_directory": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\careers.hkjc.com",
+        "observed_jobs": 17,
+        "complete_jd_samples": 0,
+        "scope": "Mainland China public list only; recruitment direction and JD unverified",
+        "public_list_capability": {
+          "anonymous": true,
+          "list_complete": true,
+          "jobs_observed": 17,
+          "request_evidence": [
+            {
+              "url": "https://careers.hkjc.com/search/?optionsFacetsDD_country=CN",
+              "method": "GET",
+              "http_status": 200,
+              "response_sha256": "cc1518dfffcb0a924453b139eaaad8707b7ed8f4d4b688cd1b3a4da4b7afbef9",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\careers.hkjc.com\\602a070b-997-00001.txt",
+              "anonymous_session_from_scratch": true
+            }
+          ]
+        }
+      },
+      "discovery_provenance": {
+        "dataset": "waiqi-company-20260921",
+        "waiqi_company_id": 39263,
+        "related_waiqi_company_ids": [
+          39263
+        ],
+        "company_url": "https://waiqi.com/company/detail?id=39263",
+        "identity_scope": "reviewed_branded_recruitment_group"
+      },
+      "validated_api_request_examples": [
+        {
+          "method": "GET",
+          "url": "https://careers.hkjc.com/search/?optionsFacetsDD_country=CN",
+          "purpose": "job_list",
+          "response_format": "html",
+          "response_sha256": "cc1518dfffcb0a924453b139eaaad8707b7ed8f4d4b688cd1b3a4da4b7afbef9"
+        }
+      ],
+      "recruitment_sources": [
+        {
+          "company_id": "waiqi-public-a2f94f00dfc6",
+          "display_name": "香港赛马会",
+          "aliases": [
+            "Hong Kong Jockey Club"
+          ],
+          "industry_tags": [
+            "media_tourism"
+          ],
+          "category": "media_tourism",
+          "provider": "jobs2web_public",
+          "source_id": "jobs2web-careers.hkjc.com",
+          "primary_entry_url": "https://careers.hkjc.com/search/",
+          "api_config": {
+            "origin": "https://careers.hkjc.com"
+          },
+          "verification_status": "verified_public_list_only",
+          "verified_at": "2026-09-21T01:39:24.996Z",
+          "admitted": true,
+          "source_origin": "waiqi-interface-expansion-20260921",
+          "identity_verification": {
+            "identity_verified": true,
+            "official_name": "Hong Kong Jockey Club",
+            "evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-candidate-review\\careers.hkjc.com.html",
+            "basis": "Reviewed branded recruitment portal on careers.hkjc.com with corporate identity Hong Kong Jockey Club. Registration scope is the recruitment group, not a claim that every vacancy belongs to one China legal subsidiary."
+          },
+          "source_verification": {
+            "checked_at": "2026-09-21T01:39:24.996Z",
+            "identity_basis": "Reviewed branded recruitment portal on careers.hkjc.com with corporate identity Hong Kong Jockey Club. Registration scope is the recruitment group, not a claim that every vacancy belongs to one China legal subsidiary.",
+            "proof_directory": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\careers.hkjc.com",
+            "observed_jobs": 17,
+            "complete_jd_samples": 0,
+            "scope": "Mainland China public list only; recruitment direction and JD unverified",
+            "public_list_capability": {
+              "anonymous": true,
+              "list_complete": true,
+              "jobs_observed": 17,
+              "request_evidence": [
+                {
+                  "url": "https://careers.hkjc.com/search/?optionsFacetsDD_country=CN",
+                  "method": "GET",
+                  "http_status": 200,
+                  "response_sha256": "cc1518dfffcb0a924453b139eaaad8707b7ed8f4d4b688cd1b3a4da4b7afbef9",
+                  "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\careers.hkjc.com\\602a070b-997-00001.txt",
+                  "anonymous_session_from_scratch": true
+                }
+              ]
+            }
+          },
+          "discovery_provenance": {
+            "dataset": "waiqi-company-20260921",
+            "waiqi_company_id": 39263,
+            "related_waiqi_company_ids": [
+              39263
+            ],
+            "company_url": "https://waiqi.com/company/detail?id=39263",
+            "identity_scope": "reviewed_branded_recruitment_group"
+          },
+          "validated_api_request_examples": [
+            {
+              "method": "GET",
+              "url": "https://careers.hkjc.com/search/?optionsFacetsDD_country=CN",
+              "purpose": "job_list",
+              "response_format": "html",
+              "response_sha256": "cc1518dfffcb0a924453b139eaaad8707b7ed8f4d4b688cd1b3a4da4b7afbef9"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "company_id": "waiqi-public-7c325aeb4c02",
+      "display_name": "BioNTech 拜恩泰科",
+      "aliases": [
+        "BioNTech"
+      ],
+      "industry_tags": [
+        "healthcare"
+      ],
+      "category": "healthcare",
+      "provider": "jobs2web_public",
+      "source_id": "jobs2web-jobs.biontech.com",
+      "primary_entry_url": "https://jobs.biontech.com/search/",
+      "api_config": {
+        "origin": "https://jobs.biontech.com"
+      },
+      "verification_status": "verified_public_list_only",
+      "verified_at": "2026-09-21T01:39:30.302Z",
+      "admitted": true,
+      "source_origin": "waiqi-interface-expansion-20260921",
+      "identity_verification": {
+        "identity_verified": true,
+        "official_name": "BioNTech",
+        "evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-candidate-review\\jobs.biontech.com.html",
+        "basis": "Reviewed branded recruitment portal on jobs.biontech.com with corporate identity BioNTech. Registration scope is the recruitment group, not a claim that every vacancy belongs to one China legal subsidiary."
+      },
+      "source_verification": {
+        "checked_at": "2026-09-21T01:39:30.302Z",
+        "identity_basis": "Reviewed branded recruitment portal on jobs.biontech.com with corporate identity BioNTech. Registration scope is the recruitment group, not a claim that every vacancy belongs to one China legal subsidiary.",
+        "proof_directory": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\jobs.biontech.com",
+        "observed_jobs": 63,
+        "complete_jd_samples": 0,
+        "scope": "Mainland China public list only; recruitment direction and JD unverified",
+        "public_list_capability": {
+          "anonymous": true,
+          "list_complete": true,
+          "jobs_observed": 63,
+          "request_evidence": [
+            {
+              "url": "https://jobs.biontech.com/search/?optionsFacetsDD_country=CN",
+              "method": "GET",
+              "http_status": 200,
+              "response_sha256": "4b16a4109410fbc5ba8f6ab1e894e19e284c1bbfddc78d172c7537bac2bc09c2",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\jobs.biontech.com\\ab2b04b5-56b-00001.txt",
+              "anonymous_session_from_scratch": true
+            }
+          ]
+        }
+      },
+      "discovery_provenance": {
+        "dataset": "waiqi-company-20260921",
+        "waiqi_company_id": 39277,
+        "related_waiqi_company_ids": [
+          39277
+        ],
+        "company_url": "https://waiqi.com/company/detail?id=39277",
+        "identity_scope": "reviewed_branded_recruitment_group"
+      },
+      "validated_api_request_examples": [
+        {
+          "method": "GET",
+          "url": "https://jobs.biontech.com/search/?optionsFacetsDD_country=CN",
+          "purpose": "job_list",
+          "response_format": "html",
+          "response_sha256": "4b16a4109410fbc5ba8f6ab1e894e19e284c1bbfddc78d172c7537bac2bc09c2"
+        }
+      ],
+      "recruitment_sources": [
+        {
+          "company_id": "waiqi-public-7c325aeb4c02",
+          "display_name": "BioNTech 拜恩泰科",
+          "aliases": [
+            "BioNTech"
+          ],
+          "industry_tags": [
+            "healthcare"
+          ],
+          "category": "healthcare",
+          "provider": "jobs2web_public",
+          "source_id": "jobs2web-jobs.biontech.com",
+          "primary_entry_url": "https://jobs.biontech.com/search/",
+          "api_config": {
+            "origin": "https://jobs.biontech.com"
+          },
+          "verification_status": "verified_public_list_only",
+          "verified_at": "2026-09-21T01:39:30.302Z",
+          "admitted": true,
+          "source_origin": "waiqi-interface-expansion-20260921",
+          "identity_verification": {
+            "identity_verified": true,
+            "official_name": "BioNTech",
+            "evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-candidate-review\\jobs.biontech.com.html",
+            "basis": "Reviewed branded recruitment portal on jobs.biontech.com with corporate identity BioNTech. Registration scope is the recruitment group, not a claim that every vacancy belongs to one China legal subsidiary."
+          },
+          "source_verification": {
+            "checked_at": "2026-09-21T01:39:30.302Z",
+            "identity_basis": "Reviewed branded recruitment portal on jobs.biontech.com with corporate identity BioNTech. Registration scope is the recruitment group, not a claim that every vacancy belongs to one China legal subsidiary.",
+            "proof_directory": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\jobs.biontech.com",
+            "observed_jobs": 63,
+            "complete_jd_samples": 0,
+            "scope": "Mainland China public list only; recruitment direction and JD unverified",
+            "public_list_capability": {
+              "anonymous": true,
+              "list_complete": true,
+              "jobs_observed": 63,
+              "request_evidence": [
+                {
+                  "url": "https://jobs.biontech.com/search/?optionsFacetsDD_country=CN",
+                  "method": "GET",
+                  "http_status": 200,
+                  "response_sha256": "4b16a4109410fbc5ba8f6ab1e894e19e284c1bbfddc78d172c7537bac2bc09c2",
+                  "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\jobs.biontech.com\\ab2b04b5-56b-00001.txt",
+                  "anonymous_session_from_scratch": true
+                }
+              ]
+            }
+          },
+          "discovery_provenance": {
+            "dataset": "waiqi-company-20260921",
+            "waiqi_company_id": 39277,
+            "related_waiqi_company_ids": [
+              39277
+            ],
+            "company_url": "https://waiqi.com/company/detail?id=39277",
+            "identity_scope": "reviewed_branded_recruitment_group"
+          },
+          "validated_api_request_examples": [
+            {
+              "method": "GET",
+              "url": "https://jobs.biontech.com/search/?optionsFacetsDD_country=CN",
+              "purpose": "job_list",
+              "response_format": "html",
+              "response_sha256": "4b16a4109410fbc5ba8f6ab1e894e19e284c1bbfddc78d172c7537bac2bc09c2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "company_id": "waiqi-public-7c2299e64738",
+      "display_name": "DSV 得斯威",
+      "aliases": [
+        "DSV"
+      ],
+      "industry_tags": [
+        "logistics_trade"
+      ],
+      "category": "logistics_trade",
+      "provider": "jobs2web_public",
+      "source_id": "jobs2web-jobs.dsv.com",
+      "primary_entry_url": "https://jobs.dsv.com/search/",
+      "api_config": {
+        "origin": "https://jobs.dsv.com"
+      },
+      "verification_status": "verified_public_list_only",
+      "verified_at": "2026-09-21T01:39:33.131Z",
+      "admitted": true,
+      "source_origin": "waiqi-interface-expansion-20260921",
+      "identity_verification": {
+        "identity_verified": true,
+        "official_name": "DSV",
+        "evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-candidate-review\\jobs.dsv.com.html",
+        "basis": "Reviewed branded recruitment portal on jobs.dsv.com with corporate identity DSV. Registration scope is the recruitment group, not a claim that every vacancy belongs to one China legal subsidiary."
+      },
+      "source_verification": {
+        "checked_at": "2026-09-21T01:39:33.131Z",
+        "identity_basis": "Reviewed branded recruitment portal on jobs.dsv.com with corporate identity DSV. Registration scope is the recruitment group, not a claim that every vacancy belongs to one China legal subsidiary.",
+        "proof_directory": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\jobs.dsv.com",
+        "observed_jobs": 22,
+        "complete_jd_samples": 0,
+        "scope": "Mainland China public list only; recruitment direction and JD unverified",
+        "public_list_capability": {
+          "anonymous": true,
+          "list_complete": true,
+          "jobs_observed": 22,
+          "request_evidence": [
+            {
+              "url": "https://jobs.dsv.com/search/?optionsFacetsDD_country=CN",
+              "method": "GET",
+              "http_status": 200,
+              "response_sha256": "3efd20a5f5675c3e2c8357768f7141a623b17d7c2bc6f35657b13fed54effd67",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\jobs.dsv.com\\2ab73ff2-7f4-00001.txt",
+              "anonymous_session_from_scratch": true
+            },
+            {
+              "url": "https://jobs.dsv.com/search/?q=&sortColumn=referencedate&sortDirection=desc&optionsFacetsDD_country=CN&startrow=10",
+              "method": "GET",
+              "http_status": 200,
+              "response_sha256": "fa7ffe958a7e267cb9a7ccc49013e9fe72d2abe5f16fcfa55e7259877353e24a",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\jobs.dsv.com\\2ab73ff2-7f4-00002.txt",
+              "anonymous_session_from_scratch": true
+            },
+            {
+              "url": "https://jobs.dsv.com/search/?q=&sortColumn=referencedate&sortDirection=desc&optionsFacetsDD_country=CN&startrow=20",
+              "method": "GET",
+              "http_status": 200,
+              "response_sha256": "f75e83858a7c7f48d95a46e25a985044fd175b892457d867002ba99ce4d70e76",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\jobs.dsv.com\\2ab73ff2-7f4-00003.txt",
+              "anonymous_session_from_scratch": true
+            }
+          ]
+        }
+      },
+      "discovery_provenance": {
+        "dataset": "waiqi-company-20260921",
+        "waiqi_company_id": 39147,
+        "related_waiqi_company_ids": [
+          39147,
+          994
+        ],
+        "company_url": "https://waiqi.com/company/detail?id=39147",
+        "identity_scope": "reviewed_branded_recruitment_group"
+      },
+      "validated_api_request_examples": [
+        {
+          "method": "GET",
+          "url": "https://jobs.dsv.com/search/?optionsFacetsDD_country=CN",
+          "purpose": "job_list",
+          "response_format": "html",
+          "response_sha256": "3efd20a5f5675c3e2c8357768f7141a623b17d7c2bc6f35657b13fed54effd67"
+        }
+      ],
+      "recruitment_sources": [
+        {
+          "company_id": "waiqi-public-7c2299e64738",
+          "display_name": "DSV 得斯威",
+          "aliases": [
+            "DSV"
+          ],
+          "industry_tags": [
+            "logistics_trade"
+          ],
+          "category": "logistics_trade",
+          "provider": "jobs2web_public",
+          "source_id": "jobs2web-jobs.dsv.com",
+          "primary_entry_url": "https://jobs.dsv.com/search/",
+          "api_config": {
+            "origin": "https://jobs.dsv.com"
+          },
+          "verification_status": "verified_public_list_only",
+          "verified_at": "2026-09-21T01:39:33.131Z",
+          "admitted": true,
+          "source_origin": "waiqi-interface-expansion-20260921",
+          "identity_verification": {
+            "identity_verified": true,
+            "official_name": "DSV",
+            "evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-candidate-review\\jobs.dsv.com.html",
+            "basis": "Reviewed branded recruitment portal on jobs.dsv.com with corporate identity DSV. Registration scope is the recruitment group, not a claim that every vacancy belongs to one China legal subsidiary."
+          },
+          "source_verification": {
+            "checked_at": "2026-09-21T01:39:33.131Z",
+            "identity_basis": "Reviewed branded recruitment portal on jobs.dsv.com with corporate identity DSV. Registration scope is the recruitment group, not a claim that every vacancy belongs to one China legal subsidiary.",
+            "proof_directory": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\jobs.dsv.com",
+            "observed_jobs": 22,
+            "complete_jd_samples": 0,
+            "scope": "Mainland China public list only; recruitment direction and JD unverified",
+            "public_list_capability": {
+              "anonymous": true,
+              "list_complete": true,
+              "jobs_observed": 22,
+              "request_evidence": [
+                {
+                  "url": "https://jobs.dsv.com/search/?optionsFacetsDD_country=CN",
+                  "method": "GET",
+                  "http_status": 200,
+                  "response_sha256": "3efd20a5f5675c3e2c8357768f7141a623b17d7c2bc6f35657b13fed54effd67",
+                  "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\jobs.dsv.com\\2ab73ff2-7f4-00001.txt",
+                  "anonymous_session_from_scratch": true
+                },
+                {
+                  "url": "https://jobs.dsv.com/search/?q=&sortColumn=referencedate&sortDirection=desc&optionsFacetsDD_country=CN&startrow=10",
+                  "method": "GET",
+                  "http_status": 200,
+                  "response_sha256": "fa7ffe958a7e267cb9a7ccc49013e9fe72d2abe5f16fcfa55e7259877353e24a",
+                  "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\jobs.dsv.com\\2ab73ff2-7f4-00002.txt",
+                  "anonymous_session_from_scratch": true
+                },
+                {
+                  "url": "https://jobs.dsv.com/search/?q=&sortColumn=referencedate&sortDirection=desc&optionsFacetsDD_country=CN&startrow=20",
+                  "method": "GET",
+                  "http_status": 200,
+                  "response_sha256": "f75e83858a7c7f48d95a46e25a985044fd175b892457d867002ba99ce4d70e76",
+                  "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\jobs.dsv.com\\2ab73ff2-7f4-00003.txt",
+                  "anonymous_session_from_scratch": true
+                }
+              ]
+            }
+          },
+          "discovery_provenance": {
+            "dataset": "waiqi-company-20260921",
+            "waiqi_company_id": 39147,
+            "related_waiqi_company_ids": [
+              39147,
+              994
+            ],
+            "company_url": "https://waiqi.com/company/detail?id=39147",
+            "identity_scope": "reviewed_branded_recruitment_group"
+          },
+          "validated_api_request_examples": [
+            {
+              "method": "GET",
+              "url": "https://jobs.dsv.com/search/?optionsFacetsDD_country=CN",
+              "purpose": "job_list",
+              "response_format": "html",
+              "response_sha256": "3efd20a5f5675c3e2c8357768f7141a623b17d7c2bc6f35657b13fed54effd67"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "company_id": "waiqi-public-536d70a745b8",
+      "display_name": "Boehringer Ingelheim 勃林格殷格翰",
+      "aliases": [
+        "Boehringer Ingelheim"
+      ],
+      "industry_tags": [
+        "healthcare"
+      ],
+      "category": "healthcare",
+      "provider": "jobs2web_public",
+      "source_id": "jobs2web-jobs.boehringer-ingelheim.com",
+      "primary_entry_url": "https://jobs.boehringer-ingelheim.com/search/",
+      "api_config": {
+        "origin": "https://jobs.boehringer-ingelheim.com"
+      },
+      "verification_status": "verified_public_list_only",
+      "verified_at": "2026-09-21T01:43:45.796Z",
+      "admitted": true,
+      "source_origin": "waiqi-interface-expansion-20260921",
+      "identity_verification": {
+        "identity_verified": true,
+        "official_name": "Boehringer Ingelheim",
+        "evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-candidate-review\\jobs.boehringer-ingelheim.com.html",
+        "basis": "Reviewed branded recruitment portal on jobs.boehringer-ingelheim.com with corporate identity Boehringer Ingelheim. Registration scope is the recruitment group, not a claim that every vacancy belongs to one China legal subsidiary."
+      },
+      "source_verification": {
+        "checked_at": "2026-09-21T01:43:45.796Z",
+        "identity_basis": "Reviewed branded recruitment portal on jobs.boehringer-ingelheim.com with corporate identity Boehringer Ingelheim. Registration scope is the recruitment group, not a claim that every vacancy belongs to one China legal subsidiary.",
+        "proof_directory": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\jobs.boehringer-ingelheim.com",
+        "observed_jobs": 21,
+        "complete_jd_samples": 0,
+        "scope": "Mainland China public list only; recruitment direction and JD unverified",
+        "public_list_capability": {
+          "anonymous": true,
+          "list_complete": true,
+          "jobs_observed": 21,
+          "request_evidence": [
+            {
+              "url": "https://jobs.boehringer-ingelheim.com/search/?optionsFacetsDD_country=CN",
+              "method": "GET",
+              "http_status": 200,
+              "response_sha256": "23ab4fc35e62046d988875ca18eb40f49cd6a9e1e3a514e637d26bd898285d02",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\jobs.boehringer-ingelheim.com\\tiles\\027db0a2-52d-00001.txt",
+              "anonymous_session_from_scratch": true
+            }
+          ]
+        }
+      },
+      "discovery_provenance": {
+        "dataset": "waiqi-company-20260921",
+        "waiqi_company_id": 16553,
+        "related_waiqi_company_ids": [
+          16553
+        ],
+        "company_url": "https://waiqi.com/company/detail?id=16553",
+        "identity_scope": "reviewed_branded_recruitment_group"
+      },
+      "validated_api_request_examples": [
+        {
+          "method": "GET",
+          "url": "https://jobs.boehringer-ingelheim.com/search/?optionsFacetsDD_country=CN",
+          "purpose": "job_list",
+          "response_format": "html",
+          "response_sha256": "23ab4fc35e62046d988875ca18eb40f49cd6a9e1e3a514e637d26bd898285d02"
+        }
+      ],
+      "recruitment_sources": [
+        {
+          "company_id": "waiqi-public-536d70a745b8",
+          "display_name": "Boehringer Ingelheim 勃林格殷格翰",
+          "aliases": [
+            "Boehringer Ingelheim"
+          ],
+          "industry_tags": [
+            "healthcare"
+          ],
+          "category": "healthcare",
+          "provider": "jobs2web_public",
+          "source_id": "jobs2web-jobs.boehringer-ingelheim.com",
+          "primary_entry_url": "https://jobs.boehringer-ingelheim.com/search/",
+          "api_config": {
+            "origin": "https://jobs.boehringer-ingelheim.com"
+          },
+          "verification_status": "verified_public_list_only",
+          "verified_at": "2026-09-21T01:43:45.796Z",
+          "admitted": true,
+          "source_origin": "waiqi-interface-expansion-20260921",
+          "identity_verification": {
+            "identity_verified": true,
+            "official_name": "Boehringer Ingelheim",
+            "evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-candidate-review\\jobs.boehringer-ingelheim.com.html",
+            "basis": "Reviewed branded recruitment portal on jobs.boehringer-ingelheim.com with corporate identity Boehringer Ingelheim. Registration scope is the recruitment group, not a claim that every vacancy belongs to one China legal subsidiary."
+          },
+          "source_verification": {
+            "checked_at": "2026-09-21T01:43:45.796Z",
+            "identity_basis": "Reviewed branded recruitment portal on jobs.boehringer-ingelheim.com with corporate identity Boehringer Ingelheim. Registration scope is the recruitment group, not a claim that every vacancy belongs to one China legal subsidiary.",
+            "proof_directory": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\jobs.boehringer-ingelheim.com",
+            "observed_jobs": 21,
+            "complete_jd_samples": 0,
+            "scope": "Mainland China public list only; recruitment direction and JD unverified",
+            "public_list_capability": {
+              "anonymous": true,
+              "list_complete": true,
+              "jobs_observed": 21,
+              "request_evidence": [
+                {
+                  "url": "https://jobs.boehringer-ingelheim.com/search/?optionsFacetsDD_country=CN",
+                  "method": "GET",
+                  "http_status": 200,
+                  "response_sha256": "23ab4fc35e62046d988875ca18eb40f49cd6a9e1e3a514e637d26bd898285d02",
+                  "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\jobs.boehringer-ingelheim.com\\tiles\\027db0a2-52d-00001.txt",
+                  "anonymous_session_from_scratch": true
+                }
+              ]
+            }
+          },
+          "discovery_provenance": {
+            "dataset": "waiqi-company-20260921",
+            "waiqi_company_id": 16553,
+            "related_waiqi_company_ids": [
+              16553
+            ],
+            "company_url": "https://waiqi.com/company/detail?id=16553",
+            "identity_scope": "reviewed_branded_recruitment_group"
+          },
+          "validated_api_request_examples": [
+            {
+              "method": "GET",
+              "url": "https://jobs.boehringer-ingelheim.com/search/?optionsFacetsDD_country=CN",
+              "purpose": "job_list",
+              "response_format": "html",
+              "response_sha256": "23ab4fc35e62046d988875ca18eb40f49cd6a9e1e3a514e637d26bd898285d02"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "company_id": "waiqi-ajinga-10821",
+      "display_name": "Charlotte Tilbury 夏洛特蒂铂丽",
+      "aliases": [
+        "Charlotte Tilbury",
+        "Charlotte Tilbury"
+      ],
+      "industry_tags": [
+        "consumer"
+      ],
+      "category": "consumer",
+      "provider": "ajinga_public",
+      "source_id": "ajinga-10821",
+      "primary_entry_url": "https://www.ajinga.com/recruiting/company/10821/",
+      "api_config": {
+        "company_id": "10821",
+        "root_company_id": "10821"
+      },
+      "admitted": true,
+      "verification_status": "verified_public_list_only",
+      "verified_at": "2026-09-21T01:57:24.377Z",
+      "source_origin": "waiqi-interface-expansion-20260921",
+      "identity_verification": {
+        "identity_verified": true,
+        "official_name": "Charlotte Tilbury",
+        "evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\ajinga\\10821\\f0d8aaa9-c79-00001.json",
+        "basis": "AJINGA public company profile confirms channel 10821 belongs to Charlotte Tilbury / Charlotte Tilbury (root 10821). List row root IDs reconcile with that profile. Registration is at reviewed recruitment group scope."
+      },
+      "source_verification": {
+        "checked_at": "2026-09-21T01:57:24.377Z",
+        "identity_basis": "AJINGA public company profile confirms channel 10821 belongs to Charlotte Tilbury / Charlotte Tilbury (root 10821). List row root IDs reconcile with that profile. Registration is at reviewed recruitment group scope.",
+        "proof_directory": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\ajinga\\10821",
+        "observed_jobs": 14,
+        "complete_jd_samples": 0,
+        "public_list_capability": {
+          "anonymous": true,
+          "list_complete": true,
+          "jobs_observed": 14,
+          "company_profile": {
+            "company_id": "10821",
+            "root_company_id": "10821",
+            "root_company_name": "Charlotte Tilbury",
+            "http_status": 200,
+            "anonymous_session_from_scratch": true,
+            "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\ajinga\\10821\\f0d8aaa9-c79-00001.json",
+            "response_sha256": "d0fec3ba39e8dbb86a1a7819923f83f514ca95be791032c0f5c0f12ad87f257b"
+          },
+          "request_evidence": [
+            {
+              "url": "https://www.ajinga.com/django_rest/job-list/?company_id=10821&page=1&page_size=100",
+              "method": "GET",
+              "http_status": 200,
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\ajinga\\10821\\f0d8aaa9-c79-00002.json",
+              "response_sha256": "fe78df84ff13a140bd430e0377ef5b7583d4641da3ea755526de32063296a24f",
+              "anonymous_session_from_scratch": true
+            }
+          ]
+        }
+      },
+      "discovery_provenance": {
+        "dataset": "waiqi-company-20260921",
+        "waiqi_company_id": 23776,
+        "related_waiqi_company_ids": [
+          23776
+        ],
+        "company_url": "https://waiqi.com/company/detail?id=23776",
+        "identity_scope": "reviewed_branded_recruitment_group"
+      },
+      "validated_api_request_examples": [
+        {
+          "method": "GET",
+          "url": "https://www.ajinga.com/django_rest/job-list/?company_id=10821&page=1&page_size=100",
+          "purpose": "job_list",
+          "response_format": "json"
+        }
+      ],
+      "recruitment_sources": [
+        {
+          "company_id": "waiqi-ajinga-10821",
+          "display_name": "Charlotte Tilbury 夏洛特蒂铂丽",
+          "aliases": [
+            "Charlotte Tilbury",
+            "Charlotte Tilbury"
+          ],
+          "industry_tags": [
+            "consumer"
+          ],
+          "category": "consumer",
+          "provider": "ajinga_public",
+          "source_id": "ajinga-10821",
+          "primary_entry_url": "https://www.ajinga.com/recruiting/company/10821/",
+          "api_config": {
+            "company_id": "10821",
+            "root_company_id": "10821"
+          },
+          "admitted": true,
+          "verification_status": "verified_public_list_only",
+          "verified_at": "2026-09-21T01:57:24.377Z",
+          "source_origin": "waiqi-interface-expansion-20260921",
+          "identity_verification": {
+            "identity_verified": true,
+            "official_name": "Charlotte Tilbury",
+            "evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\ajinga\\10821\\f0d8aaa9-c79-00001.json",
+            "basis": "AJINGA public company profile confirms channel 10821 belongs to Charlotte Tilbury / Charlotte Tilbury (root 10821). List row root IDs reconcile with that profile. Registration is at reviewed recruitment group scope."
+          },
+          "source_verification": {
+            "checked_at": "2026-09-21T01:57:24.377Z",
+            "identity_basis": "AJINGA public company profile confirms channel 10821 belongs to Charlotte Tilbury / Charlotte Tilbury (root 10821). List row root IDs reconcile with that profile. Registration is at reviewed recruitment group scope.",
+            "proof_directory": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\ajinga\\10821",
+            "observed_jobs": 14,
+            "complete_jd_samples": 0,
+            "public_list_capability": {
+              "anonymous": true,
+              "list_complete": true,
+              "jobs_observed": 14,
+              "company_profile": {
+                "company_id": "10821",
+                "root_company_id": "10821",
+                "root_company_name": "Charlotte Tilbury",
+                "http_status": 200,
+                "anonymous_session_from_scratch": true,
+                "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\ajinga\\10821\\f0d8aaa9-c79-00001.json",
+                "response_sha256": "d0fec3ba39e8dbb86a1a7819923f83f514ca95be791032c0f5c0f12ad87f257b"
+              },
+              "request_evidence": [
+                {
+                  "url": "https://www.ajinga.com/django_rest/job-list/?company_id=10821&page=1&page_size=100",
+                  "method": "GET",
+                  "http_status": 200,
+                  "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\ajinga\\10821\\f0d8aaa9-c79-00002.json",
+                  "response_sha256": "fe78df84ff13a140bd430e0377ef5b7583d4641da3ea755526de32063296a24f",
+                  "anonymous_session_from_scratch": true
+                }
+              ]
+            }
+          },
+          "discovery_provenance": {
+            "dataset": "waiqi-company-20260921",
+            "waiqi_company_id": 23776,
+            "related_waiqi_company_ids": [
+              23776
+            ],
+            "company_url": "https://waiqi.com/company/detail?id=23776",
+            "identity_scope": "reviewed_branded_recruitment_group"
+          },
+          "validated_api_request_examples": [
+            {
+              "method": "GET",
+              "url": "https://www.ajinga.com/django_rest/job-list/?company_id=10821&page=1&page_size=100",
+              "purpose": "job_list",
+              "response_format": "json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "company_id": "waiqi-ajinga-8217",
+      "display_name": "BD 碧迪",
+      "aliases": [
+        "-BD-",
+        "BD"
+      ],
+      "industry_tags": [
+        "healthcare"
+      ],
+      "category": "healthcare",
+      "provider": "ajinga_public",
+      "source_id": "ajinga-8217",
+      "primary_entry_url": "https://www.ajinga.com/recruiting/company/8217/",
+      "api_config": {
+        "company_id": "8217",
+        "root_company_id": "8217"
+      },
+      "admitted": true,
+      "verification_status": "verified_public_list_only",
+      "verified_at": "2026-09-21T01:57:27.333Z",
+      "source_origin": "waiqi-interface-expansion-20260921",
+      "identity_verification": {
+        "identity_verified": true,
+        "official_name": "-BD-",
+        "evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\ajinga\\8217\\b4aa7034-e99-00001.json",
+        "basis": "AJINGA public company profile confirms channel 8217 belongs to -BD- / BD (root 8217). List row root IDs reconcile with that profile. Registration is at reviewed recruitment group scope."
+      },
+      "source_verification": {
+        "checked_at": "2026-09-21T01:57:27.333Z",
+        "identity_basis": "AJINGA public company profile confirms channel 8217 belongs to -BD- / BD (root 8217). List row root IDs reconcile with that profile. Registration is at reviewed recruitment group scope.",
+        "proof_directory": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\ajinga\\8217",
+        "observed_jobs": 7,
+        "complete_jd_samples": 0,
+        "public_list_capability": {
+          "anonymous": true,
+          "list_complete": true,
+          "jobs_observed": 7,
+          "company_profile": {
+            "company_id": "8217",
+            "root_company_id": "8217",
+            "root_company_name": "-BD-",
+            "http_status": 200,
+            "anonymous_session_from_scratch": true,
+            "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\ajinga\\8217\\b4aa7034-e99-00001.json",
+            "response_sha256": "adc831ebd746f4a2873e314ea9a9c2dec40ab0fb10198a8b36cdb6896abc53fb"
+          },
+          "request_evidence": [
+            {
+              "url": "https://www.ajinga.com/django_rest/job-list/?company_id=8217&page=1&page_size=100",
+              "method": "GET",
+              "http_status": 200,
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\ajinga\\8217\\b4aa7034-e99-00002.json",
+              "response_sha256": "772dfaa0178d51c0001760ec1dc355611597236e438b28670b3715aa1f6a2ad2",
+              "anonymous_session_from_scratch": true
+            }
+          ]
+        }
+      },
+      "discovery_provenance": {
+        "dataset": "waiqi-company-20260921",
+        "waiqi_company_id": 16444,
+        "related_waiqi_company_ids": [
+          16444
+        ],
+        "company_url": "https://waiqi.com/company/detail?id=16444",
+        "identity_scope": "reviewed_branded_recruitment_group"
+      },
+      "validated_api_request_examples": [
+        {
+          "method": "GET",
+          "url": "https://www.ajinga.com/django_rest/job-list/?company_id=8217&page=1&page_size=100",
+          "purpose": "job_list",
+          "response_format": "json"
+        }
+      ],
+      "recruitment_sources": [
+        {
+          "company_id": "waiqi-ajinga-8217",
+          "display_name": "BD 碧迪",
+          "aliases": [
+            "-BD-",
+            "BD"
+          ],
+          "industry_tags": [
+            "healthcare"
+          ],
+          "category": "healthcare",
+          "provider": "ajinga_public",
+          "source_id": "ajinga-8217",
+          "primary_entry_url": "https://www.ajinga.com/recruiting/company/8217/",
+          "api_config": {
+            "company_id": "8217",
+            "root_company_id": "8217"
+          },
+          "admitted": true,
+          "verification_status": "verified_public_list_only",
+          "verified_at": "2026-09-21T01:57:27.333Z",
+          "source_origin": "waiqi-interface-expansion-20260921",
+          "identity_verification": {
+            "identity_verified": true,
+            "official_name": "-BD-",
+            "evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\ajinga\\8217\\b4aa7034-e99-00001.json",
+            "basis": "AJINGA public company profile confirms channel 8217 belongs to -BD- / BD (root 8217). List row root IDs reconcile with that profile. Registration is at reviewed recruitment group scope."
+          },
+          "source_verification": {
+            "checked_at": "2026-09-21T01:57:27.333Z",
+            "identity_basis": "AJINGA public company profile confirms channel 8217 belongs to -BD- / BD (root 8217). List row root IDs reconcile with that profile. Registration is at reviewed recruitment group scope.",
+            "proof_directory": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\ajinga\\8217",
+            "observed_jobs": 7,
+            "complete_jd_samples": 0,
+            "public_list_capability": {
+              "anonymous": true,
+              "list_complete": true,
+              "jobs_observed": 7,
+              "company_profile": {
+                "company_id": "8217",
+                "root_company_id": "8217",
+                "root_company_name": "-BD-",
+                "http_status": 200,
+                "anonymous_session_from_scratch": true,
+                "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\ajinga\\8217\\b4aa7034-e99-00001.json",
+                "response_sha256": "adc831ebd746f4a2873e314ea9a9c2dec40ab0fb10198a8b36cdb6896abc53fb"
+              },
+              "request_evidence": [
+                {
+                  "url": "https://www.ajinga.com/django_rest/job-list/?company_id=8217&page=1&page_size=100",
+                  "method": "GET",
+                  "http_status": 200,
+                  "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\ajinga\\8217\\b4aa7034-e99-00002.json",
+                  "response_sha256": "772dfaa0178d51c0001760ec1dc355611597236e438b28670b3715aa1f6a2ad2",
+                  "anonymous_session_from_scratch": true
+                }
+              ]
+            }
+          },
+          "discovery_provenance": {
+            "dataset": "waiqi-company-20260921",
+            "waiqi_company_id": 16444,
+            "related_waiqi_company_ids": [
+              16444
+            ],
+            "company_url": "https://waiqi.com/company/detail?id=16444",
+            "identity_scope": "reviewed_branded_recruitment_group"
+          },
+          "validated_api_request_examples": [
+            {
+              "method": "GET",
+              "url": "https://www.ajinga.com/django_rest/job-list/?company_id=8217&page=1&page_size=100",
+              "purpose": "job_list",
+              "response_format": "json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "company_id": "waiqi-ajinga-7261",
+      "display_name": "BVLGARI 宝格丽",
+      "aliases": [
+        "BVLGARI",
+        "宝格丽"
+      ],
+      "industry_tags": [
+        "consumer"
+      ],
+      "category": "consumer",
+      "provider": "ajinga_public",
+      "source_id": "ajinga-7261",
+      "primary_entry_url": "https://www.ajinga.com/recruiting/company/7261/",
+      "api_config": {
+        "company_id": "7261",
+        "root_company_id": "7261"
+      },
+      "admitted": true,
+      "verification_status": "verified_public_list_only",
+      "verified_at": "2026-09-21T01:57:30.766Z",
+      "source_origin": "waiqi-interface-expansion-20260921",
+      "identity_verification": {
+        "identity_verified": true,
+        "official_name": "BVLGARI",
+        "evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\ajinga\\7261\\751f6796-8a7-00001.json",
+        "basis": "AJINGA public company profile confirms channel 7261 belongs to BVLGARI / 宝格丽 (root 7261). List row root IDs reconcile with that profile. Registration is at reviewed recruitment group scope."
+      },
+      "source_verification": {
+        "checked_at": "2026-09-21T01:57:30.766Z",
+        "identity_basis": "AJINGA public company profile confirms channel 7261 belongs to BVLGARI / 宝格丽 (root 7261). List row root IDs reconcile with that profile. Registration is at reviewed recruitment group scope.",
+        "proof_directory": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\ajinga\\7261",
+        "observed_jobs": 18,
+        "complete_jd_samples": 0,
+        "public_list_capability": {
+          "anonymous": true,
+          "list_complete": true,
+          "jobs_observed": 18,
+          "company_profile": {
+            "company_id": "7261",
+            "root_company_id": "7261",
+            "root_company_name": "BVLGARI",
+            "http_status": 200,
+            "anonymous_session_from_scratch": true,
+            "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\ajinga\\7261\\751f6796-8a7-00001.json",
+            "response_sha256": "ca15b1d29f4d214db760c2828af4993f80965768f3d7cfd94d0e30056a1b205e"
+          },
+          "request_evidence": [
+            {
+              "url": "https://www.ajinga.com/django_rest/job-list/?company_id=7261&page=1&page_size=100",
+              "method": "GET",
+              "http_status": 200,
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\ajinga\\7261\\751f6796-8a7-00002.json",
+              "response_sha256": "88566887365d397a8f04effa7799716f0f2c025724dbef0f5303f6cd43f6b86b",
+              "anonymous_session_from_scratch": true
+            }
+          ]
+        }
+      },
+      "discovery_provenance": {
+        "dataset": "waiqi-company-20260921",
+        "waiqi_company_id": 17879,
+        "related_waiqi_company_ids": [
+          17879
+        ],
+        "company_url": "https://waiqi.com/company/detail?id=17879",
+        "identity_scope": "reviewed_branded_recruitment_group"
+      },
+      "validated_api_request_examples": [
+        {
+          "method": "GET",
+          "url": "https://www.ajinga.com/django_rest/job-list/?company_id=7261&page=1&page_size=100",
+          "purpose": "job_list",
+          "response_format": "json"
+        }
+      ],
+      "recruitment_sources": [
+        {
+          "company_id": "waiqi-ajinga-7261",
+          "display_name": "BVLGARI 宝格丽",
+          "aliases": [
+            "BVLGARI",
+            "宝格丽"
+          ],
+          "industry_tags": [
+            "consumer"
+          ],
+          "category": "consumer",
+          "provider": "ajinga_public",
+          "source_id": "ajinga-7261",
+          "primary_entry_url": "https://www.ajinga.com/recruiting/company/7261/",
+          "api_config": {
+            "company_id": "7261",
+            "root_company_id": "7261"
+          },
+          "admitted": true,
+          "verification_status": "verified_public_list_only",
+          "verified_at": "2026-09-21T01:57:30.766Z",
+          "source_origin": "waiqi-interface-expansion-20260921",
+          "identity_verification": {
+            "identity_verified": true,
+            "official_name": "BVLGARI",
+            "evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\ajinga\\7261\\751f6796-8a7-00001.json",
+            "basis": "AJINGA public company profile confirms channel 7261 belongs to BVLGARI / 宝格丽 (root 7261). List row root IDs reconcile with that profile. Registration is at reviewed recruitment group scope."
+          },
+          "source_verification": {
+            "checked_at": "2026-09-21T01:57:30.766Z",
+            "identity_basis": "AJINGA public company profile confirms channel 7261 belongs to BVLGARI / 宝格丽 (root 7261). List row root IDs reconcile with that profile. Registration is at reviewed recruitment group scope.",
+            "proof_directory": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\ajinga\\7261",
+            "observed_jobs": 18,
+            "complete_jd_samples": 0,
+            "public_list_capability": {
+              "anonymous": true,
+              "list_complete": true,
+              "jobs_observed": 18,
+              "company_profile": {
+                "company_id": "7261",
+                "root_company_id": "7261",
+                "root_company_name": "BVLGARI",
+                "http_status": 200,
+                "anonymous_session_from_scratch": true,
+                "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\ajinga\\7261\\751f6796-8a7-00001.json",
+                "response_sha256": "ca15b1d29f4d214db760c2828af4993f80965768f3d7cfd94d0e30056a1b205e"
+              },
+              "request_evidence": [
+                {
+                  "url": "https://www.ajinga.com/django_rest/job-list/?company_id=7261&page=1&page_size=100",
+                  "method": "GET",
+                  "http_status": 200,
+                  "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\ajinga\\7261\\751f6796-8a7-00002.json",
+                  "response_sha256": "88566887365d397a8f04effa7799716f0f2c025724dbef0f5303f6cd43f6b86b",
+                  "anonymous_session_from_scratch": true
+                }
+              ]
+            }
+          },
+          "discovery_provenance": {
+            "dataset": "waiqi-company-20260921",
+            "waiqi_company_id": 17879,
+            "related_waiqi_company_ids": [
+              17879
+            ],
+            "company_url": "https://waiqi.com/company/detail?id=17879",
+            "identity_scope": "reviewed_branded_recruitment_group"
+          },
+          "validated_api_request_examples": [
+            {
+              "method": "GET",
+              "url": "https://www.ajinga.com/django_rest/job-list/?company_id=7261&page=1&page_size=100",
+              "purpose": "job_list",
+              "response_format": "json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "company_id": "waiqi-ajinga-7936",
+      "display_name": "MAHLE 马勒",
+      "aliases": [
+        "MAHLE",
+        "马勒"
+      ],
+      "industry_tags": [
+        "supply_chain"
+      ],
+      "category": "supply_chain",
+      "provider": "ajinga_public",
+      "source_id": "ajinga-7936",
+      "primary_entry_url": "https://www.ajinga.com/recruiting/company/7936/",
+      "api_config": {
+        "company_id": "7936",
+        "root_company_id": "7936"
+      },
+      "admitted": true,
+      "verification_status": "verified_public_list_only",
+      "verified_at": "2026-09-21T01:57:51.046Z",
+      "source_origin": "waiqi-interface-expansion-20260921",
+      "identity_verification": {
+        "identity_verified": true,
+        "official_name": "MAHLE",
+        "evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\ajinga\\7936\\81baa16b-bc5-00001.json",
+        "basis": "AJINGA public company profile confirms channel 7936 belongs to MAHLE / 马勒 (root 7936). List row root IDs reconcile with that profile. Registration is at reviewed recruitment group scope."
+      },
+      "source_verification": {
+        "checked_at": "2026-09-21T01:57:51.046Z",
+        "identity_basis": "AJINGA public company profile confirms channel 7936 belongs to MAHLE / 马勒 (root 7936). List row root IDs reconcile with that profile. Registration is at reviewed recruitment group scope.",
+        "proof_directory": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\ajinga\\7936",
+        "observed_jobs": 17,
+        "complete_jd_samples": 0,
+        "public_list_capability": {
+          "anonymous": true,
+          "list_complete": true,
+          "jobs_observed": 17,
+          "company_profile": {
+            "company_id": "7936",
+            "root_company_id": "7936",
+            "root_company_name": "MAHLE",
+            "http_status": 200,
+            "anonymous_session_from_scratch": true,
+            "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\ajinga\\7936\\81baa16b-bc5-00001.json",
+            "response_sha256": "81574c7f372589d3ece1f3b13f2d898cd1403c31adc7fcafc374ecfa91512a89"
+          },
+          "request_evidence": [
+            {
+              "url": "https://www.ajinga.com/django_rest/job-list/?company_id=7936&page=1&page_size=100",
+              "method": "GET",
+              "http_status": 200,
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\ajinga\\7936\\81baa16b-bc5-00002.json",
+              "response_sha256": "45df710c362d2ff62537901c75c2c6fa49c57cc15a811c77dae9ac0fbdb35648",
+              "anonymous_session_from_scratch": true
+            }
+          ]
+        }
+      },
+      "discovery_provenance": {
+        "dataset": "waiqi-company-20260921",
+        "waiqi_company_id": 4110,
+        "related_waiqi_company_ids": [
+          4110
+        ],
+        "company_url": "https://waiqi.com/company/detail?id=4110",
+        "identity_scope": "reviewed_branded_recruitment_group"
+      },
+      "validated_api_request_examples": [
+        {
+          "method": "GET",
+          "url": "https://www.ajinga.com/django_rest/job-list/?company_id=7936&page=1&page_size=100",
+          "purpose": "job_list",
+          "response_format": "json"
+        }
+      ],
+      "recruitment_sources": [
+        {
+          "company_id": "waiqi-ajinga-7936",
+          "display_name": "MAHLE 马勒",
+          "aliases": [
+            "MAHLE",
+            "马勒"
+          ],
+          "industry_tags": [
+            "supply_chain"
+          ],
+          "category": "supply_chain",
+          "provider": "ajinga_public",
+          "source_id": "ajinga-7936",
+          "primary_entry_url": "https://www.ajinga.com/recruiting/company/7936/",
+          "api_config": {
+            "company_id": "7936",
+            "root_company_id": "7936"
+          },
+          "admitted": true,
+          "verification_status": "verified_public_list_only",
+          "verified_at": "2026-09-21T01:57:51.046Z",
+          "source_origin": "waiqi-interface-expansion-20260921",
+          "identity_verification": {
+            "identity_verified": true,
+            "official_name": "MAHLE",
+            "evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\ajinga\\7936\\81baa16b-bc5-00001.json",
+            "basis": "AJINGA public company profile confirms channel 7936 belongs to MAHLE / 马勒 (root 7936). List row root IDs reconcile with that profile. Registration is at reviewed recruitment group scope."
+          },
+          "source_verification": {
+            "checked_at": "2026-09-21T01:57:51.046Z",
+            "identity_basis": "AJINGA public company profile confirms channel 7936 belongs to MAHLE / 马勒 (root 7936). List row root IDs reconcile with that profile. Registration is at reviewed recruitment group scope.",
+            "proof_directory": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\ajinga\\7936",
+            "observed_jobs": 17,
+            "complete_jd_samples": 0,
+            "public_list_capability": {
+              "anonymous": true,
+              "list_complete": true,
+              "jobs_observed": 17,
+              "company_profile": {
+                "company_id": "7936",
+                "root_company_id": "7936",
+                "root_company_name": "MAHLE",
+                "http_status": 200,
+                "anonymous_session_from_scratch": true,
+                "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\ajinga\\7936\\81baa16b-bc5-00001.json",
+                "response_sha256": "81574c7f372589d3ece1f3b13f2d898cd1403c31adc7fcafc374ecfa91512a89"
+              },
+              "request_evidence": [
+                {
+                  "url": "https://www.ajinga.com/django_rest/job-list/?company_id=7936&page=1&page_size=100",
+                  "method": "GET",
+                  "http_status": 200,
+                  "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\ajinga\\7936\\81baa16b-bc5-00002.json",
+                  "response_sha256": "45df710c362d2ff62537901c75c2c6fa49c57cc15a811c77dae9ac0fbdb35648",
+                  "anonymous_session_from_scratch": true
+                }
+              ]
+            }
+          },
+          "discovery_provenance": {
+            "dataset": "waiqi-company-20260921",
+            "waiqi_company_id": 4110,
+            "related_waiqi_company_ids": [
+              4110
+            ],
+            "company_url": "https://waiqi.com/company/detail?id=4110",
+            "identity_scope": "reviewed_branded_recruitment_group"
+          },
+          "validated_api_request_examples": [
+            {
+              "method": "GET",
+              "url": "https://www.ajinga.com/django_rest/job-list/?company_id=7936&page=1&page_size=100",
+              "purpose": "job_list",
+              "response_format": "json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "company_id": "waiqi-public-b2462bf756be",
+      "display_name": "HSBC 汇丰集团",
+      "aliases": [
+        "HSBC"
+      ],
+      "industry_tags": [
+        "finance"
+      ],
+      "category": "finance",
+      "provider": "jobs2web_public",
+      "source_id": "jobs2web-apply.careers.hsbc.com",
+      "primary_entry_url": "https://apply.careers.hsbc.com/search/",
+      "api_config": {
+        "origin": "https://apply.careers.hsbc.com"
+      },
+      "verification_status": "verified_public_list_only",
+      "verified_at": "2026-09-21T02:08:23.782Z",
+      "admitted": true,
+      "source_origin": "waiqi-interface-expansion-20260921",
+      "identity_verification": {
+        "identity_verified": true,
+        "official_name": "HSBC",
+        "evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-candidate-review\\apply.careers.hsbc.com.html",
+        "basis": "Reviewed branded recruitment portal on apply.careers.hsbc.com with corporate identity HSBC. Registration scope is the recruitment group, not a claim that every vacancy belongs to one China legal subsidiary."
+      },
+      "source_verification": {
+        "checked_at": "2026-09-21T02:08:23.782Z",
+        "identity_basis": "Reviewed branded recruitment portal on apply.careers.hsbc.com with corporate identity HSBC. Registration scope is the recruitment group, not a claim that every vacancy belongs to one China legal subsidiary.",
+        "proof_directory": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\apply.careers.hsbc.com",
+        "observed_jobs": 432,
+        "complete_jd_samples": 0,
+        "scope": "Mainland China public list only; recruitment direction and JD unverified",
+        "public_list_capability": {
+          "anonymous": true,
+          "list_complete": true,
+          "jobs_observed": 432,
+          "request_evidence": [
+            {
+              "url": "https://apply.careers.hsbc.com/search/?optionsFacetsDD_country=CN",
+              "method": "GET",
+              "http_status": 200,
+              "response_sha256": "9793485831498bdb3ecaac2c9efae6fba0a68afd613567134fa369e5d4e8691d",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\apply.careers.hsbc.com\\b43ff928-713-00001.txt",
+              "anonymous_session_from_scratch": true
+            },
+            {
+              "url": "https://apply.careers.hsbc.com/tile-search-results/?q=&sortColumn=referencedate&sortDirection=desc&optionsFacetsDD_country=CN&startrow=25",
+              "method": "GET",
+              "http_status": 200,
+              "response_sha256": "4159075178e6fb539b4bc3a6be2092d6970796c67ce4c3245cf73465376bd206",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\apply.careers.hsbc.com\\b43ff928-713-00002.txt",
+              "anonymous_session_from_scratch": true
+            },
+            {
+              "url": "https://apply.careers.hsbc.com/tile-search-results/?q=&sortColumn=referencedate&sortDirection=desc&optionsFacetsDD_country=CN&startrow=50",
+              "method": "GET",
+              "http_status": 200,
+              "response_sha256": "4eefe9836f312e2e0ab15f63c4d6c2deae37fdf4993efa9eca036c3e804d9cc2",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\apply.careers.hsbc.com\\b43ff928-713-00003.txt",
+              "anonymous_session_from_scratch": true
+            },
+            {
+              "url": "https://apply.careers.hsbc.com/tile-search-results/?q=&sortColumn=referencedate&sortDirection=desc&optionsFacetsDD_country=CN&startrow=75",
+              "method": "GET",
+              "http_status": 200,
+              "response_sha256": "4777f29cb16b8aa3ea5a6e33bd38addb89c2f964d46de762d88708d6ba37d029",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\apply.careers.hsbc.com\\b43ff928-713-00004.txt",
+              "anonymous_session_from_scratch": true
+            },
+            {
+              "url": "https://apply.careers.hsbc.com/tile-search-results/?q=&sortColumn=referencedate&sortDirection=desc&optionsFacetsDD_country=CN&startrow=100",
+              "method": "GET",
+              "http_status": 200,
+              "response_sha256": "33081d8c7ecc324013ab706a1f5db68356f45c31917a21774a171872b0fe3603",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\apply.careers.hsbc.com\\b43ff928-713-00005.txt",
+              "anonymous_session_from_scratch": true
+            },
+            {
+              "url": "https://apply.careers.hsbc.com/tile-search-results/?q=&sortColumn=referencedate&sortDirection=desc&optionsFacetsDD_country=CN&startrow=125",
+              "method": "GET",
+              "http_status": 200,
+              "response_sha256": "eef5221d5787043db13b10d05096ff453955c8bbdb25f4b3acec6d29e4bbb951",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\apply.careers.hsbc.com\\b43ff928-713-00006.txt",
+              "anonymous_session_from_scratch": true
+            },
+            {
+              "url": "https://apply.careers.hsbc.com/tile-search-results/?q=&sortColumn=referencedate&sortDirection=desc&optionsFacetsDD_country=CN&startrow=150",
+              "method": "GET",
+              "http_status": 200,
+              "response_sha256": "e125e4509fd88e183cef186e3a54699fa004ae0df4deeb827d005dafe430015f",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\apply.careers.hsbc.com\\b43ff928-713-00007.txt",
+              "anonymous_session_from_scratch": true
+            },
+            {
+              "url": "https://apply.careers.hsbc.com/tile-search-results/?q=&sortColumn=referencedate&sortDirection=desc&optionsFacetsDD_country=CN&startrow=175",
+              "method": "GET",
+              "http_status": 200,
+              "response_sha256": "2c95fc4ea738941c56a4be3b0826bd298cb9e920ba203b454552207ae550651c",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\apply.careers.hsbc.com\\b43ff928-713-00008.txt",
+              "anonymous_session_from_scratch": true
+            },
+            {
+              "url": "https://apply.careers.hsbc.com/tile-search-results/?q=&sortColumn=referencedate&sortDirection=desc&optionsFacetsDD_country=CN&startrow=200",
+              "method": "GET",
+              "http_status": 200,
+              "response_sha256": "5ceddf869ff2037bb6a4841d3c19e81f7244b2a502971d0894e4ea2b5804e731",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\apply.careers.hsbc.com\\b43ff928-713-00009.txt",
+              "anonymous_session_from_scratch": true
+            },
+            {
+              "url": "https://apply.careers.hsbc.com/tile-search-results/?q=&sortColumn=referencedate&sortDirection=desc&optionsFacetsDD_country=CN&startrow=225",
+              "method": "GET",
+              "http_status": 200,
+              "response_sha256": "d6062b5cc1555d99b37ebcf20a32ff4e92319628c7601a2f8caca804b6f1a91a",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\apply.careers.hsbc.com\\b43ff928-713-00010.txt",
+              "anonymous_session_from_scratch": true
+            },
+            {
+              "url": "https://apply.careers.hsbc.com/tile-search-results/?q=&sortColumn=referencedate&sortDirection=desc&optionsFacetsDD_country=CN&startrow=250",
+              "method": "GET",
+              "http_status": 200,
+              "response_sha256": "1d8a575ad499a3cc0ce2fc2898a32b465749fbd41b5019679157e998f5a59395",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\apply.careers.hsbc.com\\b43ff928-713-00011.txt",
+              "anonymous_session_from_scratch": true
+            },
+            {
+              "url": "https://apply.careers.hsbc.com/tile-search-results/?q=&sortColumn=referencedate&sortDirection=desc&optionsFacetsDD_country=CN&startrow=275",
+              "method": "GET",
+              "http_status": 200,
+              "response_sha256": "87c24029dea0bb486af9edb69f396253a9f30b39eac4495d671bc53a5da27b72",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\apply.careers.hsbc.com\\b43ff928-713-00012.txt",
+              "anonymous_session_from_scratch": true
+            },
+            {
+              "url": "https://apply.careers.hsbc.com/tile-search-results/?q=&sortColumn=referencedate&sortDirection=desc&optionsFacetsDD_country=CN&startrow=300",
+              "method": "GET",
+              "http_status": 200,
+              "response_sha256": "19d0f082bf94874d56e4582fd9bdf3b8b80d4895f9f9d2efb5e7134602494b59",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\apply.careers.hsbc.com\\b43ff928-713-00013.txt",
+              "anonymous_session_from_scratch": true
+            },
+            {
+              "url": "https://apply.careers.hsbc.com/tile-search-results/?q=&sortColumn=referencedate&sortDirection=desc&optionsFacetsDD_country=CN&startrow=325",
+              "method": "GET",
+              "http_status": 200,
+              "response_sha256": "38868ff7e8822f7c9968635793e3d6dc3f81df37aa689136c07171d7f695667b",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\apply.careers.hsbc.com\\b43ff928-713-00014.txt",
+              "anonymous_session_from_scratch": true
+            },
+            {
+              "url": "https://apply.careers.hsbc.com/tile-search-results/?q=&sortColumn=referencedate&sortDirection=desc&optionsFacetsDD_country=CN&startrow=350",
+              "method": "GET",
+              "http_status": 200,
+              "response_sha256": "0565a1af9b06444b9b2a628673815d6fa5df6d2ce4c1b99d8b16079a46bbe884",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\apply.careers.hsbc.com\\b43ff928-713-00015.txt",
+              "anonymous_session_from_scratch": true
+            },
+            {
+              "url": "https://apply.careers.hsbc.com/tile-search-results/?q=&sortColumn=referencedate&sortDirection=desc&optionsFacetsDD_country=CN&startrow=375",
+              "method": "GET",
+              "http_status": 200,
+              "response_sha256": "f38444551c655a47cadcc0bd89ed5b2c4440e6af463626c5c4413fbd7b4afda2",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\apply.careers.hsbc.com\\b43ff928-713-00016.txt",
+              "anonymous_session_from_scratch": true
+            },
+            {
+              "url": "https://apply.careers.hsbc.com/tile-search-results/?q=&sortColumn=referencedate&sortDirection=desc&optionsFacetsDD_country=CN&startrow=400",
+              "method": "GET",
+              "http_status": 200,
+              "response_sha256": "8b316db1dd9aca53af3151f0c4fccce22f18be84eac0ff841bac52de051f5ad7",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\apply.careers.hsbc.com\\b43ff928-713-00017.txt",
+              "anonymous_session_from_scratch": true
+            },
+            {
+              "url": "https://apply.careers.hsbc.com/tile-search-results/?q=&sortColumn=referencedate&sortDirection=desc&optionsFacetsDD_country=CN&startrow=425",
+              "method": "GET",
+              "http_status": 200,
+              "response_sha256": "d112d95f266bd624caa97a1f09c408fe716cb759724650598c1a5339f194a6fe",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\apply.careers.hsbc.com\\b43ff928-713-00018.txt",
+              "anonymous_session_from_scratch": true
+            }
+          ]
+        }
+      },
+      "discovery_provenance": {
+        "dataset": "waiqi-company-20260921",
+        "waiqi_company_id": 25724,
+        "related_waiqi_company_ids": [
+          25724,
+          19
+        ],
+        "company_url": "https://waiqi.com/company/detail?id=25724",
+        "identity_scope": "reviewed_branded_recruitment_group"
+      },
+      "validated_api_request_examples": [
+        {
+          "method": "GET",
+          "url": "https://apply.careers.hsbc.com/search/?optionsFacetsDD_country=CN",
+          "purpose": "job_list",
+          "response_format": "html",
+          "response_sha256": "9793485831498bdb3ecaac2c9efae6fba0a68afd613567134fa369e5d4e8691d"
+        }
+      ],
+      "recruitment_sources": [
+        {
+          "company_id": "waiqi-public-b2462bf756be",
+          "display_name": "HSBC 汇丰集团",
+          "aliases": [
+            "HSBC"
+          ],
+          "industry_tags": [
+            "finance"
+          ],
+          "category": "finance",
+          "provider": "jobs2web_public",
+          "source_id": "jobs2web-apply.careers.hsbc.com",
+          "primary_entry_url": "https://apply.careers.hsbc.com/search/",
+          "api_config": {
+            "origin": "https://apply.careers.hsbc.com"
+          },
+          "verification_status": "verified_public_list_only",
+          "verified_at": "2026-09-21T02:08:23.782Z",
+          "admitted": true,
+          "source_origin": "waiqi-interface-expansion-20260921",
+          "identity_verification": {
+            "identity_verified": true,
+            "official_name": "HSBC",
+            "evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-candidate-review\\apply.careers.hsbc.com.html",
+            "basis": "Reviewed branded recruitment portal on apply.careers.hsbc.com with corporate identity HSBC. Registration scope is the recruitment group, not a claim that every vacancy belongs to one China legal subsidiary."
+          },
+          "source_verification": {
+            "checked_at": "2026-09-21T02:08:23.782Z",
+            "identity_basis": "Reviewed branded recruitment portal on apply.careers.hsbc.com with corporate identity HSBC. Registration scope is the recruitment group, not a claim that every vacancy belongs to one China legal subsidiary.",
+            "proof_directory": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\apply.careers.hsbc.com",
+            "observed_jobs": 432,
+            "complete_jd_samples": 0,
+            "scope": "Mainland China public list only; recruitment direction and JD unverified",
+            "public_list_capability": {
+              "anonymous": true,
+              "list_complete": true,
+              "jobs_observed": 432,
+              "request_evidence": [
+                {
+                  "url": "https://apply.careers.hsbc.com/search/?optionsFacetsDD_country=CN",
+                  "method": "GET",
+                  "http_status": 200,
+                  "response_sha256": "9793485831498bdb3ecaac2c9efae6fba0a68afd613567134fa369e5d4e8691d",
+                  "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\apply.careers.hsbc.com\\b43ff928-713-00001.txt",
+                  "anonymous_session_from_scratch": true
+                },
+                {
+                  "url": "https://apply.careers.hsbc.com/tile-search-results/?q=&sortColumn=referencedate&sortDirection=desc&optionsFacetsDD_country=CN&startrow=25",
+                  "method": "GET",
+                  "http_status": 200,
+                  "response_sha256": "4159075178e6fb539b4bc3a6be2092d6970796c67ce4c3245cf73465376bd206",
+                  "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\apply.careers.hsbc.com\\b43ff928-713-00002.txt",
+                  "anonymous_session_from_scratch": true
+                },
+                {
+                  "url": "https://apply.careers.hsbc.com/tile-search-results/?q=&sortColumn=referencedate&sortDirection=desc&optionsFacetsDD_country=CN&startrow=50",
+                  "method": "GET",
+                  "http_status": 200,
+                  "response_sha256": "4eefe9836f312e2e0ab15f63c4d6c2deae37fdf4993efa9eca036c3e804d9cc2",
+                  "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\apply.careers.hsbc.com\\b43ff928-713-00003.txt",
+                  "anonymous_session_from_scratch": true
+                },
+                {
+                  "url": "https://apply.careers.hsbc.com/tile-search-results/?q=&sortColumn=referencedate&sortDirection=desc&optionsFacetsDD_country=CN&startrow=75",
+                  "method": "GET",
+                  "http_status": 200,
+                  "response_sha256": "4777f29cb16b8aa3ea5a6e33bd38addb89c2f964d46de762d88708d6ba37d029",
+                  "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\apply.careers.hsbc.com\\b43ff928-713-00004.txt",
+                  "anonymous_session_from_scratch": true
+                },
+                {
+                  "url": "https://apply.careers.hsbc.com/tile-search-results/?q=&sortColumn=referencedate&sortDirection=desc&optionsFacetsDD_country=CN&startrow=100",
+                  "method": "GET",
+                  "http_status": 200,
+                  "response_sha256": "33081d8c7ecc324013ab706a1f5db68356f45c31917a21774a171872b0fe3603",
+                  "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\apply.careers.hsbc.com\\b43ff928-713-00005.txt",
+                  "anonymous_session_from_scratch": true
+                },
+                {
+                  "url": "https://apply.careers.hsbc.com/tile-search-results/?q=&sortColumn=referencedate&sortDirection=desc&optionsFacetsDD_country=CN&startrow=125",
+                  "method": "GET",
+                  "http_status": 200,
+                  "response_sha256": "eef5221d5787043db13b10d05096ff453955c8bbdb25f4b3acec6d29e4bbb951",
+                  "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\apply.careers.hsbc.com\\b43ff928-713-00006.txt",
+                  "anonymous_session_from_scratch": true
+                },
+                {
+                  "url": "https://apply.careers.hsbc.com/tile-search-results/?q=&sortColumn=referencedate&sortDirection=desc&optionsFacetsDD_country=CN&startrow=150",
+                  "method": "GET",
+                  "http_status": 200,
+                  "response_sha256": "e125e4509fd88e183cef186e3a54699fa004ae0df4deeb827d005dafe430015f",
+                  "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\apply.careers.hsbc.com\\b43ff928-713-00007.txt",
+                  "anonymous_session_from_scratch": true
+                },
+                {
+                  "url": "https://apply.careers.hsbc.com/tile-search-results/?q=&sortColumn=referencedate&sortDirection=desc&optionsFacetsDD_country=CN&startrow=175",
+                  "method": "GET",
+                  "http_status": 200,
+                  "response_sha256": "2c95fc4ea738941c56a4be3b0826bd298cb9e920ba203b454552207ae550651c",
+                  "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\apply.careers.hsbc.com\\b43ff928-713-00008.txt",
+                  "anonymous_session_from_scratch": true
+                },
+                {
+                  "url": "https://apply.careers.hsbc.com/tile-search-results/?q=&sortColumn=referencedate&sortDirection=desc&optionsFacetsDD_country=CN&startrow=200",
+                  "method": "GET",
+                  "http_status": 200,
+                  "response_sha256": "5ceddf869ff2037bb6a4841d3c19e81f7244b2a502971d0894e4ea2b5804e731",
+                  "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\apply.careers.hsbc.com\\b43ff928-713-00009.txt",
+                  "anonymous_session_from_scratch": true
+                },
+                {
+                  "url": "https://apply.careers.hsbc.com/tile-search-results/?q=&sortColumn=referencedate&sortDirection=desc&optionsFacetsDD_country=CN&startrow=225",
+                  "method": "GET",
+                  "http_status": 200,
+                  "response_sha256": "d6062b5cc1555d99b37ebcf20a32ff4e92319628c7601a2f8caca804b6f1a91a",
+                  "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\apply.careers.hsbc.com\\b43ff928-713-00010.txt",
+                  "anonymous_session_from_scratch": true
+                },
+                {
+                  "url": "https://apply.careers.hsbc.com/tile-search-results/?q=&sortColumn=referencedate&sortDirection=desc&optionsFacetsDD_country=CN&startrow=250",
+                  "method": "GET",
+                  "http_status": 200,
+                  "response_sha256": "1d8a575ad499a3cc0ce2fc2898a32b465749fbd41b5019679157e998f5a59395",
+                  "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\apply.careers.hsbc.com\\b43ff928-713-00011.txt",
+                  "anonymous_session_from_scratch": true
+                },
+                {
+                  "url": "https://apply.careers.hsbc.com/tile-search-results/?q=&sortColumn=referencedate&sortDirection=desc&optionsFacetsDD_country=CN&startrow=275",
+                  "method": "GET",
+                  "http_status": 200,
+                  "response_sha256": "87c24029dea0bb486af9edb69f396253a9f30b39eac4495d671bc53a5da27b72",
+                  "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\apply.careers.hsbc.com\\b43ff928-713-00012.txt",
+                  "anonymous_session_from_scratch": true
+                },
+                {
+                  "url": "https://apply.careers.hsbc.com/tile-search-results/?q=&sortColumn=referencedate&sortDirection=desc&optionsFacetsDD_country=CN&startrow=300",
+                  "method": "GET",
+                  "http_status": 200,
+                  "response_sha256": "19d0f082bf94874d56e4582fd9bdf3b8b80d4895f9f9d2efb5e7134602494b59",
+                  "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\apply.careers.hsbc.com\\b43ff928-713-00013.txt",
+                  "anonymous_session_from_scratch": true
+                },
+                {
+                  "url": "https://apply.careers.hsbc.com/tile-search-results/?q=&sortColumn=referencedate&sortDirection=desc&optionsFacetsDD_country=CN&startrow=325",
+                  "method": "GET",
+                  "http_status": 200,
+                  "response_sha256": "38868ff7e8822f7c9968635793e3d6dc3f81df37aa689136c07171d7f695667b",
+                  "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\apply.careers.hsbc.com\\b43ff928-713-00014.txt",
+                  "anonymous_session_from_scratch": true
+                },
+                {
+                  "url": "https://apply.careers.hsbc.com/tile-search-results/?q=&sortColumn=referencedate&sortDirection=desc&optionsFacetsDD_country=CN&startrow=350",
+                  "method": "GET",
+                  "http_status": 200,
+                  "response_sha256": "0565a1af9b06444b9b2a628673815d6fa5df6d2ce4c1b99d8b16079a46bbe884",
+                  "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\apply.careers.hsbc.com\\b43ff928-713-00015.txt",
+                  "anonymous_session_from_scratch": true
+                },
+                {
+                  "url": "https://apply.careers.hsbc.com/tile-search-results/?q=&sortColumn=referencedate&sortDirection=desc&optionsFacetsDD_country=CN&startrow=375",
+                  "method": "GET",
+                  "http_status": 200,
+                  "response_sha256": "f38444551c655a47cadcc0bd89ed5b2c4440e6af463626c5c4413fbd7b4afda2",
+                  "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\apply.careers.hsbc.com\\b43ff928-713-00016.txt",
+                  "anonymous_session_from_scratch": true
+                },
+                {
+                  "url": "https://apply.careers.hsbc.com/tile-search-results/?q=&sortColumn=referencedate&sortDirection=desc&optionsFacetsDD_country=CN&startrow=400",
+                  "method": "GET",
+                  "http_status": 200,
+                  "response_sha256": "8b316db1dd9aca53af3151f0c4fccce22f18be84eac0ff841bac52de051f5ad7",
+                  "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\apply.careers.hsbc.com\\b43ff928-713-00017.txt",
+                  "anonymous_session_from_scratch": true
+                },
+                {
+                  "url": "https://apply.careers.hsbc.com/tile-search-results/?q=&sortColumn=referencedate&sortDirection=desc&optionsFacetsDD_country=CN&startrow=425",
+                  "method": "GET",
+                  "http_status": 200,
+                  "response_sha256": "d112d95f266bd624caa97a1f09c408fe716cb759724650598c1a5339f194a6fe",
+                  "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\apply.careers.hsbc.com\\b43ff928-713-00018.txt",
+                  "anonymous_session_from_scratch": true
+                }
+              ]
+            }
+          },
+          "discovery_provenance": {
+            "dataset": "waiqi-company-20260921",
+            "waiqi_company_id": 25724,
+            "related_waiqi_company_ids": [
+              25724,
+              19
+            ],
+            "company_url": "https://waiqi.com/company/detail?id=25724",
+            "identity_scope": "reviewed_branded_recruitment_group"
+          },
+          "validated_api_request_examples": [
+            {
+              "method": "GET",
+              "url": "https://apply.careers.hsbc.com/search/?optionsFacetsDD_country=CN",
+              "purpose": "job_list",
+              "response_format": "html",
+              "response_sha256": "9793485831498bdb3ecaac2c9efae6fba0a68afd613567134fa369e5d4e8691d"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "company_id": "waiqi-public-364a67bb1b93",
+      "display_name": "Cargill 嘉吉",
+      "aliases": [
+        "Cargill"
+      ],
+      "industry_tags": [
+        "agriculture",
+        "consumer",
+        "logistics_trade"
+      ],
+      "category": "agriculture",
+      "provider": "jobs2web_public",
+      "source_id": "jobs2web-jobs.cargill.com",
+      "primary_entry_url": "https://jobs.cargill.com/search/",
+      "api_config": {
+        "origin": "https://jobs.cargill.com"
+      },
+      "verification_status": "verified_public_list_only",
+      "verified_at": "2026-09-21T02:08:25.608Z",
+      "admitted": true,
+      "source_origin": "waiqi-interface-expansion-20260921",
+      "identity_verification": {
+        "identity_verified": true,
+        "official_name": "Cargill",
+        "evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-candidate-review\\jobs.cargill.com.html",
+        "basis": "Reviewed branded recruitment portal on jobs.cargill.com with corporate identity Cargill. Registration scope is the recruitment group, not a claim that every vacancy belongs to one China legal subsidiary."
+      },
+      "source_verification": {
+        "checked_at": "2026-09-21T02:08:25.608Z",
+        "identity_basis": "Reviewed branded recruitment portal on jobs.cargill.com with corporate identity Cargill. Registration scope is the recruitment group, not a claim that every vacancy belongs to one China legal subsidiary.",
+        "proof_directory": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\jobs.cargill.com",
+        "observed_jobs": 30,
+        "complete_jd_samples": 0,
+        "scope": "Mainland China public list only; recruitment direction and JD unverified",
+        "public_list_capability": {
+          "anonymous": true,
+          "list_complete": true,
+          "jobs_observed": 30,
+          "request_evidence": [
+            {
+              "url": "https://jobs.cargill.com/search/?optionsFacetsDD_country=CN",
+              "method": "GET",
+              "http_status": 200,
+              "response_sha256": "eb3b35ce5ed3fc895896b63625a2e389ca0b6cd245848805a4ac063c5afa3d36",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\jobs.cargill.com\\99854ba2-459-00001.txt",
+              "anonymous_session_from_scratch": true
+            },
+            {
+              "url": "https://jobs.cargill.com/tile-search-results/?q=&sortColumn=referencedate&sortDirection=desc&optionsFacetsDD_country=CN&startrow=25",
+              "method": "GET",
+              "http_status": 200,
+              "response_sha256": "f23af3f8a866bffafd4ca7a6ee76acab3dbd5e404b474b323097fda586a51f01",
+              "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\jobs.cargill.com\\99854ba2-459-00002.txt",
+              "anonymous_session_from_scratch": true
+            }
+          ]
+        }
+      },
+      "discovery_provenance": {
+        "dataset": "waiqi-company-20260921",
+        "waiqi_company_id": 1695,
+        "related_waiqi_company_ids": [
+          1695
+        ],
+        "company_url": "https://waiqi.com/company/detail?id=1695",
+        "identity_scope": "reviewed_branded_recruitment_group"
+      },
+      "validated_api_request_examples": [
+        {
+          "method": "GET",
+          "url": "https://jobs.cargill.com/search/?optionsFacetsDD_country=CN",
+          "purpose": "job_list",
+          "response_format": "html",
+          "response_sha256": "eb3b35ce5ed3fc895896b63625a2e389ca0b6cd245848805a4ac063c5afa3d36"
+        }
+      ],
+      "recruitment_sources": [
+        {
+          "company_id": "waiqi-public-364a67bb1b93",
+          "display_name": "Cargill 嘉吉",
+          "aliases": [
+            "Cargill"
+          ],
+          "industry_tags": [
+            "agriculture",
+            "consumer",
+            "logistics_trade"
+          ],
+          "category": "agriculture",
+          "provider": "jobs2web_public",
+          "source_id": "jobs2web-jobs.cargill.com",
+          "primary_entry_url": "https://jobs.cargill.com/search/",
+          "api_config": {
+            "origin": "https://jobs.cargill.com"
+          },
+          "verification_status": "verified_public_list_only",
+          "verified_at": "2026-09-21T02:08:25.608Z",
+          "admitted": true,
+          "source_origin": "waiqi-interface-expansion-20260921",
+          "identity_verification": {
+            "identity_verified": true,
+            "official_name": "Cargill",
+            "evidence_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-candidate-review\\jobs.cargill.com.html",
+            "basis": "Reviewed branded recruitment portal on jobs.cargill.com with corporate identity Cargill. Registration scope is the recruitment group, not a claim that every vacancy belongs to one China legal subsidiary."
+          },
+          "source_verification": {
+            "checked_at": "2026-09-21T02:08:25.608Z",
+            "identity_basis": "Reviewed branded recruitment portal on jobs.cargill.com with corporate identity Cargill. Registration scope is the recruitment group, not a claim that every vacancy belongs to one China legal subsidiary.",
+            "proof_directory": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\jobs.cargill.com",
+            "observed_jobs": 30,
+            "complete_jd_samples": 0,
+            "scope": "Mainland China public list only; recruitment direction and JD unverified",
+            "public_list_capability": {
+              "anonymous": true,
+              "list_complete": true,
+              "jobs_observed": 30,
+              "request_evidence": [
+                {
+                  "url": "https://jobs.cargill.com/search/?optionsFacetsDD_country=CN",
+                  "method": "GET",
+                  "http_status": 200,
+                  "response_sha256": "eb3b35ce5ed3fc895896b63625a2e389ca0b6cd245848805a4ac063c5afa3d36",
+                  "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\jobs.cargill.com\\99854ba2-459-00001.txt",
+                  "anonymous_session_from_scratch": true
+                },
+                {
+                  "url": "https://jobs.cargill.com/tile-search-results/?q=&sortColumn=referencedate&sortDirection=desc&optionsFacetsDD_country=CN&startrow=25",
+                  "method": "GET",
+                  "http_status": 200,
+                  "response_sha256": "f23af3f8a866bffafd4ca7a6ee76acab3dbd5e404b474b323097fda586a51f01",
+                  "response_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\jobs.cargill.com\\99854ba2-459-00002.txt",
+                  "anonymous_session_from_scratch": true
+                }
+              ]
+            }
+          },
+          "discovery_provenance": {
+            "dataset": "waiqi-company-20260921",
+            "waiqi_company_id": 1695,
+            "related_waiqi_company_ids": [
+              1695
+            ],
+            "company_url": "https://waiqi.com/company/detail?id=1695",
+            "identity_scope": "reviewed_branded_recruitment_group"
+          },
+          "validated_api_request_examples": [
+            {
+              "method": "GET",
+              "url": "https://jobs.cargill.com/search/?optionsFacetsDD_country=CN",
+              "purpose": "job_list",
+              "response_format": "html",
+              "response_sha256": "eb3b35ce5ed3fc895896b63625a2e389ca0b6cd245848805a4ac063c5afa3d36"
+            }
+          ]
+        }
+      ]
     }
   ],
-  "updated_at": "2026-09-20T16:23:21.345Z",
+  "updated_at": "2026-09-21T02:10:11.821Z",
   "industry_counts": {
     "internet": 434,
     "smart_hardware": 258,

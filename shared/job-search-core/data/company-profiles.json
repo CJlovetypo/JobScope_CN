@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-20T16:23:47.415Z",
+  "updated_at": "2026-09-21T02:10:44.080Z",
   "companies": [
     {
       "company_id": "company-f93e5a384c54",
@@ -118286,6 +118286,370 @@
     {
       "company_id": "waiqi-company-41283",
       "display_name": "BISSELL 必胜益康",
+      "business": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      },
+      "workforce": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      },
+      "capital": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      }
+    },
+    {
+      "company_id": "waiqi-public-6321096788b7",
+      "display_name": "ASSA ABLOY 亚萨合莱",
+      "business": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      },
+      "workforce": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      },
+      "capital": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      }
+    },
+    {
+      "company_id": "waiqi-public-28444d6526c4",
+      "display_name": "ZF 采埃孚",
+      "business": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      },
+      "workforce": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      },
+      "capital": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      }
+    },
+    {
+      "company_id": "waiqi-public-f56219c5e0e6",
+      "display_name": "PCCW 电讯盈科",
+      "business": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      },
+      "workforce": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      },
+      "capital": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      }
+    },
+    {
+      "company_id": "waiqi-public-a2f94f00dfc6",
+      "display_name": "香港赛马会",
+      "business": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      },
+      "workforce": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      },
+      "capital": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      }
+    },
+    {
+      "company_id": "waiqi-public-7c325aeb4c02",
+      "display_name": "BioNTech 拜恩泰科",
+      "business": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      },
+      "workforce": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      },
+      "capital": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      }
+    },
+    {
+      "company_id": "waiqi-public-7c2299e64738",
+      "display_name": "DSV 得斯威",
+      "business": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      },
+      "workforce": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      },
+      "capital": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      }
+    },
+    {
+      "company_id": "waiqi-public-536d70a745b8",
+      "display_name": "Boehringer Ingelheim 勃林格殷格翰",
+      "business": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      },
+      "workforce": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      },
+      "capital": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      }
+    },
+    {
+      "company_id": "waiqi-ajinga-10821",
+      "display_name": "Charlotte Tilbury 夏洛特蒂铂丽",
+      "business": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      },
+      "workforce": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      },
+      "capital": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      }
+    },
+    {
+      "company_id": "waiqi-ajinga-8217",
+      "display_name": "BD 碧迪",
+      "business": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      },
+      "workforce": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      },
+      "capital": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      }
+    },
+    {
+      "company_id": "waiqi-ajinga-7261",
+      "display_name": "BVLGARI 宝格丽",
+      "business": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      },
+      "workforce": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      },
+      "capital": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      }
+    },
+    {
+      "company_id": "waiqi-ajinga-7936",
+      "display_name": "MAHLE 马勒",
+      "business": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      },
+      "workforce": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      },
+      "capital": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      }
+    },
+    {
+      "company_id": "waiqi-public-b2462bf756be",
+      "display_name": "HSBC 汇丰集团",
+      "business": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      },
+      "workforce": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      },
+      "capital": {
+        "value": "",
+        "status": "missing",
+        "entity": "",
+        "as_of": "",
+        "checked_at": "",
+        "evidence": []
+      }
+    },
+    {
+      "company_id": "waiqi-public-364a67bb1b93",
+      "display_name": "Cargill 嘉吉",
       "business": {
         "value": "",
         "status": "missing",

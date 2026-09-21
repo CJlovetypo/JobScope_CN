@@ -1,4 +1,7 @@
 import fs from 'node:fs/promises';
+import {readFileSync} from 'node:fs';
+import {collectJobs2web} from './lib/provider-jobs2web.mjs';
+import {collectAjinga} from './lib/provider-ajinga.mjs';
 import path from 'node:path';
 import {createHash} from 'node:crypto';
 import {pathToFileURL} from 'node:url';
@@ -7,9 +10,11 @@ import {sourceFromEntry} from '../../../campus-job-fit/scripts/source-discovery.
 import {collectCommon} from './lib/providers-common.mjs';
 
 const DEFAULT_INPUT=path.resolve('shared/job-search-core/assets/waiqi-source-candidates.json');
+const publicCareerHosts=new Set(JSON.parse(readFileSync(new URL('../assets/public-career-hosts.json',import.meta.url),'utf8')).hosts.map(x=>x.host));
 const DEFAULT_OUTPUT=path.resolve('campus-job-fit/artifacts/waiqi-2026-09-20/zero-position-official-discovery');
 const locale=/^(?:en|en-us|en-gb|zh|zh-cn|zh-hans|de|fr|ja|ko)$/i;
-const atsHost=/(?:myworkdayjobs\.com|smartrecruiters\.com|greenhouse\.io|mokahr\.com|zhiye\.com|hotjob\.cn|jobs\.(?:feishu\.cn|f\.mioffice\.cn)|oraclecloud\.com|careers\.bissell\.com)$/i;
+const atsHost=/(?:myworkdayjobs\.com|myworkdaysite\.com|smartrecruiters\.com|greenhouse\.io|mokahr\.com|zhiye\.com|hotjob\.cn|jobs\.(?:feishu\.cn|f\.mioffice\.cn)|oraclecloud\.com|careers\.bissell\.com)$/i;
+const isAtsHost=host=>atsHost.test(host)||publicCareerHosts.has(host.toLowerCase())||host.toLowerCase()==='www.ajinga.com';
 const careerWords=/(?:career|careers|job|jobs|join[\s_-]*us|work[\s_-]*with[\s_-]*us|vacanc|opportunit|recruit|talent|招聘|招贤|人才|加入我们|工作机会|职位)/i;
 const rejectAsset=/\.(?:js|css|png|jpe?g|gif|svg|ico|woff2?|ttf|map|pdf|zip)(?:$|[?#])/i;
 const commonWords=new Set(['company','group','limited','ltd','china','chinese','international','global','holdings','technology','technologies','management','corporation','inc','shanghai','beijing','suzhou','guangzhou']);
@@ -39,15 +44,25 @@ function identityEvidence(company,url,html){
 
 export function extractCareerLinks(base,html){
   const found=[];let order=0;
-  const add=(raw,label='')=>{try{raw=decode(raw).trim().split(/["'<>\s]/,1)[0].replace(/[},;]+$/,'');if(raw.startsWith('//'))raw='https:'+raw;const u=new URL(raw,base);if(!['http:','https:'].includes(u.protocol)||u.username||u.password||rejectAsset.test(u.pathname))return;const direct=atsHost.test(u.hostname);const career=careerWords.test(label+' '+u.pathname+' '+u.hostname);if(!direct&&!career)return;found.push({url:u.href,label:text(label).slice(0,160),direct_ats:direct,score:(direct?20:0)+(career?8:0)+(u.origin===new URL(base).origin?2:0),order:order++});}catch{}};
+  const add=(raw,label='')=>{try{raw=decode(raw).trim().split(/["'<>\s]/,1)[0].replace(/[},;]+$/,'');if(raw.startsWith('//'))raw='https:'+raw;const u=new URL(raw,base);if(!['http:','https:'].includes(u.protocol)||u.username||u.password||rejectAsset.test(u.pathname))return;const direct=isAtsHost(u.hostname);const career=careerWords.test(label+' '+u.pathname+' '+u.hostname);if(!direct&&!career)return;found.push({url:u.href,label:text(label).slice(0,160),direct_ats:direct,score:(direct?20:0)+(career?8:0)+(u.origin===new URL(base).origin?2:0),order:order++});}catch{}};
   for(const m of String(html).matchAll(/<a\b([^>]*)href\s*=\s*(["'])([\s\S]*?)\2([^>]*)>([\s\S]*?)<\/a>/gi))add(m[3],m[5]);
   const expanded=decode(String(html));
-  for(const m of expanded.matchAll(/https?:\/\/[^\s"'<>\\]+/gi))try{if(atsHost.test(new URL(m[0]).hostname))add(m[0],'embedded ATS URL');}catch{/* Ignore malformed text that merely starts like a URL. */}
+  for(const m of expanded.matchAll(/https?:\/\/[^\s"'<>\\]+/gi))try{if(isAtsHost(new URL(m[0]).hostname))add(m[0],'embedded ATS URL');}catch{/* Ignore malformed text that merely starts like a URL. */}
   return [...new Map(found.sort((a,b)=>b.score-a.score||a.order-b.order).map(x=>[x.url,x])).values()];
 }
 
 export function atsConfiguration(entry){
   let u;try{u=new URL(entry);}catch{return null;}const host=u.hostname.toLowerCase(),segments=u.pathname.split('/').filter(Boolean);
+  if(host==='www.ajinga.com'){
+    const id=u.pathname.match(/^\/(?:recruiting\/company|company-detail-new)\/(\d+)(?:\/|$)/)?.[1];
+    if(id)return {provider:'ajinga_public',entry_url:'https://www.ajinga.com/recruiting/company/'+id+'/',api:{url:'https://www.ajinga.com/django_rest/job-list/?company_id='+id+'&page=1&page_size=100',method:'GET'},api_config:{company_id:id},capability:'public_list_only'};
+  }
+  if(publicCareerHosts.has(host))return {provider:'jobs2web_public',entry_url:u.origin+'/search/',api:{url:u.origin+'/search/?optionsFacetsDD_country=CN',method:'GET'},api_config:{origin:u.origin},capability:'public_list_only'};
+  if(/^wd\d+\.myworkdaysite\.com$/.test(host)&&segments[0]==='recruiting'&&segments[1]&&segments[2]){
+    const tenant=segments[1],site=segments[2];
+    if(!/^[\w-]+$/.test(tenant)||!/^[\w-]+$/.test(site))return null;
+    return {provider:'workday',entry_url:u.origin+'/recruiting/'+tenant+'/'+site,entry_kind:'alternate_recruiting_root',api:{url:u.origin+'/wday/cxs/'+tenant+'/'+site+'/jobs',method:'POST',body:{appliedFacets:{},limit:1,offset:0,searchText:''}},api_config:{origin:u.origin,tenant,site,public_path:'/recruiting/'+tenant+'/'+site}};
+  }
   if(/\.myworkdayjobs\.com$/.test(host)){
     const tenant=host.split('.')[0],parts=segments.filter(x=>!locale.test(x)),reserved=/^(?:job|jobs|search|apply|userhome)$/i;let site,entry_kind;
     if(parts.length===1){site=parts[0];entry_kind='site_root';}
@@ -94,6 +109,10 @@ async function gatedRequest(client,q,purpose,intervalMs){
 async function verify(config,companyDir,intervalMs){
   const client=createClient({evidenceDir:path.join(companyDir,'api-http'),timeoutMs:15000});
   try{
+    if(['jobs2web_public','ajinga_public'].includes(config.provider)){
+      const result=await (config.provider==='jobs2web_public'?collectJobs2web:collectAjinga)({...config,primary_entry_url:config.entry_url},{mode:'list',maxPages:100,timeoutMs:15000,client});
+      return {ok:result.coverage.list_complete,reported_jobs:result.coverage.server_total,reason:result.coverage.reason,coverage:result.coverage,requests:result.requests};
+    }
     if(['moka','beisen','feishu','hotjob'].includes(config.provider)){
       const result=await collectCommon(config.source,{mode:'list',maxPages:1,pageSize:1,maxDetails:0,detailConcurrency:1,timeoutMs:15000,evidenceDir:path.join(companyDir,'api-http')});
       const pages=Number(result?.coverage?.pages||0),reported=result?.coverage?.server_total;

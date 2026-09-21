@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-20T16:23:35.058Z",
+  "updated_at": "2026-09-21T02:10:42.865Z",
   "companies": [
     {
       "company_id": "company-f93e5a384c54",
@@ -200026,34 +200026,51 @@
       "company_id": "company-c7703c0c43b4",
       "display_name": "威富（中国招聘门户）",
       "cities": [],
-      "updated_at": "2026-09-19T12:26:58.197Z",
+      "updated_at": "2026-09-21T01:57:21.257Z",
       "coverage": {
         "status": "partial",
-        "pages": 3,
-        "server_total": 21,
-        "jobs_observed": 21,
-        "reason": "unique_ids_reconcile_server_total; server_total_changed; duplicate_job_ids_across_pages; 17 jobs have unresolved JD sections",
+        "pages": 1,
+        "server_total": null,
+        "jobs_observed": 8,
+        "reason": "Only archived official jobs observed during Waiqi source verification; existing cities retained; no Waiqi city hints used",
         "collection_complete": false,
         "details_failed": 0,
-        "incomplete_bodies": 17,
-        "scope": "Mainland China positions in this public portal"
+        "scope": "Offline seed from archived verified official API jobs; historical observations, not a live refresh or exhaustive company inventory",
+        "contexts": [
+          {
+            "source_id": "ajinga-7908",
+            "provider": "ajinga_public",
+            "status": "complete",
+            "pages": 1,
+            "server_total": 8,
+            "jobs_observed": 8,
+            "reason": "unique_ids_reconcile_server_total",
+            "collection_complete": true,
+            "incomplete_bodies": 8,
+            "scope": "AJINGA company channel list, validated against returned root company; recognized mainland cities and non-overseas records only; JD and recruitment type unverified"
+          }
+        ]
       },
       "search_mode": "internship",
-      "source_config_fingerprint": "c4efd32a3aeec7b5692241551bd34431097dedc80229c28b9ae7e9007d150eec",
+      "source_config_fingerprint": "5e0961e5b84d0c8631efa622bb5686779e7a801ac284f81b4a3ec28b6ab31a05",
       "formal_jobs_observed": 0,
       "target_jobs_observed": 0,
       "unknown_location_jobs": 0,
-      "uncertain_type_or_status_jobs": 20,
+      "uncertain_type_or_status_jobs": 8,
       "city_coverage_complete": false,
-      "last_refresh_at": "2026-09-19T12:26:58.197Z",
+      "last_refresh_at": "2026-09-21T01:57:21.257Z",
       "last_refresh_status": "partial",
-      "last_refresh_reason": "unique_ids_reconcile_server_total; server_total_changed; duplicate_job_ids_across_pages; 17 jobs have unresolved JD sections",
-      "result_file": "artifacts/city-refresh-20260919/company-c7703c0c43b4/result.json",
+      "last_refresh_reason": "Only archived official jobs observed during Waiqi source verification; existing cities retained; no Waiqi city hints used",
+      "result_file": "../campus-job-fit/artifacts/waiqi-expansion-followup/city-seed/internship/company-c7703c0c43b4.json",
       "city_evidence": [],
       "retained_previous_cities": [],
-      "city_freshness": "partial",
+      "city_freshness": "unknown",
       "city_evidence_total": 0,
-      "city_evidence_scope": "up_to_two_examples_per_city; complete_observations_in_result_file"
+      "city_evidence_scope": "up_to_two_examples_per_city; complete_observations_in_result_file",
+      "seed_origin": "waiqi_official_api_archive",
+      "seed_observation_files": [
+        "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\ajinga\\7908\\result.json"
+      ]
     },
     {
       "company_id": "company-2d0066f5320a",
@@ -227259,6 +227276,826 @@
       "seed_origin": "waiqi_official_api_archive",
       "seed_observation_files": [
         "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-2026-09-20\\routing-expansion-admission\\admitted.json"
+      ]
+    },
+    {
+      "company_id": "waiqi-public-6321096788b7",
+      "display_name": "ASSA ABLOY 亚萨合莱",
+      "cities": [
+        "上海"
+      ],
+      "updated_at": "2026-09-21T01:39:10.347Z",
+      "coverage": {
+        "status": "partial",
+        "pages": 1,
+        "server_total": null,
+        "jobs_observed": 15,
+        "reason": "Only archived official jobs observed during Waiqi source verification; existing cities retained; no Waiqi city hints used",
+        "collection_complete": false,
+        "details_failed": 0,
+        "scope": "Offline seed from archived verified official API jobs; historical observations, not a live refresh or exhaustive company inventory",
+        "contexts": [
+          {
+            "source_id": "jobs2web-assaabloy.jobs2web.com",
+            "provider": "jobs2web_public",
+            "status": "complete",
+            "pages": 1,
+            "server_total": 15,
+            "jobs_observed": 15,
+            "reason": "unique_ids_reconcile_server_total",
+            "collection_complete": true,
+            "incomplete_bodies": 15,
+            "scope": "Mainland China public listing; job bodies and recruitment direction unverified"
+          }
+        ]
+      },
+      "search_mode": "internship",
+      "source_config_fingerprint": "76fdc6fe37cca6ef15a4f4a90f3a5463a03f8a584217f955fb0ef85ab2961e98",
+      "formal_jobs_observed": 1,
+      "target_jobs_observed": 1,
+      "unknown_location_jobs": 1,
+      "uncertain_type_or_status_jobs": 14,
+      "city_coverage_complete": false,
+      "last_refresh_at": "2026-09-21T01:39:10.347Z",
+      "last_refresh_status": "partial",
+      "last_refresh_reason": "Only archived official jobs observed during Waiqi source verification; existing cities retained; no Waiqi city hints used",
+      "result_file": "../campus-job-fit/artifacts/waiqi-expansion-followup/city-seed/internship/waiqi-public-6321096788b7.json",
+      "city_evidence": [
+        {
+          "job_id": "1435234233",
+          "title": "FSSC Intern",
+          "cities": [
+            "上海"
+          ],
+          "locations_raw": [
+            "Shanghai, CN, 200335"
+          ],
+          "official_url": "https://assaabloy.jobs2web.com/job/Shanghai-FSSC-Intern-200335/1435234233/",
+          "raw_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\assaabloy.jobs2web.com\\311e4d86-755-00001.txt"
+        }
+      ],
+      "retained_previous_cities": [],
+      "city_freshness": "partial",
+      "city_evidence_total": 1,
+      "city_evidence_scope": "up_to_two_examples_per_city; complete_observations_in_result_file",
+      "seed_origin": "waiqi_official_api_archive",
+      "seed_observation_files": [
+        "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\assaabloy.jobs2web.com\\result.json"
+      ]
+    },
+    {
+      "company_id": "waiqi-public-28444d6526c4",
+      "display_name": "ZF 采埃孚",
+      "cities": [
+        "上海",
+        "广州"
+      ],
+      "updated_at": "2026-09-21T01:39:21.945Z",
+      "coverage": {
+        "status": "partial",
+        "pages": 4,
+        "server_total": null,
+        "jobs_observed": 94,
+        "reason": "Only archived official jobs observed during Waiqi source verification; existing cities retained; no Waiqi city hints used",
+        "collection_complete": false,
+        "details_failed": 0,
+        "scope": "Offline seed from archived verified official API jobs; historical observations, not a live refresh or exhaustive company inventory",
+        "contexts": [
+          {
+            "source_id": "jobs2web-jobs.zf.com",
+            "provider": "jobs2web_public",
+            "status": "complete",
+            "pages": 4,
+            "server_total": 94,
+            "jobs_observed": 94,
+            "reason": "unique_ids_reconcile_server_total",
+            "collection_complete": true,
+            "incomplete_bodies": 94,
+            "scope": "Mainland China public listing; job bodies and recruitment direction unverified"
+          }
+        ]
+      },
+      "search_mode": "internship",
+      "source_config_fingerprint": "144fc6a17e69831ea608a6a15201c3b2abb92679a2de5ac7e8592ee95a539cda",
+      "formal_jobs_observed": 8,
+      "target_jobs_observed": 8,
+      "unknown_location_jobs": 8,
+      "uncertain_type_or_status_jobs": 86,
+      "city_coverage_complete": false,
+      "last_refresh_at": "2026-09-21T01:39:21.945Z",
+      "last_refresh_status": "partial",
+      "last_refresh_reason": "Only archived official jobs observed during Waiqi source verification; existing cities retained; no Waiqi city hints used",
+      "result_file": "../campus-job-fit/artifacts/waiqi-expansion-followup/city-seed/internship/waiqi-public-28444d6526c4.json",
+      "city_evidence": [
+        {
+          "job_id": "1438271633",
+          "title": "Customer Engineering Intern",
+          "cities": [
+            "上海"
+          ],
+          "locations_raw": [
+            "Shanghai, SH, CN, 201814"
+          ],
+          "official_url": "https://jobs.zf.com/job/Shanghai-Customer-Engineering-Intern-SH-201814/1438271633/",
+          "raw_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\jobs.zf.com\\fb25c763-cc0-00001.txt"
+        },
+        {
+          "job_id": "1416529233",
+          "title": "EPM Intern",
+          "cities": [
+            "上海"
+          ],
+          "locations_raw": [
+            "Shanghai, SH, CN, 201814"
+          ],
+          "official_url": "https://jobs.zf.com/job/Shanghai-EPM-Intern-SH-201814/1416529233/",
+          "raw_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\jobs.zf.com\\fb25c763-cc0-00001.txt"
+        },
+        {
+          "job_id": "1423890833",
+          "title": "Software Integraion Intern",
+          "cities": [
+            "广州"
+          ],
+          "locations_raw": [
+            "Guangzhou, CN, 511455"
+          ],
+          "official_url": "https://jobs.zf.com/job/Guangzhou-Software-Integraion-Intern-511455/1423890833/",
+          "raw_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\jobs.zf.com\\fb25c763-cc0-00003.txt"
+        }
+      ],
+      "retained_previous_cities": [],
+      "city_freshness": "partial",
+      "city_evidence_total": 8,
+      "city_evidence_scope": "up_to_two_examples_per_city; complete_observations_in_result_file",
+      "seed_origin": "waiqi_official_api_archive",
+      "seed_observation_files": [
+        "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\jobs.zf.com\\result.json"
+      ]
+    },
+    {
+      "company_id": "waiqi-public-f56219c5e0e6",
+      "display_name": "PCCW 电讯盈科",
+      "cities": [],
+      "updated_at": "2026-09-21T01:46:41.509Z",
+      "coverage": {
+        "status": "partial",
+        "pages": 0,
+        "server_total": null,
+        "jobs_observed": 0,
+        "reason": "Only archived official jobs observed during Waiqi source verification; existing cities retained; no Waiqi city hints used",
+        "collection_complete": false,
+        "details_failed": 0,
+        "scope": "Offline seed from archived verified official API jobs; historical observations, not a live refresh or exhaustive company inventory",
+        "contexts": []
+      },
+      "search_mode": "internship",
+      "source_config_fingerprint": "c5324cabd9d941943e7233bfe746334753eaafd98c6d31b7c5fc71c39bd4497a",
+      "formal_jobs_observed": 0,
+      "target_jobs_observed": 0,
+      "unknown_location_jobs": 0,
+      "uncertain_type_or_status_jobs": 0,
+      "city_coverage_complete": false,
+      "last_refresh_at": "2026-09-21T01:46:41.509Z",
+      "last_refresh_status": "partial",
+      "last_refresh_reason": "Only archived official jobs observed during Waiqi source verification; existing cities retained; no Waiqi city hints used",
+      "result_file": "../campus-job-fit/artifacts/waiqi-expansion-followup/city-seed/internship/waiqi-public-f56219c5e0e6.json",
+      "city_evidence": [],
+      "retained_previous_cities": [],
+      "city_freshness": "unknown",
+      "city_evidence_total": 0,
+      "city_evidence_scope": "up_to_two_examples_per_city; complete_observations_in_result_file",
+      "seed_origin": "waiqi_official_api_archive",
+      "seed_observation_files": []
+    },
+    {
+      "company_id": "waiqi-public-a2f94f00dfc6",
+      "display_name": "香港赛马会",
+      "cities": [],
+      "updated_at": "2026-09-21T01:46:41.510Z",
+      "coverage": {
+        "status": "partial",
+        "pages": 0,
+        "server_total": null,
+        "jobs_observed": 0,
+        "reason": "Only archived official jobs observed during Waiqi source verification; existing cities retained; no Waiqi city hints used",
+        "collection_complete": false,
+        "details_failed": 0,
+        "scope": "Offline seed from archived verified official API jobs; historical observations, not a live refresh or exhaustive company inventory",
+        "contexts": []
+      },
+      "search_mode": "internship",
+      "source_config_fingerprint": "ae0d7f163ef83f2554742789b678702dc863ddd1f1f5ae052fbdc3205f111cc2",
+      "formal_jobs_observed": 0,
+      "target_jobs_observed": 0,
+      "unknown_location_jobs": 0,
+      "uncertain_type_or_status_jobs": 0,
+      "city_coverage_complete": false,
+      "last_refresh_at": "2026-09-21T01:46:41.510Z",
+      "last_refresh_status": "partial",
+      "last_refresh_reason": "Only archived official jobs observed during Waiqi source verification; existing cities retained; no Waiqi city hints used",
+      "result_file": "../campus-job-fit/artifacts/waiqi-expansion-followup/city-seed/internship/waiqi-public-a2f94f00dfc6.json",
+      "city_evidence": [],
+      "retained_previous_cities": [],
+      "city_freshness": "unknown",
+      "city_evidence_total": 0,
+      "city_evidence_scope": "up_to_two_examples_per_city; complete_observations_in_result_file",
+      "seed_origin": "waiqi_official_api_archive",
+      "seed_observation_files": []
+    },
+    {
+      "company_id": "waiqi-public-7c325aeb4c02",
+      "display_name": "BioNTech 拜恩泰科",
+      "cities": [],
+      "updated_at": "2026-09-21T01:46:41.511Z",
+      "coverage": {
+        "status": "partial",
+        "pages": 0,
+        "server_total": null,
+        "jobs_observed": 0,
+        "reason": "Only archived official jobs observed during Waiqi source verification; existing cities retained; no Waiqi city hints used",
+        "collection_complete": false,
+        "details_failed": 0,
+        "scope": "Offline seed from archived verified official API jobs; historical observations, not a live refresh or exhaustive company inventory",
+        "contexts": []
+      },
+      "search_mode": "internship",
+      "source_config_fingerprint": "8e0cc3683390c34f6ba58b75054a60b27233fbc3740710c88d11afc900be0b70",
+      "formal_jobs_observed": 0,
+      "target_jobs_observed": 0,
+      "unknown_location_jobs": 0,
+      "uncertain_type_or_status_jobs": 0,
+      "city_coverage_complete": false,
+      "last_refresh_at": "2026-09-21T01:46:41.511Z",
+      "last_refresh_status": "partial",
+      "last_refresh_reason": "Only archived official jobs observed during Waiqi source verification; existing cities retained; no Waiqi city hints used",
+      "result_file": "../campus-job-fit/artifacts/waiqi-expansion-followup/city-seed/internship/waiqi-public-7c325aeb4c02.json",
+      "city_evidence": [],
+      "retained_previous_cities": [],
+      "city_freshness": "unknown",
+      "city_evidence_total": 0,
+      "city_evidence_scope": "up_to_two_examples_per_city; complete_observations_in_result_file",
+      "seed_origin": "waiqi_official_api_archive",
+      "seed_observation_files": []
+    },
+    {
+      "company_id": "waiqi-public-7c2299e64738",
+      "display_name": "DSV 得斯威",
+      "cities": [
+        "上海",
+        "广州"
+      ],
+      "updated_at": "2026-09-21T01:39:33.131Z",
+      "coverage": {
+        "status": "partial",
+        "pages": 3,
+        "server_total": null,
+        "jobs_observed": 22,
+        "reason": "Only archived official jobs observed during Waiqi source verification; existing cities retained; no Waiqi city hints used",
+        "collection_complete": false,
+        "details_failed": 0,
+        "scope": "Offline seed from archived verified official API jobs; historical observations, not a live refresh or exhaustive company inventory",
+        "contexts": [
+          {
+            "source_id": "jobs2web-jobs.dsv.com",
+            "provider": "jobs2web_public",
+            "status": "complete",
+            "pages": 3,
+            "server_total": 22,
+            "jobs_observed": 22,
+            "reason": "unique_ids_reconcile_server_total",
+            "collection_complete": true,
+            "incomplete_bodies": 22,
+            "scope": "Mainland China public listing; job bodies and recruitment direction unverified"
+          }
+        ]
+      },
+      "search_mode": "internship",
+      "source_config_fingerprint": "b45980874925986e34e0db51fd80572f775b2703a4478eaaf024cb5e7265fa8e",
+      "formal_jobs_observed": 3,
+      "target_jobs_observed": 3,
+      "unknown_location_jobs": 3,
+      "uncertain_type_or_status_jobs": 19,
+      "city_coverage_complete": false,
+      "last_refresh_at": "2026-09-21T01:39:33.131Z",
+      "last_refresh_status": "partial",
+      "last_refresh_reason": "Only archived official jobs observed during Waiqi source verification; existing cities retained; no Waiqi city hints used",
+      "result_file": "../campus-job-fit/artifacts/waiqi-expansion-followup/city-seed/internship/waiqi-public-7c2299e64738.json",
+      "city_evidence": [
+        {
+          "job_id": "1436098833",
+          "title": "Intern, Air & Sea China",
+          "cities": [
+            "广州"
+          ],
+          "locations_raw": [
+            "Guangzhou, GD, CN, 510627"
+          ],
+          "official_url": "https://jobs.dsv.com/job/Guangzhou-Intern%2C-Air-&-Sea-China-GD-510627/1436098833/",
+          "raw_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\jobs.dsv.com\\2ab73ff2-7f4-00001.txt"
+        },
+        {
+          "job_id": "1436098633",
+          "title": "Intern, Air & Sea China",
+          "cities": [
+            "广州"
+          ],
+          "locations_raw": [
+            "Guangzhou, GD, CN, 510627"
+          ],
+          "official_url": "https://jobs.dsv.com/job/Guangzhou-Intern%2C-Air-&-Sea-China-GD-510627/1436098633/",
+          "raw_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\jobs.dsv.com\\2ab73ff2-7f4-00001.txt"
+        },
+        {
+          "job_id": "1434612033",
+          "title": "Intern",
+          "cities": [
+            "上海"
+          ],
+          "locations_raw": [
+            "Shanghai, SH, CN, 200131"
+          ],
+          "official_url": "https://jobs.dsv.com/job/Shanghai-Intern-SH-200131/1434612033/",
+          "raw_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\jobs.dsv.com\\2ab73ff2-7f4-00002.txt"
+        }
+      ],
+      "retained_previous_cities": [],
+      "city_freshness": "partial",
+      "city_evidence_total": 3,
+      "city_evidence_scope": "up_to_two_examples_per_city; complete_observations_in_result_file",
+      "seed_origin": "waiqi_official_api_archive",
+      "seed_observation_files": [
+        "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\jobs.dsv.com\\result.json"
+      ]
+    },
+    {
+      "company_id": "waiqi-public-536d70a745b8",
+      "display_name": "Boehringer Ingelheim 勃林格殷格翰",
+      "cities": [
+        "北京"
+      ],
+      "updated_at": "2026-09-21T01:43:45.796Z",
+      "coverage": {
+        "status": "partial",
+        "pages": 1,
+        "server_total": null,
+        "jobs_observed": 21,
+        "reason": "Only archived official jobs observed during Waiqi source verification; existing cities retained; no Waiqi city hints used",
+        "collection_complete": false,
+        "details_failed": 0,
+        "scope": "Offline seed from archived verified official API jobs; historical observations, not a live refresh or exhaustive company inventory",
+        "contexts": [
+          {
+            "source_id": "jobs2web-jobs.boehringer-ingelheim.com",
+            "provider": "jobs2web_public",
+            "status": "complete",
+            "pages": 1,
+            "server_total": 21,
+            "jobs_observed": 21,
+            "reason": "unique_ids_reconcile_server_total",
+            "collection_complete": true,
+            "incomplete_bodies": 21,
+            "scope": "Mainland China public listing; job bodies and recruitment direction unverified"
+          }
+        ]
+      },
+      "search_mode": "internship",
+      "source_config_fingerprint": "ddb4c4cb8b8ab8108a5cbb29a1edce6655e8a4c580ae37b93f61c74a9a69beab",
+      "formal_jobs_observed": 1,
+      "target_jobs_observed": 1,
+      "unknown_location_jobs": 0,
+      "uncertain_type_or_status_jobs": 20,
+      "city_coverage_complete": false,
+      "last_refresh_at": "2026-09-21T01:43:45.796Z",
+      "last_refresh_status": "partial",
+      "last_refresh_reason": "Only archived official jobs observed during Waiqi source verification; existing cities retained; no Waiqi city hints used",
+      "result_file": "../campus-job-fit/artifacts/waiqi-expansion-followup/city-seed/internship/waiqi-public-536d70a745b8.json",
+      "city_evidence": [
+        {
+          "job_id": "1404819333",
+          "title": "RA Operation Intern",
+          "cities": [
+            "北京"
+          ],
+          "locations_raw": [
+            "Beijing, China"
+          ],
+          "official_url": "https://jobs.boehringer-ingelheim.com/job/Beijing-RA-Operation-Intern-Chin/1404819333/",
+          "raw_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\jobs.boehringer-ingelheim.com\\tiles\\027db0a2-52d-00001.txt"
+        }
+      ],
+      "retained_previous_cities": [],
+      "city_freshness": "partial",
+      "city_evidence_total": 1,
+      "city_evidence_scope": "up_to_two_examples_per_city; complete_observations_in_result_file",
+      "seed_origin": "waiqi_official_api_archive",
+      "seed_observation_files": [
+        "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\jobs.boehringer-ingelheim.com\\result.json"
+      ]
+    },
+    {
+      "company_id": "waiqi-ajinga-10821",
+      "display_name": "Charlotte Tilbury 夏洛特蒂铂丽",
+      "cities": [],
+      "updated_at": "2026-09-21T01:57:24.377Z",
+      "coverage": {
+        "status": "partial",
+        "pages": 1,
+        "server_total": null,
+        "jobs_observed": 14,
+        "reason": "Only archived official jobs observed during Waiqi source verification; existing cities retained; no Waiqi city hints used",
+        "collection_complete": false,
+        "details_failed": 0,
+        "scope": "Offline seed from archived verified official API jobs; historical observations, not a live refresh or exhaustive company inventory",
+        "contexts": [
+          {
+            "source_id": "ajinga-10821",
+            "provider": "ajinga_public",
+            "status": "complete",
+            "pages": 1,
+            "server_total": 14,
+            "jobs_observed": 14,
+            "reason": "unique_ids_reconcile_server_total",
+            "collection_complete": true,
+            "incomplete_bodies": 14,
+            "scope": "AJINGA company channel list, validated against returned root company; recognized mainland cities and non-overseas records only; JD and recruitment type unverified"
+          }
+        ]
+      },
+      "search_mode": "internship",
+      "source_config_fingerprint": "0dc6d91293d0deaa3b8cb5a9370fa0211aba0ca1744be9b09544d32b7bd24bec",
+      "formal_jobs_observed": 0,
+      "target_jobs_observed": 0,
+      "unknown_location_jobs": 0,
+      "uncertain_type_or_status_jobs": 14,
+      "city_coverage_complete": false,
+      "last_refresh_at": "2026-09-21T01:57:24.377Z",
+      "last_refresh_status": "partial",
+      "last_refresh_reason": "Only archived official jobs observed during Waiqi source verification; existing cities retained; no Waiqi city hints used",
+      "result_file": "../campus-job-fit/artifacts/waiqi-expansion-followup/city-seed/internship/waiqi-ajinga-10821.json",
+      "city_evidence": [],
+      "retained_previous_cities": [],
+      "city_freshness": "unknown",
+      "city_evidence_total": 0,
+      "city_evidence_scope": "up_to_two_examples_per_city; complete_observations_in_result_file",
+      "seed_origin": "waiqi_official_api_archive",
+      "seed_observation_files": [
+        "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\ajinga\\10821\\result.json"
+      ]
+    },
+    {
+      "company_id": "waiqi-ajinga-8217",
+      "display_name": "BD 碧迪",
+      "cities": [],
+      "updated_at": "2026-09-21T01:57:27.333Z",
+      "coverage": {
+        "status": "partial",
+        "pages": 1,
+        "server_total": null,
+        "jobs_observed": 7,
+        "reason": "Only archived official jobs observed during Waiqi source verification; existing cities retained; no Waiqi city hints used",
+        "collection_complete": false,
+        "details_failed": 0,
+        "scope": "Offline seed from archived verified official API jobs; historical observations, not a live refresh or exhaustive company inventory",
+        "contexts": [
+          {
+            "source_id": "ajinga-8217",
+            "provider": "ajinga_public",
+            "status": "complete",
+            "pages": 1,
+            "server_total": 7,
+            "jobs_observed": 7,
+            "reason": "unique_ids_reconcile_server_total",
+            "collection_complete": true,
+            "incomplete_bodies": 7,
+            "scope": "AJINGA company channel list, validated against returned root company; recognized mainland cities and non-overseas records only; JD and recruitment type unverified"
+          }
+        ]
+      },
+      "search_mode": "internship",
+      "source_config_fingerprint": "f8c0718c95fd7b74a677d13284b3509b2f559f6d03480aa3b506679238175d24",
+      "formal_jobs_observed": 0,
+      "target_jobs_observed": 0,
+      "unknown_location_jobs": 0,
+      "uncertain_type_or_status_jobs": 7,
+      "city_coverage_complete": false,
+      "last_refresh_at": "2026-09-21T01:57:27.333Z",
+      "last_refresh_status": "partial",
+      "last_refresh_reason": "Only archived official jobs observed during Waiqi source verification; existing cities retained; no Waiqi city hints used",
+      "result_file": "../campus-job-fit/artifacts/waiqi-expansion-followup/city-seed/internship/waiqi-ajinga-8217.json",
+      "city_evidence": [],
+      "retained_previous_cities": [],
+      "city_freshness": "unknown",
+      "city_evidence_total": 0,
+      "city_evidence_scope": "up_to_two_examples_per_city; complete_observations_in_result_file",
+      "seed_origin": "waiqi_official_api_archive",
+      "seed_observation_files": [
+        "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\ajinga\\8217\\result.json"
+      ]
+    },
+    {
+      "company_id": "waiqi-ajinga-7261",
+      "display_name": "BVLGARI 宝格丽",
+      "cities": [],
+      "updated_at": "2026-09-21T01:57:30.766Z",
+      "coverage": {
+        "status": "partial",
+        "pages": 1,
+        "server_total": null,
+        "jobs_observed": 18,
+        "reason": "Only archived official jobs observed during Waiqi source verification; existing cities retained; no Waiqi city hints used",
+        "collection_complete": false,
+        "details_failed": 0,
+        "scope": "Offline seed from archived verified official API jobs; historical observations, not a live refresh or exhaustive company inventory",
+        "contexts": [
+          {
+            "source_id": "ajinga-7261",
+            "provider": "ajinga_public",
+            "status": "complete",
+            "pages": 1,
+            "server_total": 18,
+            "jobs_observed": 18,
+            "reason": "unique_ids_reconcile_server_total",
+            "collection_complete": true,
+            "incomplete_bodies": 18,
+            "scope": "AJINGA company channel list, validated against returned root company; recognized mainland cities and non-overseas records only; JD and recruitment type unverified"
+          }
+        ]
+      },
+      "search_mode": "internship",
+      "source_config_fingerprint": "7b78dbc6e40ffee05416478cec99ae1613dff8e92df7bff06613c19edd6c4a0a",
+      "formal_jobs_observed": 0,
+      "target_jobs_observed": 0,
+      "unknown_location_jobs": 0,
+      "uncertain_type_or_status_jobs": 18,
+      "city_coverage_complete": false,
+      "last_refresh_at": "2026-09-21T01:57:30.766Z",
+      "last_refresh_status": "partial",
+      "last_refresh_reason": "Only archived official jobs observed during Waiqi source verification; existing cities retained; no Waiqi city hints used",
+      "result_file": "../campus-job-fit/artifacts/waiqi-expansion-followup/city-seed/internship/waiqi-ajinga-7261.json",
+      "city_evidence": [],
+      "retained_previous_cities": [],
+      "city_freshness": "unknown",
+      "city_evidence_total": 0,
+      "city_evidence_scope": "up_to_two_examples_per_city; complete_observations_in_result_file",
+      "seed_origin": "waiqi_official_api_archive",
+      "seed_observation_files": [
+        "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\ajinga\\7261\\result.json"
+      ]
+    },
+    {
+      "company_id": "waiqi-ajinga-7936",
+      "display_name": "MAHLE 马勒",
+      "cities": [
+        "上海"
+      ],
+      "updated_at": "2026-09-21T01:57:51.046Z",
+      "coverage": {
+        "status": "partial",
+        "pages": 1,
+        "server_total": null,
+        "jobs_observed": 17,
+        "reason": "Only archived official jobs observed during Waiqi source verification; existing cities retained; no Waiqi city hints used",
+        "collection_complete": false,
+        "details_failed": 0,
+        "scope": "Offline seed from archived verified official API jobs; historical observations, not a live refresh or exhaustive company inventory",
+        "contexts": [
+          {
+            "source_id": "ajinga-7936",
+            "provider": "ajinga_public",
+            "status": "complete",
+            "pages": 1,
+            "server_total": 17,
+            "jobs_observed": 17,
+            "reason": "unique_ids_reconcile_server_total",
+            "collection_complete": true,
+            "incomplete_bodies": 17,
+            "scope": "AJINGA company channel list, validated against returned root company; recognized mainland cities and non-overseas records only; JD and recruitment type unverified"
+          }
+        ]
+      },
+      "search_mode": "internship",
+      "source_config_fingerprint": "68627bd49180fd68ac206a272d830e38ee5296f909acbe55cda38f351a7144a6",
+      "formal_jobs_observed": 1,
+      "target_jobs_observed": 1,
+      "unknown_location_jobs": 0,
+      "uncertain_type_or_status_jobs": 16,
+      "city_coverage_complete": false,
+      "last_refresh_at": "2026-09-21T01:57:51.046Z",
+      "last_refresh_status": "partial",
+      "last_refresh_reason": "Only archived official jobs observed during Waiqi source verification; existing cities retained; no Waiqi city hints used",
+      "result_file": "../campus-job-fit/artifacts/waiqi-expansion-followup/city-seed/internship/waiqi-ajinga-7936.json",
+      "city_evidence": [
+        {
+          "job_id": "206080",
+          "title": "Customer Quality Intern 客户质量实习生",
+          "cities": [
+            "上海"
+          ],
+          "locations_raw": [
+            "Shanghai"
+          ],
+          "official_url": "https://www.ajinga.com/job-detail-new/206080/c/",
+          "raw_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\ajinga\\7936\\81baa16b-bc5-00002.json"
+        }
+      ],
+      "retained_previous_cities": [],
+      "city_freshness": "partial",
+      "city_evidence_total": 1,
+      "city_evidence_scope": "up_to_two_examples_per_city; complete_observations_in_result_file",
+      "seed_origin": "waiqi_official_api_archive",
+      "seed_observation_files": [
+        "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\ajinga\\7936\\result.json"
+      ]
+    },
+    {
+      "company_id": "waiqi-public-b2462bf756be",
+      "display_name": "HSBC 汇丰集团",
+      "cities": [
+        "上海",
+        "佛山",
+        "北京",
+        "广州"
+      ],
+      "updated_at": "2026-09-21T02:08:23.782Z",
+      "coverage": {
+        "status": "partial",
+        "pages": 18,
+        "server_total": null,
+        "jobs_observed": 432,
+        "reason": "Only archived official jobs observed during Waiqi source verification; existing cities retained; no Waiqi city hints used",
+        "collection_complete": false,
+        "details_failed": 0,
+        "scope": "Offline seed from archived verified official API jobs; historical observations, not a live refresh or exhaustive company inventory",
+        "contexts": [
+          {
+            "source_id": "jobs2web-apply.careers.hsbc.com",
+            "provider": "jobs2web_public",
+            "status": "complete",
+            "pages": 18,
+            "server_total": 432,
+            "jobs_observed": 432,
+            "reason": "unique_ids_reconcile_server_total",
+            "collection_complete": true,
+            "incomplete_bodies": 432,
+            "scope": "Mainland China public listing; job bodies and recruitment direction unverified"
+          }
+        ]
+      },
+      "search_mode": "internship",
+      "source_config_fingerprint": "25259a3c22db697e49b9fa787153d386eb4c8b2a2b6a9b9b877515422d0d7cb7",
+      "formal_jobs_observed": 11,
+      "target_jobs_observed": 11,
+      "unknown_location_jobs": 11,
+      "uncertain_type_or_status_jobs": 421,
+      "city_coverage_complete": false,
+      "last_refresh_at": "2026-09-21T02:08:23.782Z",
+      "last_refresh_status": "partial",
+      "last_refresh_reason": "Only archived official jobs observed during Waiqi source verification; existing cities retained; no Waiqi city hints used",
+      "result_file": "../campus-job-fit/artifacts/waiqi-expansion-followup/city-seed/internship/waiqi-public-b2462bf756be.json",
+      "city_evidence": [
+        {
+          "job_id": "1368237557",
+          "title": "证券服务部金融实习生",
+          "cities": [
+            "广州"
+          ],
+          "locations_raw": [
+            "Guangzhou, GD, CN, 510620"
+          ],
+          "official_url": "https://apply.careers.hsbc.com/job/Guangzhou-%E8%AF%81%E5%88%B8%E6%9C%8D%E5%8A%A1%E9%83%A8%E9%87%91%E8%9E%8D%E5%AE%9E%E4%B9%A0%E7%94%9F-GD-510620/1368237557/",
+          "raw_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\apply.careers.hsbc.com\\b43ff928-713-00001.txt"
+        },
+        {
+          "job_id": "1370053957",
+          "title": "个人客户尽职调查部实习生",
+          "cities": [
+            "佛山"
+          ],
+          "locations_raw": [
+            "Foshan, GD, CN, 528200"
+          ],
+          "official_url": "https://apply.careers.hsbc.com/job/Foshan-%E4%B8%AA%E4%BA%BA%E5%AE%A2%E6%88%B7%E5%B0%BD%E8%81%8C%E8%B0%83%E6%9F%A5%E9%83%A8%E5%AE%9E%E4%B9%A0%E7%94%9F-GD-528200/1370053957/",
+          "raw_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\apply.careers.hsbc.com\\b43ff928-713-00001.txt"
+        },
+        {
+          "job_id": "1369005357",
+          "title": "Account Processor实习生",
+          "cities": [
+            "佛山"
+          ],
+          "locations_raw": [
+            "Foshan, GD, CN, 528200"
+          ],
+          "official_url": "https://apply.careers.hsbc.com/job/Foshan-Account-Processor%E5%AE%9E%E4%B9%A0%E7%94%9F-GD-528200/1369005357/",
+          "raw_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\apply.careers.hsbc.com\\b43ff928-713-00009.txt"
+        },
+        {
+          "job_id": "1371530657",
+          "title": "信贷风险管理营运部实习生（广州）",
+          "cities": [
+            "广州"
+          ],
+          "locations_raw": [
+            "Guangzhou, GD, CN, 510620"
+          ],
+          "official_url": "https://apply.careers.hsbc.com/job/Guangzhou-%E4%BF%A1%E8%B4%B7%E9%A3%8E%E9%99%A9%E7%AE%A1%E7%90%86%E8%90%A5%E8%BF%90%E9%83%A8%E5%AE%9E%E4%B9%A0%E7%94%9F%EF%BC%88%E5%B9%BF%E5%B7%9E%EF%BC%89-GD-510620/1371530657/",
+          "raw_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\apply.careers.hsbc.com\\b43ff928-713-00009.txt"
+        },
+        {
+          "job_id": "1371121457",
+          "title": "Investment Banking - Corporate and Institutional Banking - Internship - HSBC Qianhai",
+          "cities": [
+            "北京"
+          ],
+          "locations_raw": [
+            "Beijing, BJ, CN, -"
+          ],
+          "official_url": "https://apply.careers.hsbc.com/emergingtalent/job/Beijing-Investment-Banking-Corporate-and-Institutional-Banking-Internship-HSBC-Qianhai-BJ/1371121457/",
+          "raw_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\apply.careers.hsbc.com\\b43ff928-713-00013.txt"
+        },
+        {
+          "job_id": "1370783557",
+          "title": "Business Analyst - International Wealth and Premier Banking  -  Internship",
+          "cities": [
+            "上海"
+          ],
+          "locations_raw": [
+            "Shanghai, SH, CN, 200001"
+          ],
+          "official_url": "https://apply.careers.hsbc.com/emergingtalent/job/Shanghai-Business-Analyst-International-Wealth-and-Premier-Banking-Internship-SH-200001/1370783557/",
+          "raw_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\apply.careers.hsbc.com\\b43ff928-713-00014.txt"
+        },
+        {
+          "job_id": "1370782557",
+          "title": "Relationship Management - Corporate and Institutional Banking  - Internship",
+          "cities": [
+            "上海"
+          ],
+          "locations_raw": [
+            "Shanghai, SH, CN, 200001"
+          ],
+          "official_url": "https://apply.careers.hsbc.com/emergingtalent/job/Shanghai-Relationship-Management-Corporate-and-Institutional-Banking-Internship-SH-200001/1370782557/",
+          "raw_file": "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\apply.careers.hsbc.com\\b43ff928-713-00014.txt"
+        }
+      ],
+      "retained_previous_cities": [],
+      "city_freshness": "partial",
+      "city_evidence_total": 11,
+      "city_evidence_scope": "up_to_two_examples_per_city; complete_observations_in_result_file",
+      "seed_origin": "waiqi_official_api_archive",
+      "seed_observation_files": [
+        "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\apply.careers.hsbc.com\\result.json"
+      ]
+    },
+    {
+      "company_id": "waiqi-public-364a67bb1b93",
+      "display_name": "Cargill 嘉吉",
+      "cities": [],
+      "updated_at": "2026-09-21T02:08:25.608Z",
+      "coverage": {
+        "status": "partial",
+        "pages": 2,
+        "server_total": null,
+        "jobs_observed": 30,
+        "reason": "Only archived official jobs observed during Waiqi source verification; existing cities retained; no Waiqi city hints used",
+        "collection_complete": false,
+        "details_failed": 0,
+        "scope": "Offline seed from archived verified official API jobs; historical observations, not a live refresh or exhaustive company inventory",
+        "contexts": [
+          {
+            "source_id": "jobs2web-jobs.cargill.com",
+            "provider": "jobs2web_public",
+            "status": "complete",
+            "pages": 2,
+            "server_total": 30,
+            "jobs_observed": 30,
+            "reason": "unique_ids_reconcile_server_total",
+            "collection_complete": true,
+            "incomplete_bodies": 30,
+            "scope": "Mainland China public listing; job bodies and recruitment direction unverified"
+          }
+        ]
+      },
+      "search_mode": "internship",
+      "source_config_fingerprint": "f19ca16eeb442dc6939cb02af3f00e654f2c8e39cb5a6e9d640972fd617404e5",
+      "formal_jobs_observed": 0,
+      "target_jobs_observed": 0,
+      "unknown_location_jobs": 0,
+      "uncertain_type_or_status_jobs": 30,
+      "city_coverage_complete": false,
+      "last_refresh_at": "2026-09-21T02:08:25.608Z",
+      "last_refresh_status": "partial",
+      "last_refresh_reason": "Only archived official jobs observed during Waiqi source verification; existing cities retained; no Waiqi city hints used",
+      "result_file": "../campus-job-fit/artifacts/waiqi-expansion-followup/city-seed/internship/waiqi-public-364a67bb1b93.json",
+      "city_evidence": [],
+      "retained_previous_cities": [],
+      "city_freshness": "unknown",
+      "city_evidence_total": 0,
+      "city_evidence_scope": "up_to_two_examples_per_city; complete_observations_in_result_file",
+      "seed_origin": "waiqi_official_api_archive",
+      "seed_observation_files": [
+        "D:\\Feishu Project\\job-search-skill-pack\\campus-job-fit\\artifacts\\waiqi-expansion-followup\\jobs2web\\jobs.cargill.com\\result.json"
       ]
     }
   ],

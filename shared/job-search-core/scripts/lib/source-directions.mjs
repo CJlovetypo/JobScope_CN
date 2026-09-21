@@ -23,7 +23,7 @@ export function publicSiteConfig(html,provider) {
  return null;
 }
 function strings(v) { return typeof v==='string'?[v]:Array.isArray(v)?v.flatMap(strings):v&&typeof v==='object'?Object.values(v).flatMap(strings):[]; }
-const broadProviders=new Set(['51job_coapi','51job_xyz','zhaopin_grace','workday','smartrecruiters','icims_jibe','oracle_recruiting','nowcoder_public','greenhouse','microsoft_eightfold','sap_rss','amazon_jobs','xinrenxinshi','yotta','tongcheng','wenhua_public']);
+const broadProviders=new Set(['ajinga_public','jobs2web_public','51job_coapi','51job_xyz','zhaopin_grace','workday','smartrecruiters','icims_jibe','oracle_recruiting','nowcoder_public','greenhouse','microsoft_eightfold','sap_rss','amazon_jobs','xinrenxinshi','yotta','tongcheng','wenhua_public']);
 export function sourceDirectionPlan(source,mode=SEARCH_MODE.id) {
  if(mode==='campus')return {strategy:'verified_campus',scope:'verified_original'};
  if(['tencent','alibaba','baidu','jd','bilibili','kuaishou','xiaohongshu'].includes(source.provider)||mode==='internship'&&source.provider==='pdd')return {strategy:'verified_employer_direction_contract',scope:'per_job_type_required'};

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-20T16:23:54.427Z",
+  "updated_at": "2026-09-21T02:10:45.014Z",
   "companies": [
     {
       "company_id": "company-f93e5a384c54",
@@ -107679,11 +107679,35 @@
     {
       "company_id": "company-c7703c0c43b4",
       "display_name": "威富（中国招聘门户）",
-      "ownership_tag": "待核实",
-      "status": "unknown",
-      "reason": "新增招聘主体的控制关系尚未核查",
-      "evidence": [],
-      "checked_at": null
+      "ownership_tag": "外企",
+      "status": "verified",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "evidence": [
+        {
+          "url": "https://waiqi.com/company/detail?id=23867",
+          "title": "Waiqi 公司页：威富服饰（中国）有限公司",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "checked_at": "2026-09-21"
+        }
+      ],
+      "checked_at": "2026-09-21",
+      "classification_basis": "waiqi_explicit_foreign_company_type",
+      "classification_authority": "user_designated_waiqi_directory",
+      "waiqi_company_ids": [
+        23867
+      ],
+      "waiqi_match_methods": [
+        "reviewed_source_provenance"
+      ],
+      "prior_classification": {
+        "company_id": "company-c7703c0c43b4",
+        "display_name": "威富（中国招聘门户）",
+        "ownership_tag": "待核实",
+        "status": "unknown",
+        "reason": "新增招聘主体的控制关系尚未核查",
+        "evidence": [],
+        "checked_at": null
+      }
     },
     {
       "company_id": "company-2d0066f5320a",
@@ -123066,6 +123090,435 @@
       "prior_classification": {
         "company_id": "waiqi-company-41283",
         "display_name": "BISSELL 必胜益康",
+        "ownership_tag": "待核实",
+        "status": "unknown",
+        "reason": "新增招聘主体的控制关系尚未核查",
+        "evidence": [],
+        "checked_at": null
+      }
+    },
+    {
+      "company_id": "waiqi-public-6321096788b7",
+      "display_name": "ASSA ABLOY 亚萨合莱",
+      "ownership_tag": "外企",
+      "status": "verified",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "evidence": [
+        {
+          "url": "https://waiqi.com/company/detail?id=23774",
+          "title": "Waiqi 公司页：亚萨合莱（中国）投资有限公司",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "checked_at": "2026-09-21"
+        }
+      ],
+      "checked_at": "2026-09-21",
+      "classification_basis": "waiqi_explicit_foreign_company_type",
+      "classification_authority": "user_designated_waiqi_directory",
+      "waiqi_company_ids": [
+        23774
+      ],
+      "waiqi_match_methods": [
+        "reviewed_source_provenance"
+      ],
+      "prior_classification": {
+        "company_id": "waiqi-public-6321096788b7",
+        "display_name": "ASSA ABLOY 亚萨合莱",
+        "ownership_tag": "待核实",
+        "status": "unknown",
+        "reason": "新增招聘主体的控制关系尚未核查",
+        "evidence": [],
+        "checked_at": null
+      }
+    },
+    {
+      "company_id": "waiqi-public-28444d6526c4",
+      "display_name": "ZF 采埃孚",
+      "ownership_tag": "外企",
+      "status": "verified",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "evidence": [
+        {
+          "url": "https://waiqi.com/company/detail?id=1465",
+          "title": "Waiqi 公司页：采埃孚（中国）投资有限公司",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "checked_at": "2026-09-21"
+        }
+      ],
+      "checked_at": "2026-09-21",
+      "classification_basis": "waiqi_explicit_foreign_company_type",
+      "classification_authority": "user_designated_waiqi_directory",
+      "waiqi_company_ids": [
+        1465
+      ],
+      "waiqi_match_methods": [
+        "reviewed_source_provenance"
+      ],
+      "prior_classification": {
+        "company_id": "waiqi-public-28444d6526c4",
+        "display_name": "ZF 采埃孚",
+        "ownership_tag": "待核实",
+        "status": "unknown",
+        "reason": "新增招聘主体的控制关系尚未核查",
+        "evidence": [],
+        "checked_at": null
+      }
+    },
+    {
+      "company_id": "waiqi-public-f56219c5e0e6",
+      "display_name": "PCCW 电讯盈科",
+      "ownership_tag": "外企",
+      "status": "verified",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "evidence": [
+        {
+          "url": "https://waiqi.com/company/detail?id=40390",
+          "title": "Waiqi 公司页：PCCW Solutions Limited",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "checked_at": "2026-09-21"
+        }
+      ],
+      "checked_at": "2026-09-21",
+      "classification_basis": "waiqi_explicit_foreign_company_type",
+      "classification_authority": "user_designated_waiqi_directory",
+      "waiqi_company_ids": [
+        40390
+      ],
+      "waiqi_match_methods": [
+        "reviewed_source_provenance"
+      ],
+      "prior_classification": {
+        "company_id": "waiqi-public-f56219c5e0e6",
+        "display_name": "PCCW 电讯盈科",
+        "ownership_tag": "待核实",
+        "status": "unknown",
+        "reason": "新增招聘主体的控制关系尚未核查",
+        "evidence": [],
+        "checked_at": null
+      }
+    },
+    {
+      "company_id": "waiqi-public-a2f94f00dfc6",
+      "display_name": "香港赛马会",
+      "ownership_tag": "外企",
+      "status": "verified",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "evidence": [
+        {
+          "url": "https://waiqi.com/company/detail?id=39263",
+          "title": "Waiqi 公司页：香港赛马会",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "checked_at": "2026-09-21"
+        }
+      ],
+      "checked_at": "2026-09-21",
+      "classification_basis": "waiqi_explicit_foreign_company_type",
+      "classification_authority": "user_designated_waiqi_directory",
+      "waiqi_company_ids": [
+        39263
+      ],
+      "waiqi_match_methods": [
+        "reviewed_source_provenance"
+      ],
+      "prior_classification": {
+        "company_id": "waiqi-public-a2f94f00dfc6",
+        "display_name": "香港赛马会",
+        "ownership_tag": "待核实",
+        "status": "unknown",
+        "reason": "新增招聘主体的控制关系尚未核查",
+        "evidence": [],
+        "checked_at": null
+      }
+    },
+    {
+      "company_id": "waiqi-public-7c325aeb4c02",
+      "display_name": "BioNTech 拜恩泰科",
+      "ownership_tag": "外企",
+      "status": "verified",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "evidence": [
+        {
+          "url": "https://waiqi.com/company/detail?id=39277",
+          "title": "Waiqi 公司页：拜恩泰科（中国）有限公司",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "checked_at": "2026-09-21"
+        }
+      ],
+      "checked_at": "2026-09-21",
+      "classification_basis": "waiqi_explicit_foreign_company_type",
+      "classification_authority": "user_designated_waiqi_directory",
+      "waiqi_company_ids": [
+        39277
+      ],
+      "waiqi_match_methods": [
+        "reviewed_source_provenance"
+      ],
+      "prior_classification": {
+        "company_id": "waiqi-public-7c325aeb4c02",
+        "display_name": "BioNTech 拜恩泰科",
+        "ownership_tag": "待核实",
+        "status": "unknown",
+        "reason": "新增招聘主体的控制关系尚未核查",
+        "evidence": [],
+        "checked_at": null
+      }
+    },
+    {
+      "company_id": "waiqi-public-7c2299e64738",
+      "display_name": "DSV 得斯威",
+      "ownership_tag": "外企",
+      "status": "verified",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "evidence": [
+        {
+          "url": "https://waiqi.com/company/detail?id=39147",
+          "title": "Waiqi 公司页：上海得斯威国际货运有限公司宁波分公司",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "checked_at": "2026-09-21"
+        }
+      ],
+      "checked_at": "2026-09-21",
+      "classification_basis": "waiqi_explicit_foreign_company_type",
+      "classification_authority": "user_designated_waiqi_directory",
+      "waiqi_company_ids": [
+        39147
+      ],
+      "waiqi_match_methods": [
+        "reviewed_source_provenance"
+      ],
+      "prior_classification": {
+        "company_id": "waiqi-public-7c2299e64738",
+        "display_name": "DSV 得斯威",
+        "ownership_tag": "待核实",
+        "status": "unknown",
+        "reason": "新增招聘主体的控制关系尚未核查",
+        "evidence": [],
+        "checked_at": null
+      }
+    },
+    {
+      "company_id": "waiqi-public-536d70a745b8",
+      "display_name": "Boehringer Ingelheim 勃林格殷格翰",
+      "ownership_tag": "外企",
+      "status": "verified",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "evidence": [
+        {
+          "url": "https://waiqi.com/company/detail?id=16553",
+          "title": "Waiqi 公司页：勃林格殷格翰（中国）投资有限公司",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "checked_at": "2026-09-21"
+        }
+      ],
+      "checked_at": "2026-09-21",
+      "classification_basis": "waiqi_explicit_foreign_company_type",
+      "classification_authority": "user_designated_waiqi_directory",
+      "waiqi_company_ids": [
+        16553
+      ],
+      "waiqi_match_methods": [
+        "reviewed_source_provenance"
+      ],
+      "prior_classification": {
+        "company_id": "waiqi-public-536d70a745b8",
+        "display_name": "Boehringer Ingelheim 勃林格殷格翰",
+        "ownership_tag": "待核实",
+        "status": "unknown",
+        "reason": "新增招聘主体的控制关系尚未核查",
+        "evidence": [],
+        "checked_at": null
+      }
+    },
+    {
+      "company_id": "waiqi-ajinga-10821",
+      "display_name": "Charlotte Tilbury 夏洛特蒂铂丽",
+      "ownership_tag": "外企",
+      "status": "verified",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "evidence": [
+        {
+          "url": "https://waiqi.com/company/detail?id=23776",
+          "title": "Waiqi 公司页：夏洛特蒂铂丽（上海）化妆品有限公司",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "checked_at": "2026-09-21"
+        }
+      ],
+      "checked_at": "2026-09-21",
+      "classification_basis": "waiqi_explicit_foreign_company_type",
+      "classification_authority": "user_designated_waiqi_directory",
+      "waiqi_company_ids": [
+        23776
+      ],
+      "waiqi_match_methods": [
+        "reviewed_source_provenance"
+      ],
+      "prior_classification": {
+        "company_id": "waiqi-ajinga-10821",
+        "display_name": "Charlotte Tilbury 夏洛特蒂铂丽",
+        "ownership_tag": "待核实",
+        "status": "unknown",
+        "reason": "新增招聘主体的控制关系尚未核查",
+        "evidence": [],
+        "checked_at": null
+      }
+    },
+    {
+      "company_id": "waiqi-ajinga-8217",
+      "display_name": "BD 碧迪",
+      "ownership_tag": "外企",
+      "status": "verified",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "evidence": [
+        {
+          "url": "https://waiqi.com/company/detail?id=16444",
+          "title": "Waiqi 公司页：碧迪医疗器械（上海）有限公司",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "checked_at": "2026-09-21"
+        }
+      ],
+      "checked_at": "2026-09-21",
+      "classification_basis": "waiqi_explicit_foreign_company_type",
+      "classification_authority": "user_designated_waiqi_directory",
+      "waiqi_company_ids": [
+        16444
+      ],
+      "waiqi_match_methods": [
+        "reviewed_source_provenance"
+      ],
+      "prior_classification": {
+        "company_id": "waiqi-ajinga-8217",
+        "display_name": "BD 碧迪",
+        "ownership_tag": "待核实",
+        "status": "unknown",
+        "reason": "新增招聘主体的控制关系尚未核查",
+        "evidence": [],
+        "checked_at": null
+      }
+    },
+    {
+      "company_id": "waiqi-ajinga-7261",
+      "display_name": "BVLGARI 宝格丽",
+      "ownership_tag": "外企",
+      "status": "verified",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "evidence": [
+        {
+          "url": "https://waiqi.com/company/detail?id=17879",
+          "title": "Waiqi 公司页：宝格丽商业（上海）有限公司",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "checked_at": "2026-09-21"
+        }
+      ],
+      "checked_at": "2026-09-21",
+      "classification_basis": "waiqi_explicit_foreign_company_type",
+      "classification_authority": "user_designated_waiqi_directory",
+      "waiqi_company_ids": [
+        17879
+      ],
+      "waiqi_match_methods": [
+        "reviewed_source_provenance"
+      ],
+      "prior_classification": {
+        "company_id": "waiqi-ajinga-7261",
+        "display_name": "BVLGARI 宝格丽",
+        "ownership_tag": "待核实",
+        "status": "unknown",
+        "reason": "新增招聘主体的控制关系尚未核查",
+        "evidence": [],
+        "checked_at": null
+      }
+    },
+    {
+      "company_id": "waiqi-ajinga-7936",
+      "display_name": "MAHLE 马勒",
+      "ownership_tag": "外企",
+      "status": "verified",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "evidence": [
+        {
+          "url": "https://waiqi.com/company/detail?id=4110",
+          "title": "Waiqi 公司页：马勒投资（中国）有限公司",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "checked_at": "2026-09-21"
+        }
+      ],
+      "checked_at": "2026-09-21",
+      "classification_basis": "waiqi_explicit_foreign_company_type",
+      "classification_authority": "user_designated_waiqi_directory",
+      "waiqi_company_ids": [
+        4110
+      ],
+      "waiqi_match_methods": [
+        "reviewed_source_provenance"
+      ],
+      "prior_classification": {
+        "company_id": "waiqi-ajinga-7936",
+        "display_name": "MAHLE 马勒",
+        "ownership_tag": "待核实",
+        "status": "unknown",
+        "reason": "新增招聘主体的控制关系尚未核查",
+        "evidence": [],
+        "checked_at": null
+      }
+    },
+    {
+      "company_id": "waiqi-public-b2462bf756be",
+      "display_name": "HSBC 汇丰集团",
+      "ownership_tag": "外企",
+      "status": "verified",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "evidence": [
+        {
+          "url": "https://waiqi.com/company/detail?id=25724",
+          "title": "Waiqi 公司页：汇丰环球客户服务（广东）有限公司",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "checked_at": "2026-09-21"
+        }
+      ],
+      "checked_at": "2026-09-21",
+      "classification_basis": "waiqi_explicit_foreign_company_type",
+      "classification_authority": "user_designated_waiqi_directory",
+      "waiqi_company_ids": [
+        25724
+      ],
+      "waiqi_match_methods": [
+        "reviewed_source_provenance"
+      ],
+      "prior_classification": {
+        "company_id": "waiqi-public-b2462bf756be",
+        "display_name": "HSBC 汇丰集团",
+        "ownership_tag": "待核实",
+        "status": "unknown",
+        "reason": "新增招聘主体的控制关系尚未核查",
+        "evidence": [],
+        "checked_at": null
+      }
+    },
+    {
+      "company_id": "waiqi-public-364a67bb1b93",
+      "display_name": "Cargill 嘉吉",
+      "ownership_tag": "外企",
+      "status": "verified",
+      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "evidence": [
+        {
+          "url": "https://waiqi.com/company/detail?id=1695",
+          "title": "Waiqi 公司页：嘉吉投资（中国）有限公司",
+          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
+          "checked_at": "2026-09-21"
+        }
+      ],
+      "checked_at": "2026-09-21",
+      "classification_basis": "waiqi_explicit_foreign_company_type",
+      "classification_authority": "user_designated_waiqi_directory",
+      "waiqi_company_ids": [
+        1695
+      ],
+      "waiqi_match_methods": [
+        "reviewed_source_provenance"
+      ],
+      "prior_classification": {
+        "company_id": "waiqi-public-364a67bb1b93",
+        "display_name": "Cargill 嘉吉",
         "ownership_tag": "待核实",
         "status": "unknown",
         "reason": "新增招聘主体的控制关系尚未核查",

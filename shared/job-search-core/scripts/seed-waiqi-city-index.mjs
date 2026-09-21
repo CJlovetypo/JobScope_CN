@@ -45,6 +45,10 @@ export async function main(args = process.argv.slice(2)) {
         if (!files.length) files.push(...[record.result_file, record.capability_result_file].filter(Boolean));
       }
     }
+    if(source.verification_status==='verified_public_list_only'&&source.source_verification?.proof_directory){
+      const listResult=path.join(source.source_verification.proof_directory,'result.json');
+      if(await missingRead(listResult))files.push(listResult);
+    }
     if (source.api_verification?.evidence_file) files.push(path.join(path.dirname(source.api_verification.evidence_file), 'collection.json'));
     files = [...new Set(files)];
     if (source.source_origin === 'waiqi-zero-position-empty-website-search-20260920' && Array.isArray(source.verified_samples)) files = [];

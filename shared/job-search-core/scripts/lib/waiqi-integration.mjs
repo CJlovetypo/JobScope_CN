@@ -1,10 +1,17 @@
 const canonical = value => Array.isArray(value) ? value.map(canonical) : value && typeof value === 'object' ? Object.fromEntries(Object.keys(value).sort().map(key => [key, canonical(value[key])])) : value;
+import {PUBLIC_LIST_STATUS,publicListCandidateProblem} from './public-list-source-policy.mjs';
 const present = value => typeof value === 'string' && value.trim().length > 0;
 const http = value => { try { return ['http:', 'https:'].includes(new URL(value).protocol); } catch { return false; } };
 
 export function sourceKey(source) {
   const a = source.api_config || {};
   switch (source.provider) {
+    case 'ajinga_public':
+      if(!/^\d+$/.test(String(a.company_id||'')))throw Error('missing AJINGA company ID');
+      return JSON.stringify(['ajinga_public',String(a.company_id)]);
+    case 'jobs2web_public':
+      if(!http(a.origin))throw Error('missing Jobs2Web origin');
+      return JSON.stringify(['jobs2web_public',new URL(a.origin).origin.toLowerCase(),'CN']);
     case 'workday':
       if (!http(a.origin) || !present(a.tenant) || !present(a.site)) throw Error('incomplete Workday tenant configuration');
       // Hostnames are insensitive to case; tenant/site are URL path components.
@@ -39,16 +46,18 @@ export function sourceKey(source) {
 
 function candidateProblem(c, tags) {
   const zeroJob = c.verification_status === ZERO_JOB_VERIFICATION_STATUS;
+  const listOnly=c.verification_status===PUBLIC_LIST_STATUS;
   const samples = c.source_verification?.complete_jd_samples ?? c.api_verification?.complete_mainland_jds;
   const identity = c.source_verification?.identity_basis || c.identity_verification?.evidence_file;
   const evidence = c.source_verification?.proof_directory || c.api_verification?.evidence_file;
   const verifiedAt = c.verified_at || c.api_verified_at || c.source_verification?.checked_at;
-  if (zeroJob) {
+  if(listOnly){const problem=publicListCandidateProblem(c);if(problem)return problem;}
+  else if (zeroJob) {
     const problem = zeroJobCandidateProblem(c);
     if (problem) return problem;
   } else if (!Number.isInteger(samples) || samples < 1 || !present(identity) || !present(evidence)) return 'missing complete JD / identity evidence / proof location';
   if (!present(verifiedAt) || !Number.isFinite(Date.parse(verifiedAt))) return 'missing valid API verification date';
-  if (c.admitted === false || c.identity_verification?.identity_verified === false || c.verification_status && !['verified_api_full_jd', ZERO_JOB_VERIFICATION_STATUS].includes(c.verification_status)) return 'source explicitly not verified';
+  if (c.admitted === false || c.identity_verification?.identity_verified === false || c.verification_status && !['verified_api_full_jd', ZERO_JOB_VERIFICATION_STATUS,PUBLIC_LIST_STATUS].includes(c.verification_status)) return 'source explicitly not verified';
   if (!present(c.company_id) || !present(c.display_name) || !http(c.primary_entry_url)) return 'missing company ID, display name or HTTP entry';
   if (!Array.isArray(c.industry_tags) || !c.industry_tags.length || c.industry_tags.some(t => !tags.has(t))) return 'missing valid industry routing';
   if (!Array.isArray(c.validated_api_request_examples) || !c.validated_api_request_examples.some(q => http(q.url))) return 'missing verified API request configuration';

@@ -3,6 +3,8 @@ import path from 'node:path';
 import {createHash} from 'node:crypto';
 import {collectCommon} from './providers-common.mjs';import {collectCustom} from './providers-custom.mjs';
 import {collectInternational} from './providers-international.mjs';import {collectMidea} from './providers-appliances.mjs';import {collectOemPublic} from './providers-oem.mjs';
+import {collectAjinga} from './provider-ajinga.mjs';
+import {collectJobs2web} from './provider-jobs2web.mjs';
 import {collectIcimsJibe} from './providers-icims-jibe.mjs';
 import {collectHardwareDirect} from './provider-hardware-direct.mjs';import {collectHuawei} from './provider-huawei.mjs';import {collectLenovo} from './provider-lenovo.mjs';import {collectCvte} from './provider-cvte.mjs';import {collectUgreen} from './provider-ugreen.mjs';
 import {collectRecovered} from './providers-recovered.mjs';import {collectOracleNowcoder} from './providers-oracle-nowcoder.mjs';import {collectXYZ} from './providers-51job-xyz.mjs';
@@ -10,6 +12,7 @@ import {collectLightbolt} from './provider-lightbolt.mjs';
 import {collectSf} from './providers-sf.mjs';
 import {collectHcmCloud} from './provider-hcmcloud.mjs';
 import {collectShlab} from './provider-shlab.mjs';
+import {collectYokaverse} from './provider-yokaverse.mjs';
 import {collectSelfHosted} from './providers-selfhosted.mjs';
 import {collectRound3} from './providers-round3.mjs';
 import {collectRound4} from './providers-round4.mjs';
@@ -20,8 +23,8 @@ import {normalizeJobLocations,jobCityStatus} from './locations.mjs';
 import {searchPlanFingerprint} from './targeted-search.mjs';
 import {maintainSource} from './source-repair.mjs';
 function needsTargetBody(job,options){const loc=normalizeJobLocations(job);return job.formal_status===searchMode(options.targetMode||SEARCH_MODE.id).status&&job.open_status==='open'&&!job.body_complete&&job.detail_skipped_reason!=='explicit_non_target_city'&&jobCityStatus({cities:loc.cities,location_unknown:loc.unknown,location_special:loc.special},options.cities||[])!=='excluded';}
-const hardware={workday:collectInternational,smartrecruiters:collectInternational,icims_jibe:collectIcimsJibe,midea:collectMidea,huawei:collectHuawei,lenovo:collectLenovo,cvte:collectCvte,ugreen:collectUgreen,gree:collectHardwareDirect,dahua:collectHardwareDirect,hikvision:collectHardwareDirect,tplink:collectHardwareDirect,byd_public:collectOemPublic,lixiang_public:collectOemPublic,sinotruk_public:collectOemPublic,aion_public:collectOemPublic};
-async function collectOriginalEndpoint(source,options){const recovered=await collectRecoveredDirection(source,options);if(recovered)return recovered;const result=source.provider==='shlab_public'?await collectShlab(source,options):source.provider==='hcmcloud_public'?await collectHcmCloud(source,options):source.provider==='sf_campus'?await collectSf(source,options):source.provider==='beisen_lightbolt'?await collectLightbolt(source,options):hardware[source.provider]?await hardware[source.provider](source,options):await collectRound4(source,options)||await collectRound3(source,options)||await collectSelfHosted(source,options)||await collectRecovered(source,options)||await collectOracleNowcoder(source,options)||await collectXYZ(source,options)||await collectCommon(source,options)||await collectCustom(source,options);if(!result)throw Error('未配置该来源采集器：'+source.provider);return result;}
+const hardware={ajinga_public:collectAjinga,jobs2web_public:collectJobs2web,workday:collectInternational,smartrecruiters:collectInternational,icims_jibe:collectIcimsJibe,midea:collectMidea,huawei:collectHuawei,lenovo:collectLenovo,cvte:collectCvte,ugreen:collectUgreen,gree:collectHardwareDirect,dahua:collectHardwareDirect,hikvision:collectHardwareDirect,tplink:collectHardwareDirect,byd_public:collectOemPublic,lixiang_public:collectOemPublic,sinotruk_public:collectOemPublic,aion_public:collectOemPublic};
+async function collectOriginalEndpoint(source,options){const recovered=await collectRecoveredDirection(source,options);if(recovered)return recovered;const result=source.provider==='shlab_public'?await collectShlab(source,options):source.provider==='hcmcloud_public'?await collectHcmCloud(source,options):source.provider==='sf_campus'?await collectSf(source,options):source.provider==='beisen_lightbolt'?await collectLightbolt(source,options):source.provider==='yokaverse'?await collectYokaverse(source,options):hardware[source.provider]?await hardware[source.provider](source,options):await collectRound4(source,options)||await collectRound3(source,options)||await collectSelfHosted(source,options)||await collectRecovered(source,options)||await collectOracleNowcoder(source,options)||await collectXYZ(source,options)||await collectCommon(source,options)||await collectCustom(source,options);if(!result)throw Error('未配置该来源采集器：'+source.provider);return result;}
 async function collectRoutedEndpoint(source,options={}) {
  const mode=options.targetMode||SEARCH_MODE.id;
  if(mode==='campus')return collectOriginalEndpoint(source,options);

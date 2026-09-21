@@ -17,7 +17,26 @@ node shared/job-search-core/scripts/tag-waiqi-ownership.mjs --apply
 
 旧库供应商结构化性质字段的优先级高于 Waiqi。先运行 `tag-supplier-ownership.mjs --apply` 刷新供应商结论；后续重复运行 Waiqi 打标时，已有 `supplier_company_nature_classification` 结论会被跳过，不会被 Waiqi 覆盖。
 
-正式 `assets/sources.json` 接收两类彼此独立的核验结果：一类是通过官方匿名 API 取得完整 JD；另一类是当前确实零岗位、但官方匿名列表 API 已返回可解析的空数组并完整收敛的来源。后者必须另有官方主体证据、JSON 列表结构、实际列表请求、响应 SHA256 和零岗位状态，不能用 Waiqi 的 `positionCount`、HTML 页面或门户能打开来替代。原站实际存在公司错译和招聘链接错配；原站名称留在 provenance，不自动成为官方主体别名。没有外部招聘链接的公司仍保留在候选库。
+正式 `assets/sources.json` 区分完整 JD、零岗位 API、公开列表三类核验状态。零岗位 API 必须另有官方主体证据、JSON 列表结构、实际列表请求、响应 SHA256 和零岗位状态，不能用 Waiqi 的 `positionCount`、HTML 页面或门户能打开来替代。公开列表使用 `verified_public_list_only`，不能冒充完整 JD；列表适配器的 full 模式仍报告正文不完整。原站实际存在公司错译和招聘链接错配；原站名称留在 provenance，不自动成为官方主体别名。没有外部招聘链接的公司仍保留在候选库。
+
+## 公司接口资产与扩源
+
+`assets/waiqi-interface-catalog.json` 保存招聘入口、公司引用 ID、接口参数、公司根租户、响应摘要、核验范围及阻塞原因，不保存岗位正文或原始响应。查询时同时展示已接入和未接入接口，避免只看正式库而丢失线索：
+
+```sh
+node shared/job-search-core/scripts/lookup-waiqi-interfaces.mjs --query=汇丰
+node shared/job-search-core/scripts/lookup-waiqi-interfaces.mjs --query=23774
+```
+
+Waiqi 引用关系不等于雇主归属。AJINGA 先读取 `/django_rest/company/info/{id}/`，再枚举 `/django_rest/job-list/`，逐行核对根公司 ID；子频道 ID 可与根公司不同。赫力昂指向艾伯维的错误引用已单独标记，不按该引用合并。地点不明确时保留接口但不宣称中国大陆范围完整。
+
+Jobs2Web 支持传统分页及页面实际声明的 `/tile-search-results/` 加载更多请求，始终保留 CN 筛选并核对唯一 ID 与总量。康宁的 CN 筛选中仍返回主地点为台湾、另含其他地点的记录，不能在不读取详情的前提下强行认定其大陆岗位完整。
+
+Workday 的 `wdN.myworkdaysite.com/recruiting/{tenant}/{site}` 使用该入口实际主机调用 CXS 列表接口。23 个候选入口已通过列表结构探测，但这不代表全部中国岗位已遍历或雇主归属已审核。与现有租户相同的入口保留为替代路径线索，不重复统计公司。
+
+Oracle 多站点可能共用岗位库存。目录中的 `inventory_equivalence` 来自完整列表 ID 集合比较，仅代表所标注时间的库存一致，未来更新必须重新核对。图谱、仟寻的入口、二维码、404 等结果与 API 能力分开保存；入口可打开不代表公司列表可调用。
+
+维护时运行 `build-waiqi-interface-catalog.mjs` 将本地复核结果导出为此资产。网页、响应正文、调查记录和过程报告继续留在忽略提交的 `campus-job-fit/artifacts/`。
 
 ## 抓取及查询
 
@@ -56,6 +75,10 @@ Oracle Recruiting 链接经常不带中国区 `locationId`。这类来源由运�
 - `traversal-audit.json`：目录页、公司详情和职位列表之间的 ID 闭环、字段结构及异常清单。只有 `verdict=complete` 才能称公司目录与职位列表已经完整遍历；历史职位详情只作观察项，不参与完整性判定。
 
 ## 官方来源准入
+
+公司及接口维护允许独立的 `verified_public_list_only` 状态：当前已为 Jobs2Web 和 AJINGA 提供匿名公开列表采集器，并独立核对大陆地点。准入须核实招聘主体，并保存全部列表请求、响应哈希及分页收敛证据。该状态的完整 JD 样本数必须为 0，岗位招聘方向保持未知；普通完整采集会显示 `partial`，只有显式列表模式可以报告列表完成。不能把公开 HTML 列表描述成 JSON API，也不能借此绕过已有完整 JD 或零岗位 API 的验收规则。
+
+`assets/public-career-hosts.json` 保存已观察到的公共招聘站点模板；`enrich-waiqi-interface-candidates.mjs` 可对历史“已发现招聘入口但未识别 ATS”的队列继续跟进最多五个公司/招聘页面，支持断点复用，结果留在本地 artifacts。平台线索仍需接口及主体复核。
 
 国际 ATS 与国内 ATS 的人工归属、正文语义及行业复核记录保存在本地 artifacts，不随分发仓库提交。完整 API JD 的样本验证不等于全部岗位或全部招聘方向已取全；精确地点枚举配置也可能漏掉未来新增地点。
 

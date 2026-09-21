@@ -2,12 +2,30 @@ import { mkdir, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import {runtimeContext} from '../../runtime-context.mjs';
 import { createHash, randomUUID } from 'node:crypto';
+import nodeHttp from 'node:http';
+import nodeHttps from 'node:https';
 
 const skillRoot = runtimeContext().skillRoot;
 const userAgent = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36';
 const sensitiveHeader = /^(cookie|authorization|proxy-authorization|set-cookie)$/i;
 const dynamicHeader = /csrf|xsrf/i;
 function schemaKeys(value){const keys=[];function visit(v,p,depth){if(depth>4||keys.length>200||!v||typeof v!=='object')return;if(Array.isArray(v)){if(v.length)visit(v[0],p+'[]',depth+1);return;}for(const k of Object.keys(v).sort()){const key=p?p+'.'+k:k;keys.push(key);visit(v[k],key,depth+1);if(keys.length>200)break;}}visit(value,'',0);return keys;}
+
+function nativeFetch(url,{method,headers,body,signal}){
+  return new Promise((resolve,reject)=>{
+    const transport=new URL(url).protocol==='https:'?nodeHttps:nodeHttp;
+    const request=transport.request(url,{method,headers},response=>{
+      const chunks=[];response.on('data',chunk=>chunks.push(chunk));response.on('end',()=>{
+        const responseHeaders=new Headers();
+        for(const [key,value] of Object.entries(response.headers))for(const item of Array.isArray(value)?value:[value])if(item!==undefined)responseHeaders.append(key,String(item));
+        resolve(new Response(Buffer.concat(chunks),{status:response.statusCode,statusText:response.statusMessage,headers:responseHeaders}));
+      });response.on('error',reject);
+    });
+    const abort=()=>request.destroy(signal?.reason instanceof Error?signal.reason:new Error('Request aborted'));
+    if(signal){if(signal.aborted)return abort();signal.addEventListener('abort',abort,{once:true});request.once('close',()=>signal.removeEventListener('abort',abort));}
+    request.on('error',reject);if(body!==null&&body!==undefined)request.write(body);request.end();
+  });
+}
 
 function safeHeaders(headers) {
   return Object.fromEntries(Object.entries(headers).filter(([key]) => !sensitiveHeader.test(key))
@@ -121,6 +139,11 @@ export function createClient({ evidenceDir, timeoutMs = 20000, signal: externalS
           if (cookie) outgoing.Cookie = cookie;
           response = await fetch(current, { method: currentMethod, headers: outgoing,
             body: currentMethod === 'GET' ? undefined : currentBody, redirect: 'manual', signal });
+          if(response.status===403&&new URL(current).origin===target.origin){
+            await response.body?.cancel();
+            response=await nativeFetch(current,{method:currentMethod,headers:outgoing,body:currentMethod==='GET'?undefined:currentBody,signal});
+            record.transport_fallback='node_http_after_fetch_403';
+          }
           jar.receive(current, response.headers.getSetCookie?.() || []);
           if (![301, 302, 303, 307, 308].includes(response.status) || !response.headers.get('location')) break;
           const next = new URL(response.headers.get('location'), current);

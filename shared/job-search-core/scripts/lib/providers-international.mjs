@@ -48,7 +48,7 @@ export function workdayListPlaceholder(row,source,record,error) {
   const loc=[row.locationsText].filter(Boolean);
   return {job_id:String(row.externalPath),company_id:source.company_id,company_name:source.display_name,title:row.title||'',
     description:'',requirements:'',body_complete:false,locations_raw:loc,...cityFields({locations_raw:loc,title:row.title}),
-    official_url:source.api_config.origin+'/'+source.api_config.site+row.externalPath,job_url_kind:'official_detail',
+    official_url:source.api_config.origin+(source.api_config.public_path||'/'+source.api_config.site)+row.externalPath,job_url_kind:'official_detail',
     formal_status:'unknown',open_status:'unknown',raw_file:record.response_file,list_raw_file:record.response_file,
     raw_metadata:{observed_external_path:row.externalPath,observed_bullet_fields:row.bulletFields,detail_fetch_error:error}};
 }
