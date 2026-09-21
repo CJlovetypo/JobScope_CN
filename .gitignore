@@ -8,6 +8,12 @@
 !/social-job-fit/
 !/job-radar/
 !/shared/
+!/datasets/
+!/recruitment-link-repair/
+/datasets/recruitment-links/collections/
+/datasets/recruitment-links/snapshots/
+/datasets/recruitment-links/index/
+/datasets/recruitment-links/manifests/
 /shared/*
 !/shared/job-search-core/
 

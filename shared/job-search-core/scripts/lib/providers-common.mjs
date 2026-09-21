@@ -269,6 +269,9 @@ async function collectContext(source, context, options, client) {
         const u = new URL(url); u.searchParams.set('limit', String(size)); u.searchParams.set('offset', String(offset));
         url = u.href; body = null; method = 'GET';
       } else body = new URLSearchParams({ ...body, pageSize: String(size), currentPage: String(page + 1) }).toString();
+      if (provider === 'hotjob' && !Object.keys(headers).some(key => key.toLowerCase() === 'content-type')) {
+        headers['Content-Type'] = 'application/x-www-form-urlencoded; charset=UTF-8';
+      }
       const response = await client.request({ url, method, headers, body }, { purpose: 'job_list' });
       const payload = provider === 'moka' ? await mokaPayload(response, iv) : isJsonResponse(response);
       let data, reported, explicitEnd = false;

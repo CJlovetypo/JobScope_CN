@@ -77,3 +77,30 @@ test('source keys collapse job-detail URLs to their public recruitment tenant', 
   assert.equal(sourceKey({provider: 'hotjob', primary_entry_url: 'https://jobs.example/SUabc123/pb/posDetail.html?postId=one'}), sourceKey({provider: 'hotjob', primary_entry_url: 'https://jobs.example/SUabc123/pb/posDetail.html?postId=two'}));
   assert.equal(sourceKey({provider: 'moka', primary_entry_url: 'https://jobs.example/social-recruitment/acme/42#/job/one'}), sourceKey({provider: 'moka', primary_entry_url: 'https://jobs.example/social-recruitment/acme/42#/job/two'}));
 });
+
+const reviewed=(token,id=42,name='Reviewed employer')=>candidate(token,{
+  display_name:name,merge_group_key:'interface-'+token,
+  discovery_provenance:{dataset:'waiqi-company-interface-deep-review',waiqi_company_id:id},
+  identity_verification:{identity_verified:true,official_name:name,evidence_file:'/proof/employer.json',basis:'Reviewed official recruitment employer'},
+});
+
+test('reviewed employer identity groups distinct interfaces and keeps every source contract',()=>{
+  const first=reviewed('site-one'),second=reviewed('site-two');
+  const result=plan({companies:[]},[first,second]);
+  assert.equal(result.registry.companies.length,1);
+  assert.equal(result.registry.companies[0].recruitment_sources.length,2);
+  assert.equal(result.added.filter(r=>r.new_company).length,1);
+  const again=plan(result.registry,[first,second,reviewed('site-three')]);
+  assert.equal(again.registry.companies.length,1);
+  assert.equal(again.registry.companies[0].recruitment_sources.length,3);
+  assert.equal(again.registry.companies[0].company_id,first.company_id);
+});
+
+test('supplier IDs and matching labels cannot merge different or unreviewed employers',()=>{
+  const a=reviewed('one'),differentName=reviewed('two',42,'Another employer'),differentId=reviewed('three',99);
+  const unreviewed=reviewed('four');delete unreviewed.identity_verification.identity_verified;
+  assert.equal(plan({companies:[]},[a,differentName,differentId,unreviewed]).registry.companies.length,4);
+  const b=reviewed('other');
+  const conflict=plan({companies:[a,b]},[reviewed('fresh')]);
+  assert.equal(conflict.added.length,0);assert.match(conflict.rejected[0].reason,/conflicting existing IDs/);
+});

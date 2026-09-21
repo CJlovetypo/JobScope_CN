@@ -3,6 +3,11 @@ import path from 'node:path';
 import {createHash} from 'node:crypto';
 import {collectCommon} from './providers-common.mjs';import {collectCustom} from './providers-custom.mjs';
 import {collectInternational} from './providers-international.mjs';import {collectMidea} from './providers-appliances.mjs';import {collectOemPublic} from './providers-oem.mjs';
+import {collectTupu360} from './provider-tupu360.mjs';
+import {collectMoseeker} from './provider-moseeker.mjs';
+import {collectPhenom} from './provider-phenom.mjs';
+import {collectEightfold} from './provider-eightfold.mjs';
+import {collectAvature} from './provider-avature.mjs';
 import {collectAjinga} from './provider-ajinga.mjs';
 import {collectJobs2web} from './provider-jobs2web.mjs';
 import {collectIcimsJibe} from './providers-icims-jibe.mjs';
@@ -23,8 +28,16 @@ import {normalizeJobLocations,jobCityStatus} from './locations.mjs';
 import {searchPlanFingerprint} from './targeted-search.mjs';
 import {maintainSource} from './source-repair.mjs';
 function needsTargetBody(job,options){const loc=normalizeJobLocations(job);return job.formal_status===searchMode(options.targetMode||SEARCH_MODE.id).status&&job.open_status==='open'&&!job.body_complete&&job.detail_skipped_reason!=='explicit_non_target_city'&&jobCityStatus({cities:loc.cities,location_unknown:loc.unknown,location_special:loc.special},options.cities||[])!=='excluded';}
-const hardware={ajinga_public:collectAjinga,jobs2web_public:collectJobs2web,workday:collectInternational,smartrecruiters:collectInternational,icims_jibe:collectIcimsJibe,midea:collectMidea,huawei:collectHuawei,lenovo:collectLenovo,cvte:collectCvte,ugreen:collectUgreen,gree:collectHardwareDirect,dahua:collectHardwareDirect,hikvision:collectHardwareDirect,tplink:collectHardwareDirect,byd_public:collectOemPublic,lixiang_public:collectOemPublic,sinotruk_public:collectOemPublic,aion_public:collectOemPublic};
-async function collectOriginalEndpoint(source,options){const recovered=await collectRecoveredDirection(source,options);if(recovered)return recovered;const result=source.provider==='shlab_public'?await collectShlab(source,options):source.provider==='hcmcloud_public'?await collectHcmCloud(source,options):source.provider==='sf_campus'?await collectSf(source,options):source.provider==='beisen_lightbolt'?await collectLightbolt(source,options):source.provider==='yokaverse'?await collectYokaverse(source,options):hardware[source.provider]?await hardware[source.provider](source,options):await collectRound4(source,options)||await collectRound3(source,options)||await collectSelfHosted(source,options)||await collectRecovered(source,options)||await collectOracleNowcoder(source,options)||await collectXYZ(source,options)||await collectCommon(source,options)||await collectCustom(source,options);if(!result)throw Error('未配置该来源采集器：'+source.provider);return result;}
+function enforceListOnlyCoverage(result,options){
+ if(options.mode!=='list'&&result.coverage?.capability==='public_list_only'&&(result.jobs||[]).some(j=>!j.body_complete)){
+  if(result.coverage.status==='complete')result.coverage.status='partial';
+  result.coverage.collection_complete=false;
+  result.coverage.reason=[result.coverage.reason,'job_details_not_collected'].filter(Boolean).join('; ');
+ }
+ return result;
+}
+const hardware={ajinga_public:collectAjinga,jobs2web_public:collectJobs2web,tupu360:collectTupu360,moseeker_public:collectMoseeker,phenom_public:collectPhenom,eightfold_public:collectEightfold,avature_public:collectAvature,workday:collectInternational,smartrecruiters:collectInternational,icims_jibe:collectIcimsJibe,midea:collectMidea,huawei:collectHuawei,lenovo:collectLenovo,cvte:collectCvte,ugreen:collectUgreen,gree:collectHardwareDirect,dahua:collectHardwareDirect,hikvision:collectHardwareDirect,tplink:collectHardwareDirect,byd_public:collectOemPublic,lixiang_public:collectOemPublic,sinotruk_public:collectOemPublic,aion_public:collectOemPublic};
+async function collectOriginalEndpoint(source,options){const recovered=await collectRecoveredDirection(source,options);if(recovered)return recovered;const result=source.provider==='shlab_public'?await collectShlab(source,options):source.provider==='hcmcloud_public'?await collectHcmCloud(source,options):source.provider==='sf_campus'?await collectSf(source,options):source.provider==='beisen_lightbolt'?await collectLightbolt(source,options):source.provider==='yokaverse'?await collectYokaverse(source,options):hardware[source.provider]?await hardware[source.provider](source,options):await collectRound4(source,options)||await collectRound3(source,options)||await collectSelfHosted(source,options)||await collectRecovered(source,options)||await collectOracleNowcoder(source,options)||await collectXYZ(source,options)||await collectCommon(source,options)||await collectCustom(source,options);if(!result)throw Error('未配置该来源采集器：'+source.provider);return enforceListOnlyCoverage(result,options);}
 async function collectRoutedEndpoint(source,options={}) {
  const mode=options.targetMode||SEARCH_MODE.id;
  if(mode==='campus')return collectOriginalEndpoint(source,options);
@@ -63,7 +76,7 @@ export function sourceCacheMatches(result,company,searchPlan=null){
 function jobNamespace(source){
  const entry=source.primary_entry_url?new URL(source.primary_entry_url):null;
  const cfg=source.api_config||{};
- const publicTenant=source.provider==='51job_coapi'?cfg.ctmid:source.provider==='51job_xyz'?cfg.ehire_ctm_id:source.provider==='zhaopin_grace'?cfg.org_number:source.provider==='greenhouse'?cfg.board_token:source.provider==='nowcoder_public'?cfg.company_id:source.provider==='oracle_recruiting'?[cfg.origin,cfg.site].join(':'):null;
+ const publicTenant=source.provider==='51job_coapi'?cfg.ctmid:source.provider==='51job_xyz'?cfg.ehire_ctm_id:source.provider==='zhaopin_grace'?cfg.org_number:source.provider==='greenhouse'?cfg.board_token:source.provider==='moseeker_public'?cfg.company_id:source.provider==='phenom_public'?cfg.origin:source.provider==='eightfold_public'?[cfg.origin,cfg.domain].join(':'):source.provider==='avature_public'?[cfg.origin,cfg.search_path].join(':'):source.provider==='nowcoder_public'?cfg.company_id:source.provider==='oracle_recruiting'?[cfg.origin,cfg.site].join(':'):null;
  if(publicTenant)return source.provider+':'+publicTenant;
  const list=source.validated_api_request_examples?.find(q=>/list|search/i.test(q.purpose||''));
  // Portal aliases can share a tenant; otherwise keep different hosts separate.

@@ -16,4 +16,8 @@
 
 更新共享库后，可运行 node shared/job-search-core/scripts/refresh-registry-metadata.mjs 刷新派生摘要；运行直接读取共享库，不依赖复制。node campus-job-fit/scripts/render-industry-index.mjs 更新可阅读的公司索引。
 
+Waiqi 深度核验来源按已审核的官方主体名称与 Waiqi 公司 ID 共同归并；必须同时具备主体核验结论、依据和证据文件。仅同名、同域名或同供应商 ID 不足以合并。一个主体的不同招聘站点仍保留独立接口配置及能力范围；多个现有主体同时命中时停止自动归并，人工核对。已完成的重复主体归并记录见 `assets/company-identity-consolidations.json`，历史快照保留原 ID。
+
+主体增删后运行 `node shared/job-search-core/scripts/sync-company-city-index.mjs --apply` 同步三个方向的索引成员；该操作不补造城市证据。完成派生摘要刷新后，运行 `node shared/job-search-core/scripts/render-source-coverage.mjs` 同时更新 README 行业计数与覆盖图，避免手工统计不一致。
+
 员工规模、关键词能力和修复边界分别见 [规模模型](company-size-model.md)、[定向检索](targeted-search.md)、[接口修复](source-repair.md)。资料有缺口时保留待核实。只保存公开事实和非敏感的接口配置，不将个人登录态或内部调研表作为公开依赖。

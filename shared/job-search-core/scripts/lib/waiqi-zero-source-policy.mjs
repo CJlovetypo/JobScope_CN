@@ -1,6 +1,8 @@
 const present = value => typeof value === 'string' && value.trim().length > 0;
 const sha256 = value => typeof value === 'string' && /^[a-f\d]{64}$/i.test(value);
 const http = value => { try { return ['http:', 'https:'].includes(new URL(value).protocol); } catch { return false; } };
+import {isIndividualJobRoute} from './career-link-scope.mjs';
+import {requestMatchesSource} from './public-list-source-policy.mjs';
 
 export const ZERO_JOB_VERIFICATION_STATUS = 'verified_api_zero_jobs';
 
@@ -10,6 +12,12 @@ const listPaths = {
   beisen: 'Data',
   feishu: 'data.job_post_list',
   hotjob: 'data.pageForm.pageData',
+  workday: 'jobPostings',
+  oracle_recruiting: 'items[].requisitionList',
+  smartrecruiters: 'content',
+  greenhouse: 'jobs',
+  ashby: 'jobs',
+  tupu360: 'result.positions',
 };
 
 function sensitiveRequestMaterial(request) {
@@ -96,10 +104,12 @@ export function zeroJobCandidateProblem(candidate) {
   if (!Array.isArray(capability.schema_keys) || !capability.schema_keys.length) return 'missing zero-job JSON schema signature';
   if (!Array.isArray(capability.request_evidence) || !capability.request_evidence.length) return 'missing zero-job request evidence';
   for (const request of capability.request_evidence) {
+    let requestUrl;try{requestUrl=new URL(request.url);}catch{return 'invalid anonymous zero-job request evidence';}
     if (sensitiveRequestMaterial(request) || request.purpose !== 'job_list' || request.anonymous_session_from_scratch !== true
       || request.response_is_json !== true || /text\/html/i.test(request.content_type || '')
       || !Number.isInteger(request.http_status) || request.http_status < 200 || request.http_status >= 300
       || !sha256(request.response_sha256) || !present(request.response_file)) return 'invalid anonymous zero-job request evidence';
+    if(isIndividualJobRoute(request.url)||!requestMatchesSource(candidate,requestUrl))return 'zero-job request scope mismatch';
   }
   const examples = candidate.validated_api_request_examples;
   if (!Array.isArray(examples) || !examples.some(request => /job_list/.test(request.purpose || '') && http(request.url) && !sensitiveRequestMaterial(request))) {

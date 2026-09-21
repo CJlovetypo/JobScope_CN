@@ -1,5 +1,6 @@
 const canonical = value => Array.isArray(value) ? value.map(canonical) : value && typeof value === 'object' ? Object.fromEntries(Object.keys(value).sort().map(key => [key, canonical(value[key])])) : value;
 import {PUBLIC_LIST_STATUS,publicListCandidateProblem} from './public-list-source-policy.mjs';
+import {API_LIST_CONTRACT_STATUS,apiListContractCandidateProblem} from './api-list-contract-source-policy.mjs';
 const present = value => typeof value === 'string' && value.trim().length > 0;
 const http = value => { try { return ['http:', 'https:'].includes(new URL(value).protocol); } catch { return false; } };
 
@@ -22,6 +23,24 @@ export function sourceKey(source) {
     case 'greenhouse':
       if (!present(a.board_token)) throw Error('missing Greenhouse board token');
       return 'greenhouse|' + a.board_token.toLowerCase();
+    case 'ashby':
+      if (!present(a.board_token)) throw Error('missing Ashby board token');
+      return 'ashby|' + a.board_token.toLowerCase();
+    case 'tupu360':
+      if (!http(a.origin)) throw Error('missing Tupu360 origin');
+      return JSON.stringify(['tupu360',new URL(a.origin).origin.toLowerCase()]);
+    case 'moseeker_public':
+      if(!/^\d+$/.test(String(a.company_id||'')))throw Error('missing MoSeeker company ID');
+      return JSON.stringify(['moseeker_public',String(a.company_id)]);
+    case 'phenom_public':
+      if(!http(a.origin)||!present(a.search_path))throw Error('incomplete Phenom configuration');
+      return JSON.stringify(['phenom_public',new URL(a.origin).origin.toLowerCase(),a.search_path.toLowerCase()]);
+    case 'eightfold_public':
+      if(!http(a.origin))throw Error('incomplete Eightfold configuration');
+      return JSON.stringify(['eightfold_public',new URL(a.origin).origin.toLowerCase(),String(a.domain||'').toLowerCase()]);
+    case 'avature_public':
+      if(!http(a.origin)||!present(a.search_path))throw Error('incomplete Avature configuration');
+      return JSON.stringify(['avature_public',new URL(a.origin).origin.toLowerCase(),a.search_path.toLowerCase()]);
     case 'oracle_recruiting':
       if (!http(a.origin) || !present(a.site)) throw Error('incomplete Oracle Recruiting site configuration');
       return JSON.stringify(['oracle_recruiting', new URL(a.origin).origin.toLowerCase(), a.site.toLowerCase()]);
@@ -47,29 +66,43 @@ export function sourceKey(source) {
 function candidateProblem(c, tags) {
   const zeroJob = c.verification_status === ZERO_JOB_VERIFICATION_STATUS;
   const listOnly=c.verification_status===PUBLIC_LIST_STATUS;
+  const listContract=c.verification_status===API_LIST_CONTRACT_STATUS;
   const samples = c.source_verification?.complete_jd_samples ?? c.api_verification?.complete_mainland_jds;
   const identity = c.source_verification?.identity_basis || c.identity_verification?.evidence_file;
   const evidence = c.source_verification?.proof_directory || c.api_verification?.evidence_file;
   const verifiedAt = c.verified_at || c.api_verified_at || c.source_verification?.checked_at;
   if(listOnly){const problem=publicListCandidateProblem(c);if(problem)return problem;}
+  else if(listContract){const problem=apiListContractCandidateProblem(c);if(problem)return problem;}
   else if (zeroJob) {
     const problem = zeroJobCandidateProblem(c);
     if (problem) return problem;
   } else if (!Number.isInteger(samples) || samples < 1 || !present(identity) || !present(evidence)) return 'missing complete JD / identity evidence / proof location';
   if (!present(verifiedAt) || !Number.isFinite(Date.parse(verifiedAt))) return 'missing valid API verification date';
-  if (c.admitted === false || c.identity_verification?.identity_verified === false || c.verification_status && !['verified_api_full_jd', ZERO_JOB_VERIFICATION_STATUS,PUBLIC_LIST_STATUS].includes(c.verification_status)) return 'source explicitly not verified';
+  if (c.admitted === false || c.identity_verification?.identity_verified === false || c.verification_status && !['verified_api_full_jd', ZERO_JOB_VERIFICATION_STATUS,PUBLIC_LIST_STATUS,API_LIST_CONTRACT_STATUS].includes(c.verification_status)) return 'source explicitly not verified';
   if (!present(c.company_id) || !present(c.display_name) || !http(c.primary_entry_url)) return 'missing company ID, display name or HTTP entry';
   if (!Array.isArray(c.industry_tags) || !c.industry_tags.length || c.industry_tags.some(t => !tags.has(t))) return 'missing valid industry routing';
   if (!Array.isArray(c.validated_api_request_examples) || !c.validated_api_request_examples.some(q => http(q.url))) return 'missing verified API request configuration';
   return null;
 }
 
+// A supplier ID or a similar name alone is not an employer identity proof.
+// Only reuse an identity already explicitly reviewed for this discovery dataset.
+export function reviewedEmployerKey(source) {
+  const identity=source.identity_verification,provenance=source.discovery_provenance;
+  if(identity?.identity_verified!==true||!present(identity.official_name)||!present(identity.evidence_file)||!present(identity.basis)
+    ||provenance?.dataset!=='waiqi-company-interface-deep-review'||!Number.isSafeInteger(provenance.waiqi_company_id)||provenance.waiqi_company_id<=0)return null;
+  return JSON.stringify([provenance.dataset,provenance.waiqi_company_id,identity.official_name.trim()]);
+}
+
 export function planWaiqiIntegration(original, inputs, industryIds) {
   const registry = structuredClone(original), companies = new Map(registry.companies.map(c => [c.company_id, c]));
   const tags = new Set(industryIds), allKeys = new Map(), rejected = [], added = [], skipped = [], groups = new Map();
+  const reviewedOwners=new Map();
+  const addReviewedOwner=(source,id)=>{const key=reviewedEmployerKey(source);if(key){if(!reviewedOwners.has(key))reviewedOwners.set(key,new Set());reviewedOwners.get(key).add(id);}};
   const addOwner = (key, id) => { if (!allKeys.has(key)) allKeys.set(key, new Set()); allKeys.get(key).add(id); };
   for (const c of companies.values()) for (const s of c.recruitment_sources?.length ? c.recruitment_sources : [c]) {
     try { addOwner(sourceKey(s), c.company_id); } catch { /* Preserve legacy sources even if their config is incomplete. */ }
+    addReviewedOwner(s,c.company_id);
   }
   // Only verified candidates may influence identity resolution. Resolve the whole
   // group before adding anything, so an existing source later in the input wins.
@@ -78,7 +111,8 @@ export function planWaiqiIntegration(original, inputs, industryIds) {
     let problem = candidateProblem(c, tags), key;
     if (!problem) try { key = sourceKey(c); } catch (error) { problem = error.message; }
     if (problem) { rejected.push({name: c.display_name, file: input.file, reason: problem}); continue; }
-    const groupKey = c.merge_group_key ? 'group:' + c.merge_group_key : 'company:' + c.company_id;
+    const employerKey=reviewedEmployerKey(c);
+    const groupKey = employerKey ? 'reviewed-employer:'+employerKey : c.merge_group_key ? 'group:' + c.merge_group_key : 'company:' + c.company_id;
     if (!groups.has(groupKey)) groups.set(groupKey, []);
     groups.get(groupKey).push({...input, key});
   }
@@ -86,6 +120,7 @@ export function planWaiqiIntegration(original, inputs, industryIds) {
     const owners = new Set(), problems = [];
     for (const {item: c, key} of entries) {
       for (const owner of allKeys.get(key) || []) owners.add(owner);
+      for (const owner of reviewedOwners.get(reviewedEmployerKey(c)) || []) owners.add(owner);
       if (c.suggested_existing_company_id) {
         if (!companies.has(c.suggested_existing_company_id)) problems.push('suggested company ID does not exist: ' + c.suggested_existing_company_id);
         else owners.add(c.suggested_existing_company_id);
@@ -117,6 +152,7 @@ export function planWaiqiIntegration(original, inputs, industryIds) {
         company.industry_tags = [...new Set([...(company.industry_tags || []), ...c.industry_tags])];
       }
       addOwner(key, id);
+      addReviewedOwner(source,id);
       added.push({company_id: id, display_name: company.display_name, source_id: source.source_id, provider: source.provider, entry: source.primary_entry_url, new_company: isNew, input_file: file});
     }
   }

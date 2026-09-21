@@ -1,0 +1,20 @@
+{
+  "organized_on": "2026-09-22",
+  "legacy_parent": "campus-job-fit/artifacts",
+  "new_parent": "datasets/recruitment-links/collections",
+  "compatibility": "Windows directory junction; same underlying files, no duplicate copy",
+  "directories": [
+    "feishu-source-expansion-20260919",
+    "wps-campus-sources-20260919",
+    "waiqi-2026-09-20",
+    "waiqi-candidate-review",
+    "waiqi-expansion-followup",
+    "waiqi-interface-deep-review"
+  ],
+  "older_path_alias": {"internet-campus-job-fit/artifacts": "campus-job-fit/artifacts"},
+  "archived_verification_files": {
+    "source-verification-wps-20260919.json": "snapshots/2026-09-22/wps-api-verification.json",
+    "source-verification-feishu-20260919.json": "snapshots/2026-09-22/feishu-api-verification.json",
+    "feishu-expansion-20260919.json": "snapshots/2026-09-22/feishu-admission.json"
+  }
+}

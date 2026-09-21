@@ -88,6 +88,12 @@ test('Greenhouse keeps explicit mainland and mixed locations, excludes foreign-o
  const jobs=['Shanghai','Shanghai / Singapore','New York'].map((location,i)=>({id:String(i),title:'Engineer',content:body,location:{name:location},absolute_url:'https://example.invalid/jobs/'+i}));
  const r=await collectRecovered({provider:'greenhouse',api_config:{board_token:'synthetic',mainland_location_pattern:'Beijing|Shanghai'}},{client:fakeClient(()=>({jobs,meta:{total:3}}))});assert.equal(r.jobs.length,2);assert.equal(r.coverage.excluded_location_rows.length,1);assert.equal(r.coverage.list_complete,true);assert.equal(r.coverage.status,'complete');assert.ok(r.jobs.some(j=>j.locations_raw[0].includes('Singapore')));
 });
+test('Ashby enumerates one anonymous board response without requesting job details',async()=>{
+ const jobs=[{id:'a',title:'Engineer',descriptionPlain:body,location:'Shanghai',secondaryLocations:[],jobUrl:'https://jobs.ashbyhq.com/acme/a',employmentType:'FullTime',isListed:true}];
+ const c=fakeClient(()=>({jobs}));
+ const r=await collectRecovered({company_id:'acme',display_name:'Acme',provider:'ashby',api_config:{board_token:'acme'}},{client:c,mode:'list'});
+ assert.equal(r.jobs.length,1);assert.equal(r.jobs[0].job_id,'a');assert.equal(r.coverage.list_complete,true);assert.equal(r.coverage.status,'complete');assert.equal(c.records.length,1);assert.equal(c.records[0].purpose,'job_list_with_full_content');
+});
 test('XYZ rejects a full JD belonging to a different tenant',async()=>{
  const c=fakeClient(q=>q.url.includes('get_customer_setting')?{result:'1',data:{ctmId:'synthetic-guid'}}:{result:'1',data:{total:1,records:[{jobId:'shared',ehireCtmId:'202',jobName:'工程师',jobInfo:body,jobAreas:'上海',isExpired:false}]}});
  const r=await collectXYZ({provider:'51job_xyz',api_config:{ehire_ctm_id:'101'}},{client:c,maxPages:1});assert.equal(r.jobs.length,0);assert.equal(r.coverage.status,'partial');assert.match(r.coverage.reason,/Tenant mismatch/);

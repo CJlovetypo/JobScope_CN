@@ -12,6 +12,13 @@ const family=(url,html='')=>{
   if(/moseeker\.com$/.test(h))return 'moseeker';
   if(/tupu360\.com$/.test(h))return 'tupu360';
   if(/ajinga\.com$/.test(h))return 'ajinga';
+  if(/(?:jobs\.)?lever\.co$/.test(h))return 'lever_hint';
+  if(/ashbyhq\.com$/.test(h))return 'ashby_hint';
+  if(/(?:icims\.com|icims\.eu)$/.test(h))return 'icims_hint';
+  if(/dayforcehcm\.com$/.test(h))return 'dayforce_hint';
+  if(/(?:jobvite\.com|jobs\.jobvite\.com)$/.test(h))return 'jobvite_hint';
+  if(/(?:workable\.com|apply\.workable\.com)$/.test(h))return 'workable_hint';
+  if(/(?:recruitee\.com|teamtailor\.com|jobs\.personio\.(?:com|de))$/.test(h))return 'other_public_ats_hint';
   if(/platform\/.*j2w|BS3ColumnizedSearch|\bjob-tile\b/.test(html))return 'jobs2web';
   if(/eightfold/i.test(html))return 'eightfold_hint';
   if(/avature/i.test(h+' '+html))return 'avature_hint';

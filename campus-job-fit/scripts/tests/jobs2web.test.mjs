@@ -8,7 +8,7 @@ import {isIndividualJobRoute} from '../../../shared/job-search-core/scripts/lib/
 const origin='https://test.jobs2web.com',source={company_id:'test',display_name:'Test',provider:'jobs2web_public',api_config:{origin}};
 test('Company discovery blocks individual job paths and query IDs, retaining company/profile/list endpoints',()=>{
  for(const p of ['/jobs/123.html','/jobs/1','/job/Shanghai/123','/m/position/123','/job-detail-new/123/c/','/sfcareer/jobreqcareerpvt?jobId=1'])assert.equal(isIndividualJobRoute(origin+p),true,p);
- for(const p of ['/search/','/recruiting/company/123/','/django_rest/job-list/?company_id=123','/company?ka=job-detail-company_custompage'])assert.equal(isIndividualJobRoute(origin+p),false,p);
+ for(const p of ['/search/','/recruiting/company/123/','/django_rest/job-list/?company_id=123','/company?ka=job-detail-company_custompage','/api/v1/search/job/posts','/api/Jobad/GetJobAdPageList','/wecruit/positionInfo/listPosition/SU123'])assert.equal(isIndividualJobRoute(origin+p),false,p);
 });
 const page=(ids,total=ids.length,next=null,location='Shanghai, CN')=>`<span class="paginationLabel">Results <b>1–25</b> of <b>${total}</b></span>${ids.map(id=>`<tr class="data-row"><td><a href="/job/title/${id}/">Title ${id}</a><span class="jobLocation">${location}</span></td></tr>`).join('')}${next?`<a href="?optionsFacetsDD_country=CN&amp;startrow=${next}">Next</a>`:''}`;
 const client=pages=>({records:[],async request({url}){const html=pages.shift();assert.notEqual(html,undefined);return {text:html,url,record:{http_status:200,response_file:'fixture'}};}});

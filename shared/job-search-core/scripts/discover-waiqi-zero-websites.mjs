@@ -13,7 +13,7 @@ const DEFAULT_INPUT=path.resolve('shared/job-search-core/assets/waiqi-source-can
 const publicCareerHosts=new Set(JSON.parse(readFileSync(new URL('../assets/public-career-hosts.json',import.meta.url),'utf8')).hosts.map(x=>x.host));
 const DEFAULT_OUTPUT=path.resolve('campus-job-fit/artifacts/waiqi-2026-09-20/zero-position-official-discovery');
 const locale=/^(?:en|en-us|en-gb|zh|zh-cn|zh-hans|de|fr|ja|ko)$/i;
-const atsHost=/(?:myworkdayjobs\.com|myworkdaysite\.com|smartrecruiters\.com|greenhouse\.io|mokahr\.com|zhiye\.com|hotjob\.cn|jobs\.(?:feishu\.cn|f\.mioffice\.cn)|oraclecloud\.com|careers\.bissell\.com)$/i;
+const atsHost=/(?:myworkdayjobs\.com|myworkdaysite\.com|smartrecruiters\.com|greenhouse\.io|ashbyhq\.com|mokahr\.com|zhiye\.com|hotjob\.cn|jobs\.(?:feishu\.cn|f\.mioffice\.cn)|oraclecloud\.com|careers\.bissell\.com)$/i;
 const isAtsHost=host=>atsHost.test(host)||publicCareerHosts.has(host.toLowerCase())||host.toLowerCase()==='www.ajinga.com';
 const careerWords=/(?:career|careers|job|jobs|join[\s_-]*us|work[\s_-]*with[\s_-]*us|vacanc|opportunit|recruit|talent|招聘|招贤|人才|加入我们|工作机会|职位)/i;
 const rejectAsset=/\.(?:js|css|png|jpe?g|gif|svg|ico|woff2?|ttf|map|pdf|zip)(?:$|[?#])/i;
@@ -77,8 +77,16 @@ export function atsConfiguration(entry){
     return {provider:'smartrecruiters',entry_url:u.href,api:{url:'https://api.smartrecruiters.com/v1/companies/'+encodeURIComponent(company_identifier)+'/postings?limit=1&offset=0',method:'GET'},api_config:{company_identifier}};
   }
   if(/(?:boards|job-boards)\.greenhouse\.io$/.test(host)){
-    const board_token=segments.find(x=>!locale.test(x)&&!['embed','jobs'].includes(x.toLowerCase()));if(!board_token)return null;
-    return {provider:'greenhouse',entry_url:u.href,api:{url:'https://boards-api.greenhouse.io/v1/boards/'+encodeURIComponent(board_token)+'/jobs?content=false',method:'GET'},api_config:{board_token}};
+    const board_token=u.searchParams.get('for')||segments.find(x=>!locale.test(x)&&!['embed','jobs','job_board','js'].includes(x.toLowerCase()));if(!board_token)return null;
+    return {provider:'greenhouse',entry_url:'https://job-boards.greenhouse.io/'+encodeURIComponent(board_token),api:{url:'https://boards-api.greenhouse.io/v1/boards/'+encodeURIComponent(board_token)+'/jobs?content=false',method:'GET'},api_config:{board_token}};
+  }
+  if(host==='jobs.ashbyhq.com'&&segments[0]){
+    const board_token=decodeURIComponent(segments[0]);
+    return {provider:'ashby',entry_url:'https://jobs.ashbyhq.com/'+encodeURIComponent(board_token),api:{url:'https://api.ashbyhq.com/posting-api/job-board/'+encodeURIComponent(board_token),method:'GET'},api_config:{board_token}};
+  }
+  if(host.endsWith('.tupu360.com')){
+    const origin=u.origin;
+    return {provider:'tupu360',entry_url:origin+'/position/list?type=SOCIALRECRUITMENT&lang=zh_CN',api:{url:origin+'/positionData/listInfo?type=SOCIALRECRUITMENT&offset=0&max=200&lang=zh_CN',method:'GET'},api_config:{origin}};
   }
   if(host==='careers.bissell.com'&&segments[0]==='jobs'){
     return {provider:'icims_jibe',entry_url:u.href,api:{url:u.origin+'/api/jobs?limit=100&offset=0&lang=en-US',method:'GET'},api_config:{origin:u.origin,language:'en-US'}};
@@ -95,6 +103,7 @@ function responseValid(config,response){
   if(config.provider==='workday')return {ok:Array.isArray(d.jobPostings)&&Number.isFinite(Number(d.total)),reported_jobs:Number(d.total),reason:'jobPostings array and numeric total'};
   if(config.provider==='smartrecruiters')return {ok:Array.isArray(d.content)&&Number.isFinite(Number(d.totalFound)),reported_jobs:Number(d.totalFound),reason:'content array and numeric totalFound'};
   if(config.provider==='greenhouse')return {ok:Array.isArray(d.jobs),reported_jobs:Array.isArray(d.jobs)?d.jobs.length:null,reason:'jobs array'};
+  if(config.provider==='ashby')return {ok:Array.isArray(d.jobs),reported_jobs:Array.isArray(d.jobs)?d.jobs.length:null,reason:'jobs array'};
   if(config.provider==='icims_jibe')return {ok:Array.isArray(d.jobs)&&Number.isFinite(Number(d.totalCount)),reported_jobs:Number(d.totalCount),reason:'jobs array and numeric totalCount'};
   if(config.provider==='oracle_recruiting'){const item=d.items?.[0];return {ok:Array.isArray(item?.requisitionList)&&Number.isFinite(Number(item?.TotalJobsCount)),reported_jobs:Number(item?.TotalJobsCount),reason:'requisitionList and numeric TotalJobsCount'};}
   return {ok:true,reported_jobs:null,reason:'public provider JSON response; provider-specific collection follows'};

@@ -9,15 +9,62 @@ import {isIndividualJobRoute} from './lib/career-link-scope.mjs';
 const root=path.resolve(process.argv[2]||'campus-job-fit/artifacts/waiqi-expansion-followup');
 const review=path.resolve(process.argv[3]||'campus-job-fit/artifacts/waiqi-candidate-review');
 const output=path.resolve(process.argv[4]||'shared/job-search-core/assets/waiqi-interface-catalog.json');
+const deepReview=path.resolve(process.argv[5]||'campus-job-fit/artifacts/waiqi-interface-deep-review/no-interface-websites');
+const standardReview=path.resolve('campus-job-fit/artifacts/waiqi-interface-deep-review/standard-ats');
 const read=file=>JSON.parse(fs.readFileSync(file,'utf8'));
 const registry=read('shared/job-search-core/assets/sources.json').companies;
 const candidates=read('shared/job-search-core/assets/waiqi-source-candidates.json');
+const overrides=fs.existsSync('shared/job-search-core/assets/waiqi-interface-overrides.json')?read('shared/job-search-core/assets/waiqi-interface-overrides.json'):{interfaces:[]};
 const records=new Map();
 const evidence=r=>({url:r.url,method:r.method,http_status:r.http_status,checked_at:r.checked_at,response_sha256:r.response_sha256,purpose:r.purpose});
+function observationConfiguration(observation){
+  const url=observation.final_url||observation.url;
+  if(observation.platform==='phenom_hint'){
+    try{
+      const u=new URL(url),parts=u.pathname.split('/').filter(Boolean).filter(x=>!/^home(?:\.html)?$|^search-results$/i.test(x)),base='/'+parts.slice(0,2).join('/'),searchPath=(base==='/'?'':base)+'/search-results',origin=u.origin;
+      return {provider:'phenom_public',entry_url:origin+searchPath,api_config:{origin,search_path:searchPath,widget_endpoint:origin+'/widgets'},api:{url:origin+'/widgets',method:'POST',body:{ddoKey:'refineSearch',pageName:'search-results',from:0,size:100,jobs:true,counts:true},response_format:'json'}};
+    }catch{}
+  }
+  if(observation.platform==='eightfold_hint'){
+    try{
+      const explicit=(observation.links||[]).map(x=>x.url).find(x=>{try{return new URL(x).hostname.endsWith('.eightfold.ai')&&new URL(x).pathname.startsWith('/careers');}catch{return false;}}),u=new URL(explicit||url);
+      if(explicit||/^(?:jobs\.|portal\.careers\.|careers\.microsoft\.)/i.test(u.hostname)){
+        const domain=u.searchParams.get('domain')||null,origin=u.origin,entry=explicit?origin+'/careers'+(domain?'?domain='+encodeURIComponent(domain):''):u.href;
+        return {provider:'eightfold_public',entry_url:entry,api_config:{origin,...domain?{domain}:{}},api:{url:origin+'/api/pcsx/search?'+new URLSearchParams({...domain?{domain}:{},query:'',location:'China',start:'0'}),method:'GET',response_format:'json'}};
+      }
+    }catch{}
+  }
+  if(observation.platform==='avature_hint'){
+    try{
+      const options=[...(observation.links||[]).map(x=>x.url),url],chosen=options.find(x=>/avature\.(?:net|cn)$/i.test(new URL(x).hostname)&&/\/SearchJobs(?:\/|$)/i.test(new URL(x).pathname))||options.find(x=>/avature\.(?:net|cn)$/i.test(new URL(x).hostname))||options.find(x=>/\/SearchJobs(?:\/|$)/i.test(new URL(x).pathname))||(/^(?:careers\.|jobs\.|bwelcome\.hr\.)/i.test(new URL(url).hostname)?url:null);
+      if(chosen){const u=new URL(chosen),m=u.pathname.match(/^(.*?\/(?:careers|externalcareers))(?:\/SearchJobs(?:\/[^/?#]+)?)?/i);if(m){const searchPath=/\/SearchJobs/i.test(u.pathname)?u.pathname:m[1]+'/SearchJobs',origin=u.origin,entry=new URL(searchPath,origin);for(const [k,v] of u.searchParams)entry.searchParams.set(k,v);if(!entry.searchParams.has('listFilterMode'))entry.searchParams.set('listFilterMode','1');entry.searchParams.set('jobRecordsPerPage','100');entry.searchParams.set('jobOffset','0');return {provider:'avature_public',entry_url:entry.href,api_config:{origin,search_path:searchPath},api:{url:entry.href,method:'GET',response_format:'html'}};}}
+    }catch{}
+  }
+  if(observation.platform==='greenhouse'){
+    try{
+      const parsed=new URL(url),boardToken=parsed.searchParams.get('for');
+      if(boardToken)return atsConfiguration('https://job-boards.greenhouse.io/'+encodeURIComponent(boardToken));
+    }catch{}
+  }
+  const known=observation.api_configuration||atsConfiguration(url);
+  if(known||observation.platform!=='jobs2web')return known;
+  // The crawler identifies this family from the page markup. Do not require the
+  // hostname to be pre-listed: the verifier still has to prove the CN list works.
+  try{
+    const origin=new URL(url).origin;
+    return {provider:'jobs2web_public',api_config:{origin},entry_url:origin+'/search/',api:{url:origin+'/search/?optionsFacetsDD_country=CN',method:'GET',response_format:'html'}};
+  }catch{return null;}
+}
 function entryURL(provider,cfg,entry){
   if(provider==='oracle_recruiting')return cfg.origin+'/hcmUI/CandidateExperience/en/sites/'+cfg.site;
   if(provider==='workday')return cfg.origin+(cfg.public_path||'/'+cfg.site);
   if(provider==='greenhouse')return 'https://job-boards.greenhouse.io/'+cfg.board_token;
+  if(provider==='ashby')return 'https://jobs.ashbyhq.com/'+encodeURIComponent(cfg.board_token);
+  if(provider==='tupu360')return cfg.origin+'/position/list?type=SOCIALRECRUITMENT&lang=zh_CN';
+  if(provider==='moseeker_public')return 'https://www.moseeker.com/positions/index/cid/'+cfg.company_id;
+  if(provider==='phenom_public')return cfg.origin+cfg.search_path;
+  if(provider==='eightfold_public')return cfg.origin+'/careers'+(cfg.domain?'?domain='+encodeURIComponent(cfg.domain):'');
+  if(provider==='avature_public')return entry;
   if(provider==='smartrecruiters')return 'https://careers.smartrecruiters.com/'+cfg.company_identifier;
   return entry;
 }
@@ -43,7 +90,8 @@ for(const c of read(path.join(root,'workday-alternate-results.json'))){
 }
 for(const c of read(path.join(root,'platform-revisit/results.json'))){
   if(c.family==='ajinga')continue;
-  add(c.family,{},c.url,c.companies.map(x=>x.id),{status:'entrance_only',capability:{list_schema_valid:false,list_complete:false,reason:c.status===200?'Entrance returned; public company-specific list API not established':'Entrance HTTP '+c.status+'; this does not prove observed job links unavailable'},evidence:c.record?[evidence(c.record)]:[]});
+  const config=atsConfiguration(c.url);
+  add(config?.provider||c.family,config?.api_config||{},config?.entry_url||c.url,c.companies.map(x=>x.id),{status:config?'unverified_candidate':'entrance_only',capability:{list_schema_valid:false,list_complete:false,reason:config?'A public list contract was derived and requires verification':c.status===200?'Entrance returned; public company-specific list API not established':'Entrance HTTP '+c.status+'; this does not prove observed job links unavailable'},request_templates:config?.api?[config.api]:[],evidence:c.record?[evidence(c.record)]:[]});
 }
 for(const c of read(path.join(root,'ajinga-results.json'))){
   const r=read(path.join(root,'ajinga',c.company_id,'result.json')),p=r.company_profile?.root_company;
@@ -55,6 +103,10 @@ for(const c of read(path.join(root,'jobs2web-results.json'))){
   const r=read(path.join(root,'jobs2web',c.host,'result.json'));
   const refs=candidates.companies.filter(x=>x.recruitment_links?.some(l=>{try{return new URL(l.url).hostname===c.host;}catch{return false;}}));
   add('jobs2web_public',{origin:'https://'+c.host},'https://'+c.host+'/search/',refs.map(x=>x.waiqi_company_id),{status:r.coverage.list_complete?'verified_list_pending_identity':'list_partial',capability:{list_complete:r.coverage.list_complete,scope:r.coverage.scope,reason:r.coverage.reason,checked_at:r.checked_at},request_templates:[{url:'https://'+c.host+'/search/?optionsFacetsDD_country=CN',method:'GET',response_format:'html'}],evidence:r.requests.map(evidence)});
+}
+for(const item of overrides.interfaces||[]){
+  const template={...item.request_template,url:item.request_template.url.replace('{page}','1'),purpose:'job_list'};
+  add(item.provider,item.api_config,item.entry_url,[item.waiqi_company_id],{review_state:'reviewed_company_list_binding',request_templates:[template],binding_evidence:{waiqi_company_id:item.waiqi_company_id,display_name:item.display_name}});
 }
 const revisits=read(path.join(root,'career-revisit/results.json'));
 const searches=read(path.join(root,'search-revisit/results.json'));
@@ -68,11 +120,35 @@ for(const c of searchCandidates.candidates){
   if(!row.request_templates.length&&config?.api)row.request_templates=[config.api];
 }
 for(const c of [...revisits,...searches])for(const o of c.observations.filter(x=>x.http_status===200&&x.platform!=='unresolved'&&!isIndividualJobRoute(x.url)&&!isIndividualJobRoute(x.final_url||x.url))){
-  const config=o.api_configuration||atsConfiguration(o.final_url||o.url);
+  const config=observationConfiguration(o);
   const row=add(config?.provider||o.platform,config?.api_config||{},config?.entry_url||o.final_url||o.url,[c.waiqi_company_id]);
   if(!row.career_observations)row.career_observations=[];
   row.career_observations.push({url:o.url,final_url:o.final_url,checked_at:c.checked_at,response_sha256:o.response_sha256,platform_hint:o.platform});
   if(!row.request_templates.length&&config?.api)row.request_templates=[config.api];
+}
+if(fs.existsSync(deepReview))for(const name of fs.readdirSync(deepReview)){
+  const file=path.join(deepReview,name,'result.json');if(!fs.existsSync(file))continue;
+  const c=read(file);
+  for(const o of (c.observations||[]).filter(x=>x.http_status===200&&x.platform!=='unresolved'&&!isIndividualJobRoute(x.url)&&!isIndividualJobRoute(x.final_url||x.url))){
+    const config=observationConfiguration(o);
+    const row=add(config?.provider||o.platform,config?.api_config||{},config?.entry_url||o.final_url||o.url,[c.waiqi_company_id]);
+    if(!row.career_observations)row.career_observations=[];
+    row.career_observations.push({url:o.url,final_url:o.final_url,checked_at:c.checked_at,response_sha256:o.response_sha256,platform_hint:o.platform});
+    if(!row.request_templates.length&&config?.api)row.request_templates=[config.api];
+  }
+}
+// Some legacy Jobs2Web vanity URLs now serve Oracle Candidate Experience.
+// Promote the public Oracle interface exposed by the returned page and retain
+// the old Jobs2Web row as migration evidence.
+const standardManifest=path.join(standardReview,'manifest.json');
+if(fs.existsSync(standardManifest))for(const result of read(standardManifest).filter(x=>x.provider==='jobs2web_public'&&x.capability?.status==='failed')){
+  const request=result.capability?.requests?.find(x=>x.http_status===200&&x.response_file);
+  if(!request||!fs.existsSync(request.response_file))continue;
+  const html=fs.readFileSync(request.response_file,'utf8');
+  const base=html.match(/<base[^>]+href=["']\/[^"']*sites\/([^"']+)["'][^>]+data-apibaseurl=["']([^"']+)["'][^>]+data-sitenumber=["']([^"']+)/i);
+  if(!base)continue;
+  const origin=new URL(base[2]).origin,site=base[3];
+  add('oracle_recruiting',{origin,site},origin+'/hcmUI/CandidateExperience/en/sites/'+site,result.waiqi_company_ids,{migration_from:{provider:'jobs2web_public',entry_url:result.entry_url,checked_at:result.checked_at},request_templates:[{method:'GET',url:origin+'/hcmRestApi/resources/latest/recruitingCEJobRequisitions?onlyData=true&expand=requisitionList.secondaryLocations&finder=findReqs%3BsiteNumber%3D'+encodeURIComponent(site)+'%2CfacetsList%3DNONE%2Climit%3D200%2Coffset%3D0',purpose:'company_job_list'}]});
 }
 for(const row of records.values()){
   for(const c of registry)for(const s of c.recruitment_sources||[c]){
