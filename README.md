@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="shared/job-search-core/assets/logo-concepts/01-search-lens.png" alt="JobScope_CN · 中文求职技能包" width="220" />
+  <img src="shared/job-search-core/assets/jobscope-emoji-logo.png" alt="JobScope_CN · 中文求职技能包" width="180" />
 </p>
 <p align="center">
   <strong>用自然语言找岗位、判断匹配度、持续关注新机会。</strong>
