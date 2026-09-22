@@ -4,6 +4,7 @@ import os from 'node:os';
 import {createRequire} from 'node:module';
 import {pathToFileURL} from 'node:url';
 import {SEARCH_MODE} from './search-mode.mjs';
+import {SALARY_NOTICE} from './assessment-v5.mjs';
 
 // Resolve the desktop's bundled runtime; do not install or use repo-local packages.
 async function loadRuntimePackage(name) {
@@ -54,7 +55,7 @@ function wrapLines(value, width) {
 function formatTable(workbook, sheet, data, index, noteAuthorId) {
   const rowCount = data.rows.length + 1;
   const columnCount = data.headers.length;
-  const widths = SETTINGS[data.name].widths;
+  const widths = data.modelVersion===5?[...MAIN_WIDTHS,35,65,60]:SETTINGS[data.name].widths;
   const grid = sheet.getRangeByIndexes(0, 0, rowCount, columnCount);
   grid.values = [data.headers, ...data.rows].map(row => row.map(value => {
     if (typeof value === 'string' && /^\d{4}-\d{2}-\d{2}(?:T[\d:.]+Z)?$/.test(value)) return new Date(value);
@@ -97,7 +98,8 @@ function formatTable(workbook, sheet, data, index, noteAuthorId) {
   };
   if (['岗位匹配', '待核实与未评估'].includes(data.name)) {
     data.headers.forEach((label, column) => {
-      const tip = HEADER_TIPS[label];
+      const v5Tips={'能力匹配度':'高/中须有实际支持；低须有明确的核心能力缺口事实。不确定表示资料不足，不等于能力低。','硬性条件匹配度':'学历、专业、必需资格和到岗等逐项核对。工作年限为经验参考，差距不自动否决；缺资料保持未知。','城市意愿匹配':'仅匹配城市偏好，不判断同城距离或通勤；未指定与明确不限分开，岗位城市未知不等于不符。','薪资参考':SALARY_NOTICE+'仅同等主要判断内辅助排序，未知不扣分。','证据充分性':'说明已有事实及具体缺项，不作为能力评分。已审阅仍可不确定。','匹配层级':'先保留已证实的关键冲突；没有明确冲突但关键资料缺失时显示信息待确认。薪资不单独否决。'};
+      const tip = data.modelVersion===5?v5Tips[label]||HEADER_TIPS[label]:HEADER_TIPS[label];
       if (!tip) return;
       const address = String.fromCharCode(65 + column) + '1';
       workbook.notes.add({
@@ -119,7 +121,7 @@ function formatTable(workbook, sheet, data, index, noteAuthorId) {
   }
   if (['岗位匹配', '待核实与未评估'].includes(data.name) && data.rows.length) {
     const recommendation = sheet.getRange(`E2:E${rowCount}`);
-    for (const [text, fill, color] of [['可以投递', '#E4F1E9', '#236444'], ['投递前准备', '#EDF2F8', '#345A80'], ['暂不建议投递', '#F0F1F3', '#697384'], ['待评估', '#FFF4DC', '#805F1B']]) {
+    for (const [text, fill, color] of [['可以投递', '#E4F1E9', '#236444'], ['投递前准备', '#EDF2F8', '#345A80'], ['补资料后判断', '#FFF4DC', '#805F1B'], ['暂不建议投递', '#F0F1F3', '#697384'], ['待评估', '#FFF4DC', '#805F1B']]) {
       recommendation.conditionalFormats.add('containsText', {text, format: {fill, font: {color, bold: true}}});
     }
     const hardCondition = sheet.getRange(`J2:J${rowCount}`);
@@ -234,7 +236,8 @@ export async function writeExcelReport(file, sheets, {previewDir, temporaryDir} 
   const noteAuthorId = workbook.comments.setSelf({displayName: SEARCH_MODE.label+'岗位匹配'}).id;
   sheets.forEach((data, index) => formatTable(workbook, workbook.worksheets.getItem(data.name), data, index, noteAuthorId));
   workbook.recalculate();
-  const inspection = await workbook.inspect({kind: 'table', range: '岗位匹配!A1:L3', tableMaxRows: 3, tableMaxCols: 12, tableMaxCellChars: 100, maxChars: 2500});
+  const columns=sheets.find(s=>s.name==='岗位匹配')?.headers.length||12;
+  const inspection = await workbook.inspect({kind: 'table', range: `岗位匹配!A1:${columns===15?'O':'L'}3`, tableMaxRows: 3, tableMaxCols: columns, tableMaxCellChars: 100, maxChars: 2500});
   const errors = await workbook.inspect({kind: 'match', searchTerm: '#REF!|#DIV/0!|#VALUE!|#NAME\\?|#N/A|#NUM!|#NULL!|#SPILL!|#CALC!', options: {useRegex: true, maxResults: 10}, maxChars: 2500, summary: 'Excel 公式错误检查'});
   const formulaErrors = errors.ndjson.split('\n').filter(Boolean).map(line => JSON.parse(line)).filter(item => item.kind === 'match' && item.formula && /^#(?:REF!|DIV\/0!|VALUE!|NAME\?|N\/A|NUM!|NULL!|SPILL!|CALC!)$/.test(item.value));
   if (formulaErrors.length) throw new Error('Excel 公式错误：' + formulaErrors.map(item => `${item.sheet}!${item.address} ${item.value}`).join('；'));

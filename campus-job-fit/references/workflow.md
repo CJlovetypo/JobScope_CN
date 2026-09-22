@@ -1,5 +1,9 @@
 # 运行与数据约定
 
+新prepare使用[判断模型v5](../../shared/job-search-core/references/assessment-v5.md)，评估前必须读取。下文旧v4状态、例子和十二列仅用于旧运行追溯；新运行以v5为准：缺证unknown有效完成，不因年限差距否决，学历/专业/经验分开，新增城市/薪资参考/证据充分性，十五列及clarify动作。
+
+本文件维护底层画像、命令与匹配Excel契约。任务分流、澄清及默认值以 [共享业务决策](../../shared/job-search-core/references/decision-policy.md) 为准；岗位发现可通过统一入口 --discovery 使用查询参数，不要求本文件中的个人画像。新任务命令见 [任务契约](../../shared/job-search-core/references/task-contract.md)。
+
 运行环境：Node.js 22+；采集、筛选和评估批次不需要额外 npm 包。Excel 导出使用 Codex 附带的 `@oai/artifact-tool`，运行前通过 `load_workspace_dependencies` 定位运行时与依赖；需要显式指定时，将 `CODEX_NODE_MODULES` 设为 loader 所在的 `node_modules` 路径。简历文本提取使用 Python 3；PDF 需要 pypdf，可使用 Codex 附带的 Python 运行时。下面命令由 agent 执行，用户只提供材料和自然语言要求。
 
 所有路径以本 skill 文件夹为基准。脚本的写入路径必须位于 skill 内；输入简历可以来自用户指定的其他路径。不要移动或删除原简历。

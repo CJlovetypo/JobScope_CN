@@ -4,6 +4,10 @@
 
 JobScope_CN 是面向中文求职场景的 AI Agent 技能包。告诉它你的经历和想找的工作，它会从公司公开招聘接口采集岗位，阅读完整职位描述（JD），给出匹配理由、主要缺口、投递建议和岗位链接。校招、实习、社招各有独立 Skill；想长期关注的方向，可以交给岗位雷达定时跟踪。
 
+推荐从 [job-search 统一求职入口](job-search/SKILL.md) 开始。它先识别你是想浏览机会、结合经历匹配还是比较已有岗位，再沿用已明确条件、只补当前阶段必要信息。只找机会可以不交简历；没有指定城市时默认本轮不设城市过滤，行业或明确公司范围需要确定。三个原求职 Skill 保留为方向入口，共用同一套业务决策规则。
+
+新匹配采用[v5判断模型](docs/匹配判断模型v5迭代PRD.md)：缺少经历证据时保留“不确定”，不直接判不匹配；工作年限记录差距并结合实际职责判断放宽依据。最终报告单列城市意愿、薪资参考和证据充分性。只支持城市偏好，不支持同城距离或通勤筛选；JD薪资可能不准，仅作低权重参考，不用于薪资区间硬筛。
+
 > “这是我的简历。我想找上海游戏公司的社招项目经理岗位，请帮我看看哪些值得投、还差什么。再帮我每天早上 9 点关注新机会。”
 
 ## 从三千余个招聘主体中，找到值得认真看的机会
@@ -140,17 +144,18 @@ JobScope_CN 是面向中文求职场景的 AI Agent 技能包。告诉它你的�
 
 ## 开始使用
 
-将整个仓库放入支持本地 Skill 和命令执行的 Agent 工作环境，并让宿主加载四个 `SKILL.md`。当前 Excel 导出使用 Codex 的运行依赖；其他宿主需提供兼容依赖后使用。
+将整个仓库放入支持本地 Skill 和命令执行的 Agent 工作环境，并让宿主加载 `job-search`、三个兼容方向入口、`job-radar` 和 `recruitment-link-repair` 的 `SKILL.md`。当前 Excel 导出使用 Codex 的运行依赖；其他宿主需提供兼容依赖后使用。
 
 ```sh
 git clone https://github.com/CJlovetypo/job-search-skill-pack.git JobScope_CN
 cd JobScope_CN
 ```
 
-请保留完整相对目录。四个入口都依赖共享核心，单独复制某个 Skill 无法运行。
+请保留完整相对目录。求职入口依赖共享核心与方向运行目录，单独复制某个 Skill 无法运行。
 
 ```text
 JobScope_CN/
+  job-search/              # 统一意图判断、任务记录和执行入口
   campus-job-fit/          # 正式校招
   internship-job-fit/      # 实习
   social-job-fit/          # 社招
@@ -158,6 +163,8 @@ JobScope_CN/
   shared/job-search-core/ # 共享来源、采集器和公司资料
   README.md
 ```
+
+统一入口、任务修订及发现/匹配命令见 [任务契约](shared/job-search-core/references/task-contract.md)。岗位发现输出候选 Markdown/JSON 并明确尚未个人匹配；正式匹配继续交付 Excel。架构与验收范围见 [迭代PRD](docs/求职元能力架构迭代PRD.md)，行为用例见 [100条模拟提示词](docs/用户提示词模拟100例.md)。
 
 | 依赖 | 用途 |
 | --- | --- |
@@ -199,4 +206,4 @@ node --test job-radar/scripts/tests/radar.test.mjs
 
 > 使用 recruitment-link-repair，查这家公司的历史招聘入口，修复失效链接，并核实雇主、招聘方向及岗位获取能力。
 
-该维护 Skill 与四个求职入口并列，保留整个仓库相对目录即可使用。原始数据、冻结快照、索引和哈希清单仅保存在本地 `datasets/recruitment-links/`，不随 Git 分发；新机器需单独恢复数据集。历史收录不代表当前可用，修复采用前必须重新验证。
+该维护 Skill 与求职和雷达入口并列，保留整个仓库相对目录即可使用。原始数据、冻结快照、索引和哈希清单仅保存在本地 `datasets/recruitment-links/`，不随 Git 分发；新机器需单独恢复数据集。历史收录不代表当前可用，修复采用前必须重新验证。

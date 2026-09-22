@@ -9,8 +9,10 @@ import {readEvaluationScope, inEvaluationScope, SCOPE_MODES} from './evaluation-
 import {writeJdArchive} from './jd-archive.mjs';
 import {companyProfileSnapshot, saveCompanyProfileSnapshot, companyProfileSheet, profileGaps} from './company-profiles.mjs';
 import {SEARCH_MODE,modeEligibilityProblem,eligibilityPolicy} from './search-mode.mjs';
+import {isV5,modelVersion,v5DimensionsProblem,v5HardConflict,v5Unknown,CITY_NAMES,SALARY_NAMES,EVIDENCE_NAMES,SALARY_NOTICE} from './assessment-v5.mjs';
 
 export const REPORT_HEADERS = ['公司', '公司业务标签', '公司性质标签', '岗位', '投递建议', '匹配层级', '岗位城市', '意愿匹配度', '能力匹配度', '硬性条件匹配度', '详细评估理由', 'JD链接'];
+export const V5_REPORT_HEADERS = [...REPORT_HEADERS,'城市意愿匹配','薪资参考','证据充分性'];
 const tierNames = MATCH_TIER_NAMES;
 const eligibilityNames = {eligible: '匹配', ineligible: '不匹配', unknown: '待核实'};
 const interestLevels = INTEREST_LEVELS;
@@ -28,10 +30,10 @@ const officialLink = job => {
 const rank = review => ({high: 0, normal: 1, low: 2}[review.priority] ?? 3);
 const jobKey = job => JSON.stringify([job.company_id, String(job.job_id)]);
 const ownershipTag = company => company.ownership_tag;
-const reportTierName = review => review.eligibility === 'ineligible' ? '硬性条件不符' : review.eligibility==='unknown'?'信息待确认':tierNames[review.match_tier];
+const reportTierName = review => review.eligibility === 'ineligible' ? '硬性条件不符' : isV5(review)&&v5HardConflict(review)?'明确不符':review.eligibility==='unknown'||isV5(review)&&v5Unknown(review)?'信息待确认':tierNames[review.match_tier];
 const recommendationName = review => review.eligibility === 'ineligible' || review.next_action === 'hold'
   ? '暂不建议投递'
-  : review.next_action === 'apply' ? '可以投递' : '投递前准备';
+  : review.next_action === 'apply' ? '可以投递' : review.next_action==='clarify'?'补资料后判断':'投递前准备';
 
 export function verificationReviewSheet(audit) {
   const sheet={name:'资料复核',headers:['公司','岗位','复核结果','招聘性质（前→后）','城市（前→后）','正文（前→后）','仍待核实事项','复核依据','岗位ID','官方入口'],rows:[],links:[]};
@@ -60,20 +62,20 @@ export function reviewNeedsUpdate(review, job, profile) {
   if (!review) return '尚未评估';
   if (review.review_method !== 'full_jd') return '缺少全文阅读评估记录，需完整阅读 JD 后重新评估';
   if (!jobFingerprintMatches(review.jd_fingerprint,job)) return 'JD更新，旧评估已失效';
-  if (review.assessment_version !== ASSESSMENT_VERSION) return '评估模型已更新至 v4，需独立重评双向适配与行动排序；不可由旧匹配层级反推能力或仅补版本字段';
+  if (review.assessment_version !== modelVersion(profile)) return '评估模型版本已变化，需独立重评；不可由旧匹配层级反推能力或仅补版本字段';
   const profileProblem = profileEvidenceProblem(profile);
   if (profileProblem) return '个人画像需补齐证据分类：' + profileProblem;
   if (review.profile_fingerprint !== profileFingerprint(profile)) return '个人画像缺少匹配指纹或已更新，需对当前画像重新评估，不能复用其他画像的证据 ID';
   if (!Object.hasOwn(abilityLevels, review.ability)) return '缺少有效的独立能力评估';
   if (!Object.hasOwn(interestLevels, review.interest)) return '缺少有效的独立意愿评估';
-  if (review.ability === 'unknown') return '资料不足，尚未形成完整能力评估';
+  if (review.ability === 'unknown'&&!isV5(profile)) return '资料不足，尚未形成完整能力评估';
   const derived = deriveMatchTier(review.ability, review.interest);
   if (review.match_tier != null && review.match_tier !== derived) return '匹配层级与独立能力、意愿判断不一致，需复核评估';
   if (!Object.hasOwn(eligibilityNames, review.eligibility) || !['high', 'normal', 'low'].includes(review.priority)) return '硬性条件或内部排序字段无效';
   if (review.interest !== 'unknown' && !hasText(review.interest_reason)) return '缺少独立意愿依据 interest_reason；需说明用户明确倾向，不能用能力证据代替';
   if (!hasText(review.conclusion) || !hasText(review.next_step)) return '缺少具体结论或行动建议';
   if (!hasText(review.eligibility_reason)) return '硬性条件结论缺少当前招聘方向的具体依据';
-  if (SEARCH_MODE.id==='campus') {
+  if (SEARCH_MODE.id==='campus'&&!isV5(profile)) {
     if (!hasText(profile?.graduation) || !hasText(profile?.degree)) return '个人画像缺少毕业时间或学历，不能形成正式岗位评估';
     if (review.eligibility === 'unknown') return '完整JD未写届别或学历限制时按未发现硬性冲突处理；不得在正式评估中标为待核实';
   }else {const issue=modeEligibilityProblem(review,profile);if(issue)return issue;}
@@ -89,6 +91,7 @@ export function reviewNeedsUpdate(review, job, profile) {
   if (review.ability === 'medium' && !hasText(review.transferable_evidence)) return '中能力判断缺少可迁移经历说明';
   const abilityProblem = abilityEvidenceProblem(review, profile);
   if (abilityProblem) return abilityProblem;
+  const dimensionProblem=v5DimensionsProblem(review,profile,job);if(dimensionProblem)return dimensionProblem;
   for (const field of ['conclusion', 'ability', 'interest', 'gaps']) {
     if (!hasText(review.report_summary?.[field])) return '缺少易读报告摘要 report_summary.' + field + '；须由模型概括结论，不用逐项证据列表代替';
   }
@@ -130,6 +133,7 @@ function detailedReason(review) {
 export async function buildReportData(dir, {allowPartial = false} = {}) {
   dir = workspacePath(dir);
   const run = await readJson(path.join(dir, 'run.json'));
+  const v5=isV5(run.profile);
   if((run.search_mode||'campus')!==SEARCH_MODE.id)throw Error('报告运行的招聘方向与本 Skill 不一致');
   const scope = await readEvaluationScope(dir, {required: false});
   assertRunOwnershipComplete(run.companies.filter(c=>c.selected));
@@ -160,10 +164,11 @@ export async function buildReportData(dir, {allowPartial = false} = {}) {
   const scopeUnattempted = bundles.filter(bundle => bundle.status === '尚未获取' && (!scope || scope.mode === 'all' || scope.company_ids.includes(bundle.company.company_id)));
   if (scopeMissing.length && !allowPartial) throw new Error('本次评估范围还有 ' + scopeMissing.length + ' 个岗位尚未评估（含需全文重评），不能输出范围完整的报告；用 next-batch 继续。首项：' + scopeMissing[0].company + '／' + scopeMissing[0].job_id + '：' + scopeMissing[0].reason);
   if (scopeUnattempted.length && !allowPartial) throw new Error('本次评估范围还有 ' + scopeUnattempted.length + ' 家入选公司尚未获取，不能输出完整报告；请先 collect。');
-  assessed.sort((a, b) => rank(a) - rank(b) || a.company.display_name.localeCompare(b.company.display_name, 'zh') || a.job.title.localeCompare(b.job.title, 'zh'));
+  const comparableSalary=(a,b)=>v5&&['ability','interest','eligibility'].every(k=>a[k]===b[k])&&a.city_check?.status===b.city_check?.status?Number(a.salary_check?.status==='gap')-Number(b.salary_check?.status==='gap'):0;
+  assessed.sort((a, b) => rank(a) - rank(b) || (v5?reportTierName(a).localeCompare(reportTierName(b),'zh')||JSON.stringify([a.ability,a.interest,a.eligibility,a.city_check?.status]).localeCompare(JSON.stringify([b.ability,b.interest,b.eligibility,b.city_check?.status]))||comparableSalary(a,b):0) || a.company.display_name.localeCompare(b.company.display_name, 'zh') || a.job.title.localeCompare(b.job.title, 'zh'));
   const pending = bundles.flatMap(bundle => bundle.jobs.filter(job => ['needs_verification', 'missing_body'].includes(job.evaluation_status)).map(job => ({bundle, job})));
   const audit = {
-    generated_at: new Date().toISOString(), assessment_version: ASSESSMENT_VERSION, profile_fingerprint: profileFingerprint(run.profile), companies_total: bundles.length,
+    generated_at: new Date().toISOString(), assessment_version: modelVersion(run.profile), profile_fingerprint: profileFingerprint(run.profile), companies_total: bundles.length,
     companies_selected: bundles.filter(bundle => bundle.company.selected).length,
     assessed_jobs: assessed.length, missing_assessments: missing, unattempted_companies: unattempted,
     source_failures: bundles.filter(bundle => ['获取失败', '尚未获取'].includes(bundle.status)).map(bundle => bundle.company.display_name),
@@ -178,8 +183,9 @@ export async function buildReportData(dir, {allowPartial = false} = {}) {
     outside_scope_remaining: missing.length - scopeMissing.length,
     complete_evaluation_scope: scopeMissing.length === 0 && scopeUnattempted.length === 0,
   };
-  const main = {name: '岗位匹配', headers: [...REPORT_HEADERS], rows: [], links: []};
-  const unchecked = {name: '待核实与未评估', headers: [...REPORT_HEADERS], rows: [], links: []};
+  audit.reviewed_with_uncertainty=assessed.filter(r=>v5Unknown(r)).length;
+  const main = {name: '岗位匹配', headers: [...(v5?V5_REPORT_HEADERS:REPORT_HEADERS)], rows: [], links: [],modelVersion:modelVersion(run.profile)};
+  const unchecked = {name: '待核实与未评估', headers: [...main.headers], rows: [], links: [],modelVersion:modelVersion(run.profile)};
   const coverage = {name: '来源覆盖', headers: ['公司', '公司业务标签', '本轮状态', '列表岗位数', '可评估数', '已评估数', '待评估数', '待核实数', '正文缺失数', '其他城市数', '实际页数', '覆盖说明', '采集时间', '城市标签时间', '公司性质标签', '性质核实说明', '性质来源证据', '性质核实时间'], rows: [], links: []};
   const notes = {name: '说明', headers: ['项目', '内容'], rows: [], links: []};
   for (const bundle of bundles) {
@@ -209,6 +215,7 @@ export async function buildReportData(dir, {allowPartial = false} = {}) {
       review ? recommendationName(review) : '待评估', review ? reportTierName(review) : '待评估',
       list(job.cities) || list(job.locations_raw) || '待核实', review ? interestLevels[review.interest] : '待确认',
       review ? abilityLevels[review.ability] : '待评估', review ? eligibilityNames[review.eligibility] : '待评估', detail, label]);
+    if(v5)sheet.rows.at(-1).push(review?CITY_NAMES[review.city_check.status]+'：'+review.city_check.job_basis:'尚未判断',review?['仅供参考：JD薪资可能不准。',SALARY_NAMES[review.salary_check.status]+'｜'+(review.salary_check.raw||'JD未披露可用薪资'),review.salary_check.reason,SALARY_NOTICE].join('\n'):'未评估；'+SALARY_NOTICE,review?[EVIDENCE_NAMES[review.evidence_sufficiency.status],review.evidence_sufficiency.reason,...review.evidence_sufficiency.missing].join('\n'):'尚未审阅');
     if (url) sheet.links.push({row: sheet.rows.length + 1, column: 12, url, label});
   }
   for (const review of assessed) appendRow(main, review.bundle, review.job, review);
@@ -250,6 +257,17 @@ export async function buildReportData(dir, {allowPartial = false} = {}) {
     ['资料核验规则', '接口明确标注校招、岗位关联校招项目或有可核对的单一校招类型请求筛选，即可确认校招，不另要求“正式／全职”字段。标题明确标注的工作城市直接认可；保留地点、项目和请求原始证据。真实用工类型冲突、缺城市及缺正文仍分别记录。'],
     ['城市标签快照', clean(run.city_index_updated_at) || '未记录'],
   ];
+  if(v5){
+    const replacements={
+      '匹配层级':'已证实资格、核心能力、明确不可接受意愿或must城市冲突为明确不符；关键事实未知为信息待确认，缺证不等于能力低。薪资和参考年限不单独否决。',
+      '硬性条件匹配度':'学历、专业及本方向资格分开核对；要求未写与本人事实未给分开。总年限与相关经验仅作经验参考，记录差距和基于职责/责任深度/成果的放宽依据；不设统一宽限，不保证雇主接受。',
+      '能力匹配度':'v5：高/中须有对应客观实践；低须已证实核心不符，缺少个人事实用不确定。比较项分别记录符合/部分符合/不符/不确定，证据充分性与能力分开。',
+      '投递建议':'可以投递/投递前准备用于有依据且无决定性冲突或未知的结果；无明确冲突但关键事实未知用补资料后判断；已证实冲突用暂不建议投递，其他未知仍保留。',
+      '阅读与评估要求':'v5绑定完整JD与画像指纹，全文阅读后按事实判断。未知是有效已审阅结果，不重复领取、不伪装成不符。程序结构校验不证明语义判断正确。'
+    };
+    notes.rows=notes.rows.map(row=>replacements[row[0]]?[row[0],replacements[row[0]]]:row);
+    notes.rows.push(['仍有关键事实不确定的已审阅岗位',audit.reviewed_with_uncertainty],['城市意愿','仅匹配城市；未指定、不限及岗位城市未知分开。同城距离/通勤不支持。'],['薪资参考',SALARY_NOTICE],['证据充分性','说明依据及具体缺项；不是能力分。补问按任务聚合，每轮最多3组。']);
+  }
   if (run.is_test) notes.rows.unshift(['测试说明', '本工作簿使用测试画像，不代表真实用户或投递建议。']);
   if (run.report_note) notes.rows.unshift(['本轮说明', clean(run.report_note)]);
   const internalSheets=[coverage,notes];
@@ -274,6 +292,7 @@ export async function buildReportData(dir, {allowPartial = false} = {}) {
     if (count('excluded_city')) limitations.push(`另有 ${count('excluded_city')} 个岗位不在求职城市范围。`);
     if (bundle.company.company_id === 'company-5a06b98b2152' && bundle.company.selected) limitations.push('官方 RSS 仅提供最新 10 条岗位。');
     if (run.is_test) limitations.push('测试数据，不用于实际投递。');
+    if(run.replay_of)limitations.push('历史快照重新判断，未刷新招聘状态；资料日期见本表。');
     if (run.search_plan) limitations.push('定向检索：'+run.search_plan.target+'；标题词：'+run.search_plan.keywords.join('、')+'。仅覆盖本次候选公司和标题命中岗位，可能遗漏隐含机会。');
     publicCoverage.rows.push([bundle.company.display_name, !bundle.company.selected ? '未纳入' : ['获取失败', '尚未获取'].includes(bundle.status) ? '资料不足' : bundle.status === '部分获取' ? '部分岗位' : '已取得岗位范围', bundle.reviews.length, count('to_assess') - bundle.reviews.length, count('needs_verification') + count('missing_body'), limitations.join('\n') || '以所列岗位及资料日期为准。', bundle.data?.checked_at || '—']);
   }

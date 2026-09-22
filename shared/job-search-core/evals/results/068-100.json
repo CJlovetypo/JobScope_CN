@@ -1,0 +1,1767 @@
+[
+  {
+    "id": "068",
+    "actual_first_response": "可以帮你评，但“普通三年产品经理”不能代表你的实际能力。你只需给一段简短经历：做过什么产品、你具体负责什么、交付了什么结果；也请补充学历和实际正式工作年限。你是要评某几个已有岗位，还是找新岗位？若是找新岗位，再告诉我是校招、实习还是社招，以及想看的公司或行业。我可以先整理已有信息和所需材料。",
+    "goal": "match",
+    "recruitment": null,
+    "known_conditions": {
+      "recruitment": {
+        "state": "unspecified",
+        "value": null
+      },
+      "roles": {
+        "state": "explicit",
+        "value": [
+          "产品经理"
+        ],
+        "basis": "以三年产品经理作为评估参照"
+      },
+      "formal_work_years": {
+        "state": "unspecified",
+        "value": null
+      },
+      "profile": {
+        "state": "unspecified",
+        "value": null
+      },
+      "industries": {
+        "state": "unspecified",
+        "value": null
+      },
+      "cities": {
+        "state": "unspecified",
+        "value": null
+      },
+      "reference_archetype": {
+        "state": "explicit",
+        "value": "普通三年产品经理",
+        "basis": "用户要求按典型画像评估；不是本人事实"
+      }
+    },
+    "questions": [
+      "请简述一个真实项目的本人责任和成果，并补充学历、实际正式工作年限。",
+      "要评已有岗位，还是寻找新岗位？",
+      "若找新岗位，是校招、实习还是社招，想看哪些公司或行业？"
+    ],
+    "independent_actions": [
+      "整理已给出的产品经理评估意图，不把参照年限写成本人年限。",
+      "列出最小经历填写示例；若要发现新岗位，拟调用 industries 展示真实行业选项。"
+    ],
+    "next_stage": "取得真实经历及目标范围后，补方向最低画像；可先独立发现岗位。",
+    "limitations": [
+      "没有真实画像、JD、招聘方向或搜索范围，无法给个人匹配结论。"
+    ],
+    "issues_found": [
+      "“普通三年产品经理”既可能是自述年限，也可能只是请求采用典型水平；应保留歧义，不能直接生成三年工作事实。"
+    ]
+  },
+  {
+    "id": "069",
+    "actual_first_response": "我这边还没有看到岗位截图、链接或文字。请补发完整职责和要求，最好带公司、岗位名及招聘类型；如果截图只截了一部分，也请把剩余内容补上。再给我一段你的学历和相关经历，我会先拆出硬门槛、核心工作和待核实项，再判断是否值得投。仅凭“要求很多”还不能判断你不符合。",
+    "goal": "compare",
+    "recruitment": null,
+    "known_conditions": {
+      "recruitment": {
+        "state": "unspecified",
+        "value": null
+      },
+      "target_jd": {
+        "state": "unspecified",
+        "value": null,
+        "material_status": "missing"
+      },
+      "profile": {
+        "state": "unspecified",
+        "value": null
+      },
+      "industries": {
+        "state": "unspecified",
+        "value": null
+      },
+      "cities": {
+        "state": "unspecified",
+        "value": null
+      }
+    },
+    "questions": [
+      "请提供岗位链接、完整截图或 JD 文字。",
+      "请简述学历和与岗位相关的真实经历；有现成简历也可以提供。"
+    ],
+    "independent_actions": [
+      "准备按硬性资格、职责和未知条件拆解单个 JD 的比较框架。",
+      "收到 JD 后优先从材料识别招聘方向，不为单个岗位另问全市场行业。"
+    ],
+    "next_stage": "补齐指定 JD 和个人材料后进行单岗比较。",
+    "limitations": [
+      "本批未提供实际截图；标题所说“岗位截图”不等于附件存在。",
+      "尚无能力或资格判断依据。"
+    ],
+    "issues_found": []
+  },
+  {
+    "id": "070",
+    "actual_first_response": "文件名里的“资深运营”只能告诉我一个职能线索，不能证明你的责任和能力；我现在也没有拿到文件正文。请发简历，或简述一个运营项目中你负责的目标、动作和结果，并带上学历及实际工作年限。你要看校招、实习还是社招，目标公司或行业是什么？我可以先整理候选搜索范围，匹配度要等经历与完整 JD 对上后再判断。",
+    "goal": "match",
+    "recruitment": null,
+    "known_conditions": {
+      "recruitment": {
+        "state": "unspecified",
+        "value": null
+      },
+      "roles": {
+        "state": "explicit",
+        "value": [
+          "运营"
+        ],
+        "basis": "简历文件名含资深运营"
+      },
+      "seniority_label": {
+        "state": "explicit",
+        "value": "资深",
+        "basis": "文件名标签，不能当作已验证资历"
+      },
+      "industries": {
+        "state": "unspecified",
+        "value": null
+      },
+      "cities": {
+        "state": "unspecified",
+        "value": null
+      },
+      "profile": {
+        "state": "unspecified",
+        "value": null,
+        "material_status": "missing"
+      }
+    },
+    "questions": [
+      "请提供简历正文或一段本人责任、动作和成果，并补学历及实际工作年限。",
+      "这次看校招、实习还是社招？",
+      "希望看哪些公司或行业？"
+    ],
+    "independent_actions": [
+      "保留运营方向和资深标签的来源，区分标签与事实。",
+      "拟读取 industries 供选择；城市本轮不加过滤，记录为未指定。"
+    ],
+    "next_stage": "补真实画像及招聘范围后采集；正式评估前确定评估范围。",
+    "limitations": [
+      "文件名无法支持个人匹配评级。",
+      "未提供文件正文或指定 JD。"
+    ],
+    "issues_found": []
+  },
+  {
+    "id": "071",
+    "actual_first_response": "好，城市范围改为上海加杭州，互联网社招、原画像和每批 20 个的安排都沿用。我会先读取上一轮任务与岗位记录，保存这次条件修订，只补查杭州范围，再复用可用的上海 JD 和已完成结果；新增评估会去重，旧报告保留。杭州的覆盖情况会按社招来源单独说明。",
+    "goal": "match",
+    "recruitment": "social",
+    "known_conditions": {
+      "recruitment": {
+        "state": "inherited",
+        "value": "social",
+        "basis": "上一轮社招评估"
+      },
+      "industries": {
+        "state": "inherited",
+        "value": [
+          "互联网"
+        ],
+        "basis": "上一轮互联网行业"
+      },
+      "cities": {
+        "state": "explicit",
+        "value": [
+          "上海",
+          "杭州"
+        ],
+        "basis": "杭州也加上，上海沿用"
+      },
+      "profile": {
+        "state": "inherited",
+        "value": {
+          "valid": true,
+          "details": null
+        },
+        "basis": "上下文声明原画像有效，未提供画像正文"
+      },
+      "evaluation_scope": {
+        "state": "inherited",
+        "value": {
+          "batch_size": 20,
+          "total_scope": null
+        },
+        "basis": "用户已选择每批20个；上下文未声明总量"
+      }
+    },
+    "questions": [],
+    "independent_actions": [
+      "拟读取原任务、运行快照及既有评估范围。",
+      "拟保存新增杭州的任务修订，新运行补查杭州，复用符合契约的同方向 JD。",
+      "按原计划分批评估新增未评岗位，保留旧报告及上海结果。"
+    ],
+    "next_stage": "读取原任务并补采杭州社招岗位，再按原有范围继续评估。",
+    "limitations": [
+      "未提供原岗位清单、画像正文和运行文件，不能声称已经完成补采或去重。",
+      "“每批20个”不等于已经选定全量或总计20个。"
+    ],
+    "issues_found": []
+  },
+  {
+    "id": "072",
+    "actual_first_response": "继续取 20 个尚未评估的实习岗位，沿用原画像和筛选条件。我会按当前运行的岗位键排除刚才那 20 个，用同一批已采集 JD 继续全文评估；如果剩余不足 20 个，就按实际数量交付并说明，不会重复凑数。",
+    "goal": "match",
+    "recruitment": "internship",
+    "known_conditions": {
+      "recruitment": {
+        "state": "inherited",
+        "value": "internship",
+        "basis": "第一批为实习岗位"
+      },
+      "profile": {
+        "state": "inherited",
+        "value": {
+          "unchanged": true,
+          "details": null
+        },
+        "basis": "上下文声明画像未变化"
+      },
+      "search_conditions": {
+        "state": "inherited",
+        "value": {
+          "unchanged": true,
+          "details": null
+        },
+        "basis": "上下文声明筛选条件未变化"
+      },
+      "completed_count": {
+        "state": "inherited",
+        "value": 20,
+        "basis": "第一批20个已完成"
+      },
+      "evaluation_scope": {
+        "state": "explicit",
+        "value": {
+          "mode": "sample",
+          "limit": 20,
+          "selection": "remaining_unassessed"
+        },
+        "basis": "再来20个且不要重复"
+      }
+    },
+    "questions": [],
+    "independent_actions": [
+      "拟读取当前运行、已合并批次及未评估岗位键。",
+      "保留现有 JD 快照，按原选择规则建立下一批，剔除已评估项。",
+      "完成这一批全文评估后按实际数量交付。"
+    ],
+    "next_stage": "从当前运行剩余岗位建立下一批正式评估。",
+    "limitations": [
+      "未给出实际剩余数量和岗位键，不能声称已找到20个。",
+      "未请求最新数据，因此无需重采同一快照。"
+    ],
+    "issues_found": []
+  },
+  {
+    "id": "073",
+    "actual_first_response": "明白，评估范围扩大为本轮已采集岗位中剩下的全部，完成后一次性给你整份结果。我会沿用现有画像和筛选条件，内部仍分批读取完整 JD，但不再逐批让你选择或交付。范围只覆盖已展示的这轮来源，待核实和获取失败的部分会单独说明。",
+    "goal": "match",
+    "recruitment": "campus",
+    "known_conditions": {
+      "recruitment": {
+        "state": "inherited",
+        "value": "campus",
+        "basis": "当前为校招评估"
+      },
+      "conditions": {
+        "state": "inherited",
+        "value": {
+          "complete": true,
+          "details": null
+        },
+        "basis": "其余条件完整"
+      },
+      "first_batch_completed": {
+        "state": "inherited",
+        "value": 10,
+        "basis": "已交付首批10个"
+      },
+      "evaluation_scope": {
+        "state": "explicit",
+        "value": {
+          "mode": "all",
+          "universe": "current_collected_run"
+        },
+        "basis": "剩下的全部评完"
+      },
+      "delivery": {
+        "state": "explicit",
+        "value": "完成后一次性交付",
+        "basis": "不用再分批给我看"
+      }
+    },
+    "questions": [],
+    "independent_actions": [
+      "拟读取当前采集母集、已评估岗位和剩余状态。",
+      "保存评估范围变更，沿用当前 JD 快照并评估所有剩余可评项。",
+      "合并旧批次与新评估，检查 remaining=0 后生成完整交付。"
+    ],
+    "next_stage": "完成当前已采集范围的所有剩余评估后统一交付。",
+    "limitations": [
+      "不代表全网岗位全部评估。",
+      "上下文未给出实际剩余数量，不能预报结果或称完成。"
+    ],
+    "issues_found": []
+  },
+  {
+    "id": "074",
+    "actual_first_response": "好，把“排除销售”改为“可以接受销售”，其他能力事实和条件沿用。我会用刚才那批 JD 重新判断整批岗位的资格、能力和意愿，销售能接受也不等于能力一定匹配。此次会保存新版本评估并保留旧报告，不扩大到新一轮搜索。",
+    "goal": "match",
+    "recruitment": "social",
+    "known_conditions": {
+      "recruitment": {
+        "state": "inherited",
+        "value": "social",
+        "basis": "上一轮社招报告"
+      },
+      "sales_preference": {
+        "state": "explicit",
+        "value": "acceptable",
+        "basis": "用户现在接受销售"
+      },
+      "previous_sales_preference": {
+        "state": "inherited",
+        "value": "excluded",
+        "basis": "上一轮排除了销售"
+      },
+      "profile": {
+        "state": "inherited",
+        "value": {
+          "available": true,
+          "details": null
+        },
+        "basis": "上下文声明画像可用"
+      },
+      "jd_snapshot": {
+        "state": "inherited",
+        "value": {
+          "available": true,
+          "details": null
+        },
+        "basis": "上下文声明JD快照可用"
+      },
+      "evaluation_scope": {
+        "state": "explicit",
+        "value": "刚才那批",
+        "basis": "重新看看刚才那批"
+      }
+    },
+    "questions": [],
+    "independent_actions": [
+      "拟保存意愿变更的任务与画像修订，保留原能力事实。",
+      "建立新运行复用原批次 JD，并按新画像指纹重新评估，不挪用旧评级。",
+      "保留旧报告，解释因意愿变化而改变或不改变的结论。"
+    ],
+    "next_stage": "对指定旧批次进行新版本全文复评。",
+    "limitations": [
+      "销售接受度改变不能自动改变能力或资格结论。",
+      "未提供实际批次内容，不能指认哪些岗位已变为可投。"
+    ],
+    "issues_found": []
+  },
+  {
+    "id": "075",
+    "actual_first_response": "我会沿用原来的社招条件、画像和评估范围，重新查询今天（2026 年 9 月 22 日，北京时间）的公开岗位，并保存新一轮结果。会重新核对岗位内容和开放状态，标出新增、变化及本次未见的岗位；来源失败或分页不完整时，不会把没查到直接当成下架。",
+    "goal": "match",
+    "recruitment": "social",
+    "known_conditions": {
+      "recruitment": {
+        "state": "inherited",
+        "value": "social",
+        "basis": "三天前的社招报告"
+      },
+      "profile": {
+        "state": "inherited",
+        "value": {
+          "unchanged": true,
+          "details": null
+        },
+        "basis": "上下文画像未变"
+      },
+      "search_conditions": {
+        "state": "inherited",
+        "value": {
+          "complete": true,
+          "unchanged": true,
+          "details": null
+        },
+        "basis": "原完整条件"
+      },
+      "evaluation_scope": {
+        "state": "inherited",
+        "value": {
+          "unchanged": true,
+          "details": null
+        },
+        "basis": "上下文范围未变"
+      },
+      "refresh": {
+        "state": "explicit",
+        "value": {
+          "requested": true,
+          "as_of": "2026-09-22",
+          "timezone": "Asia/Shanghai"
+        },
+        "basis": "用户明确要今天最新"
+      }
+    },
+    "questions": [],
+    "independent_actions": [
+      "拟读取旧任务、范围和快照，保存 refresh 修订。",
+      "建立刷新运行，重新请求原范围公开来源，记录实际采集时间和覆盖。",
+      "对新快照按原范围评估并与旧报告比较，不把旧缓存日期改成今天。"
+    ],
+    "next_stage": "刷新原范围并完成本轮评估交付。",
+    "limitations": [
+      "尚未执行刷新，无法保证某个岗位今天仍开放。",
+      "最新公开查询不等于实时覆盖全市场。"
+    ],
+    "issues_found": []
+  },
+  {
+    "id": "076",
+    "actual_first_response": "这里有两件事待继续：实习岗位匹配，以及还没定执行时间的岗位提醒。你指的是哪一件？我会先整理各自已经明确的条件，确认后接着做；如果是提醒，只需再确定缺少的执行时刻。",
+    "goal": "clarify",
+    "recruitment": null,
+    "known_conditions": {
+      "candidate_tasks": {
+        "state": "inherited",
+        "value": [
+          "实习岗位匹配",
+          "未设置执行时间的雷达订阅"
+        ],
+        "basis": "上下文中同时存在两项未完成任务"
+      },
+      "match_recruitment": {
+        "state": "inherited",
+        "value": "internship",
+        "basis": "仅岗位匹配任务明确为实习"
+      },
+      "radar_recruitment": {
+        "state": "unspecified",
+        "value": null
+      },
+      "radar_schedule": {
+        "state": "unspecified",
+        "value": null
+      }
+    },
+    "questions": [
+      "“继续”是继续实习岗位匹配，还是设置岗位提醒？"
+    ],
+    "independent_actions": [
+      "分别整理两个任务的已知信息和待办，不合并条件。",
+      "定位两份任务记录的读取计划，暂不启动采集、评估或调度。"
+    ],
+    "next_stage": "先确认所指任务，再进入对应续跑阶段。",
+    "limitations": [
+      "不能把实习匹配方向自动继承为另一个雷达任务的方向。",
+      "输入未给出两个任务的实际记录。"
+    ],
+    "issues_found": [
+      "初读时 goal 枚举缺少多个可能任务下的未决状态；父任务已增加 clarify 和相应执行阻塞，本案例按修订后的契约处理。"
+    ]
+  },
+  {
+    "id": "077",
+    "actual_first_response": "好，切换到社招，原有毕业时间和真实项目经历可以沿用。我会先整理可迁移的职责与成果，并单独建立社招任务。你有多少年正式工作经历（没有也可以填 0），最近一次实际负责了什么、交付了什么？目前是在职看机会还是离职求职？旧材料能读到的学历等信息不会让你重填，岗位和城市证据会按社招重新核实。",
+    "goal": "match",
+    "recruitment": "social",
+    "known_conditions": {
+      "recruitment": {
+        "state": "explicit",
+        "value": "social",
+        "basis": "用户明确从校招切换社招"
+      },
+      "previous_recruitment": {
+        "state": "inherited",
+        "value": "campus",
+        "basis": "此前校招评估"
+      },
+      "graduation_time": {
+        "state": "inherited",
+        "value": {
+          "recorded": true,
+          "value": null
+        },
+        "basis": "已记录毕业时间但未提供具体值"
+      },
+      "project_experience": {
+        "state": "inherited",
+        "value": {
+          "recorded": true,
+          "details": null
+        },
+        "basis": "已有真实项目记录但未提供正文"
+      },
+      "formal_work_years": {
+        "state": "unspecified",
+        "value": null
+      },
+      "current_arrangement": {
+        "state": "unspecified",
+        "value": null
+      },
+      "education": {
+        "state": "unspecified",
+        "value": null
+      },
+      "industries": {
+        "state": "unspecified",
+        "value": null
+      },
+      "cities": {
+        "state": "unspecified",
+        "value": null
+      }
+    },
+    "questions": [
+      "正式工作年限是多少？最近一次真实工作中，你具体负责什么、交付过什么？",
+      "目前是在职看机会还是离职求职？"
+    ],
+    "independent_actions": [
+      "拟读取原任务与真实材料，沿用其中可定位的事实和未改变的偏好。",
+      "建立独立社招任务与运行计划，按社招重新解析招聘身份、JD及城市证据。",
+      "若旧任务未记录行业，拟读取 industries 再补范围；读取画像后仅补仍缺失的学历等最低字段。"
+    ],
+    "next_stage": "读取原材料并补社招最低画像，再按独立方向执行。",
+    "limitations": [
+      "不能因有实习或项目经历就推算正式年限。",
+      "缺少旧材料正文，无法判断学历和行业是否已包含；不能虚构其值。",
+      "工作安排并非所有社招评估的硬性前提，只记录真实回答。"
+    ],
+    "issues_found": []
+  },
+  {
+    "id": "078",
+    "actual_first_response": "按新课表改为每周最多 3 天、最长 4 个月，原来的 5 天和 6 个月不再用于推荐。我会重新核对之前每个岗位对天数和时长的要求，再看原有能力与其他条件；明确不满足的会指出，JD 没写清楚的列为待确认。现在还不能直接说哪些能投，需要先读取原推荐清单和完整 JD。",
+    "goal": "compare",
+    "recruitment": "internship",
+    "known_conditions": {
+      "recruitment": {
+        "state": "inherited",
+        "value": "internship",
+        "basis": "上一轮实习画像"
+      },
+      "availability": {
+        "state": "explicit",
+        "value": {
+          "days_per_week": 3,
+          "max_months": 4,
+          "start_date": null
+        },
+        "basis": "一周只能3天、最多4个月；开始日期未提供"
+      },
+      "previous_availability": {
+        "state": "inherited",
+        "value": {
+          "days_per_week": 5,
+          "months": 6
+        },
+        "basis": "原实习画像"
+      },
+      "evaluation_scope": {
+        "state": "explicit",
+        "value": "此前推荐岗位",
+        "basis": "询问之前推荐还有哪些能投"
+      },
+      "profile": {
+        "state": "inherited",
+        "value": {
+          "previous_exists": true,
+          "details": null
+        },
+        "basis": "上下文只说明原画像部分条件"
+      }
+    },
+    "questions": [],
+    "independent_actions": [
+      "拟保存到岗条件更正并保留其他真实画像字段与旧报告。",
+      "读取此前推荐及完整 JD，建立新运行按变化后的画像重新评估指定范围。",
+      "分别核对每周天数与持续月份；未披露要求标为未知，必要时针对具体岗位补问。"
+    ],
+    "next_stage": "对原推荐清单进行实习可用性复评。",
+    "limitations": [
+      "未提供旧推荐清单、JD 和开始日期，不能确认可投数量。",
+      "天数和月数不能合并为一个总体“时间满足”。"
+    ],
+    "issues_found": []
+  },
+  {
+    "id": "079",
+    "actual_first_response": "我这里没有上个月的对话、运行记录或报告，暂时无法还原原条件。请提供那份报告、文件路径或其中的岗位清单；如果找不到，先告诉我当时看的是校招、实习还是社招，以及目标公司或行业。我可以先把你补充的条件整理成续跑记录，再核对哪些已评过，避免重复。",
+    "goal": "match",
+    "recruitment": null,
+    "known_conditions": {
+      "recruitment": {
+        "state": "unspecified",
+        "value": null
+      },
+      "history": {
+        "state": "unspecified",
+        "value": null,
+        "material_status": "missing"
+      },
+      "previous_period": {
+        "state": "explicit",
+        "value": "2026-08",
+        "basis": "相对本轮2026-09-22的上个月"
+      },
+      "industries": {
+        "state": "unspecified",
+        "value": null
+      },
+      "cities": {
+        "state": "unspecified",
+        "value": null
+      },
+      "profile": {
+        "state": "unspecified",
+        "value": null
+      },
+      "evaluation_scope": {
+        "state": "unspecified",
+        "value": null
+      }
+    },
+    "questions": [
+      "能提供上个月的报告、运行目录或岗位清单吗？",
+      "如果材料找不到，当时是哪种招聘方向，目标公司或行业是什么？"
+    ],
+    "independent_actions": [
+      "整理已知的历史时间线及缺失项，不声称记得原条件。",
+      "收到最小条件后拟读取来源目录；若无历史，仅能建立新任务，不能假称续上已完成进度。"
+    ],
+    "next_stage": "恢复历史目标与范围；无法恢复则明确建立新任务。",
+    "limitations": [
+      "当前环境明确没有可读历史，不能继承原画像、筛选条件或评估进度。",
+      "“结果”本身不能完全确定原任务是否为匹配，恢复材料后需核实目标。"
+    ],
+    "issues_found": []
+  },
+  {
+    "id": "080",
+    "actual_first_response": "可以继续社招方向，但武汉地点需要用这家公司社招渠道的证据确认。上一轮只证明校招查到武汉岗位，不能据此认定社招也在武汉，或校招全部都在武汉。我会先定位原公司主体和社招入口，再核对对应城市标签与 JD；若仍不明确，会把地点列为待核实。",
+    "goal": "match",
+    "recruitment": "social",
+    "known_conditions": {
+      "recruitment": {
+        "state": "explicit",
+        "value": "social",
+        "basis": "用户要求继续社招评估"
+      },
+      "companies": {
+        "state": "inherited",
+        "value": {
+          "referred_company": true,
+          "id": null,
+          "name": null
+        },
+        "basis": "上下文只称某公司"
+      },
+      "requested_city": {
+        "state": "explicit",
+        "value": [
+          "武汉"
+        ],
+        "basis": "用户希望社招按武汉处理；岗位事实尚未验证"
+      },
+      "campus_city_evidence": {
+        "state": "inherited",
+        "value": "曾查到武汉岗位",
+        "basis": "上一轮仅校招方向有证据"
+      },
+      "social_city_evidence": {
+        "state": "unspecified",
+        "value": null
+      },
+      "profile": {
+        "state": "unspecified",
+        "value": null
+      }
+    },
+    "questions": [],
+    "independent_actions": [
+      "拟定位原公司主体及独立社招任务，核验方向专属来源和城市标签。",
+      "社招首次缺城市索引时按初始化规则建立，不复用校招城市索引。",
+      "读取真实社招 JD 及原画像，检查当前范围与材料缺口；未核实地点不写成满足。"
+    ],
+    "next_stage": "先核验社招地点证据，再推进可评岗位。",
+    "limitations": [
+      "上下文并未给出公司名称、画像和实际社招来源。",
+      "当前城市硬筛可能因社招标签未知而排除来源，届时只能说明标签未命中，不能声称无武汉社招。"
+    ],
+    "issues_found": []
+  },
+  {
+    "id": "081",
+    "actual_first_response": "可以用岗位雷达每天关注新机会，不需要先交简历。你关注哪些岗位方向、行业或公司，选一项就可以？看校招、实习还是社招？每天希望北京时间几点检查？范围确定后可以先做首轮检索，具体时刻确定并且调度创建成功后才算启用每日提醒；命中关注条件还不等于已经完成个人匹配。",
+    "goal": "radar",
+    "recruitment": null,
+    "known_conditions": {
+      "radar_action": {
+        "state": "explicit",
+        "value": "create",
+        "basis": "每天看看新岗位"
+      },
+      "target": {
+        "state": "unspecified",
+        "value": null
+      },
+      "recruitment": {
+        "state": "unspecified",
+        "value": null
+      },
+      "cities": {
+        "state": "unspecified",
+        "value": null
+      },
+      "schedule": {
+        "state": "explicit",
+        "value": {
+          "frequency": "daily",
+          "time": null,
+          "timezone": "Asia/Shanghai"
+        },
+        "basis": "每天；时区沿用当前用户环境"
+      },
+      "notification": {
+        "state": "explicit",
+        "value": "有新机会时提醒",
+        "basis": "关注有没有合适的新岗位"
+      }
+    },
+    "questions": [
+      "关注什么岗位方向、行业或公司？至少提供一项即可。",
+      "看校招、实习还是社招？",
+      "每天北京时间几点检查？"
+    ],
+    "independent_actions": [
+      "拟读取岗位雷达行业、公司目录，提供真实可选范围。",
+      "拟检查已有订阅，避免重复；只整理待完善的配置，不假建真实订阅。",
+      "目标和招聘方向明确后可先首轮检索，时间确定后再创建调度。"
+    ],
+    "next_stage": "补目标、招聘类型和精确时刻；范围就绪后首轮检索并配置每日调度。",
+    "limitations": [
+      "尚无可执行搜索目标或类型，不能声称已启动。",
+      "无简历的雷达输出是条件命中候选，不能声称最适合本人。"
+    ],
+    "issues_found": []
+  },
+  {
+    "id": "082",
+    "actual_first_response": "可以，关注米哈游的新岗位，城市本轮先不加过滤。你要看校招、实习还是社招？每天北京时间几点检查？我会先核对来源库中的米哈游主体及覆盖；类型明确后即可首轮检索，调度确认成功后再说明每日提醒已启用。有新增、实质变化或采集失败时提醒，没有变化就保持安静。",
+    "goal": "radar",
+    "recruitment": null,
+    "known_conditions": {
+      "radar_action": {
+        "state": "explicit",
+        "value": "create",
+        "basis": "每天盯一下"
+      },
+      "companies": {
+        "state": "explicit",
+        "value": [
+          "米哈游"
+        ],
+        "basis": "用户指定公司，真实公司ID待解析"
+      },
+      "recruitment": {
+        "state": "unspecified",
+        "value": null
+      },
+      "cities": {
+        "state": "unspecified",
+        "value": null
+      },
+      "roles": {
+        "state": "unspecified",
+        "value": null
+      },
+      "industries": {
+        "state": "unspecified",
+        "value": null
+      },
+      "schedule": {
+        "state": "explicit",
+        "value": {
+          "frequency": "daily",
+          "time": null,
+          "timezone": "Asia/Shanghai"
+        },
+        "basis": "每天；时区来自当前环境"
+      }
+    },
+    "questions": [
+      "关注米哈游的校招、实习还是社招？",
+      "每天北京时间几点检查？"
+    ],
+    "independent_actions": [
+      "拟用 catalog 解析米哈游的真实公司主体、ID及来源覆盖。",
+      "拟查已有订阅防止重复；公司单独构成目标，无需额外索要行业和简历。",
+      "类型明确后首轮检索，时间明确后创建对应调度。"
+    ],
+    "next_stage": "补招聘类型，完成公司范围首轮检索，再配置精确时间。",
+    "limitations": [
+      "米哈游是否被当前来源覆盖尚未核查，不能保证查全公司岗位。",
+      "实际调度工具未调用，不能声称已启用。"
+    ],
+    "issues_found": []
+  },
+  {
+    "id": "083",
+    "actual_first_response": "按银行行业关注新机会即可，不用先定岗位或提供简历。你关注校招、实习还是社招？希望多久检查一次、北京时间什么时刻检查？我会先核对来源库的银行分类及覆盖。提醒只在新增、实质变化或采集失败时出现；首次检索收录的岗位会标为初始基线，不冒称当天发布。",
+    "goal": "radar",
+    "recruitment": null,
+    "known_conditions": {
+      "radar_action": {
+        "state": "explicit",
+        "value": "create",
+        "basis": "有新机会时提醒"
+      },
+      "industries": {
+        "state": "explicit",
+        "value": [
+          "银行"
+        ],
+        "basis": "用户指定银行，行业ID待解析"
+      },
+      "recruitment": {
+        "state": "unspecified",
+        "value": null
+      },
+      "cities": {
+        "state": "unspecified",
+        "value": null
+      },
+      "roles": {
+        "state": "unspecified",
+        "value": null
+      },
+      "schedule": {
+        "state": "unspecified",
+        "value": null
+      },
+      "timezone": {
+        "state": "inherited",
+        "value": "Asia/Shanghai",
+        "basis": "用户当前环境"
+      },
+      "notification": {
+        "state": "explicit",
+        "value": "仅有变化时提醒",
+        "basis": "有新机会的时候提醒就好"
+      }
+    },
+    "questions": [
+      "关注银行的校招、实习还是社招？",
+      "希望多久检查一次、北京时间什么时刻检查？"
+    ],
+    "independent_actions": [
+      "拟调用 industries/catalog 解析银行行业，不默认为所有金融企业。",
+      "拟检查已有银行订阅并记录只在变化时提醒的要求。",
+      "类型和范围确定后可先建立首轮基线，调度频率与时刻确定后再启用。"
+    ],
+    "next_stage": "补招聘类型与检查安排后建立银行雷达。",
+    "limitations": [
+      "尚不能确定来源库银行分类覆盖哪些机构。",
+      "“首次发现”不等于真实发布时间；没有变化不发送例行日报。"
+    ],
+    "issues_found": []
+  },
+  {
+    "id": "084",
+    "actual_first_response": "已明确每天北京时间 9:00，关注上海的数据分析岗位。只需补一项：看校招、实习还是社招？我会先整理“数据分析、数据分析师”等候选标题词并核对公开来源；类型确定后完成首轮检索和调度设置。未指定行业，这个提醒就按岗位方向建立；有变化再提醒，没有变化保持安静。",
+    "goal": "radar",
+    "recruitment": null,
+    "known_conditions": {
+      "radar_action": {
+        "state": "explicit",
+        "value": "create",
+        "basis": "每天查看新岗位"
+      },
+      "roles": {
+        "state": "explicit",
+        "value": [
+          "数据分析"
+        ],
+        "basis": "用户明确职能"
+      },
+      "cities": {
+        "state": "explicit",
+        "value": [
+          "上海"
+        ],
+        "basis": "用户明确城市"
+      },
+      "recruitment": {
+        "state": "unspecified",
+        "value": null
+      },
+      "industries": {
+        "state": "unspecified",
+        "value": null
+      },
+      "schedule": {
+        "state": "explicit",
+        "value": {
+          "frequency": "daily",
+          "time": "09:00",
+          "timezone": "Asia/Shanghai"
+        },
+        "basis": "每天北京时间早上九点"
+      }
+    },
+    "questions": [
+      "关注校招、实习还是社招？"
+    ],
+    "independent_actions": [
+      "拟整理数据分析及同义标题词，保留行业未指定状态。",
+      "拟定位已有对应提醒，检查来源覆盖与调度重复。",
+      "招聘类型明确后首轮检索并建立该时间的调度。"
+    ],
+    "next_stage": "补唯一必要的招聘类型，然后首轮检索与调度。",
+    "limitations": [
+      "岗位标题词命中不是个人匹配。",
+      "没有实际首轮或调度结果，不能称已建立。"
+    ],
+    "issues_found": [
+      "初读时通用行业必问与雷达单职能目标规则冲突；父任务已修订为雷达例外，本案例按修订规则仅补招聘类型。"
+    ]
+  },
+  {
+    "id": "085",
+    "actual_first_response": "关注杭州的产品社招，可以先按“产品经理、产品专员”等相关标题词整理首轮检索，具体职责仍以 JD 为准。“每天上午”还缺精确时刻：北京时间上午几点？你希望每天都看一眼，我会按每日摘要安排；在时间和调度确认前，只能完成首轮结果，不能称定时提醒已经启用。",
+    "goal": "radar",
+    "recruitment": "social",
+    "known_conditions": {
+      "radar_action": {
+        "state": "explicit",
+        "value": "create",
+        "basis": "盯着岗位，每天给看一眼"
+      },
+      "recruitment": {
+        "state": "explicit",
+        "value": "social",
+        "basis": "产品社招"
+      },
+      "roles": {
+        "state": "explicit",
+        "value": [
+          "产品"
+        ],
+        "basis": "用户指定产品岗位"
+      },
+      "cities": {
+        "state": "explicit",
+        "value": [
+          "杭州"
+        ],
+        "basis": "用户指定杭州"
+      },
+      "industries": {
+        "state": "unspecified",
+        "value": null
+      },
+      "schedule": {
+        "state": "explicit",
+        "value": {
+          "frequency": "daily",
+          "period": "morning",
+          "time": null,
+          "timezone": "Asia/Shanghai"
+        },
+        "basis": "每天上午；时区来自当前环境"
+      },
+      "notification": {
+        "state": "explicit",
+        "value": "daily_digest",
+        "basis": "每天给我看一眼"
+      }
+    },
+    "questions": [
+      "每天北京时间上午几点检查并给你看摘要？"
+    ],
+    "independent_actions": [
+      "拟按岗位雷达规则整理产品职能及近义标题词，核对来源覆盖。",
+      "拟查重并执行满足条件的首轮检索；不等待精确时刻才开展独立搜索。",
+      "精确时刻确定后创建调度，保存每日摘要这一明确交付偏好。"
+    ],
+    "next_stage": "首轮检索可继续；补具体时刻后设置每日调度。",
+    "limitations": [
+      "不能把“上午”自动定为09:00，用户尚未授权代定时间。",
+      "没有个人材料，不作能力评级。"
+    ],
+    "issues_found": [
+      "行业规则的初始歧义已由父任务修订；本案例无需追加行业问题。",
+      "“每天给我看一眼”按每日摘要解释，而非只有变化才提醒。"
+    ]
+  },
+  {
+    "id": "086",
+    "actual_first_response": "会分别建立上海产品实习和上海产品校招两个提醒，每天各查一次，岗位和历史记录分开保存。每天希望北京时间几点检查？在时间确定前，我可以先整理产品岗位的近义标题词并准备两类首轮检索；不需要先交简历。调度成功后再确认启用，有变化或采集问题再提醒。",
+    "goal": "radar",
+    "recruitment": [
+      "internship",
+      "campus"
+    ],
+    "known_conditions": {
+      "radar_action": {
+        "state": "explicit",
+        "value": "create",
+        "basis": "两种类型都盯着"
+      },
+      "recruitment": {
+        "state": "explicit",
+        "value": [
+          "internship",
+          "campus"
+        ],
+        "basis": "产品实习和产品校招"
+      },
+      "roles": {
+        "state": "explicit",
+        "value": [
+          "产品"
+        ],
+        "basis": "用户指定产品"
+      },
+      "cities": {
+        "state": "explicit",
+        "value": [
+          "上海"
+        ],
+        "basis": "用户指定上海"
+      },
+      "industries": {
+        "state": "unspecified",
+        "value": null
+      },
+      "schedule": {
+        "state": "explicit",
+        "value": {
+          "frequency": "daily",
+          "time": null,
+          "timezone": "Asia/Shanghai"
+        },
+        "basis": "每天查一次；时区来自当前环境"
+      }
+    },
+    "questions": [
+      "每天北京时间几点检查？"
+    ],
+    "independent_actions": [
+      "拟分别建立 internship 与 campus 任务和订阅配置，不把两个类型写入单一订阅。",
+      "分别核对来源、标题词和城市证据，先准备或执行两类首轮检索。",
+      "查重后在给定时间创建对应调度，保留各自历史与来源缺口。"
+    ],
+    "next_stage": "两方向独立首轮检索；精确时间就绪后配置调度。",
+    "limitations": [
+      "外层结果用数组表达用户多方向意图，实际任务契约要求拆成两个单值 recruitment。",
+      "未提供或执行任何订阅与调度结果。"
+    ],
+    "issues_found": [
+      "行业规则初始歧义已由父任务修订；本案例按雷达职能目标规则执行。"
+    ]
+  },
+  {
+    "id": "087",
+    "actual_first_response": "先定位你说的游戏岗位提醒，再改范围。请给订阅名称或最近一次提醒；“放宽”希望改城市、岗位方向、公司/行业，还是取消某个排除条件？我会先读取原配置，把具体差异列清楚，沿用没改的时间和条件，并保留旧版本历史，不会直接扩大成全行业提醒。",
+    "goal": "radar",
+    "recruitment": null,
+    "known_conditions": {
+      "radar_action": {
+        "state": "explicit",
+        "value": "update",
+        "basis": "把已有提醒放宽"
+      },
+      "target": {
+        "state": "explicit",
+        "value": "游戏岗位提醒",
+        "basis": "仅有模糊称呼，订阅ID未知"
+      },
+      "recruitment": {
+        "state": "unspecified",
+        "value": null
+      },
+      "expansion": {
+        "state": "unspecified",
+        "value": null
+      },
+      "schedule": {
+        "state": "unspecified",
+        "value": null
+      }
+    },
+    "questions": [
+      "是哪条游戏岗位提醒？请提供名称或最近一次提醒。",
+      "要放宽城市、岗位方向、公司/行业，还是取消某个排除条件？"
+    ],
+    "independent_actions": [
+      "拟只读列出现有订阅及配置，按游戏线索寻找候选。",
+      "整理可能的改动维度；只有确认目标和改动后才保存新版本。",
+      "保留旧历史与未改条件，新范围首轮作为新版本基线。"
+    ],
+    "next_stage": "定位订阅并澄清具体范围变化后更新。",
+    "limitations": [
+      "没有现成订阅或历史结果，不能假定只有一条游戏订阅。",
+      "新范围首次收录不能冒称真正新发布。"
+    ],
+    "issues_found": []
+  },
+  {
+    "id": "088",
+    "actual_first_response": "可以调整提醒。你指哪一条，还是全部岗位提醒？这次是只停止通知、继续记录岗位变化，还是连每日检查也暂停？我会先读取现有订阅和关联调度，按你选的范围处理；没有明确恢复日期时，不自行安排恢复。",
+    "goal": "radar",
+    "recruitment": null,
+    "known_conditions": {
+      "radar_action": {
+        "state": "conflict",
+        "value": [
+          "mute",
+          "pause"
+        ],
+        "basis": "别给我推可能是仅停止通知或停止检查"
+      },
+      "target": {
+        "state": "unspecified",
+        "value": null
+      },
+      "resume_time": {
+        "state": "unspecified",
+        "value": null
+      }
+    },
+    "questions": [
+      "要停哪条岗位提醒，还是全部提醒？",
+      "是只停止通知，还是同时暂停每日检查？"
+    ],
+    "independent_actions": [
+      "拟只读列出现有订阅及对应调度，定位可操作对象。",
+      "整理 mute 与 pause 的执行差异；未明确范围前不修改全部订阅。",
+      "若暂停，计划同时处理本地订阅和宿主调度；若静音，则保持采集并调整通知策略。"
+    ],
+    "next_stage": "确认对象及停止通知/暂停检查的具体意图后更新。",
+    "limitations": [
+      "无订阅列表，不能声称已经停止推送。",
+      "“最近”不是可据以自动恢复的确定时间。"
+    ],
+    "issues_found": []
+  },
+  {
+    "id": "089",
+    "actual_first_response": "可以把今天提醒里的这几个做个人比较。请发那条提醒、岗位链接或清单；我目前没有看到这些岗位。再提供简历或一段真实经历，至少说明学历、你实际负责的工作和结果。我会先取得各岗位完整 JD、核对招聘类型，再补对应方向缺少的信息；之前的雷达命中只说明符合关注条件，还不能排出谁最适合你。",
+    "goal": "compare",
+    "recruitment": null,
+    "known_conditions": {
+      "candidate_set": {
+        "state": "explicit",
+        "value": "今天提醒中的这几个",
+        "basis": "2026-09-22的有限候选，内容未提供"
+      },
+      "recruitment": {
+        "state": "unspecified",
+        "value": null
+      },
+      "profile": {
+        "state": "unspecified",
+        "value": null
+      },
+      "jd_snapshot": {
+        "state": "unspecified",
+        "value": null
+      },
+      "industries": {
+        "state": "unspecified",
+        "value": null
+      },
+      "evaluation_scope": {
+        "state": "explicit",
+        "value": "指定提醒中的候选",
+        "basis": "用户限定这几个"
+      }
+    },
+    "questions": [
+      "请提供今天的提醒、岗位链接或清单。",
+      "请提供简历或简述学历及真实工作/项目中的本人责任与成果。"
+    ],
+    "independent_actions": [
+      "拟定位该次雷达报告、岗位键及完整 JD，沿用报告中实际可读的招聘类型。",
+      "按指定候选集准备比较，不扩大搜索或强制选择全市场行业。",
+      "取得真实画像后新建匹配任务；雷达标签不作为个人评级。"
+    ],
+    "next_stage": "读取有限候选与真实画像，按方向补最低缺项后比较。",
+    "limitations": [
+      "未提供报告、JD 或个人画像，不能指认最佳岗位。",
+      "需要正式Excel时仍需满足来源及运行契约。"
+    ],
+    "issues_found": []
+  },
+  {
+    "id": "090",
+    "actual_first_response": "你指哪条岗位提醒或哪些公司？请发订阅名或那次报告，我会按北京时间上周（9 月 14 日至 20 日）回看首次收录记录，再核对当前公开状态。历史“首次发现”不一定是发布日；当前没看到也不能直接说已下架，尤其是接口失败或采集不完整时。",
+    "goal": "radar",
+    "recruitment": null,
+    "known_conditions": {
+      "radar_action": {
+        "state": "explicit",
+        "value": "history",
+        "basis": "回看上周岗位并核对当前状态"
+      },
+      "period": {
+        "state": "explicit",
+        "value": {
+          "start": "2026-09-14",
+          "end": "2026-09-20",
+          "timezone": "Asia/Shanghai"
+        },
+        "basis": "按当前2026-09-22解释上周"
+      },
+      "target": {
+        "state": "unspecified",
+        "value": null
+      },
+      "recruitment": {
+        "state": "unspecified",
+        "value": null
+      },
+      "status_check": {
+        "state": "explicit",
+        "value": true,
+        "basis": "有没有已经没了"
+      }
+    },
+    "questions": [
+      "要回看哪条订阅或哪些公司？请提供订阅名或之前的报告。"
+    ],
+    "independent_actions": [
+      "拟先列订阅并读取指定时间范围的运行与事件历史。",
+      "定位目标后重新查询同一范围，按岗位键比较，并分别标记明确关闭、本次未见和未能核实。",
+      "保留采集失败与分页缺口，不由缺失结果推断消失。"
+    ],
+    "next_stage": "定位订阅，回看上周事件并核对当前状态。",
+    "limitations": [
+      "本轮没有订阅、报告和历史数据库内容，不能列出真实岗位。",
+      "本地首次收录不等于真实发布日期。"
+    ],
+    "issues_found": []
+  },
+  {
+    "id": "091",
+    "actual_first_response": "请把打不开的链接发来，或给上次报告里对应的公司/岗位那一行。我会先从原报告和历史来源记录定位同一招聘主体、招聘方向及故障，再验证可替代入口。只拿到公司列表入口时会明确说明；同主体、同方向的新地址验证通过后，才按这次修复请求更新对应配置并保留回滚信息。",
+    "goal": "repair",
+    "recruitment": null,
+    "known_conditions": {
+      "repair_action": {
+        "state": "explicit",
+        "value": "repair",
+        "basis": "用户明确修一下"
+      },
+      "repair_access": {
+        "state": "explicit",
+        "value": "apply_after_verification",
+        "basis": "允许修复对应来源，需先验证主体方向"
+      },
+      "target": {
+        "state": "unspecified",
+        "value": null
+      },
+      "recruitment": {
+        "state": "unspecified",
+        "value": null
+      },
+      "old_url": {
+        "state": "unspecified",
+        "value": null
+      },
+      "history": {
+        "state": "unspecified",
+        "value": null
+      }
+    },
+    "questions": [
+      "请提供失效链接，或上次报告中对应的公司/岗位记录。"
+    ],
+    "independent_actions": [
+      "拟读取可用旧报告、来源失败记录及本地历史索引，优先从链接反查主体。",
+      "主体和方向确定后仅验证少量有证据候选，分别检查入口、列表及JD能力。",
+      "符合授权范围才保存新旧差异并应用，保留原记录和回滚证据。"
+    ],
+    "next_stage": "先定位失效链接与主体，再做最小验证和范围内修复。",
+    "limitations": [
+      "没有实际链接、公司或历史报告，无法给出已确认的新入口。",
+      "打不开可能是网络、结束项目或岗位下架，并非都需要修改来源。"
+    ],
+    "issues_found": []
+  },
+  {
+    "id": "092",
+    "actual_first_response": "“华润”可能指集团入口，也可能是不同下属公司。你还记得完整公司名、岗位，或能提供旧链接吗？我会先在现有历史和来源目录里查“华润”的候选，按主体分别列出，再核对官方入口及招聘方向；不会随便用一家子公司的入口替代。",
+    "goal": "repair",
+    "recruitment": null,
+    "known_conditions": {
+      "repair_action": {
+        "state": "explicit",
+        "value": "find_entry",
+        "basis": "找回招聘入口"
+      },
+      "target": {
+        "state": "explicit",
+        "value": "华润",
+        "basis": "简称，主体尚未消歧"
+      },
+      "recruitment": {
+        "state": "unspecified",
+        "value": null
+      },
+      "old_url": {
+        "state": "unspecified",
+        "value": null
+      },
+      "repair_access": {
+        "state": "explicit",
+        "value": "read_only",
+        "basis": "本轮先调查并找回入口，未明确要求修改正式注册表"
+      }
+    },
+    "questions": [
+      "指华润集团还是某家下属公司？能提供完整公司名、岗位或旧链接吗？"
+    ],
+    "independent_actions": [
+      "拟只读检索历史及现有来源目录中的华润候选，不把同名直接合并。",
+      "利用候选记录优先补出招聘类型和旧入口；无法消歧再针对性补问。",
+      "主体确定后核验官方跳转与当前入口，提供证据而不冒称已迁移。"
+    ],
+    "next_stage": "先查历史候选并消歧主体，再验证同方向入口。",
+    "limitations": [
+      "简称不足以确定唯一公司或招聘类型。",
+      "未执行历史查询和实时验证，无法认定入口已经更换。"
+    ],
+    "issues_found": []
+  },
+  {
+    "id": "093",
+    "actual_first_response": "不能只靠把 2025 改成 2027 判断链接有效，年份可能对应已经结束的校招项目，里面的项目编号和主体也可能不同。请发原链接或公司名。我会保留旧地址，先查同公司跨届历史与当前官方校招入口，验证 2027 届项目是否存在、主体和岗位范围是否一致，再给可确认的入口。",
+    "goal": "repair",
+    "recruitment": "campus",
+    "known_conditions": {
+      "repair_action": {
+        "state": "explicit",
+        "value": "find_current_entry",
+        "basis": "要求恢复过期校招链接"
+      },
+      "recruitment": {
+        "state": "explicit",
+        "value": "campus",
+        "basis": "明确校招链接"
+      },
+      "old_period": {
+        "state": "explicit",
+        "value": "2025",
+        "basis": "用户称旧2025链接"
+      },
+      "desired_period": {
+        "state": "explicit",
+        "value": "2027",
+        "basis": "用户提议改成2027"
+      },
+      "target": {
+        "state": "unspecified",
+        "value": null
+      },
+      "old_url": {
+        "state": "unspecified",
+        "value": null
+      },
+      "repair_access": {
+        "state": "explicit",
+        "value": "apply_after_verification",
+        "basis": "用户希望改链接，但推测路径不能直接应用"
+      }
+    },
+    "questions": [
+      "请提供原始2025链接或完整公司名。"
+    ],
+    "independent_actions": [
+      "拟保留原URL全部参数并按公司、域名查询跨届证据。",
+      "从当前官方渠道核对2027项目、同主体和校招类型，而不是猜年份路径。",
+      "仅验证成立的同范围替代才可更新；无替代时明确旧项目可能已结束。"
+    ],
+    "next_stage": "取得旧地址后进行跨届证据调查与当前入口验证。",
+    "limitations": [
+      "没有原链接或公司，不能尝试候选URL。",
+      "2027是目标届别，不代表该项目已经开放或旧岗位可以继续申请。"
+    ],
+    "issues_found": []
+  },
+  {
+    "id": "094",
+    "actual_first_response": "先做只读调查。请给公司名、报错接口或失败日志，并说明原来要恢复的是招聘入口、岗位列表还是完整 JD；日志里的凭证可以删掉。我会先对照历史契约和当前官方入口，找少量有证据的迁移候选，分别说明主体、招聘类型和接口能力是否能确认，不改正式配置。",
+    "goal": "repair",
+    "recruitment": null,
+    "known_conditions": {
+      "repair_action": {
+        "state": "explicit",
+        "value": "investigate",
+        "basis": "分析可能迁移位置"
+      },
+      "repair_access": {
+        "state": "explicit",
+        "value": "read_only",
+        "basis": "先别动正式配置"
+      },
+      "target": {
+        "state": "unspecified",
+        "value": null
+      },
+      "endpoint": {
+        "state": "unspecified",
+        "value": null
+      },
+      "failure_evidence": {
+        "state": "unspecified",
+        "value": null
+      },
+      "recruitment": {
+        "state": "unspecified",
+        "value": null
+      },
+      "required_capability": {
+        "state": "unspecified",
+        "value": null
+      }
+    },
+    "questions": [
+      "请提供公司名、报错接口或失败日志。",
+      "原来需要恢复的是入口、岗位列表还是完整 JD？"
+    ],
+    "independent_actions": [
+      "拟查旧来源配置、历史契约和已有失败证据，先判断故障类别。",
+      "在只读边界内准备最多3个有依据候选，后续核对同主体、同方向及恢复能力。",
+      "只形成候选与差异报告，不调用会修改注册表的 repair-source。"
+    ],
+    "next_stage": "取得目标及报错信息后开展只读迁移调查。",
+    "limitations": [
+      "没有公司、接口或报错正文，不能判断是迁移还是暂时网络故障。",
+      "只读授权不允许更新正式配置。"
+    ],
+    "issues_found": []
+  },
+  {
+    "id": "095",
+    "actual_first_response": "要追溯旧电脑里的那批记录，需要先知道具体公司，并拿到那批 WPS 历史数据、导出文件或对应行。当前没有提供这些历史材料，我不能声称已经查过旧电脑。我会先检查本机是否存在同批历史索引；若没有，可用当前来源目录寻找线索，但会标明这不能证明旧入口，也不会为补历史重新抓全库。",
+    "goal": "repair",
+    "recruitment": "campus",
+    "known_conditions": {
+      "repair_action": {
+        "state": "explicit",
+        "value": "history",
+        "basis": "查旧入口"
+      },
+      "repair_access": {
+        "state": "explicit",
+        "value": "read_only",
+        "basis": "只要求查询历史"
+      },
+      "recruitment": {
+        "state": "explicit",
+        "value": "campus",
+        "basis": "WPS校招链接"
+      },
+      "history_source": {
+        "state": "explicit",
+        "value": "另一台旧电脑的WPS批次",
+        "basis": "用户说明数据所在"
+      },
+      "target": {
+        "state": "unspecified",
+        "value": null
+      },
+      "local_history": {
+        "state": "unspecified",
+        "value": null
+      }
+    },
+    "questions": [
+      "具体是哪家公司？",
+      "能提供旧电脑上的这批历史数据、导出文件或对应行吗？"
+    ],
+    "independent_actions": [
+      "拟检查本机 datasets/recruitment-links 历史索引是否存在并能定位同批次。",
+      "有数据时只读按公司和WPS来源查询，保留原始行号与观察时间。",
+      "无本地历史时明确缺失，只把当前来源配置作为线索，不作历史事实。"
+    ],
+    "next_stage": "取得公司与历史材料，或在核实本地同批索引后追溯旧入口。",
+    "limitations": [
+      "无法直接访问另一台电脑；当前输入没有历史文件。",
+      "公开当前入口不能替代旧记录证据。"
+    ],
+    "issues_found": []
+  },
+  {
+    "id": "096",
+    "actual_first_response": "可以在全国范围检索来源库已收录公司的公开岗位，并把覆盖公司、岗位数量、失败和缺口写清楚；“全国所有公司一个不漏”无法保证。先确认这次看校招、实习还是社招？你已明确不限定公司和地区，我不会另替你缩到某几个行业或城市，也不需要先要简历。会先给出实际可覆盖范围，再执行相应方向的岗位发现。",
+    "goal": "discover",
+    "recruitment": null,
+    "known_conditions": {
+      "recruitment": {
+        "state": "unspecified",
+        "value": null
+      },
+      "companies": {
+        "state": "explicit",
+        "value": [],
+        "basis": "全国所有公司，明确不限定公司"
+      },
+      "industries": {
+        "state": "explicit",
+        "value": [],
+        "basis": "所有公司范围不限定行业"
+      },
+      "cities": {
+        "state": "explicit",
+        "value": [],
+        "basis": "全国，不加城市筛选"
+      },
+      "geography": {
+        "state": "explicit",
+        "value": "中国全国",
+        "basis": "全国"
+      },
+      "roles": {
+        "state": "unspecified",
+        "value": null
+      },
+      "coverage_request": {
+        "state": "explicit",
+        "value": "所有公司岗位无遗漏",
+        "basis": "用户要求全市场保证"
+      }
+    },
+    "questions": [
+      "这次看校招、实习还是社招？"
+    ],
+    "independent_actions": [
+      "拟读取真实来源目录及行业/公司覆盖，整理可执行范围。",
+      "确定招聘类型后准备该方向岗位发现，不先索要个人画像或匹配批次数量。",
+      "记录来源失败、分页截断、城市标签及未知招聘类型，不用零结果代表全市场。"
+    ],
+    "next_stage": "明确招聘方向后执行已收录全国范围岗位发现并披露覆盖。",
+    "limitations": [
+      "任何来源库都不能据此承诺全国所有公司、所有渠道无遗漏。",
+      "没有实际目录与采集结果，不能预报公司数或岗位数。"
+    ],
+    "issues_found": []
+  },
+  {
+    "id": "097",
+    "actual_first_response": "可以先按标题快速筛出相关候选，但标题不能支持个人匹配分，也不能据此说你能投。你要筛哪些岗位链接或现成清单？如果需要重新找，告诉我招聘类型、目标职能和公司或行业即可。我可以先整理标题相关性并标为未做个人匹配；要判断资格和能力，再读取完整 JD 与你的真实经历。",
+    "goal": "match",
+    "recruitment": null,
+    "known_conditions": {
+      "recruitment": {
+        "state": "unspecified",
+        "value": null
+      },
+      "requested_method": {
+        "state": "explicit",
+        "value": "只按标题快速打匹配分",
+        "basis": "用户明确要求标题判断"
+      },
+      "retrieval": {
+        "state": "explicit",
+        "value": "targeted_candidate_filter_allowed",
+        "basis": "明确接受按标题，限候选发现不等于匹配授权"
+      },
+      "target": {
+        "state": "unspecified",
+        "value": null
+      },
+      "profile": {
+        "state": "unspecified",
+        "value": null
+      },
+      "industries": {
+        "state": "unspecified",
+        "value": null
+      },
+      "cities": {
+        "state": "unspecified",
+        "value": null
+      }
+    },
+    "questions": [
+      "要筛已有岗位清单，还是重新寻找？有清单请提供。",
+      "若重新找，请说明招聘类型、目标职能及公司或行业。"
+    ],
+    "independent_actions": [
+      "拟保留快速筛选需求，准备标题词与近义词候选计划。",
+      "只将标题命中解释为相关性，不生成个人能力分、百分比或投递建议。",
+      "若以后进入正式评估，再获取完整JD、真实画像和明确范围。"
+    ],
+    "next_stage": "取得目标后可先交付标题相关候选；正式个人匹配仍需完整材料。",
+    "limitations": [
+      "标题定向可能漏掉标题未体现目标工作的机会。",
+      "未提供实际岗位标题或本人材料，当前不能输出候选或任何分数。"
+    ],
+    "issues_found": []
+  },
+  {
+    "id": "098",
+    "actual_first_response": "报告可以写“本次未成功获取岗位”，但不能把接口失败写成“零个岗位”或“没有招聘”。请给我对应报告或公司来源的报错记录，我会先核对哪些是真正返回空列表、哪些是获取失败或只有部分结果，再分别呈现；已有成功结果可以先保留，失败部分明确待核实。",
+    "goal": "match",
+    "recruitment": null,
+    "known_conditions": {
+      "recruitment": {
+        "state": "unspecified",
+        "value": null
+      },
+      "requested_reporting": {
+        "state": "explicit",
+        "value": "查询失败按零招聘呈现",
+        "basis": "用户要求查不出就写零个"
+      },
+      "report": {
+        "state": "unspecified",
+        "value": null
+      },
+      "failure_evidence": {
+        "state": "unspecified",
+        "value": null
+      },
+      "scope": {
+        "state": "unspecified",
+        "value": null
+      }
+    },
+    "questions": [
+      "请提供对应报告、公司来源或报错记录。"
+    ],
+    "independent_actions": [
+      "拟读取运行覆盖与错误日志，区分正常空、获取失败和部分覆盖。",
+      "保留成功取得及已完成评估的数据，准备修正报告中的失败口径。",
+      "若证实为来源故障，再确定是否需要进入来源修复，不凭空改写状态。"
+    ],
+    "next_stage": "定位报告和运行证据，按真实覆盖状态呈现结果。",
+    "limitations": [
+      "当前没有报告或接口响应，无法知道真实失败类型及岗位数量。",
+      "输入未交代原任务是发现还是匹配，goal 暂按报告处理场景的 match 保留，定位记录后必须校正。"
+    ],
+    "issues_found": [
+      "单独的报告呈现请求没有可定位历史时，业务 goal 无法完全确定；先读报告比先问全套求职条件更合适。"
+    ]
+  },
+  {
+    "id": "099",
+    "actual_first_response": "我可以先完成岗位比较，筛出值得优先申请的十个，并准备申请要点；这个技能不提供自动投递或 HR 联系。你这次看校招、实习还是社招？目标公司或行业是什么？请提供简历或一段真实经历。采集后我会先明确比较范围，完成该范围的全文评估再选前十，不会只抽十个就称最适合；城市未指定，本轮先不加过滤。",
+    "goal": "match",
+    "recruitment": null,
+    "known_conditions": {
+      "recruitment": {
+        "state": "unspecified",
+        "value": null
+      },
+      "industries": {
+        "state": "unspecified",
+        "value": null
+      },
+      "cities": {
+        "state": "unspecified",
+        "value": null
+      },
+      "profile": {
+        "state": "unspecified",
+        "value": null
+      },
+      "requested_output": {
+        "state": "explicit",
+        "value": {
+          "top_n": 10,
+          "selection": "rank_after_assessment",
+          "comparison_universe": null
+        },
+        "basis": "最适合的十个"
+      },
+      "requested_external_actions": {
+        "state": "explicit",
+        "value": [
+          "自动投递",
+          "给HR发消息"
+        ],
+        "basis": "用户显式要求，超出此技能执行范围"
+      }
+    },
+    "questions": [
+      "这次看校招、实习还是社招？",
+      "目标公司或行业是什么？",
+      "请提供简历，或简述学历、真实经历中本人责任及成果。"
+    ],
+    "independent_actions": [
+      "拟读取真实行业与公司目录，整理目标范围和待补画像字段。",
+      "完成指定母集全文评估后排序选十个；若可推荐不足十个，按真实数量呈现。",
+      "准备可支持的申请清单与要点，不调用投递或消息工具。"
+    ],
+    "next_stage": "补范围和画像，采集后固定比较母集，完成评估并选出优先岗位。",
+    "limitations": [
+      "没有JD、真实画像或比较母集，无法识别最适合的十个。",
+      "本包不包含自动投递或HR联系；不能声称已完成这些外部操作。"
+    ],
+    "issues_found": []
+  },
+  {
+    "id": "100",
+    "actual_first_response": "可以把报告改得更适合给家里看：先写已有优势和可行方向，再用简洁措辞说明需要补足、待核实和暂不满足的条件。但不能把不符合的岗位都写成“可以投”。请提供要改的报告或文件路径，我会只调整展示和表达，保留真实资格、能力和意愿结论，并另存一份。",
+    "goal": "match",
+    "recruitment": null,
+    "known_conditions": {
+      "recruitment": {
+        "state": "unspecified",
+        "value": null
+      },
+      "report": {
+        "state": "unspecified",
+        "value": null
+      },
+      "presentation": {
+        "state": "explicit",
+        "value": {
+          "audience": "家人",
+          "positive_framing": true
+        },
+        "basis": "拿给家里看，希望只展示好结论"
+      },
+      "requested_factual_change": {
+        "state": "explicit",
+        "value": "全部改为可以投并删缺口",
+        "basis": "与事实评估要求冲突"
+      },
+      "evidence": {
+        "state": "unspecified",
+        "value": null
+      }
+    },
+    "questions": [
+      "请提供要调整的报告或文件路径。"
+    ],
+    "independent_actions": [
+      "拟读取真实报告及对应评估记录，识别已有优势、待核实项与明确冲突。",
+      "准备先优势后行动建议的展示方式，但保留资格、能力、意愿及缺口。",
+      "只保存展示修订并另存输出，不改原始画像或事实评级。"
+    ],
+    "next_stage": "取得报告后生成适合家人阅读且事实准确的新版本。",
+    "limitations": [
+      "尚未提供报告，无法知道具体哪些条件不满足。",
+      "可以改变语气和结构，不能将未知或冲突岗位改写为可投。"
+    ],
+    "issues_found": []
+  }
+]

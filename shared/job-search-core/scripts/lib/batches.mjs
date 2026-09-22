@@ -9,6 +9,7 @@ import {jobFingerprint} from './job-version.mjs';
 import {profileFingerprint, profileEvidenceProblem, abilityEvidenceProblem} from './evidence-model.mjs';
 import {reviewNeedsUpdate} from './reports.mjs';
 import {actionProblem, interestProblem} from './matching.mjs';
+import {isV5,modelVersion,v5HardConflict,v5Unknown,V5_INSTRUCTION} from './assessment-v5.mjs';
 
 export const jobKey = (company, job) => JSON.stringify([company, String(job)]);
 const hash = value => createHash('sha256').update(JSON.stringify(value ?? null)).digest('hex');
@@ -26,14 +27,15 @@ function toolDuration(start,end) {
   if(!Number.isFinite(ms)||ms<0)throw new Error('工具调用起止时间无效');
   return {started_at:start,finished_at:end,duration_ms:ms};
 }
-const evidenceFields = ['ability', 'ability_reason', 'experience_relevance', 'interest', 'interest_checks', 'interest_reason', 'eligibility', 'eligibility_reason', 'eligibility_checks', 'conclusion', 'comparisons', 'transferable_evidence', 'gaps', 'early_internship', 'employment_conditions', 'next_step', 'next_action', 'report_summary', 'review_method'];
+const evidenceFields = ['ability', 'ability_reason', 'experience_relevance', 'interest', 'interest_checks', 'interest_reason', 'eligibility', 'eligibility_reason', 'eligibility_checks', 'conclusion', 'comparisons', 'transferable_evidence', 'gaps', 'early_internship', 'employment_conditions', 'next_step', 'next_action', 'report_summary', 'review_method','city_check','salary_check','evidence_sufficiency'];
 
 // Only deterministic identity/action fields are supplied here. No ability or interest inference.
 export function bindReview(item, profile, judgment) {
   const review = Object.fromEntries(evidenceFields.filter(k => Object.hasOwn(judgment, k)).map(k => [k, judgment[k]]));
-  Object.assign(review, {job_id:String(item.job.job_id), assessment_version:4,
+  Object.assign(review, {job_id:String(item.job.job_id), assessment_version:modelVersion(profile),
     jd_fingerprint:jobFingerprint(item.job), profile_fingerprint:profileFingerprint(profile)});
   if (review.ability === 'low' || review.interest === 'conflict' || review.eligibility === 'ineligible') review.next_action = 'hold';
+  if(isV5(profile)&&v5HardConflict(review))review.next_action='hold';
   review.priority = review.next_action === 'hold' ? 'low' : 'normal';
   review.priority_reason = review.next_step;
   review.timing_evidence = '';
@@ -125,7 +127,7 @@ export async function createBatch(dir, {limit=50,maxChars=160000,concurrency=4,k
   }
   if(!items.length) return {batch_id:null,items:0};
   const id='batch-'+randomUUID(),created=now(),folder=batchDir(dir,id);
-  const input={batch_id:id,profile:ctx.run.profile,companies,items};
+  const input={batch_id:id,profile:ctx.run.profile,companies,items,...(isV5(ctx.run.profile)?{assessment_instruction:V5_INSTRUCTION,assessment_reference:'shared/job-search-core/references/assessment-v5.md'}:{})};
   await writeJson(path.join(folder,'input.json'),input);
   await writeJson(path.join(folder,'result-template.json'),{items:items.map(i=>({key:i.key,title:i.job.title,review:null}))});
   state.batches.push({id,keys:items.map(x=>x.key),baselines,input_hash:hash(input),created_at:created,prepare_ms:Math.round(performance.now()-begin),agent_id:null,events:[{type:'prepared',at:created}],merged:[],errors:{}});

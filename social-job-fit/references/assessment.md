@@ -1,5 +1,7 @@
 # 社招逐岗位评估
 
+新prepare使用[判断模型v5](../../shared/job-search-core/references/assessment-v5.md)，评估前必须读取。下文旧v4状态、例子和十二列仅用于旧运行追溯；新运行以v5为准：缺证unknown有效完成，不因年限差距否决，学历/专业/经验分开，新增城市/薪资参考/证据充分性，十五列及clarify动作。
+
 完整阅读每岗description、requirements、recruitment_evidence和完整画像；截断时分段读完。禁止按标题、关键词、分数公式或模板代替语义判断。先确定岗位标准，再对照本人实践，不为迁就简历降低核心要求。标签与输出沿用v4双向匹配，细节见 [能力证据模型](ability-model.md)。
 
 ## 本方向硬性条件

@@ -1,4 +1,4 @@
 interface:
-  display_name: "校招岗位匹配"
-  short_description: "先选择行业与城市，再遍历已核验公开API的校招岗位，逐岗评估并交付Excel"
-  default_prompt: "使用 $campus-job-fit，根据我的简历与倾向评估校招岗位；先沿用我指定的行业，未指定时让我选择行业，再筛选公司和城市，确认评估范围并输出附JD链接的Excel。"
+  display_name: "校招求职"
+  short_description: "沿用校招方向，按需澄清并发现或匹配岗位"
+  default_prompt: "使用 $campus-job-fit，沿用我已说明的条件，按统一求职规则发现或匹配校招岗位；只补当前阶段必要信息，说明覆盖和判断依据。"

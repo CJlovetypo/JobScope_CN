@@ -1,0 +1,1830 @@
+[
+  {
+    "id": "035",
+    "actual_first_response": "可以先看远程数据分析实习。你目前研一、只有晚上和周末有空，我会把远程办公和可工作时段分别记录，重点核对岗位是否接受这种安排；写着“远程”也可能要求工作日白天在线。\n你想看哪些行业，或者明确不限行业？我可以先列出来源库的行业选项，并整理需要核实的远程、在线时段和在校资格条件。城市这轮先不加限制，也不把“远程”当成城市。",
+    "goal": "discover",
+    "recruitment": "internship",
+    "known_conditions": {
+      "recruitment": {
+        "state": "explicit",
+        "value": "internship",
+        "basis": "数据分析实习"
+      },
+      "roles": {
+        "state": "explicit",
+        "value": [
+          "数据分析"
+        ],
+        "basis": "远程数据分析实习"
+      },
+      "work_mode": {
+        "state": "explicit",
+        "value": "远程",
+        "basis": "远程"
+      },
+      "education": {
+        "state": "explicit",
+        "value": "研一（研究生在读，具体学位未说明）",
+        "basis": "研一"
+      },
+      "availability": {
+        "state": "explicit",
+        "value": {
+          "time_windows": [
+            "晚上",
+            "周末"
+          ],
+          "start_date": null,
+          "days_per_week": null,
+          "duration_months": null
+        },
+        "basis": "平时晚上和周末有空"
+      },
+      "industries": {
+        "state": "unspecified",
+        "value": null
+      },
+      "cities": {
+        "state": "unspecified",
+        "value": null
+      }
+    },
+    "questions": [
+      "想看哪些行业，还是明确不限行业？"
+    ],
+    "independent_actions": [
+      "读取本地行业列表供选择，不由数据分析职能推断行业。",
+      "整理远程、在线时段、在校资格的全文核对项；不把晚上和周末换算为已承诺的每周天数。"
+    ],
+    "next_stage": "clarify_industry_then_discover",
+    "limitations": [
+      "尚无真实岗位，无法确认有接受晚间和周末安排的远程实习。",
+      "仅模拟首轮解释与行动计划；未执行联网采集、材料读取、正式评估或报告生成。"
+    ],
+    "issues_found": []
+  },
+  {
+    "id": "036",
+    "actual_first_response": "可以把“有转正机会”作为重点条件，候选里区分明确提供转正机会、说明不转正和未说明三类。不过转正机会不等于入职就保证留下，还要看岗位名额、考核和毕业安排。\n你希望做什么方向的实习？行业想看哪些，还是不限？我可以先整理来源库行业选项和转正条件的核查项，先看岗位不需要你先交完整简历。",
+    "goal": "discover",
+    "recruitment": "internship",
+    "known_conditions": {
+      "recruitment": {
+        "state": "explicit",
+        "value": "internship",
+        "basis": "找能转正的实习"
+      },
+      "conversion": {
+        "state": "explicit",
+        "value": {
+          "required_opportunity": true,
+          "guaranteed_offer": false
+        },
+        "basis": "找能转正的实习，最好进去就能留下"
+      },
+      "roles": {
+        "state": "unspecified",
+        "value": null
+      },
+      "industries": {
+        "state": "unspecified",
+        "value": null
+      },
+      "cities": {
+        "state": "unspecified",
+        "value": null
+      }
+    },
+    "questions": [
+      "希望做什么方向的实习？",
+      "行业想看哪些，还是明确不限？"
+    ],
+    "independent_actions": [
+      "读取本地行业选项。",
+      "制定转正信息分类：明确有机会、明确无机会、未说明；转正机制和适用毕业时间需查原始JD。"
+    ],
+    "next_stage": "clarify_search_scope_then_discover",
+    "limitations": [
+      "没有具体JD，尚不能确认任何岗位的转正机制或录用结果。",
+      "仅模拟首轮解释与行动计划；未执行联网采集、材料读取、正式评估或报告生成。"
+    ],
+    "issues_found": []
+  },
+  {
+    "id": "037",
+    "actual_first_response": "可以找，但已经毕业能否做实习，要逐份看招聘要求：要求在校生身份的岗位可能不接受，其他岗位需要核实，不能把所有实习都一概排除或认定能去。你今年已毕业，我会按这个事实核对，不改成在校生。\n你想做哪类岗位、有没有希望进入的行业？我可以先整理毕业后实习需要核对的身份、用工形式和到岗条件；如果后续想同时看初级正式岗位，再另按社招范围处理。",
+    "goal": "explore",
+    "recruitment": "internship",
+    "known_conditions": {
+      "recruitment": {
+        "state": "explicit",
+        "value": "internship",
+        "basis": "先找个实习过渡"
+      },
+      "graduation": {
+        "state": "explicit",
+        "value": {
+          "year": 2026,
+          "graduated": true
+        },
+        "basis": "我今年毕业了；本轮日期2026-09-22"
+      },
+      "employment_status": {
+        "state": "explicit",
+        "value": "未找到正式工作",
+        "basis": "没找到正式工作"
+      },
+      "roles": {
+        "state": "unspecified",
+        "value": null
+      },
+      "industries": {
+        "state": "unspecified",
+        "value": null
+      },
+      "cities": {
+        "state": "unspecified",
+        "value": null
+      }
+    },
+    "questions": [
+      "想做哪类岗位？",
+      "有没有希望进入的行业，还是不限？"
+    ],
+    "independent_actions": [
+      "将已毕业状态作为后续资格核查事实。",
+      "解释实习资格要逐JD核实，并列出身份、用工形式、到岗要求等待查项；不自动启动社招查询。"
+    ],
+    "next_stage": "clarify_scope_then_check_internship_eligibility",
+    "limitations": [
+      "没有JD，不能判断具体实习能否接受毕业生。",
+      "仅模拟首轮解释与行动计划；未执行联网采集、材料读取、正式评估或报告生成。"
+    ],
+    "issues_found": []
+  },
+  {
+    "id": "038",
+    "actual_first_response": "先按北京研发实习整理机会，到岗时间保留两个情景：最快2026年10月，也可能到2026年年底，且都还需要导师同意。我不会把10月写成确定承诺。\n研发更偏软件、算法、硬件，还是其他方向？希望看哪些行业，或明确不限？可以先列行业选项、整理岗位的到岗时限核查项，看到具体JD后再标出哪些受时间不确定影响。",
+    "goal": "discover",
+    "recruitment": "internship",
+    "known_conditions": {
+      "recruitment": {
+        "state": "explicit",
+        "value": "internship",
+        "basis": "北京研发实习"
+      },
+      "cities": {
+        "state": "explicit",
+        "value": [
+          "北京"
+        ],
+        "basis": "北京"
+      },
+      "roles": {
+        "state": "explicit",
+        "value": [
+          "研发"
+        ],
+        "basis": "研发实习"
+      },
+      "availability": {
+        "state": "explicit",
+        "value": {
+          "earliest_month": "2026-10",
+          "possible_later_period": "2026年年底",
+          "approval_pending": true,
+          "certainty": "uncertain"
+        },
+        "basis": "导师还没同意，最快下个月，也可能年底"
+      },
+      "industries": {
+        "state": "unspecified",
+        "value": null
+      }
+    },
+    "questions": [
+      "研发更偏软件、算法、硬件，还是其他方向？",
+      "希望看哪些行业，或明确不限？"
+    ],
+    "independent_actions": [
+      "读取本地行业选项。",
+      "记录两种不确定到岗情景，列出急招、最迟到岗日等全文核查项。"
+    ],
+    "next_stage": "clarify_role_and_industry_then_discover",
+    "limitations": [
+      "导师同意和具体到岗日期均未确定；未获取岗位，不能判定时间可行。",
+      "仅模拟首轮解释与行动计划；未执行联网采集、材料读取、正式评估或报告生成。"
+    ],
+    "issues_found": []
+  },
+  {
+    "id": "039",
+    "actual_first_response": "可以先看广州的实习。PS和剪视频可以作为探索设计、视频剪辑、内容制作等岗位的线索，但只凭工具自评还不能判断你能胜任哪一类。\n你更想做设计、剪辑还是内容运营？行业有什么偏好，还是不限？我可以先整理这些方向的任务差别和来源库行业选项；先找岗位不用补齐整份简历，之后做个人匹配再看具体作品和你负责的部分。",
+    "goal": "discover",
+    "recruitment": "internship",
+    "known_conditions": {
+      "recruitment": {
+        "state": "explicit",
+        "value": "internship",
+        "basis": "广州实习"
+      },
+      "cities": {
+        "state": "explicit",
+        "value": [
+          "广州"
+        ],
+        "basis": "广州"
+      },
+      "skills_self_report": {
+        "state": "explicit",
+        "value": [
+          "PS",
+          "剪视频"
+        ],
+        "basis": "我会PS和剪视频"
+      },
+      "roles": {
+        "state": "unspecified",
+        "value": null
+      },
+      "industries": {
+        "state": "unspecified",
+        "value": null
+      }
+    },
+    "questions": [
+      "更想做设计、剪辑还是内容运营，或暂时都想看看？",
+      "行业有什么偏好，还是明确不限？"
+    ],
+    "independent_actions": [
+      "整理几个相关职能的实际任务差别，作为探索选项而非个人胜任结论。",
+      "读取本地行业选项。"
+    ],
+    "next_stage": "clarify_role_and_industry_then_discover",
+    "limitations": [
+      "只有技能自评，无作品或本人任务证据，不能给个人匹配评级。",
+      "仅模拟首轮解释与行动计划；未执行联网采集、材料读取、正式评估或报告生成。"
+    ],
+    "issues_found": []
+  },
+  {
+    "id": "040",
+    "actual_first_response": "可以分别看校园大使、训练营和真实实习，但会分开标注：校园活动或训练营经历不直接写成实习，“大厂经历”也要看实际参与内容和能留下的作品或成果。\n暑期实习指哪一年？想重点看哪些行业？你心目中的大厂可以给几个例子，我再核对来源库覆盖。先把三类机会的性质和核验标准整理好，不会把它们混进同一批实习匹配结果。",
+    "goal": "discover",
+    "recruitment": "internship",
+    "known_conditions": {
+      "recruitment": {
+        "state": "explicit",
+        "value": "internship",
+        "basis": "明确包含暑期实习；仅适用于其中的实习部分"
+      },
+      "opportunity_types": {
+        "state": "explicit",
+        "value": [
+          "校园大使",
+          "训练营",
+          "暑期实习"
+        ],
+        "basis": "三类都行"
+      },
+      "size": {
+        "state": "explicit",
+        "value": {
+          "label": "大厂",
+          "definition": null
+        },
+        "basis": "攒点大厂经历"
+      },
+      "summer_year": {
+        "state": "unspecified",
+        "value": null
+      },
+      "industries": {
+        "state": "unspecified",
+        "value": null
+      },
+      "cities": {
+        "state": "unspecified",
+        "value": null
+      }
+    },
+    "questions": [
+      "暑期实习指哪一年？",
+      "想重点看哪些行业，还是不限？",
+      "你心目中的大厂可以举几个例子吗？"
+    ],
+    "independent_actions": [
+      "将校园大使、训练营与实习岗位分别整理，活动部分不进入实习正式评估。",
+      "读取行业/公司目录以解析实际覆盖和公司主体。"
+    ],
+    "next_stage": "clarify_year_and_scope_then_separate_opportunity_types",
+    "limitations": [
+      "用户没有给暑期年份，不能默认2026或2027。",
+      "活动/训练营信息未必属于现有岗位来源覆盖；尚未核实。",
+      "仅模拟首轮解释与行动计划；未执行联网采集、材料读取、正式评估或报告生成。"
+    ],
+    "issues_found": []
+  },
+  {
+    "id": "041",
+    "actual_first_response": "先按社招、上海、产品经理方向看机会；三年产品经理经历先保留为你提供的背景，具体负责什么暂时不推断。\n你想继续在哪些行业找，还是明确不限行业？我可以先列来源库行业选项，范围确定后整理岗位候选。先看机会不需要完整简历；如果随后要判断个人匹配，再补你做过的产品、责任和成果。",
+    "goal": "discover",
+    "recruitment": "social",
+    "known_conditions": {
+      "recruitment": {
+        "state": "explicit",
+        "value": "social",
+        "basis": "三年产品经理，想跳槽"
+      },
+      "roles": {
+        "state": "explicit",
+        "value": [
+          "产品经理"
+        ],
+        "basis": "产品经理"
+      },
+      "cities": {
+        "state": "explicit",
+        "value": [
+          "上海"
+        ],
+        "basis": "上海"
+      },
+      "experience": {
+        "state": "explicit",
+        "value": {
+          "reported_years": 3,
+          "formal_years_verified": false
+        },
+        "basis": "三年产品经理"
+      },
+      "industries": {
+        "state": "unspecified",
+        "value": null
+      }
+    },
+    "questions": [
+      "想在哪些行业找，还是明确不限行业？"
+    ],
+    "independent_actions": [
+      "读取行业选项。",
+      "将三年经历记录为用户自述，不凭年限评估能力或职级。"
+    ],
+    "next_stage": "clarify_industry_then_discover",
+    "limitations": [
+      "没有完整JD和具体经历，不能给个人匹配结论。",
+      "仅模拟首轮解释与行动计划；未执行联网采集、材料读取、正式评估或报告生成。"
+    ],
+    "issues_found": []
+  },
+  {
+    "id": "042",
+    "actual_first_response": "可以先看社招机会。游戏公司五年的经历说明你的背景，还不能代表你这次仍想去游戏行业，我也不会据此替你选行业或岗位。\n你这五年主要做什么职能，这次想继续还是换方向？行业希望留在游戏、考虑其他行业，还是不限？城市你还没指定，这轮先不加城市过滤。我可以先整理行业选项和已知经历线索。",
+    "goal": "discover",
+    "recruitment": "social",
+    "known_conditions": {
+      "recruitment": {
+        "state": "explicit",
+        "value": "social",
+        "basis": "在公司干了五年，寻找新机会"
+      },
+      "experience": {
+        "state": "explicit",
+        "value": {
+          "industry": "游戏",
+          "reported_years": 5,
+          "role": null
+        },
+        "basis": "游戏公司干了五年"
+      },
+      "roles": {
+        "state": "unspecified",
+        "value": null
+      },
+      "industries": {
+        "state": "unspecified",
+        "value": null
+      },
+      "cities": {
+        "state": "unspecified",
+        "value": null
+      }
+    },
+    "questions": [
+      "主要做什么职能，这次想继续还是换方向？",
+      "行业希望留在游戏、考虑哪些其他行业，还是不限？"
+    ],
+    "independent_actions": [
+      "读取真实行业选项，不把游戏从经历字段复制为行业偏好。",
+      "整理已给背景和待明确目标；城市不加过滤。"
+    ],
+    "next_stage": "clarify_role_and_industry_then_discover",
+    "limitations": [
+      "五年公司经历不等于已核实的正式相关年限或特定能力。",
+      "仅模拟首轮解释与行动计划；未执行联网采集、材料读取、正式评估或报告生成。"
+    ],
+    "issues_found": []
+  },
+  {
+    "id": "043",
+    "actual_first_response": "可以先拆一下销售经历里哪些任务能迁移到产品，比如收集用户问题、分析需求、推进解决方案；但“懂用户”还需要具体事例支撑，不能直接认定已经具备产品经理能力。\n你做哪类销售、做了多久？能讲一个你发现用户问题并推动解决的例子吗？转产品希望在哪些行业尝试？我可以先把这些经历整理成“已有证据、可迁移部分、缺口”，城市暂时不加限制。",
+    "goal": "explore",
+    "recruitment": "social",
+    "known_conditions": {
+      "recruitment": {
+        "state": "explicit",
+        "value": "social",
+        "basis": "从销售转产品的职业转换"
+      },
+      "current_role": {
+        "state": "explicit",
+        "value": "销售",
+        "basis": "做销售太累了"
+      },
+      "roles": {
+        "state": "explicit",
+        "value": [
+          "产品"
+        ],
+        "basis": "想转产品"
+      },
+      "motivation": {
+        "state": "explicit",
+        "value": "销售工作让本人感到疲惫",
+        "basis": "做销售太累了"
+      },
+      "ability_self_report": {
+        "state": "explicit",
+        "value": "挺懂用户",
+        "basis": "我挺懂用户的"
+      },
+      "industries": {
+        "state": "unspecified",
+        "value": null
+      },
+      "cities": {
+        "state": "unspecified",
+        "value": null
+      }
+    },
+    "questions": [
+      "目前做哪类销售、做了多久？",
+      "能讲一个发现用户问题并推动解决的具体例子吗？",
+      "转产品希望在哪些行业尝试，还是不限？"
+    ],
+    "independent_actions": [
+      "围绕用户洞察、需求分析、推进落地整理迁移分析框架，不把自评当已验证能力。",
+      "读取行业选项，待真实经历后再提出具体探索方向。"
+    ],
+    "next_stage": "collect_minimal_experience_for_transition_exploration",
+    "limitations": [
+      "只有岗位背景和自评，不能认定适合产品或给具体岗位录用判断。",
+      "仅模拟首轮解释与行动计划；未执行联网采集、材料读取、正式评估或报告生成。"
+    ],
+    "issues_found": []
+  },
+  {
+    "id": "044",
+    "actual_first_response": "可以先看社招项目管理岗位，但“高级”要拆成责任范围：更复杂的交付、带团队、预算或客户责任，都不能只凭“项目经理”头衔推定。\n你现在是哪类项目经理，实际负责什么？希望在哪些行业找？“高级一点”更看重带团队、项目复杂度还是收入提升？我可以先整理这些岗位层级的职责差别；薪资先记录为希望上涨，具体底线之后再核对。",
+    "goal": "discover",
+    "recruitment": "social",
+    "known_conditions": {
+      "recruitment": {
+        "state": "explicit",
+        "value": "social",
+        "basis": "当前项目经理，寻找更高级且涨薪的岗位"
+      },
+      "current_title": {
+        "state": "explicit",
+        "value": "项目经理",
+        "basis": "现在是项目经理"
+      },
+      "roles": {
+        "state": "explicit",
+        "value": [
+          "项目管理"
+        ],
+        "basis": "项目经理"
+      },
+      "seniority_target": {
+        "state": "explicit",
+        "value": {
+          "label": "高级一点",
+          "definition": null
+        },
+        "basis": "高级一点"
+      },
+      "salary": {
+        "state": "explicit",
+        "value": {
+          "direction": "上涨",
+          "current": null,
+          "target": null
+        },
+        "basis": "薪资涨一些"
+      },
+      "industries": {
+        "state": "unspecified",
+        "value": null
+      },
+      "cities": {
+        "state": "unspecified",
+        "value": null
+      }
+    },
+    "questions": [
+      "现在是哪类项目经理，实际负责哪些任务？",
+      "希望在哪些行业找，还是不限？",
+      "更高一级主要指带团队、项目复杂度还是收入提升？"
+    ],
+    "independent_actions": [
+      "读取行业选项。",
+      "整理不同项目管理层级的责任核对项，不推定带人或预算经历。"
+    ],
+    "next_stage": "clarify_role_level_and_industry_then_discover",
+    "limitations": [
+      "未给具体职责、薪资基线和目标，不能判断职级或涨薪匹配。",
+      "仅模拟首轮解释与行动计划；未执行联网采集、材料读取、正式评估或报告生成。"
+    ],
+    "issues_found": []
+  },
+  {
+    "id": "045",
+    "actual_first_response": "可以看要求三年的社招测试岗位，但我会把两年正式工作和一年实习分开记录，不把它们直接合并成三年正式经验。JD如果明确要求三年正式或相关工作，需要逐条核实；表述不清的先标待确认，不能替你改年限。\n你想看哪些行业的测试岗位？我可以先列行业选项，并整理年限要求的核查方式。城市未指定，这轮先不加过滤。",
+    "goal": "discover",
+    "recruitment": "social",
+    "known_conditions": {
+      "recruitment": {
+        "state": "explicit",
+        "value": "social",
+        "basis": "两年正式工作，寻找要求三年的测试岗"
+      },
+      "roles": {
+        "state": "explicit",
+        "value": [
+          "测试"
+        ],
+        "basis": "测试岗"
+      },
+      "experience": {
+        "state": "explicit",
+        "value": {
+          "formal_years": 2,
+          "internship_years": 1,
+          "claimed_total_years": 3
+        },
+        "basis": "两年正式工作，加上一年实习"
+      },
+      "target_experience_requirement": {
+        "state": "explicit",
+        "value": "要求三年的岗位",
+        "basis": "想找要求三年的测试岗"
+      },
+      "industries": {
+        "state": "unspecified",
+        "value": null
+      },
+      "cities": {
+        "state": "unspecified",
+        "value": null
+      }
+    },
+    "questions": [
+      "想看哪些行业的测试岗位，还是不限？"
+    ],
+    "independent_actions": [
+      "读取行业选项。",
+      "将正式与实习经历分别记录；为JD区分正式年限、相关经验和模糊年限要求。"
+    ],
+    "next_stage": "clarify_industry_then_discover_with_separate_experience_counts",
+    "limitations": [
+      "没有具体JD，无法认定两年正式加一年实习满足三年要求。",
+      "仅模拟首轮解释与行动计划；未执行联网采集、材料读取、正式评估或报告生成。"
+    ],
+    "issues_found": []
+  },
+  {
+    "id": "046",
+    "actual_first_response": "先把“尽快到岗”作为重点，但“做什么都行”还需要结合你确实做过的事缩小方向，不能据此认定任何岗位都能做。离职半年也不会直接被当成能力不足。\n离职前做什么、主要负责哪些任务？这次明确找正式工作的社招岗位吗？行业有没有不能接受的，还是明确不限？我可以先整理可迁移的任务和到岗条件；城市暂不加过滤，“尽快”先保留为意愿，不写成某个已承诺日期。",
+    "goal": "explore",
+    "recruitment": null,
+    "known_conditions": {
+      "recruitment": {
+        "state": "unspecified",
+        "value": null
+      },
+      "roles": {
+        "state": "explicit",
+        "value": [],
+        "basis": "做什么都行；表示意愿开放，不等于能力无限"
+      },
+      "employment_status": {
+        "state": "explicit",
+        "value": {
+          "unemployed": true,
+          "gap": "约半年"
+        },
+        "basis": "离职半年了"
+      },
+      "availability": {
+        "state": "explicit",
+        "value": {
+          "intent": "尽快",
+          "exact_start_date": null
+        },
+        "basis": "想尽快上班"
+      },
+      "industries": {
+        "state": "unspecified",
+        "value": null
+      },
+      "cities": {
+        "state": "unspecified",
+        "value": null
+      }
+    },
+    "questions": [
+      "离职前做什么，主要负责哪些任务？",
+      "这次明确找正式工作的社招岗位吗？",
+      "行业有没有排除项，还是明确不限？"
+    ],
+    "independent_actions": [
+      "整理真实经历所需的最小信息和尽快到岗意愿。",
+      "读取行业选项；不因空窗降低能力判断，不把尽快转换成确定日期。"
+    ],
+    "next_stage": "clarify_recruitment_and_background_for_exploration",
+    "limitations": [
+      "未说明原职责和正式/实习求职方向，无法选定招聘运行。",
+      "仅模拟首轮解释与行动计划；未执行联网采集、材料读取、正式评估或报告生成。"
+    ],
+    "issues_found": []
+  },
+  {
+    "id": "047",
+    "actual_first_response": "先记录你的工资目标：目前18k，希望新岗位25k以上，不能降薪。不过月薪、发薪月数和奖金口径不同，后面比较时要放在同一口径，未公开薪资的岗位只能标待核实。\n你现在做什么岗位，找的是社招机会吗？希望看哪些行业？25k以上指税前固定月薪，还是折算后的月均总收入？我可以先整理薪资比较口径和行业选项；城市未指定，这轮不加过滤。",
+    "goal": "discover",
+    "recruitment": null,
+    "known_conditions": {
+      "recruitment": {
+        "state": "unspecified",
+        "value": null
+      },
+      "salary": {
+        "state": "explicit",
+        "value": {
+          "current_stated": "18k",
+          "target_stated": "25k以上",
+          "must_not_decrease": true,
+          "currency": null,
+          "period": null,
+          "gross_or_net": null
+        },
+        "basis": "现在18k，想找25k以上，别降薪"
+      },
+      "roles": {
+        "state": "unspecified",
+        "value": null
+      },
+      "industries": {
+        "state": "unspecified",
+        "value": null
+      },
+      "cities": {
+        "state": "unspecified",
+        "value": null
+      }
+    },
+    "questions": [
+      "现在做什么岗位，找的是社招机会吗？",
+      "希望看哪些行业，还是不限？",
+      "25k以上指税前固定月薪，还是折算后的月均总收入？"
+    ],
+    "independent_actions": [
+      "读取行业选项。",
+      "建立同口径薪资核查项，保留币种、税前税后、月薪/年包等未说明信息。"
+    ],
+    "next_stage": "clarify_recruitment_scope_and_salary_basis",
+    "limitations": [
+      "只有薪资目标，未确认招聘类型、岗位和工资口径。",
+      "仅模拟首轮解释与行动计划；未执行联网采集、材料读取、正式评估或报告生成。"
+    ],
+    "issues_found": []
+  },
+  {
+    "id": "048",
+    "actual_first_response": "两年淘宝店经历可以拆出选品、客服和投放等具体任务，用来探索电商运营、用户服务或投放方向；但创业两年不自动等于两年公司岗位经验，也不能推定你带过团队。\n这些任务里，你最想继续做哪一块、最不想做哪一块？选一个例子说说你怎么做、拿到了什么结果。行业想继续电商相关，还是考虑其他行业？我可以先按社招转入公司的方向整理可迁移证据，城市暂不加过滤。",
+    "goal": "explore",
+    "recruitment": "social",
+    "known_conditions": {
+      "recruitment": {
+        "state": "explicit",
+        "value": "social",
+        "basis": "经营淘宝店后想去公司上班"
+      },
+      "experience": {
+        "state": "explicit",
+        "value": {
+          "type": "自营淘宝店",
+          "duration_years": 2,
+          "personal_tasks": [
+            "选品",
+            "客服",
+            "投放"
+          ],
+          "formal_employment_years": null
+        },
+        "basis": "自己开过两年淘宝店，任务都是自己弄的"
+      },
+      "roles": {
+        "state": "unspecified",
+        "value": null
+      },
+      "industries": {
+        "state": "unspecified",
+        "value": null
+      },
+      "cities": {
+        "state": "unspecified",
+        "value": null
+      }
+    },
+    "questions": [
+      "最想继续和最不想继续的是哪类任务？",
+      "能选一个例子说明自己的做法和结果吗？",
+      "行业想继续电商相关，还是考虑其他行业或不限？"
+    ],
+    "independent_actions": [
+      "将创业职责拆成本人行动线索，不自动计入正式年限或管理经验。",
+      "读取行业选项，整理可探索职能而不下胜任结论。"
+    ],
+    "next_stage": "collect_entrepreneurial_evidence_for_transition_exploration",
+    "limitations": [
+      "创业时长和任务名称不足以判断公司岗位所需责任规模和能力。",
+      "仅模拟首轮解释与行动计划；未执行联网采集、材料读取、正式评估或报告生成。"
+    ],
+    "issues_found": []
+  },
+  {
+    "id": "049",
+    "actual_first_response": "可以探索回财务，但是否能进入某类岗位，要看现在保留了哪些财务知识、实际做过哪些相关任务，以及JD是否要求证书和相关年限。本科专业能提供背景，四年行政经历不能直接算四年财务经验。\n你想回会计、出纳、财务分析，还是暂时没定？毕业后有没有做过财务相关任务，或保留相关学习、证书和实操经历？行业有没有偏好？我可以先整理可能的衔接路径和需要补证据的部分，城市先不限制。",
+    "goal": "explore",
+    "recruitment": "social",
+    "known_conditions": {
+      "recruitment": {
+        "state": "explicit",
+        "value": "social",
+        "basis": "四年行政后转回财务"
+      },
+      "education": {
+        "state": "explicit",
+        "value": {
+          "level": "本科",
+          "major": "财务"
+        },
+        "basis": "本科学财务"
+      },
+      "experience": {
+        "state": "explicit",
+        "value": {
+          "role": "行政",
+          "reported_years": 4,
+          "finance_years": null
+        },
+        "basis": "做了四年行政"
+      },
+      "roles": {
+        "state": "explicit",
+        "value": [
+          "财务"
+        ],
+        "basis": "想回财务"
+      },
+      "industries": {
+        "state": "unspecified",
+        "value": null
+      },
+      "cities": {
+        "state": "unspecified",
+        "value": null
+      }
+    },
+    "questions": [
+      "想回会计、出纳、财务分析，还是暂时没定？",
+      "有没有财务相关任务、实操、持续学习或证书经历？",
+      "行业有没有偏好，还是不限？"
+    ],
+    "independent_actions": [
+      "整理行政与财务可交叉的任务核查框架，不虚构本人做过报销、预算等工作。",
+      "读取行业选项；后续以JD核对资格和相关经验。"
+    ],
+    "next_stage": "clarify_finance_direction_and_real_evidence",
+    "limitations": [
+      "缺少具体财务经验和JD，不能保证转型成功或认定已经适合。",
+      "仅模拟首轮解释与行动计划；未执行联网采集、材料读取、正式评估或报告生成。"
+    ],
+    "issues_found": []
+  },
+  {
+    "id": "050",
+    "actual_first_response": "先按社招的技术管理方向看。六年Java经历是技术背景，但是否适合管理岗，还要看你有没有承担带人、分工、招聘培养或交付责任；不想持续写代码，也需要核实管理岗实际保留多少编码工作。\n你带过人或负责过哪些团队交付？希望偏技术负责人还是以人员管理为主？行业想看哪些，还是不限？我可以先整理这两类岗位的职责核查项和行业选项，城市暂不加过滤。",
+    "goal": "discover",
+    "recruitment": "social",
+    "known_conditions": {
+      "recruitment": {
+        "state": "explicit",
+        "value": "social",
+        "basis": "六年Java开发后寻找管理岗位"
+      },
+      "experience": {
+        "state": "explicit",
+        "value": {
+          "role": "Java开发",
+          "reported_years": 6,
+          "management_evidence": null
+        },
+        "basis": "写了六年Java"
+      },
+      "roles": {
+        "state": "explicit",
+        "value": [
+          "管理岗"
+        ],
+        "basis": "帮我找管理岗"
+      },
+      "preference": {
+        "state": "explicit",
+        "value": "不想一直写代码",
+        "basis": "不想一直写代码了"
+      },
+      "industries": {
+        "state": "unspecified",
+        "value": null
+      },
+      "cities": {
+        "state": "unspecified",
+        "value": null
+      }
+    },
+    "questions": [
+      "带过人或承担过哪些团队交付责任？",
+      "希望偏技术负责人，还是以人员管理为主？",
+      "行业想看哪些，还是不限？"
+    ],
+    "independent_actions": [
+      "整理技术负责人、人员管理岗位的职责差别和编码占比核查项。",
+      "读取行业选项；将开发年限与管理证据分别记录。"
+    ],
+    "next_stage": "clarify_management_direction_and_industry_then_discover",
+    "limitations": [
+      "没有管理职责证据，不能以六年开发经验直接认定管理能力。",
+      "仅模拟首轮解释与行动计划；未执行联网采集、材料读取、正式评估或报告生成。"
+    ],
+    "issues_found": []
+  },
+  {
+    "id": "051",
+    "actual_first_response": "可以先把“稳定”说清楚：你更在意少裁员、合同和收入可预期，还是工作时间规律？企业性质和规模只能作为线索，不能保证稳定。\n这次找校招、实习还是社招？你已有的经历或能承担的任务是什么？你说其他没要求，我先按行业、城市和公司不设偏好记录，不重复让你逐项选择；可以先整理稳定性需要核实的证据。",
+    "goal": "explore",
+    "recruitment": null,
+    "known_conditions": {
+      "recruitment": {
+        "state": "unspecified",
+        "value": null
+      },
+      "stability": {
+        "state": "explicit",
+        "value": {
+          "required": true,
+          "meaning": null
+        },
+        "basis": "就想找个稳定点的工作"
+      },
+      "industries": {
+        "state": "explicit",
+        "value": [],
+        "basis": "其他没要求"
+      },
+      "cities": {
+        "state": "explicit",
+        "value": [],
+        "basis": "其他没要求"
+      },
+      "companies": {
+        "state": "explicit",
+        "value": [],
+        "basis": "其他没要求"
+      },
+      "roles": {
+        "state": "explicit",
+        "value": [],
+        "basis": "其他没要求；仅表示意愿不设限制"
+      }
+    },
+    "questions": [
+      "稳定更指少裁员、合同与收入可预期，还是工作时间规律？",
+      "这次找校招、实习还是社招？",
+      "已有的经历或能承担的任务是什么？"
+    ],
+    "independent_actions": [
+      "记录其他条件明确开放，保留招聘身份未知。",
+      "整理稳定性的证据项和待核实状态，不以国企、外企或大厂标签代替事实。"
+    ],
+    "next_stage": "clarify_stability_and_minimal_background",
+    "limitations": [
+      "没有稳定的可核对定义及个人经历，无法具体判断；不能保证未来不裁员。",
+      "仅模拟首轮解释与行动计划；未执行联网采集、材料读取、正式评估或报告生成。"
+    ],
+    "issues_found": []
+  },
+  {
+    "id": "052",
+    "actual_first_response": "先把双休、不加班记录为你的要求，“钱还行”暂时还不能变成明确薪资门槛。岗位没写作息或薪资的，会标待核实；公司宣传和岗位标题都不能证明实际不加班。\n这次找校招、实习还是社招？想看哪些行业，还是不限？你最低能接受的薪资是多少、按月薪还是年总收入算？我可以先列行业选项，并整理需要向JD和后续面试核实的作息、工资口径。",
+    "goal": "discover",
+    "recruitment": null,
+    "known_conditions": {
+      "recruitment": {
+        "state": "unspecified",
+        "value": null
+      },
+      "work_schedule": {
+        "state": "explicit",
+        "value": {
+          "weekends_off": true,
+          "no_overtime": true
+        },
+        "basis": "双休、不加班"
+      },
+      "salary": {
+        "state": "explicit",
+        "value": {
+          "description": "钱还行",
+          "minimum": null,
+          "basis": null
+        },
+        "basis": "钱还行"
+      },
+      "industries": {
+        "state": "unspecified",
+        "value": null
+      },
+      "cities": {
+        "state": "unspecified",
+        "value": null
+      },
+      "roles": {
+        "state": "unspecified",
+        "value": null
+      }
+    },
+    "questions": [
+      "这次找校招、实习还是社招？",
+      "想看哪些行业，还是不限？",
+      "最低能接受的薪资是多少，按月薪还是年总收入算？"
+    ],
+    "independent_actions": [
+      "读取行业选项。",
+      "整理双休、加班及薪资核查项，将没有公开依据的条件列为待核实。"
+    ],
+    "next_stage": "clarify_recruitment_industry_and_salary_then_discover",
+    "limitations": [
+      "实际加班和未公开薪资不能由来源字段直接保证；尚无岗位证据。",
+      "仅模拟首轮解释与行动计划；未执行联网采集、材料读取、正式评估或报告生成。"
+    ],
+    "issues_found": []
+  },
+  {
+    "id": "053",
+    "actual_first_response": "先保留中大型公司的目标，并把小公司列为排除项。不过“中大厂”没有统一门槛，需要避免把集团规模直接套到实际招聘子公司。\n这次找校招、实习还是社招？希望看哪些行业？你可以给几个符合心中“中大厂”的公司例子，或说明可接受的规模底线。我可以先核对来源库的公司主体和覆盖，城市先不加过滤。",
+    "goal": "discover",
+    "recruitment": null,
+    "known_conditions": {
+      "recruitment": {
+        "state": "unspecified",
+        "value": null
+      },
+      "size": {
+        "state": "explicit",
+        "value": {
+          "target": [
+            "中型",
+            "大型"
+          ],
+          "exclude": [
+            "小公司"
+          ],
+          "definition": null
+        },
+        "basis": "中大厂吧，小公司不要"
+      },
+      "industries": {
+        "state": "unspecified",
+        "value": null
+      },
+      "cities": {
+        "state": "unspecified",
+        "value": null
+      },
+      "roles": {
+        "state": "unspecified",
+        "value": null
+      }
+    },
+    "questions": [
+      "这次找校招、实习还是社招？",
+      "希望看哪些行业，还是不限？",
+      "能给几个符合预期的公司例子，或说明规模底线吗？"
+    ],
+    "independent_actions": [
+      "读取行业/公司目录，待范围明确后核对具体招聘主体。",
+      "记录小公司排除项但保留规模定义未知，不自行设置员工数门槛。"
+    ],
+    "next_stage": "clarify_recruitment_industry_and_company_size",
+    "limitations": [
+      "规模口径未明确；暂无公司主体、规模依据和日期，不能宣称全部候选达标。",
+      "仅模拟首轮解释与行动计划；未执行联网采集、材料读取、正式评估或报告生成。"
+    ],
+    "issues_found": []
+  },
+  {
+    "id": "054",
+    "actual_first_response": "江浙沪我会先理解为江苏、浙江和上海的区域范围，不擅自缩成上海、杭州、南京几个城市。“离家近”还需要知道大致出发地和你的距离标准，不需要详细住址。\n这次找校招、实习还是社招？行业希望看哪些，还是不限？家在哪座城市或大致片区，离家近是希望每天通勤，还是周末方便回家？我可以先整理江浙沪对应的城市覆盖，后续再按你的距离标准核对。",
+    "goal": "discover",
+    "recruitment": null,
+    "known_conditions": {
+      "recruitment": {
+        "state": "unspecified",
+        "value": null
+      },
+      "regions": {
+        "state": "explicit",
+        "value": [
+          "江苏",
+          "浙江",
+          "上海"
+        ],
+        "basis": "江浙沪都可以"
+      },
+      "cities": {
+        "state": "unspecified",
+        "value": null
+      },
+      "proximity": {
+        "state": "explicit",
+        "value": {
+          "intent": "离家近",
+          "home_area": null,
+          "distance_standard": null
+        },
+        "basis": "离家近一点就行"
+      },
+      "industries": {
+        "state": "unspecified",
+        "value": null
+      },
+      "roles": {
+        "state": "unspecified",
+        "value": null
+      }
+    },
+    "questions": [
+      "这次找校招、实习还是社招？",
+      "行业希望看哪些，还是不限？",
+      "家在哪座城市或大致片区，离家近指每天通勤还是周末方便回家？"
+    ],
+    "independent_actions": [
+      "将江浙沪记录为完整区域意图，准备核对来源支持的城市集合，不暗中缩为少数城市。",
+      "读取行业选项；未取得地点前不估计通勤。"
+    ],
+    "next_stage": "clarify_recruitment_industry_and_proximity_reference",
+    "limitations": [
+      "不知道家的大致位置和距离标准，无法判断近；区域范围尚未映射到执行城市集合。",
+      "仅模拟首轮解释与行动计划；未执行联网采集、材料读取、正式评估或报告生成。"
+    ],
+    "issues_found": []
+  },
+  {
+    "id": "055",
+    "actual_first_response": "先保留两个条件：岗位只看北京，通勤最多半小时；你住燕郊。我不会为增加结果自动把北京扩到其他地区，也不能只凭城市标签就保证通勤达标。\n这次找校招、实习还是社招？行业希望看哪些？半小时按单程理解可以吗；通勤主要开车还是公共交通，按什么时段计算，从燕郊哪个大致片区或车站出发？有了岗位实际办公地址才能核对路线；暂时地址或交通信息不全的会标待核实。",
+    "goal": "discover",
+    "recruitment": null,
+    "known_conditions": {
+      "recruitment": {
+        "state": "unspecified",
+        "value": null
+      },
+      "cities": {
+        "state": "explicit",
+        "value": [
+          "北京"
+        ],
+        "basis": "只看北京"
+      },
+      "commute": {
+        "state": "explicit",
+        "value": {
+          "maximum_minutes": 30,
+          "interpretation": "暂按单程理解，待用户确认口径",
+          "origin": "燕郊",
+          "mode": null,
+          "time_window": null
+        },
+        "basis": "每天通勤不能超过半小时，我住燕郊"
+      },
+      "industries": {
+        "state": "unspecified",
+        "value": null
+      },
+      "roles": {
+        "state": "unspecified",
+        "value": null
+      }
+    },
+    "questions": [
+      "这次找校招、实习还是社招？",
+      "行业希望看哪些，还是不限？",
+      "半小时按单程理解可以吗；主要用什么交通方式、什么时段，从燕郊哪个大致片区或车站出发？"
+    ],
+    "independent_actions": [
+      "读取行业选项，保留北京硬范围。",
+      "整理办公地址、通勤方式、时段及大致起点的路线核验需求，不要求详细家庭住址。"
+    ],
+    "next_stage": "clarify_scope_and_commute_measurement",
+    "limitations": [
+      "用户原话未明确半小时是单程还是全天合计；采用单程仅为待确认解释。",
+      "没有精确办公地点和路线结果，不能判定条件冲突或保证通勤达标。",
+      "仅模拟首轮解释与行动计划；未执行联网采集、材料读取、正式评估或报告生成。"
+    ],
+    "issues_found": []
+  },
+  {
+    "id": "056",
+    "actual_first_response": "可以先按AI行业里的行政职能看；是否需要技术背景，要逐份看行政JD，不能因为公司做AI就默认岗位要求会研发。\n这次找校招、实习还是社招？你说的AI公司，是主营AI产品或技术的公司，还是大型公司里的AI业务也可以？我可以先核对来源库有哪些对应公司和行业分类；城市未指定，这轮先不加过滤。",
+    "goal": "discover",
+    "recruitment": null,
+    "known_conditions": {
+      "recruitment": {
+        "state": "unspecified",
+        "value": null
+      },
+      "roles": {
+        "state": "explicit",
+        "value": [
+          "行政"
+        ],
+        "basis": "做行政"
+      },
+      "industries": {
+        "state": "explicit",
+        "value": {
+          "semantic_scope": "AI公司",
+          "source_ids": null
+        },
+        "basis": "想去AI公司；具体产业/业务边界待澄清"
+      },
+      "technical_requirement_preference": {
+        "state": "explicit",
+        "value": "倾向不要求技术背景的行政岗位",
+        "basis": "不一定要懂技术那种"
+      },
+      "cities": {
+        "state": "unspecified",
+        "value": null
+      }
+    },
+    "questions": [
+      "这次找校招、实习还是社招？",
+      "AI公司指主营AI产品或技术的公司，还是大型公司的AI业务也可以？"
+    ],
+    "independent_actions": [
+      "读取本地行业/公司目录，核对AI语义与真实来源分类的映射。",
+      "将行政职能与公司主营业务分开，并准备核对JD技术背景要求。"
+    ],
+    "next_stage": "clarify_recruitment_and_ai_company_scope",
+    "limitations": [
+      "尚未核对来源分类；不能把所有使用AI的公司算作主营AI公司。",
+      "用户没有陈述自己的技术能力，不能推断为完全不懂技术。",
+      "仅模拟首轮解释与行动计划；未执行联网采集、材料读取、正式评估或报告生成。"
+    ],
+    "issues_found": []
+  },
+  {
+    "id": "057",
+    "actual_first_response": "我会按外企优先、国企可接受来整理，私企也保留；其中“别太小”先作为私企规模的待明确底线，不把“最好外企”改成只准外企。\n这次找校招、实习还是社招？希望看哪些行业？对私企规模有没有底线，或能给几个可以接受的公司例子？我可以先列行业选项，再核对具体招聘主体的性质和规模，城市暂不加过滤。",
+    "goal": "discover",
+    "recruitment": null,
+    "known_conditions": {
+      "recruitment": {
+        "state": "unspecified",
+        "value": null
+      },
+      "ownership": {
+        "state": "explicit",
+        "value": {
+          "preferred": [
+            "外企"
+          ],
+          "acceptable": [
+            "国企",
+            "私企"
+          ]
+        },
+        "basis": "最好外企，国企也行，私企不是完全不行"
+      },
+      "size": {
+        "state": "explicit",
+        "value": {
+          "scope": "私企",
+          "description": "别太小",
+          "threshold": null
+        },
+        "basis": "私企不是完全不行，但别太小"
+      },
+      "industries": {
+        "state": "unspecified",
+        "value": null
+      },
+      "cities": {
+        "state": "unspecified",
+        "value": null
+      },
+      "roles": {
+        "state": "unspecified",
+        "value": null
+      }
+    },
+    "questions": [
+      "这次找校招、实习还是社招？",
+      "希望看哪些行业，还是不限？",
+      "私企规模有没有底线，或能举几个可以接受的公司例子？"
+    ],
+    "independent_actions": [
+      "读取行业/公司目录。",
+      "区分所有制偏好和排除项，按具体招聘主体核对性质与规模。"
+    ],
+    "next_stage": "clarify_recruitment_industry_and_private_company_size",
+    "limitations": [
+      "公司性质和规模尚无可核对资料；不代表稳定、轻松或个人匹配。",
+      "仅模拟首轮解释与行动计划；未执行联网采集、材料读取、正式评估或报告生成。"
+    ],
+    "issues_found": []
+  },
+  {
+    "id": "058",
+    "actual_first_response": "先把“不要再做拉新”明确列为排除项，不因为简历里都是运营就继续推荐获客增长方向。我目前没有可读取的简历内容，可以直接从你愿意保留的任务开始讨论。\n运营里哪些任务你还愿意做，哪些除了拉新也不想碰？能讲一段你自己负责过的具体工作吗？行业希望继续原方向、换行业还是不限？我可以先整理可探索的任务类型，等你要看岗位时再确定招聘类型；城市暂不加过滤。",
+    "goal": "explore",
+    "recruitment": null,
+    "known_conditions": {
+      "recruitment": {
+        "state": "unspecified",
+        "value": null
+      },
+      "reported_experience": {
+        "state": "explicit",
+        "value": [
+          "运营"
+        ],
+        "basis": "简历里都是运营；尚未实际读取"
+      },
+      "role_exclusions": {
+        "state": "explicit",
+        "value": [
+          "拉新"
+        ],
+        "basis": "真的不想再做拉新"
+      },
+      "roles": {
+        "state": "unspecified",
+        "value": null
+      },
+      "industries": {
+        "state": "unspecified",
+        "value": null
+      },
+      "cities": {
+        "state": "unspecified",
+        "value": null
+      },
+      "materials": {
+        "state": "explicit",
+        "value": {
+          "resume": "missing"
+        },
+        "basis": "测试仅提供这段文字，没有简历内容"
+      }
+    },
+    "questions": [
+      "哪些运营任务仍愿意做，哪些除了拉新也不想碰？",
+      "能讲一段你自己负责过的具体工作吗？",
+      "行业希望继续原方向、换行业还是不限？"
+    ],
+    "independent_actions": [
+      "将拉新标为明确排除，不从运营履历推断个人偏好。",
+      "整理待讨论任务选项和最小经历输入；读取行业选项。"
+    ],
+    "next_stage": "collect_preferences_and_actual_tasks_for_exploration",
+    "limitations": [
+      "没有简历正文或具体本人行动，不能判断其他运营或转型岗位的能力匹配。",
+      "仅模拟首轮解释与行动计划；未执行联网采集、材料读取、正式评估或报告生成。"
+    ],
+    "issues_found": []
+  },
+  {
+    "id": "059",
+    "actual_first_response": "这几项先分别记录：大厂目标、涨薪50%、希望工作负担更轻，以及优先不换城市。“最好别换城市”先按偏好保留；轻松程度不能由大厂标签或职位名称保证，也不能承诺这几项一定能同时满足。\n目前做什么岗位，这次准备按社招跳槽吗？现在在哪座城市？希望看哪些行业，还是不限？我可以先整理行业选项和这些目标的核查方式，后面再统一工资口径、明确“轻松”的含义和取舍顺序。",
+    "goal": "discover",
+    "recruitment": null,
+    "known_conditions": {
+      "recruitment": {
+        "state": "unspecified",
+        "value": null
+      },
+      "size": {
+        "state": "explicit",
+        "value": {
+          "target": "大厂",
+          "definition": null
+        },
+        "basis": "想去大厂"
+      },
+      "salary": {
+        "state": "explicit",
+        "value": {
+          "increase_target": 0.5,
+          "baseline": null,
+          "compensation_basis": null
+        },
+        "basis": "工资涨50%"
+      },
+      "workload": {
+        "state": "explicit",
+        "value": {
+          "intent": "更轻松",
+          "definition": null
+        },
+        "basis": "工作轻松一点"
+      },
+      "city_preference": {
+        "state": "explicit",
+        "value": {
+          "intent": "优先不换城市",
+          "city": null,
+          "strength": "preference"
+        },
+        "basis": "最好别换城市"
+      },
+      "cities": {
+        "state": "unspecified",
+        "value": null
+      },
+      "industries": {
+        "state": "unspecified",
+        "value": null
+      },
+      "roles": {
+        "state": "unspecified",
+        "value": null
+      }
+    },
+    "questions": [
+      "目前做什么岗位，这次准备按社招跳槽吗？",
+      "现在在哪座城市？",
+      "希望看哪些行业，还是不限？"
+    ],
+    "independent_actions": [
+      "读取行业选项，区分目标、偏好和未定义条件。",
+      "整理工资基线、薪酬口径、工作负担和公司规模的后续核查项，不自行排定目标优先级。"
+    ],
+    "next_stage": "clarify_recruitment_city_and_industry_then_discover",
+    "limitations": [
+      "不知道当前城市、工资基线或轻松的定义，不能验证组合条件可实现。",
+      "仅模拟首轮解释与行动计划；未执行联网采集、材料读取、正式评估或报告生成。"
+    ],
+    "issues_found": []
+  },
+  {
+    "id": "060",
+    "actual_first_response": "先把你的游戏行业兴趣和家人的银行偏好分开，不把家人的选择直接当成你的投递要求。可以先讨论你在游戏行业想做哪些任务；喜欢游戏本身还不能判断适合研发、运营或其他岗位。\n你现在是准备校招、找实习，还是社招？有哪些学习或工作经历，自己更想做什么？银行方向要一起作为比较项保留，还是这轮先看游戏？我可以先整理两类方向需要核对的任务和资格差异，城市暂不加过滤。",
+    "goal": "explore",
+    "recruitment": null,
+    "known_conditions": {
+      "recruitment": {
+        "state": "unspecified",
+        "value": null
+      },
+      "industries": {
+        "state": "explicit",
+        "value": {
+          "personal_interest": [
+            "游戏"
+          ],
+          "mandatory_scope": false
+        },
+        "basis": "我自己更喜欢游戏"
+      },
+      "family_preference": {
+        "state": "explicit",
+        "value": "考银行",
+        "basis": "家里想让我考银行"
+      },
+      "bank_comparison_scope": {
+        "state": "unspecified",
+        "value": null
+      },
+      "roles": {
+        "state": "unspecified",
+        "value": null
+      },
+      "cities": {
+        "state": "unspecified",
+        "value": null
+      }
+    },
+    "questions": [
+      "现在准备校招、找实习，还是社招？",
+      "有哪些学习或工作经历，自己更想做什么？",
+      "银行方向一起作为比较项保留，还是这轮先看游戏？"
+    ],
+    "independent_actions": [
+      "区分个人兴趣与家人偏好，不自动把银行设为本人硬要求。",
+      "读取相关行业/来源覆盖；整理任务与资格讨论框架，考试要求待具体公告核实。"
+    ],
+    "next_stage": "clarify_recruitment_personal_evidence_and_comparison_scope",
+    "limitations": [
+      "没有真实经历或岗位公告，不能凭兴趣或家庭偏好判断适合。",
+      "仅模拟首轮解释与行动计划；未执行联网采集、材料读取、正式评估或报告生成。"
+    ],
+    "issues_found": []
+  },
+  {
+    "id": "061",
+    "actual_first_response": "可以帮你做上海岗位的匹配，不过我目前没有收到可读取的简历附件，不能说已经看过。\n请重新上传简历，或贴出主要经历；这次找校招、实习还是社招？行业想看哪些，还是不限？上海已记下，不用再确认。我可以先整理上海范围和来源库行业选项；收到材料后再核对经历，采集后再确定需要正式评估哪些岗位。",
+    "goal": "match",
+    "recruitment": null,
+    "known_conditions": {
+      "recruitment": {
+        "state": "unspecified",
+        "value": null
+      },
+      "cities": {
+        "state": "explicit",
+        "value": [
+          "上海"
+        ],
+        "basis": "上海的岗位"
+      },
+      "industries": {
+        "state": "unspecified",
+        "value": null
+      },
+      "roles": {
+        "state": "unspecified",
+        "value": null
+      },
+      "materials": {
+        "state": "explicit",
+        "value": {
+          "resume": "missing"
+        },
+        "basis": "材料状态明确没有实际附件；用户仅声称已发送"
+      }
+    },
+    "questions": [
+      "请重新上传简历或贴出主要经历。",
+      "这次找校招、实习还是社招？",
+      "行业想看哪些，还是不限？"
+    ],
+    "independent_actions": [
+      "读取行业选项，记录上海范围。",
+      "列出待获取材料并在取得后读取；招聘类型和行业确定后可先做不依赖画像的岗位发现。"
+    ],
+    "next_stage": "obtain_resume_and_clarify_search_scope",
+    "limitations": [
+      "未收到真实简历，不能个人匹配或声称已读取。",
+      "正式评估范围尚未确定，应在得到候选数量后再询问。",
+      "仅模拟首轮解释与行动计划；未执行联网采集、材料读取、正式评估或报告生成。"
+    ],
+    "issues_found": []
+  },
+  {
+    "id": "062",
+    "actual_first_response": "我会先尝试定位桌面上的简历候选并核对文件名；如果存在多个版本，不能只凭“最新版”三个字选一份。你也可以直接给出完整路径或上传文件，便于准确定位。\n这次找校招、实习还是社招？行业想看哪些，还是不限？我可以先整理行业选项，定位到真实文件后再读取经历。城市还没指定，这轮先不加过滤。",
+    "goal": "match",
+    "recruitment": null,
+    "known_conditions": {
+      "recruitment": {
+        "state": "unspecified",
+        "value": null
+      },
+      "industries": {
+        "state": "unspecified",
+        "value": null
+      },
+      "cities": {
+        "state": "unspecified",
+        "value": null
+      },
+      "roles": {
+        "state": "unspecified",
+        "value": null
+      },
+      "materials": {
+        "state": "explicit",
+        "value": {
+          "resume": "missing",
+          "location_hint": "桌面",
+          "version_hint": "最新版",
+          "exact_path": null
+        },
+        "basis": "看桌面那个最新版简历；无有效路径和文件内容"
+      }
+    },
+    "questions": [
+      "如果方便，请给出完整文件路径或上传该版本；若有多个候选，需要指定哪一份。",
+      "这次找校招、实习还是社招？",
+      "行业想看哪些，还是不限？"
+    ],
+    "independent_actions": [
+      "在允许读取的桌面位置定位简历候选，仅有唯一可确定文件时读取；多个版本则请用户指定，不宣称已找到。",
+      "读取行业选项，记录材料路径仍未解析。"
+    ],
+    "next_stage": "locate_resume_and_clarify_search_scope",
+    "limitations": [
+      "没有可核实的文件路径或内容，不能认定最新版本或编造简历事实。",
+      "仅模拟首轮解释与行动计划；未执行联网采集、材料读取、正式评估或报告生成。"
+    ],
+    "issues_found": []
+  },
+  {
+    "id": "063",
+    "actual_first_response": "可以先读取照片里能确认的内容，模糊的经历、日期或数字会单独向你核实，不靠猜测补齐。不过目前这条输入没有可查看的照片，我还不能判断清晰度。\n请上传照片，或粘贴可以确认的文字。你这次找校招、实习还是社招？行业希望看哪些，还是不限？收到照片后可以先做文字提取和不确定项标注；城市先不加过滤。",
+    "goal": "match",
+    "recruitment": null,
+    "known_conditions": {
+      "recruitment": {
+        "state": "unspecified",
+        "value": null
+      },
+      "industries": {
+        "state": "unspecified",
+        "value": null
+      },
+      "cities": {
+        "state": "unspecified",
+        "value": null
+      },
+      "roles": {
+        "state": "unspecified",
+        "value": null
+      },
+      "materials": {
+        "state": "explicit",
+        "value": {
+          "resume": "missing",
+          "reported_format": "打印版简历照片",
+          "reported_quality": "可能模糊"
+        },
+        "basis": "用户说打印版拍照，但实际未提供图像"
+      }
+    },
+    "questions": [
+      "请上传照片，或粘贴可以确认的文字。",
+      "这次找校招、实习还是社招？",
+      "行业希望看哪些，还是不限？"
+    ],
+    "independent_actions": [
+      "获得照片后进行视觉/OCR读取，只提取能确认的文字并标记不确定项。",
+      "读取行业选项；不得声称OCR已失败或已识别具体内容。"
+    ],
+    "next_stage": "obtain_image_then_extract_confirmable_profile",
+    "limitations": [
+      "没有实际图像，当前材料状态是缺失，不能当作已验证不可读。",
+      "仅模拟首轮解释与行动计划；未执行联网采集、材料读取、正式评估或报告生成。"
+    ],
+    "issues_found": []
+  },
+  {
+    "id": "064",
+    "actual_first_response": "我不会挑年限更长、看起来更有利的版本。两年和三年的差异需要按真实时间线核实，可能涉及实习、重叠经历或起止日期，确认前保留为冲突。\n目前没有两份可读取的附件；请上传它们，或贴出经历的起止年月、正式工作/实习性质及重叠情况。这次找校招、实习还是社招？希望看哪些行业？我可以先整理冲突清单和年限计算口径，不能先用三年经验给你下匹配结论。",
+    "goal": "match",
+    "recruitment": null,
+    "known_conditions": {
+      "recruitment": {
+        "state": "unspecified",
+        "value": null
+      },
+      "experience_years": {
+        "state": "conflict",
+        "value": [
+          2,
+          3
+        ],
+        "basis": "用户称两份简历分别写两年与三年，尚无原文可核对"
+      },
+      "industries": {
+        "state": "unspecified",
+        "value": null
+      },
+      "cities": {
+        "state": "unspecified",
+        "value": null
+      },
+      "roles": {
+        "state": "unspecified",
+        "value": null
+      },
+      "materials": {
+        "state": "explicit",
+        "value": {
+          "resume": "missing",
+          "reported_version_count": 2,
+          "reported_conflict": "年限"
+        },
+        "basis": "实际未提供两份附件"
+      }
+    },
+    "questions": [
+      "请上传两份简历，或贴出起止年月、正式/实习性质以及重叠情况。",
+      "这次找校招、实习还是社招？",
+      "希望看哪些行业，还是不限？"
+    ],
+    "independent_actions": [
+      "保留用户报告的年限冲突，不选择有利版本。",
+      "建立时间线核对项，正式工作、实习和重叠时段分开；读取行业选项。"
+    ],
+    "next_stage": "resolve_resume_timeline_conflict_before_assessment",
+    "limitations": [
+      "仅知道用户报告存在冲突，未读取两份原文，不能裁定准确年限。",
+      "仅模拟首轮解释与行动计划；未执行联网采集、材料读取、正式评估或报告生成。"
+    ],
+    "issues_found": []
+  },
+  {
+    "id": "065",
+    "actual_first_response": "可以把数据分析作为探索方向，但Python、SQL、Excel、Tableau的工具清单还不能说明你是否能完成业务分析。更有用的是一个真实例子：面对什么问题、如何处理数据、得到什么结论、结论有没有被使用。\n这次找校招、实习还是社招？能讲一个你亲手完成的分析项目吗，课程或个人项目也可以。行业想看哪些，还是不限？我可以先整理数据分析岗位常见任务的核查框架和行业选项，城市先不加限制。",
+    "goal": "explore",
+    "recruitment": null,
+    "known_conditions": {
+      "recruitment": {
+        "state": "unspecified",
+        "value": null
+      },
+      "roles": {
+        "state": "explicit",
+        "value": [
+          "数据分析"
+        ],
+        "basis": "能找数据分析吗"
+      },
+      "skills_self_report": {
+        "state": "explicit",
+        "value": [
+          "Python",
+          "SQL",
+          "Excel",
+          "Tableau"
+        ],
+        "basis": "都会"
+      },
+      "industries": {
+        "state": "unspecified",
+        "value": null
+      },
+      "cities": {
+        "state": "unspecified",
+        "value": null
+      },
+      "experience": {
+        "state": "unspecified",
+        "value": null
+      }
+    },
+    "questions": [
+      "这次找校招、实习还是社招？",
+      "能讲一个你亲手完成的分析项目，说明问题、做法和产出吗？",
+      "行业想看哪些，还是不限？"
+    ],
+    "independent_actions": [
+      "记录工具自评为有限证据，不直接映射能力等级。",
+      "整理项目证据输入方式并读取行业选项。"
+    ],
+    "next_stage": "collect_real_analysis_evidence_and_clarify_recruitment",
+    "limitations": [
+      "没有实际分析任务、产出或JD，不能承诺适合具体数据分析岗位。",
+      "仅模拟首轮解释与行动计划；未执行联网采集、材料读取、正式评估或报告生成。"
+    ],
+    "issues_found": []
+  },
+  {
+    "id": "066",
+    "actual_first_response": "可以先看增长岗位。你们组一年营收翻倍会记录为团队成果，不能直接写成你个人促成翻倍；如果要判断个人匹配，还要看你负责哪段工作、做了什么。\n这次找校招、实习还是社招？希望看哪些行业？如果也要做个人匹配，可以补一个你亲手负责的增长任务和产出。我可以先整理行业选项和增长岗位任务类别，城市先不加过滤，不必等完整简历才开始明确搜索范围。",
+    "goal": "discover",
+    "recruitment": null,
+    "known_conditions": {
+      "recruitment": {
+        "state": "unspecified",
+        "value": null
+      },
+      "roles": {
+        "state": "explicit",
+        "value": [
+          "增长"
+        ],
+        "basis": "帮我找增长岗"
+      },
+      "team_result": {
+        "state": "explicit",
+        "value": {
+          "metric": "营收",
+          "change": "翻倍",
+          "period": "一年",
+          "personal_attribution": null
+        },
+        "basis": "我们组一年营收翻倍，我也在里面"
+      },
+      "industries": {
+        "state": "unspecified",
+        "value": null
+      },
+      "cities": {
+        "state": "unspecified",
+        "value": null
+      }
+    },
+    "questions": [
+      "这次找校招、实习还是社招？",
+      "希望看哪些行业，还是不限？",
+      "若希望同时判断个人匹配，能补一个自己负责的增长任务和产出吗？"
+    ],
+    "independent_actions": [
+      "将团队结果与本人动作分开记录，不将参与改写成主导。",
+      "读取行业选项；类型和行业明确后可先发现候选，不以补完个人证据作为发现的前提。"
+    ],
+    "next_stage": "clarify_recruitment_and_industry_then_discover",
+    "limitations": [
+      "没有个人责任和行动证据，不能据团队营收翻倍给本人增长能力评级。",
+      "仅模拟首轮解释与行动计划；未执行联网采集、材料读取、正式评估或报告生成。"
+    ],
+    "issues_found": []
+  },
+  {
+    "id": "067",
+    "actual_first_response": "可以用脱敏材料评，不需要客户或项目名称，也不需要你提供受保密限制的数字。可以描述交付的任务类型、你负责的环节、遇到的问题、采取的动作和不涉密的反馈；不能确认的部分保留未知，不编造成果。\n你想评估什么岗位，方便贴一份去掉敏感信息的JD吗？能补一个本人实际负责的交付片段吗？这次属于校招、实习还是社招？我可以先帮你把现有概述整理成可用的证据提纲；只有“大概做交付”还不足以给具体岗位结论。",
+    "goal": "match",
+    "recruitment": null,
+    "known_conditions": {
+      "recruitment": {
+        "state": "unspecified",
+        "value": null
+      },
+      "roles": {
+        "state": "unspecified",
+        "value": null
+      },
+      "cities": {
+        "state": "unspecified",
+        "value": null
+      },
+      "confidentiality": {
+        "state": "explicit",
+        "value": {
+          "project_names_restricted": true,
+          "numbers_restricted": true
+        },
+        "basis": "签保密协议，名字和数字不能讲"
+      },
+      "experience": {
+        "state": "explicit",
+        "value": {
+          "summary": "给客户做交付",
+          "personal_actions": null,
+          "scope": null,
+          "outcome": null
+        },
+        "basis": "大概就是给客户做交付"
+      },
+      "materials": {
+        "state": "explicit",
+        "value": {
+          "profile": "partial",
+          "jd": "missing"
+        },
+        "basis": "仅有概述，没有具体任务或JD"
+      }
+    },
+    "questions": [
+      "想评估什么岗位，能提供去掉敏感信息的JD或岗位要求吗？",
+      "能描述一个本人负责的交付片段，包括职责、动作和不涉密反馈吗？",
+      "这次属于校招、实习还是社招？"
+    ],
+    "independent_actions": [
+      "把匿名任务、责任边界、流程和非敏感反馈作为可接受证据，建立脱敏提纲。",
+      "等待真实经历与JD，未公开名称或数字不自动视为能力不足，也不要求泄露受限信息。"
+    ],
+    "next_stage": "collect_anonymized_evidence_and_target_jd",
+    "limitations": [
+      "只有笼统交付概述，没有具体本人行动和JD，不能正式评级。",
+      "仅模拟首轮解释与行动计划；未执行联网采集、材料读取、正式评估或报告生成。"
+    ],
+    "issues_found": []
+  }
+]

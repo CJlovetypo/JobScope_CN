@@ -1,4 +1,5 @@
 import {createHash} from 'node:crypto';
+import {isV5,v5EvidenceProblem} from './assessment-v5.mjs';
 
 const hasText = value => typeof value === 'string' && value.trim().length > 0;
 const isObject = value => value !== null && typeof value === 'object' && !Array.isArray(value);
@@ -27,7 +28,7 @@ export function profileFingerprint(profile) {
 
 /** Return the first profile evidence schema problem, or null. Never infer claims from their source. */
 export function profileEvidenceProblem(profile) {
-  if (!isObject(profile) || !Array.isArray(profile.evidence) || !profile.evidence.length) return '个人画像缺少非空 evidence 证据数组';
+  if (!isObject(profile) || !Array.isArray(profile.evidence) || !profile.evidence.length&&!isV5(profile)) return '个人画像缺少非空 evidence 证据数组';
   const ids = new Set();
   const experienceTypeById = new Map();
   for (const [index, evidence] of profile.evidence.entries()) {
@@ -85,6 +86,7 @@ function experienceRelevanceProblem(review, evidenceById, referencedWorkIds) {
  * relevance from titles, or verify the model's semantic reading of evidence.
  */
 export function abilityEvidenceProblem(review, profile) {
+  const v5Problem=v5EvidenceProblem(review,profile);if(v5Problem)return v5Problem;
   if (!isObject(review) || !hasText(review.ability_reason)) return '能力判断缺少非空 ability_reason；须解释证据质量、对口程度与核心覆盖';
   const profileProblem = profileEvidenceProblem(profile);
   if (profileProblem) return profileProblem;

@@ -1,0 +1,240 @@
+[
+  {
+    "id": "001",
+    "status": "pass",
+    "reason": "沿用上海、行业、校招、学历与毕业时间及20个评估范围，不重复索要简历；100并发只记录为已做测试，未虚构高并发生产能力。",
+    "required_fix": null,
+    "policy_issue": null
+  },
+  {
+    "id": "002",
+    "status": "pass",
+    "reason": "正确保留明确城市不限、15个范围和排除销售；区分独立整理指标与参与报告。精确毕业月份可等具体JD窗口确有必要时再补，属于合理分阶段。",
+    "required_fix": null,
+    "policy_issue": null
+  },
+  {
+    "id": "003",
+    "status": "pass",
+    "reason": "沿用显式campus入口、深圳整车厂和仅比亚迪的全量约定；先解析实际主体，不把课题协调升级为量产项目管理，也不另问已给数量。",
+    "required_fix": null,
+    "policy_issue": null
+  },
+  {
+    "id": "004",
+    "status": "pass",
+    "reason": "正确识别全行业及非技术职能，保存10个评估范围和销售排除；招聘执行、活动组织与独立面试能力没有混淆。",
+    "required_fix": null,
+    "policy_issue": null
+  },
+  {
+    "id": "005",
+    "status": "pass",
+    "reason": "完整沿用日常实习的开始日期、每周天数和月份及20个范围；把公众号数据连同本人职责记录，没有声称阅读增长完全由本人造成或补出商业投放能力。",
+    "required_fix": null,
+    "policy_issue": null
+  },
+  {
+    "id": "006",
+    "status": "pass",
+    "reason": "保留北京和深圳及所有到岗条件，不重问画像；STM32、C及本人动作有据，RTOS和企业实习经验明确缺失。",
+    "required_fix": null,
+    "policy_issue": null
+  },
+  {
+    "id": "007",
+    "status": "pass",
+    "reason": "准确区分日常实习和正式校招，保留天数、起始与月份；课程报告未升级为财务实务或持证能力。",
+    "required_fix": null,
+    "policy_issue": null
+  },
+  {
+    "id": "008",
+    "status": "pass",
+    "reason": "区分22k期望与20k底线，保留offer后30天及商务项目排除；游戏只作为业务偏好，未将协调责任扩写为人员绩效或预算管理。",
+    "required_fix": null,
+    "policy_issue": null
+  },
+  {
+    "id": "009",
+    "status": "pass",
+    "reason": "按明确授权使用快速定向并先展示公司依据与词表，固定展示顺序的前15个岗位键，未变成抽样15个。社招语义有正式任职3年、离职交接与跨行业换工作的原话支持，不只依赖题名；本人参与与主管主导已区分。",
+    "required_fix": null,
+    "policy_issue": null
+  },
+  {
+    "id": "010",
+    "status": "pass",
+    "reason": "沿用明确社招和零正式年限，没有将实习累计为正式经历或切回校招；夜班未知及年限门槛保留核实。",
+    "required_fix": null,
+    "policy_issue": null
+  },
+  {
+    "id": "011",
+    "status": "pass",
+    "reason": "用两组最小问题分流招聘阶段和目标/经历，独立列行业，城市记录未指定且仅本轮不加过滤；未自动订阅或编画像。",
+    "required_fix": null,
+    "policy_issue": null
+  },
+  {
+    "id": "012",
+    "status": "pass",
+    "reason": "将需求识别为探索，未凭投递无回复诊断能力或原因；只补真实经历、方向和意愿，岗位与脱敏简历是可选补充。",
+    "required_fix": null,
+    "policy_issue": null
+  },
+  {
+    "id": "013",
+    "status": "pass",
+    "reason": "明确机械专业不足以判适合，优先澄清不进厂的真实边界、招聘类型与本人经历；行业选择延后没有被暗设为制造业或全行业。",
+    "required_fix": null,
+    "policy_issue": null
+  },
+  {
+    "id": "014",
+    "status": "pass",
+    "reason": "把外企记为性质而非行业，最多三组问题补类型、经历与范围；城市未指定没有被写成用户明确不限。",
+    "required_fix": null,
+    "policy_issue": null
+  },
+  {
+    "id": "015",
+    "status": "pass",
+    "reason": "“苏州有什么岗位”按浏览机会处理合理；补招聘类型和行业，未索要不必要画像或评估批次，也未声称已有实际岗位。",
+    "required_fix": null,
+    "policy_issue": null
+  },
+  {
+    "id": "016",
+    "status": "pass",
+    "reason": "准确解释沪杭并澄清PM、招聘类型与劳动强度偏好；行业延后选择且状态仍未指定，没有用模糊偏好保证轻松。",
+    "required_fix": null,
+    "policy_issue": null
+  },
+  {
+    "id": "017",
+    "status": "pass",
+    "reason": "直接回答功能咨询，所列19个行业与当前industry-routing.mjs目录一致；未要求简历或将来源分类说成实时有岗保证。",
+    "required_fix": null,
+    "policy_issue": null
+  },
+  {
+    "id": "018",
+    "status": "pass",
+    "reason": "将财务归为职能，分开补行业、招聘类型和相关经历；保留个人匹配目标，缺失城市没有被擅自设为硬筛。",
+    "required_fix": null,
+    "policy_issue": null
+  },
+  {
+    "id": "019",
+    "status": "pass",
+    "reason": "允许姓名、电话和学校名称脱敏，说明发现与匹配的材料差别；只询问任务方式及招聘阶段，没有把身份信息设成必填。",
+    "required_fix": null,
+    "policy_issue": null
+  },
+  {
+    "id": "020",
+    "status": "pass",
+    "reason": "尊重少问，只补发现阶段必要的方向与公司/行业两组；没有因用户催促而默认全行业、全量匹配或补造画像。",
+    "required_fix": null,
+    "policy_issue": null
+  },
+  {
+    "id": "021",
+    "status": "pass",
+    "reason": "先查明确的北京互联网校招范围、后用简历匹配是合理分阶段；未重复问已知学历和行业，也未在毕业时间与项目证据缺失时评级。",
+    "required_fix": null,
+    "policy_issue": null
+  },
+  {
+    "id": "022",
+    "status": "pass",
+    "reason": "没有把27届或题名直接当作正式校招，先澄清招聘类型和行业；用户说先看看，首轮暂不追问完整学历与经历合理。",
+    "required_fix": null,
+    "policy_issue": null
+  },
+  {
+    "id": "023",
+    "status": "pass",
+    "reason": "正确把明年12月解释为2027年12月，海外资格按具体公告窗口核对；没有统一承诺27届资格，日期口径补问与当前疑问相关。",
+    "required_fix": null,
+    "policy_issue": null
+  },
+  {
+    "id": "024",
+    "status": "pass",
+    "reason": "保存更正后的预计2027年3月及不确定性，未声称读取或修改简历；先澄清新能源细分范围，学历与经历留待正式匹配属于合理阶段安排。",
+    "required_fix": null,
+    "policy_issue": null
+  },
+  {
+    "id": "025",
+    "status": "pass",
+    "reason": "不以无社保证明应届资格，正确解释2025年毕业；银行范围未扩成证券保险，先核对学历、月份及招聘方向，没有无依据保证可投。",
+    "required_fix": null,
+    "policy_issue": null
+  },
+  {
+    "id": "026",
+    "status": "pass",
+    "reason": "没有按专科学历否定所有校招，也没有保证一定存在匹配岗位；先定行业和目标任务、在发现中展示原文学历要求，其他画像后补合理。",
+    "required_fix": null,
+    "policy_issue": null
+  },
+  {
+    "id": "027",
+    "status": "pass",
+    "reason": "课程只作为学习背景，补学历、毕业时间与实际课程产出；AI职能和行业映射保持待定，未静默选全AI相关公司或承诺胜任。",
+    "required_fix": null,
+    "policy_issue": null
+  },
+  {
+    "id": "028",
+    "status": "pass",
+    "reason": "保持正式校招身份，将提前实习作为岗位条件，先取原文和真实可用时间；未把普通实习画像要求整套前置或给出无证据投递结论。",
+    "required_fix": null,
+    "policy_issue": null
+  },
+  {
+    "id": "029",
+    "status": "pass",
+    "reason": "可查看硕士门槛岗位但保留本科资格冲突；项目强弱不当作既成事实，需真实项目证据与范围，三组补问与当前任务相关。",
+    "required_fix": null,
+    "policy_issue": null
+  },
+  {
+    "id": "030",
+    "status": "pass",
+    "reason": "分别保留互联网产品和银行管培，不凭硕士学历选方向；没有把两条职业路径误作两种招聘类型，先澄清类型及真实经历和意愿。",
+    "required_fix": null,
+    "policy_issue": null
+  },
+  {
+    "id": "031",
+    "status": "pass",
+    "reason": "明确暑期实习但不擅自定2027年，先问年份和范围；此轮为岗位发现，晚补在校状态、毕业和经历不构成漏掉硬门槛或假判匹配。",
+    "required_fix": null,
+    "policy_issue": null
+  },
+  {
+    "id": "032",
+    "status": "pass",
+    "reason": "保留“每周4天应该行”的不确定性且不重问天数；行业与起止跨度优先，缺画像不妨碍之后先发现，但没有承诺满足任一JD。",
+    "required_fix": null,
+    "policy_issue": null
+  },
+  {
+    "id": "033",
+    "status": "pass",
+    "reason": "保存周三周五两天硬条件，不重复问已知天数，不承诺一定有岗位；按统一规则把未指定城市暂不筛选，未把缺失当用户明确不限。",
+    "required_fix": null,
+    "policy_issue": null
+  },
+  {
+    "id": "034",
+    "status": "needs_fix",
+    "reason": "时间处理正确，也没有从题名推断实习或短期；但实际回应和questions都用“实习还是兼职”作为二选一招聘身份，混淆了实习身份与兼职/全职时间安排。后续若据这个答案分流，会把可采用兼职安排的实习误当作另一方向。",
+    "required_fix": "将招聘身份与时间安排拆开：先确认是否寻找实习岗位，若是普通兼职/短期工作则另行说明支持范围；每周可工作天数及起止日期作为独立可用性字段保留。不要让实习与兼职互斥，也不要仅凭返校推定招聘类型。同步调整actual_first_response、questions和下一阶段分流描述。",
+    "policy_issue": "不是统一规则缺失；当前 shared/job-search-core/references/modes/internship.md 已明确“兼职/全职为时间安排，实习身份独立”，此处模拟回应没有遵循该区分。"
+  }
+]

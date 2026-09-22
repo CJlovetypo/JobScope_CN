@@ -21,6 +21,8 @@ import {collectCompanySources,sourceCacheMatches,sourceConfigFingerprint} from '
 import {SEARCH_MODE,TARGET_STATUS,isTargetJob,knownOtherType,modeProfileProblem,eligibilityPolicy} from './lib/search-mode.mjs';
 import {validatedDirectionRegistry} from './lib/direction-validation.mjs';
 import {reconcileTargetJob} from './lib/target-api-proof.mjs';
+import {assertTaskExecution,assertTaskScope,assertScopeRevision,taskFingerprint} from './lib/task-decision.mjs';
+import {isV5,MODEL_VERSION,modelVersion,allowLocationReview,V5_INSTRUCTION} from './lib/assessment-v5.mjs';
 const [command,...args]=process.argv.slice(2);
 const BATCH_HELP='batch-create --run 运行目录 [--limit 50] [--max-chars 160000] [--concurrency 4] [--jobs 岗位键数组.json]\nbatch-start --run 运行目录 --batch ID --agent ID\nbatch-submit --run 运行目录 --batch ID --agent ID --file 草稿.json\nbatch-merge --run 运行目录 --batch ID\nbatch-close --run 运行目录 --batch ID --agent ID --stopped [--usage-log 会话.jsonl]\nbatch-status --run 运行目录 [--refresh]\nstart/close 可传实际工具调用 --tool-started-at ISO时间 --tool-finished-at ISO时间';
 const flags={};for(let i=0;i<args.length;i++){if(!args[i].startsWith('--'))throw new Error('未知参数 '+args[i]);const key=args[i].slice(2);flags[key]=args[i+1]&&!args[i+1].startsWith('--')?args[++i]:true;}
@@ -107,24 +109,35 @@ async function refreshCities(selectedOverride) {
 }
 async function prepare() {
  if(!flags.profile)throw new Error('prepare 需要 --profile（由 skill 按用户材料整理）');
+ const discovery=flags.discovery===true;
  const profile=await readJson(path.resolve(String(flags.profile)));profile.city_filters=normalizeCityFilters(profile.city_filters||[]);
- if(SEARCH_MODE.id!=='campus'){const problem=modeProfileProblem(profile);if(problem)throw Error(problem);profile.search_mode=SEARCH_MODE.id;}
+ if(!discovery){profile.assessment_model_version=MODEL_VERSION;profile.evidence??=[];}
+ if(!discovery&&SEARCH_MODE.id!=='campus'){const problem=modeProfileProblem(profile);if(problem)throw Error(problem);profile.search_mode=SEARCH_MODE.id;}
+ if(profile.search_mode&&profile.search_mode!==SEARCH_MODE.id)throw Error('画像招聘方向与当前 Skill 不一致');
  profile.industry_filters=normalizeIndustries(profile.industry_filters);
  let candidates=chooseSources(profile.industry_filters,profile.company_filters);
  const rawPlan=flags['search-plan']?await readJson(path.resolve(String(flags['search-plan']))):profile.search_plan;
  const searchPlan=rawPlan?validateSearchPlan(rawPlan,sources):null;
  if(searchPlan){const allowed=new Set(candidates.map(c=>c.company_id));if(searchPlan.company_ids.some(id=>!allowed.has(id)))throw Error('定向候选与行业或明确公司范围冲突');candidates=candidates.filter(c=>searchPlan.company_ids.includes(c.company_id));profile.search_plan=searchPlan;}
- await ensureDirectionalCities(candidates,profile.city_filters);
- const evidence=profile.evidence||[];if(!evidence.length)throw new Error('缺少可核对的简历／经历证据；请先补充材料');
+ const task=flags.task?await readJson(path.resolve(String(flags.task))):null;
+ if(isV5(profile)&&!profile.city_preference){const c=task?.conditions?.cities;profile.city_preference={state:c?.state|| (profile.city_filters.length?'explicit':'unspecified'),values:c?.value||profile.city_filters,importance:c?.importance||(profile.city_filters.length?'must':'open')};}
+ if(task&&(flags.only||flags.providers))throw Error('绑定任务时请在任务与profile中记录公司范围，不能用 --only/--providers 暗中缩小');
+ if(task)assertTaskExecution(task,profile,SEARCH_MODE.id,{discovery,searchPlan});
+ if(!discovery){
+ const evidence=profile.evidence||[];
  if(new Set(evidence.map(e=>e.id)).size!==evidence.length||evidence.some(e=>!e.id||!e.text))throw new Error('个人证据需要唯一 id 和具体 text');
  const profileProblem=profileEvidenceProblem(profile);if(profileProblem)throw new Error('个人画像需补齐证据分类：'+profileProblem);
- const city=await readJson(cityFile,null);if(profile.city_filters.length&&!city)throw new Error('城市索引尚未建立，请先 refresh-cities');
- const business=await readJson(businessFile,{companies:[]}),ownership=await readJson(ownershipFile,{companies:[]});const cities=new Map((city?.companies||[]).map(c=>[c.company_id,c]));const businesses=new Map(business.companies.map(c=>[c.company_id,c]));const ownerships=new Map(ownership.companies.map(c=>[c.company_id,c]));
- assertOwnershipDatasetComplete(candidates.filter(s=>companyCityMatches(cities.get(s.company_id),profile.city_filters)),ownership);
+ }
  const dir=workspacePath(flags.out?path.resolve(String(flags.out)):path.join(SKILL_ROOT,'runs',stamp()));
  if(await readJson(path.join(dir,'run.json'),null))throw new Error('该运行目录已存在，请使用新目录；继续采集用 collect --run');
+ await ensureDirectionalCities(candidates,profile.city_filters);
+ const city=await readJson(cityFile,null);if(profile.city_filters.length&&!city)throw new Error('城市索引尚未建立，请先 refresh-cities');
+ const business=await readJson(businessFile,{companies:[]}),ownership=await readJson(ownershipFile,{companies:[]});const cities=new Map((city?.companies||[]).map(c=>[c.company_id,c]));const businesses=new Map(business.companies.map(c=>[c.company_id,c]));const ownerships=new Map(ownership.companies.map(c=>[c.company_id,c]));
+ if(!discovery)assertOwnershipDatasetComplete(candidates.filter(s=>companyCityMatches(cities.get(s.company_id),profile.city_filters)),ownership);
  const companies=candidates.map(s=>{const t=cities.get(s.company_id),b=businesses.get(s.company_id),o=ownerships.get(s.company_id);return {company_id:s.company_id,display_name:s.display_name,industry_tags:s.industry_tags,selected:companyCityMatches(t,profile.city_filters),city_tags:t?.cities||[],city_index_updated_at:t?.updated_at||null,city_coverage_complete:t?.city_coverage_complete||false,business_tags:b?.business_tags||[],business_summary:b?.business_summary||'',business_alignment:businessAlignment(s,b,profile),ownership_tag:o?.ownership_tag||null,ownership_status:o?.status||'unknown',ownership_reason:o?.reason||'',ownership_evidence:o?.evidence||[],ownership_checked_at:o?.checked_at||null,selection_reason:companyCityMatches(t,profile.city_filters)?'行业与城市范围入选':'当前公司城市标签未命中；本轮直接排除'};});
  const run={schema_version:2,created_at:new Date().toISOString(),profile,profile_fingerprint:profileFingerprint(profile),companies,selection_summary:{industry_filters:profile.industry_filters,industry_labels:industryLabels(profile.industry_filters),registered_companies:sources.length,industry_candidates:sources.filter(s=>industryMatches(s,profile.industry_filters)).length,excluded_by_industry:sources.filter(s=>!industryMatches(s,profile.industry_filters)).length,company_filters:profile.company_filters||flags.only?.split(',')||[],city_excluded:companies.filter(c=>!c.selected).length},city_index_updated_at:city?.updated_at||null,status:'prepared',is_test:profile.is_test===true};
+ run.purpose=discovery?'discover':'match';
+ if(task){run.task_snapshot=task;run.task_fingerprint=taskFingerprint(task);}
  if(SEARCH_MODE.id!=='campus')run.search_mode=SEARCH_MODE.id;
  if(searchPlan){run.search_plan=searchPlan;run.search_plan_fingerprint=searchPlanFingerprint(searchPlan);run.retrieval_mode='targeted';run.selection_summary.targeted_company_excluded=sources.length-candidates.length;}
  const profileSnapshot=await companyProfileSnapshot(dir,companies);
@@ -135,7 +148,7 @@ async function prepare() {
   for(const c of companies.filter(c=>c.selected)){
    const old=await readJson(path.join(previous,'companies',c.company_id+'.json'),null);
    const current=sources.find(s=>s.company_id===c.company_id);
-   if(old&&sourceCacheMatches(old,current,searchPlan)){old.jobs=old.jobs.map(job=>enrich(restoreRequestRecruitmentEvidence(job,old.requests||[]),c));await writeJson(path.join(dir,'companies',c.company_id+'.json'),applyJobScope(old,profile.city_filters));}
+   if(old&&sourceCacheMatches(old,current,searchPlan)){old.jobs=old.jobs.map(job=>enrich(restoreRequestRecruitmentEvidence(job,old.requests||[]),c));await writeJson(path.join(dir,'companies',c.company_id+'.json'),allowLocationReview(applyJobScope(old,profile.city_filters),profile));}
   }
  }
  console.log(JSON.stringify({run:dir,selected:companies.filter(c=>c.selected).length,excluded:companies.filter(c=>!c.selected).length}));
@@ -150,15 +163,15 @@ async function collectRun() {
  await mapLimit(selected,integer('concurrency',3,8),async(c)=>{
   const p=path.join(dir,'companies',c.company_id+'.json');const existing=await readJson(p,null);
   const source=sources.find(s=>s.company_id===c.company_id);
-  if(existing&&!flags.refresh&&(existing.coverage.status==='complete'||existing.coverage.collection_complete===true)&&sourceCacheMatches(existing,source,run.search_plan)&&!existing.jobs.some(j=>j.city_status==='included'&&!j.body_complete&&!knownOtherType(j)&&j.open_status!=='closed'))return;
+  if(existing&&!flags.refresh&&(existing.coverage.status==='complete'||existing.coverage.collection_complete===true)&&sourceCacheMatches(existing,source,run.search_plan)&&!existing.jobs.some(j=>j.city_status==='included'&&!j.body_complete&&!knownOtherType(j)&&j.open_status!=='closed')){if(isV5(run.profile))await writeJson(p,allowLocationReview(existing,run.profile));return;}
   if(!source)throw Error('当前来源名单已无该公司，请核对历史运行范围：'+c.display_name);
   const result=await collect(source,{mode:'full',maxPages:integer('max-pages',1000,10000),pageSize:SEARCH_MODE.id==='campus'?20:50,timeoutMs:20000,evidenceDir:path.join(dir,'raw',c.company_id),cities:run.profile.city_filters,searchPlan:run.search_plan,refresh:flags.refresh===true});
-  applyJobScope(result,run.profile.city_filters);await writeJson(p,result);console.log(JSON.stringify({company:c.display_name,coverage:result.coverage.status,...result.counts}));
+  allowLocationReview(applyJobScope(result,run.profile.city_filters),run.profile);await writeJson(p,result);console.log(JSON.stringify({company:c.display_name,coverage:result.coverage.status,...result.counts}));
  });
- run.status=(await readEvaluationScope(dir,{required:false}))?'evaluation_scope_confirmed':'awaiting_evaluation_scope';run.collected_at=new Date().toISOString();await writeJson(file,run);
+ run.status=run.purpose==='discover'?'discovery_collected':(await readEvaluationScope(dir,{required:false}))?'evaluation_scope_confirmed':'awaiting_evaluation_scope';run.collected_at=new Date().toISOString();await writeJson(file,run);
  const archive=await writeJdArchive(dir);
  const summary=await screeningSummary(dir);await writeJson(path.join(dir,'screening-summary.json'),summary);
- console.log(JSON.stringify({screening_summary:path.join(dir,'screening-summary.json'),total_to_assess:summary.total_to_assess,needs_verification:summary.needs_verification,jd_archive:archive.file,next_step:'展示筛选结果，确认用户选择实验批次、指定公司或全量评估后，再 plan-assessment 与 next-batch；已有明确范围时复用。'}));
+ console.log(JSON.stringify({screening_summary:path.join(dir,'screening-summary.json'),total_to_assess:summary.total_to_assess,needs_verification:summary.needs_verification,jd_archive:archive.file,next_step:run.purpose==='discover'?'运行 render-discovery 交付尚未个人匹配的候选及覆盖。':'展示筛选结果，确认用户选择实验批次、指定公司或全量评估后，再 plan-assessment 与 next-batch；已有明确范围时复用。'}));
 }
 async function nextBatch(dir) {
  dir=workspacePath(dir||path.resolve(String(flags.run||'')));const scope=await readEvaluationScope(dir);const run=await readJson(path.join(dir,'run.json'));const pending=[];let total=0,done=0,fullTotal=0,fullDone=0;
@@ -170,7 +183,7 @@ async function nextBatch(dir) {
  const file=path.join(dir,'next-batch.json');await writeJson(file,{
   profile:run.profile,profile_fingerprint:profileFingerprint(run.profile),profile_validation_issue:profileEvidenceProblem(run.profile),
   evaluation_contract:{
-   assessment_version:ASSESSMENT_VERSION,review_method:'full_jd',read_completely:['description','requirements','recruitment_evidence'],
+   assessment_version:modelVersion(run.profile),review_method:'full_jd',read_completely:['description','requirements','recruitment_evidence'],
    ability_values:['high','medium','low','unknown'],interest_values:['aligned','explore','conflict','unknown'],
    profile_binding:'每条评估必须写入本批 profile_fingerprint；画像变更后重新评估，禁止给旧结论补指纹。',
    ability_model_reference:'references/ability-model.md',reciprocal_model_reference:'references/reciprocal-model.md',
@@ -183,7 +196,8 @@ async function nextBatch(dir) {
    report_summary:'必填conclusion/ability/interest/gaps四个非空字符串，分别概括评估结论、能力依据、个人意愿、主要缺口；面向读者写总结，保留资格及到岗限制，不罗列E1等编号或逐项分析。',
    evidence_rule:'同等相关性和质量下：实习优先于学校／个人项目，再看其他相关经历；客观经历／成就高于自评。高质量对口项目可支撑高能力，不按头衔、数量或关键词打分。',
    interest_reason:'interest 非 unknown 时必填非空字符串，说明用户明确职能、业务及重要条件或后续说明；能力证据不能代替意愿依据。',match_matrix:MATCH_MATRIX,
-   instruction:'完整阅读每个岗位及个人画像后按v4独立评估能力和意愿，匹配层级由两者共同决定；禁止按标题、关键词或模板批量生成结论，禁止从旧匹配层级反推能力。'
+   instruction:isV5(run.profile)?V5_INSTRUCTION:'完整阅读每个岗位及个人画像后按v4独立评估能力和意愿，匹配层级由两者共同决定；禁止按标题、关键词或模板批量生成结论，禁止从旧匹配层级反推能力。',
+   ...(isV5(run.profile)?{reference:'shared/job-search-core/references/assessment-v5.md',action_fields:'apply/prepare/hold/clarify，关键缺资料用clarify；参考年限和薪资不构成硬否决',hard_condition:'按assessment-v5.md拆分学历/专业/经验；年限仅参考，缺证未知',comparison_fields:{requirement_type:['core','supporting','bonus','eligibility'],status:['met','partial','conflict','unknown'],support:['direct','transferable','unsupported'],evidence_strength:['strong','moderate','weak','none']}}:{})
   },evaluation_scope:scope,pending,total_to_assess:total,already_assessed:done,remaining:total-done,
   full_total_to_assess:fullTotal,full_already_assessed:fullDone,full_remaining:fullTotal-fullDone,
   outside_scope_remaining:fullTotal-fullDone-(total-done)
@@ -194,6 +208,12 @@ async function main(){
   const dir=workspacePath(path.resolve(String(flags.run)));
   const run=await readJson(path.join(dir,'run.json'));
   if((run.search_mode||'campus')!==SEARCH_MODE.id)throw Error('运行招聘方向与当前 Skill 不一致，不能复用其他方向的采集或评估');
+  if(run.task_snapshot&&run.task_fingerprint!==taskFingerprint(run.task_snapshot))throw Error('任务快照已变化，请新建任务修订和运行');
+  if(run.task_snapshot){
+   if(run.profile_fingerprint!==profileFingerprint(run.profile))throw Error('运行画像已变化，请保存新任务并 prepare 新运行');
+   assertTaskExecution(run.task_snapshot,run.profile,SEARCH_MODE.id,{discovery:run.purpose==='discover',searchPlan:run.search_plan||null});
+  }
+  if(run.purpose==='discover'&&['next-batch','plan-assessment','batch-create','batch-start','batch-submit','batch-merge','render'].includes(command))throw Error('岗位发现未做个人匹配；补画像并 prepare 新匹配运行后才能评估或导出匹配Excel');
   if(run.search_plan){validateSearchPlan(run.search_plan,sources);if(run.search_plan_fingerprint!==searchPlanFingerprint(run.search_plan))throw Error('检索计划已改变，请重新 prepare；不能沿用旧快照');}
  }
  if(flags.run&&['next-batch','plan-assessment','screening-summary','batch-create','batch-start','batch-submit','batch-merge','render'].includes(command)){
@@ -205,6 +225,11 @@ async function main(){
  }
  if(command==='industries'){console.log(JSON.stringify({industries:INDUSTRIES.map(x=>({...x,companies:sources.filter(c=>c.industry_tags?.includes(x.id)).length})),all_companies:sources.length,source_validation:{...registryGate,companies:undefined},multiple_selection:true}));return;}
  if(command==='catalog')return catalog();
+ if(command==='render-discovery'){
+  if(!flags.run)throw Error('需要 --run');
+  const {renderDiscovery}=await import('./lib/discovery-report.mjs');
+  console.log(JSON.stringify(await renderDiscovery(path.resolve(String(flags.run)))));return;
+ }
  if(command==='repair-source'){
   if(!flags.only)throw Error('主动修复需要 --only 明确公司范围');
   const selected=chooseSources(),dir=path.join(SKILL_ROOT,'artifacts/source-repair',stamp()),rows=[];
@@ -230,8 +255,25 @@ async function main(){
  if(command==='refresh-cities')return refreshCities();if(command==='prepare')return prepare();if(command==='collect')return collectRun();if(command==='next-batch')return nextBatch();
  if(command==='plan-assessment'){
   if(!flags.run)throw new Error('需要 --run');
-  const batchState=await readJson(path.join(workspacePath(path.resolve(String(flags.run))),'parallel/batches/state.json'),null);if(batchState?.batches.some(b=>!b.closed_at))throw new Error('仍有未关闭的固定批次；请先回收执行者再修改范围');
-  const scope=await planAssessment(path.resolve(String(flags.run)),{mode:flags.mode,only:flags.only,limit:flags.limit,jobs:flags.jobs?await readJson(path.resolve(String(flags.jobs))):undefined,userRequest:flags['user-request']});
+  const dir=workspacePath(path.resolve(String(flags.run))),run=await readJson(path.join(dir,'run.json'));
+  const batchState=await readJson(path.join(dir,'parallel/batches/state.json'),null);if(batchState?.batches.some(b=>!b.closed_at))throw new Error('仍有未关闭的固定批次；请先回收执行者再修改范围');
+  const task=flags.task?await readJson(path.resolve(String(flags.task))):run.task_snapshot;
+  const jobs=flags.jobs?await readJson(path.resolve(String(flags.jobs))):undefined;
+  if(task){
+   assertTaskExecution(task,run.profile,SEARCH_MODE.id,{searchPlan:run.search_plan||null});
+   if(run.task_snapshot)assertScopeRevision(run.task_snapshot,task);
+   flags.mode??=task.evaluation_scope?.value?.mode;flags.limit??=task.evaluation_scope?.value?.limit;
+   flags.only??=task.evaluation_scope?.value?.companies?.join(',');flags['user-request']??=task.evaluation_scope?.basis;
+   const companyIds=flags.only?String(flags.only).split(',').map(value=>{const id=value.trim();return sources.find(s=>s.company_id===id||s.display_name===id)?.company_id||id;}):[];
+   const candidateCount=flags.mode==='sample'&&Array.isArray(jobs)?(await screeningSummary(dir)).candidates.filter(job=>!companyIds.length||companyIds.includes(job.company_id)).length:undefined;
+   assertTaskScope(task,{mode:flags.mode,limit:flags.limit,companyIds,jobs,candidateCount});
+  }
+  const scope=await planAssessment(dir,{mode:flags.mode,only:flags.only,limit:flags.limit,jobs,userRequest:flags['user-request']});
+  if(task){
+   const updated=await readJson(path.join(dir,'run.json'));
+   if(updated.task_snapshot&&updated.task_fingerprint!==taskFingerprint(task))updated.task_history=[...(updated.task_history||[]),updated.task_snapshot];
+   updated.task_snapshot=task;updated.task_fingerprint=taskFingerprint(task);await writeJson(path.join(dir,'run.json'),updated);
+  }
   console.log(JSON.stringify(scope));return;
  }
  if(command==='screening-summary'){

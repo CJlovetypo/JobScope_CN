@@ -1,7 +1,8 @@
 // Ability and interest are separate evidence-based judgments. This matrix only
 // combines those judgments; it never evaluates a JD or infers user preferences.
-export const ASSESSMENT_VERSION = 4;
-export const ABILITY_LEVELS = Object.freeze({high: '高', medium: '中', low: '低', unknown: '待评估'});
+import {isV5,v5ActionProblem} from './assessment-v5.mjs';
+export const ASSESSMENT_VERSION = 5;
+export const ABILITY_LEVELS = Object.freeze({high: '高', medium: '中', low: '低', unknown: '不确定'});
 export const INTEREST_LEVELS = Object.freeze({aligned: '高', explore: '中', conflict: '低', unknown: '待确认'});
 export const MATCH_TIER_NAMES = Object.freeze({high: '双向高匹配', conditional: '双向有条件匹配', low: '当前匹配不足', unknown: '信息待确认'});
 export const MATCH_MATRIX = Object.freeze({
@@ -16,7 +17,7 @@ export function deriveMatchTier(ability, interest) {
   return MATCH_MATRIX[ability][interest];
 }
 
-export const ACTION_NAMES = Object.freeze({apply: '可以投递', prepare: '投递前准备', hold: '暂不建议投递'});
+export const ACTION_NAMES = Object.freeze({apply: '可以投递', prepare: '投递前准备', hold: '暂不建议投递',clarify:'补资料后判断'});
 const hasText = value => typeof value === 'string' && value.trim().length > 0;
 
 export function interestProblem(review) {
@@ -35,6 +36,8 @@ export function interestProblem(review) {
 // Priority orders the next action, not desirability. Reject contradictory actions;
 // never silently lower a priority based on ability, interest, or company labels.
 export function actionProblem(review) {
+  const v5Problem=v5ActionProblem(review);if(v5Problem)return v5Problem;
+  if(!isV5(review)&&review.next_action==='clarify')return 'clarify属于v5判断，新建运行阅读全文重评后使用；不能给旧结果补动作';
   if (!Object.hasOwn(ACTION_NAMES, review.next_action)) return '缺少有效 next_action：apply/prepare/hold；资料不完整的岗位应留在待核实与未评估表，不使用 verify 作为正式评估动作';
   if (!hasText(review.priority_reason)) return '缺少独立行动排序依据 priority_reason';
   if (review.priority === 'high' && !hasText(review.timing_evidence)) return '高优先须有 timing_evidence，说明真实时间窗口或阻塞下一步的事项';

@@ -1,5 +1,9 @@
 # 实习运行与数据约定
 
+新prepare使用[判断模型v5](../../shared/job-search-core/references/assessment-v5.md)，评估前必须读取。下文旧v4状态、例子和十二列仅用于旧运行追溯；新运行以v5为准：缺证unknown有效完成，不因年限差距否决，学历/专业/经验分开，新增城市/薪资参考/证据充分性，十五列及clarify动作。
+
+本文件维护底层画像、命令与匹配Excel契约。任务分流、澄清及默认值以 [共享业务决策](../../shared/job-search-core/references/decision-policy.md) 为准；岗位发现可通过统一入口 --discovery 使用查询参数，不要求本文件中的个人画像。新任务命令见 [任务契约](../../shared/job-search-core/references/task-contract.md)。
+
 Node.js 22+；PDF提取用Python+pypdf，DOCX用标准zip/xml解析。Excel使用Codex随附@oai/artifact-tool，先通过load_workspace_dependencies定位，必要时设置CODEX_NODE_MODULES。命令以本skill为工作目录；所有产物写在本skill内。
 
 ## 画像
@@ -44,7 +48,7 @@ Node.js 22+；PDF提取用Python+pypdf，DOCX用标准zip/xml解析。Excel使�
 }
 ```
 
-行业必填，使用industries返回的ID或all；城市为空表示不限城市。业务偏好用已有标签词汇，职能偏好独立填写。能力事实与意愿不得混写。kind为resume/self_description/user_clarification；claim_type为objective_experience/objective_achievement/self_assessment/preference；experience_type为internship/employment/research_project/course_project/personal_project/other/none。客观经历必须有experience_id；同一经历不重复计数。
+执行参数industry_filters必填，使用industries返回的ID或all；仅指定公司时all只表示不额外加行业过滤。城市为空表示本轮不加过滤，是否用户明确不限另存任务状态。业务偏好用已有标签词汇，职能偏好独立填写。能力事实与意愿不得混写。kind为resume/self_description/user_clarification；claim_type为objective_experience/objective_achievement/self_assessment/preference；experience_type为internship/employment/research_project/course_project/personal_project/other/none。客观经历必须有experience_id；同一经历不重复计数。
 
 ## 来源证据与启用
 

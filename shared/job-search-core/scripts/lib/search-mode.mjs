@@ -1,4 +1,5 @@
 import {runtimeContext} from '../../runtime-context.mjs';
+import {isV5} from './assessment-v5.mjs';
 
 export const SEARCH_MODES = Object.freeze({
   campus: {id:'campus', status:'formal', label:'校招', report:'校招岗位匹配.xlsx'},
@@ -18,6 +19,14 @@ export function knownOtherType(job,mode=SEARCH_MODE.id) {
   return ['formal','internship','social','activity','parttime'].includes(job.formal_status)&&!isTargetJob(job,mode);
 }
 export function modeProfileProblem(profile,mode=SEARCH_MODE.id) {
+  if(isV5(profile)){
+    if(profile.search_mode&&profile.search_mode!==mode)return '画像招聘方向与当前 Skill 不一致，请创建独立运行';
+    if(profile.employment_years!=null&&(!Number.isFinite(profile.employment_years)||profile.employment_years<0))return '正式工作年限须为非负数或未知';
+    const a=profile.internship_availability;
+    if(a?.days_per_week!=null&&(!Number.isFinite(a.days_per_week)||a.days_per_week<=0||a.days_per_week>7))return '每周实习天数须在0到7之间';
+    if(a?.duration_months!=null&&(!Number.isFinite(a.duration_months)||a.duration_months<=0))return '实习月数必须为正数或null';
+    return null;
+  }
   if(mode==='campus')return null;
   if(profile.search_mode&&profile.search_mode!==mode)return '画像招聘方向与当前 Skill 不一致，请创建独立运行';
   if(typeof profile.degree!=='string'||!profile.degree.trim())return '请补充学历';
@@ -42,6 +51,7 @@ export function eligibilityPolicy(mode=SEARCH_MODE.id) {
     +' 每项填写eligibility_checks（field、status:met/conflict/not_stated/unknown、jd_requirement、candidate_fact）。未要求的条件用not_stated；有明确要求但用户资料缺失用unknown，不能假定符合。任一conflict则ineligible，否则任一unknown则unknown，否则eligible；unknown不使用apply。';
 }
 export function modeEligibilityProblem(review,profile,mode=SEARCH_MODE.id) {
+  if(isV5(profile))return v5EligibilityProblem(review,profile,mode);
   if(mode==='campus')return null;
   const problem=modeProfileProblem(profile,mode);if(problem)return problem;
   if(!Array.isArray(review.eligibility_checks))return '缺少当前方向的逐项eligibility_checks';
@@ -56,4 +66,31 @@ export function modeEligibilityProblem(review,profile,mode=SEARCH_MODE.id) {
   if(review.eligibility!==expected)return '硬性条件总判断与逐项证据矛盾';
   if(expected==='unknown'&&review.next_action==='apply')return '明确要求的个人条件未确认，不能建议直接投递；先准备或暂缓';
   return null;
+}
+
+export function v5EligibilityFields(mode=SEARCH_MODE.id){
+  return [...new Set([...eligibilityFields(mode),'major',...(mode==='social'?['related_experience']:[])])];
+}
+export function v5EligibilityProblem(review,profile,mode=SEARCH_MODE.id){
+  if(!Array.isArray(review.eligibility_checks))return '缺少逐项资格检查';
+  const fields=v5EligibilityFields(mode),seen=new Set();
+  const ids=new Set((profile.evidence||[]).map(e=>e.id));
+  const objectiveIds=new Set((profile.evidence||[]).filter(e=>['objective_experience','objective_achievement'].includes(e.claim_type)).map(e=>e.id));
+  for(const c of review.eligibility_checks){
+    if(!fields.includes(c.field)||seen.has(c.field))return '资格字段无效或重复';seen.add(c.field);
+    if(!['met','conflict','not_stated','unknown','partial'].includes(c.status)||![c.jd_requirement,c.candidate_fact].every(x=>typeof x==='string'&&x.trim()))return '资格检查缺少原要求、本人事实或状态';
+    const reference=['employment_years','related_experience'].includes(c.field);
+    if(reference&&c.status==='conflict')return '工作年限/相关经验按经验参考处理，差距不能自动否决；用partial/unknown并说明放宽依据';
+    if(c.status==='conflict'&&(!Array.isArray(c.evidence_ids)||!c.evidence_ids.length||c.evidence_ids.some(id=>!ids.has(id))||!c.evidence_ids.some(id=>objectiveIds.has(id))))return '资格明确冲突须引用已知个人事实，不把缺资料当不符';
+    if(reference&&c.status!=='not_stated'){
+      const f=c.flexibility;
+      if(!f||!['not_needed','supported','uncertain'].includes(f.status)||typeof f.reason!=='string'||!f.reason.trim()||!Array.isArray(f.evidence_ids)||f.evidence_ids.some(id=>!ids.has(id)))return '经验参考须说明差距/放宽依据flexibility，不能保证雇主接受';
+      if(f.status==='supported'&&!f.evidence_ids.some(id=>objectiveIds.has(id)))return '放宽依据须引用实际职责或成果';
+      if(f.status==='not_needed'&&c.status!=='met')return '只有已满足经验参考时才能声称无需放宽；差距或未知不能冒充满足';
+    }
+  }
+  if(fields.some(f=>!seen.has(f)))return '资格检查缺少必需维度（学历、专业与相关经验须分开）';
+  const hard=review.eligibility_checks.filter(c=>!['employment_years','related_experience'].includes(c.field));
+  const expected=hard.some(c=>c.status==='conflict')?'ineligible':hard.some(c=>['unknown','partial'].includes(c.status))?'unknown':'eligible';
+  return review.eligibility!==expected?'资格汇总须排除经验参考，未知不产生冲突':null;
 }

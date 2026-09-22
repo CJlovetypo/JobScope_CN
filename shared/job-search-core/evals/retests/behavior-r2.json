@@ -1,0 +1,405 @@
+[
+  {
+    "id": "023",
+    "actual_first_response": "按今天（2026年9月22日）理解，你预计2027年12月在英国硕士毕业。能否投“27届”校招，要看具体公告给海外毕业生划定的毕业时间窗口，不能只凭届别名称统一判断。把你想投的公司公告或岗位链接发来，我会先核对时间窗口及相关条件；如果公告区分完成学业和授予学位的日期，再针对那一项确认，不必先补完整简历。",
+    "goal": "consult",
+    "recruitment": "campus",
+    "known_conditions": {
+      "recruitment": {
+        "state": "explicit",
+        "value": "campus",
+        "basis": "想回国参加校招"
+      },
+      "education": {
+        "state": "explicit",
+        "value": "预计英国硕士毕业",
+        "basis": "用户自述英国硕士毕业计划"
+      },
+      "graduation": {
+        "state": "explicit",
+        "value": {
+          "year": 2027,
+          "month": 12,
+          "date_type": null
+        },
+        "basis": "本轮2026-09-22，明年12月"
+      },
+      "target_cohort": {
+        "state": "explicit",
+        "value": "2027届",
+        "basis": "询问能否投27届"
+      },
+      "target_region": {
+        "state": "explicit",
+        "value": "中国",
+        "basis": "回国"
+      },
+      "companies": {
+        "state": "unspecified",
+        "value": null
+      },
+      "industries": {
+        "state": "unspecified",
+        "value": null
+      },
+      "cities": {
+        "state": "unspecified",
+        "value": null
+      },
+      "target_notice": {
+        "state": "unspecified",
+        "value": null,
+        "material_status": "missing"
+      }
+    },
+    "questions": [
+      "请提供想投的公司招聘公告或岗位链接。"
+    ],
+    "independent_actions": [
+      "整理已给出的学历、海外毕业地点及相对毕业日期，不给具体项目资格结论。",
+      "准备按官方公告的海外毕业时间窗口逐项核对；只有具体口径需要时才补毕业日期类型。"
+    ],
+    "next_stage": "取得具体官方公告后核对资格口径，不启动全库岗位发现。",
+    "limitations": [
+      "没有实际JD或公告，无法确认某个27届项目是否接受2027年12月毕业。",
+      "完成学业与授予学位的日期是否影响资格，取决于具体公告，当前不能代填。"
+    ],
+    "issues_found": []
+  },
+  {
+    "id": "034",
+    "actual_first_response": "运营方向先保留。按今天的日期，“下周”是9月28日至10月4日，具体哪天开始和寒假结束日期还未确定。先确认三项：这次是找实习岗位吗？想看哪些行业或公司？必须返校的日期是哪天？我可以先整理运营相关的行业选项；招聘身份和范围确定后先看机会，再按候选要求补具体开始日和每周天数。城市没说，这轮先不加过滤。",
+    "goal": "discover",
+    "recruitment": null,
+    "known_conditions": {
+      "recruitment": {
+        "state": "unspecified",
+        "value": null
+      },
+      "roles": {
+        "state": "explicit",
+        "value": [
+          "运营"
+        ],
+        "basis": "想做运营"
+      },
+      "industries": {
+        "state": "unspecified",
+        "value": null
+      },
+      "companies": {
+        "state": "unspecified",
+        "value": null
+      },
+      "cities": {
+        "state": "unspecified",
+        "value": null
+      },
+      "availability": {
+        "state": "explicit",
+        "value": {
+          "start_raw": "下周",
+          "start_window": [
+            "2026-09-28",
+            "2026-10-04"
+          ],
+          "start_date": null,
+          "end_raw": "寒假结束必须返校",
+          "end_date": null,
+          "days_per_week": null
+        },
+        "basis": "用户明确开始区间及返校限制，未给具体日期或天数"
+      },
+      "student_context": {
+        "state": "explicit",
+        "value": "寒假结束回学校",
+        "basis": "只知返校安排，不据此确定实习身份"
+      },
+      "work_time_arrangement": {
+        "state": "unspecified",
+        "value": null
+      }
+    },
+    "questions": [
+      "这次是找实习岗位吗？",
+      "想看哪些行业或公司？",
+      "必须返校的具体日期是哪天？"
+    ],
+    "independent_actions": [
+      "解释下周日期区间，保留返校截止及开始日未知，不推断持续月数。",
+      "拟读取真实行业选项，整理运营职能线索，不自动限定互联网。",
+      "在类型与公司/行业范围就绪后准备岗位发现；不因尚缺天数与具体开始日停止所有独立工作。"
+    ],
+    "next_stage": "确认招聘身份与范围后先发现机会，再按具体岗位补可用时间。",
+    "limitations": [
+      "返校不自动等于实习；兼职/全职时间安排须与招聘身份分别记录。",
+      "若实际需求是普通兼职，需说明其超出本包的招聘范围，不能伪装为实习。",
+      "没有明确返校日期，无法认定是很短的工作期；不能利用案例标题作判断。"
+    ],
+    "issues_found": []
+  },
+  {
+    "id": "055",
+    "actual_first_response": "北京是岗位地点的硬范围，通勤不超过半小时也保留；住燕郊不会把岗位范围改成燕郊。先确认：你找校招、实习还是社招？想看哪些行业或公司？我可以先列可查行业。拿到候选岗位的实际办公地址后，再补通勤方式等必要信息核对耗时；在地址和路线不明确时，会标为待核实，不能用公司总部在北京就判断满足通勤。",
+    "goal": "discover",
+    "recruitment": null,
+    "known_conditions": {
+      "recruitment": {
+        "state": "unspecified",
+        "value": null
+      },
+      "cities": {
+        "state": "explicit",
+        "value": [
+          "北京"
+        ],
+        "basis": "只看北京"
+      },
+      "residence": {
+        "state": "explicit",
+        "value": "燕郊",
+        "basis": "我住燕郊"
+      },
+      "commute": {
+        "state": "explicit",
+        "value": {
+          "max_minutes": 30,
+          "raw": "每天通勤不能超过半小时",
+          "one_way_or_daily_total": null,
+          "transport_mode": null,
+          "time_of_day": null,
+          "departure_area": null
+        },
+        "basis": "用户明确时间上限，具体口径和路线未知"
+      },
+      "industries": {
+        "state": "unspecified",
+        "value": null
+      },
+      "companies": {
+        "state": "unspecified",
+        "value": null
+      },
+      "roles": {
+        "state": "unspecified",
+        "value": null
+      },
+      "profile": {
+        "state": "unspecified",
+        "value": null
+      }
+    },
+    "questions": [
+      "你找校招、实习还是社招？",
+      "想看哪些行业或公司？"
+    ],
+    "independent_actions": [
+      "分别记录北京工作地点、燕郊居住地和通勤硬条件，不替用户删除或放宽任一项。",
+      "拟读取真实行业目录，范围明确后先整理候选岗位的实际办公地址及地点证据。",
+      "把具体交通方式、时段、出发片区和单程/每日口径留到有候选地址时按需补，不一轮堆成通勤问卷。"
+    ],
+    "next_stage": "补招聘类型与来源范围，取得候选地址后再核验通勤。",
+    "limitations": [
+      "当前没有岗位地址或路线信息，不能断言两项条件一定冲突，也不能保证有满足岗位。",
+      "没有通勤证据的候选只能列待核实，不能写成满足30分钟。"
+    ],
+    "issues_found": []
+  },
+  {
+    "id": "070",
+    "actual_first_response": "“资深运营”这个文件名不能证明你的实际能力，也不能说明你这次仍想做运营。请提供简历正文或可读取的文件路径；这次看校招、实习还是社招？你希望继续运营，还是换其他工作方向？我可以先整理行业选项，等方向明确后再定搜索范围。个人匹配需要用真实经历对照完整JD，目前还不能挑出“高匹配”岗位。",
+    "goal": "match",
+    "recruitment": null,
+    "known_conditions": {
+      "recruitment": {
+        "state": "unspecified",
+        "value": null
+      },
+      "roles": {
+        "state": "unspecified",
+        "value": null
+      },
+      "industries": {
+        "state": "unspecified",
+        "value": null
+      },
+      "companies": {
+        "state": "unspecified",
+        "value": null
+      },
+      "cities": {
+        "state": "unspecified",
+        "value": null
+      },
+      "material_clue": {
+        "state": "explicit",
+        "value": {
+          "filename_text": "资深运营",
+          "role_hint": "运营",
+          "seniority_hint": "资深",
+          "file_path": null
+        },
+        "basis": "只有用户转述的文件名；不作本人能力或目标意愿事实"
+      },
+      "profile": {
+        "state": "unspecified",
+        "value": null,
+        "material_status": "missing"
+      },
+      "evaluation_scope": {
+        "state": "unspecified",
+        "value": null
+      },
+      "output_request": {
+        "state": "explicit",
+        "value": "挑几个匹配度高的岗位",
+        "basis": "未给具体数量或比较母集"
+      }
+    },
+    "questions": [
+      "请提供简历正文或可读取的文件路径。",
+      "这次看校招、实习还是社招？",
+      "你希望继续运营，还是换其他工作方向？"
+    ],
+    "independent_actions": [
+      "把文件名保留为定位材料的线索，目标职能及资历维持未指定。",
+      "拟读取真实行业选项；行业尚未选定，不默认全行业或由过往职能推导行业。",
+      "材料取得后读取本人职责和成果；确定方向后仅补相应最低画像与搜索范围。"
+    ],
+    "next_stage": "取得真实材料并确认招聘类型及本人方向，再定行业范围和采集计划。",
+    "limitations": [
+      "没有文件正文、可读路径或完整JD，不能生成个人匹配评级。",
+      "未给明确评估数量，不能把“几个高匹配”当作任意抽样后宣称最佳。",
+      "城市未指定，本轮可不加城市筛选，但不能记录为用户明确不限。"
+    ],
+    "issues_found": []
+  },
+  {
+    "id": "071",
+    "actual_first_response": "好，范围改为上海加杭州，互联网社招、原经历和每批20个的安排沿用。我会先读取上一轮任务，补查杭州，并复用符合要求的上海JD，保留原报告。新报告中如果纳入上海旧岗位，也会按新的城市条件重新评估，不能直接搬用旧评级；不会把“每批20个”改成总共只评20个或自动评全部。",
+    "goal": "match",
+    "recruitment": "social",
+    "known_conditions": {
+      "recruitment": {
+        "state": "inherited",
+        "value": "social",
+        "basis": "上一轮上海互联网社招评估"
+      },
+      "industries": {
+        "state": "inherited",
+        "value": [
+          "互联网"
+        ],
+        "basis": "上一轮已明确行业"
+      },
+      "cities": {
+        "state": "explicit",
+        "value": [
+          "上海",
+          "杭州"
+        ],
+        "basis": "杭州也加上，上海和其他条件沿用"
+      },
+      "profile": {
+        "state": "inherited",
+        "value": {
+          "valid_original": true,
+          "details": null
+        },
+        "basis": "上下文声明原画像有效，但未提供具体事实正文"
+      },
+      "profile_change": {
+        "state": "explicit",
+        "value": "city_filters由上海扩为上海和杭州",
+        "basis": "本轮城市变化；其他原事实不变"
+      },
+      "batch_size": {
+        "state": "inherited",
+        "value": 20,
+        "basis": "用户已选每批20个"
+      },
+      "evaluation_scope": {
+        "state": "inherited",
+        "value": {
+          "record_exists": true,
+          "details": null
+        },
+        "basis": "需读取原任务的真实评估总范围，单凭批大小不能反推"
+      },
+      "previous_report": {
+        "state": "inherited",
+        "value": {
+          "exists": true,
+          "details": null
+        },
+        "basis": "上一轮评估已完成"
+      }
+    },
+    "questions": [],
+    "independent_actions": [
+      "拟读取上一轮真实任务、范围、画像与JD快照，保存新增杭州的不可覆盖修订。",
+      "建立新运行，复用合规上海JD并补采杭州社招范围，不重采可复用材料。",
+      "按原评估承诺确定新报告岗位；凡纳入新报告的上海旧岗位，在新画像下重新评估，不复制旧评级或只换指纹。",
+      "保留上海旧报告，继续按20个的既定批次大小执行，不擅自改变总量或只限新增杭州。"
+    ],
+    "next_stage": "读取旧范围并创建变更运行，补采杭州，对新报告范围按新画像评估。",
+    "limitations": [
+      "上下文没有实际岗位键、画像字段或运行文件，尚不能称补采或重评已经完成。",
+      "城市变化使完整画像指纹变化；旧报告可保留作历史，旧评级不可当作新画像下有效。",
+      "每批20个仅是批次大小，实际总评估范围必须由旧任务读取。"
+    ],
+    "issues_found": []
+  },
+  {
+    "id": "098",
+    "actual_first_response": "要先看“查不出来”的原因：正常完成查询且结果为空，可以写“本次查询范围内0个”；如果是接口报错、超时或只查到部分页面，就应写“获取失败”或“覆盖不完整”，不能据此说公司没招人。请把对应报告或报错记录发来，我会先核对实际状态，再按事实调整报告措辞。",
+    "goal": "consult",
+    "recruitment": null,
+    "known_conditions": {
+      "recruitment": {
+        "state": "unspecified",
+        "value": null
+      },
+      "original_task_goal": {
+        "state": "unspecified",
+        "value": null
+      },
+      "report": {
+        "state": "unspecified",
+        "value": null
+      },
+      "query_status": {
+        "state": "unspecified",
+        "value": null
+      },
+      "user_description": {
+        "state": "explicit",
+        "value": "查不出来",
+        "basis": "没有实际响应或失败证据，可能为空、异常或部分覆盖"
+      },
+      "requested_reporting": {
+        "state": "explicit",
+        "value": "当没招人，报告写零个",
+        "basis": "用户请求把未得结果等同零招聘"
+      },
+      "scope": {
+        "state": "unspecified",
+        "value": null
+      }
+    },
+    "questions": [
+      "请提供对应报告或报错记录。"
+    ],
+    "independent_actions": [
+      "解释正常空结果、获取失败与部分覆盖的不同报告口径，不先推断是哪一种。",
+      "拟从用户提供的报告或日志定位真实任务与来源状态，保留成功结果和未核实部分。",
+      "仅在定位原任务后决定后续处理，不把本轮自动设为个人匹配、岗位修复或新的采集。"
+    ],
+    "next_stage": "取得报告或查询证据，核对状态后调整对应报告。",
+    "limitations": [
+      "没有报告或工具响应，不能判断实际岗位数，也不能认定已经发生接口失败。",
+      "原任务可能是发现、匹配或雷达，本轮先处理口径咨询，不虚构原任务目标或招聘类型。"
+    ],
+    "issues_found": []
+  }
+]

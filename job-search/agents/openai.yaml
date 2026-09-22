@@ -1,0 +1,4 @@
+interface:
+  display_name: "求职助手"
+  short_description: "理解求职目标，按需澄清并搜索校招、实习和社招岗位"
+  default_prompt: "使用 $job-search，沿用我已说明的条件，帮我搜索或匹配岗位；只补问影响当前任务的信息，区分岗位发现和个人匹配，说明覆盖与判断依据。"
