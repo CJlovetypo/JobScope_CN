@@ -1,4 +1,54 @@
-# JobScope_CN · 中文求职技能包
+<p align="center">
+  <img src="shared/job-search-core/assets/logo-concepts/01-search-lens.png" alt="JobScope_CN · 中文求职技能包" width="220" />
+</p>
+<p align="center">
+  <strong>用自然语言找岗位、判断匹配度、持续关注新机会。</strong>
+</p>
+
+## 安装
+
+复制下面这段话，发给支持本地 Skill 和命令执行的 Agent：
+
+```text
+请从 https://github.com/CJlovetypo/job-search-skill-pack 安装 JobScope_CN 求职技能包。
+请完整保留仓库目录，按 README 的“手动安装与运行依赖”检查环境并加载各入口 SKILL.md，将 job-search 作为默认求职入口。
+```
+
+<details>
+<summary>手动安装与运行依赖</summary>
+
+将整个仓库放入支持本地 Skill 和命令执行的 Agent 工作环境，并让宿主加载 `job-search`、三个兼容方向入口、`job-radar` 和 `recruitment-link-repair` 的 `SKILL.md`。当前 Excel 导出使用 Codex 的运行依赖；其他宿主需提供兼容依赖后使用。
+
+```sh
+git clone https://github.com/CJlovetypo/job-search-skill-pack.git JobScope_CN
+cd JobScope_CN
+```
+
+请保留完整相对目录。求职入口依赖共享核心与方向运行目录，单独复制某个 Skill 无法运行。
+
+```text
+JobScope_CN/
+  job-search/              # 统一意图判断、任务记录和执行入口
+  campus-job-fit/          # 正式校招
+  internship-job-fit/      # 实习
+  social-job-fit/          # 社招
+  job-radar/               # 岗位订阅与变化跟踪
+  recruitment-link-repair/ # 招聘入口历史定位与修复
+  shared/job-search-core/  # 共用业务判断、证据模型、来源采集与交付
+  docs/                    # PRD、业务审核与测试报告
+  README.md
+```
+
+| 依赖 | 用途 |
+| --- | --- |
+| Node.js 22+ | 岗位采集与校验；岗位雷达需 **22.13+**，使用内置 SQLite，无额外 npm 依赖 |
+| Python 3 | 简历提取与少量公开 API；PDF 提取需要 `pypdf`，可用 `CAMPUS_JOB_FIT_PYTHON` 指定解释器 |
+| `@oai/artifact-tool` | Excel 导出；通过 Codex 的 `load_workspace_dependencies` 定位，或设置 `CODEX_NODE_MODULES` |
+| 宿主定时任务 | 岗位雷达的每日检索与提醒 |
+
+</details>
+
+## 项目介绍
 
 **接入 3,220 个公司／招聘主体，用自然语言找岗位、判断匹配度、持续关注新机会。**
 
@@ -163,41 +213,12 @@ JobScope_CN 是面向中文求职场景的 AI Agent 技能包。通过 [job-sear
 
 **定时执行依赖宿主调度能力。** 只有宿主确认创建任务后，才算启用；单独安装 Skill 或运行 CLI 不会启动后台定时服务。详见 [岗位雷达运行约定](job-radar/references/operations.md)。
 
-## 开始使用
-
-将整个仓库放入支持本地 Skill 和命令执行的 Agent 工作环境，并让宿主加载 `job-search`、三个兼容方向入口、`job-radar` 和 `recruitment-link-repair` 的 `SKILL.md`。当前 Excel 导出使用 Codex 的运行依赖；其他宿主需提供兼容依赖后使用。
-
-```sh
-git clone https://github.com/CJlovetypo/job-search-skill-pack.git JobScope_CN
-cd JobScope_CN
-```
-
-请保留完整相对目录。求职入口依赖共享核心与方向运行目录，单独复制某个 Skill 无法运行。
-
-```text
-JobScope_CN/
-  job-search/              # 统一意图判断、任务记录和执行入口
-  campus-job-fit/          # 正式校招
-  internship-job-fit/      # 实习
-  social-job-fit/          # 社招
-  job-radar/               # 岗位订阅与变化跟踪
-  recruitment-link-repair/ # 招聘入口历史定位与修复
-  shared/job-search-core/  # 共用业务判断、证据模型、来源采集与交付
-  docs/                    # PRD、业务审核与测试报告
-  README.md
-```
+## 开发与运行验证
 
 统一入口、任务修订及发现/匹配命令见 [任务契约](shared/job-search-core/references/task-contract.md)。岗位发现输出候选 Markdown/JSON 并明确尚未个人匹配；正式匹配继续交付 Excel。架构与验收范围见 [迭代PRD](docs/求职元能力架构迭代PRD.md)，行为用例见 [100条模拟提示词](docs/用户提示词模拟100例.md)。
 
-| 依赖 | 用途 |
-| --- | --- |
-| Node.js 22+ | 岗位采集与校验；岗位雷达需 **22.13+**，使用内置 SQLite，无额外 npm 依赖 |
-| Python 3 | 简历提取与少量公开 API；PDF 提取需要 `pypdf`，可用 `CAMPUS_JOB_FIT_PYTHON` 指定解释器 |
-| `@oai/artifact-tool` | Excel 导出；通过 Codex 的 `load_workspace_dependencies` 定位，或设置 `CODEX_NODE_MODULES` |
-| 宿主定时任务 | 岗位雷达的每日检索与提醒 |
-
 <details>
-<summary>开发与运行验证</summary>
+<summary>验证命令与测试记录</summary>
 
 在仓库根目录执行：
 
