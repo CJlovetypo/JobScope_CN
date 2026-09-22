@@ -10,8 +10,11 @@
 复制下面这段话，发给支持本地 Skill 和命令执行的 Agent：
 
 ```text
-请从 https://github.com/CJlovetypo/job-search-skill-pack 安装 JobScope_CN 求职技能包。
-请完整保留仓库目录，按 README 的“手动安装与运行依赖”检查环境并加载各入口 SKILL.md，将 job-search 作为默认求职入口。
+请安装 JobScope_CN 求职技能包：
+https://github.com/CJlovetypo/job-search-skill-pack
+
+完整保留仓库目录，按 README 的“手动安装与运行依赖”检查环境。
+加载各入口的 SKILL.md，将 job-search 作为默认求职入口。
 ```
 
 <details>
