@@ -4,6 +4,9 @@
 <p align="center">
   <strong>用自然语言找岗位、判断匹配度、持续关注新机会。</strong>
 </p>
+<p align="center">
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-168BEB?style=flat" alt="MIT License" /></a>
+</p>
 
 ## 安装
 
@@ -253,3 +256,7 @@ node --test campus-job-fit/scripts/tests/*.test.mjs job-radar/scripts/tests/rada
 > 使用 recruitment-link-repair，查这家公司的历史招聘入口，修复失效链接，并核实雇主、招聘方向及岗位获取能力。
 
 该维护 Skill 与求职和雷达入口并列，保留整个仓库相对目录即可使用。原始数据、冻结快照、索引和哈希清单仅保存在本地 `datasets/recruitment-links/`，不随 Git 分发；新机器需单独恢复数据集。历史收录不代表当前可用，修复采用前必须重新验证。
+
+## 许可证
+
+本项目采用 [MIT License](LICENSE)。第三方内容保留其原有版权与许可，详见 [job-pro 许可声明](shared/job-search-core/assets/job-pro-LICENSE.txt)；招聘信息及外部数据的权利归各自权利人所有。
