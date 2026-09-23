@@ -52,20 +52,20 @@ node job-search/scripts/jobs.mjs task-save --file job-search/runs/input/patch.js
 ```
 
 ```sh
-node job-search/scripts/jobs.mjs prepare --mode campus --discovery --task job-search/runs/campus-pm/r1.json --profile job-search/runs/input/query.json --out campus-job-fit/runs/campus-pm-discovery
-node job-search/scripts/jobs.mjs collect --mode campus --run campus-job-fit/runs/campus-pm-discovery
-node job-search/scripts/jobs.mjs render-discovery --mode campus --run campus-job-fit/runs/campus-pm-discovery
+node job-search/scripts/jobs.mjs prepare --mode campus --discovery --task job-search/runs/campus-pm/r1.json --profile job-search/runs/input/query.json --out job-search/runtime/campus/runs/campus-pm-discovery
+node job-search/scripts/jobs.mjs collect --mode campus --run job-search/runtime/campus/runs/campus-pm-discovery
+node job-search/scripts/jobs.mjs render-discovery --mode campus --run job-search/runtime/campus/runs/campus-pm-discovery
 ```
 
 匹配使用同样入口但去掉 --discovery，--profile 提供真实方向画像。之后 screening-summary → plan-assessment → batch-create/start/submit/merge/close → render 沿用现有方向 workflow。已有范围直接保存，不另问；示例：
 
 ```sh
-node job-search/scripts/jobs.mjs prepare --mode social --task job-search/runs/my-task/r1.json --profile social-job-fit/runs/input/profile.json --out social-job-fit/runs/my-run
-node job-search/scripts/jobs.mjs collect --mode social --run social-job-fit/runs/my-run
-node job-search/scripts/jobs.mjs plan-assessment --mode social --run social-job-fit/runs/my-run --scope-mode sample --limit 20 --user-request "用户已经明确的真实范围"
+node job-search/scripts/jobs.mjs prepare --mode social --task job-search/runs/my-task/r1.json --profile job-search/runtime/social/runs/input/profile.json --out job-search/runtime/social/runs/my-run
+node job-search/scripts/jobs.mjs collect --mode social --run job-search/runtime/social/runs/my-run
+node job-search/scripts/jobs.mjs plan-assessment --mode social --run job-search/runtime/social/runs/my-run --scope-mode sample --limit 20 --user-request "用户已经明确的真实范围"
 ```
 
-统一CLI用 --mode 表示招聘方向；plan-assessment 的原 --mode 改写为 --scope-mode 避免冲突。旧方向CLI仍用 --mode sample/companies/all。除 industries、task-check、task-save 外必须有明确方向或可读任务/运行方向，不默认校招。所有输出路径继续属于对应方向目录，避免同进程换方向或跨目录写入。
+统一CLI用 --mode 表示招聘方向；plan-assessment 的原 --mode 改写为 --scope-mode 避免冲突。内部方向脚本仅供实现、测试和维护调用，不作为独立 Skill 或用户入口。除 industries、task-check、task-save 外必须有明确方向或可读任务/运行方向，不默认校招。所有输出路径继续属于对应方向目录，避免同进程换方向或跨目录写入。
 
 绑定任务的 plan-assessment 会校验数量/公司/模式是否与任务承诺一致，也可省略这些参数直接采用已记录范围。采集后才确定范围时，先 task-save 创建连续修订，再 plan-assessment --task 新修订路径；仅变范围可更新原运行并保留任务历史。改画像/条件仍须 prepare 新运行。前N个必须传 --jobs 固定展示顺序清单；不能用普通sample替代。最适合N个应记录比较母集的范围（如all），输出数量另记，不以抽样N个冒充。
 

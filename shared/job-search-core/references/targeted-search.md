@@ -29,4 +29,4 @@
 
 未命中不自动扩大公司或词表，不暗中切回全量。报告明确候选公司、词表、排除词及“可能漏掉标题未体现的机会”。定向快照有独立计划指纹，不能作为全量缓存；定向结果不能更新全量城市标签。
 
-维护能力证明：从仓库根目录运行 `node campus-job-fit/scripts/audit-search-capabilities.mjs --per-provider=10`，默认每个平台每个方向抽测 10 个配置，其余逐项列为未证明原生检索并使用本地筛选。该参数控制抽测数量，不把抽测推广为全库验证。
+维护能力证明：从仓库根目录运行 `node job-search/runtime/campus/scripts/audit-search-capabilities.mjs --per-provider=10`，默认每个平台每个方向抽测 10 个配置，其余逐项列为未证明原生检索并使用本地筛选。该参数控制抽测数量，不把抽测推广为全库验证。

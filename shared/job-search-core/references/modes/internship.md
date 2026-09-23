@@ -8,4 +8,4 @@
 
 校园大使、训练营、博士后不作为实习岗位；正式校招要求提前实习仍属于校招。转正机会不保证录用。实习按基础任务和学习证据评估，不要求默认资深生产规模。
 
-正式评估时读取：[能力模型](../../../../internship-job-fit/references/ability-model.md)、[评估结构](../../../../internship-job-fit/references/assessment.md)、[命令与数据](../../../../internship-job-fit/references/workflow.md)。执行入口 internship-job-fit/scripts/jobs.mjs，输出仍在 internship-job-fit 内。
+正式评估时读取：[能力模型](../../../../job-search/runtime/internship/references/ability-model.md)、[评估结构](../../../../job-search/runtime/internship/references/assessment.md)、[命令与数据](../../../../job-search/runtime/internship/references/workflow.md)。统一执行入口为 `node job-search/scripts/jobs.mjs <命令> --mode internship`，运行和输出保存在 `job-search/runtime/internship` 内。

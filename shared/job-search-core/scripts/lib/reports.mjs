@@ -3,7 +3,7 @@ import {SKILL_ROOT, readJson, writeJson, workspacePath} from './io.mjs';
 import {jobFingerprintMatches} from './job-version.mjs';
 import {writeExcelReport} from './excel-report.mjs';
 import {ASSESSMENT_VERSION, ABILITY_LEVELS, INTEREST_LEVELS, MATCH_TIER_NAMES, deriveMatchTier, actionProblem, interestProblem} from './matching.mjs';
-import {assertRunOwnershipComplete} from './ownership.mjs';
+import {ownershipDisplayTag} from './ownership.mjs';
 import {profileFingerprint, profileEvidenceProblem, abilityEvidenceProblem} from './evidence-model.mjs';
 import {readEvaluationScope, inEvaluationScope, SCOPE_MODES} from './evaluation-scope.mjs';
 import {writeJdArchive} from './jd-archive.mjs';
@@ -29,7 +29,7 @@ const officialLink = job => {
 };
 const rank = review => ({high: 0, normal: 1, low: 2}[review.priority] ?? 3);
 const jobKey = job => JSON.stringify([job.company_id, String(job.job_id)]);
-const ownershipTag = company => company.ownership_tag;
+const ownershipTag = ownershipDisplayTag;
 const reportTierName = review => review.eligibility === 'ineligible' ? '硬性条件不符' : isV5(review)&&v5HardConflict(review)?'明确不符':review.eligibility==='unknown'||isV5(review)&&v5Unknown(review)?'信息待确认':tierNames[review.match_tier];
 const recommendationName = review => review.eligibility === 'ineligible' || review.next_action === 'hold'
   ? '暂不建议投递'
@@ -136,7 +136,6 @@ export async function buildReportData(dir, {allowPartial = false} = {}) {
   const v5=isV5(run.profile);
   if((run.search_mode||'campus')!==SEARCH_MODE.id)throw Error('报告运行的招聘方向与本 Skill 不一致');
   const scope = await readEvaluationScope(dir, {required: false});
-  assertRunOwnershipComplete(run.companies.filter(c=>c.selected));
   const bundles = [], assessed = [], missing = [], unattempted = [];
   for (const company of run.companies) {
     if (!company.selected) { bundles.push({company, status: '城市标签排除', jobs: [], reviews: []}); continue; }

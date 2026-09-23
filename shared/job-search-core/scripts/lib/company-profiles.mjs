@@ -1,6 +1,7 @@
 import {COMPANY_PROFILES_FILE,COMPANY_SIZE_FILE} from '../../registry.mjs';
 import path from 'node:path';
 import {SKILL_ROOT, readJson, writeJson} from './io.mjs';
+import {loadCompanyContext} from './company-records.mjs';
 
 export const PROFILE_FILE = COMPANY_PROFILES_FILE;
 export const PROFILE_FIELDS = {business: '业务信息简介', workforce: '公司体量（人数）', capital: '融资／上市／注册资本'};
@@ -48,10 +49,11 @@ export function mergeProfiles(sources, business, previous, patches = []) {
   })};
 }
 
-export async function companyProfileSnapshot(dir, companies) {
+export async function companyProfileSnapshot(dir, companies, context) {
   const saved = await readJson(path.join(dir, 'company-profiles.snapshot.json'), null);
-  const dataset = saved || await readJson(PROFILE_FILE, {companies: []});
-  const sizeTags=saved?null:new Map((await readJson(COMPANY_SIZE_FILE,{companies:[]})).companies.map(c=>[c.company_id,c]));
+  if(!saved)context??=await loadCompanyContext();
+  const dataset = saved || context.profiles;
+  const sizeTags=saved?null:new Map(context.size.companies.map(c=>[c.company_id,c]));
   const byId = new Map();
   for (const entry of dataset.companies) {
     if (byId.has(entry.company_id)) throw new Error('公司简介存在重复 ID：' + entry.company_id);
@@ -65,7 +67,7 @@ export async function companyProfileSnapshot(dir, companies) {
       // Keep the clue in the audit snapshot, never promote it into reader-facing facts.
       if(entry[field].status==='partial')entry[field]={...emptyFact(),data_issue:'原资料为待复核线索，未作为已核实公司简介展示',unverified_source_fact:entry[field]};
       const issue = factProblem(entry[field]);
-      if (issue) throw new Error(c.display_name + '/' + field + '：' + issue);
+      if (issue) entry[field] = {...emptyFact(), data_issue: issue, unverified_source_fact: entry[field]};
     }
     return entry;
   })};

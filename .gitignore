@@ -4,9 +4,6 @@
 !/.gitignore
 !/README.md
 !/LICENSE
-!/campus-job-fit/
-!/internship-job-fit/
-!/social-job-fit/
 !/job-radar/
 !/shared/
 !/datasets/
@@ -20,6 +17,12 @@
 !/docs/匹配判断模型迭代审核稿.md
 !/docs/匹配判断模型v5迭代PRD.md
 !/docs/匹配判断模型v5测试报告.md
+!/docs/公司标签维护与使用隔离PRD.md
+!/docs/公司标签维护与使用隔离测试报告.md
+!/docs/公司标签全量复核与更新报告-20260922.md
+!/docs/求职入口合并与替代验证报告.md
+!/docs/公司画像分层与独立联网复核PRD-20260923.md
+!/docs/公司画像分层适配与联网复核进度-20260923.md
 /datasets/recruitment-links/collections/
 /datasets/recruitment-links/snapshots/
 /datasets/recruitment-links/index/
@@ -33,7 +36,7 @@
 **/PRD.md
 **/ARCHITECTURE.md
 **/internal/
-/*/data/registry-inheritance.json
+**/data/registry-inheritance.json
 /shared/job-search-core/references/implementation-validation-*.md
 /shared/job-search-core/data/feishu-expansion-*.json
 /shared/job-search-core/data/source-verification-*.json

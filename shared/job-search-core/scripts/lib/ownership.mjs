@@ -1,5 +1,11 @@
 const DECIDED_TAGS = new Set(['国企', '私企', '外企']);
 
+// Product use consumes saved decisions; evidence validation belongs to maintenance.
+export function ownershipDisplayTag(entry) {
+  const status = entry?.ownership_status ?? entry?.status;
+  return status === 'verified' && DECIDED_TAGS.has(entry?.ownership_tag) ? entry.ownership_tag : '待核实';
+}
+
 const hasText = value => typeof value === 'string' && value.trim().length > 0;
 const hasPublicEvidence = entry => Array.isArray(entry?.evidence) && entry.evidence.some(item => {
   try {

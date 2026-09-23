@@ -8,4 +8,4 @@
 
 v5资格分别核对届别、学历与专业；项目能力不能抵消明确门槛。其他影响投递的提前实习、专业和轮岗限制完整解释，不因未进入资格列而遗漏。无社保不是统一应届资格证明；海外毕业和相对时间以具体JD窗口判断。
 
-正式评估时读取：[能力模型](../../../../campus-job-fit/references/ability-model.md)、[评估结构](../../../../campus-job-fit/references/assessment.md)、[命令与数据](../../../../campus-job-fit/references/workflow.md)。执行入口 campus-job-fit/scripts/campus.mjs，输出仍在 campus-job-fit 内。
+正式评估时读取：[能力模型](../../../../job-search/runtime/campus/references/ability-model.md)、[评估结构](../../../../job-search/runtime/campus/references/assessment.md)、[命令与数据](../../../../job-search/runtime/campus/references/workflow.md)。统一执行入口为 `node job-search/scripts/jobs.mjs <命令> --mode campus`，运行和输出保存在 `job-search/runtime/campus` 内。

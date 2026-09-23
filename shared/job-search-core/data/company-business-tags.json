@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-21T23:51:02.923Z",
+  "updated_at": "2026-09-22T13:04:00.000Z",
   "companies": [
     {
       "company_id": "company-f93e5a384c54",
@@ -60697,128 +60697,278 @@
     {
       "company_id": "company-b54f3dd95257",
       "display_name": "湖北大数据集团有限公司",
-      "business_tags": [],
-      "business_summary": "",
-      "status": "unknown",
-      "evidence": [],
-      "reason": "招聘主体已核实，主营业务标签待公开资料补核"
+      "business_tags": [
+        "互联网／数字科技",
+        "数据服务",
+        "云服务",
+        "产业投资",
+        "智能制造"
+      ],
+      "business_summary": "围绕数字基础设施、数据资源开发与交易、政企数字化、云服务、智慧档案、产业研究与投资、园区运营及智能制造开展业务。",
+      "status": "verified",
+      "evidence": [
+        {
+          "url": "https://www.hbdsjjt.com/",
+          "title": "湖北大数据集团：集团概况与核心业务",
+          "evidence_type": "official_website",
+          "note": "官网明确列出数公基投建管运、数据资源开发利用、数据要素流通交易、政企数字化、云服务、智慧档案、产业研究、园区运营、产业投资和智能制造等核心业务。",
+          "checked_at": "2026-09-22"
+        }
+      ]
     },
     {
       "company_id": "company-b0f4cdf1288e",
       "display_name": "费森尤斯医疗（中国招聘门户）",
-      "business_tags": [],
-      "business_summary": "",
-      "status": "unknown",
-      "evidence": [],
-      "reason": "招聘主体已核实，主营业务标签待公开资料补核"
+      "business_tags": [
+        "医药／医疗健康",
+        "医疗器械"
+      ],
+      "business_summary": "面向肾脏疾病和透析治疗提供血液净化产品、医疗设备、透析诊所及相关医疗服务和整体解决方案。",
+      "status": "verified",
+      "evidence": [
+        {
+          "url": "https://www.freseniusmedicalcare.cn/about-us.html",
+          "title": "费森尤斯医疗中国：关于我们",
+          "evidence_type": "official_website",
+          "note": "中国官网说明公司提供血液净化产品和医疗服务，并在中国提供产品、服务及一体化解决方案。",
+          "checked_at": "2026-09-22"
+        },
+        {
+          "url": "https://freseniusmedicalcare.com/en/about-us/company-profile/",
+          "title": "Fresenius Medical Care company profile",
+          "evidence_type": "official_website",
+          "note": "集团官网说明其覆盖透析价值链，经营透析产品及透析中心。",
+          "checked_at": "2026-09-22"
+        }
+      ]
     },
     {
       "company_id": "company-090da504a3e6",
       "display_name": "华侨银行（中国招聘门户）",
-      "business_tags": [],
-      "business_summary": "",
-      "status": "unknown",
-      "evidence": [],
-      "reason": "招聘主体已核实，主营业务标签待公开资料补核"
+      "business_tags": [
+        "银行",
+        "金融服务",
+        "资产管理"
+      ],
+      "business_summary": "在中国开展企业银行、金融机构业务、全球金融市场和私人银行业务，集团同时经营资产管理业务。",
+      "status": "verified",
+      "evidence": [
+        {
+          "url": "https://www.ocbc.com.cn/CN/group/aboutUs/profile/",
+          "title": "华侨银行中国：公司简介",
+          "evidence_type": "official_website",
+          "note": "官网列明中国业务覆盖企业银行、金融机构业务、全球金融市场和私人银行，并介绍集团资产管理子公司。",
+          "checked_at": "2026-09-22"
+        }
+      ]
     },
     {
       "company_id": "company-cf2a220e436b",
       "display_name": "宏利（中国招聘门户）",
-      "business_tags": [],
-      "business_summary": "",
-      "status": "unknown",
-      "evidence": [],
-      "reason": "招聘主体已核实，主营业务标签待公开资料补核"
+      "business_tags": [
+        "金融服务",
+        "保险",
+        "资产管理"
+      ],
+      "business_summary": "提供保险、财富管理和资产管理等全球金融服务。",
+      "status": "verified",
+      "evidence": [
+        {
+          "url": "https://careers.manulife.com/cn/zh/about-us",
+          "title": "宏利招聘官网：关于我们",
+          "evidence_type": "official_website",
+          "note": "宏利招聘官网将集团描述为总部位于加拿大多伦多的国际金融服务机构，并介绍保险与投资管理业务。",
+          "checked_at": "2026-09-22"
+        }
+      ]
     },
     {
       "company_id": "company-a3d79f4dbadc",
       "display_name": "马士基（中国招聘门户）",
-      "business_tags": [],
-      "business_summary": "",
-      "status": "unknown",
-      "evidence": [],
-      "reason": "招聘主体已核实，主营业务标签待公开资料补核"
+      "business_tags": [
+        "物流",
+        "供应链服务"
+      ],
+      "business_summary": "提供覆盖海运、码头、仓储及陆上运输等环节的综合集装箱物流和端到端供应链解决方案。",
+      "status": "verified",
+      "evidence": [
+        {
+          "url": "https://www.maersk.com/zh-cn/about/",
+          "title": "马士基：关于 A.P. 穆勒 - 马士基",
+          "evidence_type": "official_website",
+          "note": "官网明确其战略定位为全球性综合集装箱物流企业，为客户提供综合物流和供应链解决方案。",
+          "checked_at": "2026-09-22"
+        }
+      ]
     },
     {
       "company_id": "company-83ac6a8a2843",
       "display_name": "AIG（中国招聘门户）",
-      "business_tags": [],
-      "business_summary": "",
-      "status": "unknown",
-      "evidence": [],
-      "reason": "招聘主体已核实，主营业务标签待公开资料补核"
+      "business_tags": [
+        "保险"
+      ],
+      "business_summary": "面向企业和个人提供商业保险、个人保险及财产责任等风险保障解决方案。",
+      "status": "verified",
+      "evidence": [
+        {
+          "url": "https://www.aig.com/about",
+          "title": "AIG：About AIG",
+          "evidence_type": "official_website",
+          "note": "集团官网说明其提供商业与个人保险方案，产品覆盖责任险、金融险、财产险、意外与健康险等。",
+          "checked_at": "2026-09-22"
+        },
+        {
+          "url": "https://model-service.aig.com.cn/",
+          "title": "AIG 中国：关于 AIG 与美亚保险",
+          "evidence_type": "official_website",
+          "note": "中国官网确认美亚保险为 AIG 旗下成员并在中国提供财产保险服务。",
+          "checked_at": "2026-09-22"
+        }
+      ]
     },
     {
       "company_id": "company-104d08c2716e",
       "display_name": "辉瑞（中国招聘门户）",
-      "business_tags": [],
-      "business_summary": "",
-      "status": "unknown",
-      "evidence": [],
-      "reason": "招聘主体已核实，主营业务标签待公开资料补核"
+      "business_tags": [
+        "医药／医疗健康",
+        "制药",
+        "生物制药"
+      ],
+      "business_summary": "开展创新药物和生物医药产品的研究、开发、生产及全球商业化。",
+      "status": "verified",
+      "evidence": [
+        {
+          "url": "https://www.pfizer.com/about/investors/why-invest/fact-sheet",
+          "title": "Pfizer company fact sheet",
+          "evidence_type": "official_website",
+          "note": "集团官网列明医药研发管线、全球生产基地及药品产品业务。",
+          "checked_at": "2026-09-22"
+        }
+      ]
     },
     {
       "company_id": "company-3cd432d7e6e3",
       "display_name": "赛诺菲（中国招聘门户）",
-      "business_tags": [],
-      "business_summary": "",
-      "status": "unknown",
-      "evidence": [],
-      "reason": "招聘主体已核实，主营业务标签待公开资料补核"
+      "business_tags": [
+        "医药／医疗健康",
+        "制药",
+        "生物制药"
+      ],
+      "business_summary": "研发、生产并商业化创新药物和疫苗，在中国覆盖制药、疫苗及相关研发制造业务。",
+      "status": "verified",
+      "evidence": [
+        {
+          "url": "https://www.sanofi.cn/zh/our-company",
+          "title": "赛诺菲中国：关于我们",
+          "evidence_type": "official_website",
+          "note": "中国官网明确赛诺菲是研发驱动的生物制药公司，业务覆盖制药和疫苗，并在中国形成研发、制造和商业运营链条。",
+          "checked_at": "2026-09-22"
+        }
+      ]
     },
     {
       "company_id": "company-ce15e6bfc483",
       "display_name": "ICON（中国招聘门户）",
-      "business_tags": [],
-      "business_summary": "",
-      "status": "unknown",
-      "evidence": [],
-      "reason": "招聘主体已核实，主营业务标签待公开资料补核"
+      "business_tags": [
+        "医药／医疗健康"
+      ],
+      "business_summary": "为制药、生物科技、医疗器械及公共卫生机构提供临床研究、咨询、外包开发与商业化服务。",
+      "status": "verified",
+      "evidence": [
+        {
+          "url": "https://www.iconplc.com/about?Language=en",
+          "title": "ICON：About ICON",
+          "evidence_type": "official_website",
+          "note": "集团官网明确 ICON 是临床研究机构，为制药、生物科技、医疗器械及公共卫生组织提供咨询、外包开发和商业化服务。",
+          "checked_at": "2026-09-22"
+        }
+      ]
     },
     {
       "company_id": "company-1dc3fc0d1bba",
       "display_name": "百时美施贵宝（中国招聘门户）",
-      "business_tags": [],
-      "business_summary": "",
-      "status": "unknown",
-      "evidence": [],
-      "reason": "招聘主体已核实，主营业务标签待公开资料补核"
+      "business_tags": [
+        "医药／医疗健康",
+        "制药",
+        "生物制药"
+      ],
+      "business_summary": "研发并提供创新生物制药产品，重点覆盖肿瘤、血液、免疫和心血管等疾病领域。",
+      "status": "verified",
+      "evidence": [
+        {
+          "url": "https://www.bms.com/cn/about-us.html",
+          "title": "百时美施贵宝中国：关于我们",
+          "evidence_type": "official_website",
+          "note": "中国官网明确其为全球性生物制药公司，并列明肿瘤、血液、免疫和心血管等核心领域。",
+          "checked_at": "2026-09-22"
+        }
+      ]
     },
     {
       "company_id": "company-b2bd1c0f8714",
       "display_name": "Fortrea（中国招聘门户）",
-      "business_tags": [],
-      "business_summary": "",
-      "status": "unknown",
-      "evidence": [],
-      "reason": "招聘主体已核实，主营业务标签待公开资料补核"
+      "business_tags": [
+        "医药／医疗健康"
+      ],
+      "business_summary": "作为合同研究组织，为生物科技和生物制药企业提供临床开发、试验执行及相关专业服务。",
+      "status": "verified",
+      "evidence": [
+        {
+          "url": "https://www.fortrea.com/about-us",
+          "title": "Fortrea：About Us",
+          "evidence_type": "official_website",
+          "note": "官网将 Fortrea 定位为临床研究组织和临床服务提供商，面向生物科技及生物制药企业开展临床开发服务。",
+          "checked_at": "2026-09-22"
+        }
+      ]
     },
     {
       "company_id": "company-2bef03ffcfe3",
       "display_name": "强生（中国招聘门户）",
-      "business_tags": [],
-      "business_summary": "",
-      "status": "unknown",
-      "evidence": [],
-      "reason": "招聘主体已核实，主营业务标签待公开资料补核"
+      "business_tags": [
+        "医药／医疗健康",
+        "制药",
+        "医疗器械"
+      ],
+      "business_summary": "经营创新制药与医疗科技业务，产品覆盖多类疾病治疗药物、外科器材、骨科产品及其他医疗设备。",
+      "status": "verified",
+      "evidence": [
+        {
+          "url": "https://www.jnj.com.cn/our-products",
+          "title": "强生中国：强生品牌",
+          "evidence_type": "official_website",
+          "note": "中国官网将业务分为创新制药和医疗科技，并列明药物、外科器材、骨科及其他医疗器械产品。",
+          "checked_at": "2026-09-22"
+        }
+      ]
     },
     {
       "company_id": "company-86c5d62a57e4",
       "display_name": "赫力昂（中国招聘门户）",
-      "business_tags": [],
-      "business_summary": "",
-      "status": "unknown",
-      "evidence": [],
-      "reason": "招聘主体已核实，主营业务标签待公开资料补核"
+      "business_tags": ["医药／医疗健康", "保健品"],
+      "business_summary": "经营口腔健康、非处方药、维生素与补充剂、疼痛缓解、呼吸及消化健康等消费健康产品。",
+      "status": "verified",
+      "evidence": [{
+        "url": "https://www.haleon.com/who-we-are",
+        "title": "Haleon：Who we are",
+        "evidence_type": "official_website",
+        "note": "官网明确公司专注日常消费健康，产品包括口腔健康、止痛药、非处方药、维生素和补充剂等。",
+        "checked_at": "2026-09-22"
+      }]
     },
     {
       "company_id": "company-70509647d402",
       "display_name": "Labcorp（中国招聘门户）",
-      "business_tags": [],
-      "business_summary": "",
-      "status": "unknown",
-      "evidence": [],
-      "reason": "招聘主体已核实，主营业务标签待公开资料补核"
+      "business_tags": ["医药／医疗健康"],
+      "business_summary": "提供临床诊断检验、药物开发实验室及临床试验检测等综合实验室服务。",
+      "status": "verified",
+      "evidence": [{
+        "url": "https://www.labcorp.com/about/corporate-facts",
+        "title": "Labcorp：Corporate Facts",
+        "evidence_type": "official_website",
+        "note": "官网将公司定位为综合实验室服务提供商，业务涵盖诊断和药物开发实验室能力。",
+        "checked_at": "2026-09-22"
+      }]
     },
     {
       "company_id": "company-12fd63f6d6c3",
@@ -60841,11 +60991,16 @@
     {
       "company_id": "company-85a6a876135d",
       "display_name": "液化空气（中国招聘门户）",
-      "business_tags": [],
-      "business_summary": "",
-      "status": "unknown",
-      "evidence": [],
-      "reason": "招聘主体已核实，主营业务标签待公开资料补核"
+      "business_tags": ["化工", "工程服务", "医药／医疗健康"],
+      "business_summary": "提供工业及医用气体、相关工程制造、先进技术、能源方案和应用服务。",
+      "status": "verified",
+      "evidence": [{
+        "url": "https://cn.airliquide.com/",
+        "title": "液化空气在中国",
+        "evidence_type": "official_website",
+        "note": "中国官网列明工业及医用气体、工程与制造、先进技术和研发等主要经营范围。",
+        "checked_at": "2026-09-22"
+      }]
     },
     {
       "company_id": "company-6ad600066fb7",
@@ -60859,20 +61014,24 @@
     {
       "company_id": "company-670d1400321a",
       "display_name": "Vantive（中国招聘门户）",
-      "business_tags": [],
-      "business_summary": "",
-      "status": "unknown",
-      "evidence": [],
-      "reason": "招聘主体已核实，主营业务标签待公开资料补核"
+      "business_tags": ["医药／医疗健康", "医疗器械"],
+      "business_summary": "提供肾脏及重要器官治疗相关设备、透析产品、数字解决方案与专业服务。",
+      "status": "verified",
+      "evidence": [{
+        "url": "https://www.vantive.com/who-we-are",
+        "title": "Vantive：Who We Are",
+        "evidence_type": "official_website",
+        "note": "官网说明公司专注重要器官支持疗法，核心包括肾脏护理、透析疗法、数字解决方案及相关服务。",
+        "checked_at": "2026-09-22"
+      }]
     },
     {
       "company_id": "company-42406d2c2dad",
       "display_name": "雅培（中国招聘门户）",
-      "business_tags": [],
-      "business_summary": "",
-      "status": "unknown",
-      "evidence": [],
-      "reason": "招聘主体已核实，主营业务标签待公开资料补核"
+      "business_tags": ["医药／医疗健康", "医疗器械", "制药"],
+      "business_summary": "提供医疗器械、诊断产品、营养产品及品牌仿制药等医疗健康产品和技术。",
+      "status": "verified",
+      "evidence": [{"url":"https://www.abbott.com/en-us/about-abbott","title":"Abbott：About Abbott","evidence_type":"official_website","note":"官网说明雅培是全球医疗健康企业，并列明健康技术、医疗器械、诊断、营养和药品业务。","checked_at":"2026-09-22"}]
     },
     {
       "company_id": "company-80d08353bcc1",
@@ -60895,20 +61054,18 @@
     {
       "company_id": "company-639ab7789783",
       "display_name": "联邦快递（中国招聘门户）",
-      "business_tags": [],
-      "business_summary": "",
-      "status": "unknown",
-      "evidence": [],
-      "reason": "招聘主体已核实，主营业务标签待公开资料补核"
+      "business_tags": ["物流", "供应链服务", "电商"],
+      "business_summary": "提供快递运输、货运代理、仓储配送、供应链管理及相关电子商务与企业服务。",
+      "status": "verified",
+      "evidence": [{"url":"https://www.fedex.com/en-us/about/company-structure.html","title":"FedEx：Company structure and facts","evidence_type":"official_website","note":"官网列明运输、电商和企业服务，以及快递、货代、仓储、配送和供应链管理业务。","checked_at":"2026-09-22"}]
     },
     {
       "company_id": "company-29effa21c738",
       "display_name": "3M（中国招聘门户）",
-      "business_tags": [],
-      "business_summary": "",
-      "status": "unknown",
-      "evidence": [],
-      "reason": "招聘主体已核实，主营业务标签待公开资料补核"
+      "business_tags": ["化工", "消费品"],
+      "business_summary": "以材料科学为基础，为安全与工业、交通与电子及消费市场提供胶粘、磨料、电子材料、个人防护和日用产品。",
+      "status": "verified",
+      "evidence": [{"url":"https://www.3m.com/3M/en_US/careers-us/working-at-3m/our-business-groups/","title":"3M：Business Groups","evidence_type":"official_website","note":"官网列明安全与工业、交通与电子和消费业务，覆盖胶粘剂、磨料、电子材料、个人安全及日用产品。","checked_at":"2026-09-22"}]
     },
     {
       "company_id": "company-abfcae51c3d1",
@@ -60958,11 +61115,10 @@
     {
       "company_id": "company-5bd6702c9a89",
       "display_name": "金鹰集团（中国招聘门户）",
-      "business_tags": [],
-      "business_summary": "",
-      "status": "unknown",
-      "evidence": [],
-      "reason": "招聘主体已核实，主营业务标签待公开资料补核"
+      "business_tags": ["造纸", "化工", "能源"],
+      "business_summary": "管理资源型制造企业，业务覆盖纸浆与造纸、棕榈油、特种纤维素、粘胶纤维及综合能源。",
+      "status": "verified",
+      "evidence": [{"url":"https://www.rgei.com/about/our-company","title":"Royal Golden Eagle：About RGE Group","evidence_type":"official_website","note":"官网列明纸浆造纸、棕榈油、溶解浆、粘胶纤维和综合能源等业务板块。","checked_at":"2026-09-22"}]
     },
     {
       "company_id": "company-e597af3b66f8",
@@ -60976,92 +61132,82 @@
     {
       "company_id": "company-9e3d9afb7c4d",
       "display_name": "电通（中国招聘门户）",
-      "business_tags": [],
-      "business_summary": "",
-      "status": "unknown",
-      "evidence": [],
-      "reason": "招聘主体已核实，主营业务标签待公开资料补核"
+      "business_tags": ["广告营销", "数字营销"],
+      "business_summary": "为客户提供媒体、创意、客户体验管理和业务转型等整合营销与增长服务。",
+      "status": "verified",
+      "evidence": [{"url":"https://www.dentsu.com/who-we-are","title":"dentsu：About Us","evidence_type":"official_website","note":"官网说明电通提供媒体、客户体验管理、创意和业务转型等整合增长服务。","checked_at":"2026-09-22"}]
     },
     {
       "company_id": "company-d6f4264d8245",
       "display_name": "Logicalis（中国招聘门户）",
-      "business_tags": [],
-      "business_summary": "",
-      "status": "unknown",
-      "evidence": [],
-      "reason": "招聘主体已核实，主营业务标签待公开资料补核"
+      "business_tags": ["IT服务", "云服务", "网络安全"],
+      "business_summary": "提供覆盖云、网络连接、协作和安全的企业技术解决方案及数字化服务。",
+      "status": "verified",
+      "evidence": [{"url":"https://www.logicalis.com/about-us","title":"Logicalis：About Us","evidence_type":"official_website","note":"官网将 Logicalis 定位为全球技术服务商，业务覆盖云、连接、协作和安全。","checked_at":"2026-09-22"}]
     },
     {
       "company_id": "company-5597c68f4773",
       "display_name": "GE Vernova（中国招聘门户）",
-      "business_tags": [],
-      "business_summary": "",
-      "status": "unknown",
-      "evidence": [],
-      "reason": "招聘主体已核实，主营业务标签待公开资料补核"
+      "business_tags": ["能源", "电力设备"],
+      "business_summary": "围绕发电、电气化与风能提供燃气、核电、水电、输配电、电网、储能及风机技术和服务。",
+      "status": "verified",
+      "evidence": [{"url":"https://www.gevernova.com/investors/faq","title":"GE Vernova：Investor FAQs","evidence_type":"official_website","note":"官网列明 Power、Electrification 和 Wind 三大业务板块及其发电、电网、储能和风电业务。","checked_at":"2026-09-22"}]
     },
     {
       "company_id": "company-b96c5820be56",
       "display_name": "空气产品（中国招聘门户）",
-      "business_tags": [],
-      "business_summary": "",
-      "status": "unknown",
-      "evidence": [],
-      "reason": "招聘主体已核实，主营业务标签待公开资料补核"
+      "business_tags": ["化工", "工程服务", "能源"],
+      "business_summary": "提供工业气体、相关设备和应用技术，并开发建设大型氢气、气体分离及能源转型项目。",
+      "status": "verified",
+      "evidence": [{"url":"https://www.airproducts.com.cn/company","title":"空气产品公司：公司简介","evidence_type":"official_website","note":"中国官网说明公司向炼油、化工、金属、电子、制造、医疗和食品等行业提供工业气体、技术、设备及大型氢气项目。","checked_at":"2026-09-22"}]
     },
     {
       "company_id": "company-5c8febcbffe7",
       "display_name": "爱德华生命科学（中国招聘门户）",
-      "business_tags": [],
-      "business_summary": "",
-      "status": "unknown",
-      "evidence": [],
-      "reason": "招聘主体已核实，主营业务标签待公开资料补核"
+      "business_tags": ["医药／医疗健康", "医疗器械"],
+      "business_summary": "研发和生产面向结构性心脏病及心血管疾病治疗的创新医疗器械和相关技术。",
+      "status": "verified",
+      "evidence": [{"url":"https://www.edwards.com/about-us/who-we-are","title":"Edwards Lifesciences：Who we are","evidence_type":"official_website","note":"官网将公司定位为结构性心脏创新企业，专注为心血管疾病患者提供创新产品和技术。","checked_at":"2026-09-22"}]
     },
     {
       "company_id": "company-b1e25cb2b40b",
       "display_name": "星展（中国招聘门户）",
-      "business_tags": [],
-      "business_summary": "",
-      "status": "unknown",
-      "evidence": [],
-      "reason": "招聘主体已核实，主营业务标签待公开资料补核"
+      "business_tags": ["银行", "金融服务", "资产管理"],
+      "business_summary": "面向个人、中小企业、公司和机构客户提供银行、金融市场、证券及资产管理等金融服务。",
+      "status": "verified",
+      "evidence": [{"url":"https://www.dbs.com/iwov-resources/images/investors/quarterly-financials/2024/4Q24_press_statement.pdf","title":"DBS：2024 fourth-quarter press statement","evidence_type":"official_website","note":"星展官方资料说明其为亚洲金融服务集团，提供个人、中小企业和公司银行等完整金融服务。","checked_at":"2026-09-22"}]
     },
     {
       "company_id": "company-c244de888732",
       "display_name": "亿滋（中国招聘门户）",
-      "business_tags": [],
-      "business_summary": "",
-      "status": "unknown",
-      "evidence": [],
-      "reason": "招聘主体已核实，主营业务标签待公开资料补核"
+      "business_tags": ["食品", "消费品"],
+      "business_summary": "生产和销售饼干、巧克力、糖果、口香糖、烘焙零食、饮料及其他休闲食品。",
+      "status": "verified",
+      "evidence": [{"url":"https://www.mondelezinternational.com/about-us/","title":"Mondelēz International：About Us","evidence_type":"official_website","note":"官网列明饼干、巧克力、零食棒、口香糖、糖果、奶酪和饮料等产品组合。","checked_at":"2026-09-22"}]
     },
     {
       "company_id": "company-05b9b25301c4",
       "display_name": "IQVIA（中国招聘门户）",
-      "business_tags": [],
-      "business_summary": "",
-      "status": "unknown",
-      "evidence": [],
-      "reason": "招聘主体已核实，主营业务标签待公开资料补核"
+      "business_tags": ["医药／医疗健康", "数据服务", "IT服务"],
+      "business_summary": "为生命科学行业提供临床研究、医疗数据、分析、技术解决方案及药物商业化服务。",
+      "status": "verified",
+      "evidence": [{"url":"https://www.iqvia.com/about-us","title":"IQVIA：About Us","evidence_type":"official_website","note":"官网将 IQVIA 定位为生命科学行业高级分析、技术解决方案和临床研究服务提供商。","checked_at":"2026-09-22"}]
     },
     {
       "company_id": "company-82b7b8fe3a76",
       "display_name": "默沙东（中国招聘门户）",
-      "business_tags": [],
-      "business_summary": "",
-      "status": "unknown",
-      "evidence": [],
-      "reason": "招聘主体已核实，主营业务标签待公开资料补核"
+      "business_tags": ["医药／医疗健康", "制药", "生物制药"],
+      "business_summary": "研发和提供处方药、生物疗法、疫苗及动物保健产品。",
+      "status": "verified",
+      "evidence": [{"url":"https://www.msd.com/media/company-fact-sheet/","title":"MSD：Company fact sheet","evidence_type":"official_website","note":"官网列明公司业务涵盖处方药、生物疗法、疫苗和动物保健产品。","checked_at":"2026-09-22"}]
     },
     {
       "company_id": "company-734ad2cf6bf1",
       "display_name": "乔治费歇尔（中国招聘门户）",
-      "business_tags": [],
-      "business_summary": "",
-      "status": "unknown",
-      "evidence": [],
-      "reason": "招聘主体已核实，主营业务标签待公开资料补核"
+      "business_tags": ["工业制造", "工程服务"],
+      "business_summary": "为建筑、工业及基础设施提供管路系统、阀门和流体输送解决方案。",
+      "status": "verified",
+      "evidence": [{"url":"https://www.georgfischer.com/en/about-gf.html","title":"GF：About GF","evidence_type":"official_website","note":"官网说明集团聚焦建筑、工业和基础设施的流体解决方案，包括管路、阀门及水和燃气输送应用。","checked_at":"2026-09-22"}]
     },
     {
       "company_id": "company-88974c2640b9",
@@ -61084,20 +61230,18 @@
     {
       "company_id": "company-23206b1126dd",
       "display_name": "空中客车（中国招聘门户）",
-      "business_tags": [],
-      "business_summary": "",
-      "status": "unknown",
-      "evidence": [],
-      "reason": "招聘主体已核实，主营业务标签待公开资料补核"
+      "business_tags": ["航空航天", "航空装备", "国防"],
+      "business_summary": "从事商用飞机、直升机以及防务与航天产品和服务。",
+      "status": "verified",
+      "evidence": [{"url":"https://www.airbus.com/en/about-us","title":"Airbus：About us","evidence_type":"official_website","note":"官网列明商用飞机、直升机、防务与航天三大主要业务领域。","checked_at":"2026-09-22"}]
     },
     {
       "company_id": "company-ae89c01211a8",
       "display_name": "凯度（中国招聘门户）",
-      "business_tags": [],
-      "business_summary": "",
-      "status": "unknown",
-      "evidence": [],
-      "reason": "招聘主体已核实，主营业务标签待公开资料补核"
+      "business_tags": ["咨询", "数据服务", "广告营销"],
+      "business_summary": "提供市场研究、消费者洞察、品牌与营销策略、数据分析和技术平台服务。",
+      "status": "verified",
+      "evidence": [{"url":"https://www.kantar.com/About","title":"Kantar：About","evidence_type":"official_website","note":"官网将凯度定位为营销数据与分析企业，服务涵盖市场研究、消费者洞察、品牌与营销策略及数据技术。","checked_at":"2026-09-22"}]
     },
     {
       "company_id": "company-2c39d8d569b3",
@@ -61111,65 +61255,58 @@
     {
       "company_id": "company-165907e48529",
       "display_name": "华纳兄弟探索（中国招聘门户）",
-      "business_tags": [],
-      "business_summary": "",
-      "status": "unknown",
-      "evidence": [],
-      "reason": "招聘主体已核实，主营业务标签待公开资料补核"
+      "business_tags": ["传媒", "影视", "视频娱乐", "游戏"],
+      "business_summary": "创作并发行覆盖电视、电影、流媒体、新闻、体育和游戏的内容与品牌。",
+      "status": "verified",
+      "evidence": [{"url":"https://www.wbd.com/","title":"Warner Bros. Discovery：Our Company","evidence_type":"official_website","note":"官网说明公司在电视、电影和流媒体领域创作及发行内容，并列出新闻、体育、游戏等品牌和业务。","checked_at":"2026-09-22"}]
     },
     {
       "company_id": "company-aa7815ff0757",
       "display_name": "庄信万丰（中国招聘门户）",
-      "business_tags": [],
-      "business_summary": "",
-      "status": "unknown",
-      "evidence": [],
-      "reason": "招聘主体已核实，主营业务标签待公开资料补核"
+      "business_tags": ["化工", "新材料", "资源回收", "清洁能源"],
+      "business_summary": "围绕铂族金属提供先进材料化学、催化、精炼回收、排放控制及氢能解决方案。",
+      "status": "verified",
+      "evidence": [{"url":"https://matthey.com/about-us","title":"Johnson Matthey：About us","evidence_type":"official_website","note":"官网说明公司专注铂族金属、先进金属化学、催化与工艺工程，并提供排放控制、清洁能源及金属回收方案。","checked_at":"2026-09-22"}]
     },
     {
       "company_id": "company-ca3610a50cab",
       "display_name": "Medline（中国招聘门户）",
-      "business_tags": [],
-      "business_summary": "",
-      "status": "unknown",
-      "evidence": [],
-      "reason": "招聘主体已核实，主营业务标签待公开资料补核"
+      "business_tags": ["医药／医疗健康", "医疗器械", "供应链服务"],
+      "business_summary": "制造和供应医用外科产品，并为医疗机构提供临床及供应链解决方案。",
+      "status": "verified",
+      "evidence": [{"url":"https://www.medline.com/about-us/","title":"Medline：About us","evidence_type":"official_website","note":"官网说明其业务由医疗产品、端到端供应链和临床解决方案构成，产品覆盖外科、护理及实验室诊断等领域。","checked_at":"2026-09-22"}]
     },
     {
       "company_id": "company-13cb169a0f9c",
       "display_name": "思科（中国招聘门户）",
-      "business_tags": [],
-      "business_summary": "",
-      "status": "unknown",
-      "evidence": [],
-      "reason": "招聘主体已核实，主营业务标签待公开资料补核"
+      "business_tags": ["网络通信设备", "网络安全", "IT服务", "云服务"],
+      "business_summary": "提供网络基础设施、网络安全、协作、可观测性、云管理及相关技术服务。",
+      "status": "verified",
+      "evidence": [{"url":"https://www.cisco.com/site/us/en/about/index.html","title":"Cisco：About us","evidence_type":"official_website","note":"官网列明网络、安全、协作、可观测性、云管理等产品、解决方案和服务。","checked_at":"2026-09-22"}]
     },
     {
       "company_id": "company-957d78a95b97",
       "display_name": "施普林格自然（中国招聘门户）",
-      "business_tags": [],
-      "business_summary": "",
-      "status": "unknown",
-      "evidence": [],
-      "reason": "招聘主体已核实，主营业务标签待公开资料补核"
+      "business_tags": ["出版", "学术科研", "教育科技", "医疗健康"],
+      "business_summary": "面向科研、教育和医疗健康领域出版期刊、图书和数据库，并提供数字平台及相关服务。",
+      "status": "verified",
+      "evidence": [{"url":"https://annualreport.springernature.com/2025/files/sn-annual-report-2025-en.pdf","title":"Springer Nature：Annual Report 2025","evidence_type":"official_report","note":"官方年报将集团定位为科研、健康和教育出版商，提供内容、平台、产品与服务。","checked_at":"2026-09-22"}]
     },
     {
       "company_id": "company-50fdcb24abf8",
       "display_name": "Syneos Health（中国招聘门户）",
-      "business_tags": [],
-      "business_summary": "",
-      "status": "unknown",
-      "evidence": [],
-      "reason": "招聘主体已核实，主营业务标签待公开资料补核"
+      "business_tags": ["医药／医疗健康", "临床与科研", "咨询"],
+      "business_summary": "为生物制药企业提供临床开发、医学事务、证据生成和商业化解决方案。",
+      "status": "verified",
+      "evidence": [{"url":"https://www.syneoshealth.com/clinical-corporate-careers/locations","title":"Syneos Health：Locations","evidence_type":"official_website","note":"官网将公司定位为综合生物制药解决方案机构，业务覆盖临床、医学事务和商业化。","checked_at":"2026-09-22"}]
     },
     {
       "company_id": "company-42d291b4f2c2",
       "display_name": "陶氏（中国招聘门户）",
-      "business_tags": [],
-      "business_summary": "",
-      "status": "unknown",
-      "evidence": [],
-      "reason": "招聘主体已核实，主营业务标签待公开资料补核"
+      "business_tags": ["化工", "新材料", "材料／化工／矿冶"],
+      "business_summary": "以材料科学为核心，为包装、基础设施、交通和消费等行业提供化学材料、产品与解决方案。",
+      "status": "verified",
+      "evidence": [{"url":"https://corporate.dow.com/en-us/about-dow/company.html","title":"Dow：Our Company","evidence_type":"official_website","note":"官网说明公司运用材料科学能力，为多个行业创造产品和解决方案。","checked_at":"2026-09-22"}]
     },
     {
       "company_id": "company-d51e545d9189",
@@ -61183,20 +61320,18 @@
     {
       "company_id": "company-8531bd12d727",
       "display_name": "IFF（中国招聘门户）",
-      "business_tags": [],
-      "business_summary": "",
-      "status": "unknown",
-      "evidence": [],
-      "reason": "招聘主体已核实，主营业务标签待公开资料补核"
+      "business_tags": ["食品", "化工", "消费品", "生物"],
+      "business_summary": "研发和供应食品风味、香精香料、配料及生物科学解决方案，服务食品、个护和家居等消费品。",
+      "status": "verified",
+      "evidence": [{"url":"https://www.iff.com/about/","title":"IFF：About","evidence_type":"official_website","note":"官网说明公司提供风味、香氛、配料和生物科学解决方案。","checked_at":"2026-09-22"}]
     },
     {
       "company_id": "company-3c9f9ee221bc",
       "display_name": "爱尔康（中国招聘门户）",
-      "business_tags": [],
-      "business_summary": "",
-      "status": "unknown",
-      "evidence": [],
-      "reason": "招聘主体已核实，主营业务标签待公开资料补核"
+      "business_tags": ["医药／医疗健康", "医疗器械"],
+      "business_summary": "研发和提供眼科手术及视力保健产品，包括眼科设备、人工晶状体和隐形眼镜等。",
+      "status": "verified",
+      "evidence": [{"url":"https://www.alcon.com/about-us/","title":"Alcon：About us","evidence_type":"official_website","note":"官网将爱尔康定位为眼科器械企业，并列明 Surgical 和 Vision Care 两大业务。","checked_at":"2026-09-22"}]
     },
     {
       "company_id": "company-5edb775971fd",
@@ -61228,38 +61363,34 @@
     {
       "company_id": "company-ee8c52dc9aef",
       "display_name": "PPG（中国招聘门户）",
-      "business_tags": [],
-      "business_summary": "",
-      "status": "unknown",
-      "evidence": [],
-      "reason": "招聘主体已核实，主营业务标签待公开资料补核"
+      "business_tags": ["化工", "化工材料", "新材料"],
+      "business_summary": "研发和生产油漆、涂料及特种材料，服务建筑、工业、交通和消费品市场。",
+      "status": "verified",
+      "evidence": [{"url":"https://news.ppg.com/home/default.aspx","title":"PPG Newsroom：Company Snapshot","evidence_type":"official_website","note":"官网说明公司开发和供应油漆、涂料及特种产品，服务建筑、消费品、工业和交通市场。","checked_at":"2026-09-22"}]
     },
     {
       "company_id": "company-618dbb96fdc4",
       "display_name": "阿法拉伐（中国招聘门户）",
-      "business_tags": [],
-      "business_summary": "",
-      "status": "unknown",
-      "evidence": [],
-      "reason": "招聘主体已核实，主营业务标签待公开资料补核"
+      "business_tags": ["工业制造", "机械装备", "工程服务", "节能环保"],
+      "business_summary": "提供传热、分离和流体处理设备与工程方案，服务能源、食品水务、船舶及制药等行业。",
+      "status": "verified",
+      "evidence": [{"url":"https://corporate.alfalaval.com/about","title":"Alfa Laval：About","evidence_type":"official_website","note":"官网说明其核心技术为传热、分离和流体处理，应用于食品水务、能源、环保和制药等领域。","checked_at":"2026-09-22"}]
     },
     {
       "company_id": "company-214aeda75f53",
       "display_name": "Autodesk（中国招聘门户）",
-      "business_tags": [],
-      "business_summary": "",
-      "status": "unknown",
-      "evidence": [],
-      "reason": "招聘主体已核实，主营业务标签待公开资料补核"
+      "business_tags": ["软件", "建筑软件", "工业软件", "创作软件"],
+      "business_summary": "提供面向建筑工程与施工、产品设计与制造、媒体与娱乐的设计和制作软件。",
+      "status": "verified",
+      "evidence": [{"url":"https://www.autodesk.com/company/newsroom/corporate-info","title":"Autodesk：Corporate info","evidence_type":"official_website","note":"官网说明其技术覆盖建筑、工程、施工、产品设计、制造、媒体和娱乐。","checked_at":"2026-09-22"}]
     },
     {
       "company_id": "company-f0ebec6bd945",
       "display_name": "益普生（中国招聘门户）",
-      "business_tags": [],
-      "business_summary": "",
-      "status": "unknown",
-      "evidence": [],
-      "reason": "招聘主体已核实，主营业务标签待公开资料补核"
+      "business_tags": ["医药／医疗健康", "制药", "生物制药"],
+      "business_summary": "研发和商业化肿瘤、罕见病及神经科学领域的创新药物。",
+      "status": "verified",
+      "evidence": [{"url":"https://www.ipsen.com/us/company/","title":"Ipsen：About Ipsen","evidence_type":"official_website","note":"官网将益普生定位为生物制药企业，聚焦肿瘤、罕见病和神经科学。","checked_at":"2026-09-22"}]
     },
     {
       "company_id": "company-cd4d99ce6939",
@@ -61273,11 +61404,10 @@
     {
       "company_id": "company-f08bc868aaaf",
       "display_name": "Apex Group（中国招聘门户）",
-      "business_tags": [],
-      "business_summary": "",
-      "status": "unknown",
-      "evidence": [],
-      "reason": "招聘主体已核实，主营业务标签待公开资料补核"
+      "business_tags": ["金融服务", "资产管理", "金融科技"],
+      "business_summary": "为资产管理人、机构投资者、金融机构和家族办公室提供基金及资产服务等金融解决方案。",
+      "status": "verified",
+      "evidence": [{"url":"https://www.apexgroup.com/our-story/","title":"Apex Group：Our story","evidence_type":"official_website","note":"官网说明集团提供基金及资产服务和金融解决方案，并以数据和金融科技支持全资产类别价值链。","checked_at":"2026-09-22"}]
     },
     {
       "company_id": "company-efa70e39e3c2",
@@ -61291,20 +61421,18 @@
     {
       "company_id": "company-730649b5d805",
       "display_name": "Tory Burch（中国招聘门户）",
-      "business_tags": [],
-      "business_summary": "",
-      "status": "unknown",
-      "evidence": [],
-      "reason": "招聘主体已核实，主营业务标签待公开资料补核"
+      "business_tags": ["时尚零售", "服装服饰", "消费品／零售"],
+      "business_summary": "设计并零售女装、手袋、鞋履、珠宝配饰和运动服饰等时尚产品。",
+      "status": "verified",
+      "evidence": [{"url":"https://www.toryburch.com/en-us/new-arrivals/view-all/","title":"Tory Burch：New Arrivals","evidence_type":"official_website","note":"官网商品范围覆盖设计师服装、手袋、鞋履和配饰。","checked_at":"2026-09-22"}]
     },
     {
       "company_id": "company-42f99edbbebb",
       "display_name": "PVH（中国招聘门户）",
-      "business_tags": [],
-      "business_summary": "",
-      "status": "unknown",
-      "evidence": [],
-      "reason": "招聘主体已核实，主营业务标签待公开资料补核"
+      "business_tags": ["时尚零售", "服装服饰", "消费品／零售"],
+      "business_summary": "经营 Calvin Klein、Tommy Hilfiger 等全球时尚与生活方式品牌。",
+      "status": "verified",
+      "evidence": [{"url":"https://www.pvh.com/company","title":"PVH：Company","evidence_type":"official_website","note":"官网说明集团围绕 Calvin Klein 和 Tommy Hilfiger 建设全球生活方式品牌业务。","checked_at":"2026-09-22"}]
     },
     {
       "company_id": "company-575e5ccb3319",

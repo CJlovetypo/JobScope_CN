@@ -2,7 +2,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import {createHash} from 'node:crypto';
 import {pathToFileURL} from 'node:url';
-import {PACK_ROOT, SKILLS} from '../runtime-context.mjs';
+import {PACK_ROOT, MODE_ROOTS} from '../runtime-context.mjs';
 import {INDUSTRIES} from './lib/industry-routing.mjs';
 import {planWaiqiIntegration, sourceKey} from './lib/waiqi-integration.mjs';
 import {officialArchivedJob, seedCompanyCityTag} from './lib/waiqi-city-seed.mjs';
@@ -14,7 +14,7 @@ const missingRead = async file => { try { return await read(file); } catch (erro
 
 export async function main(args = process.argv.slice(2)) {
   const apply = args.includes('--apply');
-  const root = path.resolve(args.find(x => x.startsWith('--input='))?.slice(8) || path.join(PACK_ROOT, 'campus-job-fit/artifacts/waiqi-2026-09-20'));
+  const root = path.resolve(args.find(x => x.startsWith('--input='))?.slice(8) || path.join(PACK_ROOT, 'job-search/runtime/campus/artifacts/waiqi-2026-09-20'));
   if (args.some(x => x !== '--apply' && !x.startsWith('--input='))) throw Error('Usage: seed-waiqi-city-index.mjs [--input=waiqi-artifact-directory] [--apply]');
   const out = path.join(root, 'city-seed'), registryFile = path.join(PACK_ROOT, 'shared/job-search-core/assets/sources.json');
   const before = await fs.readFile(registryFile, 'utf8'), inputs = [];
@@ -81,7 +81,7 @@ export async function main(args = process.argv.slice(2)) {
   await fs.mkdir(out, {recursive: true});
   await fs.writeFile(path.join(out, 'official-jobs.jsonl'), archiveRows.map(row => JSON.stringify(row)).join('\n') + (archiveRows.length ? '\n' : ''));
   const indexWrites = [], modes = {};
-  for (const [mode, skill] of Object.entries(SKILLS)) {
+  for (const [mode, skill] of Object.entries(MODE_ROOTS)) {
     const skillRoot = path.join(PACK_ROOT, skill), indexFile = path.join(skillRoot, 'data/company-city-index.json');
     let indexText = null; try { indexText = await fs.readFile(indexFile, 'utf8'); } catch (error) { if (error.code !== 'ENOENT') throw error; }
     const index = indexText ? JSON.parse(indexText) : {schema_version: 1, companies: []};

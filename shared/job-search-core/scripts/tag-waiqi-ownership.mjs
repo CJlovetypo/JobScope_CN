@@ -13,9 +13,9 @@ const DEFAULTS = Object.freeze({
   sizes: path.join(ROOT, 'shared/job-search-core/data/company-size-tags.json'),
   profiles: path.join(ROOT, 'shared/job-search-core/data/company-profiles.json'),
   candidates: path.join(ROOT, 'shared/job-search-core/assets/waiqi-source-candidates.json'),
-  contexts: path.join(ROOT, 'campus-job-fit/artifacts/waiqi-2026-09-20/zero-position-official-clean/duplicates-existing.json'),
+  contexts: path.join(ROOT, 'job-search/runtime/campus/artifacts/waiqi-2026-09-20/zero-position-official-clean/duplicates-existing.json'),
   index: path.join(ROOT, 'shared/job-search-core/data/waiqi-foreign-company-index.json'),
-  artifacts: path.join(ROOT, 'campus-job-fit/artifacts/waiqi-2026-09-20/waiqi-ownership-tagging'),
+  artifacts: path.join(ROOT, 'job-search/runtime/campus/artifacts/waiqi-2026-09-20/waiqi-ownership-tagging'),
 });
 
 const readJson = async file => JSON.parse(await fs.readFile(file, 'utf8'));
@@ -132,6 +132,7 @@ export function applyWaiqiOwnership(registry, ownershipDataset, profileDataset, 
   const beforeOwners = new Map((ownershipDataset?.companies || []).map(owner => [owner.company_id, owner]));
   const matchedCompanies = [];
   const skippedSupplierAuthority = [];
+  const skippedOfficialAuthority = [];
   const conflicts = [];
 
   const companies = (ownershipDataset?.companies || []).map(owner => {
@@ -139,6 +140,10 @@ export function applyWaiqiOwnership(registry, ownershipDataset, profileDataset, 
     if (!byWaiqi) return owner;
     if (owner.classification_basis === 'supplier_company_nature_classification') {
       skippedSupplierAuthority.push({company_id: owner.company_id, display_name: owner.display_name, supplier_natures: owner.supplier_natures || [], current_tag: owner.ownership_tag});
+      return owner;
+    }
+    if (owner.classification_basis === 'official_identity_outside_enterprise_ownership_taxonomy') {
+      skippedOfficialAuthority.push({company_id: owner.company_id, display_name: owner.display_name, current_tag: owner.ownership_tag, current_status: owner.status});
       return owner;
     }
     const waiqiIds = [...byWaiqi.keys()].sort((a, b) => a.localeCompare(b, 'zh-CN', {numeric: true}));
@@ -197,7 +202,7 @@ export function applyWaiqiOwnership(registry, ownershipDataset, profileDataset, 
     throw new Error('Ownership or size output no longer has exact registry coverage');
   }
 
-  return {ownership: outputOwners, sizes: outputSizes, matchedCompanies, conflicts, skippedSupplierAuthority, ownershipProblemsBefore: problemsBefore, ownershipProblemsAfter: ownershipProblems};
+  return {ownership: outputOwners, sizes: outputSizes, matchedCompanies, conflicts, skippedSupplierAuthority, skippedOfficialAuthority, ownershipProblemsBefore: problemsBefore, ownershipProblemsAfter: ownershipProblems};
 }
 
 function parseArgs(argv) {
@@ -254,14 +259,15 @@ export async function main(argv = process.argv.slice(2)) {
     policy: waiqiIndex.policy,
     directory: waiqiIndex.counts,
     registry_companies: registry.companies.length,
-    waiqi_identity_matches: result.matchedCompanies.length + result.skippedSupplierAuthority.length,
+    waiqi_identity_matches: result.matchedCompanies.length + result.skippedSupplierAuthority.length + result.skippedOfficialAuthority.length,
     matched_registry_companies: result.matchedCompanies.length,
     changed_registry_companies: result.matchedCompanies.filter(row => row.changed).length,
     already_external: result.matchedCompanies.filter(row => row.previous_tag === '外企').length,
     overridden_non_external: result.conflicts.length,
-    unmatched_registry_companies: registry.companies.length - result.matchedCompanies.length - result.skippedSupplierAuthority.length,
+    unmatched_registry_companies: registry.companies.length - result.matchedCompanies.length - result.skippedSupplierAuthority.length - result.skippedOfficialAuthority.length,
     match_method_company_counts: methodCounts,
     skipped_supplier_authority: result.skippedSupplierAuthority.length,
+    skipped_official_authority: result.skippedOfficialAuthority.length,
     ownership_counts_before: countsBy(ownership.companies, 'ownership_tag'),
     ownership_counts_after: countsBy(result.ownership.companies, 'ownership_tag'),
     size_counts_after: result.sizes.counts,
@@ -276,6 +282,7 @@ export async function main(argv = process.argv.slice(2)) {
     fs.writeFile(path.join(options.artifacts, matchedArtifact), JSON.stringify(result.matchedCompanies, null, 2) + '\n'),
     fs.writeFile(path.join(options.artifacts, conflictsArtifact), JSON.stringify(result.conflicts, null, 2) + '\n'),
     fs.writeFile(path.join(options.artifacts, options.apply ? 'skipped-supplier-authority.json' : 'skipped-supplier-authority.preview.json'), JSON.stringify(result.skippedSupplierAuthority, null, 2) + '\n'),
+    fs.writeFile(path.join(options.artifacts, options.apply ? 'skipped-official-authority.json' : 'skipped-official-authority.preview.json'), JSON.stringify(result.skippedOfficialAuthority, null, 2) + '\n'),
     fs.writeFile(path.join(options.artifacts, 'waiqi-foreign-company-index.preview.json'), JSON.stringify(waiqiIndex, null, 2) + '\n'),
   ]);
   if (options.apply) {

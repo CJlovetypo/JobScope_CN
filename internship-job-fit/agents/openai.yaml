@@ -1,4 +1,0 @@
-interface:
-  display_name: "实习求职"
-  short_description: "沿用实习方向，按需澄清并发现或匹配岗位"
-  default_prompt: "使用 $internship-job-fit，沿用我已说明的条件，按统一求职规则发现或匹配实习岗位；只补当前阶段必要信息，说明覆盖和判断依据。"

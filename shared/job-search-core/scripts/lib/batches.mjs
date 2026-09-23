@@ -1,5 +1,6 @@
 // Main agent is the only ledger/assessment writer. Workers only publish immutable submissions.
 import fs from 'node:fs/promises';
+import {ownershipDisplayTag} from './ownership.mjs';
 import path from 'node:path';
 import {createHash, randomUUID} from 'node:crypto';
 import {isDeepStrictEqual} from 'node:util';
@@ -122,7 +123,7 @@ export async function createBatch(dir, {limit=50,maxChars=160000,concurrency=4,k
     const size=JSON.stringify(job).length;
     if(items.length && (items.length>=limit||chars+size>maxChars)) break;
     const company=ctx.run.companies.find(c=>c.company_id===entry.company_id);
-    companies[entry.company_id]={company_id:company.company_id,display_name:company.display_name,business_tags:company.business_tags,business_summary:company.business_summary,ownership_tag:company.ownership_tag};
+    companies[entry.company_id]={company_id:company.company_id,display_name:company.display_name,business_tags:company.business_tags,business_summary:company.business_summary,ownership_tag:ownershipDisplayTag(company),ownership_status:company.ownership_status};
     items.push({key,job}); baselines[key]=entry.baseline; chars+=size;
   }
   if(!items.length) return {batch_id:null,items:0};

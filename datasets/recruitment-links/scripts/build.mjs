@@ -13,7 +13,7 @@ const mappings = {
   'wps-links.csv':'collections/wps-campus-sources-20260919/derived/all-link-occurrences.csv',
   'wps-manifest.json':'collections/wps-campus-sources-20260919/raw/manifest.json',
   'wps-summary.json':'collections/wps-campus-sources-20260919/final-summary.json',
-  'wps-api-verification.json':'../../shared/.local/archive/20260919/internet-campus-job-fit/data/source-verification-wps-20260919.json',
+  'wps-api-verification.json':'../../shared/.local/archive/20260919/internet-job-search/runtime/campus/data/source-verification-wps-20260919.json',
   'feishu-api-verification.json':'../../shared/.local/archive/20260919/internal-records/shared/job-search-core/data/source-verification-feishu-20260919.json',
   'feishu-admission.json':'../../shared/.local/archive/20260919/internal-records/shared/job-search-core/data/feishu-expansion-20260919.json',
   'waiqi-candidates.json':'../../shared/job-search-core/assets/waiqi-source-candidates.json',

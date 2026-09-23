@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-21T23:51:02.923Z",
+  "updated_at": "2026-09-22T13:04:00.000Z",
   "companies": [
     {
       "company_id": "company-f93e5a384c54",
@@ -106354,128 +106354,246 @@
     {
       "company_id": "company-b54f3dd95257",
       "display_name": "湖北大数据集团有限公司",
-      "ownership_tag": "待核实",
-      "status": "unknown",
-      "reason": "新增招聘主体的控制关系尚未核查",
-      "evidence": [],
-      "checked_at": null
+      "ownership_tag": "国企",
+      "status": "verified",
+      "reason": "集团官网明确其为湖北省属一级国有企业，由湖北省国资委联合六家省属国企出资组建。",
+      "evidence": [
+        {
+          "url": "https://www.hbdsjjt.com/",
+          "title": "湖北大数据集团：集团概况",
+          "note": "官网明确写明湖北省属一级国有企业及其省国资出资背景。",
+          "checked_at": "2026-09-22"
+        }
+      ],
+      "checked_at": "2026-09-22"
     },
     {
       "company_id": "company-b0f4cdf1288e",
       "display_name": "费森尤斯医疗（中国招聘门户）",
-      "ownership_tag": "待核实",
-      "status": "unknown",
-      "reason": "新增招聘主体的控制关系尚未核查",
-      "evidence": [],
-      "checked_at": null
+      "ownership_tag": "外企",
+      "status": "verified",
+      "reason": "招聘主体对应的费森尤斯医疗集团总部位于德国巴特洪堡，在中国运营产品与医疗服务业务。",
+      "evidence": [
+        {
+          "url": "https://freseniusmedicalcare.com/en/about-us/company-profile/",
+          "title": "Fresenius Medical Care company profile",
+          "note": "集团官网列明全球总部位于德国巴特洪堡，并说明其全球透析产品与服务业务。",
+          "checked_at": "2026-09-22"
+        },
+        {
+          "url": "https://www.freseniusmedicalcare.cn/about-us.html",
+          "title": "费森尤斯医疗中国：关于我们",
+          "note": "中国官网确认中国招聘主体所属集团及其在华业务。",
+          "checked_at": "2026-09-22"
+        }
+      ],
+      "checked_at": "2026-09-22"
     },
     {
       "company_id": "company-090da504a3e6",
       "display_name": "华侨银行（中国招聘门户）",
-      "ownership_tag": "待核实",
-      "status": "unknown",
-      "reason": "新增招聘主体的控制关系尚未核查",
-      "evidence": [],
-      "checked_at": null
+      "ownership_tag": "外企",
+      "status": "verified",
+      "reason": "华侨银行（中国）官网明确其为新加坡华侨银行集团的全资附属公司。",
+      "evidence": [
+        {
+          "url": "https://www.ocbc.com.cn/CN/group/aboutUs/profile/",
+          "title": "华侨银行中国：公司简介",
+          "note": "官网明确华侨银行（中国）是华侨银行集团的全资附属公司，并介绍集团的新加坡银行身份。",
+          "checked_at": "2026-09-22"
+        }
+      ],
+      "checked_at": "2026-09-22"
     },
     {
       "company_id": "company-cf2a220e436b",
       "display_name": "宏利（中国招聘门户）",
-      "ownership_tag": "待核实",
-      "status": "unknown",
-      "reason": "新增招聘主体的控制关系尚未核查",
-      "evidence": [],
-      "checked_at": null
+      "ownership_tag": "外企",
+      "status": "verified",
+      "reason": "招聘门户对应宏利金融集团；集团官网明确集团总部位于加拿大多伦多。",
+      "evidence": [
+        {
+          "url": "https://careers.manulife.com/cn/zh/about-us",
+          "title": "宏利招聘官网：关于我们",
+          "note": "官方招聘页面说明宏利金融为总部位于加拿大多伦多的国际金融服务机构。",
+          "checked_at": "2026-09-22"
+        }
+      ],
+      "checked_at": "2026-09-22"
     },
     {
       "company_id": "company-a3d79f4dbadc",
       "display_name": "马士基（中国招聘门户）",
-      "ownership_tag": "待核实",
-      "status": "unknown",
-      "reason": "新增招聘主体的控制关系尚未核查",
-      "evidence": [],
-      "checked_at": null
+      "ownership_tag": "外企",
+      "status": "verified",
+      "reason": "招聘门户对应 A.P. 穆勒 - 马士基集团；集团官方投资者资料明确全球总部位于丹麦哥本哈根。",
+      "evidence": [
+        {
+          "url": "https://investor.maersk.com/static-files/2ed8ccf1-a915-4e7d-993f-cf9d4d3f2c3c",
+          "title": "A.P. Moller - Maersk：Description of the issuer",
+          "note": "马士基官方投资者文件明确集团全球总部位于丹麦哥本哈根。",
+          "checked_at": "2026-09-22"
+        }
+      ],
+      "checked_at": "2026-09-22"
     },
     {
       "company_id": "company-83ac6a8a2843",
       "display_name": "AIG（中国招聘门户）",
-      "ownership_tag": "待核实",
-      "status": "unknown",
-      "reason": "新增招聘主体的控制关系尚未核查",
-      "evidence": [],
-      "checked_at": null
+      "ownership_tag": "外企",
+      "status": "verified",
+      "reason": "招聘门户对应美国国际集团；AIG 官网明确集团在美国特拉华州注册并在纽约证券交易所上市。",
+      "evidence": [
+        {
+          "url": "https://www.aig.com/home/about/history",
+          "title": "AIG：History",
+          "note": "集团官网沿革明确 American International Group, Inc. 在美国特拉华州注册，并列明其美国上市与全球经营身份。",
+          "checked_at": "2026-09-22"
+        }
+      ],
+      "checked_at": "2026-09-22"
     },
     {
       "company_id": "company-104d08c2716e",
       "display_name": "辉瑞（中国招聘门户）",
-      "ownership_tag": "待核实",
-      "status": "unknown",
-      "reason": "新增招聘主体的控制关系尚未核查",
-      "evidence": [],
-      "checked_at": null
+      "ownership_tag": "外企",
+      "status": "verified",
+      "reason": "招聘门户对应辉瑞集团；辉瑞官网列明全球总部位于美国纽约。",
+      "evidence": [
+        {
+          "url": "https://www.pfizer.com/about/investors/why-invest/fact-sheet",
+          "title": "Pfizer company fact sheet",
+          "note": "辉瑞官网公司资料列明全球总部地址为美国纽约。",
+          "checked_at": "2026-09-22"
+        }
+      ],
+      "checked_at": "2026-09-22"
     },
     {
       "company_id": "company-3cd432d7e6e3",
       "display_name": "赛诺菲（中国招聘门户）",
-      "ownership_tag": "待核实",
-      "status": "unknown",
-      "reason": "新增招聘主体的控制关系尚未核查",
-      "evidence": [],
-      "checked_at": null
+      "ownership_tag": "外企",
+      "status": "verified",
+      "reason": "招聘门户对应赛诺菲集团；集团官方资料明确公司在法国注册、注册办公地位于法国巴黎。",
+      "evidence": [
+        {
+          "url": "https://www.sanofi.com/en/investors/sanofi-share-and-adrs/shares-structure-vote",
+          "title": "Sanofi：Share, structure and voting rights",
+          "note": "赛诺菲官网明确其为法国股份公司，注册办公地位于法国巴黎。",
+          "checked_at": "2026-09-22"
+        },
+        {
+          "url": "https://www.sanofi.cn/zh/our-company",
+          "title": "赛诺菲中国：关于我们",
+          "note": "中国官网确认该招聘主体对应进入中国运营的跨国赛诺菲集团。",
+          "checked_at": "2026-09-22"
+        }
+      ],
+      "checked_at": "2026-09-22"
     },
     {
       "company_id": "company-ce15e6bfc483",
       "display_name": "ICON（中国招聘门户）",
-      "ownership_tag": "待核实",
-      "status": "unknown",
-      "reason": "新增招聘主体的控制关系尚未核查",
-      "evidence": [],
-      "checked_at": null
+      "ownership_tag": "外企",
+      "status": "verified",
+      "reason": "招聘门户对应 ICON plc；ICON 官网列明集团总部位于爱尔兰都柏林。",
+      "evidence": [
+        {
+          "url": "https://www.iconplc.com/contact",
+          "title": "ICON plc：Contact",
+          "note": "官网列明 ICON corporate headquarters 位于爱尔兰都柏林。",
+          "checked_at": "2026-09-22"
+        }
+      ],
+      "checked_at": "2026-09-22"
     },
     {
       "company_id": "company-1dc3fc0d1bba",
       "display_name": "百时美施贵宝（中国招聘门户）",
-      "ownership_tag": "待核实",
-      "status": "unknown",
-      "reason": "新增招聘主体的控制关系尚未核查",
-      "evidence": [],
-      "checked_at": null
+      "ownership_tag": "外企",
+      "status": "verified",
+      "reason": "招聘门户对应 Bristol Myers Squibb；集团官网列明公司总部位于美国新泽西州普林斯顿。",
+      "evidence": [
+        {
+          "url": "https://www.bms.com/contact-us.html",
+          "title": "Bristol Myers Squibb：Contact us",
+          "note": "集团官网列明 Bristol Myers Squibb corporate headquarters 位于美国新泽西州普林斯顿。",
+          "checked_at": "2026-09-22"
+        },
+        {
+          "url": "https://www.bms.com/cn/about-us.html",
+          "title": "百时美施贵宝中国：关于我们",
+          "note": "中国官网确认在华招聘主体所属的全球百时美施贵宝集团。",
+          "checked_at": "2026-09-22"
+        }
+      ],
+      "checked_at": "2026-09-22"
     },
     {
       "company_id": "company-b2bd1c0f8714",
       "display_name": "Fortrea（中国招聘门户）",
-      "ownership_tag": "待核实",
-      "status": "unknown",
-      "reason": "新增招聘主体的控制关系尚未核查",
-      "evidence": [],
-      "checked_at": null
+      "ownership_tag": "外企",
+      "status": "verified",
+      "reason": "招聘门户对应 Fortrea Inc.；官方投资者资料列明公司在美国特拉华州注册、总部位于北卡罗来纳州达勒姆。",
+      "evidence": [
+        {
+          "url": "https://ir.fortrea.com/resources/investor-faqs/",
+          "title": "Fortrea：Investor FAQs",
+          "note": "官方投资者页面列明 Fortrea 在美国特拉华州注册，总部位于美国北卡罗来纳州达勒姆。",
+          "checked_at": "2026-09-22"
+        }
+      ],
+      "checked_at": "2026-09-22"
     },
     {
       "company_id": "company-2bef03ffcfe3",
       "display_name": "强生（中国招聘门户）",
-      "ownership_tag": "待核实",
-      "status": "unknown",
-      "reason": "新增招聘主体的控制关系尚未核查",
-      "evidence": [],
-      "checked_at": null
+      "ownership_tag": "外企",
+      "status": "verified",
+      "reason": "招聘门户对应 Johnson & Johnson；集团官网列明全球总部位于美国新泽西州新不伦瑞克。",
+      "evidence": [
+        {
+          "url": "https://www.jnj.com/media-center/library/corporate",
+          "title": "Johnson & Johnson：Corporate images",
+          "note": "集团官网明确 Johnson & Johnson 世界总部位于美国新泽西州新不伦瑞克。",
+          "checked_at": "2026-09-22"
+        },
+        {
+          "url": "https://www.jnj.com.cn/our-products",
+          "title": "强生中国：强生品牌",
+          "note": "中国官网确认招聘主体对应强生集团在华业务。",
+          "checked_at": "2026-09-22"
+        }
+      ],
+      "checked_at": "2026-09-22"
     },
     {
       "company_id": "company-86c5d62a57e4",
       "display_name": "赫力昂（中国招聘门户）",
-      "ownership_tag": "待核实",
-      "status": "unknown",
-      "reason": "新增招聘主体的控制关系尚未核查",
-      "evidence": [],
-      "checked_at": null
+      "ownership_tag": "外企",
+      "status": "verified",
+      "reason": "招聘门户对应 Haleon 集团；集团官网列明总部位于英国萨里郡。",
+      "evidence": [{
+        "url": "https://www.haleon.com/contact",
+        "title": "Haleon：Contact",
+        "note": "集团官网列明总部地址位于英国 Surrey。",
+        "checked_at": "2026-09-22"
+      }],
+      "checked_at": "2026-09-22"
     },
     {
       "company_id": "company-70509647d402",
       "display_name": "Labcorp（中国招聘门户）",
-      "ownership_tag": "待核实",
-      "status": "unknown",
-      "reason": "新增招聘主体的控制关系尚未核查",
-      "evidence": [],
-      "checked_at": null
+      "ownership_tag": "外企",
+      "status": "verified",
+      "reason": "招聘门户对应 Laboratory Corporation of America Holdings；官网列明总部位于美国北卡罗来纳州。",
+      "evidence": [{
+        "url": "https://www.labcorp.com/about/corporate-facts",
+        "title": "Labcorp：Corporate Facts",
+        "note": "官网列明公司总部位于美国北卡罗来纳州 Burlington，并在纽约证券交易所上市。",
+        "checked_at": "2026-09-22"
+      }],
+      "checked_at": "2026-09-22"
     },
     {
       "company_id": "company-12fd63f6d6c3",
@@ -106529,11 +106647,16 @@
     {
       "company_id": "company-85a6a876135d",
       "display_name": "液化空气（中国招聘门户）",
-      "ownership_tag": "待核实",
-      "status": "unknown",
-      "reason": "新增招聘主体的控制关系尚未核查",
-      "evidence": [],
-      "checked_at": null
+      "ownership_tag": "外企",
+      "status": "verified",
+      "reason": "招聘门户对应法国液化空气集团；集团官网列明集团公司及总部位于法国巴黎。",
+      "evidence": [{
+        "url": "https://www.airliquide.com/legal-notice",
+        "title": "Air Liquide：Legal notice",
+        "note": "集团官网列明 L’AIR LIQUIDE S.A. 总部位于法国巴黎。",
+        "checked_at": "2026-09-22"
+      }],
+      "checked_at": "2026-09-22"
     },
     {
       "company_id": "company-6ad600066fb7",
@@ -106554,20 +106677,25 @@
     {
       "company_id": "company-670d1400321a",
       "display_name": "Vantive（中国招聘门户）",
-      "ownership_tag": "待核实",
-      "status": "unknown",
-      "reason": "新增招聘主体的控制关系尚未核查",
-      "evidence": [],
-      "checked_at": null
+      "ownership_tag": "外企",
+      "status": "verified",
+      "reason": "Vantive 官网明确其由美国投资机构 Carlyle 管理的基金收购 Baxter 肾脏护理业务后独立运营。",
+      "evidence": [{
+        "url": "https://www.vantive.com/fr/node/726",
+        "title": "Vantive：Baxter Kidney Care is Now Vantive",
+        "note": "官方公告说明 Vantive 在 Carlyle 管理基金完成收购后成为独立公司。",
+        "checked_at": "2026-09-22"
+      }],
+      "checked_at": "2026-09-22"
     },
     {
       "company_id": "company-42406d2c2dad",
       "display_name": "雅培（中国招聘门户）",
-      "ownership_tag": "待核实",
-      "status": "unknown",
-      "reason": "新增招聘主体的控制关系尚未核查",
-      "evidence": [],
-      "checked_at": null
+      "ownership_tag": "外企",
+      "status": "verified",
+      "reason": "招聘门户对应 Abbott 集团；集团官网列明公司总部位于美国伊利诺伊州。",
+      "evidence": [{"url":"https://www.abbott.com/en-us/about-abbott","title":"Abbott：About Abbott","note":"官网列明雅培公司总部位于美国伊利诺伊州 Abbott Park。","checked_at":"2026-09-22"}],
+      "checked_at": "2026-09-22"
     },
     {
       "company_id": "company-80d08353bcc1",
@@ -106628,20 +106756,20 @@
     {
       "company_id": "company-639ab7789783",
       "display_name": "联邦快递（中国招聘门户）",
-      "ownership_tag": "待核实",
-      "status": "unknown",
-      "reason": "新增招聘主体的控制关系尚未核查",
-      "evidence": [],
-      "checked_at": null
+      "ownership_tag": "外企",
+      "status": "verified",
+      "reason": "招聘门户对应 FedEx Corporation；官网列明集团和 Federal Express 总部位于美国田纳西州孟菲斯。",
+      "evidence": [{"url":"https://www.fedex.com/en-us/about/company-structure.html","title":"FedEx：Company structure and facts","note":"官网列明 FedEx Corporation 与 Federal Express 总部位于美国 Memphis, Tennessee。","checked_at":"2026-09-22"}],
+      "checked_at": "2026-09-22"
     },
     {
       "company_id": "company-29effa21c738",
       "display_name": "3M（中国招聘门户）",
-      "ownership_tag": "待核实",
-      "status": "unknown",
-      "reason": "新增招聘主体的控制关系尚未核查",
-      "evidence": [],
-      "checked_at": null
+      "ownership_tag": "外企",
+      "status": "verified",
+      "reason": "招聘门户对应 3M Company；集团官网沿革列明全球总部位于美国明尼苏达州 Maplewood。",
+      "evidence": [{"url":"https://www.3m.com/3M/en_US/about-3m/history/","title":"3M：History","note":"官网说明 3M 全球总部自 1962 年设于美国明尼苏达州 Maplewood。","checked_at":"2026-09-22"}],
+      "checked_at": "2026-09-22"
     },
     {
       "company_id": "company-abfcae51c3d1",
@@ -106767,11 +106895,11 @@
     {
       "company_id": "company-5bd6702c9a89",
       "display_name": "金鹰集团（中国招聘门户）",
-      "ownership_tag": "待核实",
-      "status": "unknown",
-      "reason": "新增招聘主体的控制关系尚未核查",
-      "evidence": [],
-      "checked_at": null
+      "ownership_tag": "外企",
+      "status": "verified",
+      "reason": "招聘门户对应 Royal Golden Eagle；官网明确集团总部位于新加坡，并由创始人兼主席 Sukanto Tanoto 持有。",
+      "evidence": [{"url":"https://www.rgei.com/about/faqs","title":"RGE：FAQs","note":"官网明确 RGE 总部位于新加坡，并说明集团由创始人兼主席 Sukanto Tanoto 持有。","checked_at":"2026-09-22"}],
+      "checked_at": "2026-09-22"
     },
     {
       "company_id": "company-e597af3b66f8",
@@ -106792,92 +106920,92 @@
     {
       "company_id": "company-9e3d9afb7c4d",
       "display_name": "电通（中国招聘门户）",
-      "ownership_tag": "待核实",
-      "status": "unknown",
-      "reason": "新增招聘主体的控制关系尚未核查",
-      "evidence": [],
-      "checked_at": null
+      "ownership_tag": "外企",
+      "status": "verified",
+      "reason": "招聘门户对应 dentsu 集团；集团官网列明全球控股公司 Dentsu Group Inc. 地址位于日本东京。",
+      "evidence": [{"url":"https://www.group.dentsu.com/en/about-us/","title":"Dentsu Group：About us","note":"官网列明集团全球总部主体 Dentsu Group Inc. 及其日本东京地址。","checked_at":"2026-09-22"}],
+      "checked_at": "2026-09-22"
     },
     {
       "company_id": "company-d6f4264d8245",
       "display_name": "Logicalis（中国招聘门户）",
-      "ownership_tag": "待核实",
-      "status": "unknown",
-      "reason": "新增招聘主体的控制关系尚未核查",
-      "evidence": [],
-      "checked_at": null
+      "ownership_tag": "外企",
+      "status": "verified",
+      "reason": "Logicalis 官网明确集团总部位于英国，且为南非上市公司 Datatec Limited 旗下业务。",
+      "evidence": [{"url":"https://www.logicalis.com/about-us","title":"Logicalis：About Us","note":"官网明确 Logicalis Group 总部位于英国，并说明其为 Datatec Limited 旗下业务。","checked_at":"2026-09-22"}],
+      "checked_at": "2026-09-22"
     },
     {
       "company_id": "company-5597c68f4773",
       "display_name": "GE Vernova（中国招聘门户）",
-      "ownership_tag": "待核实",
-      "status": "unknown",
-      "reason": "新增招聘主体的控制关系尚未核查",
-      "evidence": [],
-      "checked_at": null
+      "ownership_tag": "外企",
+      "status": "verified",
+      "reason": "招聘门户对应 GE Vernova Inc.；官网列明公司在美国特拉华州注册、总部位于马萨诸塞州剑桥。",
+      "evidence": [{"url":"https://www.gevernova.com/investors/faq","title":"GE Vernova：Investor FAQs","note":"官网列明公司在美国特拉华州注册，总部位于美国马萨诸塞州剑桥。","checked_at":"2026-09-22"}],
+      "checked_at": "2026-09-22"
     },
     {
       "company_id": "company-b96c5820be56",
       "display_name": "空气产品（中国招聘门户）",
-      "ownership_tag": "待核实",
-      "status": "unknown",
-      "reason": "新增招聘主体的控制关系尚未核查",
-      "evidence": [],
-      "checked_at": null
+      "ownership_tag": "外企",
+      "status": "verified",
+      "reason": "招聘门户对应 Air Products and Chemicals, Inc.；官方年报列明全球总部位于美国宾夕法尼亚州 Allentown。",
+      "evidence": [{"url":"https://www.airproducts.com/-/media/files/en/900/900-24-045-glb-annual-report-2024.pdf","title":"Air Products 2024 Annual Report","note":"官方年报列明公司全球总部及研发设施位于美国宾夕法尼亚州 Allentown。","checked_at":"2026-09-22"}],
+      "checked_at": "2026-09-22"
     },
     {
       "company_id": "company-5c8febcbffe7",
       "display_name": "爱德华生命科学（中国招聘门户）",
-      "ownership_tag": "待核实",
-      "status": "unknown",
-      "reason": "新增招聘主体的控制关系尚未核查",
-      "evidence": [],
-      "checked_at": null
+      "ownership_tag": "外企",
+      "status": "verified",
+      "reason": "招聘门户对应 Edwards Lifesciences Corp；官网列明全球总部位于美国加利福尼亚州 Irvine。",
+      "evidence": [{"url":"https://www.edwards.com/about-us/global-locations","title":"Edwards Lifesciences：Global locations","note":"官网列明 Edwards Lifesciences Corp 全球总部位于美国加利福尼亚州 Irvine。","checked_at":"2026-09-22"}],
+      "checked_at": "2026-09-22"
     },
     {
       "company_id": "company-b1e25cb2b40b",
       "display_name": "星展（中国招聘门户）",
-      "ownership_tag": "待核实",
-      "status": "unknown",
-      "reason": "新增招聘主体的控制关系尚未核查",
-      "evidence": [],
-      "checked_at": null
+      "ownership_tag": "外企",
+      "status": "verified",
+      "reason": "招聘门户对应 DBS Bank；星展官网明确集团总部及上市地均在新加坡。",
+      "evidence": [{"url":"https://www.dbs.com/iwov-resources/images/investors/quarterly-financials/2024/4Q24_press_statement.pdf","title":"DBS：2024 fourth-quarter press statement","note":"官方资料明确星展总部设于新加坡并在新加坡上市。","checked_at":"2026-09-22"}],
+      "checked_at": "2026-09-22"
     },
     {
       "company_id": "company-c244de888732",
       "display_name": "亿滋（中国招聘门户）",
-      "ownership_tag": "待核实",
-      "status": "unknown",
-      "reason": "新增招聘主体的控制关系尚未核查",
-      "evidence": [],
-      "checked_at": null
+      "ownership_tag": "外企",
+      "status": "verified",
+      "reason": "招聘门户对应 Mondelēz International, Inc.；官方投资者页面列明公司总部联络地址位于美国芝加哥。",
+      "evidence": [{"url":"https://ir.mondelezinternational.com/","title":"Mondelēz International：Investor Relations","note":"官方投资者页面列明 Mondelēz International, Inc. 的芝加哥公司地址和全球业务身份。","checked_at":"2026-09-22"}],
+      "checked_at": "2026-09-22"
     },
     {
       "company_id": "company-05b9b25301c4",
       "display_name": "IQVIA（中国招聘门户）",
-      "ownership_tag": "待核实",
-      "status": "unknown",
-      "reason": "新增招聘主体的控制关系尚未核查",
-      "evidence": [],
-      "checked_at": null
+      "ownership_tag": "外企",
+      "status": "verified",
+      "reason": "招聘门户对应 IQVIA Holdings Inc.；官方投资者资料列明公司总部位于美国北卡罗来纳州 Durham。",
+      "evidence": [{"url":"https://ir.iqvia.com/resources/investor-faqs/default.aspx","title":"IQVIA：Investor FAQs","note":"官方投资者页面列明 IQVIA 总部位于美国北卡罗来纳州 Durham。","checked_at":"2026-09-22"}],
+      "checked_at": "2026-09-22"
     },
     {
       "company_id": "company-82b7b8fe3a76",
       "display_name": "默沙东（中国招聘门户）",
-      "ownership_tag": "待核实",
-      "status": "unknown",
-      "reason": "新增招聘主体的控制关系尚未核查",
-      "evidence": [],
-      "checked_at": null
+      "ownership_tag": "外企",
+      "status": "verified",
+      "reason": "招聘门户对应美国 Merck & Co., Inc.（美国及加拿大以外使用 MSD 名称）；官网列明全球总部位于美国新泽西州 Rahway。",
+      "evidence": [{"url":"https://www.msd.com/media/company-fact-sheet/","title":"MSD：Company fact sheet","note":"官网说明 MSD 为 Merck & Co., Inc. 在美国和加拿大以外的名称，并列明全球总部位于美国新泽西州 Rahway。","checked_at":"2026-09-22"}],
+      "checked_at": "2026-09-22"
     },
     {
       "company_id": "company-734ad2cf6bf1",
       "display_name": "乔治费歇尔（中国招聘门户）",
-      "ownership_tag": "待核实",
-      "status": "unknown",
-      "reason": "新增招聘主体的控制关系尚未核查",
-      "evidence": [],
-      "checked_at": null
+      "ownership_tag": "外企",
+      "status": "verified",
+      "reason": "招聘门户对应瑞士 GF 集团；集团官网列明总部位于瑞士沙夫豪森，并在瑞士证券交易所上市。",
+      "evidence": [{"url":"https://www.georgfischer.com/en/about-gf.html","title":"GF：About GF","note":"集团官网列明总部位于瑞士沙夫豪森，GF 股票在瑞士证券交易所上市。","checked_at":"2026-09-22"}],
+      "checked_at": "2026-09-22"
     },
     {
       "company_id": "company-88974c2640b9",
@@ -106948,20 +107076,20 @@
     {
       "company_id": "company-23206b1126dd",
       "display_name": "空中客车（中国招聘门户）",
-      "ownership_tag": "待核实",
-      "status": "unknown",
-      "reason": "新增招聘主体的控制关系尚未核查",
-      "evidence": [],
-      "checked_at": null
+      "ownership_tag": "外企",
+      "status": "verified",
+      "reason": "招聘门户对应 Airbus SE；官网列明其注册总部位于荷兰莱顿。",
+      "evidence": [{"url":"https://www.airbus.com/en/airbus-contact-us","title":"Airbus：Contact us","note":"官网列明 Airbus SE 注册总部位于荷兰莱顿。","checked_at":"2026-09-22"}],
+      "checked_at": "2026-09-22"
     },
     {
       "company_id": "company-ae89c01211a8",
       "display_name": "凯度（中国招聘门户）",
-      "ownership_tag": "待核实",
-      "status": "unknown",
-      "reason": "新增招聘主体的控制关系尚未核查",
-      "evidence": [],
-      "checked_at": null
+      "ownership_tag": "外企",
+      "status": "verified",
+      "reason": "招聘门户对应 Kantar 全球集团；官网列明其全球办公室位于英国伦敦。",
+      "evidence": [{"url":"https://www.kantar.com/About","title":"Kantar：About","note":"官网 About 页面列明 Kantar 的 Global Office 位于英国伦敦。","checked_at":"2026-09-22"}],
+      "checked_at": "2026-09-22"
     },
     {
       "company_id": "company-2c39d8d569b3",
@@ -106982,65 +107110,65 @@
     {
       "company_id": "company-165907e48529",
       "display_name": "华纳兄弟探索（中国招聘门户）",
-      "ownership_tag": "待核实",
-      "status": "unknown",
-      "reason": "新增招聘主体的控制关系尚未核查",
-      "evidence": [],
-      "checked_at": null
+      "ownership_tag": "外企",
+      "status": "verified",
+      "reason": "招聘门户对应 Warner Bros. Discovery；官方招聘页面列明全球总部位于美国纽约，官方投资者页面列明其在纳斯达克上市。",
+      "evidence": [{"url":"https://careers.wbd.com/united-states-jobs","title":"Warner Bros. Discovery Careers：United States","note":"官方招聘页面列明 Global Headquarters 位于美国纽约。","checked_at":"2026-09-22"},{"url":"https://ir.wbd.com/investor-relations/default.aspx","title":"Warner Bros. Discovery：Investor Relations","note":"官方投资者页面列明股票在 NASDAQ 交易。","checked_at":"2026-09-22"}],
+      "checked_at": "2026-09-22"
     },
     {
       "company_id": "company-aa7815ff0757",
       "display_name": "庄信万丰（中国招聘门户）",
-      "ownership_tag": "待核实",
-      "status": "unknown",
-      "reason": "新增招聘主体的控制关系尚未核查",
-      "evidence": [],
-      "checked_at": null
+      "ownership_tag": "外企",
+      "status": "verified",
+      "reason": "招聘门户对应英国 Johnson Matthey 集团；官网列明集团注册办公室位于英国 Hertfordshire。",
+      "evidence": [{"url":"https://matthey.com/investors/corporate-governance/registered-office-and-professional-advisors","title":"Johnson Matthey：Registered Office","note":"官网列明 Johnson Matthey 注册办公室位于英国 Hertfordshire。","checked_at":"2026-09-22"}],
+      "checked_at": "2026-09-22"
     },
     {
       "company_id": "company-ca3610a50cab",
       "display_name": "Medline（中国招聘门户）",
-      "ownership_tag": "待核实",
-      "status": "unknown",
-      "reason": "新增招聘主体的控制关系尚未核查",
-      "evidence": [],
-      "checked_at": null
+      "ownership_tag": "外企",
+      "status": "verified",
+      "reason": "招聘门户对应美国 Medline；官网列明总部位于美国伊利诺伊州 Northfield。",
+      "evidence": [{"url":"https://www.medline.com/about-us/contact-us/","title":"Medline：Contact us","note":"官网联系页面列明公司总部位于美国伊利诺伊州 Northfield。","checked_at":"2026-09-22"}],
+      "checked_at": "2026-09-22"
     },
     {
       "company_id": "company-13cb169a0f9c",
       "display_name": "思科（中国招聘门户）",
-      "ownership_tag": "待核实",
-      "status": "unknown",
-      "reason": "新增招聘主体的控制关系尚未核查",
-      "evidence": [],
-      "checked_at": null
+      "ownership_tag": "外企",
+      "status": "verified",
+      "reason": "招聘门户对应 Cisco Systems, Inc.；官网列明公司总部位于美国加利福尼亚州圣何塞。",
+      "evidence": [{"url":"https://www.cisco.com/site/us/en/about/contact-cisco/office-locations.html","title":"Cisco：Office locations","note":"官网列明 Cisco Systems, Inc. 公司总部位于美国加利福尼亚州圣何塞。","checked_at":"2026-09-22"}],
+      "checked_at": "2026-09-22"
     },
     {
       "company_id": "company-957d78a95b97",
       "display_name": "施普林格自然（中国招聘门户）",
-      "ownership_tag": "待核实",
-      "status": "unknown",
-      "reason": "新增招聘主体的控制关系尚未核查",
-      "evidence": [],
-      "checked_at": null
+      "ownership_tag": "外企",
+      "status": "verified",
+      "reason": "招聘门户对应 Springer Nature AG & Co. KGaA；官方年报列明公司在德国注册、注册办公室位于柏林。",
+      "evidence": [{"url":"https://annualreport.springernature.com/2025/files/sn-annual-report-2025-en.pdf","title":"Springer Nature：Annual Report 2025","note":"官方年报列明 Springer Nature AG & Co. KGaA 在德国注册，注册办公室位于柏林。","checked_at":"2026-09-22"}],
+      "checked_at": "2026-09-22"
     },
     {
       "company_id": "company-50fdcb24abf8",
       "display_name": "Syneos Health（中国招聘门户）",
-      "ownership_tag": "待核实",
-      "status": "unknown",
-      "reason": "新增招聘主体的控制关系尚未核查",
-      "evidence": [],
-      "checked_at": null
+      "ownership_tag": "外企",
+      "status": "verified",
+      "reason": "招聘门户对应 Syneos Health；官网列明公司总部位于美国北卡罗来纳州 Morrisville。",
+      "evidence": [{"url":"https://www.syneoshealth.com/office-locations","title":"Syneos Health：Office locations","note":"官网列明 Corporate Headquarters 位于美国北卡罗来纳州 Morrisville。","checked_at":"2026-09-22"}],
+      "checked_at": "2026-09-22"
     },
     {
       "company_id": "company-42d291b4f2c2",
       "display_name": "陶氏（中国招聘门户）",
-      "ownership_tag": "待核实",
-      "status": "unknown",
-      "reason": "新增招聘主体的控制关系尚未核查",
-      "evidence": [],
-      "checked_at": null
+      "ownership_tag": "外企",
+      "status": "verified",
+      "reason": "招聘门户对应 Dow；官网列明公司总部位于美国密歇根州 Midland。",
+      "evidence": [{"url":"https://corporate.dow.com/en-us/contact","title":"Dow：Contact us","note":"官网列明 Dow Corporate Headquarters 位于美国密歇根州 Midland。","checked_at":"2026-09-22"}],
+      "checked_at": "2026-09-22"
     },
     {
       "company_id": "company-d51e545d9189",
@@ -107078,20 +107206,20 @@
     {
       "company_id": "company-8531bd12d727",
       "display_name": "IFF（中国招聘门户）",
-      "ownership_tag": "待核实",
-      "status": "unknown",
-      "reason": "新增招聘主体的控制关系尚未核查",
-      "evidence": [],
-      "checked_at": null
+      "ownership_tag": "外企",
+      "status": "verified",
+      "reason": "招聘门户对应 International Flavors & Fragrances Inc.；官网地点页列明全球总部位于美国纽约。",
+      "evidence": [{"url":"https://www.iff.com/about/locations/","title":"IFF：Locations","note":"官网地点页列明 New York HQ 位于美国纽约。","checked_at":"2026-09-22"}],
+      "checked_at": "2026-09-22"
     },
     {
       "company_id": "company-3c9f9ee221bc",
       "display_name": "爱尔康（中国招聘门户）",
-      "ownership_tag": "待核实",
-      "status": "unknown",
-      "reason": "新增招聘主体的控制关系尚未核查",
-      "evidence": [],
-      "checked_at": null
+      "ownership_tag": "外企",
+      "status": "verified",
+      "reason": "招聘门户对应 Alcon Inc.；官方公司文件列明公司总部位于瑞士日内瓦。",
+      "evidence": [{"url":"https://www.alcon.com/sites/g/files/rbvwei496/files/2019-04/Alcon_Swiss_Prospectus_2019_03_21.pdf","title":"Alcon：Swiss Prospectus","note":"官方文件列明 Alcon 公司总部位于瑞士日内瓦。","checked_at":"2026-09-22"}],
+      "checked_at": "2026-09-22"
     },
     {
       "company_id": "company-5edb775971fd",
@@ -107161,38 +107289,38 @@
     {
       "company_id": "company-ee8c52dc9aef",
       "display_name": "PPG（中国招聘门户）",
-      "ownership_tag": "待核实",
-      "status": "unknown",
-      "reason": "新增招聘主体的控制关系尚未核查",
-      "evidence": [],
-      "checked_at": null
+      "ownership_tag": "外企",
+      "status": "verified",
+      "reason": "招聘门户对应 PPG；官网列明全球总部位于美国宾夕法尼亚州匹兹堡，股票在纽约证券交易所交易。",
+      "evidence": [{"url":"https://news.ppg.com/media-resources/default.aspx","title":"PPG：Media Resources","note":"官网列明 PPG 全球总部位于美国匹兹堡，并在纽约证券交易所上市。","checked_at":"2026-09-22"}],
+      "checked_at": "2026-09-22"
     },
     {
       "company_id": "company-618dbb96fdc4",
       "display_name": "阿法拉伐（中国招聘门户）",
-      "ownership_tag": "待核实",
-      "status": "unknown",
-      "reason": "新增招聘主体的控制关系尚未核查",
-      "evidence": [],
-      "checked_at": null
+      "ownership_tag": "外企",
+      "status": "verified",
+      "reason": "招聘门户对应瑞典 Alfa Laval 集团；官方年报列明总部位于瑞典隆德。",
+      "evidence": [{"url":"https://www.alfalaval.com/contentassets/5f2aa59fae5148ac81b8b2d644b84894/wkr0006.pdf","title":"Alfa Laval：Annual & Sustainability Report","note":"官方年报列明公司总部位于瑞典隆德。","checked_at":"2026-09-22"}],
+      "checked_at": "2026-09-22"
     },
     {
       "company_id": "company-214aeda75f53",
       "display_name": "Autodesk（中国招聘门户）",
-      "ownership_tag": "待核实",
-      "status": "unknown",
-      "reason": "新增招聘主体的控制关系尚未核查",
-      "evidence": [],
-      "checked_at": null
+      "ownership_tag": "外企",
+      "status": "verified",
+      "reason": "招聘门户对应 Autodesk, Inc.；官网列明公司总部位于美国加利福尼亚州旧金山。",
+      "evidence": [{"url":"https://www.autodesk.com/company/newsroom/corporate-info","title":"Autodesk：Corporate info","note":"官网列明 Autodesk 总部位于美国加利福尼亚州旧金山。","checked_at":"2026-09-22"}],
+      "checked_at": "2026-09-22"
     },
     {
       "company_id": "company-f0ebec6bd945",
       "display_name": "益普生（中国招聘门户）",
-      "ownership_tag": "待核实",
-      "status": "unknown",
-      "reason": "新增招聘主体的控制关系尚未核查",
-      "evidence": [],
-      "checked_at": null
+      "ownership_tag": "外企",
+      "status": "verified",
+      "reason": "招聘门户对应 Ipsen；官网隐私声明列明 Ipsen Pharma SAS 总部位于法国巴黎，并明确集团总部在法国。",
+      "evidence": [{"url":"https://www.ipsen.com/global-privacy-policy/visitors-to-ipsen-sites/","title":"Ipsen：Global Privacy Notice","note":"官网列明 Ipsen Pharma SAS 总部位于法国巴黎，并说明集团总部在法国。","checked_at":"2026-09-22"}],
+      "checked_at": "2026-09-22"
     },
     {
       "company_id": "company-cd4d99ce6939",
@@ -107230,11 +107358,11 @@
     {
       "company_id": "company-f08bc868aaaf",
       "display_name": "Apex Group（中国招聘门户）",
-      "ownership_tag": "待核实",
-      "status": "unknown",
-      "reason": "新增招聘主体的控制关系尚未核查",
-      "evidence": [],
-      "checked_at": null
+      "ownership_tag": "外企",
+      "status": "verified",
+      "reason": "招聘门户对应 Apex Group Ltd.；集团官方财务报表列明公司依百慕大法律注册。",
+      "evidence": [{"url":"https://www.apexgroup.com/media/anopiv4a/financial-statements-31-december-2020.pdf","title":"Apex Group Ltd.：Financial Statements","note":"集团官方财务报表列明 Apex Group Ltd. 依百慕大法律注册。","checked_at":"2026-09-22"}],
+      "checked_at": "2026-09-22"
     },
     {
       "company_id": "company-efa70e39e3c2",
@@ -107255,20 +107383,20 @@
     {
       "company_id": "company-730649b5d805",
       "display_name": "Tory Burch（中国招聘门户）",
-      "ownership_tag": "待核实",
-      "status": "unknown",
-      "reason": "新增招聘主体的控制关系尚未核查",
-      "evidence": [],
-      "checked_at": null
+      "ownership_tag": "外企",
+      "status": "verified",
+      "reason": "招聘门户对应美国 Tory Burch 品牌；品牌官网资料说明其于纽约创立并经营全球时尚零售业务。",
+      "evidence": [{"url":"https://static.toryburch.com/static/on/demandware.static/-/Sites-ToryBurch_US-Library/default/dw513e873c/images/epk/Tory_Burch_Bio_100511.pdf","title":"Tory Burch：Brand biography","note":"品牌官网资料说明 Tory Burch 于 2004 年在纽约推出，并经营服饰、手袋、鞋履和珠宝等品类。","checked_at":"2026-09-22"}],
+      "checked_at": "2026-09-22"
     },
     {
       "company_id": "company-42f99edbbebb",
       "display_name": "PVH（中国招聘门户）",
-      "ownership_tag": "待核实",
-      "status": "unknown",
-      "reason": "新增招聘主体的控制关系尚未核查",
-      "evidence": [],
-      "checked_at": null
+      "ownership_tag": "外企",
+      "status": "verified",
+      "reason": "招聘门户对应 PVH Corp.；官方责任报告列明总部位于美国纽约并在纽约证券交易所上市。",
+      "evidence": [{"url":"https://www.pvh.com/-/media/Files/pvh/responsibility/GRI-Content-Index-2019.pdf","title":"PVH：GRI Content Index","note":"官方报告列明 PVH 总部位于美国纽约，并为纽约证券交易所上市公司。","checked_at":"2026-09-22"}],
+      "checked_at": "2026-09-22"
     },
     {
       "company_id": "company-575e5ccb3319",
@@ -124671,20 +124799,20 @@
     {
       "company_id": "waiqi-list-47e3f645e55d",
       "display_name": "国际移民组织驻华代表处",
-      "ownership_tag": "外企",
-      "status": "verified",
-      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "ownership_tag": "待核实",
+      "status": "verified_unresolved",
+      "reason": "国际移民组织官网明确其为联合国系统内的政府间组织，不是企业；现有国企、私企、外企三类所有制标签均不适用，因此保留为已核实但未归入企业性质分类。",
       "evidence": [
         {
-          "url": "https://waiqi.com/company/detail?id=38366",
-          "title": "Waiqi 公司页：国际移民组织驻华代表处",
-          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
-          "checked_at": "2026-09-21"
+          "url": "https://www.iom.int/who-we-are",
+          "title": "International Organization for Migration：Who We Are",
+          "note": "官网明确 IOM 是联合国系统组成部分，并是移民领域的政府间组织；该组织身份不属于企业所有制。",
+          "checked_at": "2026-09-22"
         }
       ],
-      "checked_at": "2026-09-21",
-      "classification_basis": "waiqi_explicit_foreign_company_type",
-      "classification_authority": "user_designated_waiqi_directory",
+      "checked_at": "2026-09-22",
+      "classification_basis": "official_identity_outside_enterprise_ownership_taxonomy",
+      "classification_authority": "official_organization_website",
       "waiqi_company_ids": [
         38366
       ],
@@ -128106,20 +128234,20 @@
     {
       "company_id": "waiqi-list-745de07cdee9",
       "display_name": "特许公认会计师公会北京代表处",
-      "ownership_tag": "外企",
-      "status": "verified",
-      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "ownership_tag": "待核实",
+      "status": "verified_unresolved",
+      "reason": "ACCA 官网明确其为全球专业会计师组织，并说明其依据英国皇家特许设立，不是企业；现有国企、私企、外企三类所有制标签均不适用。",
       "evidence": [
         {
-          "url": "https://waiqi.com/company/detail?id=38840",
-          "title": "Waiqi 公司页：特许公认会计师公会北京代表处",
-          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
-          "checked_at": "2026-09-21"
+          "url": "https://www.accaglobal.com/gb/en/about-us.html",
+          "title": "ACCA Global：About us",
+          "note": "官网将 ACCA 定义为全球专业会计师组织；该组织身份不属于企业所有制。",
+          "checked_at": "2026-09-22"
         }
       ],
-      "checked_at": "2026-09-21",
-      "classification_basis": "waiqi_explicit_foreign_company_type",
-      "classification_authority": "user_designated_waiqi_directory",
+      "checked_at": "2026-09-22",
+      "classification_basis": "official_identity_outside_enterprise_ownership_taxonomy",
+      "classification_authority": "official_organization_website",
       "waiqi_company_ids": [
         38840
       ],
@@ -130197,20 +130325,20 @@
     {
       "company_id": "waiqi-contract-c82cb8843885",
       "display_name": "英基学校协会",
-      "ownership_tag": "外企",
-      "status": "verified",
-      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "ownership_tag": "待核实",
+      "status": "verified_unresolved",
+      "reason": "英基学校协会官网明确其由香港政府条例设立，不是企业；现有国企、私企、外企三类所有制标签均不适用。",
       "evidence": [
         {
-          "url": "https://waiqi.com/company/detail?id=39592",
-          "title": "Waiqi 公司页：英基学校协会",
-          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
-          "checked_at": "2026-09-21"
+          "url": "https://www.esf.edu.hk/about-esf/ordinance/",
+          "title": "English Schools Foundation：Ordinance & Regulation",
+          "note": "官网说明 ESF 于 1967 年依据政府条例设立；该法定教育组织身份不属于企业所有制。",
+          "checked_at": "2026-09-22"
         }
       ],
-      "checked_at": "2026-09-21",
-      "classification_basis": "waiqi_explicit_foreign_company_type",
-      "classification_authority": "user_designated_waiqi_directory",
+      "checked_at": "2026-09-22",
+      "classification_basis": "official_identity_outside_enterprise_ownership_taxonomy",
+      "classification_authority": "official_organization_website",
       "waiqi_company_ids": [
         39592
       ],
@@ -133128,20 +133256,20 @@
     {
       "company_id": "waiqi-contract-ae3475c93e65",
       "display_name": "世界粮食计划署驻华代表处",
-      "ownership_tag": "外企",
-      "status": "verified",
-      "reason": "Waiqi 公司详情明确将关联主体标注为“外企”；按维护规则，该明确标注作为外企定性依据。主体关联方式：已核验招聘来源中的具体 Waiqi 公司 ID。",
+      "ownership_tag": "待核实",
+      "status": "verified_unresolved",
+      "reason": "世界粮食计划署官网明确其为联合国设立的人道主义组织，不是企业；现有国企、私企、外企三类所有制标签均不适用，因此保留为已核实但未归入企业性质分类。",
       "evidence": [
         {
-          "url": "https://waiqi.com/company/detail?id=37902",
-          "title": "Waiqi 公司页：世界粮食计划署驻华代表处",
-          "note": "Waiqi 公司详情明确标注公司性质为“外企”；通过已核验招聘来源中的具体 Waiqi 公司 ID与维护主体关联。",
-          "checked_at": "2026-09-21"
+          "url": "https://www.wfp.org/history",
+          "title": "World Food Programme：History",
+          "note": "官网说明联合国大会决议将 WFP 设立为联合国与粮农组织的共同项目；该组织身份不属于企业所有制。",
+          "checked_at": "2026-09-22"
         }
       ],
-      "checked_at": "2026-09-21",
-      "classification_basis": "waiqi_explicit_foreign_company_type",
-      "classification_authority": "user_designated_waiqi_directory",
+      "checked_at": "2026-09-22",
+      "classification_basis": "official_identity_outside_enterprise_ownership_taxonomy",
+      "classification_authority": "official_organization_website",
       "waiqi_company_ids": [
         37902
       ],

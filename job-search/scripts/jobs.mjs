@@ -1,7 +1,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import {spawn} from 'node:child_process';
-import {PACK_ROOT,SKILLS} from '../../shared/job-search-core/runtime-context.mjs';
+import {PACK_ROOT} from '../../shared/job-search-core/runtime-context.mjs';
 import {decideTask,reviseTask,taskFingerprint,MODES} from '../../shared/job-search-core/scripts/lib/task-decision.mjs';
 
 const [command,...args]=process.argv.slice(2);
@@ -25,7 +25,7 @@ async function main(){
     console.log(JSON.stringify({task,decision}));return;
   }
   if(!command||command==='help'){
-    console.log('task-check/task-save --file 任务.json；industries；catalog/prepare/collect/plan-assessment/batch-*/render --mode campus|internship|social。prepare 需 --task；纯发现加 --discovery 后用 render-discovery。plan-assessment 用 --scope-mode sample|companies|all。');return;
+    console.log('task-check/task-save --file 任务.json；industries；catalog/prepare/collect/plan-assessment/batch-*/render --mode campus|internship|social。prepare 需 --task；纯发现加 --discovery 后用 render-discovery。plan-assessment 用 --scope-mode sample|companies|all。company-profiles --mode 方向 status|sync|import；运行/输出位于 job-search/runtime/<方向>。');return;
   }
   const task=value('task')?await read(value('task')):null;
   const run=value('run')?await read(path.join(value('run'),'run.json')):null;
@@ -38,8 +38,8 @@ async function main(){
     if(args[i]==='--mode'){i++;continue;}
     forwarded.push(args[i]==='--scope-mode'?'--mode':args[i]);
   }
-  const entry=path.join(PACK_ROOT,SKILLS[mode],'scripts',mode==='campus'?'campus.mjs':'jobs.mjs');
-  const child=spawn(process.execPath,[entry,command,...forwarded],{stdio:'inherit',windowsHide:true});
+  const entry=path.join(PACK_ROOT,'shared/job-search-core/cli.mjs');
+  const child=spawn(process.execPath,[entry,mode,command,...forwarded],{stdio:'inherit',windowsHide:true});
   process.exitCode=await new Promise((resolve,reject)=>{child.once('error',reject);child.once('exit',code=>resolve(code??1));});
 }
 main().catch(error=>{console.error(error.message);process.exitCode=1;});

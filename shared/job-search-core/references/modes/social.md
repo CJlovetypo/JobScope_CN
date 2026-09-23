@@ -8,4 +8,4 @@
 
 公开全职不自动等于社招。招聘身份、城市证据与校招隔离，方向接口未验证仍可尝试，但不能借用校招成功证明。当前没有社招不等于接口失效。
 
-正式评估时读取：[能力模型](../../../../social-job-fit/references/ability-model.md)、[评估结构](../../../../social-job-fit/references/assessment.md)、[命令与数据](../../../../social-job-fit/references/workflow.md)。执行入口 social-job-fit/scripts/jobs.mjs，输出仍在 social-job-fit 内。
+正式评估时读取：[能力模型](../../../../job-search/runtime/social/references/ability-model.md)、[评估结构](../../../../job-search/runtime/social/references/assessment.md)、[命令与数据](../../../../job-search/runtime/social/references/workflow.md)。统一执行入口为 `node job-search/scripts/jobs.mjs <命令> --mode social`，运行和输出保存在 `job-search/runtime/social` 内。

@@ -13,7 +13,7 @@ node shared/job-search-core/scripts/tag-waiqi-ownership.mjs
 node shared/job-search-core/scripts/tag-waiqi-ownership.mjs --apply
 ```
 
-执行结果、命中清单、被覆盖的旧结论和备份保存在 `campus-job-fit/artifacts/waiqi-2026-09-20/waiqi-ownership-tagging/`。旧结论写入 `prior_classification`，不丢失原理由和证据。脚本同时重算命中主体的公司规模派生标签，避免性质与规模数据不一致。
+执行结果、命中清单、被覆盖的旧结论和备份保存在 `job-search/runtime/campus/artifacts/waiqi-2026-09-20/waiqi-ownership-tagging/`。旧结论写入 `prior_classification`，不丢失原理由和证据。脚本同时重算命中主体的公司规模派生标签，避免性质与规模数据不一致。
 
 旧库供应商结构化性质字段的优先级高于 Waiqi。先运行 `tag-supplier-ownership.mjs --apply` 刷新供应商结论；后续重复运行 Waiqi 打标时，已有 `supplier_company_nature_classification` 结论会被跳过，不会被 Waiqi 覆盖。
 
@@ -36,7 +36,7 @@ Workday 的 `wdN.myworkdaysite.com/recruiting/{tenant}/{site}` 使用该入口�
 
 Oracle 多站点可能共用岗位库存。目录中的 `inventory_equivalence` 来自完整列表 ID 集合比较，仅代表所标注时间的库存一致，未来更新必须重新核对。图谱、仟寻的入口、二维码、404 等结果与 API 能力分开保存；入口可打开不代表公司列表可调用。
 
-维护时运行 `build-waiqi-interface-catalog.mjs` 将本地复核结果导出为此资产。网页、响应正文、调查记录和过程报告继续留在忽略提交的 `campus-job-fit/artifacts/`。
+维护时运行 `build-waiqi-interface-catalog.mjs` 将本地复核结果导出为此资产。网页、响应正文、调查记录和过程报告继续留在忽略提交的 `job-search/runtime/campus/artifacts/`。
 
 ## 抓取及查询
 
@@ -45,12 +45,12 @@ Oracle 多站点可能共用岗位库存。目录中的 `inventory_equivalence` 
 从仓库根目录运行：
 
 ```sh
-node shared/job-search-core/scripts/crawl-waiqi.mjs campus-job-fit/artifacts/waiqi-2026-09-20
-node shared/job-search-core/scripts/export-waiqi.mjs campus-job-fit/artifacts/waiqi-2026-09-20
-node shared/job-search-core/scripts/audit-waiqi-archive.mjs campus-job-fit/artifacts/waiqi-2026-09-20
+node shared/job-search-core/scripts/crawl-waiqi.mjs job-search/runtime/campus/artifacts/waiqi-2026-09-20
+node shared/job-search-core/scripts/export-waiqi.mjs job-search/runtime/campus/artifacts/waiqi-2026-09-20
+node shared/job-search-core/scripts/audit-waiqi-archive.mjs job-search/runtime/campus/artifacts/waiqi-2026-09-20
 node shared/job-search-core/scripts/source-candidates.mjs query --query=西门子
 node shared/job-search-core/scripts/source-candidates.mjs query --industry=金融 --has-recruitment
-node shared/job-search-core/scripts/audit-waiqi-routing.mjs --output=campus-job-fit/artifacts/waiqi-routing-audit.json
+node shared/job-search-core/scripts/audit-waiqi-routing.mjs --output=job-search/runtime/campus/artifacts/waiqi-routing-audit.json
 ```
 
 同一抓取目录会复用成功响应并重试失败项；新一轮更新请使用新目录，避免把缓存日期写成重新核验时间。默认最多 3 个请求在途、请求起点至少间隔 750ms；429 会全局冷却并遵守 Retry-After。不要并行启动多个 Waiqi 抓取进程。WAIQI_CONCURRENCY 与 WAIQI_INTERVAL_MS 可降低采集负载。默认只固化公司目录、公司详情、公司职位列表与招聘链接，不请求单个岗位详情。只有明确需要站内 JD 时才设置 `WAIQI_JOB_DETAILS=missing-links` 或 `all`；完整官网 JD 样本仍由官方来源核验流程保存。
@@ -85,7 +85,7 @@ Oracle Recruiting 链接经常不带中国区 `locationId`。这类来源由运�
 零岗位来源先由 `source-discovery.mjs` 标记为 `verified_api_zero_jobs_pending_identity`，此状态只说明实际官方列表 API 在新匿名会话中返回了结构正确的空列表，不能直接入库。人工核对官方门户名称、API 组织字段和集团归属后，准备审查清单，再运行：
 
 ```sh
-node shared/job-search-core/scripts/prepare-waiqi-zero-api.mjs reviews.json campus-job-fit/artifacts/waiqi-2026-09-20/official-zero-api-verification
+node shared/job-search-core/scripts/prepare-waiqi-zero-api.mjs reviews.json job-search/runtime/campus/artifacts/waiqi-2026-09-20/official-zero-api-verification
 ```
 
 `reviews.json` 每项需给出 `source_file`、`result_file`、`official_name`、`company_id`、`industry_tags`、`identity_verified: true`、`identity_basis` 和已存在的 `identity_evidence_file`；未知平台还需人工给出已核对的 `list_items_path`。打包器会重新读取 API 原始证据，只让完整收敛、岗位数为 0、带稳定 JSON 列表路径的匿名请求进入 `admitted.json`。正式合并仍需单独运行集成脚本。零岗位状态不构成招聘方向或城市证据，因此不向城市索引播种。
@@ -93,15 +93,15 @@ node shared/job-search-core/scripts/prepare-waiqi-zero-api.mjs reviews.json camp
 官网批量发现完成后，先运行能力审计：
 
 ```sh
-node shared/job-search-core/scripts/audit-waiqi-official-discovery.mjs campus-job-fit/artifacts/waiqi-2026-09-20/zero-position-official-discovery
+node shared/job-search-core/scripts/audit-waiqi-official-discovery.mjs job-search/runtime/campus/artifacts/waiqi-2026-09-20/zero-position-official-discovery
 ```
 
 审计按正式合并器的 `sourceKey` 去重，并生成 `capability-review/identity-review-template.json`。列表返回正数岗位但没有明确完整 JD 样本的来源进入 `positive-list-only-pending.json`，不能借用“列表 API 可用”身份入库；真实空列表进入 `zero-api-identity-review.json`。自动发现的官网链和名称命中永远只是身份线索。若 API 返回的雇主与 Waiqi 公司不同，例如 Andreessen Horowitz 的投资组合招聘页跳到 Carta，则标记主体冲突并阻止以原 Waiqi 公司身份准入。
 
 复核产物确认后，按 `sourceKey`、人工指定的已有 `company_id`、主体分组和已存在的同一 API 配置做增量合并。不得使用模糊名称自动合并，也不得把未经复核的候选直接复制到正式来源库。合并时保留现有公司 ID 与配置，并在本地 artifacts 备份合并前来源库；重复执行不能加入重复配置。
 
-合并后先运行 `seed-waiqi-city-index.mjs --apply`，让三个方向的城市索引包含全部新增主体，并从官方岗位样本补充城市证据；再运行 `seed-missing-company-tags.mjs --apply`，只给新增主体补齐规模、性质、业务和简介的待核实占位，已有事实逐项保留。随后运行 `tag-waiqi-ownership.mjs --apply`，再刷新 `refresh-registry-metadata.mjs` 和 `campus-job-fit/scripts/render-industry-index.mjs`。这些命令均从仓库根目录执行，共享脚本位于 `shared/job-search-core/scripts/`。
+合并后先运行 `seed-waiqi-city-index.mjs --apply`，让三个方向的城市索引包含全部新增主体，并从官方岗位样本补充城市证据；再运行 `seed-missing-company-tags.mjs --apply`，只给新增主体补齐规模、性质、业务和简介的待核实占位，已有事实逐项保留。随后运行 `tag-waiqi-ownership.mjs --apply`，再刷新 `refresh-registry-metadata.mjs` 和 `job-search/runtime/campus/scripts/render-industry-index.mjs`。这些命令均从仓库根目录执行，共享脚本位于 `shared/job-search-core/scripts/`。
 
 Oracle Recruiting 同一租户常同时暴露 `CX`、`CX_1`、`CX_1001` 等多个站点路径。若匿名列表的总量、岗位 ID 和样本正文证明这些路径返回同一库存，只保留一个已核验的代表配置，避免重复抓取和重复展示；审计中的其他路径记为同库存入口别名。只有列表集合或招聘方向确实不同的站点才分别注册。Waiqi 把旧主体、错误主体或同一租户下的无关公司指向同一链接时，必须保留为主体冲突，不能为了提高覆盖数字强行合并。
 
-抓取完成后再次导出，在本地生成抓取报告、正式接入来源 CSV 与招聘域名汇总。检查 `failures.json` 和岗位数量差异，并运行 `node --test campus-job-fit/scripts/tests/*.test.mjs` 验证正式库和各索引的一致性。
+抓取完成后再次导出，在本地生成抓取报告、正式接入来源 CSV 与招聘域名汇总。检查 `failures.json` 和岗位数量差异，并运行 `node --test job-search/runtime/campus/scripts/tests/*.test.mjs` 验证正式库和各索引的一致性。

@@ -17,13 +17,13 @@
 https://github.com/CJlovetypo/job-search-skill-pack
 
 完整保留仓库目录，按 README 的“手动安装与运行依赖”检查环境。
-加载各入口的 SKILL.md，将 job-search 作为默认求职入口。
+加载 job-search、job-radar 和 recruitment-link-repair 的 SKILL.md，求职使用 job-search。
 ```
 
 <details>
 <summary>手动安装与运行依赖</summary>
 
-将整个仓库放入支持本地 Skill 和命令执行的 Agent 工作环境，并让宿主加载 `job-search`、三个兼容方向入口、`job-radar` 和 `recruitment-link-repair` 的 `SKILL.md`。当前 Excel 导出使用 Codex 的运行依赖；其他宿主需提供兼容依赖后使用。
+将整个仓库放入支持本地 Skill 和命令执行的 Agent 工作环境，并让宿主加载 `job-search`、`job-radar` 和 `recruitment-link-repair` 的 `SKILL.md`。校招、实习、社招统一使用 `job-search`。当前 Excel 导出使用 Codex 的运行依赖；其他宿主需提供兼容依赖后使用。
 
 ```sh
 git clone https://github.com/CJlovetypo/job-search-skill-pack.git JobScope_CN
@@ -35,9 +35,10 @@ cd JobScope_CN
 ```text
 JobScope_CN/
   job-search/              # 统一意图判断、任务记录和执行入口
-  campus-job-fit/          # 正式校招
-  internship-job-fit/      # 实习
-  social-job-fit/          # 社招
+    runtime/              # 内部规则、数据和维护工具，不是独立 Skill
+      campus/             # 正式校招
+      internship/         # 实习
+      social/             # 社招
   job-radar/               # 岗位订阅与变化跟踪
   recruitment-link-repair/ # 招聘入口历史定位与修复
   shared/job-search-core/  # 共用业务判断、证据模型、来源采集与交付
@@ -60,7 +61,7 @@ JobScope_CN/
 
 JobScope_CN 是面向中文求职场景的 AI Agent 技能包。通过 [job-search 统一入口](job-search/SKILL.md)，用自然语言浏览岗位、结合经历判断匹配度，或比较已有机会。它从公司公开招聘接口采集岗位，阅读完整职位描述（JD），按实际证据解释匹配依据与待确认事项；需要持续关注时，再衔接岗位雷达。
 
-**先看机会可以不交简历，具体文字经历也能用于匹配。** 已经说了“校招”“实习”或“社招”，就沿用该方向；只补问当前阶段必要的信息。没有指定城市时，本轮不加城市过滤，并保留“未指定”状态。开展岗位搜索前，需要确定行业或明确公司范围；已有 JD 可直接比较。三个原求职 Skill 保留为兼容方向入口，共用同一套业务决策与判断规则。
+**先看机会可以不交简历，具体文字经历也能用于匹配。** 已经说了“校招”“实习”或“社招”，就沿用该方向；只补问当前阶段必要的信息。没有指定城市时，本轮不加城市过滤，并保留“未指定”状态。开展岗位搜索前，需要确定行业或明确公司范围；已有 JD 可直接比较。三个招聘方向由统一入口加载各自规则，共用业务决策与判断模型，运行数据按方向隔离。
 
 缺少经历证据时保留“不确定”，不直接判不匹配；工作年限记录实际差距，再结合职责与成果判断是否有放宽依据。报告单列城市意愿、薪资参考和证据充分性，具体规则见下方报告说明与[v5判断模型](docs/匹配判断模型v5迭代PRD.md)。
 
@@ -109,7 +110,7 @@ JobScope_CN 是面向中文求职场景的 AI Agent 技能包。通过 [job-sear
 | 通信／运营商 | 78 | 鼎桥技术、烽火通信、广和通 |
 | 教育／培训 | 34 | 爱学习、昂立教育、高途 |
 
-查看 [完整公司名单与招聘入口](campus-job-fit/data/行业公司索引.md)。行业按公司业务划分，研发、产品、设计、销售、HR、财务等不同职能均可纳入。
+查看 [完整公司名单与招聘入口](job-search/runtime/campus/data/行业公司索引.md)。行业按公司业务划分，研发、产品、设计、销售、HR、财务等不同职能均可纳入。
 
 <details>
 <summary>统计口径与采集能力</summary>
@@ -131,9 +132,9 @@ JobScope_CN 是面向中文求职场景的 AI Agent 技能包。通过 [job-sear
 | 你的需求 | 入口／方向 | 重点判断 | 交付 |
 | --- | --- | --- | --- |
 | 先找机会、匹配或比较岗位 | [job-search](job-search/SKILL.md)，推荐入口 | 用户意图、已知条件、必要补问与本轮范围 | 候选 Markdown/JSON，或按方向输出匹配 Excel |
-| 应届生找正式工作 | [campus-job-fit](campus-job-fit/SKILL.md) | 毕业届别、学历、专业、项目与实习经历 | 校招岗位匹配 Excel |
-| 在校生找实习 | [internship-job-fit](internship-job-fit/SKILL.md) | 在校状态、开始日期、每周到岗天数、持续月数 | 实习岗位匹配 Excel |
-| 明确走社招，包括零正式工作年限 | [social-job-fit](social-job-fit/SKILL.md) | 学历、专业、实际职责与成果、年限差距及必要资格 | 社招岗位匹配 Excel |
+| 应届生找正式工作 | [job-search · 校招](job-search/SKILL.md) | 毕业届别、学历、专业、项目与实习经历 | 校招岗位匹配 Excel |
+| 在校生找实习 | [job-search · 实习](job-search/SKILL.md) | 在校状态、开始日期、每周到岗天数、持续月数 | 实习岗位匹配 Excel |
+| 明确走社招，包括零正式工作年限 | [job-search · 社招](job-search/SKILL.md) | 学历、专业、实际职责与成果、年限差距及必要资格 | 社招岗位匹配 Excel |
 | 持续关注某类机会 | [job-radar](job-radar/SKILL.md) | 岗位方向、行业或公司、城市、招聘类型 | 岗位变化 Markdown 日报 |
 
 ### 用自然语言开始，随时调整要求
@@ -230,20 +231,22 @@ JobScope_CN 是面向中文求职场景的 AI Agent 技能包。通过 [job-sear
 
 ```sh
 node job-search/scripts/jobs.mjs industries
-node --test campus-job-fit/scripts/tests/*.test.mjs job-radar/scripts/tests/radar.test.mjs recruitment-link-repair/scripts/history.test.mjs
+node --test job-search/runtime/campus/scripts/tests/*.test.mjs job-radar/scripts/tests/radar.test.mjs recruitment-link-repair/scripts/history.test.mjs
 ```
 
 2026-09-22 的 v5 验证记录：438 项离线回归通过；100 条首轮行为模拟经独立审核和两条返修后全部通过。行为模拟不等于 100 次线上求职任务，也不证明第三方来源持续可用。查看 [v5 测试报告](docs/匹配判断模型v5测试报告.md) 与 [逐例验收明细](shared/job-search-core/evals/v5/100例验收明细.md)；其中运行日志和真实报告等本机证据不随 Git 分发。
 
-更多说明：[运行与数据约定](campus-job-fit/references/workflow.md) · [共享来源维护](shared/job-search-core/references/maintenance.md) · [定向检索](shared/job-search-core/references/targeted-search.md) · [公司规模模型](shared/job-search-core/references/company-size-model.md) · [接口修复](shared/job-search-core/references/source-repair.md)。第三方来源许可见 [job-pro-LICENSE.txt](shared/job-search-core/assets/job-pro-LICENSE.txt)。
+统一求职入口的能力覆盖与目录迁移见[替代验证报告](docs/求职入口合并与替代验证报告.md)。三个招聘方向均通过统一 CLI 完成候选发现和 v5 匹配 Excel 链路；内部 runtime 目录不作为 Skill 加载。
+
+更多说明：[运行与数据约定](job-search/runtime/campus/references/workflow.md) · [共享来源维护](shared/job-search-core/references/maintenance.md) · [定向检索](shared/job-search-core/references/targeted-search.md) · [公司规模模型](shared/job-search-core/references/company-size-model.md) · [接口修复](shared/job-search-core/references/source-repair.md)。第三方来源许可见 [job-pro-LICENSE.txt](shared/job-search-core/assets/job-pro-LICENSE.txt)。
 
 </details>
 
 ## 覆盖与数据说明
 
-“范围内审阅完成”指已读取并判断本次明确范围内的可评估岗位，不代表所有岗位的适合性都已确定，也不代表全市场覆盖。报告会同时说明已审阅数、仍不确定数及资料待核实情况。城市硬筛使用对应招聘方向已保存的地点标签，软偏好单独记录；尚未记录的城市可能影响入选范围。空列表、部分分页、待核实和采集失败分别记录，接口失败不解释为公司没有招聘。
+“范围内审阅完成”指已读取并判断本次明确范围内的可评估岗位，不代表所有岗位的适合性都已确定，也不代表全市场覆盖。报告会同时说明已审阅数、仍不确定数及资料待核实情况。公司性质、行业、业务及招聘城市标签仅在主动维护流程更新；搜索与匹配直接使用已保存记录，缺项不触发补核，正常岗位采集不回写共享标签。城市硬筛使用对应招聘方向已保存的地点标签，软偏好单独记录；尚未记录的城市可能影响入选范围。空列表、部分分页、待核实和采集失败分别记录，接口失败不解释为公司没有招聘。
 
-简历、个人画像、报告、原始抓取记录和运行历史保存在本地，不随仓库分发。运行产物位于对应 Skill 的 `runs`、`outputs`、`artifacts` 等目录；雷达订阅与 SQLite 历史库位于 `job-radar/state`，均由 `.gitignore` 排除。使用时，Agent 仍需读取材料完成分析，模型侧处理方式取决于所用宿主与模型。
+简历、个人画像、报告、原始抓取记录和运行历史保存在本地，不随仓库分发。求职任务修订位于 `job-search/runs`；各招聘方向的运行产物位于 `job-search/runtime/<方向>/runs`、`outputs`、`artifacts` 等目录；雷达订阅与 SQLite 历史库位于 `job-radar/state`，均由 `.gitignore` 排除。使用时，Agent 仍需读取材料完成分析，模型侧处理方式取决于所用宿主与模型。
 
 本项目用于岗位发现与求职判断，不自动投递或联系招聘方，也不承诺面试与录用。
 

@@ -16,7 +16,7 @@
 | [ANALYSIS.md](ANALYSIS.md) | 样本结论、真实案例及修复方法 |
 | [layout.json](layout.json) | 原路径到归档目录的映射 |
 
-原目录已经迁移，旧 `campus-job-fit/artifacts/...` 路径是 Windows 目录联接（junction），已有脚本仍可访问。联接不是第二份数据。`collections` 保留了历史流程的写入兼容性，因此**冻结输入以 `snapshots` 为准**；旧脚本再次写入后，哈希核对会报告变化。未来抓取应使用新目录，避免覆盖旧证据。
+原目录已经迁移，旧 `job-search/runtime/campus/artifacts/...` 路径是 Windows 目录联接（junction），已有脚本仍可访问。联接不是第二份数据。`collections` 保留了历史流程的写入兼容性，因此**冻结输入以 `snapshots` 为准**；旧脚本再次写入后，哈希核对会报告变化。未来抓取应使用新目录，避免覆盖旧证据。
 
 清单是逐文件取样的基线，不是原子文件系统快照，也不是全部原件已完成内容校验的声明。12 份冻结输入和 2 个索引文件的 SHA256 已独立核验。整理时检测到其他进程仍在更新部分 Waiqi 过程文件；中断前的部分清单留在 `manifests/files.partial.*.jsonl`，恢复扫描时观察到的变化写入 `seal.json` 的 `changes_during_organization`。这不影响已冻结输入的独立 SHA256。
 
@@ -46,7 +46,7 @@ node recruitment-link-repair/scripts/history.mjs --kind=contracts --query=23774 
 
 Waiqi 无招聘链接的公司仍保存在 `snapshots/.../waiqi-candidates.json` 的 4,165 家全量目录和 `collections/waiqi-2026-09-20/companies` 中，不因没有 URL 而从数据集中删除。
 
-部分老报告引用 `internet-campus-job-fit` 或已移走的 `data/source-verification-*.json`。按 [layout.json](layout.json) 查迁移映射；两类 API 验证文件已补存到快照。仅转换已知目录前缀，存在性和哈希仍需核对，不能随意替换其他绝对路径。
+部分老报告引用 `internet-job-search/runtime/campus` 或已移走的 `data/source-verification-*.json`。按 [layout.json](layout.json) 查迁移映射；两类 API 验证文件已补存到快照。仅转换已知目录前缀，存在性和哈希仍需核对，不能随意替换其他绝对路径。
 
 ## 更新、备份与分发
 
