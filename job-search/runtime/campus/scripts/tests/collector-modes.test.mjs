@@ -171,6 +171,21 @@ test('Nowcoder employer guard cannot be bypassed by explicit non-target city',as
   assert.equal(r.coverage.status,'partial');assert.match(r.coverage.reason,/employer mismatch/);assert.equal(r.jobs.length,0);
   assert.equal(r.coverage.excluded_employer_rows[0].returned_company_id,99);
 });
+test('XYZ sends the keyword on every signed list page in all recruitment directions',async()=>{
+  const p=listProviders.find(p=>p.name==='XYZ'),keyword='研发 工程师';
+  for(const targetMode of ['campus','internship','social']) {
+    const client=mock(q=>{
+      if(/get_customer_setting/.test(q.url))return {result:'1',data:{ctmId:'public-guid'}};
+      assert.equal(q.method,'POST');assert.equal(q.body.keyWord,keyword);
+      assert.equal(q.body.ctmId,'public-guid');assert.match(q.body.sign,/^[a-f0-9]{32}$/);
+      return {result:'1',data:{records:[p.row(String(q.body.pageIndex),'上海',body)],total:2}};
+    });
+    const r=await p.run(p.s,{client,targetMode,keyword,pageSize:1,maxPages:3});
+    const lists=client.calls.filter(x=>x.purpose==='job_list_with_full_JD');
+    assert.deepEqual(lists.map(x=>({page:x.q.body.pageIndex,keyword:x.q.body.keyWord})),[{page:1,keyword},{page:2,keyword}]);
+    assert.deepEqual(r.jobs.map(j=>j.job_id),['1','2']);assert.equal(r.coverage.status,'complete');
+  }
+});
 test('XYZ existing tenant guard remains active in list mode',async()=>{
   const p=listProviders[3],client=mock(q=>/get_customer_setting/.test(q.url)?{result:'1',data:{ctmId:'public-guid'}}:p.payload([{...p.row('a','上海',body),ehireCtmId:'other-tenant'}]));
   const r=await p.run(p.s,{mode:'list',client});assert.equal(r.jobs.length,0);assert.equal(r.coverage.status,'partial');assert.match(r.coverage.reason,/Tenant mismatch/);

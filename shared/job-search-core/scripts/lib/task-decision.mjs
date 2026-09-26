@@ -73,6 +73,7 @@ export function decideTask(task) {
     for(const stage of stages)if(!gates[stage].includes(field))gates[stage].push(field);
   };
   const searching=['discover','match','explore'].includes(task.goal);
+  if(searching&&specified(c.roles)&&c.roles.value.length&&task.retrieval.selection==='default')need('retrieval','请选择岗位标题相关定向搜索，还是全量 JD 后结合标题和正文判断相关性：定向通常更快但可能漏掉标题不同的相关岗位；全量覆盖更充分，但采集和分析耗时更长。',['collect','assess']);
   if(task.goal==='clarify')need('goal','请明确本轮要继续哪项任务。',['collect','assess','schedule','repair']);
   const radarSearch=task.goal==='radar'&&['create','update'].includes(task.radar_action);
   if(searching||task.goal==='compare'||radarSearch){

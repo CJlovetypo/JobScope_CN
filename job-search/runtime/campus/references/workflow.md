@@ -65,6 +65,8 @@ node ../../scripts/jobs.mjs render --mode campus --run runs/本次运行
   "industry_filters": ["internet", "smart_hardware"],
   "company_filters": [],
   "city_filters": ["武汉"],
+  "ownership_preferences": ["外企"],
+  "ownership_filters": [],
   "business_preferences": ["人工智能"],
   "business_match": "any",
   "avoid_business_tags": [],
@@ -81,13 +83,13 @@ node ../../scripts/jobs.mjs render --mode campus --run runs/本次运行
 
 示例仅说明字段，不能直接当真实用户数据。偏好或到岗字段可以为空，不编造承诺；毕业时间与学历是正式岗位评估的必需字段，缺失时先向用户确认，不输出正式匹配结论。证据分类字段须由模型根据材料填写。`evidence.kind` 表示来源，与客观性分开。`claim_type`、`experience_type` 枚举及分类方法见 [能力证据模型](ability-model.md)。同一实习或项目的行动和成果共用 `experience_id`；自评、意愿不能冒充实践。客观事实陈述不等于已经外部核验。`prepare` 检查证据结构，并保存完整画像指纹。
 
-业务倾向先读 `../../../shared/job-search-core/data/company-business-tags.json` 的现有标签，再把用户语义对应到标签。多个可接受业务默认 any；只有用户明确必须同时满足多个业务方向时才 all。业务倾向与职能倾向分开，HR 不是所有雇主的主营业务。对用户要求避免的业务也在意愿对照中判断一次；业务资料未知不能冒充符合，不在优先级重复扣分。
+业务倾向读取统一公司画像发布后的正式业务标签，再把用户语义对应到既有词表。多个可接受业务默认 any；只有用户明确必须同时满足多个业务方向时才 all。`ownership_preferences` 是国企／私企／外企的软倾向，影响优先顺序；用户明确要求只看某类时才使用 `ownership_filters` 硬筛。API 支持的正式标签可以用于本轮筛选，但保持待独立核实状态。业务倾向与职能倾向分开，HR 不是所有雇主的主营业务。对用户要求避免的业务也在意愿对照中判断一次；业务资料未知不能冒充符合，不在优先级重复扣分。
 
 ## 过程文件与最终产物
 
 `runs/<运行目录名>/` 只存本轮过程资料，skill 根目录的 `outputs/<运行目录名>/` 只存最终交付。新运行使用唯一目录名。以下过程路径均相对本运行目录：
 
-- `run.json`：行业范围与 `selection_summary`（行业排除数量、公司限定和城市排除数量）、本轮画像及 `profile_fingerprint`、公司硬筛结果、业务倾向判断，以及公司业务和性质标签的依据、说明与快照时间。
+- `run.json`：行业范围与 `selection_summary`（行业排除数量、公司限定、性质硬筛和城市排除数量）、本轮画像及 `profile_fingerprint`、公司硬筛结果、业务与性质倾向判断，以及公司标签的依据、状态、说明与快照时间。
 - `companies/公司ID.json`：当次采集结果、岗位、城市和可评估状态。
 - `raw/`：API 原始证据，个人简历不会发送给招聘 API。
 - `archive/jd-originals.jsonl`：独立 JD 原文归档，每行一个岗位，保留全部已采集岗位（包括有官方详情页、未评估、待核实和被排除岗位）的职责、要求、招聘证据、状态、公司、字符串岗位 ID、官方入口、采集时间与来源覆盖。按 `company_id` + `job_id` 定位，不裁剪长正文。`companies/` 保持运行快照结构；`raw/` 保留归一化前的原始响应。采集及导出时更新归档；有语义分段修复的文本仍可追溯原始响应。
@@ -161,7 +163,7 @@ node ../../scripts/jobs.mjs render --mode campus --run runs/本次运行
 
 优先读取官网介绍、年报或公告、政府与工商联官方资料。必须对应到当前招聘主体，母子公司关系明确后才能沿用集团性质。合资、混合所有制或控制关系有争议时，先完成公开资料核查；仍无法判断时记录原因并标待核实，不在三类中强选。历史依据保留日期，不将旧控制关系描述为已确认的最新关系。
 
-文件结构为 `{ "schema_version": 1, "updated_at": "核实日期", "companies": [...] }`。每家公司记录 `company_id`、`display_name`、`ownership_tag`（国企／私企／外企／待核实）、`status`（`verified`／`verified_unresolved`／`unknown`）、`reason`、`checked_at`、`evidence`；每项 evidence 包含 `url`、`title`、`note`、`checked_at`。三类结论使用 `verified`；已经核对公开资料但因控制关系、合资结构或用人主体口径仍无法判断时，使用 `verified_unresolved` 与待核实。`unknown` 表示维护尚未完成；可保留在未入选公司的维护记录与范围快照中，不得用作已入选公司的性质结论或岗位表标签。
+运行时统一画像可叠加 API 研究发布层。每家公司性质记录包含 `company_id`、`display_name`、`ownership_tag`（国企／私企／外企／待核实）、`status`（`verified`／`api_supported`／`verified_unresolved`／`unknown`）、`reason`、`checked_at`、`evidence`；每项 evidence 包含 `url`、`title`、`note`、`checked_at`。`api_supported` 是可用于倾向性检索的正式值，但仍待独立核实，不能称为 `verified`。原始 `company-ownership-tags.json` 仍保留原有独立核实状态；API 发布层只在统一画像中覆盖合格字段。未知性质不能冒充国企、私企或外企。
 
 `prepare` 直接读取已有性质记录，将属性保存到公司快照的 `ownership_tag`、`ownership_status`、`ownership_reason`、`ownership_evidence`、`ownership_checked_at`。`verified` 三类结论直接展示；`verified_unresolved`、`unknown` 或缺失显示待核实，内部状态和现有证据保留，不重新核验、不阻塞准备或导出。严格证据校验仅在主动维护中进行。公司性质列用于表征企业属性，不默认改变城市硬筛、业务偏好、个人意愿或能力判断。
 

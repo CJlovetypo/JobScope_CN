@@ -41,6 +41,15 @@ test('published registry has one owner per reviewed employer identity and preser
     const company=registry.companies.find(c=>c.company_id===group.company_id);
     const sources=new Set(company.recruitment_sources.map(s=>s.source_id));
     assert.ok(group.source_ids.every(id=>sources.has(id)));
-    assert.equal(new Set(company.recruitment_sources.map(sourceKey)).size,company.recruitment_sources.length);
+    const interfaces=new Map();
+    for(const source of company.recruitment_sources){
+      const key=sourceKey(source);
+      if(interfaces.has(key)){
+        // An official migration can converge on an already retained interface.
+        // Preserve the historic source IDs, but require a recorded distinct old route.
+        assert.ok([source,interfaces.get(key)].some(s=>s.repair_history?.some(h=>h.previous_config&&sourceKey(h.previous_config)!==key&&h.evidence?.kind==='official_application_site_migration')),'duplicate interface without verified migration history');
+      }
+      interfaces.set(key,source);
+    }
   }
 });

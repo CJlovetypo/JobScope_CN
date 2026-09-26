@@ -1,12 +1,14 @@
+import {ARCHIVE_FILE,REVIEWS_FILE,API_LABELS_FILE,INTERNAL_RECORDS_FILE,RESEARCH_ROOT,RAW_ROOT,resolveResearchRecord} from '../../maintenance-paths.mjs';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import {createHash} from 'node:crypto';
-import {CORE_ROOT, PACK_ROOT, MODE_ROOTS} from '../../runtime-context.mjs';
+import {gunzipSync} from 'node:zlib';
+import {CORE_ROOT,PACK_ROOT, MODE_ROOTS} from '../../runtime-context.mjs';
 import {INDUSTRIES} from './industry-routing.mjs';
 import {classifyCompanySize} from './company-size.mjs';
 
 export const RECORD_VERSION = 1;
-export const REVIEW_FILE = path.join(CORE_ROOT, 'data/company-label-reviews.json');
+export const REVIEW_FILE = REVIEWS_FILE;
 export const STATIC_FIELDS = Object.freeze([
   'tags.industry', 'tags.business', 'tags.ownership', 'tags.headquarters_country', 'tags.listing_status',
   'descriptions.business_summary', 'descriptions.products_services', 'descriptions.customers',
@@ -57,6 +59,7 @@ export function validateReview(review, campaign, {now=new Date().toISOString()}=
   if(!entries.length)fail('缺少逐字段结论');
   for(const [key,d] of entries) {
     if(!STATIC_FIELDS.includes(key))fail('未发布字段：'+key);
+    if(d.campaign_id!==undefined && d.campaign_id!==review.campaign_id)fail('新提交字段批次不一致：'+key);
     if(!['verified','unresolved'].includes(d.status)||!text(d.reason)||!text(d.entity)||!fresh(d.checked_at))fail('字段结论缺少状态、理由、主体或本轮时间：'+key);
     if(d.status==='verified' && (!Array.isArray(d.citations)||!d.citations.length))fail('已核实结论必须引用本轮正文：'+key);
     if(d.status==='unresolved' && d.value!==null)fail('未决值必须为null：'+key);
@@ -74,24 +77,73 @@ export function validateReview(review, campaign, {now=new Date().toISOString()}=
   return true;
 }
 
+// Publication merges independently reviewed fields. The work campaign itself remains fresh-only.
+export function mergePublishedReview(previous, incoming) {
+  if(!previous)return {...structuredClone(incoming),decisions:Object.fromEntries(Object.entries(incoming.decisions).map(([key,d])=>[key,{...structuredClone(d),campaign_id:incoming.campaign_id}]))};
+  if(previous.company_id!==incoming.company_id)throw Error('不能合并不同主体的复核记录');
+  const old=structuredClone(previous),next=structuredClone(incoming);
+  const decisions=Object.fromEntries(Object.entries(old.decisions).map(([key,d])=>[key,{...d,campaign_id:d.campaign_id||old.campaign_id}]));
+  const documents=new Map((old.documents||[]).map(d=>[d.id,d]));
+  const remap=new Map();
+  for(const doc of next.documents||[]) {
+    let id=doc.id;
+    if(documents.has(id)&&JSON.stringify(documents.get(id))!==JSON.stringify(doc)) {
+      id=doc.id+'-'+contentHash(next.campaign_id+'\n'+JSON.stringify(doc)).slice(0,24);
+      if(documents.has(id)&&JSON.stringify(documents.get(id))!==JSON.stringify({...doc,id}))throw Error('发布证据ID冲突');
+    }
+    remap.set(doc.id,id);documents.set(id,{...doc,id});
+  }
+  for(const [key,d] of Object.entries(next.decisions)) {
+    const prior=decisions[key];
+    if(prior&&(!date(prior.checked_at)||Date.parse(prior.checked_at)>Date.parse(d.checked_at)))throw Error('存在更新或时间不明的字段结论，拒绝覆盖：'+key);
+    const decision={...d,campaign_id:next.campaign_id,citations:(d.citations||[]).map(c=>({...c,document_id:remap.get(c.document_id)||c.document_id}))};
+    if(prior&&prior.checked_at===decision.checked_at&&JSON.stringify(prior)!==JSON.stringify(decision))throw Error('同一时间字段存在不同结论，拒绝覆盖：'+key);
+    decisions[key]=decision;
+  }
+  const searches=[...new Map([...(old.searches||[]),...(next.searches||[])].map(s=>[JSON.stringify(s),s])).values()];
+  return {...old,...next,searches,documents:[...documents.values()],decisions};
+}
+
 function reviewedMetadata(d, review) {
   const docs=new Map(review.documents.map(x=>[x.id,x]));
   return {status:d.status,reason:d.reason,entity:d.entity,as_of:d.as_of||'',checked_at:d.checked_at,
     evidence:(d.citations||[]).map(c=>{const doc=docs.get(c.document_id);return {url:doc.url,title:doc.title,note:c.excerpt,evidence_type:doc.evidence_type||'official_website',checked_at:doc.fetched_at,document_id:doc.id,sha256:doc.sha256};}),
-    origin:'fresh_web_review',review_state:d.status==='verified'?'reviewed':'reviewed_unresolved',campaign_id:review.campaign_id};
+    origin:'fresh_web_review',review_state:d.status==='verified'?'reviewed':'reviewed_unresolved',campaign_id:d.campaign_id||review.campaign_id};
 }
 
-export function buildCompanyRecords({registry,business,ownership,profiles,size,cities={},reviews={companies:[]}}, {now=new Date().toISOString()}={}) {
-  const sources=indexById(registry),biz=indexById(business),own=indexById(ownership),prof=indexById(profiles),sizes=indexById(size),rev=indexById(reviews);
+function apiMetadata(d) {
+  return {status:'api_supported',reason:d.reason,entity:d.entity,as_of:d.as_of||'',checked_at:d.checked_at,
+    evidence:d.evidence||[],provider:d.provider,providers:d.alternative_providers||[d.provider],source_record:d.source_record,source_urls:d.source_urls||[],
+    origin:'api_search',review_state:'api_supported_unverified'};
+}
+function validApiDecision(key,d,vocabulary) {
+  if(!STATIC_FIELDS.includes(key)||d?.status!=='api_supported'||!text(d.entity)||!date(d.checked_at)||!text(d.provider)||!text(d.source_record)||!text(d.reason))return false;
+  if(!Array.isArray(d.evidence)||!d.evidence.length||d.evidence.some(e=>!http(e.url)||!text(e.title)||!text(e.note)))return false;
+  if(['tags.industry','tags.business'].includes(key)) {
+    const allowed=key==='tags.industry'?new Set(INDUSTRIES.map(i=>i.id)):vocabulary;
+    return Array.isArray(d.value)&&d.value.length>0&&new Set(d.value).size===d.value.length&&d.value.every(v=>allowed.has(v));
+  }
+  if(key==='tags.ownership')return ['国企','私企','外企'].includes(d.value);
+  if(key==='tags.listing_status')return ['已上市','未上市'].includes(d.value);
+  return text(d.value);
+}
+
+export function buildCompanyRecords({registry,business,ownership,profiles,size,cities={},reviews={companies:[]},research={companies:[]},apiLabels={companies:[]}}, {now=new Date().toISOString()}={}) {
+  const sources=indexById(registry),biz=indexById(business),own=indexById(ownership),prof=indexById(profiles),sizes=indexById(size),rev=indexById(reviews),candidate=indexById(research),api=indexById(apiLabels);
+  const vocabulary=new Set(business.companies.flatMap(c=>c.business_tags||[]));
   const cityMaps=Object.fromEntries(MODES.map(m=>[m,indexById(cities[m])]));
-  for(const [name,map] of Object.entries({business:biz,ownership:own,profiles:prof,size:sizes,reviews:rev,...cityMaps}))for(const id of map.keys())if(!sources.has(id))throw Error(name+'包含未知公司：'+id);
+  for(const [name,map] of Object.entries({business:biz,ownership:own,profiles:prof,size:sizes,reviews:rev,research:candidate,apiLabels:api,...cityMaps}))for(const id of map.keys())if(!sources.has(id))throw Error(name+'包含未知公司：'+id);
   const companies=registry.companies.map(c=>{
     const b=biz.get(c.company_id)||{},o=own.get(c.company_id)||{},p=prof.get(c.company_id)||{},r=rev.get(c.company_id);
     const row={company_id:c.company_id,identity:{company_id:c.company_id,display_name:c.display_name,aliases:c.aliases||[]},
       tags:{industry:c.industry_tags||[],business:b.business_tags||[],ownership:o.ownership_tag||'待核实',organization_size:sizes.get(c.company_id)?.label||'待核实',headquarters_country:null,listing_status:null,recruitment:{}},
       descriptions:{business_summary:b.business_summary||p.business?.value||'',products_services:'',customers:'',business_regions:'',workforce:p.workforce?.value||'',capital:p.capital?.value||'',entity_relationships:''},
       sources:(c.recruitment_sources?.length?c.recruitment_sources:[c]).map(s=>({source_id:s.source_id||null,provider:s.provider||null,url:s.primary_entry_url||null,verification:s.source_verification||null})),
-      governance:{fields:{},recruitment:{}}};
+      governance:{fields:{},recruitment:{}},research_candidates:candidate.has(c.company_id)?{
+        review_state:candidate.get(c.company_id).review_state,proposals:candidate.get(c.company_id).proposals,
+        archived_field_count:Object.values(candidate.get(c.company_id).fields||{}).reduce((n,items)=>n+items.length,0),
+        supplemental_record_count:(candidate.get(c.company_id).supplemental_research||[]).length,
+        archive_file:'datasets/company-research/candidates/company-research-candidates.json.gz',company_id:c.company_id}:null};
     const g=row.governance.fields;
     for(const key of STATIC_FIELDS)g[key]=metadata();
     g['tags.industry']=metadata(c.industry_assignment||c.industry_tag_basis||{});
@@ -103,6 +155,10 @@ export function buildCompanyRecords({registry,business,ownership,profiles,size,c
       const entry=cityMaps[mode].get(c.company_id)||{};
       row.tags.recruitment[mode]={cities:entry.cities||[]};
       row.governance.recruitment[mode]={...structuredClone(entry),company_id:undefined,display_name:undefined,cities:undefined,origin:'official_job_observation',review_state:'pending'};
+    }
+    for(const [key,decision] of Object.entries(api.get(c.company_id)?.decisions||{})) {
+      if(!validApiDecision(key,decision,vocabulary))throw Error('API标签包含无效字段、证据或状态：'+key);
+      set(row,key,decision.value);g[key]=apiMetadata(decision);
     }
     if(r)for(const [key,decision] of Object.entries(r.decisions)) {
       if(!STATIC_FIELDS.includes(key))throw Error('复核记录包含未知字段：'+key);
@@ -123,18 +179,18 @@ export function buildCompanyRecords({registry,business,ownership,profiles,size,c
 export function projectCompanyRecords(records, inputs) {
   const result={...inputs,registry:{...inputs.registry,companies:inputs.registry.companies.map(c=>({...c}))},
     business:{...inputs.business},ownership:{...inputs.ownership},profiles:{...inputs.profiles}},byId=indexById(records);
-  const reviewed=(r,key)=>r.governance.fields[key]?.origin==='fresh_web_review';
+  const published=(r,key)=>['fresh_web_review','api_search'].includes(r.governance.fields[key]?.origin);
   const b=indexById(result.business),o=indexById(result.ownership),p=indexById(result.profiles);
   for(const source of result.registry.companies) {
     const r=byId.get(source.company_id),g=r.governance.fields,base={company_id:source.company_id,display_name:source.display_name};
-    if(reviewed(r,'tags.industry')&&r.tags.industry?.length)source.industry_tags=r.tags.industry;
-    if(reviewed(r,'tags.business')||reviewed(r,'descriptions.business_summary')) {
+    if(published(r,'tags.industry')&&r.tags.industry?.length)source.industry_tags=r.tags.industry;
+    if(published(r,'tags.business')||published(r,'descriptions.business_summary')) {
       const old=b.get(source.company_id)||base;
       b.set(source.company_id,{...old,...base,business_tags:r.tags.business||[],business_summary:r.descriptions.business_summary||'',status:g['tags.business'].status==='unresolved'?'unknown':g['tags.business'].status,evidence:g['tags.business'].evidence});
     }
-    if(reviewed(r,'tags.ownership'))o.set(source.company_id,{...base,ownership_tag:r.tags.ownership||'待核实',status:g['tags.ownership'].status==='unresolved'?'verified_unresolved':'verified',reason:g['tags.ownership'].reason,checked_at:g['tags.ownership'].checked_at,evidence:g['tags.ownership'].evidence});
+    if(published(r,'tags.ownership'))o.set(source.company_id,{...base,ownership_tag:r.tags.ownership||'待核实',status:g['tags.ownership'].status==='unresolved'?'verified_unresolved':g['tags.ownership'].status,reason:g['tags.ownership'].reason,checked_at:g['tags.ownership'].checked_at,evidence:g['tags.ownership'].evidence,provider:g['tags.ownership'].provider||null,origin:g['tags.ownership'].origin,review_state:g['tags.ownership'].review_state});
     const profile={...(p.get(source.company_id)||base)};
-    for(const [old,key] of [['business','descriptions.business_summary'],['workforce','descriptions.workforce'],['capital','descriptions.capital']])if(reviewed(r,key))profile[old]={value:get(r,key)||'',status:g[key].status==='verified'?'verified':'missing',entity:g[key].entity,as_of:g[key].as_of,checked_at:g[key].checked_at,evidence:g[key].status==='verified'?g[key].evidence:[],review_reason:g[key].reason};
+    for(const [old,key] of [['business','descriptions.business_summary'],['workforce','descriptions.workforce'],['capital','descriptions.capital']])if(published(r,key))profile[old]={value:get(r,key)||'',status:g[key].status==='verified'?'verified':g[key].status==='api_supported'?'api_supported':'missing',entity:g[key].entity,as_of:g[key].as_of,checked_at:g[key].checked_at,evidence:['verified','api_supported'].includes(g[key].status)?g[key].evidence:[],review_reason:g[key].reason};
     p.set(source.company_id,profile);
   }
   result.business.companies=[...b.values()];result.ownership.companies=[...o.values()];result.profiles.companies=[...p.values()];
@@ -142,14 +198,27 @@ export function projectCompanyRecords(records, inputs) {
   return result;
 }
 
-export async function loadCompanyInputs() {
+export async function loadCompanyInputs({includeResearch=false,includePrivate=true}={}) {
   const filenames={registry:'assets/sources.json',business:'data/company-business-tags.json',ownership:'data/company-ownership-tags.json',profiles:'data/company-profiles.json',size:'data/company-size-tags.json',reviews:'data/company-label-reviews.json'};
-  const data=Object.fromEntries(await Promise.all(Object.entries(filenames).map(async([key,file])=>[key,await read(path.join(CORE_ROOT,file),{companies:[]})])));
+  const data=Object.fromEntries(await Promise.all(Object.entries(filenames).map(async([key,file])=>{
+    if(key==='reviews')return [key,includePrivate?await read(REVIEWS_FILE,{companies:[]}):{companies:[]}];
+    const published=await read(path.join(CORE_ROOT,file),{companies:[]});
+    return [key,includePrivate&&['business','ownership','profiles','size'].includes(key)?await read(path.join(RESEARCH_ROOT,'inputs',path.basename(file)),published):published];
+  })));
+  if(includePrivate)try {data.apiLabels=JSON.parse(gunzipSync(await fs.readFile(API_LABELS_FILE)).toString('utf8'));}
+  catch(error) {if(error.code==='ENOENT')data.apiLabels={companies:[]};else throw error;}
+  if(includeResearch&&includePrivate) {
+    try {data.research=JSON.parse(gunzipSync(await fs.readFile(ARCHIVE_FILE)).toString('utf8'));}
+    catch(error) {if(error.code==='ENOENT')data.research={companies:[]};else throw error;}
+  }
   data.cities=Object.fromEntries(await Promise.all(Object.entries(MODE_ROOTS).map(async([mode,root])=>[mode,await read(path.join(PACK_ROOT,root,'data/company-city-index.json'),{companies:[]})])));
   return data;
 }
 export async function loadCompanyContext() {
-  const inputs=await loadCompanyInputs(),records=buildCompanyRecords(inputs);
+  const inputs=await loadCompanyInputs({includePrivate:false});
+  const records=await read(path.join(CORE_ROOT,'data/company-records.json'),null)||buildCompanyRecords(inputs);
+  // Cities are maintained through their own public API index; static publication must not freeze them.
+  for(const mode of MODES){const cities=indexById(inputs.cities[mode]);for(const row of records.companies){const city=cities.get(row.company_id);if(city){row.tags.recruitment[mode]={cities:city.cities||[]};row.governance.recruitment[mode]={origin:'official_job_observation',updated_at:city.updated_at||null,last_refresh_at:city.last_refresh_at||null,last_refresh_status:city.last_refresh_status||null,city_coverage_complete:city.city_coverage_complete||false};}}}
   return {...projectCompanyRecords(records,inputs),records};
 }
 
@@ -158,10 +227,10 @@ export function campaignProgress(campaign, reviews, cities={}) {
   const companies=campaign.companies.map(c=>{
     const r=byId.get(c.company_id),same=r?.campaign_id===campaign.campaign_id;
     const searched=same&&r.searches?.some(s=>s.status==='success');
-    const reviewed=same?STATIC_FIELDS.filter(f=>r.decisions[f]):[];
+    const reviewed=same?STATIC_FIELDS.filter(f=>r.decisions[f]&&(r.decisions[f].campaign_id||r.campaign_id)===campaign.campaign_id):[];
     const cityState=Object.fromEntries(MODES.map(mode=>{const e=cityMaps[mode].get(c.company_id);return [mode,date(e?.last_refresh_at)&&Date.parse(e.last_refresh_at)>=Date.parse(campaign.started_at)?e.last_refresh_status||'unknown':'pending'];}));
     return {...c,searched:!!searched,reviewed_fields:reviewed.length,static_complete:!!searched&&reviewed.length===STATIC_FIELDS.length,city_state:cityState,
-      unresolved_fields:same?Object.entries(r.decisions).filter(([,d])=>d.status==='unresolved').map(([k])=>k):[]};
+      unresolved_fields:same?reviewed.filter(k=>r.decisions[k].status==='unresolved'):[]};
   });
   return {campaign_id:campaign.campaign_id,total:companies.length,searched:companies.filter(c=>c.searched).length,
     static_complete:companies.filter(c=>c.static_complete).length,fully_reviewed:companies.filter(c=>c.static_complete&&Object.values(c.city_state).every(v=>v!=='pending')).length,

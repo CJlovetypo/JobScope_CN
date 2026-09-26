@@ -63,7 +63,7 @@ export async function queryHistory({root = dataset, query = '', host = '', provi
   if (!['observations','contracts'].includes(kind)) throw new Error('kind must be observations or contracts');
   const hits = [], q = query.toLowerCase(); let total = 0;
   const file = path.join(root, 'index', kind+'.jsonl');
-  if (!fs.existsSync(file)) throw new Error(`Historical dataset missing: ${file}. Restore the local dataset or run datasets/recruitment-links/scripts/build.mjs with original inputs present.`);
+  if (!fs.existsSync(file)) throw new Error(`Historical dataset missing: ${file}. Restore the local dataset or run recruitment-link-repair/scripts/dataset/build.mjs with original inputs present.`);
   const input = fs.createReadStream(file, 'utf8');
   const lines = readline.createInterface({input, crlfDelay: Infinity});
   for await (const line of lines) {

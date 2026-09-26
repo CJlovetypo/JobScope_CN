@@ -12,8 +12,8 @@ import {collectEightfold} from './lib/provider-eightfold.mjs';
 import {collectAvature} from './lib/provider-avature.mjs';
 import {isIndividualJobRoute} from './lib/career-link-scope.mjs';
 
-const DEFAULT_INPUT=path.resolve('shared/job-search-core/assets/waiqi-interface-catalog.json');
-const DEFAULT_COMPANIES=path.resolve('shared/job-search-core/assets/waiqi-source-candidates.json');
+const DEFAULT_INPUT=path.resolve('datasets/recruitment-links/catalog/waiqi-interface-catalog.json');
+const DEFAULT_COMPANIES=path.resolve('datasets/recruitment-links/catalog/waiqi-source-candidates.json');
 const DEFAULT_OUTPUT=path.resolve('job-search/runtime/campus/artifacts/waiqi-interface-deep-review/standard-ats');
 const providers=new Set(['workday','oracle_recruiting','smartrecruiters','greenhouse','ashby','tupu360','moseeker_public','phenom_public','eightfold_public','avature_public','beisen','moka','feishu','hotjob','jobs2web_public']);
 const read=file=>fs.readFile(file,'utf8').then(JSON.parse);

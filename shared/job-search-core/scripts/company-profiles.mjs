@@ -1,13 +1,15 @@
+import {RESEARCH_ROOT} from '../maintenance-paths.mjs';
 import {datasetPath} from '../registry.mjs';
 import path from 'node:path';
 import {SKILL_ROOT, readJson, writeJson} from './lib/io.mjs';
-import {PROFILE_FILE, PROFILE_FIELDS, emptyFact, factProblem, mergeProfiles, profileGaps} from './lib/company-profiles.mjs';
+import {PROFILE_FIELDS, emptyFact, factProblem, mergeProfiles, profileGaps} from './lib/company-profiles.mjs';
 
+const PROFILE_FILE=path.join(RESEARCH_ROOT,'inputs/company-profiles.json');
 const [command, patchFile] = process.argv.slice(2);
 if (!['sync', 'import', 'status'].includes(command) || (command === 'import' && !patchFile)) throw new Error('用法：company-profiles.mjs sync | import 补充资料.json | status');
 const sources = (await readJson(datasetPath(SKILL_ROOT,'assets/sources.json'))).companies;
 const business = await readJson(datasetPath(SKILL_ROOT,'data/company-business-tags.json'));
-const previous = await readJson(PROFILE_FILE, {companies: []});
+const previous = await readJson(PROFILE_FILE, await readJson(datasetPath(SKILL_ROOT,'data/company-profiles.json'),{companies:[]}));
 const patches = command === 'import' ? (await readJson(path.resolve(patchFile))).companies : [];
 // Status must inspect saved facts without invoking a strict maintenance merge.
 // Historical partial clues are reported as issues, never upgraded or rewritten.

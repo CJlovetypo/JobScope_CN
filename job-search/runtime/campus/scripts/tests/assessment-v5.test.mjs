@@ -81,6 +81,7 @@ test('核心未知/部分符合不评高，充分性不能伪称充分',()=>{
   r.ability='unknown';r.evidence_sufficiency.status='sufficient';assert.match(v5EvidenceProblem(r,p),/具体缺项/);
 });
 test('不确定可以submit→merge→交付15列，续跑不反复领取；JD变更需重评',async()=>{
+  await fs.mkdir(path.join(SKILL_ROOT,'tmp'),{recursive:true});
   const dir=await fs.mkdtemp(path.join(SKILL_ROOT,'tmp','v5-'));const p=profile(),j=job();
   const company={company_id:j.company_id,display_name:'合成v5公司',selected:true,business_tags:['软件'],ownership_tag:'私企',ownership_status:'verified',ownership_reason:'合成来源',ownership_evidence:[{url:'https://example.com',title:'合成',note:'合成',checked_at:'2026-09-22'}],ownership_checked_at:'2026-09-22'};
   await writeJson(path.join(dir,'run.json'),{is_test:true,profile:p,companies:[company]});

@@ -31,7 +31,7 @@ test('all three product directions consume labels read-only; explicit maintenanc
  const root=await fs.mkdtemp(path.join(base,'pack-'));
  const core=path.join(root,'shared/job-search-core');
  await fs.mkdir(core,{recursive:true});
- for(const file of ['runtime-context.mjs','registry.mjs','launcher.mjs','cli.mjs'])await fs.copyFile(path.join(PACK_ROOT,'shared/job-search-core',file),path.join(core,file));
+ for(const file of ['runtime-context.mjs','maintenance-paths.mjs','registry.mjs','launcher.mjs','cli.mjs'])await fs.copyFile(path.join(PACK_ROOT,'shared/job-search-core',file),path.join(core,file));
  await fs.cp(path.join(PACK_ROOT,'shared/job-search-core/scripts'),path.join(core,'scripts'),{recursive:true});
  await fs.cp(path.join(PACK_ROOT,'job-search/scripts'),path.join(root,'job-search/scripts'),{recursive:true});
  await fs.mkdir(path.join(core,'assets'),{recursive:true});

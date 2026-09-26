@@ -8,12 +8,12 @@ import {isIndividualJobRoute} from './lib/career-link-scope.mjs';
 // Export company relationships and interface contracts; never export response bodies or JD rows.
 const root=path.resolve(process.argv[2]||'job-search/runtime/campus/artifacts/waiqi-expansion-followup');
 const review=path.resolve(process.argv[3]||'job-search/runtime/campus/artifacts/waiqi-candidate-review');
-const output=path.resolve(process.argv[4]||'shared/job-search-core/assets/waiqi-interface-catalog.json');
+const output=path.resolve(process.argv[4]||'datasets/recruitment-links/catalog/waiqi-interface-catalog.json');
 const deepReview=path.resolve(process.argv[5]||'job-search/runtime/campus/artifacts/waiqi-interface-deep-review/no-interface-websites');
 const standardReview=path.resolve('job-search/runtime/campus/artifacts/waiqi-interface-deep-review/standard-ats');
 const read=file=>JSON.parse(fs.readFileSync(file,'utf8'));
 const registry=read('shared/job-search-core/assets/sources.json').companies;
-const candidates=read('shared/job-search-core/assets/waiqi-source-candidates.json');
+const candidates=read('datasets/recruitment-links/catalog/waiqi-source-candidates.json');
 const overrides=fs.existsSync('shared/job-search-core/assets/waiqi-interface-overrides.json')?read('shared/job-search-core/assets/waiqi-interface-overrides.json'):{interfaces:[]};
 const records=new Map();
 const evidence=r=>({url:r.url,method:r.method,http_status:r.http_status,checked_at:r.checked_at,response_sha256:r.response_sha256,purpose:r.purpose});

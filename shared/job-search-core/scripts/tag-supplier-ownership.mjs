@@ -9,9 +9,9 @@ const HERE = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(HERE, '../../..');
 const DEFAULTS = Object.freeze({
   registry: path.join(ROOT, 'shared/job-search-core/assets/sources.json'),
-  ownership: path.join(ROOT, 'shared/job-search-core/data/company-ownership-tags.json'),
-  sizes: path.join(ROOT, 'shared/job-search-core/data/company-size-tags.json'),
-  profiles: path.join(ROOT, 'shared/job-search-core/data/company-profiles.json'),
+  ownership: path.join(ROOT, 'datasets/company-research/inputs/company-ownership-tags.json'),
+  sizes: path.join(ROOT, 'datasets/company-research/inputs/company-size-tags.json'),
+  profiles: path.join(ROOT, 'datasets/company-research/inputs/company-profiles.json'),
   artifacts: path.join(ROOT, 'job-search/runtime/campus/artifacts/supplier-ownership-refresh-2026-09-20'),
   apply: false,
 });

@@ -1,3 +1,4 @@
+import {queueKeywordReviews} from './source-keyword-maintenance.mjs';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import {createHash,randomUUID} from 'node:crypto';
@@ -9,7 +10,7 @@ import {mokaSiteCandidates,confirmMokaSiteCandidate} from './public-site-candida
 import {SEARCH_MODE} from './search-mode.mjs';
 
 const stable=v=>Array.isArray(v)?v.map(stable):v&&typeof v==='object'?Object.fromEntries(Object.keys(v).sort().map(k=>[k,stable(v[k])])):v;
-export const repairConfigKey=s=>createHash('sha256').update(JSON.stringify(stable({company_id:s.company_id,provider:s.provider,entry:s.primary_entry_url,api_config:s.api_config,requests:s.validated_api_request_examples}))).digest('hex').slice(0,24);
+export const repairConfigKey=s=>createHash('sha256').update(JSON.stringify(stable({company_id:s.company_id,source_id:s.source_id,identity_verified:s.identity_verification?.identity_verified,provider:s.provider,entry:s.primary_entry_url,api_config:s.api_config,requests:s.validated_api_request_examples}))).digest('hex').slice(0,24);
 const save=async(p,v)=>{await fs.mkdir(path.dirname(p),{recursive:true});const temp=p+'.'+randomUUID()+'.tmp';await fs.writeFile(temp,JSON.stringify(v,null,2)+'\n');for(let i=0;;i++){try{await fs.rename(temp,p);return;}catch(e){if(i>=6)throw e;await new Promise(r=>setTimeout(r,100*(i+1)));}}};
 const read=async(p,d=null)=>{try{return JSON.parse(await fs.readFile(p,'utf8'));}catch(e){if(e.code==='ENOENT')return d;throw e;}};
 export function sourceFailureKind(result){
@@ -69,16 +70,24 @@ export async function discoverRepairCandidates(source,options={}){
  }
  return {candidates:[...new Map(candidates.map(c=>[repairConfigKey(c.source),c])).values()].slice(0,3),notes:[...new Set(notes)],requests:client.records};
 }
-export async function commitSourceRepair(old,candidate,evidence,{registryFile=SOURCE_REGISTRY_FILE}={}){
+export async function commitSourceRepair(old,candidate,evidence,{registryFile=SOURCE_REGISTRY_FILE,append=false}={}){
  const lock=registryFile+'.repair.lock';let handle;
  for(let n=0;n<50;n++){try{handle=await fs.open(lock,'wx');break;}catch(e){if(e.code!=='EEXIST')throw e;await new Promise(r=>setTimeout(r,100));}}
  if(!handle)return {updated:false,reason:'registry_busy'};
  try{const registry=await read(registryFile),company=registry.companies.find(c=>c.company_id===old.company_id);if(!company)return {updated:false,reason:'company_missing'};
+  const beforeRegistry=structuredClone(registry);
   const configs=company.recruitment_sources?.length?company.recruitment_sources:[company],index=configs.findIndex(s=>repairConfigKey({...s,company_id:company.company_id})===repairConfigKey(old));if(index<0)return {updated:false,reason:'configuration_changed_concurrently'};
-  const previous=configs[index],next={...previous,...candidate};delete next.target_mode;delete next.direction_route_evidence;
+  if(append){
+     if(!candidate.source_id||candidate.company_id!==company.company_id)return {updated:false,reason:'new_source_identity_required'};
+     if(configs.some(s=>s.source_id===candidate.source_id||s.provider===candidate.provider&&s.primary_entry_url===candidate.primary_entry_url))return {updated:false,reason:'source_already_present'};
+     const added={...candidate,repair_history:[...candidate.repair_history||[],{checked_at:new Date().toISOString(),evidence}]};delete added.target_mode;delete added.direction_route_evidence;
+     const existing=configs.map((s,i)=>{const copy=structuredClone(s);delete copy.recruitment_sources;copy.source_id??=String(i);return copy;});
+     company.recruitment_sources=[...existing,added];const keyword_review=await queueKeywordReviews(beforeRegistry,registry,{registryFile});await save(registryFile,registry);return {updated:true,company_id:company.company_id,source_id:added.source_id,appended:true,keyword_review};
+    }
+    const previous=configs[index],next={...previous,...candidate};delete next.target_mode;delete next.direction_route_evidence;
   next.repair_history=[...previous.repair_history||[],{checked_at:new Date().toISOString(),previous_config:structuredClone(Object.fromEntries(['provider','primary_entry_url','api_config','validated_api_request_examples','public_bootstrap_requests'].filter(k=>previous[k]!==undefined).map(k=>[k,previous[k]]))),evidence}];
-  if(company.recruitment_sources?.length){company.recruitment_sources[index]=next;if(index===0)for(const k of ['provider','primary_entry_url','api_config','validated_api_request_examples','public_bootstrap_requests'])if(next[k]!==undefined)company[k]=next[k];}else Object.assign(company,next);
-  await save(registryFile,registry);return {updated:true,company_id:company.company_id};
+  if(company.recruitment_sources?.length){company.recruitment_sources[index]=next;if(index===0)for(const k of ['verification_status','verified_at','source_verification','verified_samples','identity_verification','admitted','provider','primary_entry_url','api_config','validated_api_request_examples','public_bootstrap_requests'])if(next[k]!==undefined)company[k]=next[k];}else Object.assign(company,next);
+  const keyword_review=await queueKeywordReviews(beforeRegistry,registry,{registryFile});await save(registryFile,registry);return {updated:true,company_id:company.company_id,keyword_review};
  }finally{await handle.close();await fs.unlink(lock).catch(()=>{});}
 }
 export async function maintainSource(source,result,options,collector){
@@ -96,7 +105,7 @@ export async function maintainSource(source,result,options,collector){
   if(!candidates.length&&discovery.candidates.length>1)discovery.notes.push('multiple_possible_replacement_projects_require_review');
   for(const candidate of candidates){try{const check=await collector(candidate.source,repairOpts),proof=repairCandidateAccepted(source,candidate.source,check,candidate.identity);await save(path.join(repairDir,'verification-'+repairConfigKey(candidate.source)+'.json'),{source:candidate.source,proof,result:check});attempts.push({...candidate.evidence,entry:candidate.source.primary_entry_url,...proof});if(!proof.accepted)continue;
     const committed=await commitSourceRepair(source,candidate.source,{...candidate.evidence,...proof});if(!committed.updated){attempts.at(-1).reason=committed.reason;continue;}
-    health.repair={status:'adopted',previous_entry:source.primary_entry_url,current_entry:candidate.source.primary_entry_url,evidence:candidate.evidence,proof};
+    health.repair={status:'adopted',keyword_review:committed.keyword_review,previous_entry:source.primary_entry_url,current_entry:candidate.source.primary_entry_url,evidence:candidate.evidence,proof};
     // Verification is a small sample. Re-run the user's original query before returning.
     let repaired;try{repaired=await collector(candidate.source,{...options,repair:false});}catch(e){repaired={jobs:[],requests:[],coverage:{status:'failed',pages:0,reason:'repaired_contract_recollection_failed: '+e.message}};}
     result={...repaired,repair:health.repair,effective_source:candidate.source};break;

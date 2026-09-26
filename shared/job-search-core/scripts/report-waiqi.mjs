@@ -7,7 +7,7 @@ const read = async name => JSON.parse(await fs.readFile(path.join(root, name), '
 const summary = await read('summary.json');
 const integration = await read('integration-result.json');
 const city = await read('city-seed/cumulative-summary.json').catch(() => read('city-seed/apply-plan.json'));
-const candidates = JSON.parse(await fs.readFile('shared/job-search-core/assets/waiqi-source-candidates.json', 'utf8'));
+const candidates = JSON.parse(await fs.readFile('datasets/recruitment-links/catalog/waiqi-source-candidates.json', 'utf8'));
 const domains = new Map();
 for (const company of candidates.companies) for (const link of company.recruitment_links) {
   const host = new URL(link.url).hostname;
@@ -78,7 +78,7 @@ ${Object.entries(city.modes).map(([mode, data]) => '| ' + ({campus:'校招', int
 - [原有主体与配置保留检查](preservation-audit.json)
 - [回归测试结果](tests-after-integration.txt)
 
-持久候选库位于 shared/job-search-core/assets/waiqi-source-candidates.json，包含全部目录公司，包括暂时零岗位或没有招聘链接的公司。维护、续抓与查询方法见 shared/job-search-core/references/waiqi-sources.md。
+持久候选库位于 datasets/recruitment-links/catalog/waiqi-source-candidates.json，包含全部目录公司，包括暂时零岗位或没有招聘链接的公司。维护、续抓与查询方法见 shared/job-search-core/references/waiqi-sources.md。
 
 ## 覆盖边界
 

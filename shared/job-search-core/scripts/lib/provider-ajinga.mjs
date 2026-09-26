@@ -1,5 +1,7 @@
 import {createClient} from './http.mjs';
-import {normalizeJobLocations} from './locations.mjs';
+import {normalizeJobLocations,jobCityStatus} from './locations.mjs';
+import {splitCommonBody} from './providers-common.mjs';
+import {reviewRecruitment} from './recruitment-policy.mjs';
 import locationCodes from './location-codes.json' with {type:'json'};
 const mainlandCities=new Set(Object.values(locationCodes.by_code).filter(x=>!/[港澳台臺]/.test(x.province||'')).map(x=>x.city));
 
@@ -7,7 +9,7 @@ export async function collectAjinga(source,options={}){
   if(source.provider!=='ajinga_public')return null;
   const company=String(source.api_config?.company_id||'');if(!/^\d+$/.test(company))throw Error('Missing AJINGA company ID');
   const client=options.client||createClient(options),seen=new Set(),jobs=[],pages=[],errors=[],excluded=[];let total=null,complete=false,reason='page_limit_reached';
-  let profile=null;
+  let profile=null,details=0;const detailErrors=[];
   try{
     const identity=await client.request({url:'https://www.ajinga.com/django_rest/company/info/'+company+'/'},{purpose:'company_identity'});
     profile=identity.data?.data?.company;
@@ -26,12 +28,26 @@ export async function collectAjinga(source,options={}){
       if(d.is_overseas===true||raw.some(x=>/hong\s*kong|macau|macao|taiwan|taipei|hsinchu|香港|澳门|澳門|台湾|臺灣|台北|臺北/i.test(x))||loc.cities.some(x=>['香港','澳门','台北','新竹','新加坡','东京','首尔','伦敦'].includes(x))){excluded.push({job_id:id,is_overseas:d.is_overseas,locations:raw});continue;}
       if(!loc.cities.length||loc.cities.some(x=>!mainlandCities.has(x))){errors.push('unresolved_mainland_location');continue;}
       let official;try{official=new URL(d.url,'https://www.ajinga.com');if(official.origin!=='https://www.ajinga.com')throw Error();}catch{errors.push('invalid_official_url');continue;}
-      jobs.push({job_id:id,company_id:source.company_id,company_name:source.display_name,title:d.title,official_url:official.href,job_url_kind:'official_detail',locations_raw:raw,cities:loc.cities,location_unknown:loc.unknown,location_special:loc.special,description:null,requirements:null,body_complete:false,formal_status:'unknown',open_status:d.cant_applied===false&&d.show_apply===1?'open':'unknown',raw_file:r.record.response_file,detail_skipped_reason:'public_list_capability_only',recruitment_evidence:{provider:'ajinga_public',company_root_id:d.company.root_pk,company_name:d.company.name,company_cn_name:d.company.cn_name,role_type:d.role_type},raw_metadata:{company:d.company,updated_time:d.updated_time}});
+      let job={job_id:id,company_id:source.company_id,company_name:source.display_name,title:d.title,official_url:official.href,job_url_kind:'official_detail',locations_raw:raw,cities:loc.cities,location_unknown:loc.unknown,location_special:loc.special,description:null,requirements:null,body_complete:false,formal_status:'unknown',open_status:d.cant_applied===false&&d.show_apply===1?'open':'unknown',raw_file:r.record.response_file,detail_skipped_reason:'public_list_capability_only',recruitment_evidence:{provider:'ajinga_public',company_root_id:d.company.root_pk,company_name:d.company.name,company_cn_name:d.company.cn_name,role_type:d.role_type},raw_metadata:{company:d.company,updated_time:d.updated_time}};
+      job.recruitment_evidence.commitment=d.role_type;
+      if(options.mode!=='list'&&details<(options.maxDetails??Infinity)&&(!options.titleFilter||options.titleFilter(job.title))&&jobCityStatus({cities:loc.cities,location_unknown:loc.unknown,location_special:loc.special},options.cities||[])!=='excluded'){
+       details++;
+       try{
+        const u=new URL('https://www.ajinga.com/django_rest/job-detail/info/'+id+'/');u.searchParams.set('job_id',id);u.searchParams.set('company_id',String(profile.root_company.id));
+        const detail=await client.request({url:u.href},{purpose:'job_detail'}),data=detail.data?.data?.data,j=data?.job;
+        if(detail.record.http_status!==200||detail.data?.code!==200||String(j?.id)!==id||String(j?.root_company_id)!==String(profile.root_company.id)||String(data?.company?.id)!==String(d.company.pk))throw Error('AJINGA detail identity mismatch');
+        if(data.company.root_company?.id!=null&&String(data.company.root_company.id)!==String(profile.root_company.id))throw Error('AJINGA detail company root mismatch');
+        const body=splitCommonBody(j.cn_description||j.description||'');
+        job={...job,...body,raw_file:detail.record.response_file,list_raw_file:r.record.response_file,detail_skipped_reason:undefined};
+        if(!body.body_complete)detailErrors.push('job_body_incomplete:'+id);
+       }catch(e){detailErrors.push(e.message+':'+id);job.detail_error=e.message;}
+      }
+      jobs.push(reviewRecruitment(job,options.targetMode||'campus'));
     }
     pages.push({url:url.href,returned:data.list.length,server_total:total,job_ids:data.list.map(x=>String(x.pk)),response_file:r.record.response_file});
     if(seen.size===total){complete=!errors.length;reason='unique_ids_reconcile_server_total';break;}
     if(seen.size===before||seen.size>total)throw Error('empty_or_repeated_page_before_total');
   }}catch(e){errors.push(e.message);reason=e.message;}
-  const listComplete=complete&&!errors.length,status=listComplete&&(options.mode==='list'||jobs.length===0)?'complete':pages.length?'partial':'failed';
-  return {company_id:source.company_id,display_name:source.display_name,checked_at:new Date().toISOString(),company_profile:profile,jobs,requests:client.records,coverage:{status,collection_complete:status==='complete',list_complete:listComplete,server_total:total,pages:pages.length,jobs_observed:jobs.length,capability:'public_list_only',scope:'AJINGA company channel list, validated against returned root company; recognized mainland cities and non-overseas records only; JD and recruitment type unverified',reason:[reason,...new Set(errors),...(options.mode==='list'?[]:['job_details_not_collected'])].join('; '),page_evidence:pages,excluded_location_rows:excluded,incomplete_bodies:jobs.length}};
+  const listComplete=complete&&!errors.length,missing=jobs.filter(j=>!j.body_complete).length,status=listComplete&&(options.mode==='list'||missing===0)?'complete':pages.length?'partial':'failed';
+  return {company_id:source.company_id,display_name:source.display_name,checked_at:new Date().toISOString(),company_profile:profile,jobs,requests:client.records,coverage:{status,collection_complete:status==='complete',list_complete:listComplete,server_total:total,pages:pages.length,jobs_observed:jobs.length,capability:options.mode==='list'?'public_list_only':'public_list_and_detail',scope:'AJINGA company channel list, validated against returned root company; recognized mainland cities and non-overseas records only; full mode verifies detail ID and employer against the published list',reason:[reason,...new Set([...errors,...detailErrors]),...(options.mode!=='list'&&missing?['observed_jobs_missing_complete_details']:[])].join('; '),page_evidence:pages,excluded_location_rows:excluded,incomplete_bodies:missing}};
 }

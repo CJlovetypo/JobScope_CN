@@ -1,0 +1,16 @@
+{
+  "name": "job-search-core",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "check:distribution": "node scripts/check-distribution.mjs",
+    "test": "cd ../.. && node --test job-search/runtime/campus/scripts/tests/*.test.mjs job-radar/scripts/tests/radar.test.mjs recruitment-link-repair/scripts/history.test.mjs",
+    "test:perplexity": "node --test ../../job-search/runtime/campus/scripts/tests/perplexity-agent.test.mjs"
+  },
+  "dependencies": {
+    "@perplexity-ai/perplexity_ai": "0.38.5"
+  }
+}

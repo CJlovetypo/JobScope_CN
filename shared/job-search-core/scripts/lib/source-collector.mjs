@@ -1,3 +1,5 @@
+import {collectHuatie} from './provider-huatie.mjs';
+import {collectIqvia} from './provider-iqvia.mjs';
 import {collectRecoveredDirection} from './providers-direction-recovered.mjs';
 import path from 'node:path';
 import {createHash} from 'node:crypto';
@@ -36,7 +38,7 @@ function enforceListOnlyCoverage(result,options){
  }
  return result;
 }
-const hardware={ajinga_public:collectAjinga,jobs2web_public:collectJobs2web,tupu360:collectTupu360,moseeker_public:collectMoseeker,phenom_public:collectPhenom,eightfold_public:collectEightfold,avature_public:collectAvature,workday:collectInternational,smartrecruiters:collectInternational,icims_jibe:collectIcimsJibe,midea:collectMidea,huawei:collectHuawei,lenovo:collectLenovo,cvte:collectCvte,ugreen:collectUgreen,gree:collectHardwareDirect,dahua:collectHardwareDirect,hikvision:collectHardwareDirect,tplink:collectHardwareDirect,byd_public:collectOemPublic,lixiang_public:collectOemPublic,sinotruk_public:collectOemPublic,aion_public:collectOemPublic};
+const hardware={iqvia_public:collectIqvia,huatie_public:collectHuatie,ajinga_public:collectAjinga,jobs2web_public:collectJobs2web,tupu360:collectTupu360,moseeker_public:collectMoseeker,phenom_public:collectPhenom,eightfold_public:collectEightfold,avature_public:collectAvature,workday:collectInternational,smartrecruiters:collectInternational,icims_jibe:collectIcimsJibe,midea:collectMidea,huawei:collectHuawei,lenovo:collectLenovo,cvte:collectCvte,ugreen:collectUgreen,gree:collectHardwareDirect,dahua:collectHardwareDirect,hikvision:collectHardwareDirect,tplink:collectHardwareDirect,byd_public:collectOemPublic,lixiang_public:collectOemPublic,sinotruk_public:collectOemPublic,aion_public:collectOemPublic};
 async function collectOriginalEndpoint(source,options){const recovered=await collectRecoveredDirection(source,options);if(recovered)return recovered;const result=source.provider==='shlab_public'?await collectShlab(source,options):source.provider==='hcmcloud_public'?await collectHcmCloud(source,options):source.provider==='sf_campus'?await collectSf(source,options):source.provider==='beisen_lightbolt'?await collectLightbolt(source,options):source.provider==='yokaverse'?await collectYokaverse(source,options):hardware[source.provider]?await hardware[source.provider](source,options):await collectRound4(source,options)||await collectRound3(source,options)||await collectSelfHosted(source,options)||await collectRecovered(source,options)||await collectOracleNowcoder(source,options)||await collectXYZ(source,options)||await collectCommon(source,options)||await collectCustom(source,options);if(!result)throw Error('未配置该来源采集器：'+source.provider);return enforceListOnlyCoverage(result,options);}
 async function collectRoutedEndpoint(source,options={}) {
  const mode=options.targetMode||SEARCH_MODE.id;
@@ -57,13 +59,14 @@ async function collectRoutedEndpoint(source,options={}) {
  result.requests=[...routed.requests,...result.requests||[]];return result;
 }
 export async function collectEndpoint(source,options={}){
+ if(source.identity_verification?.identity_verified===false)return {company_id:source.company_id,display_name:source.display_name,checked_at:new Date().toISOString(),jobs:[],requests:[],coverage:{status:'failed',pages:0,reason:'source_identity_not_verified: '+(source.identity_verification.basis||'explicit identity verification failure')}};
  let result;
  try{result=await collectRoutedEndpoint(source,options);}catch(e){if(options.repair===false)throw e;result={company_id:source.company_id,display_name:source.display_name,checked_at:new Date().toISOString(),jobs:[],requests:[],coverage:{status:'failed',pages:0,reason:e.message}};}
  try{return await maintainSource(source,result,options,collectRoutedEndpoint);}catch(e){return {...result,maintenance_warning:e.message};}
 }
 const canonical=value=>Array.isArray(value)?value.map(canonical):value&&typeof value==='object'?Object.fromEntries(Object.keys(value).sort().map(k=>[k,canonical(value[k])])):value;
 export function sourceConfigFingerprint(company,targetMode=SEARCH_MODE.id){
- const configs=(company.recruitment_sources?.length?company.recruitment_sources:[company]).map(s=>Object.fromEntries(['provider','primary_entry_url','api_config','list_page_size','project_type','route_evidence_url','official_job_url_template','validated_api_request_examples','public_bootstrap_requests'].filter(k=>s[k]!==undefined).map(k=>[k,s[k]])));
+ const configs=(company.recruitment_sources?.length?company.recruitment_sources:[company]).map(s=>Object.fromEntries(['identity_verification','provider','primary_entry_url','api_config','list_page_size','project_type','route_evidence_url','official_job_url_template','validated_api_request_examples','public_bootstrap_requests'].filter(k=>s[k]!==undefined).map(k=>[k,s[k]])));
  return createHash('sha256').update(JSON.stringify(canonical(targetMode==='campus'?configs:{configs,targetMode,policy:MODE_POLICY_VERSION}))).digest('hex');
 }
 export function sourceCacheMatches(result,company,searchPlan=null){

@@ -50,7 +50,7 @@ stats.non_url_recruitment_instructions=[...jobs.values()].filter(x=>x.external_u
 const pendingDetails=[...jobs.values()].filter(x=>!x.external_url&&!x.detail_fetched_at).map(x=>({waiqi_job_id:x.waiqi_job_id,waiqi_company_id:x.waiqi_company_id,title:x.title,source_url:x.source_url,status:'supplemental_detail_pending'}));
 stats.job_details_pending=pendingDetails.length;
 await write(path.join(input,'job-details-pending.json'),pendingDetails);
-await write(path.join(core,'assets/waiqi-source-candidates.json'),{schema_version:1,source:'https://waiqi.com/company',checked_at:stats.generated_at,policy:'Discovery only. Supplier ownership, location and scale are unverified hints. External links do not establish active vacancies or verified official API capability. matched_company_ids require entity review; never automatically merge.',coverage:stats,companies});
+await write(path.resolve(core,'../../datasets/recruitment-links/catalog/waiqi-source-candidates.json'),{schema_version:1,source:'https://waiqi.com/company',checked_at:stats.generated_at,policy:'Discovery only. Supplier ownership, location and scale are unverified hints. External links do not establish active vacancies or verified official API capability. matched_company_ids require entity review; never automatically merge.',coverage:stats,companies});
 await write(path.join(input,'summary.json'),stats);await write(path.join(input,'failures.json'),failures);await write(path.join(input,'position-count-discrepancies.json'),discrepancies);
 await fs.writeFile(path.join(input,'jobs.jsonl'),[...jobs.values()].map(x=>JSON.stringify(x)).join('\n')+'\n');
 const cell=csvCell;

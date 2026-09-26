@@ -12,7 +12,7 @@ description: 根据飞书多维表格、WPS 跨届校招表、Waiqi 公司岗位
 ## 先查历史，再做最小范围验证
 
 1. 从用户和现有采集失败记录确定公司、失效 URL、校招／实习／社招、目标地区及需要恢复的能力（入口、列表或完整 JD）。已有条件直接沿用。只有失效 URL 时，先从历史查主体；不能从租户拼写猜定雇主。
-2. 读 [数据集说明](../datasets/recruitment-links/README.md)，按公司、失效域名分别查。记录中的 `evidence.file` 相对于数据集根目录，`location` 指向具体行或 JSON Pointer。
+2. 读 [数据集说明](references/history-dataset.md)，按公司、失效域名分别查。记录中的 `evidence.file` 相对于数据集根目录，`location` 指向具体行或 JSON Pointer。
 
    ```sh
    node recruitment-link-repair/scripts/history.mjs --query=公司名 --family=wps --limit=50
@@ -45,3 +45,5 @@ description: 根据飞书多维表格、WPS 跨届校招表、Waiqi 公司岗位
 其他变更先保存新旧配置差异，再使用现有注册表加锁、比较旧值、原子写入的机制（`shared/job-search-core/scripts/lib/source-repair.mjs`）；不要覆盖其他任务已改的配置。跨平台变更需完成主体与适配器验证，不能直接调用原平台修复路径蒙混过关。新配置重新验证招聘方向和搜索能力；旧证明不自动继承。历史快照不改写，新证据使用新目录。
 
 交付一份简短记录：旧 URL → 新 URL（或无可确认替代）、原因、历史证据路径、当次核验时间、主体／范围／能力／在招结论、是否已应用、备份或回滚位置、尚未解决的项目。查询脚本本身只读离线数据，不探测网络、不自动改注册表。
+
+修复验收必须增加 [新增与修复 API 定向能力验证](../shared/job-search-core/references/targeted-search.md#新增与修复来源的固定验收流程)：基本取数恢复后逐配置、逐招聘方向完成关键词验证和记录，运行维护收尾检查；仅登记待办不能称全部完成。报告列出每项支持／不支持／未证实及原因。旧证明失效，未证实不阻塞基本取数。

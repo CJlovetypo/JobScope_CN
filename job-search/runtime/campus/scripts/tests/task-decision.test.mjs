@@ -17,7 +17,7 @@ const condition=value=>({state:'explicit',value,basis:'模拟用户明确给出'
 function task(overrides={}){
  return {schema_version:1,task_id:'test-task',revision:1,is_test:true,user_request:'合成测试：找校招项目管理岗位，互联网行业，未指定城市',goal:'discover',
   conditions:{recruitment:condition('campus'),industries:condition(['internet']),roles:condition(['项目管理']),cities:{state:'unspecified',value:null}},
-  retrieval:{mode:'exhaustive',selection:'default',basis:'普通职能目标'},materials:{profile:'not_needed'},issues:[],changes:[],...overrides};
+  retrieval:{mode:'exhaustive',selection:'explicit',basis:'合成用户已选择全量 JD 综合判断'},materials:{profile:'not_needed'},issues:[],changes:[],...overrides};
 }
 const write=async(file,value)=>{await fs.mkdir(path.dirname(file),{recursive:true});await fs.writeFile(file,JSON.stringify(value,null,2)+'\n','utf8');};
 
@@ -54,7 +54,7 @@ test('complete textual material and an explicit sample do not ask for a file or 
  assert.equal(decideTask(task({goal:'match',materials:{profile:'available',jd:'available'},evaluation_scope:condition({mode:'sample',limit:20})})).can_assess,true);
 });
 test('ordinary role preference cannot silently select targeted retrieval',()=>{
- const value=task();value.retrieval.mode='targeted';assert(validateTask(value).some(e=>e.includes('targeted')));
+ const value=task();value.retrieval={mode:'targeted',selection:'default',basis:'普通岗位倾向'};assert(validateTask(value).some(e=>e.includes('targeted')));
  value.retrieval.selection='explicit';value.retrieval.basis='用户说按标题快速定向';assert.deepEqual(validateTask(value),[]);
 });
 test('ambiguous goal blocks all dependent operations while allowing history reading',()=>{
@@ -243,4 +243,20 @@ test('new matching CLI binds scope and accepts only a continuous scope revision 
  const revised=reviseTask(record,{task_id:record.task_id,revision:2,user_request:'剩下全部评完',evaluation_scope:condition({mode:'all'}),changes:['scope']}),t2=path.join(dir,'task-r2.json');await write(t2,revised);
  const all=JSON.parse((await cli('plan-assessment','--mode','campus','--run',dir,'--task',t2)).stdout);assert.equal(all.mode,'all');
  const run=JSON.parse(await fs.readFile(path.join(dir,'run.json'),'utf8'));assert.equal(run.task_snapshot.revision,2);assert.equal(run.task_history[0].revision,1);
+});
+
+test('role intent without a retrieval choice blocks dependent work and explains both options',()=>{
+ for(const goal of ['discover','match','explore']){
+  const value=task({goal,retrieval:{mode:'exhaustive',selection:'default',basis:'尚未选择'},materials:{profile:'available',jd:'available'},evaluation_scope:condition({mode:'all'})});
+  const result=decideTask(value);assert.equal(result.can_collect,false);assert.equal(result.can_assess,false);
+  assert(result.gates.collect.includes('retrieval'));assert(result.gates.assess.includes('retrieval'));
+  assert.throws(()=>assertTaskExecution(value,{assessment_model_version:5},'campus',{discovery:goal==='discover'}),/采集前须解决.*retrieval/);
+  const question=result.questions_now.find(q=>q.field==='retrieval');assert.match(question.question,/更快.*漏掉/);assert.match(question.question,/覆盖更充分.*耗时/);
+  assert(result.independent_actions.includes('read_available_materials_and_history'));
+  for(const mode of ['exhaustive','targeted'])for(const selection of ['explicit','inherited']){
+   const chosen=decideTask({...value,retrieval:{mode,selection,basis:'用户选择或可定位的既有选择'}});assert(chosen.can_collect);assert(!chosen.questions_now.some(q=>q.field==='retrieval'));
+  }
+  value.conditions.roles={state:'unspecified',value:null};assert(decideTask(value).can_collect);
+  value.conditions.roles=condition([]);assert(decideTask(value).can_collect);
+ }
 });

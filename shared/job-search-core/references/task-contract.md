@@ -12,7 +12,7 @@ conditions.cities可附importance：must保持明确城市过滤，prefer/open�
   "task_id": "campus-pm",
   "revision": 1,
   "is_test": true,
-  "user_request": "演示：找互联网行业校招项目管理岗位，先看机会",
+  "user_request": "演示：找互联网行业校招项目管理岗位，先看机会；我选择全量 JD 后综合判断相关性",
   "goal": "discover",
   "conditions": {
     "recruitment": {"state":"explicit","value":"campus","basis":"用户说校招"},
@@ -20,13 +20,17 @@ conditions.cities可附importance：must保持明确城市过滤，prefer/open�
     "cities": {"state":"unspecified","value":null},
     "roles": {"state":"explicit","value":["项目管理"],"basis":"用户岗位目标"}
   },
-  "retrieval": {"mode":"exhaustive","selection":"default","basis":"普通职能目标不默认启用标题预筛"},
+  "retrieval": {"mode":"exhaustive","selection":"explicit","basis":"用户已选择全量 JD 后综合判断相关性"},
   "materials": {"profile":"not_needed","jd":"missing"},
   "evaluation_scope": {"state":"unspecified","value":null},
   "issues": [],
   "changes": []
 }
 ```
+
+搜索方式由业务决策模块 `scripts/lib/task-decision.mjs` 检查：对于 discover/match/explore，`conditions.roles` 有明确或继承的非空岗位倾向，但 `retrieval.selection=default` 时，`task-check` 必须提出搜索方式问题并阻止 collect/assess，仍允许读取材料和解析公司。此时 `mode=exhaustive` 只是未选择时的占位，不是执行授权。向用户说明两种方式的优劣后，把真实选择记录为 `retrieval.mode=targeted/exhaustive`、`selection=explicit` 和原话依据；已有选择用 `inherited`，不重复询问。无岗位倾向时允许默认 exhaustive。不得为了通过检查伪造 explicit。既有任务按 task-save 保存新修订，不覆盖旧记录。
+
+用户选择与 API 能力是两层判断：任务模块只确认用户选择；共享 `collect-targeted.mjs` 逐配置、逐招聘方向检查关键词证明，已证实支持时必须使用 API 搜索，其他来源全量获取列表后本地筛选。岗位相关性判断和个人匹配评分按各自规则执行，不把关键词命中当作匹配分。
 
 这只是演示，不当作真实用户输入。生产画像/任务 is_test 为 false。goal 见 decision-policy；招聘方向 value 是单个 campus/social/internship。industry 使用 industries 返回 ID；companies 使用已解析的公司 ID；cities/roles 使用字符串数组。明确不限是 explicit + []，未指定是 unspecified + null；程序内部使用 all 不代表用户主动选择了全行业。
 

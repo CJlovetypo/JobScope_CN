@@ -9,7 +9,7 @@ import {createClient} from './lib/http.mjs';
 import {sourceFromEntry} from '../../../job-search/runtime/campus/scripts/source-discovery.mjs';
 import {collectCommon} from './lib/providers-common.mjs';
 
-const DEFAULT_INPUT=path.resolve('shared/job-search-core/assets/waiqi-source-candidates.json');
+const DEFAULT_INPUT=path.resolve('datasets/recruitment-links/catalog/waiqi-source-candidates.json');
 const publicCareerHosts=new Set(JSON.parse(readFileSync(new URL('../assets/public-career-hosts.json',import.meta.url),'utf8')).hosts.map(x=>x.host));
 const DEFAULT_OUTPUT=path.resolve('job-search/runtime/campus/artifacts/waiqi-2026-09-20/zero-position-official-discovery');
 const locale=/^(?:en|en-us|en-gb|zh|zh-cn|zh-hans|de|fr|ja|ko)$/i;

@@ -1,0 +1,12 @@
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import {loadCompanyInputs,buildCompanyRecords,projectCompanyRecords} from './lib/company-records.mjs';
+import {publishPublicRecords} from './lib/public-company-data.mjs';
+import {INTERNAL_RECORDS_FILE,assertMaintenanceInputs} from '../maintenance-paths.mjs';
+await assertMaintenanceInputs();
+const inputs=await loadCompanyInputs({includeResearch:true});
+const records=buildCompanyRecords(inputs);
+await fs.mkdir(path.dirname(INTERNAL_RECORDS_FILE),{recursive:true});
+await fs.writeFile(INTERNAL_RECORDS_FILE,JSON.stringify(records)+'\n');
+const published=await publishPublicRecords(records,projectCompanyRecords(records,inputs));
+console.log(JSON.stringify({companies:published.companies.length,operation:'publish_existing_decisions_without_research'}));

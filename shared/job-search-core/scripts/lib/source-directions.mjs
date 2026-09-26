@@ -23,8 +23,9 @@ export function publicSiteConfig(html,provider) {
  return null;
 }
 function strings(v) { return typeof v==='string'?[v]:Array.isArray(v)?v.flatMap(strings):v&&typeof v==='object'?Object.values(v).flatMap(strings):[]; }
-const broadProviders=new Set(['ajinga_public','jobs2web_public','tupu360','moseeker_public','phenom_public','eightfold_public','avature_public','51job_coapi','51job_xyz','zhaopin_grace','workday','smartrecruiters','icims_jibe','oracle_recruiting','nowcoder_public','greenhouse','ashby','microsoft_eightfold','sap_rss','amazon_jobs','xinrenxinshi','yotta','tongcheng','wenhua_public']);
+const broadProviders=new Set(['iqvia_public','ajinga_public','jobs2web_public','tupu360','moseeker_public','phenom_public','eightfold_public','avature_public','51job_coapi','51job_xyz','zhaopin_grace','workday','smartrecruiters','icims_jibe','oracle_recruiting','nowcoder_public','greenhouse','ashby','microsoft_eightfold','sap_rss','amazon_jobs','xinrenxinshi','yotta','tongcheng','wenhua_public']);
 export function sourceDirectionPlan(source,mode=SEARCH_MODE.id) {
+ if(source.provider==='huatie_public')return {strategy:'official_career_channel',scope:mode==='internship'?'campus_portal_without_dedicated_internship_channel':'observed_official_channel',...(mode==='internship'?{limitation:'官网仅公开校招和社招入口，实习读取校招门户，不能证明全公司实习覆盖。'}:{})};
  if(mode==='campus')return {strategy:'verified_campus',scope:'verified_original'};
  if(['tencent','alibaba','baidu','jd','bilibili','kuaishou','xiaohongshu'].includes(source.provider)||mode==='internship'&&source.provider==='pdd')return {strategy:'verified_employer_direction_contract',scope:'per_job_type_required'};
  if(['beisen','beisen_lightbolt','hotjob','feishu','moka','moka_api_platform','hcmcloud_public'].includes(source.provider))return {strategy:'public_type_routing',scope:'validate_target_at_runtime'};
@@ -56,9 +57,10 @@ export function routeKnownSource(source,mode) {
 async function discoverSites(source,options) {
  const mode=options.targetMode,sourceKey=JSON.stringify([MODE_POLICY_VERSION,'public-site-tuples-v2',mode,source.provider,source.primary_entry_url,source.validated_api_request_examples]);
  const key=createHash('sha256').update(sourceKey).digest('hex');
+ if(options.directionDiscoveryMemo?.has(key))return {...clone(options.directionDiscoveryMemo.get(key)),audit_scope_reused:true};
  const cache=path.join(SKILL_ROOT,'artifacts','channel-discovery',key+'.json');
  const cached=options.refresh?null:await readJson(cache,null);
- if(cached)return {...cached,cache_reused:true};
+ if(cached){options.directionDiscoveryMemo?.set(key,clone(cached));return {...cached,cache_reused:true};}
  const client=options.discoveryClient||createClient({...options,evidenceDir:options.evidenceDir?path.join(options.evidenceDir,'channel-discovery'):undefined});
  const result={routes:[],notes:[],requests:[],checked_at:new Date().toISOString()};
  try {
@@ -100,6 +102,7 @@ async function discoverSites(source,options) {
  result.requests=client.records;
  // Failed discovery is retried on next run, not cached as a permanent absence.
  if(!result.notes.length)await writeJson(cache,result);
+ options.directionDiscoveryMemo?.set(key,clone(result));
  return result;
 }
 

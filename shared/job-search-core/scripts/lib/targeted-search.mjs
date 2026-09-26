@@ -16,7 +16,7 @@ export function matchesSearchTitle(title,plan){
  const text=norm(title);return plan.keywords.some(k=>text.includes(norm(k)))&&!(plan.exclude_keywords||[]).some(k=>text.includes(norm(k)));
 }
 export function searchPlanFingerprint(plan){return createHash('sha256').update(JSON.stringify({retrieval_policy:'verified_native_else_title_filter_v1',mode:plan.mode,target:plan.target,company_ids:[...plan.company_ids].sort(),keywords:[...plan.keywords].sort(),exclude_keywords:[...plan.exclude_keywords||[]].sort()})).digest('hex');}
-export function nativeKeywordParameter(provider){return ({beisen:'KeyWords',moka:'keyword',feishu:'keyword',workday:'searchText'})[provider]||null;}
+export function nativeKeywordParameter(provider){return ({huatie_public:'keywords',beisen:'KeyWords',moka:'keyword',feishu:'keyword',workday:'searchText','51job_xyz':'keyWord'})[provider]||null;}
 export function applyTargetedResult(result,plan,capability){
  const jobs=(result.jobs||[]).filter(j=>matchesSearchTitle(j.title,plan));
  return {...result,jobs,search_mode:'targeted',search_plan_fingerprint:searchPlanFingerprint(plan),coverage:{...result.coverage,search_scope:'targeted_titles',market_complete:false,search_plan:{target:plan.target,keywords:plan.keywords,exclude_keywords:plan.exclude_keywords},search_strategy:capability,unfiltered_observed_rows:result.jobs?.length||0,title_matches:jobs.length,search_limitation:plan.coverage_notice||'定向标题检索可能遗漏隐含岗位信息。'}};

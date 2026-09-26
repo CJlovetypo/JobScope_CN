@@ -43,3 +43,5 @@ Waiqi 深度核验来源按已审核的官方主体名称与 Waiqi 公司 ID 共
 主体增删后运行 `node shared/job-search-core/scripts/sync-company-city-index.mjs --apply` 同步三个方向的索引成员；该操作不补造城市证据。完成派生摘要刷新后，运行 `node shared/job-search-core/scripts/render-source-coverage.mjs` 同时更新 README 行业计数与覆盖图，避免手工统计不一致。
 
 员工规模、关键词能力和修复边界分别见 [规模模型](company-size-model.md)、[定向检索](targeted-search.md)、[接口修复](source-repair.md)。资料有缺口时保留待核实。只保存公开事实和非敏感的接口配置，不将个人登录态或内部调研表作为公开依赖。
+
+新增或修复招聘 API 的维护顺序固定为：基础能力与主体核验 → 登记受影响配置 → 逐配置、逐方向验证定向能力 → 保存结论 → 收尾检查。命令和证据标准统一见 [定向能力验收](targeted-search.md#新增与修复来源的固定验收流程)。必须处理全部受影响项，不使用普通审计的抽测上限；不因定向未证实停用基本能力已验证的来源。

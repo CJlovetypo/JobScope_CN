@@ -185,7 +185,7 @@ export async function buildReportData(dir, {allowPartial = false} = {}) {
   audit.reviewed_with_uncertainty=assessed.filter(r=>v5Unknown(r)).length;
   const main = {name: '岗位匹配', headers: [...(v5?V5_REPORT_HEADERS:REPORT_HEADERS)], rows: [], links: [],modelVersion:modelVersion(run.profile)};
   const unchecked = {name: '待核实与未评估', headers: [...main.headers], rows: [], links: [],modelVersion:modelVersion(run.profile)};
-  const coverage = {name: '来源覆盖', headers: ['公司', '公司业务标签', '本轮状态', '列表岗位数', '可评估数', '已评估数', '待评估数', '待核实数', '正文缺失数', '其他城市数', '实际页数', '覆盖说明', '采集时间', '城市标签时间', '公司性质标签', '性质核实说明', '性质来源证据', '性质核实时间'], rows: [], links: []};
+  const coverage = {name: '来源覆盖', headers: ['公司', '公司业务标签', '本轮状态', '列表岗位数', '可评估数', '已评估数', '待评估数', '待核实数', '正文缺失数', '其他城市数', '实际页数', '覆盖说明', '采集时间', '城市标签时间', '公司性质标签', '性质判断说明', '性质来源证据', '性质资料时间', '性质结论状态'], rows: [], links: []};
   const notes = {name: '说明', headers: ['项目', '内容'], rows: [], links: []};
   for (const bundle of bundles) {
     const count = state => bundle.jobs.filter(job => job.evaluation_status === state).length;
@@ -197,7 +197,7 @@ export async function buildReportData(dir, {allowPartial = false} = {}) {
       clean(bundle.data?.checked_at) || '未采集', clean(bundle.company.city_index_updated_at) || '未知', ownershipTag(bundle.company),
       clean(bundle.company.ownership_reason) || '未提供核实说明',
       (bundle.company.ownership_evidence || []).map(item => [clean(item.title), clean(item.url), clean(item.note), clean(item.checked_at)].filter(Boolean).join('｜')).join('\n') || '尚无可核对来源',
-      clean(bundle.company.ownership_checked_at) || '未核实']);
+      clean(bundle.company.ownership_checked_at) || '未核实',bundle.company.ownership_status==='api_supported'?'API支持，待独立核实':bundle.company.ownership_status==='verified'&&bundle.company.ownership_origin==='fresh_web_review'?'已独立核实':bundle.company.ownership_origin==='legacy_import'?'旧标签，待本轮复核':'待核实']);
   }
   function appendRow(sheet, bundle, job, review, reason) {
     const official = officialLink(job);
@@ -248,7 +248,7 @@ export async function buildReportData(dir, {allowPartial = false} = {}) {
     ['实习对口分层', '分别判断行业、部门业务和实际岗位职能。同业务跨岗位、同岗位跨业务均有部分对口价值，按JD具体任务判断迁移与缺口；单一维度不同不自动判低。信息不足标待核实。'],
     ['详细评估理由', '每岗只展示四段总结：评估结论、能力匹配度结论、个人意愿匹配度结论、主要缺口。评估结论同时列出当前招聘方向的硬性条件依据；逐项能力证据对照保留在评估记录中，不堆叠到单元格。'],
     ['投递建议', '可以投递＝硬性条件符合、意愿明确且已有可用匹配点；投递前准备＝不存在硬性冲突，但投递前应优化材料、整理案例或针对性准备；暂不建议投递＝硬性条件不符、意愿明确冲突、核心能力差距过大或方向明显偏离。主表不再使用“核实”动作；轮岗范围、业务占比、提前实习等信息写入详细理由，不阻止形成投递建议。'],
-    ['公司性质标签', '国企／私企／外企独立于公司业务标签。按可核对的企业性质或控制关系资料记录；资料不足显示待核实。核实说明、来源和时间保留在来源覆盖，不能根据名称、上市地或业务猜测。'],
+    ['公司性质标签', '国企／私企／外企独立于公司业务标签。API有来源支持的结论可用于倾向检索，但仍待独立核实；旧标签保留时标明待本轮复核，只有本轮正文复核完成才显示已独立核实。状态、判断说明、来源和时间保留在来源覆盖，不能根据名称、上市地或业务猜测。'],
     ['阅读与评估要求', '每项结论须在完整阅读岗位职责、任职要求及招聘证据后产生。v4同时绑定JD与完整个人画像指纹。程序检查证据分类和结构一致性，不能证明真实阅读、事实真实性或语义判断正确；旧模型结论需重评。'],
     ['JD链接', '优先链接官方单岗位页；无独立详情页时链接官方招聘入口并标注岗位ID。全文与招聘证据另存于独立JD归档，需要查看快照时按公司和岗位ID提取。'],
     ['JD原文存储', '完整JD、招聘证据和采集时间保存在独立过程文件 jd-originals.jsonl，未嵌入本工作簿。无官方链接时可通过公司和岗位ID请求查看归档。'],

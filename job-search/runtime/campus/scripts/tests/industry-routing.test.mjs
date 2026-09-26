@@ -1,4 +1,5 @@
 import {datasetPath} from '../../../../../shared/job-search-core/registry.mjs';
+import {PACK_ROOT} from '../../../../../shared/job-search-core/runtime-context.mjs';
 import test from 'node:test';import assert from 'node:assert/strict';import path from 'node:path';import fs from 'node:fs/promises';import {execFile} from 'node:child_process';import {promisify} from 'node:util';
 import {INDUSTRIES,normalizeIndustries,routeCompanies} from '../lib/industry-routing.mjs';import {collectCompanySources,mergeSourceResults,sourceConfigFingerprint,sourceCacheMatches} from '../lib/source-collector.mjs';import {SKILL_ROOT,readJson,writeJson} from '../lib/io.mjs';
 const exec=promisify(execFile),cli=path.join(SKILL_ROOT,'scripts/campus.mjs');
@@ -19,6 +20,22 @@ test('expanded industries route companies without assuming ownership or replacin
  const mixed=await run('catalog','--industries','finance,healthcare');assert.equal(mixed.selected_companies,new Set(mixed.companies.map(c=>c.company_id)).size);
  await assert.rejects(()=>run('catalog','--industries','healthcare','--only','易方达基金'),/行业范围冲突/);
  const shanghai=await run('catalog','--industries','finance','--cities','上海');assert(shanghai.selected_companies>0);assert(shanghai.companies.every(c=>c.cities.includes('上海')));
+});
+test('catalog uses published API ownership and business labels for company preferences',async()=>{
+ const records=JSON.parse(await fs.readFile(path.join(PACK_ROOT,'shared/job-search-core/data/company-records.json'),'utf8'));
+ for(const ownership of ['国企','外企']) {
+  const company=records.companies.find(c=>c.governance.fields['tags.ownership'].status==='api_supported'&&c.tags.ownership===ownership&&c.tags.industry.length&&c.tags.business.length&&c.governance.fields['tags.business'].status==='api_supported');
+  assert(company,'缺少可验证的 API 公司性质样本：'+ownership);
+  const file=path.join(SKILL_ROOT,'artifacts/industry-merge/api-'+ownership+'.json');
+  await writeJson(file,{industry_filters:[company.tags.industry[0]],company_filters:[company.company_id],city_filters:[],ownership_filters:[ownership],ownership_preferences:[ownership],business_preferences:[company.tags.business[0]]});
+  const result=await run('catalog','--profile',file);
+  assert.equal(result.selected_companies,1);assert.equal(result.companies[0].ownership_tag,ownership);
+  assert.equal(result.companies[0].ownership_status,'api_supported');
+  assert.equal(result.companies[0].ownership_alignment.status,'aligned');
+  assert.equal(result.companies[0].business_alignment.status,'aligned');
+  await writeJson(file,{industry_filters:[company.tags.industry[0]],company_filters:[company.company_id],city_filters:[],ownership_filters:[ownership==='国企'?'外企':'国企']});
+  await assert.rejects(()=>run('catalog','--profile',file),/性质范围冲突/);
+ }
 });
 
 test('company metadata keys agree and known duplicate employer aliases remain merged',async()=>{

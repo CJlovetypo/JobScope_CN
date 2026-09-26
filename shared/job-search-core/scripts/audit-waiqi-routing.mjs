@@ -4,7 +4,7 @@ import {pathToFileURL} from 'node:url';
 import {atsConfiguration} from './discover-waiqi-zero-websites.mjs';
 import {recruitmentLink} from './lib/waiqi-utils.mjs';
 
-const DEFAULT_CANDIDATES = path.resolve('shared/job-search-core/assets/waiqi-source-candidates.json');
+const DEFAULT_CANDIDATES = path.resolve('datasets/recruitment-links/catalog/waiqi-source-candidates.json');
 const DEFAULT_REGISTRY = path.resolve('shared/job-search-core/assets/sources.json');
 
 function sourceRequest(source) {

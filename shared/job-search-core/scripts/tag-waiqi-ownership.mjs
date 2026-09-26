@@ -9,12 +9,12 @@ const HERE = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(HERE, '../../..');
 const DEFAULTS = Object.freeze({
   registry: path.join(ROOT, 'shared/job-search-core/assets/sources.json'),
-  ownership: path.join(ROOT, 'shared/job-search-core/data/company-ownership-tags.json'),
-  sizes: path.join(ROOT, 'shared/job-search-core/data/company-size-tags.json'),
-  profiles: path.join(ROOT, 'shared/job-search-core/data/company-profiles.json'),
-  candidates: path.join(ROOT, 'shared/job-search-core/assets/waiqi-source-candidates.json'),
+  ownership: path.join(ROOT, 'datasets/company-research/inputs/company-ownership-tags.json'),
+  sizes: path.join(ROOT, 'datasets/company-research/inputs/company-size-tags.json'),
+  profiles: path.join(ROOT, 'datasets/company-research/inputs/company-profiles.json'),
+  candidates: path.join(ROOT, 'datasets/recruitment-links/catalog/waiqi-source-candidates.json'),
   contexts: path.join(ROOT, 'job-search/runtime/campus/artifacts/waiqi-2026-09-20/zero-position-official-clean/duplicates-existing.json'),
-  index: path.join(ROOT, 'shared/job-search-core/data/waiqi-foreign-company-index.json'),
+  index: path.join(ROOT, 'datasets/company-research/reviews/waiqi-foreign-company-index.json'),
   artifacts: path.join(ROOT, 'job-search/runtime/campus/artifacts/waiqi-2026-09-20/waiqi-ownership-tagging'),
 });
 

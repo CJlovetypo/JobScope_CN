@@ -19,7 +19,7 @@ export async function collectXYZ(source,options={}) {
     ctmId=boot.data.data?.ctmId;if(!ctmId)throw Error('Missing employer GUID');
     const ids=new Set();
     for(let p=1;p<=opts.maxPages;p++) {
-      const r=await request('position-domain/consumer/noauth/get_job_list',{ctmId,pageIndex:p,pageSize:opts.pageSize,companyId:[],funcType:[],jobArea:[],jobType:[],jobCategory:[],keyWord:'',sceneType:'00'},'POST','job_list_with_full_JD');
+      const r=await request('position-domain/consumer/noauth/get_job_list',{ctmId,pageIndex:p,pageSize:opts.pageSize,companyId:[],funcType:[],jobArea:[],jobType:[],jobCategory:[],keyWord:opts.keyword||'',sceneType:'00'},'POST','job_list_with_full_JD');
       const arr=r.data.data?.records;total=Number(r.data.data?.total);
       if(!Array.isArray(arr)||!Number.isFinite(total))throw Error('Missing list/total');
       if(firstTotal===null)firstTotal=total;else if(total!==firstTotal)errors.push('server_total_changed');

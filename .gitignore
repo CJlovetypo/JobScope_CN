@@ -6,27 +6,8 @@
 !/LICENSE
 !/job-radar/
 !/shared/
-!/datasets/
 !/recruitment-link-repair/
 !/job-search/
-!/docs/
-/docs/*
-!/docs/用户提示词模拟100例.md
-!/docs/求职元能力架构迭代PRD.md
-!/docs/元能力架构迭代测试报告.md
-!/docs/匹配判断模型迭代审核稿.md
-!/docs/匹配判断模型v5迭代PRD.md
-!/docs/匹配判断模型v5测试报告.md
-!/docs/公司标签维护与使用隔离PRD.md
-!/docs/公司标签维护与使用隔离测试报告.md
-!/docs/公司标签全量复核与更新报告-20260922.md
-!/docs/求职入口合并与替代验证报告.md
-!/docs/公司画像分层与独立联网复核PRD-20260923.md
-!/docs/公司画像分层适配与联网复核进度-20260923.md
-/datasets/recruitment-links/collections/
-/datasets/recruitment-links/snapshots/
-/datasets/recruitment-links/index/
-/datasets/recruitment-links/manifests/
 /shared/*
 !/shared/job-search-core/
 
@@ -81,3 +62,16 @@ Desktop.ini
 *.tmp
 *.swp
 ~$*
+
+# Maintenance originals and process records; published runtime data remain public.
+/datasets/
+/maintenance/
+/docs/
+/shared/job-search-core/evals/
+/shared/job-search-core/data/company-label-reviews.json
+/shared/job-search-core/data/company-research-candidates.json.gz
+/shared/job-search-core/data/company-api-labels.json.gz
+/shared/job-search-core/assets/waiqi-source-candidates.json
+/shared/job-search-core/assets/waiqi-interface-catalog.json
+/shared/job-search-core/assets/waiqi-interface-review-index.json
+/shared/job-search-core/data/waiqi-foreign-company-index.json

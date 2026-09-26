@@ -15,7 +15,7 @@ import {atsConfiguration} from './discover-waiqi-zero-websites.mjs';
 const ROOT=path.resolve('job-search/runtime/campus/artifacts/waiqi-2026-09-20');
 const DEFAULT_INPUT=path.join(ROOT,'zero-position-official-discovery/verified-api-candidates.json');
 const DEFAULT_OUTPUT=path.join(ROOT,'zero-position-official-clean');
-const DEFAULT_COMPANIES=path.resolve('shared/job-search-core/assets/waiqi-source-candidates.json');
+const DEFAULT_COMPANIES=path.resolve('datasets/recruitment-links/catalog/waiqi-source-candidates.json');
 const DEFAULT_REGISTRY=path.resolve('shared/job-search-core/assets/sources.json');
 const chinaPlace=/(?:\bChina\b|中国大陆|中国内地|上海|北京|深圳|广州|苏州|杭州|成都|南京|武汉|厦门|天津|宁波|东莞|青岛|大连|无锡|常州|合肥|西安|重庆|珠海|佛山|郑州|长沙|沈阳)/i;
 const notMainland=/(?:Hong Kong|香港|Taiwan|台湾|Macao|Macau|澳门)/i;

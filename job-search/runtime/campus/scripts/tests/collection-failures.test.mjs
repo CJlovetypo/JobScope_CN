@@ -45,7 +45,7 @@ test('all distributable entrypoints and their documentation dependencies exist',
   for(const file of ['assessment.md','ability-model.md','workflow.md'])await fs.access(path.join(root,'references',file));
  }
  const root=path.join(PACK_ROOT,'job-search'),skill=await fs.readFile(path.join(root,'SKILL.md'),'utf8');assert.match(skill,/name: job-search/);
- for(const match of skill.matchAll(/\[[^\]]+\]\(([^)]+)\)/g))if(!/^https?:/.test(match[1]))await fs.access(path.resolve(root,match[1]));
+ for(const match of skill.matchAll(/\[[^\]]+\]\(([^)]+)\)/g))if(!/^https?:/.test(match[1]))await fs.access(path.resolve(root,decodeURIComponent(match[1].split('#')[0])));
 });
 
 test('retired direction Skills have no discoverable instructions or agent metadata',async()=>{

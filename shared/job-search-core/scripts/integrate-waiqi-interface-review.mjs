@@ -1,3 +1,4 @@
+import {queueKeywordReviews} from './lib/source-keyword-maintenance.mjs';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import {createHash} from 'node:crypto';
@@ -24,6 +25,8 @@ if(apply&&plan.added.length){
   const temporary=REGISTRY+`.waiqi-interface-${process.pid}.tmp`;
   await fs.writeFile(temporary,JSON.stringify(plan.registry,null,2)+'\n');
   if(digest(await fs.readFile(REGISTRY))!==digest(before)){await fs.unlink(temporary);throw Error('Registry changed while preparing atomic update');}
-  await fs.rename(temporary,REGISTRY);
+  summary.keyword_review=await queueKeywordReviews(original,plan.registry,{registryFile:REGISTRY});
+ await fs.rename(temporary,REGISTRY);
 }
+if(apply)await fs.writeFile(path.join(ROOT,'integration-result.json'),JSON.stringify(summary,null,2)+'\n');
 console.log(JSON.stringify({...summary,added:undefined,skipped:undefined,rejections:undefined},null,2));

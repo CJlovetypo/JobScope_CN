@@ -8,8 +8,8 @@ import {companyNameMatches,interfaceMatchesUrl} from './lib/waiqi-interface-iden
 
 const ROOT=path.resolve('job-search/runtime/campus/artifacts/waiqi-interface-deep-review/standard-ats');
 const REGISTRY=path.resolve('shared/job-search-core/assets/sources.json');
-const CANDIDATES=path.resolve('shared/job-search-core/assets/waiqi-source-candidates.json');
-const CATALOG=path.resolve('shared/job-search-core/assets/waiqi-interface-catalog.json');
+const CANDIDATES=path.resolve('datasets/recruitment-links/catalog/waiqi-source-candidates.json');
+const CATALOG=path.resolve('datasets/recruitment-links/catalog/waiqi-interface-catalog.json');
 const WAIQI_SNAPSHOT=path.resolve('job-search/runtime/campus/artifacts/waiqi-2026-09-20');
 const DEEP_REVIEW=path.resolve('job-search/runtime/campus/artifacts/waiqi-interface-deep-review/no-interface-websites');
 const INTERFACE_OVERRIDES=path.resolve('shared/job-search-core/assets/waiqi-interface-overrides.json');

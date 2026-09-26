@@ -67,10 +67,10 @@ async function main() {
   const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../../..');
   const files = {
     registry:path.join(root, 'shared/job-search-core/assets/sources.json'),
-    ownership:path.join(root, 'shared/job-search-core/data/company-ownership-tags.json'),
-    size:path.join(root, 'shared/job-search-core/data/company-size-tags.json'),
-    business:path.join(root, 'shared/job-search-core/data/company-business-tags.json'),
-    profiles:path.join(root, 'shared/job-search-core/data/company-profiles.json'),
+    ownership:path.join(root, 'datasets/company-research/inputs/company-ownership-tags.json'),
+    size:path.join(root, 'datasets/company-research/inputs/company-size-tags.json'),
+    business:path.join(root, 'datasets/company-research/inputs/company-business-tags.json'),
+    profiles:path.join(root, 'datasets/company-research/inputs/company-profiles.json'),
   };
   const raw = Object.fromEntries(await Promise.all(Object.entries(files).map(async ([key, file]) => [key, await fs.readFile(file, 'utf8')])));
   const docs = Object.fromEntries(Object.entries(raw).map(([key, value]) => [key, JSON.parse(value)]));

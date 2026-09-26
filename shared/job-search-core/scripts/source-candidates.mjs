@@ -2,7 +2,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import {fileURLToPath, pathToFileURL} from 'node:url';
 
-export const DEFAULT_CANDIDATES = fileURLToPath(new URL('../assets/waiqi-source-candidates.json', import.meta.url));
+export const DEFAULT_CANDIDATES = fileURLToPath(new URL('../../../datasets/recruitment-links/catalog/waiqi-source-candidates.json', import.meta.url));
 const list = value => value == null ? [] : Array.isArray(value) ? value : [value];
 const norm = value => String(value ?? '').normalize('NFKC').toLocaleLowerCase().trim();
 const contains = (values, query) => !query || list(values).some(value => norm(value).includes(norm(query)));
